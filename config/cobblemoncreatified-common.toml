@@ -1,0 +1,20 @@
+#Whether to log the dirt block on common setup
+logDirtBlock = true
+#A magic number
+# Default: 42
+# Range: > 0
+magicNumber = 42
+#Introduction text for the magic number
+magicNumberIntroduction = "The magic number is..."
+#List of item names to log.
+items = ["minecraft:iron_ingot"]
+#Base level applied to all trial boss encounters (can exceed Cobblemon's normal cap).
+# Default: 120
+# Range: 1 ~ 255
+trialBossBaseLevel = 120
+#Sound event id used when a boss has no specific track. Leave blank to rotate vanilla music discs.
+trialMusicFallback = "cobblemoncreatified:trial_mirror_b"
+#How long (in seconds) the trial music should play before looping. Set to 0 to disable looping.
+# Default: 180
+# Range: 0 ~ 3600
+trialMusicLoopSeconds = 180

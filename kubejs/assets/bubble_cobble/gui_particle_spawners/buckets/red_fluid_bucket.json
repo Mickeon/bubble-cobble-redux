@@ -1,0 +1,16 @@
+{
+  "parent": "item_interactions:buckets/bucket_template",
+  "attributes": {
+    "color_start": "#FFFF3322",
+    "color_end": "#00FF2222"
+  },
+  "attributes_variance": {
+    "color_start": "#00201010"
+  },
+
+  "applies": [
+    {"id": "create_bic_bit:ketchup_bucket"},
+    {"id": "biomesoplenty:blood_bucket"},
+    {"id": "create:chocolate_bucket"}
+  ]
+}

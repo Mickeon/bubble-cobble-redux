@@ -1,0 +1,37 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_mint": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [{"items": "#cobblemon:mints"}]
+      }
+    },
+    "has_slime": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [{"items": "#c:slime_balls"}]
+      }
+    },
+    "has_doublemint": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [{"items": "kubejs:doublemint_gum"}]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "kubejs:kjs/doublemint_gum"
+      }
+    }
+  },
+  "requirements": [
+    ["has_mint", "has_slime", "has_doublemint", "has_the_recipe"]
+  ],
+  "rewards": {
+    "recipes": [
+      "kubejs:kjs/doublemint_gum"
+    ]
+  }
+}

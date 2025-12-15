@@ -1,0 +1,36 @@
+{
+  "enabled": true,
+  "group": {
+    "break": {
+      "sound_id": "sounds:block.spruce_object.break"
+    },
+    "fall": {
+      "sound_id": "sounds:block.spruce_planks.fall"
+    },
+    "hit": {
+      "sound_id": "sounds:block.spruce_planks.hit"
+    },
+    "pitch": 1.0,
+    "place": {
+      "sound_id": "sounds:block.spruce_object.place"
+    },
+    "step": {
+      "sound_id": "sounds:block.spruce_planks.step"
+    },
+    "volume": 1.0
+  },
+  "keys": [
+    "#bubble_cobble:spruce_object_sounds",
+    "farmersdelight:carrot_crate",
+    "farmersdelight:potato_crate",
+    "farmersdelight:beetroot_crate",
+    "farmersdelight:cabbage_crate",
+    "farmersdelight:tomato_crate",
+    "farmersdelight:onion_crate",
+    "snowyspirit:ginger_crate",
+    "mynethersdelight:bullet_pepper_crate",
+    "minersdelight:cave_carrot_crate",
+    "brewinandchewin:heating_cask",
+    "brewinandchewin:ice_crate"
+  ]
+}

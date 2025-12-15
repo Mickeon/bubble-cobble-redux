@@ -1,0 +1,81 @@
+{
+  "parent": "kubejs:drink_wine",
+  "display": {
+    "icon": {
+      "id": "kubejs:spumante"
+    },
+    "title": "Viñedo Clockwork",
+    "description": "Take a sip of all wines.",
+    "frame": "challenge"
+  },
+  "criteria": {
+    "sweet_berry_wine": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "kubejs:sweet_berry_wine"
+          ]
+        }
+      }
+    },
+    "honey_liqueur": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "kubejs:honey_liqueur"
+          ]
+        }
+      }
+    },
+    "spumante": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "kubejs:spumante"
+          ]
+        }
+      }
+    },
+    "sparkling_rose": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "kubejs:sparkling_rose"
+          ]
+        }
+      }
+    },
+    "berry_juice_soda": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "kubejs:berry_juice_soda"
+          ]
+        }
+      }
+    },
+    "firebomb_whiskey": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "kubejs:firebomb_whiskey"
+          ]
+        }
+      }
+    }
+  },
+  "requirements": [
+    ["sweet_berry_wine"], ["honey_liqueur"],
+    ["spumante"], ["sparkling_rose"],
+    ["berry_juice_soda"], ["firebomb_whiskey"]
+  ],
+  "rewards": {
+    "experience": 100
+  }
+}

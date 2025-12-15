@@ -1,0 +1,19 @@
+{
+    "placement": {
+        "type": "minecraft:random_spread",
+        "exclusion_zone": {
+            "chunk_count": 2,
+            "other_set": "minecraft:swamp_huts"
+        },
+        "spacing": 12,
+        "separation": 7,
+        "salt": 1628364155,
+        "spread_type": "triangular"
+    },
+    "structures": [
+        {
+            "structure": "cobblemon:ruins/mossy_oubliette_ruins",
+            "weight": 1
+        }
+    ]
+}

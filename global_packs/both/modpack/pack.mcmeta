@@ -1,0 +1,14 @@
+{
+	"pack": {
+		"description": "Resource and Data tweaks designed to be loaded after the rest of the modpack.",
+		"pack_format": 16,
+		"supported_formats": [16, 80]
+	},
+	"filter": {
+		"block": [
+			{
+				"namespace": "ezactions_no_menu_blur"
+			}
+		]
+	}
+}

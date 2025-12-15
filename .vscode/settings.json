@@ -1,0 +1,48 @@
+{
+    "editor.defaultFormatter": "Prunoideae.probejs",
+    "typescript.disableAutomaticTypeAcquisition": true,
+    "typescript.validate.enable": false,
+    "json.schemas": [
+        {
+            "fileMatch": [
+                "/recipe_schema/*.json"
+            ],
+            "url": "./.vscode/recipe.json"
+        }
+    ],
+    "files.trimTrailingWhitespace": true,
+    "files.exclude": {
+        ".cache": true,
+        ".mixin.out": true,
+        ".probe": true,
+        "cache": true,
+        "cobble*": true,
+        "configureddefaults": true,
+        "coremods": true,
+        "downloads": true,
+        "dynamic*": true,
+        "emojiful": true,
+        "immersive_paintings_cache": true,
+        "local/kubejs/cache": true,
+        "local/kubejs/event_groups": true,
+        "local/kubejs/local*": true,
+        "logs/*.gz": true,
+        "moddata": true,
+        "mods": true,
+        "schematics": true,
+        "screenshots": true,
+        "server-resource-packs": true,
+        "showdown": true,
+        "texturepacks": true,
+        "xaero": true,
+        "Xaero*": true
+    },
+    "typescript.tsserver.maxTsServerMemory": 4096,
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features",
+    },
+    "mc-color.delimiters": [
+        "`",
+        "\""
+    ]
+}

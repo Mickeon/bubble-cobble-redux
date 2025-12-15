@@ -1,0 +1,32 @@
+{
+	"parent": "minecraft:adventure/root",
+	"display": {
+		"icon": {
+			"id": "minecraft:oak_hanging_sign"
+		},
+		"title": "Ahoy!",
+		"description": "Ding ding ding.",
+		"frame": "task"
+	},
+	"criteria": {
+		"location": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"location": {
+								"structures": "#bubble_cobble:ships"
+							}
+						}
+					}
+				]
+			}
+		}
+	},
+	"rewards": {
+		"function": "kubejs:play_ahoy"
+	}
+}

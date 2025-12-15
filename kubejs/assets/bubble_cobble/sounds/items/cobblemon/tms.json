@@ -1,0 +1,9 @@
+{
+  "keys": [
+    "#simpletms:tm_items",
+    "simpletms:blank_tm"
+  ],
+  "pitch": 1.0,
+  "soundEvent": "bubble_cobble:grab_disc",
+  "volume": 0.1
+}

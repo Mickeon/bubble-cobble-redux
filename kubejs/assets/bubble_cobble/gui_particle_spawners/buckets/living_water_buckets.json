@@ -1,0 +1,8 @@
+{
+  "parent": "item_interactions:buckets/living_water_buckets",
+
+  "applies": [
+    {"id": "create_bic_bit:herring_bucket"},
+    {"id": "biomeswevegone:man_o_war_bucket"}
+  ]
+}

@@ -1,0 +1,9 @@
+{
+    "name": "Grass",
+    "displayName": "§2Grass",
+    "pokemon": [
+        "Hoppip level=10",
+        "Bounsweet level=10 nickname=\"Chaste\"",
+        "Seedot level=10"
+    ]
+}

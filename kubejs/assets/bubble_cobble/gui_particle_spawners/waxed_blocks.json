@@ -1,0 +1,132 @@
+{
+  "attributes": {
+    "x": 0,
+    "y": 0,
+    "color_start": "#DDFFB428",
+    "color_end": "#22FFB428",
+    "duration": 20,
+    "count": 2
+  },
+  "attributes_variance": {
+    "x": 8,
+    "y": 8,
+    "color_start": "#44101010",
+    "duration": 10,
+    "count": 1
+  },
+  "events": {
+    "onCarried": {
+      "interval": 40,
+      "interval_variance": 2,
+      "particles": [{ "id": "minecraft:wax_on" }]
+    },
+
+    "onIdle": {"use": "onCarried", "interval": 80, "interval_variance": 20},
+
+    "onShake": {
+      "use": "onCarried",
+      "interval": 2
+    }
+  },
+
+  "applies": [
+    {"id": "minecraft:waxed_chiseled_copper"},
+    {"id": "minecraft:waxed_copper_block"},
+    {"id": "minecraft:waxed_copper_bulb"},
+    {"id": "minecraft:waxed_copper_door"},
+    {"id": "minecraft:waxed_copper_grate"},
+    {"id": "minecraft:waxed_copper_trapdoor"},
+    {"id": "minecraft:waxed_cut_copper"},
+    {"id": "minecraft:waxed_cut_copper_slab"},
+    {"id": "minecraft:waxed_cut_copper_stairs"},
+
+    {"id": "minecraft:waxed_exposed_chiseled_copper"},
+    {"id": "minecraft:waxed_exposed_copper"},
+    {"id": "minecraft:waxed_exposed_copper_bulb"},
+    {"id": "minecraft:waxed_exposed_copper_door"},
+    {"id": "minecraft:waxed_exposed_copper_grate"},
+    {"id": "minecraft:waxed_exposed_copper_trapdoor"},
+    {"id": "minecraft:waxed_exposed_cut_copper"},
+    {"id": "minecraft:waxed_exposed_cut_copper_slab"},
+    {"id": "minecraft:waxed_exposed_cut_copper_stairs"},
+
+    {"id": "minecraft:waxed_weathered_chiseled_copper"},
+    {"id": "minecraft:waxed_weathered_copper"},
+    {"id": "minecraft:waxed_weathered_copper_bulb"},
+    {"id": "minecraft:waxed_weathered_copper_door"},
+    {"id": "minecraft:waxed_weathered_copper_grate"},
+    {"id": "minecraft:waxed_weathered_copper_trapdoor"},
+    {"id": "minecraft:waxed_weathered_cut_copper"},
+    {"id": "minecraft:waxed_weathered_cut_copper_slab"},
+    {"id": "minecraft:waxed_weathered_cut_copper_stairs"},
+
+    {"id": "minecraft:waxed_oxidized_copper"},
+    {"id": "minecraft:waxed_oxidized_copper_grate"},
+    {"id": "minecraft:waxed_oxidized_copper_bulb"},
+    {"id": "minecraft:waxed_oxidized_copper_trapdoor"},
+    {"id": "minecraft:waxed_oxidized_copper_door"},
+    {"id": "minecraft:waxed_oxidized_cut_copper"},
+    {"id": "minecraft:waxed_oxidized_cut_copper_slab"},
+    {"id": "minecraft:waxed_oxidized_cut_copper_stairs"},
+    {"id": "minecraft:waxed_oxidized_chiseled_copper"},
+
+    {"id": "create:waxed_copper_shingles"},
+    {"id": "create:waxed_copper_shingle_slab"},
+    {"id": "create:waxed_copper_shingle_stairs"},
+    {"id": "create:waxed_copper_tiles"},
+    {"id": "create:waxed_copper_tile_slab"},
+    {"id": "create:waxed_copper_tile_stairs"},
+
+    {"id": "create:waxed_exposed_copper_shingles"},
+    {"id": "create:waxed_exposed_copper_shingle_slab"},
+    {"id": "create:waxed_exposed_copper_shingle_stairs"},
+    {"id": "create:waxed_exposed_copper_tiles"},
+    {"id": "create:waxed_exposed_copper_tile_slab"},
+    {"id": "create:waxed_exposed_copper_tile_stairs"},
+
+    {"id": "create:waxed_weathered_copper_shingles"},
+    {"id": "create:waxed_weathered_copper_shingle_slab"},
+    {"id": "create:waxed_weathered_copper_shingle_stairs"},
+    {"id": "create:waxed_weathered_copper_tiles"},
+    {"id": "create:waxed_weathered_copper_tile_slab"},
+    {"id": "create:waxed_weathered_copper_tile_stairs"},
+
+    {"id": "create:waxed_oxidized_copper_shingles"},
+    {"id": "create:waxed_oxidized_copper_shingle_slab"},
+    {"id": "create:waxed_oxidized_copper_shingle_stairs"},
+    {"id": "create:waxed_oxidized_copper_tiles"},
+    {"id": "create:waxed_oxidized_copper_tile_slab"},
+    {"id": "create:waxed_oxidized_copper_tile_stairs"},
+
+    {"id": "minecraft:waxed_lightning_rod"},
+    {"id": "minecraft:waxed_exposed_lightning_rod"},
+    {"id": "minecraft:waxed_weathered_lightning_rod"},
+    {"id": "minecraft:waxed_oxidized_lightning_rod"},
+    {"id": "minecraft:waxed_copper_chest"},
+    {"id": "minecraft:waxed_exposed_copper_chest"},
+    {"id": "minecraft:waxed_weathered_copper_chest"},
+    {"id": "minecraft:waxed_oxidized_copper_chest"},
+    {"id": "minecraft:waxed_copper_golem_statue"},
+    {"id": "minecraft:waxed_exposed_copper_golem_statue"},
+    {"id": "minecraft:waxed_weathered_copper_golem_statue"},
+    {"id": "minecraft:waxed_oxidized_copper_golem_statue"},
+    {"id": "minecraft:waxed_copper_lantern"},
+    {"id": "minecraft:waxed_exposed_copper_lantern"},
+    {"id": "minecraft:waxed_weathered_copper_lantern"},
+    {"id": "minecraft:waxed_oxidized_copper_lantern"},
+    {"id": "minecraft:waxed_copper_bars"},
+    {"id": "minecraft:waxed_exposed_copper_bars"},
+    {"id": "minecraft:waxed_weathered_copper_bars"},
+    {"id": "minecraft:waxed_oxidized_copper_bars"},
+    {"id": "minecraft:waxed_copper_chain"},
+    {"id": "minecraft:waxed_exposed_copper_chain"},
+    {"id": "minecraft:waxed_weathered_copper_chain"},
+    {"id": "minecraft:waxed_oxidized_copper_chain"},
+
+    {"id": "copperagebackport:waxed_copper_button"},
+    {"id": "copperagebackport:waxed_exposed_copper_button"},
+    {"id": "copperagebackport:waxed_weathered_copper_button"},
+    {"id": "copperagebackport:waxed_oxidized_copper_button"},
+    {"id": "mynethersdelight:waxed_hoglin_trophy"}
+  ]
+}

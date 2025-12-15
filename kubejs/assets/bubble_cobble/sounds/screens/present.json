@@ -1,0 +1,7 @@
+{
+  "keys": [
+    "supplementaries:present",
+    "supplementaries:trapped_present"
+  ],
+  "soundEvent": "supplementaries:block.present.hit"
+}

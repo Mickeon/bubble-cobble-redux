@@ -1,0 +1,19 @@
+{
+  "target": "cobblemon:crobat",
+  "drops": {
+    "amount": 3,
+    "entries": [
+      {
+        "item": "cobblemon:razor_fang",
+        "percentage": 10.0
+      },
+      {
+        "item": "cobblemon:persim_berry",
+        "percentage": 10.0
+      },
+      {
+        "item": "miners_delight:bat_wing"
+      }
+    ]
+  }
+}

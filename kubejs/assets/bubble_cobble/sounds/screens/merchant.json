@@ -1,0 +1,8 @@
+{
+  "keys": [
+    "minecraft:merchant",
+	  "supplementaries:red_merchant",
+    "wanderer_ribbit:trade"
+  ],
+  "soundEvent": "supplementaries:block.sack.open"
+}

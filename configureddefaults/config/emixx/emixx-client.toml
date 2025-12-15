@@ -1,0 +1,7 @@
+[creativeModeTabs]
+	enableCreativeModeTabs = true
+	syncSelectedCreativeModeTab = false
+
+[stackGroups]
+	enableStackGroups = true
+	disabledStackGroups = ["minecraft:shovels", "minecraft:pickaxes", "minecraft:axes", "minecraft:head_armor", "minecraft:hoes", "minecraft:swords", "minecraft:chest_armor", "minecraft:leg_armor", "minecraft:foot_armor", "minecraft:animal_armors", "c:foods", "minecraft:rails", "minecraft:saplings", "c:dyes", "minecraft:leaves", "minecraft:signs", "c:seeds", "minecraft:logs", "minecraft:hanging_signs", "c:glass_blocks", "minecraft:flowers", "minecraft:wool", "c:glass_panes", "minecraft:terracotta", "minecraft:wool_carpets", "c:shulker_boxes", "c:glazed_terracottas", "c:concrete_powders", "c:concretes", "c:buckets", "minecraft:copper_blocks"]

@@ -1,0 +1,8 @@
+{
+  "keys": [
+    "#mega_showdown:mega_stone"
+  ],
+  "pitch": 1.25,
+  "soundEvent": "bubble_cobble:grab_whimsy",
+  "volume": 0.25
+}

@@ -1,0 +1,8 @@
+{
+  "keys": [
+    "kubejs:bearded_dragon_bowl"
+  ],
+  "pitch": 1.5,
+  "soundEvent": "kubejs:item.bearded_dragon_chirp",
+  "volume": 0.1
+}

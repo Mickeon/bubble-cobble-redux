@@ -1,0 +1,55 @@
+{
+  "enabled": true,
+  "group": {
+    "break": {
+      "sound_id": "minecraft:block.wood.break"
+    },
+    "fall": {
+      "sound_id": "minecraft:block.wood.fall"
+    },
+    "hit": {
+      "sound_id": "sounds:block.barrel.hit"
+    },
+    "pitch": 1.0,
+    "place": {
+      "sound_id": "sounds:block.barrel.place"
+    },
+    "step": {
+      "sound_id": "sounds:block.barrel.step"
+    },
+    "volume": 1.0
+  },
+  "keys": [
+    "#bubble_cobble:barrel_sounds",
+    "sophisticatedstorage:barrel",
+    "sophisticatedstorage:copper_barrel",
+    "sophisticatedstorage:iron_barrel",
+    "sophisticatedstorage:gold_barrel",
+    "sophisticatedstorage:diamond_barrel",
+    "sophisticatedstorage:netherite_barrel",
+    "sophisticatedstorage:limited_barrel_1",
+    "sophisticatedstorage:limited_barrel_2",
+    "sophisticatedstorage:limited_barrel_3",
+    "sophisticatedstorage:limited_barrel_4",
+    "sophisticatedstorage:limited_copper_barrel_1",
+    "sophisticatedstorage:limited_copper_barrel_2",
+    "sophisticatedstorage:limited_copper_barrel_3",
+    "sophisticatedstorage:limited_copper_barrel_4",
+    "sophisticatedstorage:limited_iron_barrel_1",
+    "sophisticatedstorage:limited_iron_barrel_2",
+    "sophisticatedstorage:limited_iron_barrel_3",
+    "sophisticatedstorage:limited_iron_barrel_4",
+    "sophisticatedstorage:limited_gold_barrel_1",
+    "sophisticatedstorage:limited_gold_barrel_2",
+    "sophisticatedstorage:limited_gold_barrel_3",
+    "sophisticatedstorage:limited_gold_barrel_4",
+    "sophisticatedstorage:limited_diamond_barrel_1",
+    "sophisticatedstorage:limited_diamond_barrel_2",
+    "sophisticatedstorage:limited_diamond_barrel_3",
+    "sophisticatedstorage:limited_diamond_barrel_4",
+    "sophisticatedstorage:limited_netherite_barrel_1",
+    "sophisticatedstorage:limited_netherite_barrel_2",
+    "sophisticatedstorage:limited_netherite_barrel_3",
+    "sophisticatedstorage:limited_netherite_barrel_4"
+  ]
+}

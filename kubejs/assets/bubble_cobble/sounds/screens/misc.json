@@ -1,0 +1,7 @@
+{
+  "keys": [
+	  "create:crafting_blueprint",
+	  "create:linked_controller"
+  ],
+  "soundEvent": "create:controller_take"
+}

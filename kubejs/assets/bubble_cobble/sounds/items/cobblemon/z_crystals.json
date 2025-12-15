@@ -1,0 +1,9 @@
+{
+  "keys": [
+    "#mega_showdown:z_crystal",
+    "#mega_showdown:tera_shard"
+  ],
+  "pitch": 1.5,
+  "soundEvent": "cobblemon:block.display_case.hit",
+  "volume": 0.5
+}

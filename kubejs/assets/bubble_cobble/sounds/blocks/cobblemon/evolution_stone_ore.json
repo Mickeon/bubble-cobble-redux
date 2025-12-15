@@ -1,0 +1,33 @@
+{
+  "enabled": true,
+  "group": {
+    "break": {
+      "sound_id": "sounds:block.copper_ore.break"
+    },
+    "fall": {
+      "sound_id": "sounds:block.copper_ore.fall"
+    },
+    "hit": {
+      "sound_id": "sounds:block.copper_ore.hit"
+    },
+    "pitch": 0.75,
+    "place": {
+      "sound_id": "sounds:block.copper_ore.place"
+    },
+    "step": {
+      "sound_id": "sounds:block.copper_ore.step"
+    },
+    "volume": 1.0
+  },
+  "keys": [
+    "cobblemon:dawn_stone_ore",
+    "cobblemon:dusk_stone_ore",
+    "cobblemon:fire_stone_ore",
+    "cobblemon:ice_stone_ore",
+    "cobblemon:leaf_stone_ore",
+    "cobblemon:moon_stone_ore",
+    "cobblemon:shiny_stone_ore",
+    "cobblemon:sun_stone_ore",
+    "cobblemon:thunder_stone_ore"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+    "name": "Ice",
+    "displayName": "§bIce",
+    "pokemon": [
+        "Spheal level=10 nickname=\"The GameSphere\"",
+        "Swinub level=10 nickname\"Soap\"",
+        "Vulpix level=10 alolan nickname=\"Cone\""
+    ]
+}

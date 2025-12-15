@@ -1,0 +1,26 @@
+{
+  "$schema": "https://www.schemastore.org/minecraft-advancement.json",
+  "parent": "minecraft:adventure/root",
+  "display": {
+    "icon": {
+      "id": "minecraft:pufferfish"
+    },
+    "title": "I swear I did not put this in",
+    "description": "Feed a carrot to a Pufferfish."
+  },
+  "criteria": {
+    "aeugh": {
+      "trigger": "minecraft:player_interacted_with_entity",
+      "conditions": {
+        "item": [
+          {
+            "items": "minecraft:carrot"
+          }
+        ],
+        "entity": {
+          "type": "minecraft:pufferfish"
+        }
+      }
+    }
+  }
+}

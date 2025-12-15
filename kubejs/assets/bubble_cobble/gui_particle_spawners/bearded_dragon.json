@@ -1,0 +1,35 @@
+{
+  "attributes": {
+    "x": 0,
+    "y": 7,
+    "speedY": 10,
+    "frictionY": 0.75,
+    "color_start": "#FFFFFFFF",
+    "color_end": "#CCFFFFFDD",
+    "duration": 20
+  },
+  "attributes_variance": {
+    "x": 6,
+    "y": 2,
+    "speedX": 2,
+    "speedY": 1,
+    "duration": 5
+  },
+  "events": {
+    "onCarried": {
+      "interval": 15,
+      "interval_variance": 2,
+      "particles": [{ "id": "minecraft:heart" }]
+    },
+
+    "onIdle": {"use": "onCarried", "interval": 40, "interval_variance": 5},
+
+    "onShake": {
+      "use": "onCarried",
+      "interval": 2
+    }
+
+  },
+
+  "applies": [{"id": "kubejs:bearded_dragon_bowl"}]
+}

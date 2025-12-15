@@ -1,0 +1,9 @@
+{
+  "keys": [
+    "#cobblemon:herbs"
+  ],
+  "__comment": "Overridden by evolution_items.json",
+  "pitch": 2.0,
+  "soundEvent": "cobblemon:item.medicine.herb.use",
+  "volume": 0.5
+}

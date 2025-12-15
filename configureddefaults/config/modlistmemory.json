@@ -1,0 +1,22 @@
+{
+  "options": {
+    "mode": "REMEMBER_RECENT",
+    "pinnedModsSize": 5,
+    "recentModsSize": 5,
+    "pinKey": "CONTROL",
+    "unpinKey": "CONTROL",
+    "showBadges": true,
+    "pinnedText": "Pinned",
+    "recentText": "Recent",
+    "persistOnRestart": true,
+    "saveOnUpdate": true,
+    "pinnedMods": [
+      "fog",
+      "mod_sets",
+      "sounds"
+    ],
+    "recentMods": [
+    ],
+    "scrollAmount": 0.0
+  }
+}

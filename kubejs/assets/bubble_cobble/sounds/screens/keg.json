@@ -1,0 +1,6 @@
+{
+  "keys": [
+    "brewinandchewin:keg"
+  ],
+  "soundEvent": "sounds:block.barrel.place"
+}

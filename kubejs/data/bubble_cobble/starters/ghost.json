@@ -1,0 +1,9 @@
+{
+    "name": "Ghost",
+    "displayName": "§5Ghost",
+    "pokemon": [
+        "Gastly level=10 nickname=\"Fobìa\"",
+        "Litwik level=10 nickname=\"Candela\"",
+        "Honedge level=10 nickname=\"Honey\""
+    ]
+}

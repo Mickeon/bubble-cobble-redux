@@ -1,0 +1,34 @@
+{
+  "parent": "farmersdelight:main/root",
+  "display": {
+    "icon": {
+      "id": "kubejs:doublemint_gum"
+    },
+    "title": {
+			"color": "green",
+			"text": "When chewed, it's food!",
+			"underlined": true,
+			"clickEvent": {
+				"action": "open_url",
+				"value": "https://youtu.be/u_im-zOxZ1U?si=V-hu5eSatmMOBOXK&t=217"
+			}
+		},
+    "description": "Refreshing delightment, it's the right mint!",
+    "frame": "goal",
+    "hidden": true
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": ["kubejs:doublemint_gum"]
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "kubejs:play_mint",
+    "experience": 10
+  }
+}

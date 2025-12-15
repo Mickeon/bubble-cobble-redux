@@ -1,0 +1,43 @@
+{
+  "attributes": {
+    "x": 0,
+    "y": -2,
+    "speedY": -2,
+    "accelerationY": 0.1,
+    "duration": 40,
+    "color_start": "#FFFFFFFF",
+    "color_end": "#2277FFFF"
+  },
+  "attributes_variance": {
+    "x": 6,
+    "y": 6,
+    "speedX": 2,
+    "speedY": 2,
+    "duration": 5
+  },
+  "events": {
+    "onCarried": {
+      "interval": 20,
+      "interval_variance": 2,
+      "particles": [{ "id": "minecraft:infested" }]
+    },
+
+    "onIdle": {"use": "onCarried", "interval": 40, "interval_variance": 5},
+
+    "onShake": {
+      "use": "onCarried",
+      "interval": 2
+    }
+
+  },
+
+  "applies": [
+    {"id": "minecraft:infested_deepslate"},
+    {"id": "minecraft:infested_mossy_stone_bricks"},
+    {"id": "minecraft:infested_stone_bricks"},
+    {"id": "minecraft:infested_stone"},
+    {"id": "minecraft:infested_cobblestone"},
+    {"id": "minecraft:infested_cracked_stone_bricks"},
+    {"id": "minecraft:infested_chiseled_stone_bricks"}
+  ]
+}

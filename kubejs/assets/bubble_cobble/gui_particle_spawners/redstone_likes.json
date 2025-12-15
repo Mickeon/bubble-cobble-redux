@@ -1,0 +1,26 @@
+{
+  "parent": "item_interactions:redstone_torch_likes/redstone_torch_template",
+
+  "events": {
+    "onShake": {
+      "use": "reddust",
+      "interval": 2,
+      "interval_variance": 0
+    },
+    "onCarried": {
+        "use": "reddust",
+        "interval": 20,
+        "interval_variance": 5
+    }
+  },
+
+  "applies": [
+    {"id": "supplementaries:speaker_block"},
+    {"id": "supplementaries:crank"},
+    {"id": "supplementaries:crystal_display"},
+    {"id": "supplementaries:notice_board"},
+    {"id": "supplementaries:clock_block"},
+    {"id": "supplementaries:sconce_lever"},
+    {"id": "supplementaries:faucet"}
+  ]
+}

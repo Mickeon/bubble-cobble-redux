@@ -1,0 +1,9 @@
+{
+  "__comment": "minecraft:cookingpot is actually Cobblemon's Campfire Pot",
+  "keys": [
+    "farmersdelight:cooking_pot",
+    "miners_delight:copper_pot",
+    "minecraft:cooking_pot"
+  ],
+  "soundEvent": "farmersdelight:item.skillet.attack.weak"
+}

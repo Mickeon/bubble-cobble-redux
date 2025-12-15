@@ -1,0 +1,34 @@
+{
+  "$schema": "https://www.schemastore.org/minecraft-advancement.json",
+  "parent": "minecraft:adventure/root",
+  "display": {
+    "icon": {
+      "id": "cobblemon:soft_sand"
+    },
+    "title": "Are you fucking serious",
+    "description": "Receive Soft Sand from someone, in a desert."
+  },
+  "criteria": {
+    "soft_sand_from_desert": {
+      "trigger": "minecraft:thrown_item_picked_up_by_player",
+      "conditions": {
+        "item": [
+          {
+            "items": "cobblemon:soft_sand"
+          }
+        ],
+        "entity": {
+          "location": {
+            "biomes": "#c:is_desert"
+          }
+        }
+      }
+    },
+    "player_in_desert": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "biomes": "#c:is_desert"
+      }
+    }
+  }
+}

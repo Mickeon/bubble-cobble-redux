@@ -1,0 +1,25 @@
+{
+  "enabled": true,
+  "group": {
+    "break": {
+      "sound_id": "sounds:block.birch_object.break"
+    },
+    "fall": {
+      "sound_id": "sounds:block.birch_object.fall"
+    },
+    "hit": {
+      "sound_id": "sounds:block.birch_planks.hit"
+    },
+    "pitch": 1.0,
+    "place": {
+      "sound_id": "sounds:block.birch_object.place"
+    },
+    "step": {
+      "sound_id": "sounds:block.birch_object.step"
+    },
+    "volume": 1.0
+  },
+  "keys": [
+    "#bubble_cobble:birch_object_sounds"
+  ]
+}

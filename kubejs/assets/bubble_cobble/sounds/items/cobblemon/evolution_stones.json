@@ -1,0 +1,9 @@
+{
+  "keys": [
+    "#cobblemon:evolution_stones"
+  ],
+  "__comment": "Overridden by evolution_items.json",
+  "pitch": 1.5,
+  "soundEvent": "cobblemon:block.evolution_stone_block.step",
+  "volume": 0.25
+}

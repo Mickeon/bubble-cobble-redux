@@ -1,0 +1,24 @@
+{
+  "general": {
+    "enable": true,
+    "debugDisplay": false
+  },
+  "movement": {
+    "enable": true,
+    "jump": true,
+    "sneak": "Maintain",
+    "sneak_disallowed": "Maintain",
+    "sneak_flying": "Pressed",
+    "dismount": false,
+    "textFieldDisables": true,
+    "unrecognizedScreenDefault": true
+  },
+  "background": {
+    "enable": false,
+    "hideOnPause": "Show",
+    "unrecognizedScreenDefault": false
+  },
+  "allowedKeysOverrides": {
+    "key.crawl": true
+  }
+}

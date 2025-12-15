@@ -1,0 +1,8 @@
+{
+  "keys": [
+    "#cobblemon:held/is_held_item"
+  ],
+  "pitch": 1.0,
+  "soundEvent": "bubble_cobble:grab_whimsy",
+  "volume": 0.25
+}

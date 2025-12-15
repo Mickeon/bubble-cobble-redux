@@ -1,0 +1,7 @@
+{
+  "parent": "item_interactions:torch_smoke",
+
+  "applies": [
+    {"id": "supplementaries:fire_pit"}
+  ]
+}

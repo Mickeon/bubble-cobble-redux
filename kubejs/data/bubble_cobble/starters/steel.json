@@ -1,0 +1,9 @@
+{
+    "name": "Steel",
+    "displayName": "§7Steel",
+    "pokemon": [
+        "Magnemite level=10",
+        "Aron level=10 nickname=\"Aaron Paul\"",
+        "Tinkatink level=10 nickname=\"Sweet Angel\""
+    ]
+}

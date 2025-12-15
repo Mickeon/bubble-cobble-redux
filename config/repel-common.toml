@@ -1,0 +1,28 @@
+#Whether the repel system is active.
+enableRepel = true
+#Radius (horizontal) used by placed Repel Blocks.
+# Default: 64
+# Range: 1 ~ 512
+placedRadius = 64
+#Radius (horizontal) used by the hand-held repel mode.
+# Default: 96
+# Range: 1 ~ 512
+charmRadius = 96
+#Vertical range (blocks) that repel effects cover.
+# Default: 48
+# Range: 1 ~ 256
+zoneSize = 48
+#Show toggle particles when activating the hand-held repel mode.
+showToggleParticles = true
+#Respect FTB claim and team ownership when blocking spawns.
+enableClaimIntegration = true
+#Allow hand-held and placed effects to stack.
+stackingEnabled = true
+#How often (in ticks) to re-verify players who currently show an active hand-held repel. Only those players are rescanned.
+# Default: 20
+# Range: 1 ~ 200
+rescanIntervalTicks = 20
+#Upper bound used as a safety cutoff for AABB queries. If more than this many active players are returned by the spatial index, we short-circuit to 'true'.
+# Default: 1024
+# Range: 1 ~ 100000
+maxAabbPlayersToCheck = 1024

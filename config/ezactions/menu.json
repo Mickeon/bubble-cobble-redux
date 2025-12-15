@@ -1,0 +1,367 @@
+[
+  {
+    "id": "Development (KubeJS \u0026 Co)",
+    "title": "Development (KubeJS \u0026 Co)",
+    "icon": "brewinandchewin:red_rum",
+    "children": [
+      {
+        "id": "cmd_19ada214524",
+        "title": "Reload client scripts",
+        "icon": "farmersdelight:tomato",
+        "action": {
+          "type": "COMMAND",
+          "command": "/kubejs reload client-scripts",
+          "delayTicks": 0
+        }
+      },
+      {
+        "id": "cmd_19ada22cc2c",
+        "title": "Reload server scripts",
+        "icon": "farmersdelight:tomato_crate",
+        "action": {
+          "type": "COMMAND",
+          "command": "/kubejs reload server-scripts",
+          "delayTicks": 0
+        }
+      },
+      {
+        "id": "cmd_19ada23016e",
+        "title": "Reload startup scripts",
+        "icon": "farmersdelight:tomato_sauce",
+        "action": {
+          "type": "COMMAND",
+          "command": "/kubejs reload startup-scripts",
+          "delayTicks": 0
+        }
+      },
+      {
+        "id": "cmd_19b0e8d7df0",
+        "title": "Reload Datapacks",
+        "icon": "farmersdelight:pasta_with_meatballs",
+        "note": "Reload server scripts\u0026datapacks",
+        "action": {
+          "type": "COMMAND",
+          "command": "/reload",
+          "delayTicks": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "Map",
+    "title": "Map",
+    "icon": "minecraft:filled_map",
+    "note": "Xaero\u0027s World \u0026 Mini Map",
+    "children": [
+      {
+        "id": "key_19b1243ff05",
+        "title": "World Map Settings",
+        "icon": "via_romana:charting_map",
+        "action": {
+          "type": "KEY",
+          "name": "gui.xaero_open_settings",
+          "toggle": false,
+          "mode": "AUTO"
+        }
+      },
+      {
+        "id": "key_19b14f8cbe7",
+        "title": "Open World Map",
+        "icon": "minecraft:stone",
+        "action": {
+          "type": "KEY",
+          "name": "gui.xaero_open_map",
+          "toggle": false,
+          "mode": "AUTO"
+        }
+      },
+      {
+        "id": "key_19b126f62fc",
+        "title": "Toggle in-world Waypoints",
+        "icon": "minecraft:stone",
+        "action": {
+          "type": "KEY",
+          "name": "gui.xaero_toggle_waypoints",
+          "toggle": false,
+          "mode": "AUTO"
+        }
+      },
+      {
+        "id": "key_19b12704065",
+        "title": "Toggle Minimap",
+        "icon": "minecraft:stone",
+        "action": {
+          "type": "KEY",
+          "name": "gui.xaero_toggle_map",
+          "toggle": false,
+          "mode": "AUTO"
+        }
+      },
+      {
+        "id": "key_19b1243a10e",
+        "title": "Minimap Settings",
+        "icon": "create:sand_paper",
+        "action": {
+          "type": "KEY",
+          "name": "gui.xaero_minimap_settings",
+          "toggle": false,
+          "mode": "AUTO"
+        }
+      }
+    ]
+  },
+  {
+    "id": "Storage",
+    "title": "Storage",
+    "icon": "sophisticatedbackpacks:copper_backpack",
+    "note": "Sophisticated Storage \u0026 Co.",
+    "bundleKeybindEnabled": true,
+    "children": [
+      {
+        "id": "key_19b12546997",
+        "title": "Highlight Storage with Item",
+        "icon": "create:brass_hand",
+        "action": {
+          "type": "KEY",
+          "name": "keybind.sophisticatedcore.item_highlight",
+          "toggle": false,
+          "mode": "AUTO"
+        }
+      },
+      {
+        "id": "key_19b1253d20e",
+        "title": "Restock Item from Storage/Backpack",
+        "icon": "sophisticatedbackpacks:restock_upgrade",
+        "action": {
+          "type": "KEY",
+          "name": "keybind.sophisticatedcore.restock_item",
+          "toggle": false,
+          "mode": "AUTO"
+        }
+      },
+      {
+        "id": "key_19b1260b937",
+        "title": "Toggle Upgrade in the 3rd Slot",
+        "icon": "create:cardboard_package_12x12",
+        "note": "Backpack",
+        "action": {
+          "type": "KEY",
+          "name": "keybind.sophisticatedbackpacks.toggle_upgrade_3",
+          "toggle": false,
+          "mode": "AUTO"
+        }
+      },
+      {
+        "id": "key_19b125fd2bd",
+        "title": "Toggle Upgrade in the 2nd slot",
+        "icon": "create:cardboard_package_12x10",
+        "note": "(Backpack)",
+        "action": {
+          "type": "KEY",
+          "name": "keybind.sophisticatedbackpacks.toggle_upgrade_1",
+          "toggle": false,
+          "mode": "AUTO"
+        }
+      },
+      {
+        "id": "key_19b125f3fe8",
+        "title": "Toggle Upgrade in the 1st Slot",
+        "icon": "create:cardboard_package_10x8",
+        "note": "Backpack",
+        "action": {
+          "type": "KEY",
+          "name": "keybind.sophisticatedbackpacks.toggle_upgrade_1",
+          "toggle": false,
+          "mode": "AUTO"
+        }
+      },
+      {
+        "id": "key_19b124db951",
+        "title": "Deposit Item into Storage/Backpack",
+        "icon": "sophisticatedbackpacks:deposit_upgrade",
+        "action": {
+          "type": "KEY",
+          "name": "keybind.sophisticatedcore.deposit_item",
+          "toggle": false,
+          "mode": "AUTO"
+        }
+      },
+      {
+        "id": "key_19b124aadad",
+        "title": "Run Inventory Interaction Upgrades",
+        "icon": "sophisticatedbackpacks:advanced_restock_upgrade",
+        "action": {
+          "type": "KEY",
+          "name": "keybind.sophisticatedbackpacks.inventory_interaction",
+          "toggle": false,
+          "mode": "AUTO"
+        }
+      }
+    ]
+  },
+  {
+    "id": "Configs",
+    "title": "Configs",
+    "icon": "supplementaries:wrench",
+    "bundleKeybindEnabled": true,
+    "children": [
+      {
+        "id": "key_19b1271f7dc",
+        "title": "Jade",
+        "icon": "supplementaries:altimeter",
+        "action": {
+          "type": "KEY",
+          "name": "key.jade.config",
+          "toggle": false,
+          "mode": "AUTO"
+        }
+      },
+      {
+        "id": "key_19b12744cc6",
+        "title": "CraftPresence",
+        "icon": "createdeco:decal_radioactive",
+        "note": "Discord Rich Presence",
+        "action": {
+          "type": "KEY",
+          "name": "key.craftpresence.config_keycode.name",
+          "toggle": false,
+          "mode": "AUTO"
+        }
+      },
+      {
+        "id": "key_19b127549cf",
+        "title": "Shaders",
+        "icon": "brewinandchewin:flaxen_cheese_wedge",
+        "action": {
+          "type": "KEY",
+          "name": "iris.keybind.shaderPackSelection",
+          "toggle": false,
+          "mode": "AUTO"
+        }
+      },
+      {
+        "id": "key_19b1276abf3",
+        "title": "ModernFix",
+        "icon": "supplementaries:soap",
+        "action": {
+          "type": "KEY",
+          "name": "key.modernfix.config",
+          "toggle": false,
+          "mode": "AUTO"
+        }
+      },
+      {
+        "id": "cmd_19b128fb3b1",
+        "title": "Creative Core",
+        "icon": "minecraft:stone",
+        "action": {
+          "type": "COMMAND",
+          "command": "/cmdconfig",
+          "delayTicks": 0
+        }
+      },
+      {
+        "id": "cmd_19b128fe7ae",
+        "title": "Creative Core (Client)",
+        "icon": "minecraft:stone",
+        "action": {
+          "type": "COMMAND",
+          "command": "/cmdclientconfig",
+          "delayTicks": 0
+        }
+      },
+      {
+        "id": "cmd_19b129b8fa2",
+        "title": "Cobblemon",
+        "icon": "cobblemon:poke_ball",
+        "action": {
+          "type": "COMMAND",
+          "command": "/cobblemonconfig",
+          "delayTicks": 0
+        }
+      },
+      {
+        "id": "cmd_19b12933e7e",
+        "title": "General",
+        "icon": "minecraft:knowledge_book",
+        "note": "Opens Create\u0027s API for configs",
+        "action": {
+          "type": "COMMAND",
+          "command": "/catnip config",
+          "delayTicks": 0
+        }
+      },
+      {
+        "id": "cmd_19b12ea7f3b",
+        "title": "Accessories",
+        "icon": "mega_showdown:mega_bracelet_red",
+        "action": {
+          "type": "COMMAND",
+          "command": "/owo-config accessories",
+          "delayTicks": 0
+        }
+      },
+      {
+        "id": "cmd_19b12acb417",
+        "title": "EMI Loot",
+        "icon": "minecraft:bone",
+        "action": {
+          "type": "COMMAND",
+          "command": "/configure emi_loot emi_loot_config",
+          "delayTicks": 0
+        }
+      },
+      {
+        "id": "cmd_19b12ab9945",
+        "title": "Particles",
+        "icon": "create:experience_nugget",
+        "note": "Particle Core",
+        "action": {
+          "type": "COMMAND",
+          "command": "/configure particle_core particle_core_config",
+          "delayTicks": 0
+        }
+      },
+      {
+        "id": "cmd_19b12eaf3de",
+        "title": "Particle Rain",
+        "icon": "minecraft:ghast_tear",
+        "action": {
+          "type": "COMMAND",
+          "command": "/particlerain",
+          "delayTicks": 0
+        }
+      },
+      {
+        "id": "cmd_19b12a53a76",
+        "title": "Immersive Paintings (Client)",
+        "icon": "immersive_paintings:painting",
+        "action": {
+          "type": "COMMAND",
+          "command": "/configure immersive_paintings client_config",
+          "delayTicks": 0
+        }
+      },
+      {
+        "id": "cmd_19b12a65096",
+        "title": "Immersive Paintings (Common)",
+        "icon": "immersive_paintings:graffiti",
+        "action": {
+          "type": "COMMAND",
+          "command": "/configure immersive_paintings common_config",
+          "delayTicks": 0
+        }
+      },
+      {
+        "id": "cmd_19b12afd6fe",
+        "title": "Custom Player Model (Safety)",
+        "icon": "minecraft:player_head",
+        "action": {
+          "type": "COMMAND",
+          "command": "/cpmclient safety",
+          "delayTicks": 0
+        }
+      }
+    ]
+  }
+]

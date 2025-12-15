@@ -1,0 +1,9 @@
+{
+  "keys": [
+    "#bubble_cobble:pokenavs",
+    "#bubble_cobble:pokefinders"
+  ],
+  "pitch": 1.1,
+  "soundEvent": "cobblemon:gui.click",
+  "volume": 0.1
+}

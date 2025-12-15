@@ -1,0 +1,84 @@
+{
+    "stop_right_there" : {
+		"sounds": [
+			"bubble_cobble:stop_right_there"
+		]
+	},
+	"no_breathing" : {
+		"sounds": [
+			"bubble_cobble:no_breathing"
+		]
+	},
+	"keel_over_and_die" : {
+		"sounds": [
+			"bubble_cobble:keel_over_and_die"
+		]
+	},
+	"buzz": {
+		"sounds": [
+			"bubble_cobble:buzz"
+		]
+	},
+	"tm_machine": {
+		"sounds": [{
+			"name": "bubble_cobble:tm_machine",
+			"volume": 0.25
+		}]
+	},
+	"grab_disc": {
+		"sounds": [
+			{
+				"name": "bubble_cobble:grab_disc",
+				"weight": 2
+			},
+			{
+				"name": "bubble_cobble:grab_disc",
+				"pitch": 0.9,
+				"weight": 2
+			},
+			{
+				"name": "bubble_cobble:grab_disc",
+				"pitch": 1.1,
+				"weight": 2
+			},
+			{
+				"name": "bubble_cobble:grab_disc",
+				"pitch": 0.75,
+				"weight": 1
+			},
+			{
+				"name": "bubble_cobble:grab_disc",
+				"pitch": 1.25,
+				"weight": 1
+			}
+		]
+	},
+	"grab_whimsy": {
+		"sounds": [
+			{
+				"name": "bubble_cobble:grab_whimsy",
+				"weight": 4
+			},
+			{
+				"name": "bubble_cobble:grab_whimsy",
+				"pitch": 0.95,
+				"weight": 2
+			},
+			{
+				"name": "bubble_cobble:grab_whimsy",
+				"pitch": 1.05,
+				"weight": 2
+			},
+			{
+				"name": "bubble_cobble:grab_whimsy",
+				"pitch": 0.9,
+				"weight": 1
+			},
+			{
+				"name": "bubble_cobble:grab_whimsy",
+				"pitch": 1.1,
+				"weight": 1
+			}
+		]
+	}
+}

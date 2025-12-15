@@ -1,0 +1,12 @@
+{
+  "keys": [
+    "#cobblemon:restores",
+    "#cobblemon:potions",
+    "#cobblemon:ethers",
+    "cobblemon:medicinal_brew",
+    "cobblemon:moomoo_milk"
+  ],
+  "pitch": 1.75,
+  "soundEvent": "cobblemon:item.medicine.liquid.use",
+  "volume": 0.25
+}

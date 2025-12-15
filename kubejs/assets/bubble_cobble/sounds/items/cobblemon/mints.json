@@ -1,0 +1,8 @@
+{
+  "keys": [
+    "#cobblemon:mints"
+  ],
+  "pitch": 1.5,
+  "soundEvent": "cobblemon:block.mint.place",
+  "volume": 0.25
+}

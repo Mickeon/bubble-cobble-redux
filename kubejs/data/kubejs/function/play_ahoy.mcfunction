@@ -1,0 +1,1 @@
+playsound kubejs:advancement.ahoy player @s

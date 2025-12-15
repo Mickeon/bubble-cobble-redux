@@ -1,0 +1,24 @@
+{
+  "containers": [
+    {
+      "filled": [
+        "create_bic_bit:stamppot_bowl"
+      ],
+      "empty": "minecraft:bowl",
+      "capacity": "BOTTLE"
+    }
+  ],
+  "equivalent_fluids": [
+    "create_bic_bit:stamppot"
+  ],
+  "color": "#ebc081",
+  "food": {
+    "divider": "BOTTLE",
+    "item": "create_bic_bit:stamppot_bowl"
+  },
+  "from_mod": "create_bic_bit",
+  "translation_key": "fluid.create_bic_bit.frying_oil",
+  "flowing_texture": "create_bic_bit:fluid/stamppot_flow",
+  "still_texture": "create_bic_bit:fluid/stamppot_flow",
+  "use_texture_from": "create_bic_bit:stamppot"
+}

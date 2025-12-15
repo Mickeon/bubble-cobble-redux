@@ -1,0 +1,33 @@
+{
+  "enabled": true,
+  "group": {
+    "break": {
+      "sound_id": "minecraft:block.netherite_block.break"
+    },
+    "fall": {
+      "sound_id": "minecraft:block.netherite_block.fall"
+    },
+    "hit": {
+      "sound_id": "minecraft:block.netherite_block.hit"
+    },
+    "pitch": 1.6,
+    "place": {
+      "sound_id": "minecraft:block.netherite_block.place"
+    },
+    "step": {
+      "sound_id": "sounds:block.gold_block.step"
+    },
+    "volume": 1.0
+  },
+  "keys": [
+    "#bubble_cobble:gold_sounds",
+    "supplementaries:gold_gate",
+    "supplementaries:gold_bars",
+    "supplementaries:gold_door",
+    "supplementaries:gold_trapdoor",
+    "handcrafted:golden_wide_pot",
+    "handcrafted:golden_medium_pot",
+    "handcrafted:golden_thick_pot",
+    "handcrafted:golden_thin_pot"
+  ]
+}

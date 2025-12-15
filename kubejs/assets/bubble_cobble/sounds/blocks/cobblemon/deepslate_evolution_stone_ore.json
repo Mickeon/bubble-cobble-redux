@@ -1,0 +1,42 @@
+{
+  "enabled": true,
+  "group": {
+    "break": {
+      "sound_id": "sounds:block.copper_ore.break"
+    },
+    "fall": {
+      "sound_id": "sounds:block.deepslate_copper_ore.fall"
+    },
+    "hit": {
+      "sound_id": "sounds:block.deepslate_copper_ore.hit"
+    },
+    "pitch": 0.75,
+    "place": {
+      "sound_id": "sounds:block.deepslate_copper_ore.place"
+    },
+    "step": {
+      "sound_id": "sounds:block.deepslate_copper_ore.step"
+    },
+    "volume": 1.0
+  },
+  "keys": [
+    "cobblemon:deepslate_dawn_stone_ore",
+    "cobblemon:deepslate_dusk_stone_ore",
+    "cobblemon:deepslate_fire_stone_ore",
+    "cobblemon:deepslate_ice_stone_ore",
+    "cobblemon:deepslate_leaf_stone_ore",
+    "cobblemon:deepslate_moon_stone_ore",
+    "cobblemon:deepslate_shiny_stone_ore",
+    "cobblemon:deepslate_sun_stone_ore",
+    "cobblemon:deepslate_thunder_stone_ore",
+   	"mega_showdown:mega_meteorid_dawn_ore",
+	  "mega_showdown:mega_meteorid_dusk_ore",
+	  "mega_showdown:mega_meteorid_fire_ore",
+  	"mega_showdown:mega_meteorid_ice_ore",
+	  "mega_showdown:mega_meteorid_leaf_ore",
+	  "mega_showdown:mega_meteorid_moon_ore",
+	  "mega_showdown:mega_meteorid_shiny_ore",
+  	"mega_showdown:mega_meteorid_sun_ore",
+	  "mega_showdown:mega_meteorid_thunder_ore"
+  ]
+}

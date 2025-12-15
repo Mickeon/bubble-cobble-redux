@@ -1,0 +1,9 @@
+{
+    "name": "Poison",
+    "displayName": "§5Poison",
+    "pokemon": [
+        "Zubat level=10",
+        "Budew level=10",
+        "Skorupi level=10"
+    ]
+}

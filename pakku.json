@@ -1,0 +1,40 @@
+{
+    "name": "Bubble Cobble Redux",
+    "version": "1.0.0",
+    "author": "Mickeon",
+    "overrides": [
+        "config",
+        "configureddefaults",
+        "global_packs/both",
+        "global_packs/icon.ico",
+        "global_packs/desktop.ini",
+        "kubejs",
+        "!config/emixx/emixx-client.toml",
+        "!config/fog/config.json",
+        "!config/immersive_paintings/client_config.toml",
+        "!config/jade/jade.json",
+        "!config/maplink/friends.json5",
+        "!config/playernamestyler/nicknames.json",
+        "!config/sounds/chat.json",
+        "!config/sounds/event.json",
+        "!config/sounds/mod_utils.json",
+        "!config/sounds/ui.json",
+        "!config/sounds/world.json",
+        "!config/cpm.json",
+        "!config/flywheel-client.toml",
+        "!config/lambdynlights.toml",
+        "!config/modlistmemory.json",
+        "!config/particle_core_config.toml",
+        "!config/particlerain.json"
+    ],
+    "paths": {
+        "resource_packs": "global_packs/resourcepacks/",
+        "data_packs": "global_packs/datapacks/",
+        "shader_packs": "shaderpacks_dummy"
+    },
+    "projects": {
+        "kubejs-offline": {
+            "export": false
+        }
+    }
+}

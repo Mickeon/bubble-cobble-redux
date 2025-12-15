@@ -1,0 +1,47 @@
+{
+	"parent": "minecraft:adventure/root",
+	"display": {
+		"icon": {
+			"id": "minecraft:snow_block"
+		},
+		"title": {
+			"color": "aqua",
+			"text": "cool cool mountain",
+			"underlined": true,
+			"clickEvent": {
+				"action": "open_url",
+				"value": "https://twitter.com/not_weav/status/1882884883733000573"
+			}
+		},
+		"description": {
+			"text": "oh wow what a",
+			"color": "dark_gray",
+			"underlined": false
+		},
+		"frame": "task"
+	},
+	"criteria": {
+		"location": {
+			"trigger": "minecraft:location",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"location": {
+								"biomes": [
+									"minecraft:snowy_slopes",
+									"minecraft:frozen_peaks"
+								]
+							}
+						}
+					}
+				]
+			}
+		}
+	},
+	"rewards": {
+		"function": "kubejs:play_cool"
+	}
+}

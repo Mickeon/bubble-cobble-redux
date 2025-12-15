@@ -1,0 +1,64 @@
+{
+  "parent": "create:root",
+  "display": {
+    "icon": {
+      "id": "createdeco:red_shipping_container"
+    },
+    "title": "I was looking for my sister",
+    "description": "I ordered some Furniture from Thailand."
+  },
+  "criteria": {
+    "barrel_white": { "trigger": "minecraft:recipe_crafted", "conditions": { "recipe_id": "minecraft:white_shipping_container" }},
+    "vault_white": { "trigger": "minecraft:recipe_crafted", "conditions": { "recipe_id": "minecraft:white_shipping_container_from_dyeing_vaults" }},
+    "barrel_orange": { "trigger": "minecraft:recipe_crafted", "conditions": { "recipe_id": "minecraft:orange_shipping_container" }},
+    "vault_orange": { "trigger": "minecraft:recipe_crafted", "conditions": { "recipe_id": "minecraft:orange_shipping_container_from_dyeing_vaults" }},
+    "barrel_magenta": { "trigger": "minecraft:recipe_crafted", "conditions": { "recipe_id": "minecraft:magenta_shipping_container" }},
+    "vault_magenta": { "trigger": "minecraft:recipe_crafted", "conditions": { "recipe_id": "minecraft:magenta_shipping_container_from_dyeing_vaults" }},
+    "barrel_light_blue": { "trigger": "minecraft:recipe_crafted", "conditions": { "recipe_id": "minecraft:light_blue_shipping_container" }},
+    "vault_light_blue": { "trigger": "minecraft:recipe_crafted", "conditions": { "recipe_id": "minecraft:light_blue_shipping_container_from_dyeing_vaults" }},
+    "barrel_yellow": { "trigger": "minecraft:recipe_crafted", "conditions": { "recipe_id": "minecraft:yellow_shipping_container" }},
+    "vault_yellow": { "trigger": "minecraft:recipe_crafted", "conditions": { "recipe_id": "minecraft:yellow_shipping_container_from_dyeing_vaults" }},
+    "barrel_lime": { "trigger": "minecraft:recipe_crafted", "conditions": { "recipe_id": "minecraft:lime_shipping_container" }},
+    "vault_lime": { "trigger": "minecraft:recipe_crafted", "conditions": { "recipe_id": "minecraft:lime_shipping_container_from_dyeing_vaults" }},
+    "barrel_pink": { "trigger": "minecraft:recipe_crafted", "conditions": { "recipe_id": "minecraft:pink_shipping_container" }},
+    "vault_pink": { "trigger": "minecraft:recipe_crafted", "conditions": { "recipe_id": "minecraft:pink_shipping_container_from_dyeing_vaults" }},
+    "barrel_gray": { "trigger": "minecraft:recipe_crafted", "conditions": { "recipe_id": "minecraft:gray_shipping_container" }},
+    "vault_gray": { "trigger": "minecraft:recipe_crafted", "conditions": { "recipe_id": "minecraft:gray_shipping_container_from_dyeing_vaults" }},
+    "barrel_light_gray": { "trigger": "minecraft:recipe_crafted", "conditions": { "recipe_id": "minecraft:light_gray_shipping_container" }},
+    "vault_light_gray": { "trigger": "minecraft:recipe_crafted", "conditions": { "recipe_id": "minecraft:light_gray_shipping_container_from_dyeing_vaults" }},
+    "barrel_cyan": { "trigger": "minecraft:recipe_crafted", "conditions": { "recipe_id": "minecraft:cyan_shipping_container" }},
+    "vault_cyan": { "trigger": "minecraft:recipe_crafted", "conditions": { "recipe_id": "minecraft:cyan_shipping_container_from_dyeing_vaults" }},
+    "barrel_purple": { "trigger": "minecraft:recipe_crafted", "conditions": { "recipe_id": "minecraft:purple_shipping_container" }},
+    "vault_purple": { "trigger": "minecraft:recipe_crafted", "conditions": { "recipe_id": "minecraft:purple_shipping_container_from_dyeing_vaults" }},
+    "barrel_blue": { "trigger": "minecraft:recipe_crafted", "conditions": { "recipe_id": "minecraft:blue_shipping_container" }},
+    "vault_blue": { "trigger": "minecraft:recipe_crafted", "conditions": { "recipe_id": "minecraft:blue_shipping_container_from_dyeing_vaults" }},
+    "barrel_brown": { "trigger": "minecraft:recipe_crafted", "conditions": { "recipe_id": "minecraft:brown_shipping_container" }},
+    "vault_brown": { "trigger": "minecraft:recipe_crafted", "conditions": { "recipe_id": "minecraft:brown_shipping_container_from_dyeing_vaults" }},
+    "barrel_green": { "trigger": "minecraft:recipe_crafted", "conditions": { "recipe_id": "minecraft:green_shipping_container" }},
+    "vault_green": { "trigger": "minecraft:recipe_crafted", "conditions": { "recipe_id": "minecraft:green_shipping_container_from_dyeing_vaults" }},
+    "barrel_red": { "trigger": "minecraft:recipe_crafted", "conditions": { "recipe_id": "minecraft:red_shipping_container" }},
+    "vault_red": { "trigger": "minecraft:recipe_crafted", "conditions": { "recipe_id": "minecraft:red_shipping_container_from_dyeing_vaults" }},
+    "barrel_black": { "trigger": "minecraft:recipe_crafted", "conditions": { "recipe_id": "minecraft:black_shipping_container" }},
+    "vault_black": { "trigger": "minecraft:recipe_crafted", "conditions": { "recipe_id": "minecraft:black_shipping_container_from_dyeing_vaults" }}
+  },
+  "requirements": [
+    [
+      "barrel_white", "vault_white",
+      "barrel_orange", "vault_orange",
+      "barrel_magenta", "vault_magenta",
+      "barrel_light_blue", "vault_light_blue",
+      "barrel_yellow", "vault_yellow",
+      "barrel_lime", "vault_lime",
+      "barrel_pink", "vault_pink",
+      "barrel_gray", "vault_gray",
+      "barrel_light_gray", "vault_light_gray",
+      "barrel_cyan", "vault_cyan",
+      "barrel_purple", "vault_purple",
+      "barrel_blue", "vault_blue",
+      "barrel_brown", "vault_brown",
+      "barrel_green", "vault_green",
+      "barrel_red", "vault_red",
+      "barrel_black", "vault_black"
+    ]
+  ]
+}

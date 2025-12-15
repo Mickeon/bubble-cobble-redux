@@ -1,0 +1,31 @@
+{
+  "containers": [
+    {
+      "filled": [
+        "create_bic_bit:ketchup_bottle"
+      ],
+      "empty": "minecraft:glass_bottle",
+      "capacity": "BOTTLE"
+    },
+    {
+      "filled": [
+        "create_bic_bit:ketchup_bucket"
+      ],
+      "empty": "minecraft:bucket",
+      "capacity": "BUCKET"
+    }
+  ],
+  "equivalent_fluids": [
+    "create_bic_bit:ketchup"
+  ],
+  "color": "#991d1f",
+  "food": {
+    "divider": "BOTTLE",
+    "item": "create_bic_bit:ketchup_bottle"
+  },
+  "from_mod": "create_bic_bit",
+  "translation_key": "fluid.create_bic_bit.ketchup",
+  "flowing_texture": "create_bic_bit:block/textures/ketchup_flow",
+  "still_texture": "create_bic_bit:block/textures/ketchup_still",
+  "use_texture_from": "create_bic_bit:ketchup"
+}

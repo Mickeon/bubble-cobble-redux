@@ -1,0 +1,23 @@
+{
+  "parent": "brewinandchewin:main/place_keg",
+  "display": {
+    "icon": {
+      "id": "kubejs:sweet_berry_wine"
+    },
+    "title": "Cheers, mate!",
+    "description": "Drink a bottle of Bubble Pub-rated wine."
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "#kubejs:wines"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "experience": 50
+  }
+}

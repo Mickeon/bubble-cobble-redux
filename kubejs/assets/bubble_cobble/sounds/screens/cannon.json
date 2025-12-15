@@ -1,0 +1,6 @@
+{
+  "keys": [
+    "supplementaries:cannon"
+  ],
+  "soundEvent": "supplementaries:item.lunch_basket.insert"
+}

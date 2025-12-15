@@ -1,0 +1,9 @@
+{
+    "name": "Ground",
+    "displayName": "§6Ground",
+    "pokemon": [
+        "Sandile level=10",
+        "Trapinch level=10 nickname=\"Mob C\"",
+        "Rhyhorn level=10"
+    ]
+}

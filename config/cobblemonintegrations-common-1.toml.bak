@@ -1,0 +1,15 @@
+[jei]
+	#What Pokedex progress level should be required to see Pokemon in JEI?
+	#Note that this will only hide the info specified by "pokemonHideMode".
+	#Allowed Values: NONE, ENCOUNTERED, CAUGHT
+	pokedexHideLevel = "ENCOUNTERED"
+	#What info should be hidden in JEI?
+	#This only takes effect if "pokedexHideLevel" is not "NONE".
+	#Allowed Values: NAME, POKEMON, BOTH
+	pokemonHideMode = "BOTH"
+
+[enhancedcelestials]
+	#Most Enhanced Celestials configuration for Cobblemon Integrations must be done via Datapack.
+	#
+	#Should Lunar Event reward modifiers apply in PvP battles?
+	applyInPvP = false

@@ -1,0 +1,9 @@
+{
+    "name": "Electric",
+    "displayName": "§eElectric",
+    "pokemon": [
+        "Elekid level=10",
+        "Shinx level=10",
+        "Tynamo level=10"
+    ]
+}

@@ -1,0 +1,17 @@
+{
+	"title": {"text":"Tip", "bold": true, "underlined": true, "color": "#76C1EC"},
+	"tips": [
+		"🦈🦈🦈",
+		"Behold! A thousand cereals! I collect cereals."
+		,
+		"HEY. Stop playing vidio-games.\nI've had enough of your _stupid_ vidio-games.\nAren't you both a little oO-o-Oold to be playing vidio-games?"
+		,
+		["",{"text":"Did you know that "},{"text":"I am coming to your house ","color":"red"},{"text":"this instant","bold":true,"color":"red"},{"text":"??","color":"white"}]
+		,
+		"As a Sniper, aim for the head in order to inflict critical damage."
+		,
+		"If you rock and stone, you're never alone!"
+		,
+		"When Laby says \"Do something, it'll be funny\" never do it. It'll never be funny."
+	]
+}

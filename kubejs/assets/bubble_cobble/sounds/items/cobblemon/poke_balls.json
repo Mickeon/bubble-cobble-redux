@@ -1,0 +1,8 @@
+{
+  "keys": [
+    "#cobblemon:poke_balls"
+  ],
+  "pitch": 1.75,
+  "soundEvent": "cobblemon:poke_ball.shake",
+  "volume": 0.75
+}

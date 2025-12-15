@@ -1,0 +1,9 @@
+{
+    "name": "Water",
+    "displayName": "§9Water",
+    "pokemon": [
+        "Lotad level=10",
+        "Clauncher level=10",
+        "Horsea level=10"
+    ]
+}

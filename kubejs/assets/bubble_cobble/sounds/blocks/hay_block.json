@@ -1,0 +1,31 @@
+{
+  "enabled": true,
+  "group": {
+    "break": {
+      "sound_id": "sounds:block.hay_block.break"
+    },
+    "fall": {
+      "sound_id": "minecraft:block.tuff.fall"
+    },
+    "hit": {
+      "sound_id": "sounds:block.hay_block.hit"
+    },
+    "pitch": 1.0,
+    "place": {
+      "sound_id": "sounds:block.hay_block.place"
+    },
+    "step": {
+      "sound_id": "sounds:block.hay_block.step"
+    },
+    "volume": 1.0
+  },
+  "keys": [
+    "#bubble_cobble:hay_block_sounds",
+    "minecraft:dried_kelp_block",
+    "farmersdelight:rice_bale",
+    "farmersdelight:straw_bale",
+    "supplementaries:flax_block",
+    "farmersdelight:canvas_rug",
+    "brewinandchewin:coaster"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "keys": [
+    "sophisticatedbackpacks:settings",
+    "sophisticatedstorage:settings",
+    "sophisticatedstorage:limited_barrel_settings",
+    "sophisticatedbackpackscreateintegration:mounted_backpack_settings",
+    "sophisticatedstoragecreateintegration:mounted_storage_settings",
+    "sophisticatedstoragecreateintegration:mounted_limited_barrel_settings"
+  ],
+  "soundEvent": "supplementaries:item.wrench.rotate"
+}

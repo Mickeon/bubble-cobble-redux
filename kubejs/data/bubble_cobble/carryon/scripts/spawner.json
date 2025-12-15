@@ -1,0 +1,12 @@
+{
+	"object": {
+		"block": {
+			"name" : "minecraft:spawner"
+		}
+	},
+	"effects": {
+		"commandPickup" : "",
+		"commandLoop" : "execute if entity @s[gamemode=!creative] as @s at @s run function bubble_cobble:spawner_grabbed",
+		"commandPlace" : ""
+	}
+}

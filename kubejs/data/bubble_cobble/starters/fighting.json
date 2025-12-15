@@ -1,0 +1,9 @@
+{
+    "name": "Fighting",
+    "displayName": "§4Fighting",
+    "pokemon": [
+        "Riolu level=10 nickname=\"Bruh\"",
+        "Timburr level=10 nickname=\"Shaft\"",
+        "Mankey level=10 nickname=\"CVA\""
+    ]
+}

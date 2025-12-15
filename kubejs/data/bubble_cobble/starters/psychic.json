@@ -1,0 +1,9 @@
+{
+    "name": "Psychic",
+    "displayName": "§dPsychic",
+    "pokemon": [
+        "Ralts level=10 nickname=\"Coconut Head\"",
+        "Solosis level=10 nickname=\"N.Brio\"",
+        "Slowpoke level=10 galarian"
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "name": "Fire",
+    "displayName": "§cFire",
+    "pokemon": [
+        "Magby level=10 nickname=\"Tickle\"",
+        "Numel level=10",
+        "Houndour level=10"
+    ]
+}

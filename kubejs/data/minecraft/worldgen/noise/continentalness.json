@@ -1,0 +1,15 @@
+{
+  "__comment": "Changed first octave from -9. Changed amplitude sequence from [1.0, 1.0, 2.0, 2.0, 2.0, 1.0, 1.0, 1.0, 1.0]",
+  "amplitudes": [
+    1.0,
+    1.0,
+    2.0,
+    2.0,
+    2.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ],
+  "firstOctave": -9
+}

@@ -1,0 +1,69 @@
+{
+    "ui.button.click" : {
+		"replace": true,
+		"sounds": [
+			{
+				"name": "bubble_cobble:ui_select",
+				"pitch": 1.1,
+				"volume": 0.5,
+				"weight": 8
+			},
+			{
+				"name": "bubble_cobble:ui_select",
+				"pitch": 1.075,
+				"volume": 0.5,
+				"weight": 6
+			},
+			{
+				"name": "bubble_cobble:ui_select",
+				"pitch": 1.05,
+				"volume": 0.5,
+				"weight": 4
+			},
+			{
+				"name": "bubble_cobble:ui_select",
+				"pitch": 1.025,
+				"volume": 0.5,
+				"weight": 3
+			},
+			{
+				"name": "bubble_cobble:ui_select",
+				"pitch": 1.0,
+				"volume": 0.5,
+				"weight": 2
+			},
+			{
+				"name": "bubble_cobble:ui_select",
+				"pitch": 0.95,
+				"volume": 0.5,
+				"weight": 1
+			}
+		]
+	},
+	"ui.toast.challenge_complete" : {
+		"replace": true,
+		"sounds": [
+			{
+				"name": "bubble_cobble:mission_clear",
+				"volume": 0.5,
+				"weight": 1
+			}
+		]
+	},
+	"ui.toast.in": {
+		"replace": false,
+		"sounds": [{
+			"name": "bubble_cobble:woosh_in",
+			"pitch": 0.75,
+			"volume": 0.05
+		}]
+	},
+	"ui.toast.out": {
+		"replace": false,
+		"sounds": [{
+			"name": "bubble_cobble:woosh_out",
+			"pitch": 0.75,
+			"volume": 0.05
+		}]
+	}
+}

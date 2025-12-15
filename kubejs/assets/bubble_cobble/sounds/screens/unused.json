@@ -1,0 +1,11 @@
+{
+  "__comment": "These workstations' screens are unable to play the sound, for some reason. Who knows, maybe they will someday.",
+  "keys": [
+    "create:clipboard",
+	  "farmersdelight:basket",
+    "supplementaries:blackboard",
+    "supplementaries:sign_post_wall",
+    "supplementaries:speaker_block"
+  ],
+  "soundEvent": "create:controller_take"
+}

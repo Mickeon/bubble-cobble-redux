@@ -1,0 +1,12 @@
+{
+	"title": {"text":"Tip", "bold": true, "underlined": true, "color": "#76D0EC"},
+	"helpful": true,
+	"tips": [
+		"The Blackboard accepts more than just dyes. Try Apricorns, Mints, Ingots... Chocolate?",
+		"A Copper Stick is quite the formidable tool for such a cheap price. Satisfactory.",
+		"Do you have a Charting Map yet? It's time to make a path...",
+		"Look up \"Mod presets\" to toggle a few mods you HATE.",
+		"Many bird Pokémon can be brushed for their feathers.",
+		"In the Inventory, click on the top-right icon on the character to open the Accessories menu. You can hide your armor in here!"
+	]
+}

@@ -1,0 +1,6 @@
+{
+  "keys": [
+    "minecraft:crafter_3x3"
+  ],
+  "soundEvent": "create:contraption_assemble"
+}

@@ -1,0 +1,8 @@
+{
+  "keys": [
+    "#cobblemon:pokedex"
+  ],
+  "pitch": 0.75,
+  "soundEvent": "cobblemon:item.pokedex.click",
+  "volume": 0.25
+}

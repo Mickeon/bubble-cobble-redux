@@ -1,0 +1,31 @@
+{
+  "containers": [
+    {
+      "filled": [
+        "create_bic_bit:frying_oil_bottle"
+      ],
+      "empty": "minecraft:glass_bottle",
+      "capacity": "BOTTLE"
+    },
+    {
+      "filled": [
+        "create_bic_bit:frying_oil_bucket"
+      ],
+      "empty": "minecraft:bucket",
+      "capacity": "BUCKET"
+    }
+  ],
+  "equivalent_fluids": [
+    "create_bic_bit:frying_oil"
+  ],
+  "color": "#ebc081",
+  "food": {
+    "divider": "BOTTLE",
+    "item": "create_bic_bit:frying_oil_bottle"
+  },
+  "from_mod": "create_bic_bit",
+  "translation_key": "fluid.create_bic_bit.frying_oil",
+  "flowing_texture": "create_bic_bit:fluid/frying_oil_flow",
+  "still_texture": "create_bic_bit:fluid/frying_oil_still",
+  "use_texture_from": "create_bic_bit:frying_oil"
+}

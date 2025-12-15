@@ -1,0 +1,7 @@
+{
+  "message_id": "pokemon_greeting",
+  "exhaustion": 0.5,
+  "scaling": "never",
+  "effects": "thorns",
+  "death_message_type": "default"
+}

@@ -1,0 +1,16 @@
+{
+	"object": {
+		"entity": {
+			"name": "ribbits:ribbit"
+		}
+	},
+	"render": {
+		"translation" : "y=0.25,z=0",
+		"rotation" : "y=180"
+	},
+	"effects": {
+		"commandPickup" : "gamerule sendCommandFeedback false",
+		"commandLoop" : "effect give @s farmersdelight:comfort 1 1 true",
+		"commandPlace" : "gamerule sendCommandFeedback true"
+	}
+}

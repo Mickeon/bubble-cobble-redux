@@ -1,0 +1,239 @@
+/** @type {typeof import("net.minecraft.world.level.block.BedBlock").$BedBlock } */
+let $BedBlock  = Java.loadClass("net.minecraft.world.level.block.BedBlock")
+/** @type {typeof import("net.minecraft.world.entity.player.Player").$Player } */
+let $Player  = Java.loadClass("net.minecraft.world.entity.player.Player")
+/** @type {typeof import("net.minecraft.world.entity.animal.CatVariant").$CatVariant } */
+let $CatVariant  = Java.loadClass("net.minecraft.world.entity.animal.CatVariant")
+/** @type {typeof import("dev.latvian.mods.kubejs.item.FoodBuilder").$FoodBuilder } */
+let $FoodBuilder  = Java.loadClass("dev.latvian.mods.kubejs.item.FoodBuilder")
+
+Platform.setModName("kubejs", "Bubble Cobble")
+Platform.setModName("bubble_cobble", "Bubble Cobble")
+
+
+ItemEvents.modification(event => {
+	event.modify("cobblemon:ice_stone", /** @param {import("dev.latvian.mods.kubejs.item.ItemModificationKubeEvent$ItemModifications").$ItemModificationKubeEvent$ItemModifications$$Original} item */ item => {
+		item.food = (new $FoodBuilder()).alwaysEdible().effect("minecraft:poison", 10, 1, 1).build()
+		// Something else also happens, but it is handled in server scripts.
+	})
+
+	event.modify(["create:polished_rose_quartz", "create:rose_quartz"], item => {
+		item.food = (new $FoodBuilder()).alwaysEdible().nutrition(0.5).build()
+	})
+
+	/** @typedef {import("dev.latvian.mods.kubejs.item.ItemModificationKubeEvent$ItemModifications").$ItemModificationKubeEvent$ItemModifications$$Original} Shorthand */
+	/** @type {Shorthand} */ // Sweet Jesus.
+	event.modify(["minecraft:potion", "minecraft:splash_potion", "minecraft:lingering_potion"], /** @param {Shorthand} item */ item => {
+		item.maxStackSize = 12
+	})
+})
+
+StartupEvents.registry("item", event => {
+	event.create("blue_mascot_cat")
+			.displayName("Sopping Wet Thing")
+			.rarity("rare")
+			.tooltip(Text.of("Shake him comedically for some cool noises!").color("#83BED9"))
+			.useAnimation("brush")
+			.useDuration(item_stack => 30)
+			.use((level, player, hand) => {
+				if (level.isClientSide()) {
+					return true
+				}
+
+				level.server.scheduleRepeatingInTicks(6, callback => {
+					if (player.usingItem && player.useItem.id == "kubejs:blue_mascot_cat") {
+						let nununu = "Nu" + "nu".repeat(Math.random() * 4) + "!"
+						level.server.runCommandSilent(`title ${player.username} times 1 5 5`)
+						level.server.runCommandSilent(`title ${player.username} actionbar {"text":"${nununu}","color":"aqua"}`)
+						player.playNotifySound("supplementaries:item.bubble_blower", "players", 1, 1.0 + 0.2 * Math.random())
+
+						const mickeon = find_mickeon(level.server)
+						if (mickeon) {
+							mickeon.potionEffects.add("minecraft:slowness", 10, 1, true, false)
+						}
+					} else {
+						callback.clear()
+					}
+				})
+				return true
+			})
+			.finishUsing((item_stack, level, entity) => {
+				entity.potionEffects.add("farmersdelight:comfort", 5 * 20)
+
+				if (entity.player) {
+					let is_finite = !item_stack?.nbt?.infinite
+					if (is_finite) {
+						item_stack.shrink(1)
+						entity.addItem(Item.of("cobblemon:ice_stone"))
+					}
+					entity.playNotifySound("supplementaries:block.jar.break", "players", 1, 1.1)
+					entity.addItemCooldown(item_stack.id, 20)
+					entity.mergeNbt({TicksFrozen: 200})
+				}
+				if (!level.isClientSide()) {
+					const mickeon = find_mickeon(level.server)
+					if (mickeon) {
+						level.runCommandSilent(`execute at ${mickeon.uuid} run playsound minecraft:entity.enderman.teleport player @a`)
+						level.runCommandSilent(`execute at ${entity.uuid} run playsound minecraft:entity.enderman.teleport player @a`)
+						mickeon.potionEffects.add("minecraft:slow_falling", 60, 3, true, false)
+						mickeon.teleportTo(level.dimension, entity.x, entity.y, entity.z, mickeon.yaw, mickeon.pitch)
+					}
+				}
+				return item_stack
+			})
+			.tag("create:upright_on_belt")
+	event.create("bearded_dragon_bowl")
+			.displayName("Bearded Dragon Bowl")
+			.unstackable()
+			.fireResistant()
+			.rarity("epic")
+			.use((level, player, hand) => true)
+			.tag("create:upright_on_belt")
+
+	event.create("banana_mayo_sandwich")
+			.displayName("Banana and Mayo Sandwich")
+			.food(f => f
+					.nutrition(8)
+					.saturation(0.25)
+			)
+	event.create("doublemint_gum")
+			.displayName("Doublemint™ Gum")
+			.food(f => f
+					.nutrition(1)
+					.saturation(0.25)
+					.eatSeconds(0.25)
+					.alwaysEdible()
+					.effect("farmersdelight:comfort", 30, 0, 1)
+			)
+			.maxStackSize(63)
+			.rarity("uncommon")
+			.jukeboxPlayable("kubejs:mint")
+})
+
+StartupEvents.modifyCreativeTab("minecraft:food_and_drinks", event => {
+	event.add([
+		Item.getItem("kubejs:blue_mascot_cat"),
+		Item.getItem("kubejs:banana_mayo_sandwich"),
+		Item.getItem("create:rose_quartz"),
+		Item.getItem("create:polished_rose_quartz"),
+	])
+})
+
+StartupEvents.modifyCreativeTab("kubejs:tab", event => {
+	event.remove(Item.of("kubejs:bearded_dragon_bowl"))
+	event.add(Item.of("kubejs:bearded_dragon_bowl").withCustomName("Banana"))
+	event.add(Item.of("kubejs:bearded_dragon_bowl").withCustomName("Baby Dandy"))
+	event.remove("kubejs:doublemint_gum") // Sssh.
+
+	event.add(Item.of("constructionstick:netherite_stick", 1, {
+		"constructionstick:lock": "nolock",
+		"constructionstick:direction": "target",
+		"constructionstick:destruction":true,
+		"constructionstick:angel":true,
+		"constructionstick:replacement":true,
+		"constructionstick:unbreakable": true,
+		"constructionstick:selected": "constructionstick:default",
+		"minecraft:unbreakable": {show_in_tooltip: false},
+		"minecraft:item_name": Text.of("God Stick"),
+		"minecraft:rarity": "epic",
+		"minecraft:lore": Text.of("Only available in Creative Mode").lightPurple()
+	}))
+})
+
+// Funniest thing imaginable.
+/*
+ForgeEvents.onEvent("net.minecraftforge.event.entity.ProjectileImpactEvent", event => {
+	if (Utils.server == null) {
+		return
+	}
+	// if (!(event.getProjectile() instanceof Internal.ThrowablePotionItem)) {
+	// 	return
+	// }
+
+	if (event.getProjectile().getOwner()?.username == "SueTheMimiga") {
+		if (event.getProjectile().nbt.getCompound("Item").getCompound("tag").get("Potion") == "gohome:recall_potion") {
+			// event.entity.getOwner().potionEffects.add("gohome:recall")
+			try {
+				let owner = event.getProjectile().getOwner()
+				event.getProjectile().teleportTo(owner.level.dimension, owner.x, owner.y, owner.z, 0.0, 0.0)
+			} catch (error) {
+				console.error(error)
+			}
+		}
+	}
+})
+*/
+/** @param {$MinecraftServer} server */
+/** @returns {import("net.minecraft.world.entity.player.Player").$Player$$Type} */
+function find_mickeon(server) {
+	/** @type {PlayerList} */
+	const player_list = server.getPlayerList()
+	return player_list.getPlayerByName("Mickeon")
+}
+
+StartupEvents.registry("mob_effect", event => {
+	event.create("begone")
+		.color(0x000000)
+		.instant()
+		.effectTick(entity => begone_effect(entity))
+})
+
+// /** @param {import("net.minecraft.world.entity.LivingEntity").$LivingEntity$$Type} entity */
+// function begone_effect(entity) {
+// 	if (entity instanceof $ServerPlayer) {
+// 		console.log(`Applied Begone to ${entity}!!!`)
+
+// 		const server = entity.server
+
+// 		// const respawn_pos = entity.respawnPosition
+// 		// const respawn_dimension = entity.respawnDimension
+// 		// if (!respawn_pos) {
+// 			const overworld = server.getOverworld()
+// 			const shared_spawn_pos = overworld.getSharedSpawnPos()
+// 			const shared_spawn_angle = overworld.getSharedSpawnAngle()
+// 			entity.teleportTo("minecraft:overworld", shared_spawn_pos.x + 0.5, shared_spawn_pos.y + 0.1, shared_spawn_pos.z + 0.5, shared_spawn_angle, 0)
+// 		// }
+// 		// const respawn_level = server.getLevel(respawn_dimension)
+// 		// const respawn_block_state = respawn_level.getBlockState(respawn_pos)
+// 		// const respawn_block = respawn_block_state.block
+
+// 		// let spawn_point = respawn_pos
+// 		// if (respawn_block instanceof $BedBlock) {
+// 		// 	spawn_point = $BedBlock.findStandUpPosition("minecraft:player", respawn_dimension, respawn_pos, respawn_block_state.get($BedBlock.FACING), entity.respawnAngle)
+// 		// }
+
+// 		// entity.teleportTo(respawnDimension, spawn_point.x, spawn_point.y, spawn_point.z, entity.respawnAngle, 0)
+// 	}
+// 	entity.removeEffect("kubejs:begone")
+// }
+
+StartupEvents.registry("cat_variant", event => {
+	event.createCustom("pipi", () => new $CatVariant("kubejs:textures/entity/cat/pipi.png"))
+})
+
+// Dead code.
+// const ForgeRegistries = Java.loadClass("net.minecraftforge.registries.ForgeRegistries")
+// ForgeEvents.onEvent("net.minecraftforge.event.entity.living.MobEffectEvent$Added", event => {
+// 	// event.effectInstance.effect gives you the actual MobEffect you can check against.
+
+// 	const effect_id = ForgeRegistries.MOB_EFFECTS.getKey(event.effectInstance.effect)
+// 	const effect_source_username = event?.effectSource?.username
+
+// 	Utils.server.tell(effect_id)
+
+// 	// if (effectId == "alexsmobs:lava_vision") {
+// 		// 	event.entity.potionEffects.add("minecraft:haste", effectDuration)
+// 	// }
+// 	if (effect_id == "alexsmobs:lava_vision" && effect_source_username == "Mickeon") {
+// 		event.effectSource.potionEffects.add("gohome:recall_potion")
+// 	}
+
+// })
+// ForgeEvents.onEvent("net.minecraftforge.event.entity.living.MobEffectEvent$Applicable", event => {
+// 	const effect_id = ForgeRegistries.MOB_EFFECTS.getKey(event.effectInstance.effect)
+// 	Utils.server.tell(effect_id)
+// });
+
+// StartupEvents.postInit(event => {
+// 	// Java.loadClass("cloud.viniciusith.gohome.effect.RecallEffect")
+// })

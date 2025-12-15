@@ -1,0 +1,8 @@
+{
+  "keys": [
+    "#cobblemon:type_gems"
+  ],
+  "pitch": 1.75,
+  "soundEvent": "sounds:block.copper_ore.break",
+  "volume": 0.25
+}

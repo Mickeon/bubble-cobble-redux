@@ -1,0 +1,6 @@
+{
+  "keys": [
+    "supplementaries:pulley_block"
+  ],
+  "soundEvent": "supplementaries:block.rope.fall"
+}

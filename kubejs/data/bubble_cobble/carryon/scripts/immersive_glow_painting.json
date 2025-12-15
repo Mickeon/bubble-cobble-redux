@@ -1,0 +1,12 @@
+{
+	"object": {
+		"entity": {
+			"name": "immersive_paintings:glow_painting"
+		}
+	},
+	"render": {
+		"translation" : "y=0.25,z=-0.55",
+		"rotation_left_arm" : "x=160,y=190",
+		"rotation_right_arm" : "x=160,y=-190"
+	}
+}

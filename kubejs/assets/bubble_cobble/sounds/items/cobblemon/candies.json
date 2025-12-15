@@ -1,0 +1,8 @@
+{
+  "keys": [
+    "#cobblemon:candies"
+  ],
+  "pitch": 1.5,
+  "soundEvent": "cobblemon:item.medicine.candy.use",
+  "volume": 0.25
+}

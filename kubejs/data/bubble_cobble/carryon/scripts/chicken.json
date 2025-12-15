@@ -1,0 +1,17 @@
+{
+	"object": {
+		"entity": {
+			"name": "minecraft:chicken"
+		}
+	},
+	"render": {
+		"translation" : "y=1.4,z=-0.5",
+		"rotation_left_arm" : "x=-3.14",
+		"rotation_right_arm" : "x=-3.14"
+	},
+	"effects": {
+		"commandPickup" : "",
+		"commandLoop" : "effect give @s minecraft:slow_falling 1 1 true",
+		"commandPlace" : ""
+	}
+}

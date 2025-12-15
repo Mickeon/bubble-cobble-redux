@@ -1,0 +1,32 @@
+{
+  "$schema": "https://www.schemastore.org/minecraft-advancement.json",
+  "parent": "minecraft:adventure/root",
+  "display": {
+    "icon": {
+      "id": "farmersdelight:skillet"
+    },
+    "title": "Left for Dead",
+    "description": "Hurt the dead with something unconventional."
+  },
+  "criteria": {
+    "aeugh": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "damage": {
+          "taken": {"min": 0.0},
+          "source_entity": {
+            "type": "minecraft:player",
+            "equipment": {
+              "mainhand": {
+                "items": "farmersdelight:skillet"
+              }
+            }
+          }
+        },
+        "entity": {
+          "type": "#minecraft:zombies"
+        }
+      }
+    }
+  }
+}

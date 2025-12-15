@@ -1,0 +1,12 @@
+# Toggle Extended Hotbar on and off
+# default: true
+enabled = true
+# Invert full row / single item swap
+# default: false
+invert = false
+# Enable double-tapping a hotbar slot key to swap only that hotbar slot
+# default: false
+enableDoubleTap = false
+# Enable holding SHIFT to change item swap behavior
+# default: false
+enableModifier = false

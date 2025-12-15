@@ -1,0 +1,9 @@
+{
+    "name": "Dragon",
+    "displayName": "§3Dragon",
+    "pokemon": [
+        "Skrelp level=10",
+        "Noibat level=10",
+        "Applin level=10"
+    ]
+}
