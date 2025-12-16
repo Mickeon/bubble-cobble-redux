@@ -2300,43 +2300,6 @@
             ]
         },
         {
-            "pakku_id": "0iJ3jGb7gpV4qTiq",
-            "type": "MOD",
-            "side": "BOTH",
-            "slug": {
-                "modrinth": "create-structures-arise"
-            },
-            "name": {
-                "modrinth": "Create: Structures Arise"
-            },
-            "id": {
-                "modrinth": "9enMEvoc"
-            },
-            "files": [
-                {
-                    "type": "modrinth",
-                    "file_name": "create_structures_arise-167.40.39 Release-neoforge-1.21.1.jar",
-                    "mc_versions": [
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/9enMEvoc/versions/Ih26I7lQ/create_structures_arise-167.40.39 Release-neoforge-1.21.1.jar",
-                    "id": "Ih26I7lQ",
-                    "parent_id": "9enMEvoc",
-                    "hashes": {
-                        "sha512": "da07ac785e86b9f5aaa1aa8d3da80c80904ee7bbe8d590e737baf0b2fe4499fafa082f515de0d7244212e2e4813f05709933ed194815cb6db1ed35e653680297",
-                        "sha1": "d401c272bfb953425cb04c1ec10da1e32fb95ebf"
-                    },
-                    "required_dependencies": [],
-                    "size": 667265,
-                    "date_published": "2025-12-04T17:20:33.881805Z"
-                }
-            ]
-        },
-        {
             "pakku_id": "iyikANqICIIUgCyO",
             "type": "MOD",
             "side": "CLIENT",
@@ -6605,6 +6568,7 @@
             "id": {
                 "curseforge": "585406"
             },
+            "export": false,
             "files": [
                 {
                     "type": "curseforge",
@@ -6920,6 +6884,7 @@
             "id": {
                 "modrinth": "O9EQyLyn"
             },
+            "export": false,
             "files": [
                 {
                     "type": "modrinth",

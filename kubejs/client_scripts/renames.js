@@ -17,7 +17,7 @@ ClientEvents.lang("en_us", event => {
 	event.add("cobblemon", "block.cobblemon.tatami_mat", "Hearty Tatami Mat")
 
 	// Accounting for Mending Rework.
-	event.add("enchdesc", "enchantment.minecraft.mending.desc", "Restores more durability and never damages the Anvil when repaired")
+	event.add("enchdesc", "enchantment.minecraft.mending.desc", "When repaired, restores more durability and never damages the Anvil.")
 
 	// Tee-hee.
 	event.add("advancement.create.hand_crank_000", "Cranking it")

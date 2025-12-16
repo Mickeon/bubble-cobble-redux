@@ -44,5 +44,6 @@
     "mc-color.delimiters": [
         "`",
         "\""
-    ]
+    ],
+    "search.useIgnoreFiles": false
 }

@@ -143,7 +143,7 @@ ServerEvents.tick(event => {
 
 // Custom sound when opening HandCrafted shelves. TODO: Expand to include more containers.
 PlayerEvents.chestOpened("minecraft:generic_9x3", event => {
-	if (event.block.hasTag("handcrafted:shelves")) {
+	if (event.block && event.block.hasTag("handcrafted:shelves")) {
 		// event.player.playNotifySound("relics:ability_locked", "players", 1, 1)
 		event.player.playNotifySound("create:blaze_munch", "players", 0.25, 2.0)
 	}

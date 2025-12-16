@@ -161,11 +161,11 @@ ServerEvents.tags("worldgen/biome", event => {
 
 	event.add("c:is_floral", "biomesoplenty:lavender_field", "biomesoplenty:orchard", "biomesoplenty:lush_savanna")
 
-	event.add("mvs:has_structure/birch_biomes", "#c:is_birch_forest") // TODO: Report this. MMS is unaffected.
 	event.add("mss:has_structure/cherry_biomes", "biomesoplenty:snowblossom_grove")
 	event.add("mvs:has_structure/cherry_biomes", "biomesoplenty:snowblossom_grove")
 
 	// TODO: Report this.
+	event.add("mvs:has_structure/birch_biomes", "#c:is_birch_forest") // TODO: Report this. MMS is unaffected.
 	event.add("mvs:has_structure/deep_ocean_biomes", "#minecraft:is_deep_ocean")
 	event.add("mvs:has_structure/desert_biomes", "#c:is_desert") // MMS is unaffected. Accidentally includes #forge:is_desert instead.
 	event.add("mvs:has_structure/end_biomes", "#c:is_end") // MMS is unaffected.
@@ -211,7 +211,5 @@ ServerEvents.tags("worldgen/structure", event => {
 		"supplementaries:galleon",
 		"awesomedungeonocean:frigate_medium",
 		"awesomedungeonocean:frigate_large",
-		"create_structures_arise:pillager_boat",
-		"create_structures_arise:pillagersteampunkairship"
 	)
 })
