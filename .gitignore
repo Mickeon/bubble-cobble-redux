@@ -23,7 +23,8 @@
 /config/cpm.json
 /config/maplink/friends.json5
 /config/playernamestyler/nicknames.json
-config/iris.properties
+/config/iris.properties
+/config/sidekick.ini
 /cobblemon
 /cobblemoncreatified
 /cobblenav
@@ -59,6 +60,5 @@ config/iris.properties
 /global_packs/resourcepacks
 
 # Mods being tested
-/config/worldedit
 /config/ali
 /config/moveslikemafuyu_config.toml

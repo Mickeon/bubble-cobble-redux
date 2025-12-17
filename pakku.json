@@ -27,9 +27,9 @@
         "!config/modlistmemory.json",
         "!config/particle_core_config.toml",
         "!config/particlerain.json",
+        "!config/sidekick.ini",
 
         "!config/ali",
-        "!config/worldedit",
         "!config/moveslikemafuyu_config.toml"
     ],
     "paths": {

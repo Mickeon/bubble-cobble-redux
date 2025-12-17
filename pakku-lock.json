@@ -7364,6 +7364,43 @@
             ]
         },
         {
+            "pakku_id": "sXW8o5uffTaZgjNd",
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "modrinth": "sidekick"
+            },
+            "name": {
+                "modrinth": "Sidekick"
+            },
+            "id": {
+                "modrinth": "goA2JoBi"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "sidekick-neoforge-2.0.6+1.21.1.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/goA2JoBi/versions/RtqkrsvL/sidekick-neoforge-2.0.6+1.21.1.jar",
+                    "id": "RtqkrsvL",
+                    "parent_id": "goA2JoBi",
+                    "hashes": {
+                        "sha512": "172e4a025a45453a7af979bbeb23f04633cc26864864354a59d6a0464be76b52e5fd16b54fb07402ae9294841ac362611fe4f43e15d155166e9b1017f768837b",
+                        "sha1": "d782fdbfddab5f7ff8360530775c4eb1b02e24d0"
+                    },
+                    "required_dependencies": [],
+                    "size": 388472,
+                    "date_published": "2025-03-08T02:49:32.452400Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "pXy0lLhVXuumIPhC",
             "type": "MOD",
             "side": "BOTH",
