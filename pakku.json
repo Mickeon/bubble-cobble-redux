@@ -26,7 +26,11 @@
         "!config/lambdynlights.toml",
         "!config/modlistmemory.json",
         "!config/particle_core_config.toml",
-        "!config/particlerain.json"
+        "!config/particlerain.json",
+
+        "!config/ali",
+        "!config/worldedit",
+        "!config/moveslikemafuyu_config.toml"
     ],
     "paths": {
         "resource_packs": "global_packs/resourcepacks/",

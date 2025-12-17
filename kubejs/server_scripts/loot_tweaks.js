@@ -74,7 +74,7 @@ LootJS.lootTables(event => {
 	event.modifyLootTables(/.*chest.*/)
 		.removeItem("minecraft:wheat_seeds")
 		.removeItem("minecraft:beetroot_seeds")
-		.replaceItem("supplementaries:flax_seeds", "supplementaries:rope")
+		.replaceItem("supplementaries:flax_seeds", "farmersdelight:straw")
 		.replaceItem("farmersdelight:rope", "supplementaries:rope")
 
 	// Furniture time.

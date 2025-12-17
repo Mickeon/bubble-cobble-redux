@@ -62,9 +62,11 @@ rename_tab("mega_showdown:form_tab",    " §cCobblemon: §r§9Mega Showdown §rF
 // rename_tab("mega_showdown:tera_tab",    " §cCobblemon: §r§9Mega Showdown §rTerastallization ")
 rename_tab("mega_showdown:z_tab",       " §cCobblemon: §r§9Mega Showdown §rZ-Power ")
 
+
 // rename_tab("cobblemonraiddens:raid_den_tab", " §cCobblemon: §rRaid Dens ")
 // rename_tab("cobblenav:cobblenav",            " §cCobblemon: §rPokenav ")
 // rename_tab("rctmod:creative_tab",            " §cCobblemon: §rRadical Trainers ")
+rename_tab("createmonballsoverhaul:create_cobblemon_balls_overhaul_items_tab", " §cCobblemon: §6Create §rBalls Overhaul ")
 
 rename_tab("farmersdelight:farmersdelight",   " §eFarmer's Delight ")
 rename_tab("brewinandchewin:brewinandchewin", " §eFarmer's Delight: §rBrewin' and Chewin' ")
@@ -123,7 +125,6 @@ remove_and_merge_into_tab("rctmod:creative_tab", "cobblemon:utility_item", [
 	"rctmod:trainer_repel_rod",
 ])
 
-
 remove_and_merge_into_tab("mega_showdown:compi_tab", "mega_showdown:key_tab", [
 	"mega_showdown:booster_energy",
 	"mega_showdown:legend_plate",
@@ -168,6 +169,74 @@ remove_and_merge_into_tab("mega_showdown:tera_tab", "mega_showdown:key_tab", [
 	"mega_showdown:tera_orb",
 	"mega_showdown:likos_pendant",
 	"mega_showdown:dormant_crystal",
+])
+
+remove_and_merge_into_tab("simpletms:tm_storage_items", "cobblemon:utility_item", [
+	"simpletms:case_tm",
+	"simpletms:case_tr",
+	"simpletms:machine_tm",
+])
+
+remove_and_merge_into_tab("createmonballsoverhaul:create_cobblemon_balls_overhaul_lids_tab",
+	"createmonballsoverhaul:create_cobblemon_balls_overhaul_items_tab", [
+		"createmonballsoverhaul:red_ball_lid",
+		"createmonballsoverhaul:yellow_ball_lid",
+		"createmonballsoverhaul:green_ball_lid",
+		"createmonballsoverhaul:blue_ball_lid",
+		"createmonballsoverhaul:pink_ball_lid",
+		"createmonballsoverhaul:black_ball_lid",
+		"createmonballsoverhaul:white_ball_lid",
+		"createmonballsoverhaul:great_ball_lid",
+		"createmonballsoverhaul:ultra_ball_lid",
+		"createmonballsoverhaul:safari_ball_lid",
+		"createmonballsoverhaul:level_ball_lid",
+		"createmonballsoverhaul:heavy_ball_lid",
+		"createmonballsoverhaul:love_ball_lid",
+		"createmonballsoverhaul:friend_ball_lid",
+		"createmonballsoverhaul:moon_ball_lid",
+		"createmonballsoverhaul:fast_ball_lid",
+		"createmonballsoverhaul:lure_ball_lid",
+		"createmonballsoverhaul:sport_ball_lid",
+		"createmonballsoverhaul:park_ball_lid",
+		"createmonballsoverhaul:net_ball_lid",
+		"createmonballsoverhaul:dive_ball_lid",
+		"createmonballsoverhaul:nest_ball_lid",
+		"createmonballsoverhaul:repeat_ball_lid",
+		"createmonballsoverhaul:timer_ball_lid",
+		"createmonballsoverhaul:luxury_ball_lid",
+		"createmonballsoverhaul:dusk_ball_lid",
+		"createmonballsoverhaul:heal_ball_lid",
+		"createmonballsoverhaul:quick_ball_lid",
+		"createmonballsoverhaul:beast_ball_lid",
+		"createmonballsoverhaul:master_ball_lid",
+		"createmonballsoverhaul:cherish_ball_lid",
+		"createmonballsoverhaul:coated_red_ball_lid",
+		"createmonballsoverhaul:coated_yellow_ball_lid",
+		"createmonballsoverhaul:coated_green_ball_lid",
+		"createmonballsoverhaul:coated_blue_ball_lid",
+		"createmonballsoverhaul:coated_pink_ball_lid",
+		"createmonballsoverhaul:coated_black_ball_lid",
+		"createmonballsoverhaul:coated_white_ball_lid",
+		"createmonballsoverhaul:light_coated_blue_ball_lid",
+		"createmonballsoverhaul:dense_coated_black_ball_lid",
+		"createmonballsoverhaul:ancient_great_ball_lid",
+		"createmonballsoverhaul:ancient_ultra_ball_lid",
+		"createmonballsoverhaul:ancient_feather_ball_lid",
+		"createmonballsoverhaul:ancient_wing_ball_lid",
+		"createmonballsoverhaul:ancient_jet_ball_lid",
+		"createmonballsoverhaul:ancient_heavy_ball_lid",
+		"createmonballsoverhaul:ancient_leaden_ball_lid",
+		"createmonballsoverhaul:ancient_gigaton_ball_lid",
+		"createmonballsoverhaul:ancient_origin_ball_lid",
+		"createmonballsoverhaul:apricorn_ball_lid",
+		"createmonballsoverhaul:blank_ball_lid",
+])
+
+remove_and_merge_into_tab("immersive_paintings:paintings", "minecraft:functional_blocks", [
+	"immersive_paintings:painting",
+	"immersive_paintings:glow_painting",
+	"immersive_paintings:graffiti",
+	"immersive_paintings:glow_graffiti",
 ])
 
 remove_tab("haventrowel:haventrowel_tab")

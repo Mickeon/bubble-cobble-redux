@@ -17,6 +17,7 @@
 /moddata
 /showdown
 /imgui.ini
+*.bak
 
 # Personal.
 /config/cpm.json
@@ -58,4 +59,6 @@ config/iris.properties
 /global_packs/resourcepacks
 
 # Mods being tested
-vibrancy.json
+/config/worldedit
+/config/ali
+/config/moveslikemafuyu_config.toml

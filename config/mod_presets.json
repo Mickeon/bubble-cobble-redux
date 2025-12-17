@@ -10,7 +10,8 @@
             "resource_explorer",
             "probejs",
             "nbt_ac",
-            "nbtedit"
+            "nbtedit",
+            "kubejs-offline"
           ],
           "disableMods": [],
           "modConfigs": {},
@@ -24,7 +25,8 @@
             "resource_explorer",
             "probejs",
             "nbt_ac",
-            "nbtedit"
+            "nbtedit",
+            "kubejs-offline"
           ],
           "modConfigs": {},
           "gameSettings": {}
