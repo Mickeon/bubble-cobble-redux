@@ -234,8 +234,20 @@ ServerEvents.recipes(event => {
 	event.replaceInput({id: "minecraft:activator_rail" }, "minecraft:iron_ingot", "minecraft:iron_nugget")
 	event.replaceOutput({id: "minecraft:activator_rail" }, "*", Item.of("minecraft:activator_rail", 6) )
 	event.replaceInput({id: "minecraft:powered_rail" }, "minecraft:gold_ingot", "minecraft:gold_nugget")
-	event.replaceOutput({id: "minecraft:powered_rail" }, "*", Item.of("minecraft:powered_rail", 8) )
+	event.replaceOutput({id: "minecraft:powered_rail" }, "*", Item.of("minecraft:powered_rail", 8) ) // FIXME: Should be 8 but it's still 6?
 
-	// TODO: Add recipes for Bottle Caps. They should be VERY costly.
+	// Don't let any Create Cobblemon crossover nerf the base recipe.
+	event.forEachRecipe({id: /cobblemon:.*ball$/, type: "minecraft:crafting_shaped"}, recipe => {
+		const json = JSON.parse(recipe.json)
+		json.result.count = 4
+		event.custom(json).id(recipe.getId())
+	})
+
+	// Instead, buff the Create version's output.
+	event.forEachRecipe({id: /createmonballsoverhaul:sequenced_assembly\/balls/}, recipe => {
+		const json = JSON.parse(recipe.json)
+		json.results[0].count = 2
+		event.custom(json).id(recipe.getId())
+	})
 })
 

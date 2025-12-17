@@ -65,8 +65,6 @@ rename_tab("mega_showdown:z_tab",       " §cCobblemon: §r§9Mega Showdown §rZ
 // rename_tab("cobblemonraiddens:raid_den_tab", " §cCobblemon: §rRaid Dens ")
 // rename_tab("cobblenav:cobblenav",            " §cCobblemon: §rPokenav ")
 // rename_tab("rctmod:creative_tab",            " §cCobblemon: §rRadical Trainers ")
-rename_tab("cobblemoncreatified:mod_tab",    " §cCobblemon: §r§6Creatified ")
-
 
 rename_tab("farmersdelight:farmersdelight",   " §eFarmer's Delight ")
 rename_tab("brewinandchewin:brewinandchewin", " §eFarmer's Delight: §rBrewin' and Chewin' ")

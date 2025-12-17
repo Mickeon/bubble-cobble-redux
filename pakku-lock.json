@@ -327,6 +327,43 @@
             ]
         },
         {
+            "pakku_id": "6jf895dZIBO6rExN",
+            "type": "MOD",
+            "side": "CLIENT",
+            "slug": {
+                "modrinth": "arrowtrails"
+            },
+            "name": {
+                "modrinth": "Arrow Trails"
+            },
+            "id": {
+                "modrinth": "hXZ3rcle"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "arrowtrails-neoforge-1.21.1-1.0.0.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/hXZ3rcle/versions/9l0QvBA3/arrowtrails-neoforge-1.21.1-1.0.0.jar",
+                    "id": "9l0QvBA3",
+                    "parent_id": "hXZ3rcle",
+                    "hashes": {
+                        "sha512": "185f84c6e1ab6df1a3355673a5e48ba890d01554eee12dfbb6aca2292458c0a20017f7685bc5ca0db2388326451acbc28afd6e058424904b9de2fe2b222e21bd",
+                        "sha1": "c9fcbc50ab963f8c70016ec8cba0d3d5ebcb8b39"
+                    },
+                    "required_dependencies": [],
+                    "size": 41419,
+                    "date_published": "2025-09-17T13:27:42.677561Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "hISDgJM0x14iBfLa",
             "type": "MOD",
             "side": "CLIENT",
@@ -1249,43 +1286,6 @@
             ]
         },
         {
-            "pakku_id": "c8x1FjEU2saQmxuV",
-            "type": "MOD",
-            "side": "BOTH",
-            "slug": {
-                "modrinth": "cobblemon-creatified"
-            },
-            "name": {
-                "modrinth": "Cobblemon: Creatified"
-            },
-            "id": {
-                "modrinth": "P5QRIof0"
-            },
-            "files": [
-                {
-                    "type": "modrinth",
-                    "file_name": "cobblemoncreatified-1.7.1-1.0.2.jar",
-                    "mc_versions": [
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/P5QRIof0/versions/lTmgH2r1/cobblemoncreatified-1.7.1-1.0.2.jar",
-                    "id": "lTmgH2r1",
-                    "parent_id": "P5QRIof0",
-                    "hashes": {
-                        "sha512": "3e5cefe5a5fa578041b598305c296c736311ae6ee6a5fbef3e41446d08aeec10ab659953ec16a5fa824805774abfb24b0a71bf39e52eda96f9a3398a872aaecf",
-                        "sha1": "ae50f3ddf860cf6325dc3ceada80dcbccd4678a5"
-                    },
-                    "required_dependencies": [],
-                    "size": 3822706,
-                    "date_published": "2025-12-04T02:21:51.079062Z"
-                }
-            ]
-        },
-        {
             "pakku_id": "xTDGVdENWV0YZeq1",
             "pakku_links": [
                 "rcNaZofHJ2yMvMzg",
@@ -2169,6 +2169,50 @@
                     ],
                     "size": 396273,
                     "date_published": "2025-11-28T10:08:21.674062Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "qKKilO020JAJZec2",
+            "pakku_links": [
+                "mjse1gMXfneuvrpy",
+                "rcNaZofHJ2yMvMzg"
+            ],
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "modrinth": "create-cobblemon-balls-overhaul"
+            },
+            "name": {
+                "modrinth": "Create: Cobblemon Balls Overhaul"
+            },
+            "id": {
+                "modrinth": "aXSKKweV"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "createcobblemonballsoverhaul-0.0.3.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "beta",
+                    "url": "https://cdn.modrinth.com/data/aXSKKweV/versions/rDFwr1gv/createcobblemonballsoverhaul-0.0.3.jar",
+                    "id": "rDFwr1gv",
+                    "parent_id": "aXSKKweV",
+                    "hashes": {
+                        "sha512": "ca2f59bf568bedd9619a6745febdb065c32671701bf13ff28be5870ca933f9985303c80356e9d1b8dcc91d5d5e1bd00aa777deddefdb78be6df7998bd480f4ce",
+                        "sha1": "83e1ed125db06c0166784b57dd12fd397d8e04c4"
+                    },
+                    "required_dependencies": [
+                        "LNytGWDc",
+                        "MdwFAVRL"
+                    ],
+                    "size": 335133,
+                    "date_published": "2025-05-15T21:16:58.607801Z"
                 }
             ]
         },
@@ -6627,6 +6671,50 @@
                     "required_dependencies": [],
                     "size": 1080389,
                     "date_published": "2025-10-23T08:58:48.131473Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "eAeyEG2TxHQdiUXA",
+            "pakku_links": [
+                "JmAzvOjApIsGfIPs",
+                "ioCGmG9gJsV14YpH"
+            ],
+            "type": "RESOURCE_PACK",
+            "side": "CLIENT",
+            "slug": {
+                "modrinth": "rct-trainer-textures-plus"
+            },
+            "name": {
+                "modrinth": "Radical Cobblemon Trainer Textures Plus"
+            },
+            "id": {
+                "modrinth": "ARGDWSQq"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "RCT Trainers+ [1.6] v2.1.zip",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "minecraft"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/ARGDWSQq/versions/2PwkXMie/RCT Trainers+ [1.6] v2.1.zip",
+                    "id": "2PwkXMie",
+                    "parent_id": "ARGDWSQq",
+                    "hashes": {
+                        "sha512": "3b3e22864e14661652bac6632023d3294fccc84d66b54e0b6e365f1fa5d2c901ec5491662c7de6252cae6b63c777c67d992268c6411841d576a14252a1a4ba4e",
+                        "sha1": "a9fc89788c172f5963adbeabcfb688846e5e46e4"
+                    },
+                    "required_dependencies": [
+                        "lRwTUnD7",
+                        "CBfM2yw7"
+                    ],
+                    "size": 4905355,
+                    "date_published": "2025-10-07T18:16:35.313290Z"
                 }
             ]
         },

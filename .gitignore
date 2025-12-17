@@ -16,11 +16,13 @@
 /downloads
 /moddata
 /showdown
+/imgui.ini
 
 # Personal.
 /config/cpm.json
 /config/maplink/friends.json5
 /config/playernamestyler/nicknames.json
+config/iris.properties
 /cobblemon
 /cobblemoncreatified
 /cobblenav

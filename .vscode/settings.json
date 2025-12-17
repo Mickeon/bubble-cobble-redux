@@ -15,6 +15,7 @@
         ".cache": true,
         ".mixin.out": true,
         ".probe": true,
+        "build": true,
         "cache": true,
         "cobble*": true,
         "configureddefaults": true,
