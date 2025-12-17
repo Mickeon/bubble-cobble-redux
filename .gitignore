@@ -62,3 +62,8 @@
 # Mods being tested
 /config/ali
 /config/moveslikemafuyu_config.toml
+/config/smartkeyprompts_config.toml
+/config/sourcecubed-common.toml
+/config/waves-common.toml
+/config/waves
+/config/parcool*

@@ -103,7 +103,7 @@
 	/**
 	 * Whether the EMI config button should be visible.
 	 */
-	emi-config-button-visibility: shown;
+	emi-config-button-visibility: auto;
 
 	/**
 	 * Whether the recipe tree button should be visible.
@@ -310,7 +310,7 @@
 	/**
 	 * Toggle the visibility of EMI.
 	 */
-	toggle-visibility: "ctrl key.keyboard.o";
+	toggle-visibility: "key.keyboard.o";
 
 	/**
 	 * Focuses the search bar.
@@ -360,11 +360,12 @@
 	 * Return to the previous page in EMI.
 	 */
 	back: "key.keyboard.backspace";
+	back: "key.mouse.4";
 
 	/**
 	 * Return to the next page in EMI after going back.
 	 */
-	forward: "key.keyboard.unknown";
+	forward: "key.mouse.5";
 
 	/**
 	 * When on a stack with an associated recipe:

@@ -1,0 +1,12 @@
+# If vertical slabs should be added to all existing slabs
+# default: true
+vertical_slabs = false
+# If steps should be added to all existing stairs
+# default: true
+steps = false
+# Whether to generate a copy of the runtime datapack.
+# default: true
+runtime_data_generation = true
+# Whether to generate aliases to safely upgrade worlds with blocks generated before 1.1.
+# default: true
+aliases = false
