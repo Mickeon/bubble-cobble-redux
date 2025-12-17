@@ -114,8 +114,7 @@ ItemEvents.dropped(event => {
 // Nerf players carrying heavy storage considerably.
 ServerEvents.tags("block", event => {
 	event.add("bubble_cobble:no_fast_travel_when_carrying",
-		/sophisticatedstorage:.*chest/,
-		/sophisticatedstorage:.*barrel/,
+		/sophisticatedstorage:.*(chest|barrel)/,
 		/lootr:/,
 		"gravestone:gravestone"
 	)

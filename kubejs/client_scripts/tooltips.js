@@ -1,12 +1,17 @@
-const PLACEABLE_TOOLTIP = Text.darkGray("Placeable").italic()
-const HAMMER_TOOLTIP = Text.darkGray("Can be changed with the Handcrafter's Hammer").italic()
+// priority: 100
+// Run before solonion_tooltip.
 
-// var already_done = false
+const MASCOT_COLOR = "#83BED9"
+const MASCOT_COLOR_DARK = "#537B8D"
+const SHIFT_INFO_COLOR = "#7CB3D6"
+
+const PLACEABLE_TOOLTIP = Text.of("Placeable").color(MASCOT_COLOR_DARK).italic()
+const HAMMER_TOOLTIP = Text.of("Can be changed with the Handcrafter's Hammer").color(MASCOT_COLOR_DARK).italic()
 
 ItemEvents.modifyTooltips(event => {
-	event.add(["cobblemon:ice_stone"], Text.gray("Emanates a blue mascot cat scent...").color("#83BED9"))
+	event.add(["cobblemon:ice_stone"], Text.of("Emanates a blue mascot cat scent...").color(MASCOT_COLOR))
 
-	// // Handcrafted Quality of Lifes.
+	// Handcrafted Quality-of-Life.
 	event.add(["#handcrafted:cushions"], PLACEABLE_TOOLTIP)
 	event.add(["#handcrafted:counters", "#handcrafted:counters", "#handcrafted:cupboards", "#handcrafted:drawers", "#handcrafted:shelves", "#handcrafted:trims"], HAMMER_TOOLTIP)
 	add_shift_info(event, "#handcrafted:sheets", ["§9Can be put on:", "  §9- §bTables", "  §9- §bSide Tables", "  §9- §bDesks", "  §9- §bNightstands", "  §9- §bFancy Beds"])
@@ -32,9 +37,9 @@ ItemEvents.modifyTooltips(event => {
 			[Text.of("It's a bit "), Text.aqua("tipsy"), Text.of("...")],
 			"Woooaaah §2 it's going down §9 holy cow"])
 
-	// add_shift_info(event, "handcrafted:hammer", [
-	// 		"§9Allows you to change the shape of",
-	// 		"§9§bCounters§9, §bCupboards§9, §bDrawers§9, §bShelves§9, §bTrims§9"])
+	add_shift_info(event, "handcrafted:hammer", [
+			"§9Allows you to change the shape of",
+			"§9§bCounters§9, §bCupboards§9, §bDrawers§9, §bShelves§9, §bTrims§9"])
 
 	add_shift_info(event, "supplementaries:flute", [
 		"Turns anyone into a blocky virtuoso,",
@@ -124,7 +129,7 @@ ItemEvents.modifyTooltips(event => {
 	/** @import {$MutableComponent} from "net.minecraft.network.chat.MutableComponent" */
 	/** @param {string | $MutableComponent} text @returns {$MutableComponent} */
 	function subtle(text) {
-		return Text.gray(text).italic()
+		return Text.of(text).color(MASCOT_COLOR_DARK).italic()
 	}
 	// event.add(["quark:trowel"], Text.gray("Places a random block from your hotbar.").italic())
 	event.add(["supplementaries:sconce_lever"], subtle("Not so cunning when you can read this, huh?"))
@@ -156,8 +161,23 @@ ItemEvents.modifyTooltips(event => {
 		text.dynamic("sue_banana_mayo_sandwich")
 	})
 
-	event.add("#constructionstick:construction_sticks", Text.translate("Press %s to to open the GUI", [Text.keybind("key.constructionstick.open_gui").white()]).gray())
+	event.add("#constructionstick:construction_sticks", Text.translate("Press %s to to open the GUI", [Text.keybind("key.constructionstick.open_gui").white()]).color(MASCOT_COLOR_DARK))
 	event.add(["ribbits:umbrella_leaf"], [subtle("Weee!")])
+
+	// Fix Sophisticated Backpack's Inventory Interaction Upgrades descriptions being misleading.
+	// They say "sneak right clicked inventory" but it's actually a keybind.
+	event.modify(["sophisticatedbackpacks:deposit_upgrade", "sophisticatedbackpacks:advanced_deposit_upgrade"], text => {
+		text.removeLine(1)
+		text.insert(1, Text.translate("Deposits items from backpack when pressing %s on an inventory", [
+			Text.keybind("keybind.sophisticatedbackpacks.inventory_interaction").white()]).color(MASCOT_COLOR_DARK)
+		)
+	})
+	event.modify(["sophisticatedbackpacks:restock_upgrade", "sophisticatedbackpacks:advanced_restock_upgrade"], text => {
+		text.removeLine(1)
+		text.insert(1, Text.translate("Restocks items from backpack when pressing %s on an inventory", [
+			Text.keybind("keybind.sophisticatedbackpacks.inventory_interaction").white()]).color(MASCOT_COLOR_DARK)
+		)
+	})
 
 	// let recipe_manager = Client.player.level.recipeManager
 	// recipe_manager.byType("create:sequenced_assembly").forEach((id, sequenced_assembly) => {
@@ -172,25 +192,20 @@ ItemEvents.dynamicTooltips("sue_banana_mayo_sandwich", event => {
 })
 
 /**
+ * @import {$TextActionBuilder} from "dev.latvian.mods.kubejs.text.action.TextActionBuilder"
+ * @import {$ModifyItemTooltipsKubeEvent} from "dev.latvian.mods.kubejs.item.ModifyItemTooltipsKubeEvent"
+ * */
+
+/**
  * @param {$ModifyItemTooltipsKubeEvent} event
  * @param {Special.Item} item
  * @param {String[] | String} info
  */
 function add_shift_info(event, item, info) {
-	event.modify(item, { shift: false }, text => {
+	event.modify(item, { shift: false }, /** @param {$TextActionBuilder} text */ text => {
 		text.insert(1, Text.darkGray("Hold [").append(Text.white("Shift")).append("] for Summary"))
-		// Find and remove existing Shift tip in favour of this.
-		// let idx = 0
-		// text.forEach((value) => {
-		// 	const current_line = value.getString()
-		// 	// Utils.server.tell(current_line)
-		// 	if (current_line.toLowerCase().includes(" shift ")) {
-		// 		text[idx] = "..."
-		// 	}
-		// 	idx += 1
-		// })
 	})
-	event.modify(item, { shift: true }, text => {
+	event.modify(item, { shift: true }, /** @param {$TextActionBuilder} text */ text => {
 		text.insert(1, Text.darkGray("Hold [").append(Text.gray("Shift")).append("] for Summary"))
 
 		text.insert(2, Text.empty())
@@ -199,7 +214,7 @@ function add_shift_info(event, item, info) {
 			info = [info]
 		}
 		info = info.map(line => {
-			return Text.of(line).color("#7CB3D6")
+			return Text.of(line).color(SHIFT_INFO_COLOR)
 		})
 
 		text.insert(3, info)

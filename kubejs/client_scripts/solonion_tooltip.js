@@ -1,4 +1,3 @@
-// /packmode: No
 // priority: 0
 // requires: solonion
 
@@ -22,10 +21,10 @@ ItemEvents.dynamicTooltips("imitate_spice_of_life", event => {
 		if (!stack.components.has("minecraft:food")) {
 			return
 		}
-		
+
 		let player = Client.player
 		let foodCapability = SOLOnionAPI.getFoodCapability(Client.player)
-		
+
 		let last_eaten = foodCapability.getLastEaten(Client.player, stack)
 		if (last_eaten != -1) {
 			let last_eaten_path = last_eaten == 1 ? "last_eaten_singular" : "last_eaten"

@@ -1,7 +1,7 @@
 // requires: lootjs
 // Note: This script should wait for custom biome tags.
 
-const GENERAL_FURNITURE = Ingredient.of("@handcrafted").except(/trim/)
+const GENERAL_FURNITURE = Ingredient.of("@handcrafted").except(/trim/).or(/^farmersdelight:.*_cabinet$/)
 // const GENERAL_FURNITURE = Ingredient.of("@handcrafted").and(/drawer/)
 
 ServerEvents.tags("item", event => {

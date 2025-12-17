@@ -92,7 +92,9 @@
     "dev.isxander.yacl3.gui.YACLScreen": true,
     "com.lunazstudios.cobblefurnies.client.screen.FurniCrafterScreen": true,
     "xaero.common.gui.GuiWaypoints": true,
-    "com.simibubi.create.content.equipment.zapper.terrainzapper.WorldshaperScreen": true
+    "com.simibubi.create.content.equipment.zapper.terrainzapper.WorldshaperScreen": true,
+    "com.unascribed.sidekick.client.screen.SidekickScreen": true,
+    "com.simibubi.create.content.schematics.table.SchematicTableScreen": true
   },
   "hideBackground": {
     "dev.emi.emi.screen.RecipeScreen": false,

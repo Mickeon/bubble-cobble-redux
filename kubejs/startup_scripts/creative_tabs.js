@@ -207,6 +207,7 @@ remove_and_merge_into_tab("createmonballsoverhaul:create_cobblemon_balls_overhau
 		"createmonballsoverhaul:dusk_ball_lid",
 		"createmonballsoverhaul:heal_ball_lid",
 		"createmonballsoverhaul:quick_ball_lid",
+		"createmonballsoverhaul:dream_ball_lid",
 		"createmonballsoverhaul:beast_ball_lid",
 		"createmonballsoverhaul:master_ball_lid",
 		"createmonballsoverhaul:cherish_ball_lid",
