@@ -1,0 +1,43 @@
+#Enable or disable falling particles
+enabled = true
+#Pause particle rendering when Minecraft window is not focused (saves performance)
+pauseWhenUnfocused = true
+#Multiplier for particle spawn rate (0.1 = 10%, 1.0 = 100%, 2.0 = 200%)
+# Default: 0.35
+# Range: 0.0 ~ 5.0
+spawnRateMultiplier = 0.1
+#Multiplier for particle fall speed (0.5 = 50% speed, 1.0 = normal, 2.0 = 200% speed)
+# Default: 0.3
+# Range: 0.1 ~ 5.0
+fallSpeedMultiplier = 0.2
+#Multiplier for horizontal sway movement (0.0 = no sway, 1.0 = normal, 2.0 = double sway)
+# Default: 0.2
+# Range: 0.0 ~ 3.0
+horizontalSwayMultiplier = 0.0
+#Multiplier for particle rotation speed (0.0 = no rotation, 1.0 = normal, 2.0 = double speed)
+# Default: 0.8
+# Range: 0.0 ~ 3.0
+rotationSpeedMultiplier = 0.2
+#Base size of particles in pixels (8-64)
+# Default: 12
+# Range: 8 ~ 64
+particleSize = 20
+#Radius around mouse cursor where particles are repelled (0 = disabled, 30 = default)
+# Default: 30.0
+# Range: 0.0 ~ 100.0
+mouseRepulsionRadius = 100.0
+#Strength of mouse repulsion effect
+# Default: 6.0
+# Range: 0.0 ~ 20.0
+mouseRepulsionStrength = 1.0
+#Enable particles on title screen
+enableOnTitleScreen = true
+#Enable particles on inventory/container screens
+enableOnInventory = false
+#Enable particles on all other game screens
+enableInGame = false
+#Force a specific season instead of auto-detecting
+forceSeasonEnabled = true
+#Which season to force (select from dropdown)
+#Allowed Values: AUTUMN, WINTER, SPRING, SUMMER, NEW_YEAR, VALENTINES, HALLOWEEN, CHRISTMAS, PRIDE
+forcedSeason = "CHRISTMAS"

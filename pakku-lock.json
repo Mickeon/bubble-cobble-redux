@@ -7351,6 +7351,43 @@
             ]
         },
         {
+            "pakku_id": "RJf8SYFv2gueKjsN",
+            "type": "MOD",
+            "side": "CLIENT",
+            "slug": {
+                "modrinth": "seasonal-ambiance"
+            },
+            "name": {
+                "modrinth": "Seasonal Ambiance"
+            },
+            "id": {
+                "modrinth": "aRjMwfjG"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "seasonalambiance-1.2.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/aRjMwfjG/versions/tL571scN/seasonalambiance-1.2.jar",
+                    "id": "tL571scN",
+                    "parent_id": "aRjMwfjG",
+                    "hashes": {
+                        "sha512": "21cd79377a97b53c29e9545bcd672d5898897f7c74312bd14788434d373fe8cca367e7fbf2aa3568d890cb3288d6c42d4b3f23777f41019abfa22b8ddcdc43d2",
+                        "sha1": "fc396abf585cffcd7e64666ae90f71807760363f"
+                    },
+                    "required_dependencies": [],
+                    "size": 205453,
+                    "date_published": "2025-10-19T05:09:56.710425Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "0errEuTS9HCXvol0",
             "type": "MOD",
             "side": "SERVER",
