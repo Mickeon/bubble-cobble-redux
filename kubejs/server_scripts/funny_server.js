@@ -219,6 +219,104 @@ ServerEvents.basicPublicCommand("suebegone", event => {
 	})
 })
 
+const DASH_FORCE = 1.0
+const DASH_JUMP_LIMIT = 2
+const DASH_COOLDOWN_TICKS = 10
+const dash_data = {}
+NetworkEvents.dataReceived("kubejs:trans_dash", event => {
+	const player = event.player
+
+	if (!dash_data[player.uuid]) {
+		dash_data[player.uuid] = {
+			last_tick_used: 0,
+			strength_multiplier: 1.0,
+			remaining: DASH_JUMP_LIMIT
+		}
+	}
+	const dash = dash_data[player.uuid]
+
+	if (player.isSwimming()
+	|| player.onGround()
+	|| player.foodLevel <= 6
+	|| !dash.remaining > 0
+	|| dash.last_tick_used + DASH_COOLDOWN_TICKS > event.server.tickCount
+	) {
+		// player.playNotifySound("supplementaries:block.crank", "players", 1.0, 1.0)
+		return
+	}
+	// player.statusMessage = dash?.lower_tiredness
+
+	const look_angle_compound = event.data.getCompound("angle")
+	const look_angle = new Vec3d(
+		look_angle_compound.getDouble("x"),
+		look_angle_compound.getDouble("y"),
+		look_angle_compound.getDouble("z")
+	).normalize()
+
+	const dash_strength = DASH_FORCE * dash.strength_multiplier
+	player.addDeltaMovement(look_angle.scale(dash_strength))
+	player.hurtMarked = true
+	player.addExhaustion(2.5)
+	// player.playNotifySound("supplementaries:block.present.fall", "players", 1.0, 1.0)
+	player.playNotifySound("bubble_cobble:dash", "players",
+		remap(dash_strength, 1.0, 0.0, 0.75, 0.1),
+		remap(dash_strength, 1.0, 0.0, 1.0, 0.5)
+	)
+	player.level.spawnParticles("minecraft:white_smoke",
+	// player.level.spawnParticles("minecraft:dust_color_transition{from_color:[1.0, 1.0, 1.0], to_color:[1.0, 0.0, 1.0], scale: 2.0}",
+		false, player.x, player.y, player.z,
+		0.1, 0.1, 0.1, 10, 0.05)
+
+	dash.last_tick_used = event.server.tickCount
+
+	dash.remaining -= 1
+	if (!dash.check_landed) {
+		dash.check_landed = event.server.scheduleRepeatingInTicks(1, () => {
+			player.level.spawnParticles("minecraft:dust_color_transition{from_color:[1.0, 1.0, 1.0], to_color:[1.0, 0.0, 1.0], scale: 2.0}",
+				false, player.x, player.y, player.z,
+				0.1, 0.1, 0.1, 2, 0.5)
+			if (player.onGround() || player.isSwimming()) {
+				dash.remaining = DASH_JUMP_LIMIT
+
+				dash.check_landed.clear()
+				delete dash.check_landed
+				return
+			}
+		})
+	}
+
+	dash.strength_multiplier *= 0.75
+	if (!dash.lower_tiredness) {
+		dash.lower_tiredness = event.server.scheduleRepeatingInTicks(5, () => {
+			if (dash.strength_multiplier >= 1.0) {
+				player.playNotifySound("minecraft:block.bubble_column.bubble_pop", "players", 1.0, 1.0)
+
+				dash.lower_tiredness.clear()
+				delete dash.lower_tiredness
+				return
+			}
+
+			if (player.onGround() || player.isSwimming()) {
+				dash.strength_multiplier = Math.min(
+					dash.strength_multiplier * 1.025,
+					1.0
+				)
+			}
+		})
+	}
+})
+
+// Debug.
+// ServerEvents.tick(event => {
+// 	event.server.mcPlayers.forEach(player => {
+// 		// if (player.mainHandItem) {
+// 		// 	player.statusMessage = player.mainHandItem.getUseDuration(player)
+// 		// }
+// 		// player.statusMessage = dash_data[player.uuid]?.lower_tiredness.endTime
+// 		player.statusMessage = dash_data[player.uuid]?.strength_multiplier
+// 	})
+// })
+
 function remap(value, min1, max1, min2, max2) {
 	let value_norm = (value - min1) / (max1 - min1) // Inverse linear interpolation function.
 	return min2 + (max2-min2) * value_norm // Linear interpolation function.

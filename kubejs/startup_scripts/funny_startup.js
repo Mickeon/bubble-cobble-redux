@@ -140,6 +140,10 @@ StartupEvents.modifyCreativeTab("kubejs:tab", event => {
 	}))
 })
 
+StartupEvents.registry("sound_event", event => {
+	event.create("bubble_cobble:dash")
+})
+
 // Funniest thing imaginable.
 /*
 ForgeEvents.onEvent("net.minecraftforge.event.entity.ProjectileImpactEvent", event => {
