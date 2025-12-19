@@ -229,23 +229,30 @@ PlayerEvents.loggedIn(event => {
 	}
 })
 
+// https://discord.com/channels/303440391124942858/303440391124942858/1450918369342521548
+function DashData() {
+	this.last_tick_used = 0
+	this.air_time_ticks = 0
+	this.jump_count = 0
+	this.strength_multiplier = 1.0
+	this.restoration = DASH_BASE_RESTORATION
+	this.check_landed = null
+	this.lower_tiredness = null
+}
+
 const DASH_FORCE = 1.0
 const DASH_COOLDOWN_TICKS = 10
 const DASH_BASE_RESTORATION = 0.0125
-const dash_data = {}
+const players_dash_data = {}
 NetworkEvents.dataReceived("kubejs:dash", event => {
 	const player = event.player
 
-	if (!dash_data[player.uuid]) {
-		dash_data[player.uuid] = {
-			last_tick_used: 0,
-			air_time_ticks: 0,
-			jump_count: 0,
-			strength_multiplier: 1.0,
-			restoration: 0.0125,
-		}
+	if (!players_dash_data[player.uuid]) {
+		players_dash_data[player.uuid] = new DashData()
 	}
-	const dash = dash_data[player.uuid]
+
+	/** @type {DashData} */
+	const dash = players_dash_data[player.uuid]
 
 	if (player.isSwimming()
 	|| player.onGround()
@@ -263,8 +270,13 @@ NetworkEvents.dataReceived("kubejs:dash", event => {
 		look_angle_compound.getDouble("z")
 	).normalize()
 
+	let forward_back = Math.sign(event.data.getFloat("forward_back"))
+	if (forward_back == 0) {
+		forward_back = 1
+	}
+
 	const dash_strength = DASH_FORCE * dash.strength_multiplier
-	player.addDeltaMovement(look_angle.scale(dash_strength))
+	player.addDeltaMovement(look_angle.scale(dash_strength * forward_back))
 	player.hurtMarked = true
 	player.addExhaustion(2.5)
 	player.playNotifySound("bubble_cobble:dash", "players",
