@@ -1,5 +1,5 @@
-/** @type {typeof import("net.minecraft.world.level.block.BedBlock").$BedBlock } */
-let $BedBlock  = Java.loadClass("net.minecraft.world.level.block.BedBlock")
+// /** @type {typeof import("net.minecraft.world.level.block.BedBlock").$BedBlock } */
+// let $BedBlock  = Java.loadClass("net.minecraft.world.level.block.BedBlock")
 /** @type {typeof import("net.minecraft.world.entity.player.Player").$Player } */
 let $Player  = Java.loadClass("net.minecraft.world.entity.player.Player")
 /** @type {typeof import("net.minecraft.world.entity.animal.CatVariant").$CatVariant } */
@@ -25,6 +25,44 @@ ItemEvents.modification(event => {
 	/** @type {Shorthand} */ // Sweet Jesus.
 	event.modify(["minecraft:potion", "minecraft:splash_potion", "minecraft:lingering_potion"], /** @param {Shorthand} item */ item => {
 		item.maxStackSize = 12
+	})
+
+	// Lower how much time it takes to eat food in general.
+	event.modify("*", /** @param {Shorthand} modified */ modified => {
+		const item = modified.item()
+		const food_properties = item.getFoodProperties(Item.of(item), null)
+		if (!food_properties || food_properties.eatSeconds() <= 0.0) {
+			return
+		}
+
+		// Food with many effects should take longer to eat.
+		const eat_time = food_properties.eatSeconds()
+			* Math.min(0.6 + food_properties.effects().size() * 0.1, 1.0)
+
+		if (eat_time == food_properties.eatSeconds()) {
+			return // Same value, no need to change anything.
+		}
+
+		const food_builder = (new $FoodBuilder())
+			.nutrition(food_properties.nutrition())
+			.saturation(food_properties.saturation())
+			.eatSeconds(eat_time)
+			.alwaysEdible(food_properties.canAlwaysEat())
+
+		if (food_properties.usingConvertsTo().present) {
+			food_builder.usingConvertsTo(food_properties.usingConvertsTo().get())
+		}
+
+		food_properties.effects().forEach(e => {
+			food_builder.effect(
+				e.effect().effect.getKey(),
+				e.effect().duration,
+				e.effect().amplifier,
+				e.probability()
+			)
+		})
+
+		modified.food = food_builder.build()
 	})
 })
 
@@ -142,6 +180,15 @@ StartupEvents.modifyCreativeTab("kubejs:tab", event => {
 
 StartupEvents.registry("sound_event", event => {
 	event.create("bubble_cobble:dash")
+})
+
+StartupEvents.registry("attribute", event => {
+	event.create("kubejs:dash_jump_count")
+		.attachToPlayers()
+		.range(0, 0, 128)
+		.sentiment("positive")
+		.displayName(Text.of("Air Dash")
+	)
 })
 
 // Funniest thing imaginable.

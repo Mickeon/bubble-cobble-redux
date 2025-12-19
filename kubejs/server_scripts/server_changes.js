@@ -53,7 +53,7 @@ LevelEvents.afterExplosion(event => {
 	if (event.exploder.type != "minecraft:creeper" && event.exploder.type != "undergroundworlds:icy_creeper") {
 		return
 	}
-	event.getAffectedEntities().filterSelector("@e[type=minecraft:creeper]").forEach(entity => entity.mergeNbt({Fuse: 10, ignited: true}))
+	event.getAffectedEntities().filter(["minecraft:creeper", "undergroundworlds:icy_creeper"]).forEach(entity => entity.mergeNbt({Fuse: 10, ignited: true}))
 })
 
 // PlayerEvents.chat(event => {

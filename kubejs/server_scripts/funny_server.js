@@ -219,18 +219,30 @@ ServerEvents.basicPublicCommand("suebegone", event => {
 	})
 })
 
+
+const DASH_STARTERS = [
+	"AceNil_", "CantieLabs", "Fableworks", "Labbyrinthia", "pepperponyo", "WaiGee", "Mickeon"
+]
+PlayerEvents.loggedIn(event => {
+	if (DASH_STARTERS.includes(event.player.username)) {
+		event.player.setAttributeBaseValue("kubejs:dash_jump_count", 1)
+	}
+})
+
 const DASH_FORCE = 1.0
-const DASH_JUMP_LIMIT = 2
 const DASH_COOLDOWN_TICKS = 10
+const DASH_BASE_RESTORATION = 0.0125
 const dash_data = {}
-NetworkEvents.dataReceived("kubejs:trans_dash", event => {
+NetworkEvents.dataReceived("kubejs:dash", event => {
 	const player = event.player
 
 	if (!dash_data[player.uuid]) {
 		dash_data[player.uuid] = {
 			last_tick_used: 0,
+			air_time_ticks: 0,
+			jump_count: 0,
 			strength_multiplier: 1.0,
-			remaining: DASH_JUMP_LIMIT
+			restoration: 0.0125,
 		}
 	}
 	const dash = dash_data[player.uuid]
@@ -238,13 +250,11 @@ NetworkEvents.dataReceived("kubejs:trans_dash", event => {
 	if (player.isSwimming()
 	|| player.onGround()
 	|| player.foodLevel <= 6
-	|| !dash.remaining > 0
+	|| dash.jump_count >= player.getAttributeTotalValue("kubejs:dash_jump_count")
 	|| dash.last_tick_used + DASH_COOLDOWN_TICKS > event.server.tickCount
 	) {
-		// player.playNotifySound("supplementaries:block.crank", "players", 1.0, 1.0)
 		return
 	}
-	// player.statusMessage = dash?.lower_tiredness
 
 	const look_angle_compound = event.data.getCompound("angle")
 	const look_angle = new Vec3d(
@@ -257,26 +267,31 @@ NetworkEvents.dataReceived("kubejs:trans_dash", event => {
 	player.addDeltaMovement(look_angle.scale(dash_strength))
 	player.hurtMarked = true
 	player.addExhaustion(2.5)
-	// player.playNotifySound("supplementaries:block.present.fall", "players", 1.0, 1.0)
 	player.playNotifySound("bubble_cobble:dash", "players",
 		remap(dash_strength, 1.0, 0.0, 0.75, 0.1),
 		remap(dash_strength, 1.0, 0.0, 1.0, 0.5)
 	)
-	player.level.spawnParticles("minecraft:white_smoke",
-	// player.level.spawnParticles("minecraft:dust_color_transition{from_color:[1.0, 1.0, 1.0], to_color:[1.0, 0.0, 1.0], scale: 2.0}",
-		false, player.x, player.y, player.z,
-		0.1, 0.1, 0.1, 10, 0.05)
+	player.level.spawnParticles("minecraft:white_smoke", false,
+		player.x, player.y, player.z,
+		0.1, 0.1, 0.1, 10, 0.05
+	)
 
 	dash.last_tick_used = event.server.tickCount
+	dash.jump_count += 1
 
-	dash.remaining -= 1
 	if (!dash.check_landed) {
 		dash.check_landed = event.server.scheduleRepeatingInTicks(1, () => {
-			player.level.spawnParticles("minecraft:dust_color_transition{from_color:[1.0, 1.0, 1.0], to_color:[1.0, 0.0, 1.0], scale: 2.0}",
-				false, player.x, player.y, player.z,
-				0.1, 0.1, 0.1, 2, 0.5)
+			if (dash.air_time_ticks < 10) {
+				player.level.spawnParticles("minecraft:dust_color_transition{from_color:[1.0, 1.0, 1.0], to_color:[1.0, 0.0, 1.0], scale: 2.0}", false,
+					player.x, player.y, player.z,
+					0.1, 0.1, 0.1, 2, 0.5
+				)
+			}
+			dash.air_time_ticks += 1
+
 			if (player.onGround() || player.isSwimming()) {
-				dash.remaining = DASH_JUMP_LIMIT
+				dash.jump_count = 0
+				dash.air_time_ticks = 0
 
 				dash.check_landed.clear()
 				delete dash.check_landed
@@ -285,20 +300,24 @@ NetworkEvents.dataReceived("kubejs:trans_dash", event => {
 		})
 	}
 
-	dash.strength_multiplier *= 0.75
+	dash.restoration = DASH_BASE_RESTORATION
+	dash.strength_multiplier = Math.max(dash.strength_multiplier - 0.1, 0.25)
+
 	if (!dash.lower_tiredness) {
 		dash.lower_tiredness = event.server.scheduleRepeatingInTicks(5, () => {
 			if (dash.strength_multiplier >= 1.0) {
 				player.playNotifySound("minecraft:block.bubble_column.bubble_pop", "players", 1.0, 1.0)
+				dash.bonus_restoration = 0.0
 
 				dash.lower_tiredness.clear()
 				delete dash.lower_tiredness
 				return
 			}
 
-			if (player.onGround() || player.isSwimming()) {
+			if (dash.jump_count <= 0) {
+				dash.restoration += 0.0025
 				dash.strength_multiplier = Math.min(
-					dash.strength_multiplier * 1.025,
+					dash.strength_multiplier += dash.restoration,
 					1.0
 				)
 			}
@@ -312,8 +331,8 @@ NetworkEvents.dataReceived("kubejs:trans_dash", event => {
 // 		// if (player.mainHandItem) {
 // 		// 	player.statusMessage = player.mainHandItem.getUseDuration(player)
 // 		// }
-// 		// player.statusMessage = dash_data[player.uuid]?.lower_tiredness.endTime
-// 		player.statusMessage = dash_data[player.uuid]?.strength_multiplier
+// 		// player.statusMessage = dash_data[player.uuid]?.strength_multiplier
+// 		player.statusMessage = dash_data[player.uuid]?.jump_count
 // 	})
 // })
 
