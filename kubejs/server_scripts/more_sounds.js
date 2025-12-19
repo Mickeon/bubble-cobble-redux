@@ -36,7 +36,8 @@ ServerEvents.tags("block", event => {
 	event.add("bubble_cobble:clay_bricks_sounds", /^createdeco:.*brick/, "supplementaries:gravel_bricks", "supplementaries:suspicious_gravel_bricks")
 	event.add("bubble_cobble:end_stone_bricks_sounds", /^create:.*brick/, "supplementaries:ash_bricks", "supplementaries:ash_bricks_stairs", "supplementaries:ash_bricks_slab", "supplementaries:ash_bricks_wall")
 
-	// event.add("minecraft:combination_step_sound_blocks", "")
+	event.add("minecraft:combination_step_sound_blocks", "yungscavebiomes:ice_sheet")
+	// event.add("minecraft:inside_step_sound_blocks", "yungscavebiomes:ice_sheet")
 	// event.add("minecraft:inside_step_sound_blocks", "")
 
 	// Defined in file instead.
