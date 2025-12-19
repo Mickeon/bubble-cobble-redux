@@ -2,6 +2,8 @@
 // requires:create
 // /** @type {typeof import("dev.latvian.mods.kubejs.script.data.GeneratedDataStage").$GeneratedDataStage } */
 // let $GeneratedDataStage  = Java.loadClass("dev.latvian.mods.kubejs.script.data.GeneratedDataStage")
+/** @type {typeof import("net.minecraft.world.entity.player.Player").$Player } */
+let $Player  = Java.loadClass("net.minecraft.world.entity.player.Player")
 /** @type {typeof import("dev.latvian.mods.kubejs.item.FoodBuilder").$FoodBuilder } */
 let $FoodBuilder  = Java.loadClass("dev.latvian.mods.kubejs.item.FoodBuilder")
 
@@ -177,6 +179,44 @@ PlayerEvents.decorateChat(event => {
 	if (message.trim().toLowerCase() == "hi") {
 		player.runCommandSilent("damage @s 20 kubejs:pokemon_greeting by @n[type=cobblemon:pokemon, nbt={Pokemon:{PokemonOriginalTrainerType:NONE}}, distance=..4]")
 	}
+})
+
+ServerEvents.basicPublicCommand("suebegone", event => {
+	const invoker = event.entity
+	const bounds = AABB.CUBE.move(invoker.x, invoker.y, invoker.z).inflate(5)
+	const nearby_entities = event.level.getEntitiesWithin(bounds)
+	nearby_entities.forEach(player => {
+		if (!(player instanceof $Player || player.username == "Mickeon")) { // SueTheMimiga
+			return
+		}
+
+		let push_center = invoker.position()
+		if (invoker == player) {
+			let nearby_armor_stand = nearby_entities.filterType("minecraft:armor_stand").first
+			if (nearby_armor_stand) {
+				push_center = nearby_armor_stand.position()
+			} else {
+				player.statusMessage = Text.of("\"Hmm... Today I will banish myself.\" 😏")
+				player.server.schedule(4 * SECOND, callback => {
+					player.statusMessage = Text.of(["↓ ", Text.of("Clueless").gray(), " ↓"]).italic().bold().darkGray()
+				})
+				player.server.schedule(8 * SECOND, callback => {
+					player.level.spawnEntity("minecraft:lightning_bolt", entity => {
+						entity.setPosition(player.block)
+					})
+				})
+				return
+			}
+		}
+		const propel_angle = push_center.vectorTo(player.position()).normalize()
+		player.addMotion(
+			propel_angle.x * 2,
+			propel_angle.y * 0.5,
+			propel_angle.z * 2
+		)
+		player.hurtMarked = true
+		player.statusMessage = "What"
+	})
 })
 
 function remap(value, min1, max1, min2, max2) {
