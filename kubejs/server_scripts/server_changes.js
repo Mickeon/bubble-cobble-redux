@@ -150,7 +150,7 @@ ItemEvents.foodEaten(event => {
 	const player = event.player
 	const stack = event.item
 	const eat_time_ticks = stack.getFoodProperties(player).eatDurationTicks()
-	player.statusMessage = eat_time_ticks
+	// player.statusMessage = eat_time_ticks
 
 	player.addItemCooldown(stack, MINECRAFT_EAT_TIME_TICKS - eat_time_ticks)
 })
@@ -162,18 +162,4 @@ PlayerEvents.chestOpened("minecraft:generic_9x3", event => {
 		event.player.playNotifySound("create:blaze_munch", "players", 0.25, 2.0)
 	}
 })
-
-function remap(value, min1, max1, min2, max2) {
-	let value_norm = (value - min1) / (max1 - min1) // Inverse linear interpolation function.
-	return min2 + (max2-min2) * value_norm // Linear interpolation function.
-}
-
-function clamp(value, min, max) {
-	return Math.min(Math.max(value, min), max)
-}
-
-/** @param {Array} array @returns {string} */
-function pick_random(array) {
-	return array[Math.floor(Math.random() * array.length)]
-}
 

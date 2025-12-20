@@ -17,7 +17,7 @@ const REGENERATION_THRESHOLD = 7
 EntityEvents.spawned("minecraft:player", event => {
 	const player = event.player
 	const server = player.server
-	/** @type {import("dev.latvian.mods.kubejs.util.ScheduledEvents$ScheduledEvent").$ScheduledEvents$ScheduledEvent$$Type} */
+	/** @type {$ScheduledEvents$ScheduledEvent} */
 	let starve_event = null
 
 	let prior_exhaustion = player.getFoodData().getExhaustionLevel()

@@ -2,6 +2,8 @@
 // requires:create
 // /** @type {typeof import("dev.latvian.mods.kubejs.script.data.GeneratedDataStage").$GeneratedDataStage } */
 // let $GeneratedDataStage  = Java.loadClass("dev.latvian.mods.kubejs.script.data.GeneratedDataStage")
+/** @type {typeof import("net.neoforged.neoforge.event.entity.player.PlayerEvent$ItemCraftedEvent").$PlayerEvent$ItemCraftedEvent } */
+let $PlayerEvent$ItemCraftedEvent  = Java.loadClass("net.neoforged.neoforge.event.entity.player.PlayerEvent$ItemCraftedEvent")
 /** @type {typeof import("net.minecraft.world.entity.player.Player").$Player } */
 let $Player  = Java.loadClass("net.minecraft.world.entity.player.Player")
 /** @type {typeof import("dev.latvian.mods.kubejs.item.FoodBuilder").$FoodBuilder } */
@@ -219,10 +221,6 @@ ServerEvents.basicPublicCommand("suebegone", event => {
 	})
 })
 
-
-const DASH_STARTERS = [
-	"AceNil_", "CantieLabs", "Fableworks", "Labbyrinthia", "pepperponyo", "WaiGee", "Mickeon"
-]
 PlayerEvents.loggedIn(event => {
 	if (DASH_STARTERS.includes(event.player.username)) {
 		event.player.setAttributeBaseValue("kubejs:dash_jump_count", 1)
@@ -348,16 +346,9 @@ NetworkEvents.dataReceived("kubejs:dash", event => {
 // 	})
 // })
 
-function remap(value, min1, max1, min2, max2) {
-	let value_norm = (value - min1) / (max1 - min1) // Inverse linear interpolation function.
-	return min2 + (max2-min2) * value_norm // Linear interpolation function.
-}
-
-function clamp(value, min, max) {
-	return Math.min(Math.max(value, min), max)
-}
-
-/** @param {Array} array @returns {string} */
-function pick_random(array) {
-	return array[Math.floor(Math.random() * array.length)]
-}
+NativeEvents.onEvent($PlayerEvent$ItemCraftedEvent, event => {
+	if (event.getCrafting().id == "minecraft:crafting_table") {
+		event.entity.addMotion(0, 5, 0)
+		event.entity.hurtMarked = true
+	}
+})

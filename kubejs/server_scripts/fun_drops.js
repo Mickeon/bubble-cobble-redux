@@ -181,8 +181,8 @@ EntityEvents.drops("minecraft:player", event => {
 })
 
 /**
- * @param {import("net.minecraft.world.entity.player.Player").$Player$$Type} player
- * @param {import("net.minecraft.world.item.ItemStack").$ItemStack$$Type} stack */
+ * @param {$Player} player
+ * @param {$ItemStack} stack */
 function add_drop(player, stack, chance) {
 	if (Utils.getRandom().nextDouble() > chance) {
 		return
@@ -196,7 +196,7 @@ function get_funny_salmon() {
 			.enchant("minecraft:feather_falling", 1)
 }
 
-/** @param {import("net.minecraft.world.entity.player.Player").$Player$$Type} player */
+/** @param {$Player} player */
 function handle_head_drop(player) {
 	const head = Item.playerHead(player.username)
 	if (DASH_STARTERS.includes(player.username)) {
