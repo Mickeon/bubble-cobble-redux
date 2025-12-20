@@ -177,10 +177,11 @@ EntityEvents.drops("minecraft:player", event => {
 	}
 
 	add_drop(player, Item.of("kubejs:music_disc_fool"), 0.01)
+	handle_head_drop(player)
 })
 
-/** 
- * @param {import("net.minecraft.world.entity.player.Player").$Player$$Type} player 
+/**
+ * @param {import("net.minecraft.world.entity.player.Player").$Player$$Type} player
  * @param {import("net.minecraft.world.item.ItemStack").$ItemStack$$Type} stack */
 function add_drop(player, stack, chance) {
 	if (Utils.getRandom().nextDouble() > chance) {
@@ -193,4 +194,17 @@ function get_funny_salmon() {
 	return Item.of("minecraft:salmon")
 			.withLore("You may feel a bit lighter after eating this.")
 			.enchant("minecraft:feather_falling", 1)
+}
+
+/** @param {import("net.minecraft.world.entity.player.Player").$Player$$Type} player */
+function handle_head_drop(player) {
+	const head = Item.playerHead(player.username)
+	if (DASH_STARTERS.includes(player.username)) {
+		head.addAttributeModifier(
+			"kubejs:dash_jump_count",
+			{id: "kubejs:dash_head_bonus", amount: 1, operation: "add_value"},
+			"any"
+		)
+	}
+	add_drop(player, head, 0.25)
 }

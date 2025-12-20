@@ -121,7 +121,7 @@ ServerEvents.tags("block", event => {
 })
 
 ServerEvents.tick(event => {
-	const player = event.server.mcPlayers.forEach(player => {
+	event.server.mcPlayers.forEach(player => {
 		if (!player.carryOnData.carrying) {
 			return
 		}
@@ -138,6 +138,21 @@ ServerEvents.tick(event => {
 			})
 		}
 	})
+})
+
+// As food takes less time to eat on average, add a cooldown to prevent misclicks.
+const MINECRAFT_EAT_TIME_TICKS = 32
+ItemEvents.foodEaten(event => {
+	if (!event.player) {
+		return
+	}
+
+	const player = event.player
+	const stack = event.item
+	const eat_time_ticks = stack.getFoodProperties(player).eatDurationTicks()
+	player.statusMessage = eat_time_ticks
+
+	player.addItemCooldown(stack, MINECRAFT_EAT_TIME_TICKS - eat_time_ticks)
 })
 
 // Custom sound when opening HandCrafted shelves. TODO: Expand to include more containers.

@@ -35,7 +35,7 @@ let elapsed_time = 0.0
  * @param {import("net.minecraft.client.DeltaTracker").$DeltaTracker$$Type} delta_tracker
  */
 global.draw_custom_screen_overlay = (gui_graphics, delta_tracker) => {
-	if (!Client.player || Client.isPaused()) {
+	if (!Client.player || Client.options.hideGui || Client.isPaused()) {
 		return
 	}
 
