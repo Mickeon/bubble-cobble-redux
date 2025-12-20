@@ -1,8 +1,8 @@
 // requires: clutternomore
-// https://github.com/Alchemists-Of-Yore/ClutterNoMore/blob/0a5832a75ccfb65c999b207134cf0f43d369ab96/src/main/java/dev/tazer/clutternomore/common/shape_map/ShapeMap.java
 // https://aldak.netlify.app/javadoc/1.21.1-21.1.x/net/minecraft/client/gui/guigraphics
 /** @type {typeof import("net.neoforged.neoforge.client.event.RenderGuiLayerEvent$Post").$RenderGuiLayerEvent$Post } */
 let $RenderGuiLayerEvent$Post  = Java.loadClass("net.neoforged.neoforge.client.event.RenderGuiLayerEvent$Post")
+// https://github.com/Alchemists-Of-Yore/ClutterNoMore/blob/0a5832a75ccfb65c999b207134cf0f43d369ab96/src/main/java/dev/tazer/clutternomore/common/shape_map/ShapeMap.java
 /** @type {typeof import("dev.tazer.clutternomore.common.shape_map.ShapeMap").$ShapeMap } */
 let $ShapeMap = Java.loadClass("dev.tazer.clutternomore.common.shape_map.ShapeMap")
 /** @type {typeof import("net.minecraft.client.KeyMapping").$KeyMapping } */
@@ -26,8 +26,8 @@ NativeEvents.onEvent($RenderGuiLayerEvent$Post, event => {
 	global.draw_custom_screen_overlay(event.guiGraphics, event.partialTick)
 })
 
-const CHANGE_BLOCK_SHAPE_KEY = $KeyMapping.getALL().get("key.clutternomore.change_block_shape")
-const PLACE_BLOCK_KEY = $KeyMapping.getALL().get("key.use")
+const CHANGE_BLOCK_SHAPE_KEY = Utils.lazy(() => $KeyMapping.getALL().get("key.clutternomore.change_block_shape"))
+const PLACE_BLOCK_KEY = Utils.lazy(() => $KeyMapping.getALL().get("key.use"))
 const TEXT_APPEAR_TIME = 80.0 // 80.0
 let elapsed_time = 0.0
 /**
@@ -44,8 +44,8 @@ global.draw_custom_screen_overlay = (gui_graphics, delta_tracker) => {
 	if (held_stack.isEmpty()
 	|| !held_stack.block
 	|| !$ShapeMap.contains(held_stack)
-	|| CHANGE_BLOCK_SHAPE_KEY.down
-	|| PLACE_BLOCK_KEY.down) {
+	|| CHANGE_BLOCK_SHAPE_KEY.get().down
+	|| PLACE_BLOCK_KEY.get().down) {
 		elapsed_time = 0.0
 		return
 	}
