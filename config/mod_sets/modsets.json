@@ -1,0 +1,95 @@
+{
+  "development_set": {
+    "mods": [
+      "resource_explorer",
+      "probejs",
+      "nbt_ac",
+      "nbtedit",
+      "kubejsoffline"
+    ]
+  },
+  "emi_set": {
+    "mods": [
+      "emi",
+      "emi_create_schematics",
+      "emi_enchanting",
+      "emi_loot",
+      "emiffect",
+      "emixx",
+      "toomanyrecipeviewers"
+    ]
+  },
+  "xaero_map_set": {
+    "mods": [
+      "maplink",
+      "xaerominimap",
+      "xaerotrainmap",
+      "xaeroworldmap"
+    ]
+  },
+  "sound_set": {
+    "mods": [
+      "sounds",
+      "more_sounds"
+    ]
+  },
+  "particle_set": {
+    "mods": [
+      "item_interactions_mod",
+      "particlerain",
+      "particular",
+      "arrowtrails"
+    ]
+  },
+  "animation_set": {
+    "mods": [
+      "notenoughanimations",
+      "watut"
+    ]
+  },
+  "shader_set": {
+    "mods": [
+      "iris",
+      "irisflw"
+    ]
+  },
+  "enchanted_retexture_set": {
+    "mods": [
+      "beautiful_potions",
+      "beb"
+    ]
+  },
+  "dynamic_lights_set": {
+    "mods": [
+      "lambdynlights_runtime",
+      "lambdynlights",
+      "lambdynlights_api"
+    ]
+  },
+  "server_structures_set": {
+    "mods": [
+      "awesomedungeon",
+      "awesomedungeonocean",
+      "libraryferret",
+      "mr_dungeons_andtaverns",
+      "mr_dungeons_andtavernsjungletemplereplacement",
+      "mr_dungeons_andtavernsoceanmonumentreplacement",
+      "mr_fallen_logs",
+      "mr_minecraft_movie_structures",
+      "moogs_structures",
+      "mvs",
+      "mss",
+      "underground_bunkers",
+      "repurposed_structures",
+      "repurposed_structures_farmers_delight_compat"
+    ]
+  },
+  "danger_kubejs_set": {
+    "mods": [
+      "rhino",
+      "kubejs",
+      "kubejs_create",
+      "lootjs"
+    ]
+  }
+}

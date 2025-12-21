@@ -5424,6 +5424,62 @@
             ]
         },
         {
+            "pakku_id": "KphMvbZ04mzJEflD",
+            "pakku_links": [
+                "msCBFrruFRAH4aSI"
+            ],
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "modrinth": "mod-sets"
+            },
+            "name": {
+                "modrinth": "Mod Sets"
+            },
+            "id": {
+                "modrinth": "b313lC4Y"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "mod-sets-1.0.5.jar",
+                    "mc_versions": [
+                        "1.20.1",
+                        "1.21",
+                        "1.21.1",
+                        "1.21.2",
+                        "1.21.3",
+                        "1.21.4",
+                        "1.21.5",
+                        "1.21.6",
+                        "1.21.7",
+                        "1.21.8",
+                        "1.21.9",
+                        "1.21.10",
+                        "1.21.11"
+                    ],
+                    "loaders": [
+                        "fabric",
+                        "forge",
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/b313lC4Y/versions/u71BboOj/mod-sets-1.0.5.jar",
+                    "id": "u71BboOj",
+                    "parent_id": "b313lC4Y",
+                    "hashes": {
+                        "sha512": "3cf1759323cf768b7eb1e105728d0d2231df0003c0acd18526e32d6c1ad3ded272cf9588463a36b1a90f43bbc5ada88dbe2610a0c765f3119ea6ab003cae96dc",
+                        "sha1": "b2722a9eec98b39ba0a1a305903b75272c8dce20"
+                    },
+                    "required_dependencies": [
+                        "FFeAJNCx"
+                    ],
+                    "size": 211981,
+                    "date_published": "2025-12-21T11:46:11.637731Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "GWE9h3xYj2bAFryM",
             "type": "MOD",
             "side": "CLIENT",
@@ -6636,6 +6692,56 @@
                     "required_dependencies": [],
                     "size": 174972,
                     "date_published": "2025-07-21T10:56:19.716302Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "msCBFrruFRAH4aSI",
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "modrinth": "preloading-tricks"
+            },
+            "name": {
+                "modrinth": "Preloading Tricks"
+            },
+            "id": {
+                "modrinth": "FFeAJNCx"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "preloading-tricks-3.3.1.jar",
+                    "mc_versions": [
+                        "1.20.1",
+                        "1.21",
+                        "1.21.1",
+                        "1.21.2",
+                        "1.21.3",
+                        "1.21.4",
+                        "1.21.5",
+                        "1.21.6",
+                        "1.21.7",
+                        "1.21.8",
+                        "1.21.9",
+                        "1.21.10"
+                    ],
+                    "loaders": [
+                        "fabric",
+                        "forge",
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/FFeAJNCx/versions/cus4jqaB/preloading-tricks-3.3.1.jar",
+                    "id": "cus4jqaB",
+                    "parent_id": "FFeAJNCx",
+                    "hashes": {
+                        "sha512": "005722698beff80895d0872eb0640c028b3a78cf5b6c624a05e605de10c07c99f4cb5502dbeb6364eb2542c9e11fb07618c2cd1e75a0af5777cf009b185ab680",
+                        "sha1": "947fc313fde44ff83a8add58a8c31ea77570d0bf"
+                    },
+                    "required_dependencies": [],
+                    "size": 1576935,
+                    "date_published": "2025-12-04T05:08:19.982208Z"
                 }
             ]
         },

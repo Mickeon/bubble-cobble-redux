@@ -35,8 +35,7 @@
         "!config/sourcecubed-common.toml",
         "!config/waves-common.toml",
         "!config/waves",
-        "!config/parcool*",
-        "!config/mod_sets/*"
+        "!config/parcool*"
     ],
     "paths": {
         "resource_packs": "global_packs/resourcepacks/",
