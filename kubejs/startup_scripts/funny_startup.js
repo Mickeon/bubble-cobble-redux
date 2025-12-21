@@ -3,8 +3,8 @@
 /** @type {typeof import("net.minecraft.world.entity.animal.CatVariant").$CatVariant } */
 let $CatVariant  = Java.loadClass("net.minecraft.world.entity.animal.CatVariant")
 
-/** @typedef {import("dev.latvian.mods.kubejs.item.ItemModificationKubeEvent$ItemModifications").$ItemModificationKubeEvent$ItemModifications$$Original} ItemModifications */
-/** @type {$ItemModifications} */ // Sweet Jesus.
+/** @typedef {import("dev.latvian.mods.kubejs.item.ItemModificationKubeEvent$ItemModifications").$ItemModificationKubeEvent$ItemModifications$$Original} $ItemModifications */
+//** @type {$ItemModifications} */ // Sweet Jesus.
 
 Platform.setModName("kubejs", "Bubble Cobble")
 Platform.setModName("bubble_cobble", "Bubble Cobble")
@@ -37,12 +37,19 @@ ItemEvents.modification(event => {
 			* Math.min(0.6 + food_properties.effects().size() * 0.1, 1.0)
 
 		if (eat_time == food_properties.eatSeconds()) {
-			return // Same value, no need to change anything.
+			return // Same resulting value, no need to change anything.
 		}
 
+		const nutrition = food_properties.nutrition()
+		const saturation = food_properties.saturation()
+
+		// FoodBuilder does not use the saturation value as is when building. Weird.
+		// The final value results from `nutrition * provided_saturation * 2.0`. This is the reverse formula, plus a check to avoid NaN.
+		const reversed_saturation = (saturation != 0.0 ? (saturation / nutrition / 2.0) : 0.0)
+
 		const food_builder = (new $FoodBuilder())
-			.nutrition(food_properties.nutrition())
-			.saturation(food_properties.saturation())
+			.nutrition(nutrition)
+			.saturation(reversed_saturation)
 			.eatSeconds(eat_time)
 			.alwaysEdible(food_properties.canAlwaysEat())
 
@@ -59,7 +66,12 @@ ItemEvents.modification(event => {
 			)
 		})
 
-		modified.food = food_builder.build()
+		const result = food_builder.build()
+		modified.food = result
+
+		if (saturation.toFixed(1) != result.saturation().toFixed(1)) {
+			console.warn(`Food "${item.id}" original saturation ${food_properties.saturation().toFixed(1)} was changed to ${result.saturation().toFixed(1)}.`)
+		}
 	})
 })
 
