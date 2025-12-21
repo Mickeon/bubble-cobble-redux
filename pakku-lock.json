@@ -5424,43 +5424,6 @@
             ]
         },
         {
-            "pakku_id": "BcGMuT6pegwkjVC2",
-            "type": "MOD",
-            "side": "CLIENT",
-            "slug": {
-                "modrinth": "mod-presets"
-            },
-            "name": {
-                "modrinth": "Mod Presets"
-            },
-            "id": {
-                "modrinth": "MBeQskLo"
-            },
-            "files": [
-                {
-                    "type": "modrinth",
-                    "file_name": "modpack_presets-0.5.5.jar",
-                    "mc_versions": [
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/MBeQskLo/versions/Qt4RAuqO/modpack_presets-0.5.5.jar",
-                    "id": "Qt4RAuqO",
-                    "parent_id": "MBeQskLo",
-                    "hashes": {
-                        "sha512": "34e87ba2ff9d52e813a2cc3ca87db83aaeb490aae8ce72ef4f0d051eb69593f514e800b2df640f27d2ab53b155fc78e52d60c96a2472f54ceb1770799366e28b",
-                        "sha1": "aaa53ec0c7b78f1e1a28b0123dd5e903f72f770a"
-                    },
-                    "required_dependencies": [],
-                    "size": 36718,
-                    "date_published": "2025-11-28T05:21:31.960834Z"
-                }
-            ]
-        },
-        {
             "pakku_id": "GWE9h3xYj2bAFryM",
             "type": "MOD",
             "side": "CLIENT",

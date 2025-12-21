@@ -94,7 +94,13 @@
     "xaero.common.gui.GuiWaypoints": true,
     "com.simibubi.create.content.equipment.zapper.terrainzapper.WorldshaperScreen": true,
     "com.unascribed.sidekick.client.screen.SidekickScreen": true,
-    "com.simibubi.create.content.schematics.table.SchematicTableScreen": true
+    "com.simibubi.create.content.schematics.table.SchematicTableScreen": true,
+    "net.p3pp3rf1y.sophisticatedstorage.client.gui.StorageSettingsScreen": true,
+    "net.mehvahdjukaar.supplementaries.client.screens.CannonScreen": true,
+    "com.simibubi.create.content.schematics.cannon.SchematicannonScreen": true,
+    "com.simibubi.create.content.redstone.displayLink.DisplayLinkScreen": true,
+    "vectorwing.farmersdelight.client.gui.CookingPotScreen": true,
+    "com.sammy.minersdelight.content.block.copper_pot.CopperPotScreen": true
   },
   "hideBackground": {
     "dev.emi.emi.screen.RecipeScreen": false,
