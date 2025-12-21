@@ -1,4 +1,3 @@
-// priority: 0
 
 ServerEvents.recipes(event => {
 	// event.remove({input: global.DISABLED_ITEMS_INGREDIENTS})
@@ -6,8 +5,7 @@ ServerEvents.recipes(event => {
 
 	// Gotta do this manually I guess.
 	event.remove({id: "create_bic_bit:mixing/curdled_milk" })
-	// event.replaceOutput({output: "leafscopperbackport:copper_nugget"}, "leafscopperbackport:copper_nugget", "create:copper_nugget")
-	event.remove({id: "create:crafting/materials/copper_ingot"}) // Now duplicate.
+	event.remove({id: "create:crafting/materials/copper_ingot"}) // Duplicate because of Minecraft's own recipe.
 	event.replaceInput({input: "create:copper_nugget"}, "create:copper_nugget", "minecraft:copper_nugget" )
 	event.replaceOutput({output: "create:copper_nugget"}, "create:copper_nugget", "minecraft:copper_nugget")
 })

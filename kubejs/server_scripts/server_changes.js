@@ -1,6 +1,5 @@
 // priority: 10
-// requires:cobblemon
-// requires:create
+// requires: create
 
 // The End check.
 EntityEvents.spawned("minecraft:player", event => {

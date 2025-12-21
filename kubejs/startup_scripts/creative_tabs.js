@@ -1,7 +1,9 @@
 
+/** @import {$MutableComponent} from "net.minecraft.network.chat.MutableComponent" */
+
 /**
  * @param {Special.CreativeModeTab} tab_id
- * @param {Internal.MutableComponent} to
+ * @param {$MutableComponent} to
  * @param {Special.Item} icon_item_id
  */
 function rename_tab(tab_id, to, icon_item_id) {

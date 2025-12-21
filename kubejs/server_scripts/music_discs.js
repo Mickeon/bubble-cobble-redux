@@ -1,5 +1,5 @@
 
-const music_list = global.music_list
+const MUSIC_LIST = global.MUSIC_LIST
 
 ServerEvents.registry("jukebox_song", event => {
 	// const map = Utils.newMap()
@@ -8,9 +8,9 @@ ServerEvents.registry("jukebox_song", event => {
 	// 	"key2": "value2",
 	// })
 	// console.log(map)
-	Object.keys(music_list).forEach((key, index) => {
-		const duration = music_list[key].duration
-		const description = music_list[key].description
+	Object.keys(MUSIC_LIST).forEach((key, index) => {
+		const duration = MUSIC_LIST[key].duration
+		const description = MUSIC_LIST[key].description
 		event.create(`kubejs:${key}`)
 				.song(`kubejs:music.${key}`, duration)
 				.description(Text.of(description))
@@ -19,8 +19,8 @@ ServerEvents.registry("jukebox_song", event => {
 })
 
 ServerEvents.tags("item", event => {
-	Object.keys(music_list).forEach((key) => {
-		if (music_list[key].no_disc) {
+	Object.keys(MUSIC_LIST).forEach((key) => {
+		if (MUSIC_LIST[key].no_disc) {
 			return
 		}
 		event.add("c:music_discs", `kubejs:music_disc_${key}`)

@@ -1,6 +1,8 @@
 // priority: 100
 // Run before solonion_tooltip.
 
+/** @import {$MutableComponent} from "net.minecraft.network.chat.MutableComponent" */
+
 const MASCOT_COLOR = "#83BED9"
 const MASCOT_COLOR_DARK = "#537B8D"
 const SHIFT_INFO_COLOR = "#7CB3D6"
@@ -27,7 +29,7 @@ ItemEvents.modifyTooltips(event => {
 	])
 
 	event.add(["#handcrafted:fancy_beds"],
-			"§9Try putting on a §bCushion or §bSheet§9 for some extra colour!")
+			"§9Try putting on a §bCushion §9or §bSheet§9 for some extra colour!")
 	event.add(["#handcrafted:tables", "#handcrafted:side_tables", "#handcrafted:desks", "#handcrafted:nightstands"],
 			"§9Try putting any §bSheet§9 for some extra colour!")
 	event.add(["#handcrafted:couches", "#handcrafted:benches", "#handcrafted:chairs"],
@@ -126,7 +128,6 @@ ItemEvents.modifyTooltips(event => {
 		"Shift-right-click to rotate counter-clockwise.",
 	])
 
-	/** @import {$MutableComponent} from "net.minecraft.network.chat.MutableComponent" */
 	/** @param {string | $MutableComponent} text @returns {$MutableComponent} */
 	function subtle(text) {
 		return Text.of(text).color(MASCOT_COLOR_DARK).italic()
@@ -194,11 +195,12 @@ ItemEvents.dynamicTooltips("sue_banana_mayo_sandwich", event => {
 /**
  * @import {$TextActionBuilder} from "dev.latvian.mods.kubejs.text.action.TextActionBuilder"
  * @import {$ModifyItemTooltipsKubeEvent} from "dev.latvian.mods.kubejs.item.ModifyItemTooltipsKubeEvent"
+ * @import {$Ingredient} from "net.minecraft.world.item.crafting.Ingredient"
  * */
 
 /**
  * @param {$ModifyItemTooltipsKubeEvent} event
- * @param {Special.Item} item
+ * @param {$Ingredient} item
  * @param {String[] | String} info
  */
 function add_shift_info(event, item, info) {

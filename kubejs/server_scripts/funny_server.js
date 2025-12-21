@@ -1,5 +1,5 @@
-// requires:cobblemon
-// requires:create
+// requires: cobblemon
+// requires: create
 // /** @type {typeof import("dev.latvian.mods.kubejs.script.data.GeneratedDataStage").$GeneratedDataStage } */
 // let $GeneratedDataStage  = Java.loadClass("dev.latvian.mods.kubejs.script.data.GeneratedDataStage")
 /** @type {typeof import("net.neoforged.neoforge.event.entity.player.PlayerEvent$ItemCraftedEvent").$PlayerEvent$ItemCraftedEvent } */

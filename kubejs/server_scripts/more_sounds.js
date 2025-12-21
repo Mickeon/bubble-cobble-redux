@@ -1,5 +1,4 @@
-// This script is disabled because Sounds' use of block tags is broken.
-// https://github.com/IMB11-Mods/Sounds/issues/107
+// NOTE: Sounds's block definitions refresh after a full restart.
 
 ServerEvents.tags("block", event => {
 	event.add("bubble_cobble:glass_sounds", "#c:glass", "#c:glass_panes")

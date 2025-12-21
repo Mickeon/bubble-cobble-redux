@@ -1,4 +1,3 @@
-// priority: 0
 /** @type {typeof import("net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent").$BuildCreativeModeTabContentsEvent } */
 let $BuildCreativeModeTabContentsEvent  = Java.loadClass("net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent")
 
@@ -23,8 +22,6 @@ global.DISABLED_ITEMS = [
 	// "astral_dimension:backpack",
 	// "astral_dimension:harsh_backpack",
 
-	// In favour of Create's copper nuggets.
-	// "leafscopperbackport:copper_nugget",
 	// In favour of Minecraft's own Copper Nugget.
 	"create:copper_nugget"
 ]
@@ -33,21 +30,6 @@ global.DISABLED_ITEMS = [
 global.DISABLED_FLUIDS = [
 	"create_bic_bit:curdled_milk"
 ]
-
-// global.DISABLED_ITEMS_ingredient = Ingredient.of(global.DISABLED_ITEMS)
-
-// Item registry is not fully ready here. We wait for initialization and cache the result.
-// global.EVALUATED_DISABLED_ITEMS = []
-// StartupEvents.postInit(event => {
-// 	global.EVALUATED_DISABLED_ITEMS = Ingredient.of(global.DISABLED_ITEMS).stackArray
-// 	console.log("Hiding the following items: " + global.EVALUATED_DISABLED_ITEMS)
-// })
-
-// NativeEvents.onEvent("lowest", $BuildCreativeModeTabContentsEvent, event => {
-// 	global.EVALUATED_DISABLED_ITEMS.forEach(item => {
-// 		event.remove(item, "parent_and_search_tabs")
-// 	})
-// })
 
 NativeEvents.onEvent("lowest", $BuildCreativeModeTabContentsEvent, event => {
 	// Caching fails to work, for some reason.

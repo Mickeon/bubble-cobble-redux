@@ -1,15 +1,15 @@
 
 // requires:brewinandchewin
-/** @type {typeof import("net.minecraft.client.resources.sounds.SoundInstance").$SoundInstance } */
-let $SoundInstance  = Java.loadClass("net.minecraft.client.resources.sounds.SoundInstance")
-/** @type {typeof import("net.neoforged.neoforge.event.entity.living.MobEffectEvent$Expired").$MobEffectEvent$Expired } */
-let $MobEffectEvent$Expired  = Java.loadClass("net.neoforged.neoforge.event.entity.living.MobEffectEvent$Expired")
-/** @type {typeof import("net.minecraft.world.entity.player.Player").$Player } */
-let $Player  = Java.loadClass("net.minecraft.world.entity.player.Player")
-/** @type {typeof import("net.neoforged.neoforge.event.entity.living.MobEffectEvent$Remove").$MobEffectEvent$Remove } */
-let $MobEffectEvent$Remove  = Java.loadClass("net.neoforged.neoforge.event.entity.living.MobEffectEvent$Remove")
-/** @type {typeof import("net.neoforged.neoforge.event.entity.living.MobEffectEvent$Added").$MobEffectEvent$Added } */
-let $MobEffectEvent$Added  = Java.loadClass("net.neoforged.neoforge.event.entity.living.MobEffectEvent$Added")
+// /** @type {typeof import("net.minecraft.client.resources.sounds.SoundInstance").$SoundInstance } */
+// let $SoundInstance  = Java.loadClass("net.minecraft.client.resources.sounds.SoundInstance")
+// /** @type {typeof import("net.neoforged.neoforge.event.entity.living.MobEffectEvent$Expired").$MobEffectEvent$Expired } */
+// let $MobEffectEvent$Expired  = Java.loadClass("net.neoforged.neoforge.event.entity.living.MobEffectEvent$Expired")
+// /** @type {typeof import("net.minecraft.world.entity.player.Player").$Player } */
+// let $Player  = Java.loadClass("net.minecraft.world.entity.player.Player")
+// /** @type {typeof import("net.neoforged.neoforge.event.entity.living.MobEffectEvent$Remove").$MobEffectEvent$Remove } */
+// let $MobEffectEvent$Remove  = Java.loadClass("net.neoforged.neoforge.event.entity.living.MobEffectEvent$Remove")
+// /** @type {typeof import("net.neoforged.neoforge.event.entity.living.MobEffectEvent$Added").$MobEffectEvent$Added } */
+// let $MobEffectEvent$Added  = Java.loadClass("net.neoforged.neoforge.event.entity.living.MobEffectEvent$Added")
 
 ItemEvents.modifyTooltips(event => {
 	event.add("kubejs:sweet_berry_wine", Text.gray("Huh? Are these grapes?"))

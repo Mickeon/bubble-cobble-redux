@@ -1,4 +1,3 @@
-// priority: 0
 
 ItemEvents.modifyTooltips(event => {
 	event.modify("minecraft:skeleton_skull", text => {
@@ -17,7 +16,7 @@ ItemEvents.modifyTooltips(event => {
 	event.modify("minecraft:beacon", { shift: true }, text => {
 		text.insert(1, Text.green("Gives positive effects to players in a range").bold(true))
 		text.insert(2, Text.red("Requires a base built out of precious metals or gems to function!"))
-		text.insert(3, 
+		text.insert(3,
 			Text.white("Iron, ").append(
 			Text.aqua("Diamonds, ")).append(
 			Text.gold("Gold ")).append(

@@ -1,26 +1,28 @@
-// requires:brewinandchewin
+// requires: brewinandchewin
 /** @type {typeof import("net.minecraft.world.entity.projectile.ThrowableItemProjectile").$ThrowableItemProjectile } */
 let $ThrowableItemProjectile  = Java.loadClass("net.minecraft.world.entity.projectile.ThrowableItemProjectile")
 /** @type {typeof import("net.neoforged.neoforge.event.entity.ProjectileImpactEvent").$ProjectileImpactEvent } */
 let $ProjectileImpactEvent  = Java.loadClass("net.neoforged.neoforge.event.entity.ProjectileImpactEvent")
 /** @type {typeof import("net.minecraft.world.entity.projectile.Projectile").$Projectile } */
 let $Projectile  = Java.loadClass("net.minecraft.world.entity.projectile.Projectile")
-/** @type {typeof import("net.minecraft.server.level.ServerPlayer").$ServerPlayer } */
-let $ServerPlayer  = Java.loadClass("net.minecraft.server.level.ServerPlayer")
 /** @type {typeof import("net.minecraft.world.level.Level").$Level } */
 let $Level  = Java.loadClass("net.minecraft.world.level.Level")
 /** @type {typeof import("net.minecraft.world.item.ItemStack").$ItemStack } */
 let $ItemStack  = Java.loadClass("net.minecraft.world.item.ItemStack")
-/** @type {typeof import("net.neoforged.neoforge.fluids.BaseFlowingFluid").$BaseFlowingFluid } */
-let $BaseFlowingFluid  = Java.loadClass("net.neoforged.neoforge.fluids.BaseFlowingFluid")
 /** @type {typeof import("net.minecraft.world.item.Item$Properties").$Item$Properties } */
 let $Item$Properties  = Java.loadClass("net.minecraft.world.item.Item$Properties")
-/** @type {typeof import("net.minecraft.world.level.material.FlowingFluid").$FlowingFluid } */
-let $FlowingFluid  = Java.loadClass("net.minecraft.world.level.material.FlowingFluid")
 /** @type {typeof import("umpaz.brewinandchewin.common.item.BoozeItem").$BoozeItem } */
 let $BoozeItem  = Java.loadClass("umpaz.brewinandchewin.common.item.BoozeItem")
 /** @type {typeof import("dev.latvian.mods.kubejs.item.ItemBuilder").$ItemBuilder } */
 let $ItemBuilder  = Java.loadClass("dev.latvian.mods.kubejs.item.ItemBuilder")
+
+/**
+ * @import {$ItemStack} from "net.minecraft.world.item.ItemStack"
+ * @import {$Level} from "net.minecraft.world.level.Level"
+ * @import {$LivingEntity} from "net.minecraft.world.entity.LivingEntity"
+ * @import {$Projectile} from "net.minecraft.world.entity.projectile.Projectile"
+ * @import {$RegistryKubeEvent} from "dev.latvian.mods.kubejs.registry.RegistryKubeEvent"
+ */
 
 const SEC = 20
 const MIN = SEC * 60
@@ -33,7 +35,7 @@ StartupEvents.registry("fluid", event => {
 	event.create("sparkling_rose", "kubejs:thin").tint("yellow").noBucket().displayName("Sparkling Rosé")
 	event.create("berry_juice_soda", "kubejs:thin").tint("light_blue_dye").noBucket().displayName("Berry Juice Soda")
 	event.create("firebomb_whiskey", "kubejs:thin").tint("dark_red").noBucket().displayName("Firebomb Whiskey")
-			
+
 })
 
 StartupEvents.registry("item", event => {
@@ -57,7 +59,7 @@ StartupEvents.registry("item", event => {
 			.effect("minecraft:glowing", 8 * MIN, 1, 1.0)
 			.effect("minecraft:night_vision", 5 * MIN, 1, 1.0)
 	)
-	
+
 	event.create("berry_juice_soda")
 			.displayName("Berry Juice Soda")
 			.tooltip(Text.gray("Clears all negative effects."))
@@ -79,11 +81,11 @@ StartupEvents.registry("item", event => {
 						effect_instance.duration = 1
 					}
 				})
-				
+
 				entity.eat(level, item_stack)
 				// entity.potionEffects.add("alexscaves:stunned", 3 * SEC, 0, false, false)
 				return item_stack
-			})//.get().craftingRemainder = 
+			})
 	event.create("firebomb_whiskey")
 			.displayName("Firebomb Whiskey")
 			.tooltip([Text.gray("With an "), Text.gold("fiery"), Text.gray(" aftertaste.")])
@@ -104,22 +106,21 @@ StartupEvents.registry("item", event => {
 
 
 /**
- * @param {$RegistryKubeEvent} event 
- * @param {string} id 
- * @param {$FoodBuilder} f 
+ * @param {$RegistryKubeEvent} event
+ * @param {string} id
+ * @param {$FoodBuilder} f
  */
 function create_wine(event, id, f) {
-	// f.effect("brewinandchewin:tipsy", 1 * MIN, 0, 1.0)
 	f.alwaysEdible()
-	// f.usingConvertsTo(Item.of("minecraft:glass_bottle"))
-	event.createCustom(id, () => 
+	event.createCustom(id, () =>
 		new $BoozeItem(
-			() => Fluid.getType("minecraft:water"),
+			() => Fluid.getType("minecraft:water"), // TODO: Weird. What was this for again?
 			new $Item$Properties()
 					.stacksTo(16)
 					.craftRemainder("minecraft:glass_bottle")
 					.food(f.build())
-	))
+		)
+	)
 }
 
 
@@ -131,7 +132,7 @@ NativeEvents.onEvent($ProjectileImpactEvent, event => {
 	if (!(projectile instanceof $ThrowableItemProjectile)) {
 		return
 	}
-	
+
 	if (projectile.item.id != "kubejs:firebomb_whiskey") {
 		return
 	}
@@ -141,10 +142,10 @@ NativeEvents.onEvent($ProjectileImpactEvent, event => {
 
 	const hit_point = event.getRayTraceResult().getLocation()
 	const hit_block = projectile.level.getBlock(hit_point)
-	
-	let aabb = AABB.CUBE.move(hit_point.get(0), hit_point.get(1), hit_point.get(2)).inflate(3)
-	
-	let explosion = hit_block.explode({
+
+	let aabb = AABB.CUBE.move(hit_point.x(), hit_point.y(), hit_point.z()).inflate(3)
+
+	const explosion = hit_block.explode({
 		causesFire: true,
 		mode: "none",
 		strength: 1.5,
@@ -152,10 +153,9 @@ NativeEvents.onEvent($ProjectileImpactEvent, event => {
 		damageSource: new DamageSource("minecraft:on_fire", projectile, projectile.owner),
 		source: projectile.owner
 	})
-	
-	let entities_in_range = projectile.level.getEntitiesWithin(aabb)
-	entities_in_range.toArray().forEach(entity => {
-		// entity.runCommandSilent("damage @s 2 minecraft:on_fire")
+
+	const entities_in_range = projectile.level.getEntitiesWithin(aabb)
+	entities_in_range.forEach(entity => {
 		entity.attack(new DamageSource("minecraft:on_fire", projectile, projectile.owner), 2)
 		entity.setRemainingFireTicks(100)
 	})
@@ -163,52 +163,60 @@ NativeEvents.onEvent($ProjectileImpactEvent, event => {
 	// event.setCanceled(true)
 })
 
+// Using global allows these functions to be reloaded with /kubejs reload.
 /**
- * @param {import("net.minecraft.world.item.ItemStack").$ItemStack$$Type} item_stack
- * @param {import("net.minecraft.world.level.Level").$Level$$Type} level
- * @param {import("net.minecraft.server.level.ServerPlayer").$ServerPlayer$$Type} entity
+ * @param {$ItemStack} item_stack
+ * @param {$Level} level
+ * @param {$LivingEntity} entity
  * @param {number} remaining_ticks
  */
 global.release_firebomb_whiskey = function(item_stack, level, entity, remaining_ticks) {
-	let speed = remap(remaining_ticks, 30, 0, 0.75, 1.25)
-	
-	/**@type {import("net.minecraft.world.entity.projectile.Projectile").$Projectile$$Type} */
-	let projectile = level.createEntity("minecraft:potion")
+	const speed = remap(remaining_ticks, 30, 0, 0.75, 1.25)
+
+	/**@type {$Projectile} */
+	const projectile = level.createEntity("minecraft:potion")
 	projectile.mergeNbt({Item: Item.of("kubejs:firebomb_whiskey")})
 	projectile.x = entity.x
 	projectile.y = entity.eyeY
 	projectile.z = entity.z
 	projectile.owner = entity
 
-	let movement = entity.lookAngle
-	
+	const movement = entity.lookAngle
+
 	projectile.setDeltaMovement(movement.scale(speed))
 	projectile.spawn()
 	entity.playSound("minecraft:entity.splash_potion.throw")
 
-	entity.addItemCooldown(item_stack.getItem(), 10)
-	
-	if (!entity.isCreative()) {
-		item_stack.shrink(1)
+	if (entity instanceof $Player) {
+		entity.addItemCooldown(item_stack.getItem(), 10)
+
+		if (!entity.isCreative()) {
+			item_stack.shrink(1)
+		}
 	}
+
 }
 
 /**
- * @param {import("net.minecraft.world.item.ItemStack").$ItemStack$$Type} item_stack
- * @param {import("net.minecraft.world.level.Level").$Level$$Type} level
- * @param {import("net.minecraft.server.level.ServerPlayer").$ServerPlayer$$Type} entity
+ * @param {$ItemStack} item_stack
+ * @param {$Level} level
+ * @param {$LivingEntity} entity
  */
 global.finish_using_firebomb_whiskey = function(item_stack, level, entity) {
+	// entity.statusMessage = "OWch"
+	// console.log("WOCHH")
 	entity.playSound("supplementaries:block.jar.break")
 	entity.playSound("minecraft:entity.witch.drink")
 	entity.setRemainingFireTicks(100)
-	entity.addItemCooldown(item_stack.getItem(), 10)
+	if (entity instanceof $Player) {
+		entity.addItemCooldown(item_stack.getItem(), 10)
+	}
 	return entity.eat(level, item_stack)
 }
 
-/** @returns {number} */
+/** @param {number} value @param {number} min1 @param {number} max1  @param {number} min2 @param {number} max2 */
 function remap(value, min1, max1, min2, max2) {
 	let value_norm = (value - min1) / (max1 - min1) // Inverse linear interpolation function.
-	return min2 + (max2-min2) * value_norm // Linear interpolation function.
+	return min2 + (max2 - min2) * value_norm // Linear interpolation function.
 }
 

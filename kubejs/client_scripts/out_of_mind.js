@@ -1,7 +1,6 @@
 
 RecipeViewerEvents.removeEntriesCompletely("item", event => {
 	event.remove(global.DISABLED_ITEMS)
-    // event.remove(Ingredient.of("minecraft:chest[container_loot={loot_table:\"minecraft:chests/abandoned_mineshaft\"}]"))
 })
 
 RecipeViewerEvents.removeEntriesCompletely("fluid", event => {

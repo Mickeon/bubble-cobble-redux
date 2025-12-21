@@ -1,4 +1,3 @@
-// priority: 0
 // requires: solonion
 
 /** @type {typeof import("team.creative.solonion.api.SOLOnionAPI").$SOLOnionAPI } */
@@ -16,12 +15,12 @@ ItemEvents.modifyTooltips(event => {
 // Imitate Spice of Life's tooltips.
 // They are disabled in the config, because the "Diversity" tooltip alone is very overbearing.
 ItemEvents.dynamicTooltips("imitate_spice_of_life", event => {
-	try { // Keeping in check. This crashed before so just in case.
-		let stack = event.item
-		if (!stack.components.has("minecraft:food")) {
-			return
-		}
+	const stack = event.item
+	if (!stack.components.has("minecraft:food")) {
+		return
+	}
 
+	try { // Keeping in check. This crashed before so just in case.
 		let player = Client.player
 		let foodCapability = SOLOnionAPI.getFoodCapability(Client.player)
 

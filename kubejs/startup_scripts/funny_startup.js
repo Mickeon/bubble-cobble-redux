@@ -1,34 +1,31 @@
 // /** @type {typeof import("net.minecraft.world.level.block.BedBlock").$BedBlock } */
 // let $BedBlock  = Java.loadClass("net.minecraft.world.level.block.BedBlock")
-/** @type {typeof import("net.minecraft.world.entity.player.Player").$Player } */
-let $Player  = Java.loadClass("net.minecraft.world.entity.player.Player")
 /** @type {typeof import("net.minecraft.world.entity.animal.CatVariant").$CatVariant } */
 let $CatVariant  = Java.loadClass("net.minecraft.world.entity.animal.CatVariant")
-/** @type {typeof import("dev.latvian.mods.kubejs.item.FoodBuilder").$FoodBuilder } */
-let $FoodBuilder  = Java.loadClass("dev.latvian.mods.kubejs.item.FoodBuilder")
+
+/** @typedef {import("dev.latvian.mods.kubejs.item.ItemModificationKubeEvent$ItemModifications").$ItemModificationKubeEvent$ItemModifications$$Original} ItemModifications */
+/** @type {$ItemModifications} */ // Sweet Jesus.
 
 Platform.setModName("kubejs", "Bubble Cobble")
 Platform.setModName("bubble_cobble", "Bubble Cobble")
 
 
 ItemEvents.modification(event => {
-	event.modify("cobblemon:ice_stone", /** @param {import("dev.latvian.mods.kubejs.item.ItemModificationKubeEvent$ItemModifications").$ItemModificationKubeEvent$ItemModifications$$Original} item */ item => {
+	event.modify("cobblemon:ice_stone", /** @param {$ItemModifications} item */ item => {
 		item.food = (new $FoodBuilder()).alwaysEdible().effect("minecraft:poison", 10, 1, 1).build()
 		// Something else also happens, but it is handled in server scripts.
 	})
 
-	event.modify(["create:polished_rose_quartz", "create:rose_quartz"], item => {
+	event.modify(["create:polished_rose_quartz", "create:rose_quartz"], /** @param {$ItemModifications} item */ item => {
 		item.food = (new $FoodBuilder()).alwaysEdible().nutrition(0.5).build()
 	})
 
-	/** @typedef {import("dev.latvian.mods.kubejs.item.ItemModificationKubeEvent$ItemModifications").$ItemModificationKubeEvent$ItemModifications$$Original} Shorthand */
-	/** @type {Shorthand} */ // Sweet Jesus.
-	event.modify(["minecraft:potion", "minecraft:splash_potion", "minecraft:lingering_potion"], /** @param {Shorthand} item */ item => {
+	event.modify(["minecraft:potion", "minecraft:splash_potion", "minecraft:lingering_potion"], /** @param {ItemModifications} item */ item => {
 		item.maxStackSize = 12
 	})
 
 	// Lower how much time it takes to eat food in general.
-	event.modify("*", /** @param {Shorthand} modified */ modified => {
+	event.modify("*", /** @param {$ItemModifications} modified */ modified => {
 		const item = modified.item()
 		const food_properties = item.getFoodProperties(Item.of(item), null)
 		if (!food_properties || food_properties.eatSeconds() <= 0.0) {
@@ -214,20 +211,18 @@ ForgeEvents.onEvent("net.minecraftforge.event.entity.ProjectileImpactEvent", eve
 	}
 })
 */
-/** @param {$MinecraftServer} server */
-/** @returns {import("net.minecraft.world.entity.player.Player").$Player$$Type} */
+/** @param {import("net.minecraft.server.MinecraftServer").$MinecraftServer$$Type} server */
 function find_mickeon(server) {
-	/** @type {PlayerList} */
 	const player_list = server.getPlayerList()
 	return player_list.getPlayerByName("Mickeon")
 }
 
-StartupEvents.registry("mob_effect", event => {
-	event.create("begone")
-		.color(0x000000)
-		.instant()
-		.effectTick(entity => begone_effect(entity))
-})
+// StartupEvents.registry("mob_effect", event => {
+// 	event.create("begone")
+// 		.color(0x000000)
+// 		.instant()
+// 		.effectTick(entity => begone_effect(entity))
+// })
 
 // /** @param {import("net.minecraft.world.entity.LivingEntity").$LivingEntity$$Type} entity */
 // function begone_effect(entity) {
