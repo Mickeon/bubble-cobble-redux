@@ -4,7 +4,6 @@
 let $CatVariant  = Java.loadClass("net.minecraft.world.entity.animal.CatVariant")
 
 /** @typedef {import("dev.latvian.mods.kubejs.item.ItemModificationKubeEvent$ItemModifications").$ItemModificationKubeEvent$ItemModifications$$Original} $ItemModifications */
-//** @type {$ItemModifications} */ // Sweet Jesus.
 
 Platform.setModName("kubejs", "Bubble Cobble")
 Platform.setModName("bubble_cobble", "Bubble Cobble")
@@ -17,7 +16,7 @@ ItemEvents.modification(event => {
 	})
 
 	event.modify(["create:polished_rose_quartz", "create:rose_quartz"], /** @param {$ItemModifications} item */ item => {
-		item.food = (new $FoodBuilder()).alwaysEdible().nutrition(0.5).build()
+		item.food = (new $FoodBuilder()).alwaysEdible().build()
 	})
 
 	event.modify(["minecraft:potion", "minecraft:splash_potion", "minecraft:lingering_potion"], /** @param {ItemModifications} item */ item => {
@@ -189,6 +188,7 @@ StartupEvents.modifyCreativeTab("kubejs:tab", event => {
 
 StartupEvents.registry("sound_event", event => {
 	event.create("bubble_cobble:dash")
+	event.create("kubejs:item.bearded_dragon_chirp")
 })
 
 StartupEvents.registry("attribute", event => {

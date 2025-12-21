@@ -1,7 +1,8 @@
 {
   "keys": [
     "create:filter",
-    "create:schedule"
+    "create:attribute_filter",
+    "create:package_filter"
   ],
   "soundEvent": "create:depot_slide"
 }

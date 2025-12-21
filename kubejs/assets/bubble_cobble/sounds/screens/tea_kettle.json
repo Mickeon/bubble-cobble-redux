@@ -1,0 +1,8 @@
+{
+  "keys": [
+    "herbalbrews:tea_kettle_gui_handler"
+  ],
+  "soundEvent": "farmersdelight:item.skillet.attack.weak",
+  "volume": 0.5,
+  "pitch": 0.9
+}

@@ -1,0 +1,8 @@
+{
+  "keys": [
+    "minecraft:smoker"
+  ],
+  "soundEvent": "cnc:block.fire.light",
+  "volume": 0.5,
+  "pitch": 1.25
+}

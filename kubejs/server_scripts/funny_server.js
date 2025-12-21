@@ -2,8 +2,6 @@
 // requires: create
 // /** @type {typeof import("dev.latvian.mods.kubejs.script.data.GeneratedDataStage").$GeneratedDataStage } */
 // let $GeneratedDataStage  = Java.loadClass("dev.latvian.mods.kubejs.script.data.GeneratedDataStage")
-/** @type {typeof import("net.neoforged.neoforge.event.entity.player.PlayerEvent$ItemCraftedEvent").$PlayerEvent$ItemCraftedEvent } */
-let $PlayerEvent$ItemCraftedEvent  = Java.loadClass("net.neoforged.neoforge.event.entity.player.PlayerEvent$ItemCraftedEvent")
 /** @type {typeof import("net.minecraft.world.entity.player.Player").$Player } */
 let $Player  = Java.loadClass("net.minecraft.world.entity.player.Player")
 /** @type {typeof import("dev.latvian.mods.kubejs.item.FoodBuilder").$FoodBuilder } */
@@ -127,7 +125,7 @@ if (Item.exists("kubejs:bearded_dragon_bowl")) {
 		const player = event.player
 		const level = event.level
 		const item_stack = event.item
-		if (!event.player || event.level.clientSide) {
+		if (!event.player || event.level.isClientSide()) {
 			return
 		}
 
@@ -136,6 +134,7 @@ if (Item.exists("kubejs:bearded_dragon_bowl")) {
 
 		// Usual server jank because playNotifySound doesn't want to work with the bubble_cobble sounds.
 		level.runCommandSilent(`execute as ${player.uuid} at ${player.uuid} run playsound kubejs:item.bearded_dragon_chirp player @a ~ ~ ~ 1.0 ${1.25 + 0.25 * Math.random()}`)
+		// player.playSound("kubejs:item.bearded_dragon_chirp", 1.0, 1.25 + 0.25 * Math.random())
 		player.addItemCooldown(item_stack.item, 10)
 		player.potionEffects.add("farmersdelight:comfort", 20, 1)
 	})
@@ -150,13 +149,13 @@ if (Item.exists("kubejs:bearded_dragon_bowl")) {
 		bearded_dragon_speak(event.entity, event.item.displayName, pick_random(BEARDED_GOODBYE_QUOTES))
 
 		const item_entity = event.itemEntity
-		event.entity.server.scheduleRepeatingInTicks(20, callback => {
+		event.entity.server.scheduleRepeatingInTicks(40, callback => {
 			if (item_entity.isRemoved()) {
 				callback.clear()
 				return
 			}
 			// Utils.server.tell(item_entity)
-			item_entity.server.runCommandSilent(`execute as ${item_entity.uuid} at ${item_entity.uuid} run playsound kubejs:item.bearded_dragon_chirp player @a ~ ~ ~ 0.1 ${1.25 + 0.25 * Math.random()}`)
+			item_entity.playSound("kubejs:item.bearded_dragon_chirp", 0.5, 1.25 + 0.25 * Math.random())
 			callback.timer = 40 + 40 * Math.random()
 		})
 	})
@@ -164,7 +163,7 @@ if (Item.exists("kubejs:bearded_dragon_bowl")) {
 
 function bearded_dragon_speak(to_player, display_name, quote) {
 	const name = display_name.getString().replace("[", "").replace("]", "")
-	to_player.tell(Text.empty().append(Text.yellow(name + " : ")).append(quote))
+	to_player.tell([Text.yellow(name + " : "), quote])
 }
 // #endregion
 
@@ -346,9 +345,12 @@ NetworkEvents.dataReceived("kubejs:dash", event => {
 // 	})
 // })
 
-NativeEvents.onEvent($PlayerEvent$ItemCraftedEvent, event => {
-	if (event.getCrafting().id == "minecraft:crafting_table") {
-		event.entity.addMotion(0, 5, 0)
-		event.entity.hurtMarked = true
-	}
-})
+///** @type {typeof import("net.neoforged.neoforge.event.entity.player.PlayerEvent$ItemCraftedEvent").$PlayerEvent$ItemCraftedEvent } */
+//let $PlayerEvent$ItemCraftedEvent  = Java.loadClass("net.neoforged.neoforge.event.entity.player.PlayerEvent$ItemCraftedEvent")
+// NativeEvents.onEvent($PlayerEvent$ItemCraftedEvent, event => {
+// 	if (event.getCrafting().id == "minecraft:crafting_table") {
+// 		event.entity.statusMessage = "What"
+// 		event.entity.addMotion(0, 5, 0)
+// 		event.entity.hurtMarked = true
+// 	}
+// })

@@ -1,0 +1,6 @@
+{
+  "keys": [
+    "create:redstone_requester"
+  ],
+  "soundEvent": "create:crafter_click"
+}

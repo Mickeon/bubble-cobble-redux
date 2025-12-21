@@ -1,9 +1,11 @@
 {
-  "__comment": "minecraft:cookingpot is actually Cobblemon's Campfire Pot",
+  "__comment": "minecraft:cooking_pot is actually Cobblemon's Campfire Pot",
   "keys": [
     "farmersdelight:cooking_pot",
-    "miners_delight:copper_pot",
+    "minersdelight:copper_pot",
     "minecraft:cooking_pot"
   ],
-  "soundEvent": "farmersdelight:item.skillet.attack.weak"
+  "soundEvent": "cobblemon:block.campfire_pot.retrieve",
+  "volume": 0.5,
+  "pitch": 0.75
 }

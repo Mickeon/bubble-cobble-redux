@@ -202,6 +202,9 @@ ServerEvents.recipes(event => {
 
 	// Use Canvas for more.
 	event.replaceInput({id: "create:crafting/appliances/clipboard"}, "minecraft:paper", "farmersdelight:canvas")
+	event.replaceInput({id: "solonion:lunchbag"}, "minecraft:paper", "farmersdelight:canvas")
+	event.replaceInput({id: "supplementaries:lunch_basket"}, "minecraft:bamboo", "farmersdelight:canvas")
+
 
 	// Double output for Train Tracks recipe.
 	event.forEachRecipe({id: "create:sequenced_assembly/track"}, recipe => {

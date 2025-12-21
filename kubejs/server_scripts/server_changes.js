@@ -117,6 +117,15 @@ ServerEvents.tags("block", event => {
 		/lootr:/,
 		"gravestone:gravestone"
 	)
+	event.add("bubble_cobble:handcrafted_containers",
+		"#handcrafted:cupboards",
+		"#handcrafted:drawers",
+		"#handcrafted:desks",
+		"#handcrafted:side_tables",
+		"#handcrafted:nightstands" ,
+		"#handcrafted:counters",
+		"#handcrafted:shelves",
+	)
 })
 
 ServerEvents.tick(event => {
@@ -154,9 +163,10 @@ ItemEvents.foodEaten(event => {
 	player.addItemCooldown(stack, MINECRAFT_EAT_TIME_TICKS - eat_time_ticks)
 })
 
-// Custom sound when opening HandCrafted shelves. TODO: Expand to include more containers.
+// Custom sound when opening HandCrafted shelves.
+// TODO: Expand to include more containers.
 PlayerEvents.chestOpened("minecraft:generic_9x3", event => {
-	if (event.block && event.block.hasTag("handcrafted:shelves")) {
+	if (event.block && event.block.hasTag("bubble_cobble:handcrafted_containers")) {
 		// event.player.playNotifySound("relics:ability_locked", "players", 1, 1)
 		event.player.playNotifySound("create:blaze_munch", "players", 0.25, 2.0)
 	}

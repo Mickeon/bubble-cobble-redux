@@ -1,0 +1,8 @@
+{
+  "keys": [
+    "herbalbrews:cauldron_gui_handler"
+  ],
+  "soundEvent": "minecraft:item.bottle.fill",
+  "volume": 0.5,
+  "pitch": 0.75
+}

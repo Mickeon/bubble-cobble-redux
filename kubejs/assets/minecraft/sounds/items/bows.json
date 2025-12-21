@@ -1,0 +1,9 @@
+{
+  "keys": [
+    "minecraft:bow",
+    "minecraft:crossbow"
+  ],
+  "pitch": 1.2,
+  "soundEvent": "minecraft:item.crossbow.loading_start",
+  "volume": 0.3
+}

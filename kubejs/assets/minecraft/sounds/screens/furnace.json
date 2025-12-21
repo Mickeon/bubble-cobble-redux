@@ -1,0 +1,9 @@
+{
+  "keys": [
+    "minecraft:blast_furnace",
+    "minecraft:furnace"
+  ],
+  "soundEvent": "cnc:block.fire.light",
+  "volume": 0.5,
+  "pitch": 1.25
+}

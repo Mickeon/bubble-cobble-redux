@@ -1,7 +1,8 @@
 {
   "keys": [
-	  "create:crafting_blueprint",
-	  "create:linked_controller"
+    "create:crafting_blueprint",
+    "create:linked_controller",
+    "sophisticatedstorage:decoration_table"
   ],
   "soundEvent": "create:controller_take"
 }

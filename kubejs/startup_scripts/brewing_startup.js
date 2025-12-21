@@ -35,7 +35,6 @@ StartupEvents.registry("fluid", event => {
 	event.create("sparkling_rose", "kubejs:thin").tint("yellow").noBucket().displayName("Sparkling Rosé")
 	event.create("berry_juice_soda", "kubejs:thin").tint("light_blue_dye").noBucket().displayName("Berry Juice Soda")
 	event.create("firebomb_whiskey", "kubejs:thin").tint("dark_red").noBucket().displayName("Firebomb Whiskey")
-
 })
 
 StartupEvents.registry("item", event => {
@@ -203,8 +202,6 @@ global.release_firebomb_whiskey = function(item_stack, level, entity, remaining_
  * @param {$LivingEntity} entity
  */
 global.finish_using_firebomb_whiskey = function(item_stack, level, entity) {
-	// entity.statusMessage = "OWch"
-	// console.log("WOCHH")
 	entity.playSound("supplementaries:block.jar.break")
 	entity.playSound("minecraft:entity.witch.drink")
 	entity.setRemainingFireTicks(100)
