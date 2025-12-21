@@ -163,8 +163,8 @@ ItemEvents.foodEaten(event => {
 	player.addItemCooldown(stack, MINECRAFT_EAT_TIME_TICKS - eat_time_ticks)
 })
 
-// Custom sound when opening HandCrafted shelves.
-// TODO: Expand to include more containers.
+// Custom sound when opening HandCrafted's containers.
+// TODO: Expand to include more generic containers?
 PlayerEvents.chestOpened("minecraft:generic_9x3", event => {
 	if (event.block && event.block.hasTag("bubble_cobble:handcrafted_containers")) {
 		// event.player.playNotifySound("relics:ability_locked", "players", 1, 1)
@@ -172,3 +172,82 @@ PlayerEvents.chestOpened("minecraft:generic_9x3", event => {
 	}
 })
 
+
+// Do not ever spawn Slimes or Bats naturally in Flat World.
+const NO_FLAT_WORLD_MOBS = ["minecraft:slime", "minecraft:bat"]
+NO_FLAT_WORLD_MOBS.forEach(entity_type => {
+	EntityEvents.checkSpawn(entity_type, event => {
+		if (event.server.worldData.isFlatWorld() && event.type != "SPAWN_EGG") {
+			event.cancel()
+		}
+	})
+})
+
+/** @type {Special.EntityType[]} */
+const NO_NIGHT_LIGHT_MOBS = [
+	// Basically all undead.
+	"cnc:wechuge",
+	"cnc:wendigo",
+	"minecraft:bogged",
+	"minecraft:drowned",
+	"minecraft:husk",
+	"minecraft:phantom",
+	"minecraft:skeleton",
+	"minecraft:skeleton_horse",
+	"minecraft:stray",
+	"minecraft:wither",
+	"minecraft:wither_skeleton",
+	"minecraft:zoglin",
+	"minecraft:zombie",
+	"minecraft:zombie_horse",
+	"minecraft:zombie_villager",
+	"minecraft:zombified_piglin",
+	"monsterplus:ancient_hero",
+	"monsterplus:ancient_hero_skull",
+	"monsterplus:crystal_zombie",
+	"monsterplus:demon_eye",
+	"monsterplus:glow_skeleton",
+	"monsterplus:opalescent_eye",
+	"monsterplus:spectral_skeleton",
+	"monsterplus:spectral_skull",
+	"monsterplus:swamp_zombie",
+	"monsterplus:overgrown_skeleton",
+	// Among others.
+	"minecraft:creeper",
+	"minecraft:spider",
+	"minecraft:witch",
+	"monsterplus:abyssologer",
+]
+NO_NIGHT_LIGHT_MOBS.forEach(entity_type => {
+	EntityEvents.checkSpawn(entity_type, event => {
+		if (event.block.getSkyLight() >= 1 && event.type == "NATURAL") {
+			// console.log(`Trying to spawn ${event.entity.type}, but can't under the moon light!`)
+			event.cancel()
+		}
+	})
+})
+
+// After the above changes, a lot of Endermen spawn on the surface. Rectify that.
+EntityEvents.checkSpawn("minecraft:enderman", event => {
+	if (event.block.getSkyLight() >= 1 && event.type == "NATURAL" && Utils.getRandom().nextFloat() > 0.05) {
+		// console.log(`Trying to spawn ${event.entity.type}, but chance said no!`)
+		event.cancel()
+	}
+})
+EntityEvents.checkSpawn("monsterplus:ender_eye", event => {
+	if (event.block.getSkyLight() >= 1 && event.type == "NATURAL" && Utils.getRandom().nextFloat() > 0.05) {
+		// console.log(`Trying to spawn ${event.entity.type}, but chance said no!`)
+		event.cancel()
+	}
+})
+
+
+
+// No baby zombies, unless Chicken Jockey?
+EntityEvents.checkSpawn("minecraft:zombie", event => {
+	/** @type {import("net.minecraft.world.entity.monster.Zombie").$Zombie$$Type} */
+	const zombie = event.entity
+	if (zombie.baby && zombie.controlledVehicle?.id != "minecraft:chicken" && event.type != "SPAWN_EGG") {
+		event.cancel()
+	}
+})

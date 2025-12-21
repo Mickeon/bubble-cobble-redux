@@ -4233,43 +4233,6 @@
             ]
         },
         {
-            "pakku_id": "Zd6HIIvKrmXqMfFS",
-            "type": "MOD",
-            "side": "SERVER",
-            "slug": {
-                "modrinth": "in-control"
-            },
-            "name": {
-                "modrinth": "In Control!"
-            },
-            "id": {
-                "modrinth": "KpICtuVx"
-            },
-            "files": [
-                {
-                    "type": "modrinth",
-                    "file_name": "incontrol-1.21-10.2.5.jar",
-                    "mc_versions": [
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "beta",
-                    "url": "https://cdn.modrinth.com/data/KpICtuVx/versions/85ma009f/incontrol-1.21-10.2.5.jar",
-                    "id": "85ma009f",
-                    "parent_id": "KpICtuVx",
-                    "hashes": {
-                        "sha512": "8daf68095cababc55519d13a90aeedaaa9a3a903ae9b61fb9a3b2ed20a80944d113f68a6d181ab7cdd17c84fe5ae268c7e5d60fff91b98965f68a297a27c0d42",
-                        "sha1": "414390a458859c1f1d17eabe3120e91ac9cb3464"
-                    },
-                    "required_dependencies": [],
-                    "size": 347260,
-                    "date_published": "2025-12-12T07:18:48.725259Z"
-                }
-            ]
-        },
-        {
             "pakku_id": "2ouJwZGh0y0A6vqD",
             "type": "MOD",
             "side": "BOTH",
