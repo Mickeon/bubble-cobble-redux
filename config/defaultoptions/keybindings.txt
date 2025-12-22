@@ -120,7 +120,7 @@ key_key.cobblemonraiddens.mouse:key.keyboard.left.alt:
 key_key.cobblemonraiddens.accept:key.keyboard.unknown:
 key_key.cobblemonraiddens.deny:key.keyboard.n:
 key_keybind.sophisticatedcore.item_highlight:key.keyboard.unknown:
-key_keybind.sophisticatedcore.sort:key.mouse.middle:
+key_keybind.sophisticatedcore.sort:key.keyboard.unknown:
 key_keybind.sophisticatedcore.deposit_item:key.keyboard.unknown:
 key_keybind.sophisticatedcore.restock_item:key.keyboard.unknown:
 key_gui.xaero_open_map:key.keyboard.m:

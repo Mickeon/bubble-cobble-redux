@@ -161,6 +161,8 @@ ServerEvents.tags("worldgen/biome", event => {
 	event.add("cobblemon:nether/is_forest", "#c:is_nether_forest") // For some reason the Cobblemon tag is empty normally.
 
 	event.add("c:is_floral", "biomesoplenty:lavender_field", "biomesoplenty:orchard", "biomesoplenty:lush_savanna")
+	event.add("c:is_spooky", "biomeswevegone:pale_bog")
+	event.add("c:is_dead", "biomeswevegone:pale_bog")
 
 	event.add("mss:has_structure/cherry_biomes", "biomesoplenty:snowblossom_grove")
 	event.add("mvs:has_structure/cherry_biomes", "biomesoplenty:snowblossom_grove")
@@ -208,12 +210,15 @@ ServerEvents.tags("worldgen/biome", event => {
 	event.add("supplementaries:has_basalt_ash", "biomesoplenty:volcanic_plains", "biomesoplenty:volcano")
 	event.add("snowyspirit:has_gingerbread_house", "#c:is_snowy") // TODO: Report this.
 
+	// This does not work. Specific biomes would have to be removed more thoroughly because of the c:is_swamp tag.
+	// event.remove("cnc:blackbear_spawning", "biomeswevegone:pale_bog") // I don't know if this even works.
+	// event.remove("cnc:goose_spawning", "biomeswevegone:pale_bog") // I don't know if this even works.
+
 	// There's got to be a bunch of biomes to fill here...
 	// event.add("nova_structures:collections/giant_trees", "")
 	// event.add("nova_structures:collections/meadows", "")
 	// event.add("nova_structures:collections/regular_forests", "")
 	// event.add("nova_structures:collections/rocky_mountains", "")
-	// event.add("nova_structures:collections/spooky_forests", "")
 
 	// 	event.add("idas:collections/idasblack_deserts", "biomesoplenty:volcanic_plains", "biomesoplenty:volcano")
 	// 	event.add("idas:collections/idasfloral", "#forge:floral")
