@@ -251,3 +251,15 @@ StartupEvents.modifyCreativeTab("minecraft:tools_and_utilities", event => {
 	event.add("sereneseasons:calendar")
 	event.add("haventrowel:trowel")
 })
+
+// Remove all non-max level Enchanted Books from searches, which is more than whatever mod is doing this already.
+StartupEvents.modifyCreativeTab("minecraft:ingredients", event => {
+	/** @import {$Enchantment} from "net.minecraft.world.item.enchantment.Enchantment" */
+	Registry.of("enchantment").getValueMap().forEach(/** @param {$Enchantment} enchantment */ (key, enchantment) => {
+		const max_level = enchantment.maxLevel
+		for (let level = 1; level < max_level; level += 1) {
+			event.remove(Item.of(`minecraft:enchanted_book[minecraft:stored_enchantments={"levels":{"${key}":${level}}}]`))
+			// console.log(`Removed book with ${key} (${level}) from recipe viewer`)
+		}
+	})
+})

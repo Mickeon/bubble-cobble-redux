@@ -229,20 +229,15 @@ NO_NIGHT_LIGHT_MOBS.forEach(entity_type => {
 })
 
 // After the above changes, a lot of Endermen spawn on the surface. Rectify that.
-EntityEvents.checkSpawn("minecraft:enderman", event => {
-	if (event.block.getSkyLight() >= 1 && event.type == "NATURAL" && Utils.getRandom().nextFloat() > 0.05) {
-		// console.log(`Trying to spawn ${event.entity.type}, but chance said no!`)
-		event.cancel()
-	}
+const FEWER_NIGHT_LIGHT_MOBS = ["minecraft:enderman", "monsterplus:ender_eye"]
+FEWER_NIGHT_LIGHT_MOBS.forEach(entity_type => {
+	EntityEvents.checkSpawn(entity_type, event => {
+		if (event.block.getSkyLight() >= 1 && event.type == "NATURAL" && Utils.getRandom().nextFloat() > 0.05) {
+			// console.log(`Trying to spawn ${event.entity.type}, but chance said no!`)
+			event.cancel()
+		}
+	})
 })
-EntityEvents.checkSpawn("monsterplus:ender_eye", event => {
-	if (event.block.getSkyLight() >= 1 && event.type == "NATURAL" && Utils.getRandom().nextFloat() > 0.05) {
-		// console.log(`Trying to spawn ${event.entity.type}, but chance said no!`)
-		event.cancel()
-	}
-})
-
-
 
 // No baby zombies, unless Chicken Jockey?
 EntityEvents.checkSpawn("minecraft:zombie", event => {

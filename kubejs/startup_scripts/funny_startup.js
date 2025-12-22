@@ -19,6 +19,10 @@ ItemEvents.modification(event => {
 		item.food = (new $FoodBuilder()).alwaysEdible().build()
 	})
 
+	event.modify(["biomesoplenty:cattail", "biomeswevegone:cattail_sprout", "biomeswevegone:fluorescent_cattail_sprout"], /** @param {$ItemModifications} item */ item => {
+		item.food = (new $FoodBuilder()).alwaysEdible().nutrition(1).build()
+	})
+
 	event.modify(["minecraft:potion", "minecraft:splash_potion", "minecraft:lingering_potion"], /** @param {ItemModifications} item */ item => {
 		item.maxStackSize = 12
 	})
@@ -169,6 +173,9 @@ StartupEvents.modifyCreativeTab("kubejs:tab", event => {
 	event.remove(Item.of("kubejs:bearded_dragon_bowl"))
 	event.add(Item.of("kubejs:bearded_dragon_bowl").withCustomName("Banana"))
 	event.add(Item.of("kubejs:bearded_dragon_bowl").withCustomName("Baby Dandy"))
+	event.add(Item.of("biomesoplenty:cattail"))
+	event.add(Item.of("biomeswevegone:cattail_sprout"))
+	event.add(Item.of("biomeswevegone:fluorescent_cattail_sprout"))
 	event.remove("kubejs:doublemint_gum") // Sssh.
 
 	event.add(Item.of("constructionstick:netherite_stick", 1, {

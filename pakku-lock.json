@@ -7624,6 +7624,43 @@
             ]
         },
         {
+            "pakku_id": "dOumASRU4JQaKoNu",
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "modrinth": "sneaky-link"
+            },
+            "name": {
+                "modrinth": "Sneaky Link"
+            },
+            "id": {
+                "modrinth": "tah8XIYc"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "sneaky_link-3.0.0.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/tah8XIYc/versions/TgobBxWg/sneaky_link-3.0.0.jar",
+                    "id": "TgobBxWg",
+                    "parent_id": "tah8XIYc",
+                    "hashes": {
+                        "sha512": "77bc2f216f1ac30f8c0849d76361bd1bd6a1b77531e779fe002ccb689a61afce26d5f9499dc816c8fa3b7a3e40737c18772379393a13a118ce877dfe56b05b02",
+                        "sha1": "088f7d489f6b43ca6585c50997306368538a6f20"
+                    },
+                    "required_dependencies": [],
+                    "size": 1905066,
+                    "date_published": "2025-04-26T10:55:21.149132Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "1xua6IL1V6dRfIS0",
             "type": "MOD",
             "side": "BOTH",
@@ -7945,6 +7982,44 @@
                     ],
                     "size": 8741,
                     "date_published": "2025-05-31T13:59:00.128307Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "p58O0w71v8npYlep",
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "modrinth": "soulbound-enchantment"
+            },
+            "name": {
+                "modrinth": "Soulbound Enchantment"
+            },
+            "id": {
+                "modrinth": "MmUmcwom"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "soulbound-neoforge-1.0.1+1.21.1.jar",
+                    "mc_versions": [
+                        "1.21",
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/MmUmcwom/versions/RkfLMEih/soulbound-neoforge-1.0.1+1.21.1.jar",
+                    "id": "RkfLMEih",
+                    "parent_id": "MmUmcwom",
+                    "hashes": {
+                        "sha512": "329292855e3aa454b23612d16f3920b54d1ce9d8a922a0a97186ba5a0df7d8a834e2c84d90022b0e05b7ccd7ab6627eb158457abad71f4b95648b20a4d60e7bb",
+                        "sha1": "258de64ab319861313994eb6b7a00757aab497fc"
+                    },
+                    "required_dependencies": [],
+                    "size": 17464,
+                    "date_published": "2024-12-06T15:30:23.502550Z"
                 }
             ]
         },

@@ -60,6 +60,23 @@ ItemEvents.foodEaten("kubejs:banana_mayo_sandwich", event => {
 		entity.potionEffects.add("minecraft:nausea", 200, 1)
 	}
 })
+ItemEvents.foodEaten(["biomesoplenty:cattail", "biomeswevegone:cattail_sprout", "biomeswevegone:fluorescent_cattail_sprout"], event => {
+	if (event.level.isClientSide()) {
+		return
+	}
+	const entity = event.entity
+	const particle_point = entity.eyePosition.add(entity.forward.scale(0.5))
+	entity.level.spawnParticles("minecraft:dust_color_transition{from_color:[1.0, 1.0, 1.0], to_color:[1.0, 0.9, 0.5], scale: 4.0}", false,
+		particle_point.x, particle_point.y, particle_point.z,
+		0.75, 0.5, 0.75, 50, 0.25
+	)
+	entity.attack(new DamageSource("biomeswevegone:cattail_explosion", particle_point), 1.0)
+	entity.level.runCommandSilent(`execute as ${entity.uuid} at ${entity.uuid} run playsound minecraft:entity.llama.spit player @a ~ ~ ~ 1.0`)
+
+	if (event.player && event.item.id == "biomeswevegone:fluorescent_cattail_sprout") {
+		event.player.addEffect(MobEffectUtil.of("minecraft:glowing", 20))
+	}
+})
 
 // Funny Sopping Wet Thing thing.
 ItemEvents.entityInteracted("create:wrench",  event => {

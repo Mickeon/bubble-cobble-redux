@@ -1,0 +1,20 @@
+{
+  "parent": "farmersdelight:main/root",
+  "display": {
+    "icon": {
+      "id": "biomeswevegone:cattail_sprout"
+    },
+    "title": "Plant Corndog Delight",
+    "description": "Me think water twinkie nice!"
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": ["biomesoplenty:cattail", "biomeswevegone:cattail_sprout", "biomeswevegone:fluorescent_cattail_sprout"]
+        }
+      }
+    }
+  }
+}

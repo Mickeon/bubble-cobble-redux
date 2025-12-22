@@ -78,7 +78,7 @@ LootJS.lootTables(event => {
 		.replaceItem("farmersdelight:rope", "supplementaries:rope")
 
 	// Furniture time.
-	if (Item.exists("handcrafted:acacia_shelf")) {
+	if (Platform.isLoaded("handcrafted")) {
 		let furniture_pool = event.create("kubejs:furniture", "chest").createPool()
 
 		furniture_pool.addEntry(

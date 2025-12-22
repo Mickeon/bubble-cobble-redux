@@ -1,6 +1,9 @@
 {
   "foodItems": {
-    "entries": [],
+    "entries": [
+      "{id:\"item\",item:\"create:polished_rose_quartz\"}",
+      "{id:\"item\",item:\"create:rose_quartz\"}"
+    ],
     "isWhitelist": false
   },
   "trackCount": 32,
