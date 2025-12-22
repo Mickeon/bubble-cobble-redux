@@ -5,7 +5,7 @@
       "id": "createdeco:red_shipping_container"
     },
     "title": "I was looking for my sister",
-    "description": "I ordered some Furniture from Thailand."
+    "description": "I ordered some furniture from Thailand."
   },
   "criteria": {
     "barrel_white": { "trigger": "minecraft:recipe_crafted", "conditions": { "recipe_id": "minecraft:white_shipping_container" }},

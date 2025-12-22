@@ -6,6 +6,6 @@
     "minecraft:cooking_pot"
   ],
   "soundEvent": "cobblemon:block.campfire_pot.retrieve",
-  "volume": 0.5,
+  "volume": 0.75,
   "pitch": 0.75
 }

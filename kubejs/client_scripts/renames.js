@@ -23,5 +23,20 @@ ClientEvents.lang("en_us", event => {
 	event.add("advancement.create.hand_crank_000", "Cranking it")
 	event.add("item.minecraft.rabbit_stew", "Mimiga Stew")
 	event.add("item.minersdelight.rabbit_stew_cup", "Mimiga Stew Cup")
-})
 
+	// Both Biomes o0 Plenty and Biomes We've Gone have Redwood wood.
+	Ingredient.of(/^biomesoplenty:.*redwood/).itemIds.forEach(item_id => {
+		const item_name = Item.of(item_id).hoverName.getString().replace("Redwood", "Redderwood")
+		event.renameItem(item_id, item_name)
+	})
+	// Both Biomes o' Plenty and Biomes We've Gone have Jacaranda wood.
+	Ingredient.of(/^biomesoplenty:.*jacaranda/).itemIds.forEach(item_id => {
+		const item_name = Item.of(item_id).hoverName.getString().replace("Jacaranda", "Pale Jacaranda")
+		if (item_name.includes("Pale Pale")) {
+			return // Horrid hack to avoid renaming twice when reloading.
+		}
+		event.renameItem(item_id, item_name)
+	})
+	// Both Biomes o' Plenty and Biomes We've Gone have Cattail.
+	event.add("block.biomesoplenty.cattail", "Stupidly Ugly Cattail")
+})

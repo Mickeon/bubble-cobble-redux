@@ -9,34 +9,22 @@ const MINECRAFT_WOOD_TYPES = ["oak", "birch", "spruce", "jungle", "dark_oak", "a
 ServerEvents.tags("item", event => {
 	event.add("sophisticatedbackpacks:upgrades", /^sophisticatedbackpacks:.*_(upgrade|downgrade)/)
 
-	event.add("kubejs:diamond_tools",
+	event.add("bubble_cobble:diamond_tools",
 		"minecraft:diamond_sword", "minecraft:diamond_shovel", "minecraft:diamond_pickaxe",
 		"minecraft:diamond_axe", "minecraft:diamond_hoe", "farmersdelight:diamond_knife",
+		"constructionstick:diamond_stick"
 	)
-	event.add("kubejs:diamond_armor",
+	event.add("bubble_cobble:diamond_armor",
 		"minecraft:diamond_helmet", "minecraft:diamond_chestplate",
 		"minecraft:diamond_leggings", "minecraft:diamond_boots",
 	)
+	event.add("bubble_cobble:cattails", "biomesoplenty:cattail", "biomeswevegone:cattail_sprout")
 })
 
 ServerEvents.recipes(event => {
 	// Lower overall cost of Gearbox.
 	event.remove({ output: "create:gearbox" })
 	event.shapeless(Item.of("create:gearbox"), ["create:andesite_casing", "2x create:large_cogwheel"])
-
-	// Turn TRs into blank TRs with Soap.
-	// event.custom({
-	// 	type: "minecraft:crafting_shapeless",
-	// 	ingredients: [
-	// 		{ item: "wherearemytms:blank_hm" },
-	// 		{ item: "supplementaries:soap" }
-	// 	],
-	// 	result: { item: "wherearemytms:blank_hm", count: 1 },
-	// 	conditions: [
-	// 		{ type: "supplementaries:flag", flag: "soap" },
-	// 		{ type: "c:mod_loaded", modid: "wherearemytms" }
-	// 	]
-	// })
 
 	// Recycle diamond tools & armor.
 	event.recipes.create.crushing([
@@ -45,7 +33,7 @@ ServerEvents.recipes(event => {
 			CreateItem.of("1x " + "minecraft:diamond", 0.1),
 			CreateItem.of("1x " + "minecraft:stick", 0.1),
 		],
-		Ingredient.of("#kubejs:diamond_tools"),
+		Ingredient.of("#bubble_cobble:diamond_tools"),
 		10 * 20
 	)
 	event.recipes.create.crushing([
@@ -53,7 +41,7 @@ ServerEvents.recipes(event => {
 			CreateItem.of("2x " +"create:experience_nugget", 0.75),
 			CreateItem.of("1x " + "minecraft:diamond", 0.1),
 		],
-		Ingredient.of("#kubejs:diamond_armor"),
+		Ingredient.of("#bubble_cobble:diamond_armor"),
 		15 * 20
 	)
 
@@ -252,5 +240,16 @@ ServerEvents.recipes(event => {
 		json.results[0].count = 2
 		event.custom(json).id(recipe.getId())
 	})
+
+	// Merge Biomes o' Plenty and Biomes We've Gone's Cattail.
+	event.replaceInput({input: "biomesoplenty:cattail"}, "biomesoplenty:cattail", "#bubble_cobble:cattails")
+	event.replaceInput({input: "biomeswevegone:cattail_sprout"}, "biomeswevegone:cattail_sprout", "#bubble_cobble:cattails")
+
+	// Remove Mega Showdown's recipes for these two. These recipes are too relatively cheap and boring.
+	event.remove({id: "mega_showdown:ability_patch"})
+	event.remove({id: "mega_showdown:ability_capsule"})
+
+	// Make held item recipes more integrated.
+	event.replaceInput({id: "cobblemon:binding_band"}, "minecraft:string", "#c:ropes")
 })
 

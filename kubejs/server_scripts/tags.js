@@ -185,24 +185,41 @@ ServerEvents.tags("worldgen/biome", event => {
 	event.add("mvs:has_structure/swampy_biomes", "#c:is_swamp") // MMS is unaffected. Although #minecraft:is_swamp is already included.
 	event.add("mvs:has_structure/taiga_biomes", "#c:is_taiga") // MMS is unaffected. Although #minecraft:is_taiga is already included.
 
-// 	event.add("yungsbridges:collections/taiga", "#minecraft:is_taiga")
 	event.add("yungsextras:has_structure/desert_decorations", "#c:is_desert")
 	event.add("yungsextras:has_structure/swamp_structures", "#c:is_swamp")
 	event.add("yungsextras:has_structure/vanilla_desert_well", "#c:is_desert")
 
-// 	event.add("bettermineshafts:has_structure/better_mineshaft_dripstone", "biomesoplenty:fungal_jungle")
-// 	// event.add("bettermineshafts:has_structure/better_mineshaft_ice", "#cobblemon:is_freezing") // Odd dependency.
-// 	event.add("betterjungletemples:has_structure/better_jungle_temple", "#forge:jungle/tree")
-// 	event.add("idas:collections/idasblack_deserts", "biomesoplenty:volcanic_plains", "biomesoplenty:volcano")
-// 	event.add("idas:collections/idasfloral", "#forge:floral")
-// 	event.add("idas:collections/idasflower_forests", "#forge:floral", "biomesoplenty:lavender_forest", "biomesoplenty:mystic_grove")
-// 	event.add("idas:collections/idasplains", "#forge:is_plains")
-// 	event.add("idas:collections/snowy_plains", "#kubejs:is_snowy_forest")
-// 	event.add("repurposed_structures:collections/floral", "#forge:floral")
-// 	event.add("repurposed_structures:collections/plains", "#forge:is_plains")
-// 	event.add("repurposed_structures:collections/snowy_plains", "#kubejs:is_snowy_forest")
-// 	event.add("repurposed_structures:collections/taigas", "#minecraft:is_taiga")
+	event.add("repurposed_structures:collections/caves", "#c:is_cave") // TODO: Report this. Possible typo. The tag contains #c:is_caves on its own.
+	event.add("repurposed_structures:collections/taigas", "#biomeswevegone:taiga") // Maybe not using minecraft:is_taiga is intentional, as it's too encompassing?
+
+	event.add("nova_structures:collections/cherry_forests", "biomesoplenty:snowblossom_grove")
+	event.add("nova_structures:collections/caves", "#c:is_cave") // TODO: Report this?
+	event.add("nova_structures:collections/floral", "#c:is_floral") // TODO: Report this?
+	event.add("nova_structures:collections/snowy_structures", "biomesoplenty:snowblossom_grove")
+	event.add("nova_structures:collections/taiga", "#minecraft:is_taiga")
+	event.add("nova_structures:collections/snowy_plains", "#c:is_snowy_plains") // TODO: Report this? Accidentally includes non-existent "c:snowy_plains". Doesn't change anything for us.
+
+	// TODO: Fill Awesome Dungeon's tags. They're really brief and don't encompass anything.
+	// event.add("awesomedungeon:has_structure/abandoned_oak_palace_biomes", "")
+	// event.add("variantsandventures:collections/deserts")
+	// event.add("undergroundworlds:has_structure/chillager_outpost")
+
+
 	event.add("supplementaries:has_basalt_ash", "biomesoplenty:volcanic_plains", "biomesoplenty:volcano")
+	event.add("snowyspirit:has_gingerbread_house", "#c:is_snowy") // TODO: Report this.
+
+	// There's got to be a bunch of biomes to fill here...
+	// event.add("nova_structures:collections/giant_trees", "")
+	// event.add("nova_structures:collections/meadows", "")
+	// event.add("nova_structures:collections/regular_forests", "")
+	// event.add("nova_structures:collections/rocky_mountains", "")
+	// event.add("nova_structures:collections/spooky_forests", "")
+
+	// 	event.add("idas:collections/idasblack_deserts", "biomesoplenty:volcanic_plains", "biomesoplenty:volcano")
+	// 	event.add("idas:collections/idasfloral", "#forge:floral")
+	// 	event.add("idas:collections/idasflower_forests", "#forge:floral", "biomesoplenty:lavender_forest", "biomesoplenty:mystic_grove")
+	// 	event.add("idas:collections/idasplains", "#forge:is_plains")
+	// 	event.add("idas:collections/snowy_plains", "#kubejs:is_snowy_forest")
 })
 
 ServerEvents.tags("worldgen/structure", event => {

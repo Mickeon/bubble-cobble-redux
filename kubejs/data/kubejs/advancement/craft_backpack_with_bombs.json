@@ -1,0 +1,33 @@
+{
+  "parent": "minecraft:adventure/root",
+  "display": {
+    "icon": {
+      "id": "supplementaries:bomb"
+    },
+    "title": "Poor Eyesight",
+    "description": "Craft a Copper Backpack with 4 Bombs",
+    "frame": "goal"
+  },
+  "criteria": {
+    "craft_with_bombs": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipe_id": "sophisticatedbackpacks:copper_backpack",
+        "ingredients": [
+          {
+            "items": "supplementaries:bomb"
+          },
+          {
+            "items": "supplementaries:bomb"
+          },
+          {
+            "items": "supplementaries:bomb"
+          },
+          {
+            "items": "supplementaries:bomb"
+          }
+        ]
+      }
+    }
+  }
+}
