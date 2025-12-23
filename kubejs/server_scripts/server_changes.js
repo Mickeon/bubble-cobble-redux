@@ -20,7 +20,10 @@ EntityEvents.spawned("minecraft:player", event => {
 // Creepers explode without destroying blocks. Sometimes they explode in confetti, too!
 LevelEvents.beforeExplosion(event => {
 	const { exploder } = event
-	if ((exploder && exploder.type != "minecraft:creeper" && exploder.type != "undergroundworlds:icy_creeper") || exploder.tags.contains("kubejs.exploding_safely")) {
+	if (!exploder) {
+		return
+	}
+	if ((exploder.type != "minecraft:creeper" && exploder.type != "undergroundworlds:icy_creeper") || exploder.tags.contains("kubejs.exploding_safely")) {
 		return
 	}
 	exploder.addTag("kubejs.exploding_safely")
@@ -52,7 +55,12 @@ LevelEvents.afterExplosion(event => {
 	if (exploder && exploder.type != "minecraft:creeper" && exploder.type != "undergroundworlds:icy_creeper") {
 		return
 	}
-	event.getAffectedEntities().filter(["minecraft:creeper", "undergroundworlds:icy_creeper"]).forEach(entity => entity.mergeNbt({Fuse: 10, ignited: true}))
+	event.getAffectedEntities().forEach(entity => {
+		if (exploder.type != "minecraft:creeper" && exploder.type != "undergroundworlds:icy_creeper") {
+			return
+		}
+		entity.mergeNbt({Fuse: 10, ignited: true})
+	})
 })
 
 // PlayerEvents.chat(event => {

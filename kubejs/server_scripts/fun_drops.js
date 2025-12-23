@@ -17,7 +17,7 @@ EntityEvents.drops("minecraft:player", event => {
 			add_drop(player, Item.of("create:cardboard"), 0.25)
 			add_drop(player, Item.of("create:cardboard_block"), 0.2)
 		} break;
-		case "bluestar7": {
+		case "BluStar7": {
 			add_drop(player, Item.of("minecraft:blue_dye"), 0.75)
 			// add_drop(player, Item.of("fairylights:star_light").withNBT({color: 3949738}), 0.5)
 		} break;
@@ -51,14 +51,14 @@ EntityEvents.drops("minecraft:player", event => {
 			add_drop(player, Item.of("minecraft:pink_dye"), 0.75)
 			add_drop(player, Item.of("minecraft:amethyst_shard"), 0.75)
 		} break;
-		case "Giuly_Clockwork": {
+		case "Giuly_Clockwork": { // Name outdated.
 			add_drop(player, Item.of("minecraft:blue_dye"), 0.75)
 			// add_drop(player, Item.of("quark:blue_shard", 3), 0.5)
 			add_drop(player, Item.of("minecraft:soul_torch"), 0.25)
 			add_drop(player, Item.of("minecraft:blue_candle"), 0.25)
 			add_drop(player, Item.of("supplementaries:candle_holder_blue"), 0.1)
 		} break;
-		case "Labbyrinthia": {
+		case "LabbyRosenfeld": {
 			add_drop(player, Item.of("farmersdelight:milk_bottle"), 0.75)
 			add_drop(player, Item.of("create_deepfried:yuca_fries"), 0.5)
 			add_drop(player, Item.of("biomesoplenty:blood_bucket"), 0.1)
@@ -86,7 +86,7 @@ EntityEvents.drops("minecraft:player", event => {
 			add_drop(player, Item.of("minecraft:black_dye"), 0.25)
 			add_drop(player, Item.of("minecraft:black_wool"), 0.25)
 		} break;
-		case "Maxpayne2": {
+		case "Maxpayne2": { // Name outdated.
 			add_drop(player, Item.of("minecraft:bread"), 0.75)
 			add_drop(player, Item.of("mynethersdelight:boiled_egg"), 0.5)
 		} break;

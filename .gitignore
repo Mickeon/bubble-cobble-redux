@@ -36,7 +36,8 @@
 /command_history.txt
 /emi.json
 /options.txt
-/servers.dat
+/servers.dat*
+/config/one-click-join
 
 # Cache.
 /cache

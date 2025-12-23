@@ -4,7 +4,7 @@
 /** @type {typeof import("dev.tazer.clutternomore.common.shape_map.ShapeMap").$ShapeMap } */
 let $ShapeMap = Java.loadClass("dev.tazer.clutternomore.common.shape_map.ShapeMap")
 /** @type {typeof import("net.minecraft.client.KeyMapping").$KeyMapping } */
-let $KeyMapping  = Java.loadClass("net.minecraft.client.KeyMapping")
+let $KeyMapping  = Java.tryLoadClass("net.minecraft.client.KeyMapping") // Does not exist on dedicated servers.
 // https://discord.com/channels/303440391124942858/1421136321824424059/1421862264654401608
 /** @type {typeof import("net.neoforged.neoforge.client.event.RegisterGuiLayersEvent").$RegisterGuiLayersEvent } */
 let $RegisterGuiLayersEvent  = Java.loadClass("net.neoforged.neoforge.client.event.RegisterGuiLayersEvent")

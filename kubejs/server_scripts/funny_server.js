@@ -205,7 +205,7 @@ ServerEvents.basicPublicCommand("suebegone", event => {
 	const bounds = AABB.CUBE.move(invoker.position()).inflate(5)
 	const nearby_entities = event.level.getEntitiesWithin(bounds)
 	nearby_entities.forEach(player => {
-		if (!(player instanceof $Player || player.username == "Mickeon")) { // SueTheMimiga
+		if (!(player instanceof $Player || player.username == "SueTheMimiga")) { // SueTheMimiga
 			return
 		}
 

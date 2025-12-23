@@ -28,6 +28,7 @@
         "!config/particle_core_config.toml",
         "!config/particlerain.json",
         "!config/sidekick.ini",
+        "!config/one-click-join",
 
         "!config/ali",
         "!config/moveslikemafuyu_config.toml",
@@ -57,6 +58,23 @@
         },
         "nbtedit": {
             "export": false
+        },
+
+        "creativecore": {
+            "side": "BOTH"
+        },
+        "geckolib": {
+            "side": "BOTH"
+        },
+
+        "preloading_tricks": {
+            "side": "CLIENT"
+        },
+        "mod_sets": {
+            "side": "CLIENT"
+        },
+        "playernamestyler": {
+            "side": "CLIENT"
         }
     }
 }
