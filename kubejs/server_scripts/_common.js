@@ -24,5 +24,5 @@ function pick_random(array) {
 }
 
 const DASH_STARTERS = [
-	"AceNil_", "CantieLabs", "Fableworks", "Labbyrinthia", "pepperponyo", "WaiGee", "Mickeon"
+	"AceNil_", "CantieLabs", "Fableworks", "LabbyRosenfeld", "pepperponyo", "WaiGee", "Mickeon"
 ]

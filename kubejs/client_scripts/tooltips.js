@@ -14,8 +14,68 @@ ItemEvents.modifyTooltips(event => {
 	event.add(["cobblemon:ice_stone"], Text.of("Emanates a blue mascot cat scent...").color(MASCOT_COLOR))
 
 	// Handcrafted Quality-of-Life.
-	event.add(["#handcrafted:cushions"], PLACEABLE_TOOLTIP)
-	event.add(["#handcrafted:counters", "#handcrafted:counters", "#handcrafted:cupboards", "#handcrafted:drawers", "#handcrafted:shelves", "#handcrafted:trims"], HAMMER_TOOLTIP)
+	// Remove their SHIFT info in favour of ours.
+	const handcrafted_items_with_shift_info = [
+		"#handcrafted:cushions",
+		"#handcrafted:sheets",
+		"#handcrafted:benches",
+		"#handcrafted:couches",
+		"#handcrafted:chairs",
+		"#handcrafted:tables",
+		"#handcrafted:side_tables",
+		"#handcrafted:desks",
+		"#handcrafted:nightstands",
+		"#handcrafted:tables",
+		"#handcrafted:fancy_beds",
+		"#handcrafted:counters",
+		"#handcrafted:cupboards",
+		"#handcrafted:drawers",
+		"#handcrafted:shelves",
+		"#handcrafted:trims"
+	]
+	event.modify(handcrafted_items_with_shift_info, text => {
+		text.removeText(Text.translate("tooltip.handcrafted.shift_description"))
+	})
+	event.modify(handcrafted_items_with_shift_info, {shift: true}, text => {
+		// They probably run this through a text splitter, so removing by looking up
+		// the translation Text component does not actually work. Cool jank.
+		/** @type {String[]} */
+		// const whole_translated_strings = [
+		// 	Text.translate("tooltip.handcrafted.bed_pillow").string,
+		// 	Text.translate("tooltip.handcrafted.bed_sheet").string,
+		// 	Text.translate("tooltip.handcrafted.counter").string,
+		// 	Text.translate("tooltip.handcrafted.cushion").string,
+		// 	Text.translate("tooltip.handcrafted.hammer_use_look").string,
+		// 	Text.translate("tooltip.handcrafted.hammer_use_look_shift").string,
+		// 	Text.translate("tooltip.handcrafted.hammer_use_shape").string,
+		// 	Text.translate("tooltip.handcrafted.place_on_furniture").string,
+		// 	Text.translate("tooltip.handcrafted.sheet").string,
+		// ]
+		// // FIXME: This doesn't always work
+		// for (let whole_string of whole_translated_strings) {
+		// 	let word_wrapped_string = whole_string.match(/(.{1,40}(\s|$))\s*/g)
+		// 	for (let string of word_wrapped_string) {
+		// 		console.log(string.trim())
+		// 		text.removeText(string.trim())
+		// 	}
+		// }
+
+		// Quite horrid hack to be honest.
+		text.removeText("Right-click with a cushion to change the")
+		text.removeText("Right-click with a sheet to change the")
+		text.removeText("Right-click with a hammer to change the")
+		text.removeText("Right-click with wood or stone to")
+		text.removeText("Right-click with wood or stone to")
+		text.removeText("Shift-right-click with a hammer to")
+		text.removeText("change the block's look.")
+		text.removeText("change the counter surface.")
+		text.removeText("block's look.")
+		text.removeText("block's shape.")
+		text.removeText("bed's pillow color.")
+		text.removeText("bedsheets.")
+	})
+	event.add(["#handcrafted:cushions", ], PLACEABLE_TOOLTIP)
+	event.add(["#handcrafted:counters", "#handcrafted:cupboards", "#handcrafted:drawers", "#handcrafted:shelves", "#handcrafted:trims"], HAMMER_TOOLTIP)
 	add_shift_info(event, "#handcrafted:sheets", ["§9Can be put on:", "  §9- §bTables", "  §9- §bSide Tables", "  §9- §bDesks", "  §9- §bNightstands", "  §9- §bFancy Beds"])
 	add_shift_info(event, "#handcrafted:cushions", ["§9Can be put on:", "  §9- §bCouches", "  §9- §bBenches", "  §9- §bChairs", "  §9- §bFancy Beds"])
 	add_shift_info(event, "#handcrafted:counters", [

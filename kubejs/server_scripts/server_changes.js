@@ -128,6 +128,11 @@ ServerEvents.tick(event => {
 			return
 		}
 
+		// CarryOn really does not like it when we check the `block` property without carrying a block.
+		// So we check it like this.
+		if (player.carryOnData.nbt.getString("type") != "BLOCK") {
+			return
+		}
 		if (player.carryOnData.block.hasTag("bubble_cobble:no_fast_travel_when_carrying")) {
 			player.addEffect(MobEffectUtil.of("via_romana:travellers_fatigue", 20, 0, true, true))
 			player.addEffect(MobEffectUtil.of("supplementaries:overencumbered", 20, 5, true, true))

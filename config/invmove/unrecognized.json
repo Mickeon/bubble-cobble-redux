@@ -108,7 +108,8 @@
     "com.simibubi.create.content.logistics.filter.FilterScreen": true,
     "com.simibubi.create.content.redstone.link.controller.LinkedControllerScreen": true,
     "com.simibubi.create.content.logistics.filter.AttributeFilterScreen": true,
-    "com.simibubi.create.content.logistics.redstoneRequester.RedstoneRequesterScreen": true
+    "com.simibubi.create.content.logistics.redstoneRequester.RedstoneRequesterScreen": true,
+    "net.minecraft.client.gui.screens.ConfirmLinkScreen": true
   },
   "hideBackground": {
     "dev.emi.emi.screen.RecipeScreen": false,

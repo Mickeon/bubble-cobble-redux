@@ -1,17 +1,24 @@
 {
 	"__comment1": "This file is not actually used. It's here for demonstration.",
-	"__comment2": "For any text field, it's possible to utilize Minecraft's own text components.",
-	"__comment3": "See this website to make them easily: https://minecraft.tools/en/json_text.php.",
+	"__comment2": "Any line beginning with two underscores ('__') can be removed safely.",
+	"__comment3": "For any text field, it's possible to utilize Minecraft's own text components.",
+	"__comment4": "See the following websites to make them easily.",
 
-	"__comment4": "If using the website, when you're done, click on 'Generate JSON Text',",
-	"__comment5": "then copy the result from 'JSON SYNTAX FOR MINECRAFT JAVA EDITION (1.16+)'",
-	"__comment6": "and paste it, as single element, inside 'tips'.",
+	"__comment11": "If using https://text.datapackhub.net/, look at the bottom-left.",
+	"__comment12": "Click on '1.21.9+' and select 'pre-1.21.5'. Ignore the warning, click on 'Change version'.",
+	"__comment13": "When you're done, click on the 'two squares' icon on the bottom-left to copy the result.",
+	"__comment14": "Then, paste the result as a single element inside 'tips'",
 
-	"__title_comment1": "Text component present above every tooltip. We can use this as a signature",
+	"__comment21": "If using https://minecraft.tools/en/json_text.php, look at the bottom.",
+	"__comment22": "When you're done, click on 'Generate JSON Text' and copy the result",
+	"__comment23": "from 'JSON SYNTAX FOR MINECRAFT JAVA EDITION (1.16+)'",
+	"__comment24": "Then, paste the result as a single element inside 'tips'",
+
+	"__title_comment1": "Text component present above every tooltip. We can use this as a signature.",
 	"__title_comment2": "If unsure, just change the 'text' and 'color' to your liking.",
 	"title": {"text":"My Cool Tip", "bold": true, "underlined": true, "color": "#F3953C"},
 
-	"__tips_comment1": "A list of text components, each representing a single tip that will be displayed",
+	"__tips_comment1": "A list of text components, each representing a single tip that will be displayed.",
 	"__tips_comment3": "IMPORTANT: the JSON format needs a comma after each element EXCEPT THE LAST.",
 	"__tips_comment4": "Because of how easy it is to miss commas (without the right text editor),",
 	"__tips_comment5": "I would suggest adding commas right between lines, as follows:",
@@ -23,12 +30,11 @@
 		{"text": "This text component will be shown in italics", "italic": true}
 		,
 		[
-			"",
-			{"text":"This is a complex text component with mixed "},
-			{"text":"bold","bold":true},
-			{"text":" and "},
-			{"text":"red","color":"red"},
-			{"text":"."}
+			"This is a complex text component with mixed ",
+			{"bold": true, "text": "bold"},
+			" and ",
+			{"color": "red", "text": "red"},
+			"."
 		]
 	]
 }

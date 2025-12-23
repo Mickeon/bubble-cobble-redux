@@ -2,7 +2,8 @@
   "foodItems": {
     "entries": [
       "{id:\"item\",item:\"create:polished_rose_quartz\"}",
-      "{id:\"item\",item:\"create:rose_quartz\"}"
+      "{id:\"item\",item:\"create:rose_quartz\"}",
+      "{id:\"itemtag\",tag:\"origins:ignore_diet\"}"
     ],
     "isWhitelist": false
   },
