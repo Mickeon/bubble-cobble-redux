@@ -86,7 +86,7 @@ ItemEvents.entityInteracted("create:wrench",  event => {
 	if (target.type != "minecraft:player" || target.username != "Mickeon" || !player.shiftKeyDown) {
 		return
 	}
-	player.addItemCooldown(event.item.getItem(), 120 * 20)
+	player.addItemCooldown(event.item.getItem(), 120 * SEC)
 	player.give("kubejs:blue_mascot_cat")
 	const spawn_position = player.server.getOverworld().sharedSpawnPos
 	player.teleportTo("minecraft:overworld", spawn_position.x, spawn_position.y, spawn_position.y, player.yaw, player.pitch)

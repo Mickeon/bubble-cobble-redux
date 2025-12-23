@@ -3,8 +3,7 @@
 
 // The End check.
 EntityEvents.spawned("minecraft:player", event => {
-	const player = event.player
-	const server = player.server
+	const { player, server } = event
 	if (player.level.dimension == "minecraft:the_end") {
 		server.scheduleRepeatingInTicks(10, callback => {
 			if (player.isRemoved() || player.level.dimension != "minecraft:the_end") {
@@ -103,6 +102,7 @@ ServerEvents.tags("block", event => {
 		/lootr:/,
 		"gravestone:gravestone"
 	)
+	// This is for later, container sounds.
 	event.add("bubble_cobble:handcrafted_containers",
 		"#handcrafted:cupboards",
 		"#handcrafted:drawers",

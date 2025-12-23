@@ -1,7 +1,7 @@
 
 
 ServerEvents.recipes(event => {
-	// Recipe conflict between Supplementaries's Item Shelf and Handcrafted's Wood Plate
+	// Recipe conflict between Supplementaries's Item Shelf and Handcrafted's Wood Plate.
 	event.remove({ id: "handcrafted:wood_plate"})
 	event.shaped(
 		Item.of("handcrafted:wood_plate"), [
@@ -20,7 +20,7 @@ ServerEvents.recipes(event => {
 	}
 
 	// Recipe conflict between Minecraft's Copper Trapdoor and Minecraft's Copper Bars
-	// Use same recipe as 1.21.9
+	// Use the same recipe as 1.21.9.
 	event.shaped("minecraft:copper_trapdoor", [
 		"CC",
 		"CC",
@@ -28,6 +28,6 @@ ServerEvents.recipes(event => {
 		C: "minecraft:copper_ingot"
 	}).id("minecraft:copper_trapdoor")
 
-	// Recipe conflict between Chiseled Mega Meteorid Brick and Chiseled Mega Meteorid Block
-	// I'm doing nothing about it. See https://github.com/yajatkaul/CobblemonMegaShowdown/issues/145
+	// Recipe conflict between Chiseled Mega Meteorid Brick and Chiseled Mega Meteorid Block.
+	// I'm doing nothing about it. See https://github.com/yajatkaul/CobblemonMegaShowdown/issues/145.
 })

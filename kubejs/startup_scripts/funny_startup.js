@@ -108,24 +108,24 @@ StartupEvents.registry("item", event => {
 				return true
 			})
 			.finishUsing((item_stack, level, entity) => {
-				entity.potionEffects.add("farmersdelight:comfort", 5 * 20)
+				entity.potionEffects.add("farmersdelight:comfort", 5 * SEC)
 
 				if (entity.player) {
-					let is_finite = !item_stack?.nbt?.infinite
+					let is_finite = !item_stack.customData.getBoolean("infinite")
 					if (is_finite) {
 						item_stack.shrink(1)
 						entity.addItem(Item.of("cobblemon:ice_stone"))
 					}
+					entity.ticksFrozen = 10 * SEC
 					entity.playNotifySound("supplementaries:block.jar.break", "players", 1, 1.1)
-					entity.addItemCooldown(item_stack.id, 20)
-					entity.mergeNbt({TicksFrozen: 200})
+					entity.addItemCooldown(item_stack.id, SEC)
 				}
 				if (!level.isClientSide()) {
 					const mickeon = find_mickeon(level.server)
 					if (mickeon) {
 						level.runCommandSilent(`execute at ${mickeon.uuid} run playsound minecraft:entity.enderman.teleport player @a`)
 						level.runCommandSilent(`execute at ${entity.uuid} run playsound minecraft:entity.enderman.teleport player @a`)
-						mickeon.potionEffects.add("minecraft:slow_falling", 60, 3, true, false)
+						mickeon.potionEffects.add("minecraft:slow_falling", 3 * SEC, 3, true, false)
 						mickeon.teleportTo(level.dimension, entity.x, entity.y, entity.z, mickeon.yaw, mickeon.pitch)
 					}
 				}
@@ -162,10 +162,13 @@ StartupEvents.registry("item", event => {
 
 StartupEvents.modifyCreativeTab("minecraft:food_and_drinks", event => {
 	event.add([
-		Item.getItem("kubejs:blue_mascot_cat"),
-		Item.getItem("kubejs:banana_mayo_sandwich"),
-		Item.getItem("create:rose_quartz"),
-		Item.getItem("create:polished_rose_quartz"),
+		Item.of("kubejs:blue_mascot_cat"),
+		Item.of("kubejs:banana_mayo_sandwich"),
+		Item.of("create:rose_quartz"),
+		Item.of("create:polished_rose_quartz"),
+		Item.of("biomesoplenty:cattail"),
+		Item.of("biomeswevegone:cattail_sprout"),
+		Item.of("biomeswevegone:fluorescent_cattail_sprout"),
 	])
 })
 
@@ -173,9 +176,6 @@ StartupEvents.modifyCreativeTab("kubejs:tab", event => {
 	event.remove(Item.of("kubejs:bearded_dragon_bowl"))
 	event.add(Item.of("kubejs:bearded_dragon_bowl").withCustomName("Banana"))
 	event.add(Item.of("kubejs:bearded_dragon_bowl").withCustomName("Baby Dandy"))
-	event.add(Item.of("biomesoplenty:cattail"))
-	event.add(Item.of("biomeswevegone:cattail_sprout"))
-	event.add(Item.of("biomeswevegone:fluorescent_cattail_sprout"))
 	event.remove("kubejs:doublemint_gum") // Sssh.
 
 	event.add(Item.of("constructionstick:netherite_stick", 1, {

@@ -24,9 +24,6 @@ let $ItemBuilder  = Java.loadClass("dev.latvian.mods.kubejs.item.ItemBuilder")
  * @import {$RegistryKubeEvent} from "dev.latvian.mods.kubejs.registry.RegistryKubeEvent"
  */
 
-const SEC = 20
-const MIN = SEC * 60
-
 
 StartupEvents.registry("fluid", event => {
 	event.create("sweet_berry_wine", "kubejs:thin").tint("red").noBucket().displayName("Sweet Berry Wine")

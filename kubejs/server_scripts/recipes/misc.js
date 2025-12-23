@@ -7,8 +7,6 @@
 const MINECRAFT_WOOD_TYPES = ["oak", "birch", "spruce", "jungle", "dark_oak", "acacia", "warped", "crimson", "mangrove", "cherry", "bamboo"]
 
 ServerEvents.tags("item", event => {
-	event.add("sophisticatedbackpacks:upgrades", /^sophisticatedbackpacks:.*_(upgrade|downgrade)/)
-
 	event.add("bubble_cobble:diamond_tools",
 		"minecraft:diamond_sword", "minecraft:diamond_shovel", "minecraft:diamond_pickaxe",
 		"minecraft:diamond_axe", "minecraft:diamond_hoe", "farmersdelight:diamond_knife",
@@ -28,25 +26,25 @@ ServerEvents.recipes(event => {
 
 	// Recycle diamond tools & armor.
 	event.recipes.create.crushing([
-			CreateItem.of("3x " + "create:experience_nugget"),
-			CreateItem.of("1x " + "create:experience_nugget", 0.20),
-			CreateItem.of("1x " + "minecraft:diamond", 0.1),
-			CreateItem.of("1x " + "minecraft:stick", 0.1),
+			CreateItem.of(Item.of("create:experience_nugget", 3)),
+			CreateItem.of(Item.of( "create:experience_nugget", 1), 0.20),
+			CreateItem.of(Item.of( "minecraft:diamond", 1), 0.1),
+			CreateItem.of(Item.of( "minecraft:stick", 1), 0.1),
 		],
 		Ingredient.of("#bubble_cobble:diamond_tools"),
-		10 * 20
+		10 * SEC
 	)
 	event.recipes.create.crushing([
-			CreateItem.of("4x " +"create:experience_nugget"),
-			CreateItem.of("2x " +"create:experience_nugget", 0.75),
-			CreateItem.of("1x " + "minecraft:diamond", 0.1),
+			CreateItem.of(Item.of("create:experience_nugget", 4)),
+			CreateItem.of(Item.of("create:experience_nugget", 2), 0.75),
+			CreateItem.of(Item.of("minecraft:diamond", 1), 0.1),
 		],
 		Ingredient.of("#bubble_cobble:diamond_armor"),
-		15 * 20
+		15 * SEC
 	)
 
 	// Make Precision Mechanisms and basically every other similar recipe guaranteed.
-	// The loop is kinda redudant right now, as the only non-guaranteed recipe is the Precision Mechanism
+	// The loop is kinda redudant right now, as the only non-guaranteed recipe is the Precision Mechanism.
 	// event.forEachRecipe({type: "create:sequenced_assembly"}, recipe => {
 	event.forEachRecipe({id: "create:sequenced_assembly/precision_mechanism"}, recipe => {
 		const json = JSON.parse(recipe.json)
@@ -65,8 +63,8 @@ ServerEvents.recipes(event => {
 	event.recipes.create.sandpaper_polishing("create:polished_rose_quartz", "create:rose_quartz").id("create:sandpaper_polishing/rose_quartz")
 	event.recipes.create.sandpaper_polishing("create:rose_quartz", "biomesoplenty:rose_quartz_chunk")
 	event.recipes.create.crushing([
-			CreateItem.of("3x " + "biomesoplenty:rose_quartz_chunk"),
-			CreateItem.of("1x " + "biomesoplenty:rose_quartz_chunk", 0.5)
+			CreateItem.of(Item.of("biomesoplenty:rose_quartz_chunk", 3)),
+			CreateItem.of(Item.of("biomesoplenty:rose_quartz_chunk", 1), 0.5)
 		],
 		"biomesoplenty:rose_quartz_block"
 	)
@@ -108,18 +106,18 @@ ServerEvents.recipes(event => {
 
 	// Crush Auspicious Armor and Malicious Armor.
 	event.recipes.create.crushing([
-			CreateItem.of("1x " + "minecraft:leather"),
-			CreateItem.of("8x " + "minecraft:gold_nugget"),
-			CreateItem.of("8x " + "create:brass_nugget"),
-			CreateItem.of("1x " + "minecraft:ancient_debris", 0.1)
+			CreateItem.of(Item.of( "minecraft:leather", 1)),
+			CreateItem.of(Item.of( "minecraft:gold_nugget", 8)),
+			CreateItem.of(Item.of( "create:brass_nugget", 8)),
+			CreateItem.of(Item.of( "minecraft:ancient_debris", 1), 0.1)
 		],
 		"cobblemon:auspicious_armor"
 	)
 	event.recipes.create.crushing([
-			CreateItem.of("3x " +"minecraft:string"),
-			CreateItem.of("8x " + "minecraft:iron_nugget"),
-			CreateItem.of("4x " + "minecraft:obsidian"),
-			CreateItem.of("1x " + "minecraft:netherite_scrap", 0.1)
+			CreateItem.of(Item.of("minecraft:string", 3)),
+			CreateItem.of(Item.of( "minecraft:iron_nugget", 8)),
+			CreateItem.of(Item.of( "minecraft:obsidian", 4)),
+			CreateItem.of(Item.of( "minecraft:netherite_scrap", 1), 0.1)
 		],
 		"cobblemon:malicious_armor"
 	)
@@ -128,18 +126,8 @@ ServerEvents.recipes(event => {
 	// but by crafting the Industrial Iron Block, it can be converted back into ingots, skipping the entire process.
 	// event.remove({id: "create:industrial_iron_block_from_ingots_iron_stonecutting"})
 
-	// Recycle Blank TM.
-	// event.recipes.create.crushing([
-	// 		Item.of("minecraft:copper_ingot", 2),
-	// 		Item.of("minecraft:copper_ingot", 2).withChance(0.75),
-	// 		Item.of("minecraft:diamond").withChance(0.1),
-	// 	],
-	// 	Ingredient.of("wherearemytms:blank_tm"),
-	// 	10 * 20
-	// )
-
 	// Make Create Deco's industrial Iron compatible with Create: Dreams & Desires's.
-	// Dreams & Desires removed Industrial Iron, and we don't even have the mod, but this is innocuous.
+	// We don't even have the mod anymore, but this is innocuous.
 	event.replaceInput({mod: "createdeco"}, "createdeco:industrial_iron_nugget", "#c:nuggets/industrial_iron")
 	event.replaceInput({mod: "createdeco"}, "createdeco:industrial_iron_ingot", "#c:ingots/industrial_iron")
 	// event.replaceInput({mod: "createdeco"}, "create:industrial_iron_block", "#c:storage_blocks/industrial_iron")
@@ -147,8 +135,8 @@ ServerEvents.recipes(event => {
 
 	// Haunt all seafood for Zinc nuggets.
 	event.recipes.create.haunting([
-			CreateItem.of("3x " + "create:zinc_nugget"),
-			CreateItem.of("3x " + "create:zinc_nugget", 0.75),
+			CreateItem.of(Item.of("create:zinc_nugget", 3)),
+			CreateItem.of(Item.of("create:zinc_nugget", 3), 0.75),
 		],
 		[Ingredient.of("#c:foods/raw_fish")]
 	)
