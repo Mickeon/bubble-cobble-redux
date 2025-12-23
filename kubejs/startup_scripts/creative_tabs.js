@@ -77,7 +77,6 @@ rename_tab("mynethersdelight:main",           " §eFarmer's Delight: §rMy Nethe
 
 remove_tab("constructionstick:tab") // Items also exist in Tools & Utilities tab.
 remove_tab("sophisticatedcore:main") // Only contains "sophisticatedcore:xp_bucket".
-remove_tab("leafscopperbackport:leafs_copper_backport") // Items also exist in Tools & Utilities.
 remove_tab("lootr:lootr") // Only contains "lootr:trophy".
 
 

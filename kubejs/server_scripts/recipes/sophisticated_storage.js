@@ -12,7 +12,7 @@ ServerEvents.recipes(event => {
 	event.replaceInput({id: /sophisticatedstorage:storage_(i|o|io)/  }, "minecraft:stone", "minecraft:andesite" )
 	event.replaceInput({id: /sophisticatedstorage:storage_(i|o|io)/  }, "minecraft:oak_planks", "create:zinc_block" )
 	event.replaceInput({id: /sophisticatedstorage:storage_(i|o|io)/ }, "minecraft:gold_ingot", "minecraft:diamond" )
-	
+
 	// Make Basic Tier Upgrade require Zinc nuggets.
 	event.shaped("sophisticatedstorage:basic_tier_upgrade", [
 		"ZSZ",
@@ -49,7 +49,7 @@ ServerEvents.recipes(event => {
 		event.custom(json).id(recipe.getId())
 	})
 
-	// Require more for all backpack tiers.
+	// Require more interesting stuff for all Backpack tiers.
 	event.forEachRecipe({id: "sophisticatedbackpacks:copper_backpack"}, recipe => {
 		const json = JSON.parse(recipe.json)
 		json.pattern = [
@@ -114,4 +114,11 @@ ServerEvents.recipes(event => {
 		event.custom(json).id(recipe.getId())
 	})
 
+	// Use Canvas as base for Backpack Upgrade Templates.
+	event.replaceInput({id: /^sophisticated.*upgrade/}, "minecraft:leather", "farmersdelight:canvas")
+	// Use Create's List Filter for Filter Upgrades.
+	event.replaceInput({id: /^sophisticated.*filter_upgrade/}, "minecraft:string", "create:filter")
+	// Use Cobblemon's Magnet for Magnet Upgrades.
+	// Too expensive. Needs more complex replacement.
+	// event.replaceInput({id: /^sophisticated.*magnet_upgrade$/}, "minecraft:iron_ingot", "cobblemon:magnet")
 })

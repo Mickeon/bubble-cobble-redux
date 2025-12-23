@@ -1,6 +1,6 @@
 
 ServerEvents.recipes(event => {
-	// event.remove({input: global.DISABLED_ITEMS_INGREDIENTS})
+	// event.remove({input: global.DISABLED_ITEMS}) // Doesn't seem to do much of anything?
 	event.remove({output: global.DISABLED_ITEMS})
 
 	// Gotta do this manually I guess.
