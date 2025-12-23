@@ -1,5 +1,4 @@
 [conversion]
-	#configuration options for the conversion of chests
 	#determine whether or not loot generated is the same for all players using the provided seed, or randomised per player
 	randomise_seed = true
 	#the maximum age for containers; entries above this age will be discarded [default: 60 * 20 * 15, fifteen minutes] [note: the value 6000 will be corrected to 18000. if you wish to use 6000, please use 6001 or 5999.]
@@ -8,6 +7,7 @@
 	max_age = 18000
 	#if true, accessing a Lootr container will bypass spawn protection
 	bypass_spawn_protection = true
+	#configuration options for the conversion of chests
 	#if true, no chests will be converted
 	disable = false
 	#whether or not mineshaft chest minecarts should be converted to standard loot chests
@@ -20,6 +20,8 @@
 	check_world_border = false
 	#checks structure pieces as well as structure starts when determining if a structure contains a position, more accurate but may cause lag (default true)
 	perform_piecewise_check = true
+	#whether or not to output a warning to the log when a suitable block entity has no loot table and is skipped during conversion
+	skip_logging_no_loot_table_at_generation = true
 
 [whitelist]
 	#configuration for specific whitelisting and blacklisting of dimensions, loot tables and modids

@@ -161,6 +161,9 @@ ItemEvents.modifyTooltips(event => {
 	event.modify("kubejs:banana_mayo_sandwich", text => {
 		text.dynamic("sue_banana_mayo_sandwich")
 	})
+	event.modify(["create:chocolate_bucket", "create:honey_bucket", "create_bic_bit:mayonnaise_bucket", "create_bic_bit:ketchup_bucket"], text => {
+		text.dynamic("add_pelad")
+	})
 
 	event.add("#constructionstick:construction_sticks", Text.translate("Press %s to to open the GUI", [Text.keybind("key.constructionstick.open_gui").white()]).color(MASCOT_COLOR_DARK))
 	event.add(["ribbits:umbrella_leaf"], [subtle("Weee!")])
@@ -189,6 +192,12 @@ ItemEvents.modifyTooltips(event => {
 ItemEvents.dynamicTooltips("sue_banana_mayo_sandwich", event => {
 	if (Client.player.username == "SueTheMimiga") {
 		event.lines[0] = Text.of("Banana Mayo Delicacy 😳") // Funny :)
+	}
+})
+
+ItemEvents.dynamicTooltips("add_pelad", event => {
+	if (Client.player.username == "AceNil_" || Client.player.username == "SniperZee") {
+		event.lines[0] = Text.of(event.lines[0]).append(" 😳")
 	}
 })
 

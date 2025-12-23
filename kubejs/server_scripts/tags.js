@@ -46,7 +46,6 @@ ServerEvents.tags("item", event => {
 
 	// More compatibility.
 	event.add("cobblemon:held/leaves_leftover", "create:honeyed_apple", "biomeswevegone:green_apple")
-	event.add("cobblemon:protein_ingredients", "#c:foods/raw_meat")
 	event.add("brewinandchewin:raw_meats", "#c:foods/raw_meat")
 	event.add("c:cheese", "#brewinandchewin:foods/cheese_wedge") // Required because we disabled Bitterballen's cheese.
 

@@ -46,11 +46,13 @@ ServerEvents.recipes(event => {
 	)
 
 	// Make Precision Mechanisms and basically every other similar recipe guaranteed.
-	// event.forEachRecipe({type: "create:sequenced_assembly"}, /** @param {import("com.simibubi.create.content.processing.sequenced.SequencedAssemblyRecipe").$SequencedAssemblyRecipe$$Type} recipe */ recipe => {
-	// 	if (recipe.hasOutput(Ingredient.all) && recipe.outputValues().length >= 2) {
-	// 		recipe.results([recipe.getOriginalRecipeResult()])
-	// 	}
-	// })
+	// The loop is kinda redudant right now, as the only non-guaranteed recipe is the Precision Mechanism
+	// event.forEachRecipe({type: "create:sequenced_assembly"}, recipe => {
+	event.forEachRecipe({id: "create:sequenced_assembly/precision_mechanism"}, recipe => {
+		const json = JSON.parse(recipe.json)
+		json.results = [json.results[0]]
+		event.custom(json).id(recipe.getId())
+	})
 
 	// Remove Prismarine Crystals from Lapis haunting.
 	// Add haunting Glowstone dust to Prismarine Shards.

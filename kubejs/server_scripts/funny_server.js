@@ -74,7 +74,8 @@ ItemEvents.foodEaten(["biomesoplenty:cattail", "biomeswevegone:cattail_sprout", 
 	entity.level.runCommandSilent(`execute as ${entity.uuid} at ${entity.uuid} run playsound minecraft:entity.llama.spit player @a ~ ~ ~ 1.0`)
 
 	if (event.player && event.item.id == "biomeswevegone:fluorescent_cattail_sprout") {
-		event.player.addEffect(MobEffectUtil.of("minecraft:glowing", 20))
+		event.player.addEffect(MobEffectUtil.of("minecraft:glowing", 3 * SEC))
+		event.player.drop("minecraft:glowstone_dust", false)
 	}
 })
 
@@ -91,7 +92,8 @@ ItemEvents.entityInteracted("create:wrench",  event => {
 	player.teleportTo("minecraft:overworld", spawn_position.x, spawn_position.y, spawn_position.y, player.yaw, player.pitch)
 })
 
-ItemEvents.firstRightClicked("create_bic_bit:mayonnaise_bucket", event => {
+// Some of us can eat the inedible, even by pure accident.
+ItemEvents.firstRightClicked(["create:chocolate_bucket", "create:honey_bucket", "create_bic_bit:mayonnaise_bucket", "create_bic_bit:ketchup_bucket"], event => {
 	const player = event.player
 	if (player
 	&& player.username == "AceNil_"
@@ -105,7 +107,7 @@ ItemEvents.firstRightClicked("create_bic_bit:mayonnaise_bucket", event => {
 	}
 })
 
-ItemEvents.firstRightClicked("minecraft:raw_copper", event => {
+ItemEvents.firstRightClicked(["minecraft:raw_copper"], event => {
 	const player = event.player
 	if (player
 	&& player.username == "CantieLabs"
@@ -149,7 +151,7 @@ if (Item.exists("kubejs:bearded_dragon_bowl")) {
 		const chosen_quote = pick_random(BEARDED_QUOTES)
 		bearded_dragon_speak(player, item_stack.displayName, chosen_quote)
 
-		// Usual server jank because playNotifySound doesn't want to work with the bubble_cobble sounds.
+		// Usual server jank because playSound doesn't want to work with players.
 		level.runCommandSilent(`execute as ${player.uuid} at ${player.uuid} run playsound kubejs:item.bearded_dragon_chirp player @a ~ ~ ~ 1.0 ${1.25 + 0.25 * Math.random()}`)
 		// player.playSound("kubejs:item.bearded_dragon_chirp", 1.0, 1.25 + 0.25 * Math.random())
 		player.addItemCooldown(item_stack.item, 10)
@@ -171,7 +173,6 @@ if (Item.exists("kubejs:bearded_dragon_bowl")) {
 				callback.clear()
 				return
 			}
-			// Utils.server.tell(item_entity)
 			item_entity.playSound("kubejs:item.bearded_dragon_chirp", 0.5, 1.25 + 0.25 * Math.random())
 			callback.timer = 40 + 40 * Math.random()
 		})
@@ -193,7 +194,7 @@ ItemEvents.entityInteracted("minecraft:name_tag", event => {
 })
 
 PlayerEvents.decorateChat(event => {
-	let {player, message, server, component} = event
+	const {player, message} = event
 	if (message.trim().toLowerCase() == "hi") {
 		player.runCommandSilent("damage @s 20 kubejs:pokemon_greeting by @n[type=cobblemon:pokemon, nbt={Pokemon:{PokemonOriginalTrainerType:NONE}}, distance=..4]")
 	}
@@ -201,7 +202,7 @@ PlayerEvents.decorateChat(event => {
 
 ServerEvents.basicPublicCommand("suebegone", event => {
 	const invoker = event.entity
-	const bounds = AABB.CUBE.move(invoker.x, invoker.y, invoker.z).inflate(5)
+	const bounds = AABB.CUBE.move(invoker.position()).inflate(5)
 	const nearby_entities = event.level.getEntitiesWithin(bounds)
 	nearby_entities.forEach(player => {
 		if (!(player instanceof $Player || player.username == "Mickeon")) { // SueTheMimiga

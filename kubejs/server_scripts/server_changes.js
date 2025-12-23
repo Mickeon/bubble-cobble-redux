@@ -96,21 +96,6 @@ ItemEvents.dropped(event => {
 	}
 })
 
-// Nasty way to prevent mobs from spawning because it's nighttime.
-// EntityEvents.spawned(event => {
-// 	if (event.level.isOverworld()
-// 	&& event.entity.isMonster()
-// 	// && event.entity.nbt.get("neoforge:spawn_type") == "NATURAL"
-// 	) {
-// 		if (event.level.canSeeSky(event.entity.blockPosition())) {
-// 			console.log(`Tried to spawn a ${event.entity.type} (${event.entity.nbt.get("neoforge:spawn_type")}) but nuh-uh`)
-// 			event.entity.remove("unloaded_with_player")
-// 			event.cancel()
-// 			return
-// 		}
-// 	}
-// })
-
 // Nerf players carrying heavy storage considerably.
 ServerEvents.tags("block", event => {
 	event.add("bubble_cobble:no_fast_travel_when_carrying",
@@ -158,7 +143,11 @@ ItemEvents.foodEaten(event => {
 
 	const player = event.player
 	const stack = event.item
-	const eat_time_ticks = stack.getFoodProperties(player).eatDurationTicks()
+	const food_properties = stack.getFoodProperties(player)
+	if (!food_properties) {
+		return // Forced to eat something inedible?
+	}
+	const eat_time_ticks = food_properties.eatDurationTicks()
 	// player.statusMessage = eat_time_ticks
 
 	player.addItemCooldown(stack, MINECRAFT_EAT_TIME_TICKS - eat_time_ticks)
