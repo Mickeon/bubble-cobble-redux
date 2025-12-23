@@ -1,6 +1,7 @@
 
 // requires:tipsmod
-
+// ignored: true
+// Temporarily disable these tips during Beta testing.
 
 // Undocumented sources:
 // https://github.com/Darkhax-Minecraft/Tips/blob/1.21.1/common/src/main/java/net/darkhax/tipsmod/common/impl/client/tips/conditions/ConditionRules.java
