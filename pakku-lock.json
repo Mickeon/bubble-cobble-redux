@@ -1564,7 +1564,7 @@
             ]
         },
         {
-            "pakku_id": "5ddOxStSU3PboIyc",
+            "pakku_id": "qEnPT1FDEsI5BOdf",
             "pakku_links": [
                 "rcNaZofHJ2yMvMzg"
             ],
@@ -1582,7 +1582,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "CCC_1.9.1.zip",
+                    "file_name": "CCC_1.9.2.zip",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -1590,18 +1590,18 @@
                         "datapack"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/qoL4kNxC/versions/P6JWt88c/CCC_1.9.1.zip",
-                    "id": "P6JWt88c",
+                    "url": "https://cdn.modrinth.com/data/qoL4kNxC/versions/AYOYyMAk/CCC_1.9.2.zip",
+                    "id": "AYOYyMAk",
                     "parent_id": "qoL4kNxC",
                     "hashes": {
-                        "sha512": "70c3f61b586cac93f9471f0056c6b31f30d256bb6aa0d9ae68cbff2945d59603d0ca0d932e0c342e101dd1b19d9e7918b4e7e4e6b074f4878f6d6a7cb7845da3",
-                        "sha1": "b4f703d1833d4a9730c6b191f2dc3654212bce18"
+                        "sha512": "6488f932453fdfa02762d02deaa223cb3c1fcb94c6f4b8f8d7cc39b11cc94472b97365ff912f888b3fa18ba6d5fa4a6605cf78a9b771ae3876be5f876774f6b5",
+                        "sha1": "d4c88abf7601ac27157033e10f0059e95f568d5b"
                     },
                     "required_dependencies": [
                         "MdwFAVRL"
                     ],
-                    "size": 16597825,
-                    "date_published": "2025-12-09T16:11:02.781878Z"
+                    "size": 16593741,
+                    "date_published": "2025-12-18T01:19:30.149651Z"
                 }
             ]
         },
