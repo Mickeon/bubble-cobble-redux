@@ -1,3 +1,4 @@
+// requires:sounds
 // NOTE: Sounds's block definitions refresh after a full restart.
 
 ServerEvents.tags("block", event => {
@@ -36,7 +37,6 @@ ServerEvents.tags("block", event => {
 	event.add("bubble_cobble:end_stone_bricks_sounds", /^create:.*brick/, "supplementaries:ash_bricks", "supplementaries:ash_bricks_stairs", "supplementaries:ash_bricks_slab", "supplementaries:ash_bricks_wall")
 
 	event.add("minecraft:combination_step_sound_blocks", "yungscavebiomes:ice_sheet")
-	// event.add("minecraft:inside_step_sound_blocks", "yungscavebiomes:ice_sheet")
 	// event.add("minecraft:inside_step_sound_blocks", "")
 
 	// Defined in file instead.

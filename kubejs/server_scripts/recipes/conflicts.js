@@ -27,7 +27,4 @@ ServerEvents.recipes(event => {
 	], {
 		C: "minecraft:copper_ingot"
 	}).id("minecraft:copper_trapdoor")
-
-	// Recipe conflict between Chiseled Mega Meteorid Brick and Chiseled Mega Meteorid Block.
-	// I'm doing nothing about it. See https://github.com/yajatkaul/CobblemonMegaShowdown/issues/145.
 })

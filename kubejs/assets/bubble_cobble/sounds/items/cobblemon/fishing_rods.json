@@ -1,6 +1,6 @@
 {
   "keys": [
-    "#cobblemon:fishing_rods"
+    "#cobblemon:poke_rods"
   ],
   "pitch": 1.5,
   "soundEvent": "cobblemon:fishing.bait_attach",

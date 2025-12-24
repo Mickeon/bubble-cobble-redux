@@ -42,6 +42,8 @@ ServerEvents.tags("item", event => {
 	event.add("c:storage_blocks/industrial_iron", "create:industrial_iron_block")
 	event.add("minecraft:piglin_loved", "solonion:golden_lunchbox", "handcrafted:golden_thin_pot", "handcrafted:golden_thick_pot", "handcrafted:golden_wide_pot", "handcrafted:golden_medium_pot", /*"astral_dimension:golden_bone", "astral_dimension:golden_bone_meal", "astral_dimension:astral_gold_ore", "astral_dimension:gold_eye_block"*/) // Partially reported: https://github.com/terrarium-earth/Handcrafted/issues/152
 	event.add("minecraft:horse_food", "biomeswevegone:green_apple") // TODO: Report this.
+	event.add("cobblemon:mint_leaf", "#cobblemon:mint_leaves") // Was fixed, keep until next update. https://gitlab.com/cable-mc/cobblemon/-/commit/7c824a2b72f198133ca4f3e3a3a6b102869ccaae.
+	event.add("mega_showdown:rotom_appliances", "mega_showdown:rotom_oven", "mega_showdown:rotom_mow", "mega_showdown:rotom_washing_machine", "mega_showdown:rotom_fan", "mega_showdown:rotom_fridge") // Reported https://github.com/yajatkaul/CobblemonMegaShowdown/issues/153
 	// TODO: Copper Chests missing from c:chests item tag.
 
 	// More compatibility.
