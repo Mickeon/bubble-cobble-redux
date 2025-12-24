@@ -242,5 +242,8 @@ ServerEvents.recipes(event => {
 
 	// Make held item recipes more integrated.
 	event.replaceInput({id: "cobblemon:binding_band"}, "minecraft:string", "#c:ropes")
+
+	// Waigee's request. Pale Oak Shelf from Jacaranda wood.
+	event.shaped(Item.of("minecraft:pale_oak_shelf", 6), ["SSS", "   ", "SSS"], {S: "biomesoplenty:stripped_jacaranda_log"})
 })
 

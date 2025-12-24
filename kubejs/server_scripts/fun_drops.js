@@ -86,10 +86,6 @@ EntityEvents.drops("minecraft:player", event => {
 			add_drop(player, Item.of("minecraft:black_dye"), 0.25)
 			add_drop(player, Item.of("minecraft:black_wool"), 0.25)
 		} break;
-		case "Maxpayne2": { // Name outdated.
-			add_drop(player, Item.of("minecraft:bread"), 0.75)
-			add_drop(player, Item.of("mynethersdelight:boiled_egg"), 0.5)
-		} break;
 		case "NightingaleNil": {
 			add_drop(player, Item.of("minecraft:potion").withCustomName("Ginseng Bottle").enchant("quick_charge", 3)
 					// .withNBT({Potion: "minecraft:mundane", CustomPotionColor: 14466167})
@@ -156,6 +152,10 @@ EntityEvents.drops("minecraft:player", event => {
 		case "TheDukeOfSlimes": {
 			add_drop(player, Item.of("minecraft:slime_ball"), 0.75)
 			add_drop(player, Item.of("minecraft:slime_block"), 0.05)
+		} break;
+		case "UnkemptMoss": {
+			add_drop(player, Item.of("minecraft:bread"), 0.75)
+			add_drop(player, Item.of("mynethersdelight:boiled_egg"), 0.5)
 		} break;
 		case "WaiGee": {
 			add_drop(player, Item.of("create:cut_calcite_bricks"), 0.75)

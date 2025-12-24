@@ -3,16 +3,16 @@
   "_lastMCVersionId": 767,
   "generalSettings": {
     "detectATLauncherInstance": true,
-    "detectCurseManifest": true,
+    "detectCurseManifest": false,
     "detectMultiMCManifest": true,
     "detectMCUpdaterInstance": true,
-    "detectTechnicPack": true,
+    "detectTechnicPack": false,
     "detectModrinthPack": true,
     "detectBiomeData": true,
     "detectDimensionData": true,
     "detectWorldData": true,
-    "clientId": "450485984333660181",
-    "defaultIcon": "grass",
+    "clientId": "1453353777758474364",
+    "defaultIcon": "default",
     "enableJoinRequests": false,
     "preferredClientLevel": 3,
     "resetTimeOnInit": false,
@@ -22,7 +22,7 @@
     "fallbackBiomeIcon": "unknown",
     "biomeData": {
       "default": {
-        "textOverride": "Playing in {biome.name}"
+        "textOverride": "in some {biome.name}"
       }
     }
   },
@@ -30,17 +30,17 @@
     "fallbackDimensionIcon": "unknown",
     "dimensionData": {
       "default": {
-        "textOverride": "In the {dimension.name}"
+        "textOverride": "in the {dimension.name}"
       }
     }
   },
   "serverSettings": {
-    "fallbackServerIcon": "default",
-    "fallbackServerName": "Minecraft Server",
-    "fallbackServerMotd": "A Minecraft Server",
+    "fallbackServerIcon": "mimmy_covered_in_gold",
+    "fallbackServerName": "a Minecraft Server",
+    "fallbackServerMotd": "insert motd here",
     "serverData": {
       "default": {
-        "textOverride": "Playing on {server.motd.raw}"
+        "textOverride": "In a server"
       }
     },
     "pingRateInterval": 5,
@@ -48,30 +48,31 @@
   },
   "statusMessages": {
     "mainMenuData": {
-      "textOverride": "In the Main Menu"
+      "textOverride": "In the Main Menu",
+      "iconOverride": "mimmy_help"
     },
     "loadingData": {
       "textOverride": "Loading..."
     },
     "lanData": {
-      "textOverride": "Playing on a LAN Server"
+      "textOverride": "In a LAN Server"
     },
     "singleplayerData": {
-      "textOverride": "Playing Singleplayer"
+      "textOverride": "In Singleplayer"
     },
     "realmData": {
-      "textOverride": "Playing on {server.motd.raw}"
+      "textOverride": "In a realm"
     }
   },
   "advancedSettings": {
     "enablePerGui": false,
-    "enablePerItem": false,
-    "enablePerEntity": false,
+    "enablePerItem": true,
+    "enablePerEntity": true,
     "formatWords": true,
     "debugMode": false,
     "verboseMode": false,
     "refreshRate": 2,
-    "allowPlaceholderPreviews": false,
+    "allowPlaceholderPreviews": true,
     "guiSettings": {
       "fallbackGuiIcon": "unknown",
       "guiData": {
@@ -81,7 +82,8 @@
       }
     },
     "itemMessages": {
-      "default": "Holding {item.message.holding}"
+      "default": "Holding {item.main_hand.name}",
+      "Wrench": "Gripping a {item.main_hand.name}"
     },
     "entitySettings": {
       "fallbackEntityIcon": "unknown",
@@ -91,8 +93,20 @@
         }
       },
       "ridingData": {
+        "Minecart": {
+          "textOverride": "Riding a minecart"
+        },
         "default": {
           "textOverride": "Riding {entity.riding.name}"
+        },
+        "Seat": {
+          "textOverride": "Sitting down"
+        },
+        "Oak Boat": {
+          "textOverride": "Steering a small vessel"
+        },
+        "Boat": {
+          "textOverride": "Steering {entity.riding.name}"
         }
       }
     },
@@ -116,28 +130,35 @@
       "useAsMain": false,
       "isInstance": false,
       "activityType": 0,
-      "partyPrivacy": 1,
-      "details": "{getFirst(menu.message, dimension.message)}",
-      "gameState": "{getOrDefault(server.message)} {getOrDefault(pack.name)}",
-      "largeImageKey": "{getFirst(menu.icon, dimension.icon)}",
-      "largeImageText": "{getFirst(menu.message, dimension.message)}",
-      "smallImageKey": "{getFirst(server.icon, pack.icon)}",
-      "smallImageText": "{getOrDefault(server.message)} {getOrDefault(pack.name)}",
+      "partyPrivacy": 0,
+      "details": "{getFirst(menu.message, custom.ingame_status)}",
+      "gameState": "{getOrDefault(server.message)}",
+      "largeImageKey": "{getFirst(menu.icon, dimension.icon, server.default.icon, pack.icon, general.icon)}",
+      "largeImageText": "{getFirst(menu.message, custom.forecast_base)}",
+      "smallImageKey": "{getOrDefault(player.icon)}",
+      "smallImageText": "{entity.riding.message ? entity.riding.message + ', ' : ''}{item.main_hand.message}",
       "startTimestamp": "{data.general.time}",
       "endTimestamp": "",
-      "buttons": {}
+      "buttons": {
+        "button_0": {
+          "label": "View Modpack",
+          "url": "https://modrinth.com/modpack/bubble-cobble-redux"
+        }
+      }
     },
-    "dynamicIcons": {},
+    "dynamicIcons": {
+      "Mickeon": "https://mc-heads.net/avatar/8e7e29792b77476c99346c8444d907bd"
+    },
     "dynamicVariables": {
-      "mods": "{general.mods} Mod(s)",
-      "player_info_coordinate": "At {player.position.x}, {player.position.z}",
-      "players": "{server.players.current} / {server.players.max} Players",
-      "player_info_in": "({custom.player_info.health})",
-      "player_info_items": "Items: {item.main_hand.message}",
-      "player_info_out": "As {player.name}",
-      "player_info_health": "Health: {player.health.current}/{player.health.max}",
-      "world_info": "On {world.name}",
-      "pack": "{pack.name}"
+      "forecast_time_raw": "{minify(world.time.format_24, 2)} o' clock",
+      "forecast_time": "{ (cast( minify( world.time.format_24, 2), 'java.lang.Integer') + 18) % 24 < 12 ? 'day' : 'night'}",
+      "players": "({server.players.current} / {server.players.max})",
+      "player_low_hp": "{player.health.current <= 8 ? 'Wasting away' : ''}",
+      "forecast_overworld": "It's a {custom.forecast_weather} {custom.forecast_time} in the {dimension.name} ({world.time.format_24})",
+      "player_info_items": "{item.main_hand.message} ? 'holding ' + item.main_hand.name : '' }",
+      "ingame_status": "{getFirst(custom.player_low_hp, entity.riding.message, 'Roaming')} {dimension.message}",
+      "forecast_base": "{dimension.identifier == 'overworld' ? custom.forecast_overworld : 'Oh boy where am I'}",
+      "forecast_weather": "{world.weather.name == 'Clear' ? 'beautiful' : 'melancholic'}"
     }
   }
 }
