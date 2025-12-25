@@ -183,7 +183,11 @@ ServerEvents.recipes(event => {
 	event.replaceInput({id: "solonion:lunchbag"}, "minecraft:paper", "farmersdelight:canvas")
 	event.replaceInput({id: "supplementaries:lunch_basket"}, "minecraft:bamboo", "farmersdelight:canvas")
 	event.replaceInput({id: /^create:crafting.*filter$/}, "minecraft:white_wool", "farmersdelight:canvas")
-	event.replaceInput({id: "minecraft:item_frame"}, "minecraft:leather", "farmersdelight:canvas")
+	// event.replaceInput({id: "minecraft:item_frame"}, "minecraft:leather", "farmersdelight:canvas")
+	event.remove({id: "minecraft:painting"}) // In favour of Farmer's Delight's which requires Canvas.
+	event.remove({id: "immersive_paintings:painting"})
+	event.shaped(Item.of("immersive_paintings:painting", 2), ["SDS","DCD", "SDS"], {S: "minecraft:stick", D: "#c:dyes", C: "farmersdelight:canvas"})
+	// event.replaceOutput({id: "immersive_paintings:graffiti"}, "immersive_paintings:graffiti", Item.of("immersive_paintings:graffiti", 4)) // Does not work.
 
 	// Double output for Train Tracks recipe.
 	event.forEachRecipe({id: "create:sequenced_assembly/track"}, recipe => {

@@ -6212,7 +6212,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "particlerain-4.0.0-beta.3+1.21.1-neoforge.jar",
+                    "file_name": "particlerain-4.0.0-beta.4+1.21.1-neoforge.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -6220,18 +6220,16 @@
                         "neoforge"
                     ],
                     "release_type": "beta",
-                    "url": "https://cdn.modrinth.com/data/nrikgvxm/versions/Uf3Px9g6/particlerain-4.0.0-beta.3+1.21.1-neoforge.jar",
-                    "id": "Uf3Px9g6",
+                    "url": "https://cdn.modrinth.com/data/nrikgvxm/versions/B15BENYO/particlerain-4.0.0-beta.4+1.21.1-neoforge.jar",
+                    "id": "B15BENYO",
                     "parent_id": "nrikgvxm",
                     "hashes": {
-                        "sha512": "bbb6a741b754a1ec809306efc89358ddc27827b021464f5ce73c9a07c429f37be0029f4a00556106c0004aeda2cf65e969979594260defb5f9ddaadeae52891c",
-                        "sha1": "69cccb98b12746e795e93970fa75e8421a2d149a"
+                        "sha512": "09eb53245ba67cc79703b0181767d977d72441629f692a25d0c12732aa7774c5844f40ada99444be0ec4b9f77776105c9c39acbc30145dc4a184cb33bed7c4ff",
+                        "sha1": "61f8e0fa241b0d02d31e5f1384cf80ea80884496"
                     },
-                    "required_dependencies": [
-                        "1eAoo2KR"
-                    ],
-                    "size": 587708,
-                    "date_published": "2025-10-21T22:57:42.712895Z"
+                    "required_dependencies": [],
+                    "size": 591833,
+                    "date_published": "2025-12-25T02:03:38.523885Z"
                 }
             ]
         },
