@@ -1,6 +1,5 @@
 
 // requires:tipsmod
-// ignored: true
 // Temporarily disable these tips during Beta testing.
 
 // Undocumented sources:
@@ -52,7 +51,12 @@ ClientEvents.generateAssets("before_mods", event => {
 		console.log(`Found ${text_list.length} tips for \"${name}\"`)
 
 		let j = 0
-		for (const text of text_list) {
+		for (let text of text_list) {
+
+			// if (typeof text === "string") {
+			// 	text = markdown_string_to_component(text)
+			// }
+
 			let result = {
 				type: "tipsmod:simple",
 				text: text,
@@ -90,3 +94,60 @@ ClientEvents.generateAssets("before_mods", event => {
 // 		text: tip,
 // 	})
 // }
+
+// Rapid testing.
+// ItemEvents.modifyTooltips(event => {
+// 	event.add("minecraft:acacia_boat", markdown_string_to_component(
+// 		"The ***FREAKING*** **Blackboard** ||accepts|| _more _than."
+// 	))
+// })
+
+/** @param {String} str @returns {$MutableComponent} */
+function markdown_string_to_component(str) {
+	// const str = "The *Blackboard* accepts _more _than just dyes.";
+	console.log(`Going through markdown conversion for: "${str}"`)
+
+	let final_text = Text.empty()
+
+	// const regex = /(\*\*|\*|_|.$)/g
+	const regex = /(\|\||\*\*|\*|_|.$)/g
+	// const regex = /(\[.*\]|\|\||\*\*|\*|_|.$)/g
+	// const regex = /(?:^|[^\\])(\*\*\*|\*\*|\*|_|.$)/g // Get second group in the match [1] with this one.
+	// const regex = /(?<!\\)(?:\\\\)*(\*\*|\*|_|.$)/g // Does not work for Rhino.
+	let /** @type {RegExpExecArray} */ match
+
+	let bold = false
+	let italic = false
+	let obfuscated = false
+	let start_idx = 0
+	while ((match = regex.exec(str)) != null) {
+		let group = match[0]
+		console.log(`--- Found ${group} at index ${match.index} --- Next starts at ${regex.lastIndex}`);
+
+		// Insert a component for the string found before these special characters.
+		let text_component = Text.of(str.substring(start_idx, regex.lastIndex - group.length))
+		if (bold) { text_component = text_component.bold() }
+		if (italic) { text_component = text_component.italic() }
+		if (obfuscated) { text_component = text_component.obfuscated() }
+		// console.log(`"${text_component}"`)
+
+		final_text = final_text.append(text_component)
+
+		if (regex.lastIndex == str.length) {
+			break // console.log(`End of the string`)
+		}
+
+		// Interpret the formatting for the next component.
+		if (group == "**") {
+			bold = !bold // console.log(`bold: ${bold}`)
+		} else if (group == "_" || group == "*") {
+			italic = !italic // console.log(`italic: ${italic}`)
+		} else if (group == "||") {
+			obfuscated = !obfuscated
+		}
+
+		start_idx = regex.lastIndex
+	}
+
+	return final_text
+}
