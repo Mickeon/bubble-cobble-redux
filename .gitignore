@@ -17,14 +17,18 @@
 /moddata
 /showdown
 /imgui.ini
+/config/simpletms/moves/default*
 *.bak
 
 # Personal.
-/config/cpm.json
+/config/maplink/general.json5
 /config/maplink/friends.json5
+/config/mod_sets/disabled_mods.json
+/config/cpm.json
+/config/discord_chat_mod-*
 /config/iris.properties
 /config/sidekick.ini
-/config/discord_chat_mod-*
+/config/one-click-join
 /cobblemon
 /cobblemoncreatified
 /cobblenav
@@ -37,7 +41,6 @@
 /emi.json
 /options.txt
 /servers.dat*
-/config/one-click-join
 
 # Cache.
 /cache

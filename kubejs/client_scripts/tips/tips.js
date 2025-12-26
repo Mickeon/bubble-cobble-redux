@@ -29,6 +29,8 @@ const TIPS_FILENAMES = [
 	"blu",
 	"madds",
 	"neo",
+	"luigi",
+	"luigi_handbook",
 ]
 const DEBUG_CYCLE_TIME = 5000 // Constant not used, just for reference.
 const DEFAULT_CYCLE_TIME = 15000 // Constant not used, just for reference.

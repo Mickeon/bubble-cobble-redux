@@ -2,7 +2,7 @@
     "name": "Bubble Cobble Redux",
     "description": "A pinch of Cobblemon, Create, Farmer's Delight, and a Bubble Pub aftertaste.",
     "author": "Mickeon",
-    "version": "1.0.0-beta3",
+    "version": "1.0.0-beta4",
     "overrides": [
         "config",
         "configureddefaults",
@@ -14,6 +14,7 @@
         "!config/fog/config.json",
         "!config/immersive_paintings/client_config.toml",
         "!config/jade/jade.json",
+        "!config/maplink/general.json5",
         "!config/maplink/friends.json5",
         "!config/sounds/chat.json",
         "!config/sounds/event.json",
@@ -24,11 +25,19 @@
         "!config/flywheel-client.toml",
         "!config/lambdynlights.toml",
         "!config/modlistmemory.json",
-        "!config/particle_core_config.toml",
         "!config/particlerain.json",
         "!config/sidekick.ini",
         "!config/one-click-join",
         "!config/discord_chat_mod-*",
+        "!config/mod_sets/disabled_mods.json",
+
+        "!*/jsconfig.json",
+        "!kubejs/probe-settings.json",
+        "!kubejs/web_server.json",
+        "!kubejs/probe-settings.json",
+        "!kubejs/web_server.json",
+        "!config/simpletms/moves/default*",
+        "!*.bak",
 
         "!config/ali",
         "!config/moveslikemafuyu_config.toml",
@@ -64,6 +73,12 @@
             "side": "BOTH"
         },
         "geckolib": {
+            "side": "BOTH"
+        },
+        "xaeroworldmap": {
+            "side": "BOTH"
+        },
+        "xaerominimap": {
             "side": "BOTH"
         },
 

@@ -4,4 +4,6 @@ turnOffPotionParticles = "SELF"
 reduceAllChance = 0.0
 reduceDecreasedChance = 0.0
 disableParticles = false
-byTypeReductions = {  }
+
+[byTypeReductions]
+"minecraft:entity_effect" = 0.2549019607843137

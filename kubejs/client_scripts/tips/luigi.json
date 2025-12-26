@@ -1,0 +1,76 @@
+{
+	"title": {"text":"Luigi's Super Awesome Gamer Tips", "bold": true, "underlined": true, "color": "#238848"},
+	"tips": [
+		["Wow! You're smack in the\nmiddle of the battlefield.\nYou'll find the Power\nStars that Bowser stole\ninside the painting\nworlds.\n\nFirst, talk to the\nBob-omb Buddy. (Press ",{"bold":true,"text":"B"},"\nto talk.) He'll certainly\nhelp you out, and so will\nhis comrades in other\nareas.\n\nTo read signs, stop, face\nthem and press ",{"bold":true,"text":"B"},". Press ",{"bold":true,"text":"A"},"\nor ",{"bold":true,"text":"B"}," to scroll ahead. You\ncan talk to some other\ncharacters by facing them\nand pressing ",{"bold":true,"text":"B"},"."]
+		,
+		"PROTIP: To defeat the Cyberdemon, shoot at it until it dies."
+		,
+		"The Nintendo 64 Control Stick uses an analog system to read the angles and directions of its movement. This allows subtle control that is not possible using the conventional + Control Pad."
+		,
+		["When you are playing with friends, certain rules for playing ",{"strikethrough":true,"text":"DOOM"}," Minecraft change significantly. Full details on this are included on the separate ",{"bold":true,"text":"Multiplayer Addendum"}," found in your game box."]
+		,
+		["Wait wtf? JSON doesn't have comments? That's dumb.\n",{"color":"aqua","text":"Micky"},"? Fix it, please."]
+		,
+		{"text":"Save your game and save it often. When you die, you're back to the beginning of the level, toting that little pistol again. That ain't good, especially after you progress to some of the tougher levels.","color":"dark_aqua","italic":true}
+		,
+		[{"bold":true,"text":"HEALTH: "},"You start at 100%, but you won't stay there long. At 0% it's time to start over. Try a little harder next time!"]
+		,
+		"Hi! I'll prepare\nthe cannon for you!"
+		,
+		"You must fight with\nhonor! It is against the\nroyal rules to throw the\nking out of the ring!"
+		,
+		"Collect as many coins as\npossible! They'll refill\nyour Power Meter."
+		,
+		"Shhh! Please walk\nquietly in the hallway!"
+		,
+		"Santa Claus isn't the only one who can go down a chimney!"
+		,
+		"A few artifacts from the other dimension are now laying around and you may want them, too."
+		,
+		["Brush your teeth, ",{"bold":true,"italic":true,"text":"BITCH!"}]
+		,
+		"it is pointless"
+		,
+		"i am in a constant state of unbearable pain please make it stop i beg you"
+		,
+		{"text": "CALL APOGEE\nSAY \"AARDWOLF\"","color":"yellow","bold":true}
+		,
+		[{"bold":true,"text":"Video unavailable"}," This video contains content from UMG, who has blocked it from display on this website or application. ",{"underlined":true,"text":"Watch on YouTube"}]
+		,
+		"every day is robert day"
+		,
+		{"text":"PLEASE RESPECT THE\nMODS IN THIS SERVER","bold":true}
+		,
+		"Don't ask questions you aren't prepared to handle the answers to."
+		,
+		["Your IP address is ",{"underlined":true,"text":"","extra":[{"obfuscated":true,"text":"192"},".",{"obfuscated":true,"text":"168"},".",{"obfuscated":true,"text":"0"},".",{"obfuscated":true,"text":"1"}]}]
+		,
+		"As a Heavy, the Tomislav not only spins up more quickly than the Minigun, it does so silently! Use it to ambush enemies and take them by surprise!"
+		,
+		{"text":"ⓘ Your endorsement level has gone from 5 to 4","color":"yellow"}
+		,
+		"Your last message contains language that violates our content policy. Please reword your response."
+		,
+		"⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⠀⠀⠀⠀⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠤⠤⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠤⠤⠀⠤⠀⠤⠤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⣀⣀⣀⣀⠀⣀⠀⣀⠀⠀⠀⣀⣀⣀⣀⣀⠀⣀⠀⠀⠀⠀⠀⠀⣀⠀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠉⠀⠀⠀⣀⣀⣀⠀⠀⣀⠒⠒⠡⣀⣀⣀\n⠀⠀⠀⠀⠀⠀⠉⠀⠀⠀⠉⠀⠀⠀⠀⠀⠀⠀⠉⠀⠀⠀⠉⠉⠀⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠀⠀⠀⣀⣀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+		,
+		["For all your Minecraft generating need, ",{"color":"blue","underlined":true,"text":"https://minecraft.tools"}," has it all!\nFrom grabbing skins to creating books, signs, and banners, the possibilities are endless!"]
+		,
+		["Never feel bad for using ",{"color":"blue","underlined":true,"text":"a wiki"},".\nUnless it's a ",{"color":"blue","underlined":true,"text":"Fandom Wiki"}," page.\nNever go to a Fandom Wiki page."]
+		,
+		"Try to hurt the wizard every time you see him."
+		,
+		"Never leave a single puppet alive. Man, puppets, fuck 'em"
+		,
+		"Never stop moving. Ever. Even if your legs fall off."
+		,
+		"Some enemies hate each other almost as much as they hate you."
+		,
+		"Pick up ammo every chance you get! You'll always need more."
+		,
+		"Wizards are the leading cause of wizard crimes."
+		,
+		"Be careful not to back yourself into a corner. That never works well."
+		,
+		"The Orb feeds on the chaos within the soul of its owner."
+	]
+}
