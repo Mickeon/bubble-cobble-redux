@@ -1,30 +1,43 @@
+
 {
-	"title": {"text":"Candle Tip", "bold": true, "underlined": true, "color": "#F3953C"},
+	"title": {"text":"Cantle Tip", "bold": true, "underlined": true, "color": "#FF6347"},
 	"tips": [
-		{"text":"Stack two wooden slabs on top of each other to unlock a neat alternative pattern!\nUnless you disabled the Carpentry Blocks Resource Pack.\nIn which case... don't? "}
-	,
 		["",{"text":"Dear Little Johnny,\n"},{"text":"There will soon be "},{"text":"GHOSTS!","bold":true},{"text":" in your living room."}]
-	,
-		["",{"text":"there's demons in doom eternal."}]
-	,
-		["",{"text":"Craft a Painting with 8 Paper and a Dye and enjoy the luxury of having a painting of your cool and awesome fursona in your house!"}]
-	,
-		["",{"text":"What is "},{"text":"wrong","italic":true},{"text":" with you?\nWhy are you "},{"text":"blue?","color":"#4D99FF"}]
-	,
-		["",{"text":"Did you know?\n"},{"text":"The practice of a baker's dozen (13 items) originated in medieval England (13th century) as a way for bakers to have a delectable little snacky."},{"text":" (fat bastard)","color":"dark_gray"}]
-	,
-		["",{"text":"As a punishment for Candle's hubris, Micky coded a fun interaction where he's sent to "},{"text":"purgatory","color":"red"},{"text":" every time his hunger runs out.\n"},{"text":"Only him, noone else.","italic":true}]
-	,
-		["",{"text":"There used to be 3 different types of Limestone.\nEmphasis on \""},{"text":"used to","italic":true},{"text":"\"."}]
-	,
-		["",{"text":"1. Make an absurd bet with your friends as a joke\n2. Accidentally put thousands of dollars on the line\n3. "},{"text":"Oh god they might win the bet","italic":true,"color":"red"},{"text":"\n\n"},{"text":"February 14th, 2024\nThe \"Papyrus Maze\" Incident","italic":true}]
-	,
-		["",{"text":"You know "},{"text":"Paris, France","italic":true},{"text":"? In English, it's pronounced \"Paris\" but everyone else pronounces it without the \"s\" sound, like the French do. But with "},{"text":"Venezia","italic":true},{"text":", everyone pronouces it the English way: \"Venice\". Like 'The Merchant of Venice' or 'Death in Venice'. "},{"text":"WHY, THOUGH!? WHY ISN'T THE TITLE DEATH IN VENEZIA!? ARE YOU KIDDING ME!? IT TAKES PLACE IN ITALY, SO USE THE ITALIAN WORD, DAMMIT! THAT PISSES ME OFF! BUNCH OF DUMBASSES!","bold":true}]
-	,
-		["",{"text":"Micky has it out for most of Macaw's mods, and that's why they aren't here.\n\n"},{"text":"(source: trust me)","italic":true,"color":"gray"}]
-	,
-		["",{"text":"You can improve the chances of your attacks KOing the opponent by saying \""},{"text":"alllrighty then, chat-room","italic":true},{"text":"\"."}]
-	,
-		["",{"text":"I am turning "},{"text":"EVIL","bold":true,"underlined":true,"color":"red"},{"text":"!\n\nYou are "},{"text":"not","underlined":true},{"text":" my "},{"text":"FRIENDS","color":"light_purple"},{"text":" anymore! >:("}]
+		,
+		["Combat Magic is for ",{"color":"red","text":"weaklings who can't hold a real weapon"},".\nPick up a real weapon, you",{"color":"red","text":" loser"}," mage."]
+		,
+		["if you've ever advocated for levitate magnezone i will ",{"color":"#b46612","text":"shit down your chimney"}]
+		,
+		["",{"color":"red","text":"‼️ THERE'S BEEN A KIDNAPPING ‼️"},"\n",{"color":"red","text":"IT'S 👱‍♀️ RACHEL👱‍♀️, THE DAUGHTER OF THE PRESIDENT OF SERCIA ‼️"},"\n\nGET INTO THE 🏰 CASTLE 🏰 AND RESCUE RACHEL.\n\n",{"color":"gray","text":"(PRESS ANY BUTTON TO STAR)"}]
+		,
+		["Did you knows?\nThe practice of a ",{"color":"blue","underlined":true,"text":"baker's dozen"}," (13 items) originated in medieval England (13th century) as a way for bakers to have a ",{"color":"blue","underlined":true,"text":"delectable little snacky"},".",{"color":"dark_gray","text":" (fatass)"}]
+		,
+		["🥺 <- this icon indicates a box",{"color":"blue","text":" ","extra":[{"underlined":true,"text":"pelad reaction"}]},". look out for it to receive awesome rewards"]
+		,
+		["",{"color":"#ffbef4","text":"i'm cutting down on your"},{"color":"white","text":" "},{"color":"blue","underlined":true,"text":"drinking"},{"color":"white","text":" "},{"color":"#ffbef4","text":"today my stupid chud husband"},"\n",{"color":"#bfc8ff","text":"why must you inflict such cruelties on me!"},"\n",{"color":"#ffbef4","text":"because you put all our assets on"},{"color":"white","text":" "},{"color":"green","text":"Nvidia™"},{"color":"#ffbef4","text":" stock right before it crashed on "},{"color":"blue","underlined":true,"text":"december 16th 2025"}]
+		,
+		["how to live a joyous life (",{"color":"green","text":"easy guide"},"):\n1. maintain the agenda at ",{"underlined":true,"text":"all costs"}," (top priority).\n2.\n3.\n\nfollow me for more joyous life tips"]
+		,
+		["Micky has it out for most of Macaw's mods, ",{"underlined":true,"text":"and that's why they aren't here"},".\n\n",{"color":"gray","italic":true,"text":"(source: trust me i would never lie)"}]
+		,
+		"🧟 Hulk: kill your parents\n🧟 Hulk: do that\n🧟 Hulk: 500 xp"
+		,
+		["I am turning ",{"color":"red","bold":true,"underlined":true,"text":"EVIL"},"!\n\nYou are ",{"underlined":true,"text":"not"}," my ",{"color":"light_purple","text":"FRIENDS"}," anymore! >:("]
+		,
+		"tip cancelled! gorilla army attack 🦍🦍🦍🦍🦍🦍🦍🦍🦍🦍🦍🦍🦍🦍🦍🦍🦍🦍🦍🦍🦍🦍🦍🦍🦍🦍🦍🦍🦍🦍"
+		,
+		["im ordering ",{"color":"blue","underlined":true,"text":"14 dollars worth of soda and nothing else"}," from my local dominos\n\n",{"color":"gray","text":"im thorsty"}]
+		,
+		["i can't post ",{"color":"blue","text":"images"}," or ",{"color":"blue","text":"links"}," on these tips\n\ngoku locked in the time chamber for millennia and betrayed image"]
+		,
+		["",{"color":"red","text":"there is demons in doom eternal"},". doctor samuel hayden himself told me so but im scared to check"]
+		,
+		"‼️ STOP DOING CALCS ‼️\n\n• NUMBERS WERE NOT SUPPOSED TO BE IN POKEMON\n• YEARS OF COUNTING yet NO REAL-WORLD USE FOUND for going higher than \"yeah this probably kills\"\n• Wanted to know how much Earthquake does anyway for a laugh? We had a tool for that: it was called GUESSING\n• \"Yes please give me 0% chance to 4HKO something. Please give me 99.7% chance to 3HKO it\" - statements dreamed up by the UTTERLY DERANGED"
+		,
+		["as a punishment for Candle's hubris, Micky coded a fun and unique interaction where he's sent to ",{"color":"red","text":"PURGATORY"}," every time his hunger bar runs out."]
+		,
+		["You can improve the chances of your attacks ",{"color":"red","text":"KOing the opponent"}," by saying \"",{"italic":true,"text":"alllrighty then, chat-room"},"\"."]
+		,
+		["",{"color":"red","text":"weak aura"},": i will use the most appropriate pokeball for the situation to maximize my catch rate odds\n",{"color":"blue","text":"strong aura"},":\n",{"color":"white","bold":true,"text":"      ","extra":[{"underlined":true,"text":"FUCK IT WE ULTRA BALL"}]},"\n",{"color":"white","bold":true,"text":"      ","extra":[{"underlined":true,"text":"FUCK IT WE ULTRA BALL"}]},"\n",{"color":"white","bold":true,"text":"      ","extra":[{"underlined":true,"text":"FUCK IT WE ULTRA BALL"}]},"\n",{"color":"white","bold":true,"text":"      ","extra":[{"underlined":true,"text":"FUCK IT WE ULTRA BALL"}]}]
 	]
 }

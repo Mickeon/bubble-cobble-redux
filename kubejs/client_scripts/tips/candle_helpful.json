@@ -1,0 +1,46 @@
+
+{
+	"title": {"text":"Candle Tip", "bold": true, "underlined": true, "color": "#FF6347"},
+	"helpful": true,
+	"tips": [
+		["Stack two slabs of any kind on top of each other to get an ",{"color":"dark_blue","text":"alternate pattern"},"! Impress your friends with the latest in ",{"color":"dark_blue","italic":true,"text":"Vertical Plank Technology"},"."]
+		,
+		["Craft Paintings or Graffiti from ",{"color":"blue","text":"Immersive Paintings "},"to enjoy the luxury of owning a huge painting of your fursona in your base."]
+		,
+		["Shift Right-Click most special blocks with an empty hand to ",{"color":"light_purple","text":"carry it around"},"! You may carry:\n- Mobs!\n- Chests!\n",{"color":"dark_red","underlined":true,"text":"- NOT SPAWNERS."},"\n- Furnaces!\n\nThe Possibilities are ",{"color":"dark_red","text":"e"},{"color":"gold","text":"n"},{"color":"yellow","text":"d"},{"color":"dark_green","text":"l"},{"color":"aqua","text":"e"},{"color":"dark_blue","text":"s"},{"color":"dark_purple","text":"s"},{"color":"light_purple","text":"!"}]
+		,
+		["Craft a",{"color":"blue","text":" Construction Stick "},"with ",{"color":"#a84e27","text":"Sticks"}," and various tiers of materials to expedite the boring process of building massive plain walls!"]
+		,
+		["If you see a ",{"color":"aqua","text":"BIG"}," pillar of colorful light, it's most likely a ",{"color":"aqua","text":"Cobblemon Raid Den!"},"\n",{"color":"gray","italic":true,"text":"(Unless someone set up a Beacon, then it might be that also.)"}]
+		,
+		["With a",{"color":"blue","text":" Zinc Ingot"}," and a",{"color":"blue","text":" Stonecutter"},", you can craft",{"color":"light_purple","text":" Copycat Blocks "},"of all shapes that can mimic ",{"underlined":true,"text":"any kind"}," of block texture!\n\n",{"color":"gray","text":"Note: Don't go TOO crazy with them. Excessive use might cause performance issues."}]
+		,
+		["I promise you, Create isn't nearly as complicated as you think it might be. Try out basic contraptions like ",{"color":"blue","text":"Millstones"}," and ",{"color":"blue","text":"Water Wheels"},"!"]
+		,
+		["If you're struggling to build fancy stuff in a Survival World, you can always make ",{"color":"blue","text":"Schematics"}," in a Creative World and transfer them over with a ",{"color":"blue","text":"Schematicannon"},".",{"color":"dark_gray","text":" But where's the fun in that?"}]
+		,
+		["Craft a ",{"color":"blue","text":"Trowel"}," to simplify random block placement from your hotbar. Mix up your stone walls with Stone, Stone Bricks, ",{"italic":true,"text":"Dead Coral"},", Mossy Stone Bricks..."]
+		,
+		["Repairing Tools and Armor in an Anvil costs a whopping ",{"color":"#73d41a","text":"Z"},{"color":"#83da27","text":"E"},{"color":"#92e033","text":"R"},{"color":"#a2e740","text":"O"},{"color":"#b2ed4d","text":" "},{"color":"#c2f35a","text":"e"},{"color":"#d1f966","text":"x"},{"color":"#e1ff73","text":"p"},{"color":"#d1f966","text":"e"},{"color":"#c2f35a","text":"r"},{"color":"#b2ed4d","text":"i"},{"color":"#a2e740","text":"e"},{"color":"#92e033","text":"n"},{"color":"#83da27","text":"c"},{"color":"#73d41a","text":"e"},", and damages Anvils ",{"italic":true,"underlined":true,"text":"much"}," less often. Netherite Items also only require ",{"color":"aqua","text":"Diamonds"}," to repair!\nMending no longer being a requirement all the time is truly revolutionary technology."]
+		,
+		["",{"text":"Every time you die, a "},{"text":"Gravestone","color":"blue"},{"text":" with all your stuff is placed at your location.\nTo retrieve your items, just break the grave!\n"},{"text":"Someone","italic":true,"color":"#9A7CF4"},{"text":" could also build a pillar out of vertically-stacked graves for fun.","italic":true}]
+		,
+		["",{"text":"Press "},{"text":"[C]","color":"blue"},{"text":" to crawl. Unless you rebound it, then use that one instead.\n "}]
+		,
+		["",{"text":"You can craft a "},{"text":"Sleeping Bag","color":"blue"},{"text":" with three pieces of color-matching wool to stop "},{"text":"your friends","color":"#007F7E"},{"text":" from asking you to sleep"},{"text":" ALL THE TIME ","italic":true},{"text":"even if your playersSleepingPercentage is already"},{"text":" REALLY LOW","italic":true},{"text":"."}]
+		,
+		["This modpack contains ",{"color":"red","text":"NO"}," Waystones; it's instead replaced with ",{"color":"blue","text":"Via Romana"},", a fun alternative that involves building roads between waypoints!\n",{"color":"dark_gray","text":"Feel free to download Waystones separately if you have NO WHIMSY IN YOUR HEART."}]
+		,
+		["Thanks to ",{"color":"blue","text":"Complete Cobblemon Collection (CCC)"},", this modpack contains ",{"underlined":true,"text":"all 1025 Pokémon species"},"; however, Legendaries will",{"color":"gold","text":" not spawn naturally!"}," \nIf legendaries are your thing, download the Legendary Spawns version of CCC from ",{"color":"green","text":"Modirinth"},"."]
+		,
+		["",{"color":"blue","text":"TRs"},{"color":"white","text":" (and rarely "},{"color":"blue","text":"TMs"},{"color":"white","text":"!) can drop when a Pokémon faints. This counts for NPC Trainer Battles too!"}]
+		,
+		["",{"color":"white","text":"Eating lots of different nourishing food will present you with a "},{"color":"gold","text":"variety of semi-permanent buffs"},{"color":"white","text":"!"},"\n",{"color":"white","text":"Alternatively, two stacks of Steak works just as it normally does, minus the buffs."}]
+		,
+		["",{"color":"white","text":"Looking for"},{"color":"gold","text":" Acacia"},{"color":"white","text":" and can't find a"},{"color":"gold","text":" Savanna"},{"color":"white","text":"? "},"\n",{"color":"white","text":"Craft a "},{"color":"green","text":"Nature's Compass"},{"color":"white","text":" to avoid spending hours generating hundreds of unnecessary chunks in your world."}]
+		,
+		["If you don't like the Feng Shui of a million ugly chests in your house, craft ",{"color":"blue","text":"Sophisticated Storage Upgrades"}," to improve the number of slots and stack size of ",{"color":"blue","text":"Chests"}," and ",{"color":"blue","text":"Barrels"},".\n",{"color":"gray","italic":true,"text":"(You may also color them however you like!)"}]
+		,
+		["",{"color":"blue","text":"Create: Deepfried"}," allows you to make all kinds of fried food with ",{"color":"blue","text":"Frying Oil"},"! \n\n",{"color":"#C3BEB6","italic":true,"text":"Burgers to fries, a shake or a friend, "},"\n",{"color":"#C3BEB6","italic":true,"text":"If you're hungry simply line up at the end."},"\n",{"color":"#C3BEB6","italic":true,"text":"- Beard Burger Master"}]
+	]
+}

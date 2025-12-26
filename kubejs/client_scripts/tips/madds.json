@@ -1,0 +1,36 @@
+{
+	"title": {"color":"gold","bold":true,"underlined":true,"text":"Madds Tipps"},
+	"tips": [
+		["",{"bold":true,"text":"Food!!"}," Everybody loves food! Keep your food palette diverse for some yummy rewards!"]
+		,
+		["",{"text":"Pokemon enjoy "},{"color":"gold","text":"delicious sweets!"},{"text":" Mix and match different berries to draw out different types of "},{"color":"gold","italic":true,"text":"special"},{"text":"Pokemon!"}]
+		,
+		["Pokemon enjoy ",{"color":"gold","text":"delicious sweets!"}," Mix and match different berries to draw out different types of ",{"color":"gold","italic":true,"text":"special"},"Pokemon!"]
+		,
+		"Splash Potions are gonna be your best friend in any situation. Just make sure it doesn't poison you!"
+		,
+		["Did you nose? Did you know if you sniff pizza too much, your ",{"color":"dark_red","underlined":true,"text":"brain"}," might think it, It's ",{"color":"red","bold":true,"italic":true,"text":"pizza"},"? This, This is because ",{"color":"red","bold":true,"italic":true,"underlined":true,"text":"pizza"}," smells trick your nose into ",{"color":"red","bold":true,"italic":true,"underlined":true,"text":"pizza"}," thinking."]
+		,
+		["Need to get somewhere fast? Mix up some ",{"color":"gold","italic":true,"text":"Aprijuice"}," to boost your Pokemon's Ride Stats!"]
+		,
+		["If you ever see Micky, ",{"bold":true,"text":"always"}," thank him for the modpack. He's such a hard worker!"]
+		,
+		["There are ",{"bold":true,"italic":true,"text":"1000+"}," species of Pokemon! And every one of those Pokemon is someone's favorite!"]
+		,
+		["There are ",{"color":"green","bold":true,"text":"30 natural berries"}," to find in the wild and ",{"color":"red","bold":true,"text":"39 mutation berries"}," to crossbreed! Try to collect them all! You won't regret it!"]
+		,
+		["",{"color":"red","bold":true,"text":"Roseli Berries"}," are the only berries to be dropped by specific Pokemon. If you can't find one, try fighting a ",{"color":"gray","bold":true,"text":"Morpeko"}," or ",{"color":"dark_gray","bold":true,"text":"Nickit!"}," Of course there's more, but those two are very common!"]
+		,
+		["Love your Pokemon enough and they will ",{"color":"red","bold":true,"italic":true,"text":"explode!"}," No, wait, I mean ",{"color":"gold","bold":true,"italic":true,"text":"evolve!"}]
+		,
+		"I'm just pulling up back home and being dropped off I went out with my dad to the pawn shop and he's going to lowes"
+		,
+		["Keep those ",{"color":"aqua","italic":true,"text":"Silk Touch"}," tools in handy! Combining ",{"color":"dark_aqua","bold":true,"text":"Sculk"}," and ",{"color":"yellow","bold":true,"text":"Honeycombs"}," creates ",{"color":"green","bold":true,"text":"EXP Candies."}," Combine ",{"color":"green","italic":true,"text":"smaller candies"}," in the cooking pot to make ",{"color":"dark_green","bold":true,"italic":true,"text":"larger candies"},"!"]
+		,
+		["Don't mix up ",{"color":"gray","bold":true,"text":"Rice"}," and ",{"color":"gold","bold":true,"text":"Hearty Grains"},"... That's a recipe for disaster..."]
+		,
+		["",{"color":"red","bold":true,"italic":true,"text":"\"Unfortunate\""}," doesn't begin to describe my series, this game rewards ",{"color":"red","bold":true,"italic":true,"text":"blind luck"}," and ",{"color":"red","bold":true,"italic":true,"text":"nothing else"},", I am beyond convinced at this point."]
+		,
+		["",{"color":"gold","bold":true,"text":"Cherish your friends!"}," They'll be with you through thick and thin!"]
+	]
+}

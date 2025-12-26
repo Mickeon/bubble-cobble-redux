@@ -1,5 +1,5 @@
 
-// requires:tipsmod
+// requires: tipsmod
 // Temporarily disable these tips during Beta testing.
 
 // Undocumented sources:
@@ -23,14 +23,16 @@ const TIPS_FOLDER_PATH = "kubejs/client_scripts/tips/"
 const TIPS_FILENAMES = [
 	"sol",
 	"candle",
+	"candle_helpful",
 	"helpful",
-	"unhelpful"
+	"unhelpful",
+	"blu",
+	"madds",
+	"neo",
 ]
-const HARDCODED_TITLES = {
-	// "sol": Text.of("Sol Gaming Tip").color("#76EC84").bold().underlined()
-}
-const DEFAULT_CYCLE_TIME = 10000 // For now.
-const HELPFUL_CYCLE_TIME = 12000
+const DEBUG_CYCLE_TIME = 5000 // Constant not used, just for reference.
+const DEFAULT_CYCLE_TIME = 15000 // Constant not used, just for reference.
+const HELPFUL_CYCLE_TIME = 20000
 
 ClientEvents.generateAssets("before_mods", event => {
 	TIPS_FILENAMES.forEach(name => {
@@ -42,13 +44,10 @@ ClientEvents.generateAssets("before_mods", event => {
 		}
 
 		const title = obj.title ?? TITLE_PLACEHOLDER
-		if (name in HARDCODED_TITLES) {
-			title = HARDCODED_TITLES[name]
-		}
 		const text_list = (Array.isArray(obj) ? obj : (obj.tips ?? []))
 		const helpful = Boolean(obj.helpful) // Undocumented.
 
-		console.log(`Found ${text_list.length} tips for \"${name}\"`)
+		console.log(`Found ${text_list.length} tips in \"${name}\"`)
 
 		let j = 0
 		for (let text of text_list) {
