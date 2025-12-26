@@ -22,9 +22,9 @@
 # Personal.
 /config/cpm.json
 /config/maplink/friends.json5
-/config/playernamestyler/nicknames.json
 /config/iris.properties
 /config/sidekick.ini
+/config/discord_chat_mod-*
 /cobblemon
 /cobblemoncreatified
 /cobblenav
@@ -60,7 +60,7 @@
 /global_packs/datapacks
 /global_packs/resourcepacks
 
-# Mods being tested
+# Mods being tested.
 /config/ali
 /config/moveslikemafuyu_config.toml
 /config/smartkeyprompts_config.toml

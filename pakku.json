@@ -15,7 +15,6 @@
         "!config/immersive_paintings/client_config.toml",
         "!config/jade/jade.json",
         "!config/maplink/friends.json5",
-        "!config/playernamestyler/nicknames.json",
         "!config/sounds/chat.json",
         "!config/sounds/event.json",
         "!config/sounds/mod_utils.json",
@@ -29,6 +28,7 @@
         "!config/particlerain.json",
         "!config/sidekick.ini",
         "!config/one-click-join",
+        "!config/discord_chat_mod-*",
 
         "!config/ali",
         "!config/moveslikemafuyu_config.toml",
@@ -71,9 +71,6 @@
             "side": "CLIENT"
         },
         "mod_sets": {
-            "side": "CLIENT"
-        },
-        "playernamestyler": {
             "side": "CLIENT"
         }
     }

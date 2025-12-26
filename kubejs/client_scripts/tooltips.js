@@ -187,12 +187,33 @@ ItemEvents.modifyTooltips(event => {
 		"Right-click to rotate clockwise.",
 		"Shift-right-click to rotate counter-clockwise.",
 	])
+	add_shift_info(event, "supplementaries:lunch_basket", [
+		"Consume food without worrying much about what food it is!.",
+		"More nifty than a Foodbag. Can be dragged in your inventory",
+		"like a Bundle.",
+		"",
+		"When the Basket is closed:",
+		"    Hold right-click to select the food.",
+		"    Mouse movement, scroll wheel and slot keys are supported.",
+		"When the Basket is open:",
+		"    Right-click to eat the chosen food.",
+	])
+	event.add("supplementaries:lunch_basket", PLACEABLE_TOOLTIP)
+
+	event.modify(["solonion:lunchbag", "solonion:lunchbox", "solonion:golden_lunchbox"], text => text.removeText(Text.translate("item.solonion.container.open", Text.keybind("key.sneak"), Text.keybind("key.use"))))
+	add_shift_info(event, ["solonion:lunchbag", "solonion:lunchbox", "solonion:golden_lunchbox"], [
+		"Consume food without worrying much about what food it is!",
+		"More awkward than a Food Basket, but simpler.",
+		"",
+		"Right-click to begin eating.",
+		"Shift-right-click to open the food container.",
+	])
 
 	/** @param {string | $MutableComponent} text @returns {$MutableComponent} */
 	function subtle(text) {
 		return Text.of(text).color(MASCOT_COLOR_DARK).italic()
 	}
-	// event.add(["quark:trowel"], Text.gray("Places a random block from your hotbar.").italic())
+
 	event.add(["supplementaries:sconce_lever"], subtle("Not so cunning when you can read this, huh?"))
 	event.add(["supplementaries:feather_block"], subtle("Negates all fall damage."))
 	event.add(["supplementaries:goblet"], subtle("Can hold and display any liquid."))

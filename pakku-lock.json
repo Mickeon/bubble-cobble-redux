@@ -5027,7 +5027,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "lootr-neoforge-1.21.1-1.11.36.104.jar",
+                    "file_name": "lootr-neoforge-1.21.1-1.11.36.105.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -5035,16 +5035,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/EltpO5cN/versions/7HLGTEw8/lootr-neoforge-1.21.1-1.11.36.104.jar",
-                    "id": "7HLGTEw8",
+                    "url": "https://cdn.modrinth.com/data/EltpO5cN/versions/q7WFZhjB/lootr-neoforge-1.21.1-1.11.36.105.jar",
+                    "id": "q7WFZhjB",
                     "parent_id": "EltpO5cN",
                     "hashes": {
-                        "sha512": "30ccd09160d3faf379f3842543ee087aabdf9b4ecca1f25eeff2f5acc18283f31809d7241dc54e51f5c1ca875ae42cad5a5b646f45f0d2af7583a26331dac614",
-                        "sha1": "017d5c4ce8af8fe9e29d25e546cf0b03d26d0073"
+                        "sha512": "57a367d74b189cff91c8839b748a1266c0e99c9c7c996ff92de14bacf30b2f13302afa32b2fa1f0ebb97a9137122f7687df0440e38c1ae993188744982395db7",
+                        "sha1": "879998de201460bdccc09db9a90998267151d239"
                     },
                     "required_dependencies": [],
-                    "size": 666164,
-                    "date_published": "2025-12-24T05:53:04.474694Z"
+                    "size": 685779,
+                    "date_published": "2025-12-26T10:37:14.780631Z"
                 }
             ]
         },
@@ -6212,7 +6212,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "particlerain-4.0.0-beta.4+1.21.1-neoforge.jar",
+                    "file_name": "particlerain-4.0.0-beta.5+1.21.1-neoforge.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -6220,16 +6220,16 @@
                         "neoforge"
                     ],
                     "release_type": "beta",
-                    "url": "https://cdn.modrinth.com/data/nrikgvxm/versions/B15BENYO/particlerain-4.0.0-beta.4+1.21.1-neoforge.jar",
-                    "id": "B15BENYO",
+                    "url": "https://cdn.modrinth.com/data/nrikgvxm/versions/b2Zkt9Q2/particlerain-4.0.0-beta.5+1.21.1-neoforge.jar",
+                    "id": "b2Zkt9Q2",
                     "parent_id": "nrikgvxm",
                     "hashes": {
-                        "sha512": "09eb53245ba67cc79703b0181767d977d72441629f692a25d0c12732aa7774c5844f40ada99444be0ec4b9f77776105c9c39acbc30145dc4a184cb33bed7c4ff",
-                        "sha1": "61f8e0fa241b0d02d31e5f1384cf80ea80884496"
+                        "sha512": "423f837855b66814b1d74965f2d3639ed0e1e0a67aa8633de0b0481b175e75c0ae774232b0f4b77c6c1ba3cb2580eec59a8a443f230b8e0b88e4460acd47b54d",
+                        "sha1": "be3ffc30f87963c21fc43827931cde33a3439590"
                     },
                     "required_dependencies": [],
-                    "size": 591833,
-                    "date_published": "2025-12-25T02:03:38.523885Z"
+                    "size": 591834,
+                    "date_published": "2025-12-26T00:42:44.846531Z"
                 }
             ]
         },
@@ -6573,48 +6573,6 @@
                     "required_dependencies": [],
                     "size": 240751,
                     "date_published": "2024-04-15T12:41:17.718378Z"
-                }
-            ]
-        },
-        {
-            "pakku_id": "lYLDocHQYcHMcpVI",
-            "type": "MOD",
-            "side": "CLIENT",
-            "slug": {
-                "modrinth": "playername-styler"
-            },
-            "name": {
-                "modrinth": "PlayerName Styler"
-            },
-            "id": {
-                "modrinth": "YeqRouX2"
-            },
-            "files": [
-                {
-                    "type": "modrinth",
-                    "file_name": "playernamestyler-1.0.1.jar",
-                    "mc_versions": [
-                        "1.21",
-                        "1.21.1",
-                        "1.21.2",
-                        "1.21.3",
-                        "1.21.4",
-                        "1.21.5"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/YeqRouX2/versions/JMCNpNm2/playernamestyler-1.0.1.jar",
-                    "id": "JMCNpNm2",
-                    "parent_id": "YeqRouX2",
-                    "hashes": {
-                        "sha512": "1e4ca440e89e89c287996db4960b4e26a912c5933fc04f17ac444350fe1d921e5db97dec7713c309fe0421fc305c41d04db78832cddbb675df044cd0de1085bd",
-                        "sha1": "31dae0a2355b38599e2f541da808904e2ff9709a"
-                    },
-                    "required_dependencies": [],
-                    "size": 87294,
-                    "date_published": "2025-05-19T08:30:46.211839Z"
                 }
             ]
         },

@@ -126,7 +126,8 @@
     "com.gitlab.cdagaming.craftpresence.config.gui.ServerSettingsGui": true,
     "com.gitlab.cdagaming.craftpresence.config.gui.BiomeSettingsGui": true,
     "me.cominixo.betterf3.config.gui.ModConfigScreen": true,
-    "me.cominixo.betterf3.config.gui.modules.ModulesScreen": true
+    "me.cominixo.betterf3.config.gui.modules.ModulesScreen": true,
+    "com.denisnumb.discord_chat_mod.chat_images.ImageScreen": true
   },
   "hideBackground": {
     "dev.emi.emi.screen.RecipeScreen": false,
