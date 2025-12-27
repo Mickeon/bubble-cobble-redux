@@ -3264,7 +3264,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "ezactions-neoforge-1.21.1-1.9.1.jar",
+                    "file_name": "ezactions-neoforge-1.21.1-1.10.1.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -3272,16 +3272,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/gJiy6dk4/versions/ngluu4Rt/ezactions-neoforge-1.21.1-1.9.1.jar",
-                    "id": "ngluu4Rt",
+                    "url": "https://cdn.modrinth.com/data/gJiy6dk4/versions/gSvUgMgn/ezactions-neoforge-1.21.1-1.10.1.jar",
+                    "id": "gSvUgMgn",
                     "parent_id": "gJiy6dk4",
                     "hashes": {
-                        "sha512": "fa0c636e7ae4012b6542ffc93815367133e466ac4fb9d10a4feb0e097575b7ad343aa4383e714a30f6d113ce18e8e91b86f01d9adfd926fb0f5d78bfbf02d0c0",
-                        "sha1": "bf4592e6bab02db4a52ee7b3cc446d8a2a4e82a6"
+                        "sha512": "cd54ce31c5c6416b31b6ab0ee57939d57cd6766217da20f657739eb179477afa63587eb3e49699c36a79e872601fb4f93bc3ae264d7eb2369e08c0984f25760b",
+                        "sha1": "0c92610e63c0b2304b0f865d49d248d6b8ebac51"
                     },
                     "required_dependencies": [],
-                    "size": 218694,
-                    "date_published": "2025-11-19T17:01:44.658516Z"
+                    "size": 223844,
+                    "date_published": "2025-12-27T12:16:33.791983Z"
                 }
             ]
         },
@@ -5611,7 +5611,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "moonlight-1.21-2.28.2-neoforge.jar",
+                    "file_name": "moonlight-1.21-2.29.2-neoforge.jar",
                     "mc_versions": [
                         "1.21",
                         "1.21.1"
@@ -5620,16 +5620,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/twkfQtEc/versions/FW12WzQ3/moonlight-1.21-2.28.2-neoforge.jar",
-                    "id": "FW12WzQ3",
+                    "url": "https://cdn.modrinth.com/data/twkfQtEc/versions/wrEdXoVg/moonlight-1.21-2.29.2-neoforge.jar",
+                    "id": "wrEdXoVg",
                     "parent_id": "twkfQtEc",
                     "hashes": {
-                        "sha512": "7e0ef6a67d99c63126c12e0c13303f167b4b609a831aad9cde029b8b3dc56de380a26599f84e1b060ed3201a1df8adc3ddbb78c09fb8d361e4219cfd28f7633d",
-                        "sha1": "100339839fce7009fa646562cd9ae0438c64cb1c"
+                        "sha512": "5ea9bd439dcecd9c8571463786ab3adfda0cd6a2224d8b14f19a6f47cafd821645d4fdadaf2e41a5f6dd66294a7fb4e3cce477ce01133ffd1f6c69daa61cf645",
+                        "sha1": "e7709d96ad688454bf314eb9489d3a96ea7305e7"
                     },
                     "required_dependencies": [],
-                    "size": 1479333,
-                    "date_published": "2025-12-16T16:58:12.095291Z"
+                    "size": 1498473,
+                    "date_published": "2025-12-27T18:32:36.685550Z"
                 }
             ]
         },
@@ -6630,7 +6630,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "preloading-tricks-3.3.1.jar",
+                    "file_name": "preloading-tricks-3.3.3.jar",
                     "mc_versions": [
                         "1.20.1",
                         "1.21",
@@ -6643,7 +6643,8 @@
                         "1.21.7",
                         "1.21.8",
                         "1.21.9",
-                        "1.21.10"
+                        "1.21.10",
+                        "1.21.11"
                     ],
                     "loaders": [
                         "fabric",
@@ -6651,16 +6652,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/FFeAJNCx/versions/cus4jqaB/preloading-tricks-3.3.1.jar",
-                    "id": "cus4jqaB",
+                    "url": "https://cdn.modrinth.com/data/FFeAJNCx/versions/RzwlMQgU/preloading-tricks-3.3.3.jar",
+                    "id": "RzwlMQgU",
                     "parent_id": "FFeAJNCx",
                     "hashes": {
-                        "sha512": "005722698beff80895d0872eb0640c028b3a78cf5b6c624a05e605de10c07c99f4cb5502dbeb6364eb2542c9e11fb07618c2cd1e75a0af5777cf009b185ab680",
-                        "sha1": "947fc313fde44ff83a8add58a8c31ea77570d0bf"
+                        "sha512": "6d9d6dd4212a67594034597296517ab05958a9e593440b664dbdbe43d9d980e34f3326576d52c55de4b2d0fe33e35f8c03cbb83baf55ce927fd6cabf0bc650e6",
+                        "sha1": "2eb052d4ee8d42a063f5f6a4cc4135a1be30f9a3"
                     },
                     "required_dependencies": [],
-                    "size": 1576935,
-                    "date_published": "2025-12-04T05:08:19.982208Z"
+                    "size": 1556669,
+                    "date_published": "2025-12-27T14:53:39.969580Z"
                 }
             ]
         },
@@ -6879,7 +6880,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "rctapi-neoforge-1.21.1-0.14.4-beta.jar",
+                    "file_name": "rctapi-neoforge-1.21.1-0.14.5-beta.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -6887,19 +6888,19 @@
                         "neoforge"
                     ],
                     "release_type": "beta",
-                    "url": "https://cdn.modrinth.com/data/CBfM2yw7/versions/s2EhETsB/rctapi-neoforge-1.21.1-0.14.4-beta.jar",
-                    "id": "s2EhETsB",
+                    "url": "https://cdn.modrinth.com/data/CBfM2yw7/versions/PPK1g5lk/rctapi-neoforge-1.21.1-0.14.5-beta.jar",
+                    "id": "PPK1g5lk",
                     "parent_id": "CBfM2yw7",
                     "hashes": {
-                        "sha512": "e16c23e5d940b50173134eb2160b2f7d16af2f57561a825b2270ab837e08616d06394af544e6e1e413d48b898839c5d5ec180f52f3bf21e57dadfde859ee42a9",
-                        "sha1": "2c51ec2eee9d869316984ddf4cf8bcf58ba36ff9"
+                        "sha512": "9478932aec3493c262d8f8a211546cd0bebf5e2cf7907247bead80929d7b11daa5b77dcdf14e65f24ccbf3f569bc1c543bf7c8a449938ac029ee86033739051c",
+                        "sha1": "6f0b511797df0bf035234e0eaf196996d34bf6d0"
                     },
                     "required_dependencies": [
                         "lhGA9TYQ",
                         "MdwFAVRL"
                     ],
-                    "size": 208830,
-                    "date_published": "2025-12-11T09:37:23.478145Z"
+                    "size": 219837,
+                    "date_published": "2025-12-27T16:22:40.463802Z"
                 }
             ]
         },
