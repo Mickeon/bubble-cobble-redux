@@ -1,55 +1,17 @@
 {
 	"title": ["From the Official Minecraft ",{"color":"#716c16","italic":true,"text":"Essential Handbook"}],
 	"tips": [
-		["",{"color":"dark_aqua","text":"Sheep don't drop meat, they only drop wool.\\nLamb is officially off the menu!"}]
-		,
 		["",{"color":"gold","text":"","extra":[{"bold":true,"text":"JEB SAYS: "},"To make it easier to survive your first night, burn blocks of wood in a furnace to make charcoal. You can use this instead of coal to craft torches, which means you can go caving even if you haven't found coal."]}]
 		,
-		["",{"color":"dark_aqua","text":"","extra":[{"bold":true,"text":"DID YOU KNOW? "},"Crafting is tricker on a PC or Mac than on the Xbox 360 or Pocket Editions. The Xbox 360 and Pocket Editions tell you what you can make with the items you have, but on a PC or Mac you have to figure it out for yourself."]}]
-		,
-		["",{"color":"dark_aqua","text":"","extra":[{"bold":true,"text":"DID YOU KNOW? "},"A single chest can store up to 27 stacks of items/blocks. Placing two chests next to each other will give you a double chest with 54 storage slots."]}]
-		,
-		["",{"color":"red","text":"","extra":[{"bold":true,"text":"NOTCH SAYS: "},"Your first-day shelter doesn't have to be pretty; you can work on it the next day. Just make sure you have a place you can hide from all the creepy-crawlies. Leave one block open so you can spot monsters and see when daylight returns."]}]
-		,
-		["",{"color":"#546d1b","text":"","extra":[{"bold":true,"text":"TIP: "},"When mining for stone, never dig straight down. This is the number-one rule in Minecraft. You could fall into lava, a cave system, or a dungeon, all of which could result in your untimely death. Never dig straight above your head, either."]}]
-		,
 		["",{"color":"#546d1b","text":"You can get string from killing spiders, or destroying cobwebs or tripwires."}]
-		,
-		["",{"color":"dark_aqua","text":"","extra":[{"bold":true,"text":"DID YOU KNOW? "},"Chickens lay eggs every 10-15 minutes, and these eggs can be crafted into cakes and pumpkin pies. Yum!"]}]
-		,
-		["",{"color":"dark_aqua","text":"","extra":[{"bold":true,"text":"DID YOU KNOW? "},"You can check your coordinates when playing on a PC/Mac by pressing F3 and checking your x (east-west), y (high-low), and z (north-south) coordinates. The y coordinate is useful when mining since it tells you how deep your are. The bottom of the world (the lowest layer) is y=0 and sea level is y=64"]},"\n",{"italic":true,"text":"(The lowest layer nowadays is actually -64, and the build height is capped at 320)"}]
-		,
-		["",{"color":"dark_aqua","text":"Ocelots transform into cute cats when tamed with a fish. Both ocelots and cats will scare creepers away, so they make great companions."}]
 		,
 		["",{"color":"dark_aqua","text":"","extra":[{"bold":true,"text":"DID YOU KNOW? "},"Notch accidentally invented the creeper when he was trying to make a pig!"]}]
 		,
 		["",{"color":"dark_aqua","text":"If a creeper is struck by lighting, it becomes a charged creeper, which will make it even more dangerous and explosive. Stay away!"}]
 		,
-		["",{"color":"dark_aqua","text":"In Minecraft, the seemingly impossible is often possible, and that applies to hostile mobs as well as to you. Despite having no arms, creepers are still clever enough to climb ladders and vines. Don't say we didn't warn you!"}]
-		,
-		["",{"color":"dark_aqua","text":"","extra":[{"bold":true,"text":"DID YOU KNOW? "},"Skeletons can shoot endermen with their arrows, which is something players can't do. However this usually results in the enderman becoming hostile towards the skeleton and killing it shortly after."]}]
-		,
-		["",{"color":"#546d1b","text":"","extra":[{"bold":true,"text":"TIP: "},"If you can kill a skeleton from 50 blocks away or more with a bow and arrow, you'll earn the Sniper Duel achievement as a reward."]}]
-		,
-		["",{"color":"#546d1b","bold":true,"text":"TIP: "},{"color":"#546D1B","text":"Zombies will try to break down the door to your shelter. If it's a wooden door, they'll only succeed if your difficulty level is set to hard. But if it's an iron door their clumsy green fists will never manage to break through. Take that, zombies!"}]
-		,
-		["",{"color":"#546d1b","bold":true,"text":"TIP: "},{"color":"#546D1B","text":"Before you explore, place any valuable items you don't need in your chest, so you won't lose them if you die."}]
-		,
-		"Mark your shelter with a beacon. Paul Soares Jr. created a simple beacon from a tower of dirt blocks and a torch, and this design is now widely used in Minecraft."
-		,
-		"Leave a trail of torches to light your path back home. This will be particularly useful for finding your way at night."
-		,
-		"Make a road out of cobblestone so you can follow it home. This is a fun option if you like constructing and building."
-		,
 		["",{"color":"dark_aqua","text":"Chainmail armor also exists, although this can't be crafted."},"\n",{"color":"dark_aqua","text":"You can only get chainmail armor if a mob is wearing it and then drops it, or through trading with villagers."}]
 		,
-		["",{"color":"#546d1b","text":"","extra":[{"bold":true,"text":"TIP: "},"You can get all types of armor except gold armor through villager trading."]}]
-		,
 		["",{"color":"dark_aqua","text":"","extra":[{"bold":true,"text":"DID YOU KNOW? "},"If you dye your sheep before breeding them, the resulting baby sheep will also be dyed. It will either be the color of one of its parents, or a combination of the two if they are compatible colors."]}]
-		,
-		["",{"color":"dark_aqua","text":"If you plant your wheat seeds on hydrated blocks of farmland they will grow quickly, but if you can't find water, wheat seeds will eventually grow on unhydrated blocks, too."}]
-		,
-		["",{"color":"#546d1b","text":"","extra":[{"bold":true,"text":"TIP: "},"Light helps wheat grow, so put torches next to your wheat farm to help it along at night."]}]
 		,
 		["",{"color":"dark_aqua","text":"","extra":[{"bold":true,"text":"DID YOU KNOW? "},"If you put on a pumpkin head, an enderman won't become hostile if you look at it. Weird but true!"]}]
 	]

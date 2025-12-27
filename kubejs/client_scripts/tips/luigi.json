@@ -1,5 +1,5 @@
 {
-	"title": {"text":"Luigi's Super Awesome Gamer Tips", "bold": true, "underlined": true, "color": "#238848"},
+	"title": {"text":"Luigi's Awesome Gamer Tips", "bold": true, "underlined": true, "color": "#238848"},
 	"tips": [
 		["Wow! You're smack in the\nmiddle of the battlefield.\nYou'll find the Power\nStars that Bowser stole\ninside the painting\nworlds.\n\nFirst, talk to the\nBob-omb Buddy. (Press ",{"bold":true,"text":"B"},"\nto talk.) He'll certainly\nhelp you out, and so will\nhis comrades in other\nareas.\n\nTo read signs, stop, face\nthem and press ",{"bold":true,"text":"B"},". Press ",{"bold":true,"text":"A"},"\nor ",{"bold":true,"text":"B"}," to scroll ahead. You\ncan talk to some other\ncharacters by facing them\nand pressing ",{"bold":true,"text":"B"},"."]
 		,
@@ -11,11 +11,7 @@
 		,
 		["Wait wtf? JSON doesn't have comments? That's dumb.\n",{"color":"aqua","text":"Micky"},"? Fix it, please."]
 		,
-		{"text":"Save your game and save it often. When you die, you're back to the beginning of the level, toting that little pistol again. That ain't good, especially after you progress to some of the tougher levels.","color":"dark_aqua","italic":true}
-		,
 		[{"bold":true,"text":"HEALTH: "},"You start at 100%, but you won't stay there long. At 0% it's time to start over. Try a little harder next time!"]
-		,
-		"Hi! I'll prepare\nthe cannon for you!"
 		,
 		"You must fight with\nhonor! It is against the\nroyal rules to throw the\nking out of the ring!"
 		,
@@ -39,8 +35,6 @@
 		,
 		"every day is robert day"
 		,
-		{"text":"PLEASE RESPECT THE\nMODS IN THIS SERVER","bold":true}
-		,
 		"Don't ask questions you aren't prepared to handle the answers to."
 		,
 		["Your IP address is ",{"underlined":true,"text":"","extra":[{"obfuscated":true,"text":"192"},".",{"obfuscated":true,"text":"168"},".",{"obfuscated":true,"text":"0"},".",{"obfuscated":true,"text":"1"}]}]
@@ -48,8 +42,6 @@
 		"As a Heavy, the Tomislav not only spins up more quickly than the Minigun, it does so silently! Use it to ambush enemies and take them by surprise!"
 		,
 		{"text":"ⓘ Your endorsement level has gone from 5 to 4","color":"yellow"}
-		,
-		"Your last message contains language that violates our content policy. Please reword your response."
 		,
 		"⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⠀⠀⠀⠀⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠤⠤⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠤⠤⠀⠤⠀⠤⠤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⣀⣀⣀⣀⠀⣀⠀⣀⠀⠀⠀⣀⣀⣀⣀⣀⠀⣀⠀⠀⠀⠀⠀⠀⣀⠀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠉⠀⠀⠀⣀⣀⣀⠀⠀⣀⠒⠒⠡⣀⣀⣀\n⠀⠀⠀⠀⠀⠀⠉⠀⠀⠀⠉⠀⠀⠀⠀⠀⠀⠀⠉⠀⠀⠀⠉⠉⠀⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠀⠀⠀⣀⣀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
 		,
@@ -64,8 +56,6 @@
 		"Never stop moving. Ever. Even if your legs fall off."
 		,
 		"Some enemies hate each other almost as much as they hate you."
-		,
-		"Pick up ammo every chance you get! You'll always need more."
 		,
 		"Wizards are the leading cause of wizard crimes."
 		,
