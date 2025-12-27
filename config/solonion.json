@@ -1,9 +1,14 @@
 {
   "foodItems": {
     "entries": [
+      "{id:\"item\",item:\"cobblemon:ice_stone\"}",
       "{id:\"item\",item:\"create:polished_rose_quartz\"}",
       "{id:\"item\",item:\"create:rose_quartz\"}",
-      "{id:\"itemtag\",tag:\"origins:ignore_diet\"}"
+      "{id:\"item\",item:\"biomesoplenty:cattail\"}",
+      "{id:\"item\",item:\"biomeswevegone:cattail_sprout\"}",
+      "{id:\"item\",item:\"biomeswevegone:fluorescent_cattail_sprout\"}",
+      "{id:\"itemtag\",tag:\"origins:ignore_diet\"}",
+      "{id:\"itemtag\",tag:\"c:drinks/tea\"}"
     ],
     "isWhitelist": false
   },

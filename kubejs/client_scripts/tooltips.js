@@ -8,31 +8,32 @@ const MASCOT_COLOR_DARK = "#537B8D"
 const SHIFT_INFO_COLOR = "#7CB3D6"
 
 const PLACEABLE_TOOLTIP = Text.of("Placeable").color(MASCOT_COLOR_DARK).italic()
+const HAMMER_TOOLTIP = Text.of("Can be changed with the Handcrafter's Hammer").color(MASCOT_COLOR_DARK).italic()
+const HANDCRAFTED_ITEMS_WITH_SHIFT_INFO = [
+	"#handcrafted:cushions",
+	"#handcrafted:sheets",
+	"#handcrafted:benches",
+	"#handcrafted:couches",
+	"#handcrafted:chairs",
+	"#handcrafted:tables",
+	"#handcrafted:side_tables",
+	"#handcrafted:desks",
+	"#handcrafted:nightstands",
+	"#handcrafted:tables",
+	"#handcrafted:fancy_beds",
+	"#handcrafted:counters",
+	"#handcrafted:cupboards",
+	"#handcrafted:drawers",
+	"#handcrafted:shelves",
+	"#handcrafted:trims",
+	"handcrafted:hammer"
+]
 
 ItemEvents.modifyTooltips(event => {
 	event.add(["cobblemon:ice_stone"], Text.of("Emanates a blue mascot cat scent...").color(MASCOT_COLOR))
 
 	if (Platform.isLoaded("handcrafted")) {
 		// Remove their SHIFT info in favour of ours.
-		const HAMMER_TOOLTIP = Text.of("Can be changed with the Handcrafter's Hammer").color(MASCOT_COLOR_DARK).italic()
-		const HANDCRAFTED_ITEMS_WITH_SHIFT_INFO = [
-			"#handcrafted:cushions",
-			"#handcrafted:sheets",
-			"#handcrafted:benches",
-			"#handcrafted:couches",
-			"#handcrafted:chairs",
-			"#handcrafted:tables",
-			"#handcrafted:side_tables",
-			"#handcrafted:desks",
-			"#handcrafted:nightstands",
-			"#handcrafted:tables",
-			"#handcrafted:fancy_beds",
-			"#handcrafted:counters",
-			"#handcrafted:cupboards",
-			"#handcrafted:drawers",
-			"#handcrafted:shelves",
-			"#handcrafted:trims"
-		]
 		event.modify(HANDCRAFTED_ITEMS_WITH_SHIFT_INFO, text => {
 			text.removeText(Text.translate("tooltip.handcrafted.shift_description"))
 		})
@@ -73,31 +74,32 @@ ItemEvents.modifyTooltips(event => {
 			text.removeText("block's shape.")
 			text.removeText("bed's pillow color.")
 			text.removeText("bedsheets.")
+			text.removeText("Changes the look of blocks.")
 		})
 		event.add(["#handcrafted:cushions", ], PLACEABLE_TOOLTIP)
 		event.add(["#handcrafted:counters", "#handcrafted:cupboards", "#handcrafted:drawers", "#handcrafted:shelves", "#handcrafted:trims"], HAMMER_TOOLTIP)
-		add_shift_info(event, "#handcrafted:sheets", ["§rCan be put on:", "  §r- §bTables", "  §r- §bSide Tables", "  §r- §bDesks", "  §r- §bNightstands", "  §r- §bFancy Beds"])
-		add_shift_info(event, "#handcrafted:cushions", ["§rCan be put on:", "  §r- §bCouches", "  §r- §bBenches", "  §r- §bChairs", "  §r- §bFancy Beds"])
+		add_shift_info(event, "#handcrafted:sheets", ["§9Can be put on:", "  §9- §bTables", "  §9- §bSide Tables", "  §9- §bDesks", "  §9- §bNightstands", "  §9- §bFancy Beds"])
+		add_shift_info(event, "#handcrafted:cushions", ["§9Can be put on:", "  §9- §bCouches", "  §9- §bBenches", "  §9- §bChairs", "  §9- §bFancy Beds"])
 		add_shift_info(event, "#handcrafted:counters", [
-				"With a §bcalcite§r counter top. Use these blocks to change its appearance!",
-				"    §bOak§r, §bBirch§r, §bSpruce§r, §bJungle,",
-				"    §bDark Oak§r, §bAcacia§r, §bWarped§r, §bCrimson,",
-				"    §bMangrove§r, §bCherry§r, §bBamboo§r, §bQuartz,",
-				"    §bStone§r, §bAndesite§r, §bGranite§r, §bDiorite,",
-				"    §bBricks§r, §bBlackstone§r, §bSmooth Stone§r, §bDeepslate,",
-				"    §bDripstone§r, §bCalcite.",
+				"§9With a §bcalcite§9 counter top. Use these blocks to change its appearance!",
+				"    §bOak§9, §bBirch§9, §bSpruce§9, §bJungle,",
+				"    §bDark Oak§9, §bAcacia§9, §bWarped§9, §bCrimson,",
+				"    §bMangrove§9, §bCherry§9, §bBamboo§9, §bQuartz,",
+				"    §bStone§9, §bAndesite§9, §bGranite§9, §bDiorite,",
+				"    §bBricks§9, §bBlackstone§9, §bSmooth Stone§9, §bDeepslate,",
+				"    §bDripstone§9, §bCalcite.",
 		])
 
 		event.add(["#handcrafted:fancy_beds"],
-				"§rTry putting on a §bCushion §ror §bSheet§r for some extra colour!")
+				"§9Try putting on a §bCushion §9or §bSheet§9 for some extra colour!")
 		event.add(["#handcrafted:tables", "#handcrafted:side_tables", "#handcrafted:desks", "#handcrafted:nightstands"],
-				"§rTry putting any §bSheet§r for some extra colour!")
+				"§9Try putting any §bSheet§9 for some extra colour!")
 		event.add(["#handcrafted:couches", "#handcrafted:benches", "#handcrafted:chairs"],
-				"§rTry putting any §bCushion§r for some extra colour!")
+				"§9Try putting any §bCushion§9 for some extra colour!")
 
 		add_shift_info(event, "handcrafted:hammer", [
-				"§rAllows you to change the shape of",
-				"§r§bCounters§r, §bCupboards§r, §bDrawers§r, §bShelves§r, §bTrims§r"])
+				"§9Allows you to change the shape of",
+				"§bCounters§9, §bCupboards§9, §bDrawers§9, §bShelves§9, §bTrims§9"])
 	}
 
 	add_shift_info(event, "minecraft:big_dripleaf", [
@@ -190,9 +192,9 @@ ItemEvents.modifyTooltips(event => {
 		"Shift-right-click to rotate counter-clockwise.",
 	])
 	add_shift_info(event, "supplementaries:lunch_basket", [
-		"Consume food without worrying much about what food it is!.",
-		"More nifty than a Foodbag. Can be dragged in your inventory",
-		"like a Bundle.",
+		"Consume food comfortably in the palm of your hand!.",
+		"More nifty than a Foodbag, but you gotta choose.",
+		"Can be dragged in your inventory like a Bundle.",
 		"",
 		"When the Basket is closed:",
 		"    Hold right-click to select the food.",
@@ -205,7 +207,7 @@ ItemEvents.modifyTooltips(event => {
 	event.modify(["solonion:lunchbag", "solonion:lunchbox", "solonion:golden_lunchbox"], text => text.removeText(Text.translate("item.solonion.container.open", Text.keybind("key.sneak"), Text.keybind("key.use"))))
 	add_shift_info(event, ["solonion:lunchbag", "solonion:lunchbox", "solonion:golden_lunchbox"], [
 		"Consume food without worrying much about what food it is!",
-		"More awkward than a Food Basket, but simpler.",
+		"More awkward than a Food Basket, but let it choose for you.",
 		"",
 		"Right-click to begin eating.",
 		"Shift-right-click to open the food container.",

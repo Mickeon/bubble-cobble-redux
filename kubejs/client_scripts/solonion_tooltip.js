@@ -6,6 +6,10 @@ const SOLOnionAPI = Java.loadClass("team.creative.solonion.api.SOLOnionAPI")
 const SOLOnion = Java.loadClass("team.creative.solonion.common.SOLOnion")
 
 
+ClientEvents.lang("en_us", event => {
+	event.add("solonion", "gui.solonion.tooltip.disabled", "Does not affect Food Diversity")
+})
+
 ItemEvents.modifyTooltips(event => {
     event.modifyAll(text => {
         text.dynamic("imitate_spice_of_life")
@@ -22,22 +26,26 @@ ItemEvents.dynamicTooltips("imitate_spice_of_life", event => {
 
 	try { // Keeping in check. This crashed before so just in case.
 		let player = Client.player
-		let foodCapability = SOLOnionAPI.getFoodCapability(Client.player)
-
-		let last_eaten = foodCapability.getLastEaten(Client.player, stack)
+		let food_capability = SOLOnionAPI.getFoodCapability(Client.player)
+		let last_eaten = food_capability.getLastEaten(Client.player, stack)
 		if (last_eaten != -1) {
 			let last_eaten_path = last_eaten == 1 ? "last_eaten_singular" : "last_eaten"
 			event.add(Text.translatable("gui.solonion.tooltip." + last_eaten_path, last_eaten.toString()).darkGray());
 		}
 		if (event.shift) {
-			let diversity = foodCapability.simulateEat(player, stack)
-			let diversity_text = diversity.toFixed(2)
-			event.add(
-				Text.translatable("gui.solonion.tooltip.diversity").darkGray()
-				.append(": " + SOLOnion.CONFIG.getDiversity(player, stack).toFixed(2))
-				.append(" (")
-				.append(diversity > 0 ? Text.green(diversity_text) : Text.red(diversity_text))
-				.append(")"));
+			let diversity = food_capability.simulateEat(player, stack)
+
+			if (SOLOnion.CONFIG.isAllowed(stack)) {
+				let diversity_text = diversity.toFixed(2)
+				event.add(
+					Text.translatable("gui.solonion.tooltip.diversity").darkGray()
+					.append(": " + SOLOnion.CONFIG.getDiversity(player, stack).toFixed(2))
+					.append(" (")
+					.append(diversity > 0 ? Text.green(diversity_text) : Text.red(diversity_text))
+					.append(")"));
+			} else {
+				event.add(Text.translatable("gui.solonion.tooltip.disabled").darkGray())
+			}
 		}
 	} catch (error) {
 		console.error(error)

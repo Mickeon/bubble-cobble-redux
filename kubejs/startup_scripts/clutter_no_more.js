@@ -80,7 +80,7 @@ global.draw_shape_hint = (gui_graphics, delta_tracker) => {
 		gui_graphics.drawString(Client.font, text, text_pos_x, text_pos_y, text_color)
 
 		let i = 0
-		const shapes = $ShapeMap.getShapes(Client.player.mainHandItem).reversed()
+		const shapes = $ShapeMap.getShapes(held_stack).reversed()
 		const shape_count = shapes.length - 1
 		for (const shape of shapes) {
 			gui_graphics.renderFakeItem(Item.of(shape), text_pos_x + shape_count * 12 - i, text_pos_y - 20)
