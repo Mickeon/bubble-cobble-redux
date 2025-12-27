@@ -144,7 +144,9 @@
     "xaero.common.gui.GuiEditMode": true,
     "xaero.common.gui.GuiEntityRadarCategoryEditor": true,
     "net.p3pp3rf1y.sophisticatedstoragecreateintegration.client.MountedStorageScreen": true,
-    "pigcart.particlerain.config.gui.ConfigScreen": true
+    "pigcart.particlerain.config.gui.ConfigScreen": true,
+    "de.maxhenkel.voicechat.gui.onboarding.IntroductionOnboardingScreen": true,
+    "de.maxhenkel.voicechat.gui.VoiceChatScreen": true
   },
   "hideBackground": {
     "dev.emi.emi.screen.RecipeScreen": false,

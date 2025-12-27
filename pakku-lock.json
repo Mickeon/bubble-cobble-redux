@@ -8,6 +8,82 @@
     },
     "projects": [
         {
+            "pakku_id": "08I4CB46BKqGToXP",
+            "pakku_links": [
+                "JmvMnLNaQfW308CI",
+                "YmqS1wHkLdvShkNO"
+            ],
+            "type": "MOD",
+            "side": "CLIENT",
+            "slug": {
+                "modrinth": "cpmsvcc"
+            },
+            "name": {
+                "modrinth": " Customizable Player Models Simple Voice Chat compat"
+            },
+            "id": {
+                "modrinth": "xVbeCJyB"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "cpm-svc-compat-1.2.1.jar",
+                    "mc_versions": [
+                        "1.16.4",
+                        "1.16.5",
+                        "1.17",
+                        "1.17.1",
+                        "1.18",
+                        "1.18.1",
+                        "1.18.2",
+                        "1.19",
+                        "1.19.1",
+                        "1.19.2",
+                        "1.19.3",
+                        "1.19.4",
+                        "1.20",
+                        "1.20.1",
+                        "1.20.2",
+                        "1.20.3",
+                        "1.20.4",
+                        "1.20.5",
+                        "1.20.6",
+                        "1.21",
+                        "1.21.1",
+                        "1.21.2",
+                        "1.21.3",
+                        "1.21.4",
+                        "1.21.5",
+                        "1.21.6",
+                        "1.21.7",
+                        "1.21.8",
+                        "1.21.9",
+                        "1.21.10"
+                    ],
+                    "loaders": [
+                        "fabric",
+                        "forge",
+                        "neoforge",
+                        "quilt"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/xVbeCJyB/versions/DURp3gsS/cpm-svc-compat-1.2.1.jar",
+                    "id": "DURp3gsS",
+                    "parent_id": "xVbeCJyB",
+                    "hashes": {
+                        "sha512": "ea8d77345ab4ae1fdecc53e0d7ab28c3e0d9c8753cafff2ee9b6bfc66f745fe14dd1b44a983008e41fc9439dbcecb93c9abbf64d3c2881a0bd8bcb12c7f4f752",
+                        "sha1": "11d954eb33ddb8f15a4332139e441f242bbe9f6d"
+                    },
+                    "required_dependencies": [
+                        "h1E7sQNL",
+                        "9eGKb6K1"
+                    ],
+                    "size": 29437,
+                    "date_published": "2024-04-25T19:10:13.980482Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "k1SYIx5irdtwbhAL",
             "pakku_links": [
                 "UwxnJRUfIQbjhOaA"
@@ -7537,6 +7613,44 @@
                     "required_dependencies": [],
                     "size": 388472,
                     "date_published": "2025-03-08T02:49:32.452400Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "YmqS1wHkLdvShkNO",
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "modrinth": "simple-voice-chat"
+            },
+            "name": {
+                "modrinth": "Simple Voice Chat"
+            },
+            "id": {
+                "modrinth": "9eGKb6K1"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "voicechat-neoforge-1.21.1-2.6.10.jar",
+                    "mc_versions": [
+                        "1.21",
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/9eGKb6K1/versions/uzux0UJ2/voicechat-neoforge-1.21.1-2.6.10.jar",
+                    "id": "uzux0UJ2",
+                    "parent_id": "9eGKb6K1",
+                    "hashes": {
+                        "sha512": "a25161aed7dddd6be66e231f58f137bb0dd97f319a9a786db75a56ad1b391fe69bb934e6074f5d4d4702ab3c17f468a610c8341bff19cc2c3b183b9cbe68910b",
+                        "sha1": "29bc482100e09248a252fe6dd113b5744521e904"
+                    },
+                    "required_dependencies": [],
+                    "size": 4890349,
+                    "date_published": "2025-12-21T12:17:25.653959Z"
                 }
             ]
         },

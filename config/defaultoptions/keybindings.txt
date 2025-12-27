@@ -14,7 +14,7 @@ key_key.playerlist:key.keyboard.tab:
 key_key.pickItem:key.mouse.middle:
 key_key.command:key.keyboard.slash:
 key_key.socialInteractions:key.keyboard.p:
-key_key.screenshot:key.keyboard.f2:
+key_key.screenshot:key.keyboard.f12:
 key_key.togglePerspective:key.keyboard.f5:
 key_key.smoothCamera:key.keyboard.unknown:
 key_key.fullscreen:key.keyboard.f11:
@@ -40,7 +40,7 @@ key_iris.keybind.shaderPackSelection:key.keyboard.o:
 key_iris.keybind.wireframe:key.keyboard.unknown:
 key_supplementaries.keybind.quiver:key.keyboard.g:
 key_key.curios.open.desc:key.keyboard.keypad.5:
-key_key.cobblemon.hideparty:key.keyboard.f4:
+key_key.cobblemon.hideparty:key.keyboard.unknown:
 key_key.cobblemon.summary:key.keyboard.y:
 key_key.cobblemon.downshiftparty:key.keyboard.down:
 key_key.cobblemon.upshiftparty:key.keyboard.up:
@@ -52,6 +52,16 @@ key_key.dynamic_fps.toggle_disabled:key.keyboard.unknown:
 key_chunksfadein.keybinds.toggleMod:key.keyboard.unknown:
 key_key.solonion.open_food_book:key.keyboard.unknown:
 key_key.modmenu.open_menu:key.keyboard.insert:
+key_key.push_to_talk:key.keyboard.v:
+key_key.whisper:key.keyboard.tab:
+key_key.mute_microphone:key.keyboard.v:
+key_key.disable_voice_chat:key.keyboard.unknown:
+key_key.hide_icons:key.keyboard.unknown:
+key_key.voice_chat:key.keyboard.keypad.6:
+key_key.voice_chat_settings:key.keyboard.unknown:
+key_key.voice_chat_group:key.keyboard.unknown:
+key_key.voice_chat_toggle_recording:key.keyboard.unknown:
+key_key.voice_chat_adjust_volumes:key.keyboard.unknown:
 key_keybinds.bettercombat.feint:key.mouse.4:
 key_keybinds.bettercombat.toggle_mine_with_weapons:key.keyboard.unknown:
 key_key.entris.left:key.keyboard.a:
@@ -115,7 +125,7 @@ key_key.constructionstick.undo:key.keyboard.unknown:
 key_key.constructionstick.show_previous:key.keyboard.unknown:
 key_treechop.key.toggle_chopping:key.keyboard.unknown:
 key_treechop.key.cycle_sneak_behavior:key.keyboard.unknown:
-key_treechop.key.open_settings_overlay:key.keyboard.keypad.6:
+key_treechop.key.open_settings_overlay:key.keyboard.unknown:
 key_key.cobblemonraiddens.mouse:key.keyboard.left.alt:
 key_key.cobblemonraiddens.accept:key.keyboard.unknown:
 key_key.cobblemonraiddens.deny:key.keyboard.n:
@@ -171,8 +181,11 @@ key_key.cpm.qa_15:key.keyboard.unknown:
 key_key.cpm.qa_16:key.keyboard.unknown:
 key_key.ezactions.open:key.keyboard.grave.accent:
 key_key.ezactions.open_editor:key.keyboard.keypad.7:
-key_key.ezactions.bundle.storage:key.keyboard.v:
-key_key.ezactions.bundle.configs:key.keyboard.keypad.8:
+key_key.ezactions.bundle.map:key.keyboard.unknown:
+key_key.ezactions.bundle.configs:key.keyboard.f4:
+key_key.ezactions.bundle.advanced:key.keyboard.unknown:
+key_key.ezactions.bundle.storage:key.keyboard.h:
+key_key.ezactions.bundle.toggles:key.keyboard.f2:
 key_key.jade.config:key.keyboard.unknown:
 key_key.jade.show_overlay:key.keyboard.unknown:
 key_key.jade.toggle_liquid:key.keyboard.unknown:

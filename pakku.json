@@ -30,6 +30,11 @@
         "!config/one-click-join",
         "!config/discord_chat_mod-*",
         "!config/mod_sets/disabled_mods.json",
+        "!config/voicechat/category-volumes.properties",
+        "!config/voicechat/player-volumes.properties",
+        "!config/voicechat/translations.properties",
+        "!config/voicechat/voicechat-client.properties",
+        "!config/voicechat/username-cache.json",
 
         "!*/jsconfig.json",
         "!kubejs/probe-settings.json",

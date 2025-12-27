@@ -1,57 +1,10 @@
 [
   {
-    "id": "Development (KubeJS \u0026 Co)",
-    "title": "Development (KubeJS \u0026 Co)",
-    "icon": "brewinandchewin:red_rum",
-    "children": [
-      {
-        "id": "cmd_19ada214524",
-        "title": "Reload client scripts",
-        "icon": "farmersdelight:tomato",
-        "action": {
-          "type": "COMMAND",
-          "command": "/kubejs reload client-scripts",
-          "delayTicks": 0
-        }
-      },
-      {
-        "id": "cmd_19ada22cc2c",
-        "title": "Reload server scripts",
-        "icon": "farmersdelight:tomato_crate",
-        "action": {
-          "type": "COMMAND",
-          "command": "/kubejs reload server-scripts",
-          "delayTicks": 0
-        }
-      },
-      {
-        "id": "cmd_19ada23016e",
-        "title": "Reload startup scripts",
-        "icon": "farmersdelight:tomato_sauce",
-        "action": {
-          "type": "COMMAND",
-          "command": "/kubejs reload startup-scripts",
-          "delayTicks": 0
-        }
-      },
-      {
-        "id": "cmd_19b0e8d7df0",
-        "title": "Reload Datapacks",
-        "icon": "farmersdelight:pasta_with_meatballs",
-        "note": "Reload server scripts\u0026datapacks",
-        "action": {
-          "type": "COMMAND",
-          "command": "/reload",
-          "delayTicks": 0
-        }
-      }
-    ]
-  },
-  {
     "id": "Map",
     "title": "Map",
     "icon": "minecraft:filled_map",
     "note": "Xaero\u0027s World \u0026 Mini Map",
+    "bundleKeybindEnabled": true,
     "children": [
       {
         "id": "key_19b1243ff05",
@@ -106,6 +59,248 @@
           "name": "gui.xaero_minimap_settings",
           "toggle": false,
           "mode": "AUTO"
+        }
+      }
+    ]
+  },
+  {
+    "id": "Configs",
+    "title": "Configs",
+    "icon": "supplementaries:wrench",
+    "bundleKeybindEnabled": true,
+    "children": [
+      {
+        "id": "key_19b61c1358f",
+        "title": "Custom Player Models",
+        "icon": "minecraft:player_head",
+        "action": {
+          "type": "KEY",
+          "name": "key.cpm.gestureMenu",
+          "toggle": false,
+          "mode": "AUTO"
+        }
+      },
+      {
+        "id": "cmd_19b12afd6fe",
+        "title": "Custom Model (Safety)",
+        "icon": "minecraft:player_head",
+        "action": {
+          "type": "COMMAND",
+          "command": "/cpmclient safety",
+          "delayTicks": 0
+        }
+      },
+      {
+        "id": "key_19b127549cf",
+        "title": "Shaders",
+        "icon": "brewinandchewin:flaxen_cheese_wedge",
+        "action": {
+          "type": "KEY",
+          "name": "iris.keybind.shaderPackSelection",
+          "toggle": false,
+          "mode": "AUTO"
+        }
+      },
+      {
+        "id": "key_19b1271f7dc",
+        "title": "Jade",
+        "icon": "supplementaries:altimeter",
+        "action": {
+          "type": "KEY",
+          "name": "key.jade.config",
+          "toggle": false,
+          "mode": "AUTO"
+        }
+      },
+      {
+        "id": "cmd_19b12ea7f3b",
+        "title": "Accessories",
+        "icon": "mega_showdown:mega_bracelet_red",
+        "action": {
+          "type": "COMMAND",
+          "command": "/owo-config accessories",
+          "delayTicks": 0
+        }
+      },
+      {
+        "id": "cmd_19b12ab9945",
+        "title": "Particles",
+        "icon": "create:experience_nugget",
+        "note": "Particle Core",
+        "action": {
+          "type": "COMMAND",
+          "command": "/configure particle_core particle_core_config",
+          "delayTicks": 0
+        }
+      },
+      {
+        "id": "cmd_19b12eaf3de",
+        "title": "Particle Rain",
+        "icon": "minecraft:ghast_tear",
+        "action": {
+          "type": "COMMAND",
+          "command": "/particlerain",
+          "delayTicks": 0
+        }
+      },
+      {
+        "id": "cmd_19b12a53a76",
+        "title": "Immersive Paintings (Client)",
+        "icon": "immersive_paintings:painting",
+        "action": {
+          "type": "COMMAND",
+          "command": "/configure immersive_paintings client_config",
+          "delayTicks": 0
+        }
+      },
+      {
+        "id": "key_19b61a2722f",
+        "title": "Voice Chat",
+        "icon": "supplementaries:speaker_block",
+        "action": {
+          "type": "KEY",
+          "name": "key.voice_chat",
+          "toggle": false,
+          "mode": "AUTO"
+        }
+      },
+      {
+        "id": "Advanced",
+        "title": "Advanced",
+        "icon": "biomesoplenty:rose_quartz_chunk",
+        "bundleKeybindEnabled": true,
+        "children": [
+          {
+            "id": "cmd_19b12a65096",
+            "title": "Immersive Paintings (Common)",
+            "icon": "immersive_paintings:graffiti",
+            "action": {
+              "type": "COMMAND",
+              "command": "/configure immersive_paintings common_config",
+              "delayTicks": 0
+            }
+          },
+          {
+            "id": "key_19b61a55d87",
+            "title": "TreeChop",
+            "icon": "minecraft:iron_axe",
+            "action": {
+              "type": "KEY",
+              "name": "treechop.key.open_settings_overlay",
+              "toggle": false,
+              "mode": "AUTO"
+            }
+          },
+          {
+            "id": "cmd_19b12acb417",
+            "title": "EMI Loot",
+            "icon": "minecraft:bone",
+            "action": {
+              "type": "COMMAND",
+              "command": "/configure emi_loot emi_loot_config",
+              "delayTicks": 0
+            }
+          },
+          {
+            "id": "cmd_19b12933e7e",
+            "title": "General",
+            "icon": "minecraft:knowledge_book",
+            "note": "Opens Create\u0027s API for configs",
+            "action": {
+              "type": "COMMAND",
+              "command": "/catnip config",
+              "delayTicks": 0
+            }
+          },
+          {
+            "id": "cmd_19b129b8fa2",
+            "title": "Cobblemon",
+            "icon": "cobblemon:poke_ball",
+            "action": {
+              "type": "COMMAND",
+              "command": "/cobblemonconfig",
+              "delayTicks": 0
+            }
+          },
+          {
+            "id": "cmd_19b128fe7ae",
+            "title": "Creative Core (Client)",
+            "icon": "minecraft:stone",
+            "action": {
+              "type": "COMMAND",
+              "command": "/cmdclientconfig",
+              "delayTicks": 0
+            }
+          },
+          {
+            "id": "cmd_19b128fb3b1",
+            "title": "Creative Core",
+            "icon": "minecraft:stone",
+            "action": {
+              "type": "COMMAND",
+              "command": "/cmdconfig",
+              "delayTicks": 0
+            }
+          },
+          {
+            "id": "key_19b1276abf3",
+            "title": "ModernFix",
+            "icon": "supplementaries:soap",
+            "action": {
+              "type": "KEY",
+              "name": "key.modernfix.config",
+              "toggle": false,
+              "mode": "AUTO"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "Development (KubeJS \u0026 Co)",
+    "title": "Development (KubeJS \u0026 Co)",
+    "icon": "brewinandchewin:red_rum",
+    "children": [
+      {
+        "id": "cmd_19ada214524",
+        "title": "Reload client scripts",
+        "icon": "farmersdelight:tomato",
+        "action": {
+          "type": "COMMAND",
+          "command": "/kubejs reload client-scripts",
+          "delayTicks": 0
+        }
+      },
+      {
+        "id": "cmd_19ada22cc2c",
+        "title": "Reload server scripts",
+        "icon": "farmersdelight:tomato_crate",
+        "action": {
+          "type": "COMMAND",
+          "command": "/kubejs reload server-scripts",
+          "delayTicks": 0
+        }
+      },
+      {
+        "id": "cmd_19ada23016e",
+        "title": "Reload startup scripts",
+        "icon": "farmersdelight:tomato_sauce",
+        "action": {
+          "type": "COMMAND",
+          "command": "/kubejs reload startup-scripts",
+          "delayTicks": 0
+        }
+      },
+      {
+        "id": "cmd_19b0e8d7df0",
+        "title": "Reload Datapacks",
+        "icon": "farmersdelight:pasta_with_meatballs",
+        "note": "Reload server scripts\u0026datapacks",
+        "action": {
+          "type": "COMMAND",
+          "command": "/reload",
+          "delayTicks": 0
         }
       }
     ]
@@ -200,166 +395,86 @@
     ]
   },
   {
-    "id": "Configs",
-    "title": "Configs",
-    "icon": "supplementaries:wrench",
+    "id": "Toggles",
+    "title": "Toggles",
+    "icon": "minecraft:lever",
     "bundleKeybindEnabled": true,
     "children": [
       {
-        "id": "key_19b1271f7dc",
-        "title": "Jade",
-        "icon": "supplementaries:altimeter",
-        "action": {
-          "type": "KEY",
-          "name": "key.jade.config",
-          "toggle": false,
-          "mode": "AUTO"
-        }
-      },
-      {
-        "id": "key_19b12744cc6",
-        "title": "CraftPresence",
-        "icon": "createdeco:decal_radioactive",
-        "note": "Discord Rich Presence",
-        "action": {
-          "type": "KEY",
-          "name": "key.craftpresence.config_keycode.name",
-          "toggle": false,
-          "mode": "AUTO"
-        }
-      },
-      {
-        "id": "key_19b127549cf",
-        "title": "Shaders",
-        "icon": "brewinandchewin:flaxen_cheese_wedge",
-        "action": {
-          "type": "KEY",
-          "name": "iris.keybind.shaderPackSelection",
-          "toggle": false,
-          "mode": "AUTO"
-        }
-      },
-      {
-        "id": "key_19b1276abf3",
-        "title": "ModernFix",
-        "icon": "supplementaries:soap",
-        "action": {
-          "type": "KEY",
-          "name": "key.modernfix.config",
-          "toggle": false,
-          "mode": "AUTO"
-        }
-      },
-      {
-        "id": "cmd_19b128fb3b1",
-        "title": "Creative Core",
-        "icon": "minecraft:stone",
-        "action": {
-          "type": "COMMAND",
-          "command": "/cmdconfig",
-          "delayTicks": 0
-        }
-      },
-      {
-        "id": "cmd_19b128fe7ae",
-        "title": "Creative Core (Client)",
-        "icon": "minecraft:stone",
-        "action": {
-          "type": "COMMAND",
-          "command": "/cmdclientconfig",
-          "delayTicks": 0
-        }
-      },
-      {
-        "id": "cmd_19b129b8fa2",
-        "title": "Cobblemon",
+        "id": "key_19b61acc4f3",
+        "title": "Pokémon Party",
         "icon": "cobblemon:poke_ball",
         "action": {
-          "type": "COMMAND",
-          "command": "/cobblemonconfig",
-          "delayTicks": 0
+          "type": "KEY",
+          "name": "key.cobblemon.hideparty",
+          "toggle": false,
+          "mode": "AUTO"
         }
       },
       {
-        "id": "cmd_19b12933e7e",
-        "title": "General",
-        "icon": "minecraft:knowledge_book",
-        "note": "Opens Create\u0027s API for configs",
+        "id": "key_19b61ae2f8f",
+        "title": "Fancier Fog",
+        "icon": "minecraft:powder_snow_bucket",
         "action": {
-          "type": "COMMAND",
-          "command": "/catnip config",
-          "delayTicks": 0
+          "type": "KEY",
+          "name": "key.fog.toggle",
+          "toggle": false,
+          "mode": "AUTO"
         }
       },
       {
-        "id": "cmd_19b12ea7f3b",
-        "title": "Accessories",
-        "icon": "mega_showdown:mega_bracelet_red",
+        "id": "key_19b61b02688",
+        "title": "Extended Hotbar",
+        "icon": "minecraft:iron_pickaxe",
         "action": {
-          "type": "COMMAND",
-          "command": "/owo-config accessories",
-          "delayTicks": 0
+          "type": "KEY",
+          "name": "key.extendedhotbar.toggle",
+          "toggle": false,
+          "mode": "AUTO"
         }
       },
       {
-        "id": "cmd_19b12acb417",
-        "title": "EMI Loot",
-        "icon": "minecraft:bone",
+        "id": "key_19b61b1036f",
+        "title": "Minimap",
+        "icon": "minecraft:filled_map",
         "action": {
-          "type": "COMMAND",
-          "command": "/configure emi_loot emi_loot_config",
-          "delayTicks": 0
+          "type": "KEY",
+          "name": "gui.xaero_toggle_map",
+          "toggle": false,
+          "mode": "AUTO"
         }
       },
       {
-        "id": "cmd_19b12ab9945",
-        "title": "Particles",
-        "icon": "create:experience_nugget",
-        "note": "Particle Core",
-        "action": {
-          "type": "COMMAND",
-          "command": "/configure particle_core particle_core_config",
-          "delayTicks": 0
-        }
-      },
-      {
-        "id": "cmd_19b12eaf3de",
-        "title": "Particle Rain",
-        "icon": "minecraft:ghast_tear",
-        "action": {
-          "type": "COMMAND",
-          "command": "/particlerain",
-          "delayTicks": 0
-        }
-      },
-      {
-        "id": "cmd_19b12a53a76",
-        "title": "Immersive Paintings (Client)",
-        "icon": "immersive_paintings:painting",
-        "action": {
-          "type": "COMMAND",
-          "command": "/configure immersive_paintings client_config",
-          "delayTicks": 0
-        }
-      },
-      {
-        "id": "cmd_19b12a65096",
-        "title": "Immersive Paintings (Common)",
-        "icon": "immersive_paintings:graffiti",
-        "action": {
-          "type": "COMMAND",
-          "command": "/configure immersive_paintings common_config",
-          "delayTicks": 0
-        }
-      },
-      {
-        "id": "cmd_19b12afd6fe",
-        "title": "Custom Player Model (Safety)",
+        "id": "key_19b61b1dc87",
+        "title": "Show Players Globally",
         "icon": "minecraft:player_head",
         "action": {
-          "type": "COMMAND",
-          "command": "/cpmclient safety",
-          "delayTicks": 0
+          "type": "KEY",
+          "name": "gui.xaero_toggle_tracked_players_in_world",
+          "toggle": false,
+          "mode": "AUTO"
+        }
+      },
+      {
+        "id": "key_19b61b30b6f",
+        "title": "Waypoints",
+        "icon": "biomesoplenty:blackstone_bulb",
+        "action": {
+          "type": "KEY",
+          "name": "gui.xaero_toggle_waypoints",
+          "toggle": false,
+          "mode": "AUTO"
+        }
+      },
+      {
+        "id": "key_19b61b87d30",
+        "title": "Voice Chat Icons",
+        "icon": "supplementaries:speaker_block",
+        "action": {
+          "type": "KEY",
+          "name": "key.hide_icons",
+          "toggle": false,
+          "mode": "AUTO"
         }
       }
     ]

@@ -29,6 +29,11 @@
 /config/iris.properties
 /config/sidekick.ini
 /config/one-click-join
+/config/voicechat/category-volumes.properties
+/config/voicechat/player-volumes.properties
+/config/voicechat/translations.properties
+/config/voicechat/voicechat-client.properties
+/config/voicechat/username-cache.json
 /cobblemon
 /cobblemoncreatified
 /cobblenav
@@ -50,6 +55,7 @@
 /server-resource-packs
 /usercache.json
 /usernamecache.json
+/config/voicechat/username-cache.json
 
 # Currently useless to push.
 /resourcepacks
