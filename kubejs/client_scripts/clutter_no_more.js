@@ -44,8 +44,6 @@ ItemEvents.dynamicTooltips("show_available_shapes", event => {
 			for (let i = 0; i < base_scroll_index; i++) {
 				shapes.addLast(shapes.removeFirst())
 			}
-
-			console.log(event.lines)
 		}
 
 		shapes.forEach(shape => {
