@@ -279,3 +279,16 @@ EntityEvents.checkSpawn("minecraft:zombie", event => {
 		event.cancel()
 	}
 })
+
+// Turn links in chat into embedded ones, as far as the Discord Chat integration is concerned.
+// https://email-files.fangamer.com/list_48/campaign_15/queen_shimmying-tOYeHM9diwN8AaSH.gif
+PlayerEvents.decorateChat(event => {
+	const message = event.message
+
+	// EXTREMELY rudimentary.
+	if (message.includes("http") && !message.includes("(http")) {
+		const regex = /https?:\/\/\S+/g
+
+		event.component = String(message).replace(regex, "[Image]($&)")
+	}
+})

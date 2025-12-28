@@ -198,11 +198,6 @@ PlayerEvents.decorateChat(event => {
 	if (message.trim().toLowerCase() == "hi") {
 		player.runCommandSilent("damage @s 20 kubejs:pokemon_greeting by @n[type=cobblemon:pokemon, nbt={Pokemon:{PokemonOriginalTrainerType:NONE}}, distance=..4]")
 	}
-
-	// if (message.includes("https://")) {
-	// 	// event.setComponent(Text.of(message.replace(/https?:\/\/[^\s]+/, "[Image]($1)")))
-	// 	console.log(message.replace(/https?:\/\/[^\s]+/, "[Image]($1)"))
-	// }
 })
 
 ServerEvents.basicPublicCommand("suebegone", event => {
