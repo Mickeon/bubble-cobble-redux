@@ -1,8 +1,6 @@
-// priority: 5
 // requires: create
 // requires: biomesoplenty
 // requires: farmersdelight
-// Higher priority means this script loads before!
 
 const MINECRAFT_WOOD_TYPES = ["oak", "birch", "spruce", "jungle", "dark_oak", "acacia", "warped", "crimson", "mangrove", "cherry", "bamboo"]
 
