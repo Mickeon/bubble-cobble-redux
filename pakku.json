@@ -91,6 +91,9 @@
         "discord-chat-connect": {
             "side": "BOTH"
         },
+        "simple-voice-chat": {
+            "side": "BOTH"
+        },
 
         "preloading-tricks": {
             "side": "CLIENT"
