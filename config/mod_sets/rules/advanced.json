@@ -1,0 +1,128 @@
+{
+  "$schema": "https://github.com/SettingDust/ModSets/raw/main/rules.schema.json",
+  "text": {"text": "My Ding-A-Ling","bold": true,"color": "dark_green"},
+  "rules": [
+    {
+      "text": "Development",
+      "description": ["Utilities tailored to the ",{"color":"#76deea","text":"development"}," of ",{"bold":true,"text":"Bubble Cobble"},".\nThey offer useful insight, but may have a notable performance impact.\n\nThese are normally not exported to the modpack. If unsure, ",{"italic":true,"text":"don't worry"},"."],
+      "controller": {
+        "type": "boolean",
+        "id": "development_set"
+      }
+    },
+    {
+      "text": "Miscellaneous",
+      "description": "Self-sustaining mods belonging to no other category.\n\nHonestly this category exists mostly for testing...",
+      "controller": {
+        "type": "mods_group",
+        "collapsed": "true",
+        "ids": [
+          "rrls",
+          "invmove",
+          "invmove_compat",
+          "extendedhotbar",
+          "emojiful",
+          "creativetabplus",
+          "advancementplaques",
+          "hideexperimentalwarning",
+          "one_click_join"
+        ]
+      }
+    },
+    {
+      "text": {"text": "⚠ Danger Zone ⚠", "color": "red", "bold": true},
+      "description": "That sign can't stop me, 'cause I can't read.",
+      "controller": {
+        "type": "rules_group",
+        "collapsed": true,
+        "rules": [
+          {
+            "text": "KubeJS",
+            "description": "Mods focused purely on enshittifying the game.",
+            "controller": {
+              "type": "boolean",
+              "id": "danger_kubejs_set"
+            }
+          },
+          {
+            "text": "Optimization",
+            "description": "Mods focused purely on optimizing the game.",
+            "controller": {
+              "type": "mods_group",
+              "ids": [
+                "modernfix",
+                "entityculling",
+                "particle_core",
+                "saturn",
+                "immediatelyfast",
+                "ferritecore",
+                "sodium",
+                "cerulean",
+                "lithium",
+                "asyncparticles"
+              ]
+            }
+          },
+          {
+            "text": "Sophisticated Storage",
+            "description": "Mods focused purely on optimizing the chests in the game.",
+            "controller": {
+              "type": "mods_group",
+              "ids": [
+                "sophisticatedbackpacks",
+                "sophisticatedcore",
+                "sophisticatedfix",
+                "sophisticatedstorage"
+              ]
+            }
+          },
+          {
+            "text": "Create",
+            "description": "Mods focused purely on optimizing the fun out of the game.",
+            "controller": {
+              "type": "mods_group",
+              "ids": [
+                "create",
+                "createdeco",
+                "create_deepfried",
+                "create_bic_bit",
+                "create_ltab",
+                "cobblemoncreatified",
+                "copycats",
+                "kubejs_create"
+              ]
+            }
+          },
+          {
+            "text": "Cobblemon",
+            "description": "Mods focused purely on playing a different game.",
+            "controller": {
+              "type": "mods_group",
+              "ids": [
+                "cobblemon",
+                "cobblemon_move_inspector",
+                "cobblemonraiddens"
+              ]
+            }
+          },
+          {
+            "text": "Compatibility",
+            "description": "Mods focused purely on integrating the mods in the game.",
+            "controller": {
+              "type": "mods_group",
+              "ids": [
+                "sophisticatedbackpackscreateintegration",
+                "sophisticatedstoragecreateintegration",
+                "queivan",
+                "cobblemonintegrations",
+                "tmtcd",
+                "createmonballsoverhaul",
+                "sliceanddice"
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

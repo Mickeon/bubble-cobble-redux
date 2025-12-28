@@ -31,5 +31,6 @@ StartupEvents.registry("item", event => {
 			.displayName("Music Disc")
 			.rarity("rare")
 			.texture(`kubejs:item/music_disc_${key}`)
+			.unstackable()
 	})
 })
