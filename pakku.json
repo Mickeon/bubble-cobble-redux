@@ -2,7 +2,7 @@
     "name": "Bubble Cobble Redux",
     "description": "A pinch of Cobblemon, Create, Farmer's Delight, and a Bubble Pub aftertaste.",
     "author": "Mickeon",
-    "version": "1.0.0-beta4",
+    "version": "1.0.0-beta5",
     "overrides": [
         "config",
         "configureddefaults",
@@ -69,10 +69,10 @@
         "resource_explorer": {
             "export": false
         },
-        "nbt_ac": {
+        "nbt-autocomplete": {
             "export": false
         },
-        "nbtedit": {
+        "nbtedit-reborn": {
             "export": false
         },
 
@@ -82,17 +82,20 @@
         "geckolib": {
             "side": "BOTH"
         },
-        "xaeroworldmap": {
+        "xaeros-world-map": {
             "side": "BOTH"
         },
-        "xaerominimap": {
+        "xaeros-minimap": {
+            "side": "BOTH"
+        },
+        "discord-chat-connect": {
             "side": "BOTH"
         },
 
-        "preloading_tricks": {
+        "preloading-tricks": {
             "side": "CLIENT"
         },
-        "mod_sets": {
+        "mod-sets": {
             "side": "CLIENT"
         }
     }
