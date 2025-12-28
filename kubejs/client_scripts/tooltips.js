@@ -286,6 +286,22 @@ ItemEvents.dynamicTooltips("add_pelad", event => {
 	}
 })
 
+// /** @type {typeof import("net.neoforged.neoforge.client.event.RenderTooltipEvent$Color").$RenderTooltipEvent$Color } */
+// let $RenderTooltipEvent$Color  = Java.loadClass("net.neoforged.neoforge.client.event.RenderTooltipEvent$Color")
+
+// NativeEvents.onEvent($RenderTooltipEvent$Color, event => {
+	// event.getGraphics().renderFakeItem("kubejs:blue_mascot_cat", event.x, event.y - 8, -20)
+	// event.setBackground(Color.rgba(8, 21, 95, 1).getArgb())
+	// event.setBackgroundStart(Color.rgba(26, 50, 184, 1).getArgb())
+	// event.setBorderStart(Color.rgba(26, 108, 184, 1).getArgb())
+// })
+
+// /** @type {typeof import("squeek.appleskin.api.event.TooltipOverlayEvent$Render").$TooltipOverlayEvent$Render } */
+// let $TooltipOverlayEvent$Render  = Java.loadClass("squeek.appleskin.api.event.TooltipOverlayEvent$Render")
+// NativeEvents.onEvent($TooltipOverlayEvent$Render, event => {
+// 	event.guiGraphics.renderFakeItem("kubejs:blue_mascot_cat", 0, 0 - 8)
+// })
+
 /**
  * @import {$TextActionBuilder} from "dev.latvian.mods.kubejs.text.action.TextActionBuilder"
  * @import {$ModifyItemTooltipsKubeEvent} from "dev.latvian.mods.kubejs.item.ModifyItemTooltipsKubeEvent"

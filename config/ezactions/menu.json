@@ -1,7 +1,7 @@
 [
   {
-    "id": "Map",
-    "title": "Map",
+    "id": "Map...",
+    "title": "Map...",
     "icon": "minecraft:filled_map",
     "note": "Xaero\u0027s World \u0026 Mini Map",
     "bundleKeybindEnabled": true,
@@ -64,8 +64,8 @@
     ]
   },
   {
-    "id": "Configs",
-    "title": "Configs",
+    "id": "Configs...",
+    "title": "Configs...",
     "icon": "supplementaries:wrench",
     "bundleKeybindEnabled": true,
     "children": [
@@ -165,8 +165,8 @@
         }
       },
       {
-        "id": "Advanced",
-        "title": "Advanced",
+        "id": "Advanced...",
+        "title": "Advanced...",
         "icon": "biomesoplenty:rose_quartz_chunk",
         "bundleKeybindEnabled": true,
         "children": [
@@ -258,8 +258,8 @@
     ]
   },
   {
-    "id": "Development (KubeJS \u0026 Co)",
-    "title": "Development (KubeJS \u0026 Co)",
+    "id": "Development... (KubeJS \u0026 Co)",
+    "title": "Development... (KubeJS \u0026 Co)",
     "icon": "brewinandchewin:red_rum",
     "children": [
       {
@@ -306,8 +306,8 @@
     ]
   },
   {
-    "id": "Storage",
-    "title": "Storage",
+    "id": "Storage...",
+    "title": "Storage...",
     "icon": "sophisticatedbackpacks:copper_backpack",
     "note": "Sophisticated Storage \u0026 Co.",
     "bundleKeybindEnabled": true,
@@ -395,8 +395,8 @@
     ]
   },
   {
-    "id": "Toggles",
-    "title": "Toggles",
+    "id": "Toggles...",
+    "title": "Toggles...",
     "icon": "minecraft:lever",
     "bundleKeybindEnabled": true,
     "children": [
