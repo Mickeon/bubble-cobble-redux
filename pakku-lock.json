@@ -2840,7 +2840,7 @@
         {
             "pakku_id": "ATOKRM6N60HaxgWC",
             "type": "MOD",
-            "side": "SERVER",
+            "side": "BOTH",
             "slug": {
                 "modrinth": "discord-chat-connect"
             },
@@ -8185,6 +8185,44 @@
                     "required_dependencies": [],
                     "size": 17464,
                     "date_published": "2024-12-06T15:30:23.502550Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "UDYwkKzVJVy3HArL",
+            "type": "MOD",
+            "side": "CLIENT",
+            "slug": {
+                "modrinth": "sound-physics-remastered"
+            },
+            "name": {
+                "modrinth": "Sound Physics Remastered"
+            },
+            "id": {
+                "modrinth": "qyVF9oeo"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "sound-physics-remastered-neoforge-1.21.1-1.5.1.jar",
+                    "mc_versions": [
+                        "1.21",
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "alpha",
+                    "url": "https://cdn.modrinth.com/data/qyVF9oeo/versions/Dd2tmpsk/sound-physics-remastered-neoforge-1.21.1-1.5.1.jar",
+                    "id": "Dd2tmpsk",
+                    "parent_id": "qyVF9oeo",
+                    "hashes": {
+                        "sha512": "ff7e9f0b968eeb2ba0e833328a122813cad0434cfe2d5c3d527c1c0d564504f13a737fc05f22d3fea562a2f86568d31b95212bf5347dd10da36cd49ad56143a6",
+                        "sha1": "a5ac35ccb902231047709530a5708fb71dc3e3b5"
+                    },
+                    "required_dependencies": [],
+                    "size": 202454,
+                    "date_published": "2025-09-25T14:30:18.415525Z"
                 }
             ]
         },
