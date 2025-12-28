@@ -3,8 +3,6 @@
 // https://github.com/Alchemists-Of-Yore/ClutterNoMore/blob/0a5832a75ccfb65c999b207134cf0f43d369ab96/src/main/java/dev/tazer/clutternomore/common/shape_map/ShapeMap.java
 /** @type {typeof import("dev.tazer.clutternomore.common.shape_map.ShapeMap").$ShapeMap } */
 let $ShapeMap = Java.loadClass("dev.tazer.clutternomore.common.shape_map.ShapeMap")
-/** @type {typeof import("net.minecraft.client.KeyMapping").$KeyMapping } */
-let $KeyMapping  = Java.tryLoadClass("net.minecraft.client.KeyMapping") // Does not exist on dedicated servers.
 // https://discord.com/channels/303440391124942858/1421136321824424059/1421862264654401608
 /** @type {typeof import("net.neoforged.neoforge.client.event.RegisterGuiLayersEvent").$RegisterGuiLayersEvent } */
 let $RegisterGuiLayersEvent  = Java.loadClass("net.neoforged.neoforge.client.event.RegisterGuiLayersEvent")
@@ -17,8 +15,6 @@ NativeEvents.onEvent($RegisterGuiLayersEvent, event => {
 	)
 })
 
-const CHANGE_BLOCK_SHAPE_KEY = Utils.lazy(() => $KeyMapping.getALL().get("key.clutternomore.change_block_shape"))
-const PLACE_BLOCK_KEY = Utils.lazy(() => $KeyMapping.getALL().get("key.use"))
 const TEXT_APPEAR_TIME = 80.0 // 80.0
 let elapsed_time = 0.0
 /**
@@ -35,8 +31,9 @@ global.draw_shape_hint = (gui_graphics, delta_tracker) => {
 	if (held_stack.isEmpty()
 	|| !held_stack.block
 	|| !$ShapeMap.contains(held_stack)
-	|| CHANGE_BLOCK_SHAPE_KEY.get().down
-	|| PLACE_BLOCK_KEY.get().down) {
+	|| global.CHANGE_BLOCK_SHAPE_KEY.down
+	|| global.PLACE_BLOCK_KEY.down
+	) {
 		elapsed_time = 0.0
 		return
 	}

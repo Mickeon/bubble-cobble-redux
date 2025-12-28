@@ -1,11 +1,11 @@
 /** @type {typeof import("net.minecraft.client.KeyMapping").$KeyMapping } */
 let $KeyMapping  = Java.loadClass("net.minecraft.client.KeyMapping")
 
-const DASH_KEY = Utils.lazy(() => $KeyMapping.getALL().get("keybinds.bettercombat.feint"))
-
 ClientEvents.tick(event => {
+	// console.log(global.DASH_KEY)
+	// console.log(Client.options.keyMappings.find(key_mapping => key_mapping.name == "keybinds.bettercombat.feint"))
 	// if (DASH_KEY.consumeClick()) {
-	if (DASH_KEY.get().down) {
+	if (global.DASH_KEY.down) {
 		const angle = event.player.lookAngle
 		event.player.sendData("kubejs:dash", {
 			angle: {
