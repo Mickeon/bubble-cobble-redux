@@ -2,8 +2,8 @@
     "name": "Ice",
     "displayName": "§bIce",
     "pokemon": [
-        "Spheal level=10 nickname=\"The GameSphere\"",
-        "Swinub level=10 nickname\"Soap\"",
-        "Vulpix level=10 alolan nickname=\"Cone\""
+        "Spheal level=10 nickname=\"Blubby\" moves=superfang",
+        "Swinub level=10 nickname=\"Pigy\" hiddenability=yes moves=fissure",
+        "Vulpix alolan level=10 nickname=\"Plum\" hiddenability=yes moves=moonblast"
     ]
 }

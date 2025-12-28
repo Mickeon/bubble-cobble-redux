@@ -2,8 +2,8 @@
     "name": "Electric",
     "displayName": "§eElectric",
     "pokemon": [
-        "Elekid level=10",
-        "Shinx level=10",
-        "Tynamo level=10"
+        "Elekid level=10 nickname=\"Zappelin\" hiddenability=yes moves=crosschop",
+        "Shinx level=10 nickname=\"Dingus Bingus\" moves=nightslash",
+        "Tynamo level=10 nickname=\"Unagi\" moves=knockoff"
     ]
 }

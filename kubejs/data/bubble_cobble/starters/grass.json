@@ -2,8 +2,8 @@
     "name": "Grass",
     "displayName": "§2Grass",
     "pokemon": [
-        "Hoppip level=10",
-        "Bounsweet level=10 nickname=\"Chaste\"",
-        "Seedot level=10"
+        "Bounsweet level=10 nickname=\"Citron\" moves=synthesis",
+        "Seedot level=10 nickname=\"Macadamia\" moves=leechseed",
+        "Poltchageist level=10 nickname=\"Umami\" hiddenability=yes moves=scald"
     ]
 }

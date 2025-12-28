@@ -2,8 +2,8 @@
     "name": "Fighting",
     "displayName": "§4Fighting",
     "pokemon": [
-        "Riolu level=10 nickname=\"Bruh\"",
-        "Timburr level=10 nickname=\"Shaft\"",
-        "Mankey level=10 nickname=\"CVA\""
+        "Riolu level=10 nickname=\"Jonesy\" hiddenability=yes moves=bulletpunch",
+        "Mankey level=10 nickname=\"Brass Monkey\" hiddenability=yes moves=encore",
+        "Tyrogue level=10 nickname=\"Stuntman\" moves=machpunch"
     ]
 }

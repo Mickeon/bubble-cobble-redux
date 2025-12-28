@@ -2,8 +2,8 @@
     "name": "Fire",
     "displayName": "§cFire",
     "pokemon": [
-        "Magby level=10 nickname=\"Tickle\"",
-        "Numel level=10",
-        "Houndour level=10"
+        "Magby level=10 nickname=\"Mabgy\" hiddenability=yes moves=willowisp",
+        "Houndour level=10 nickname=\"Foulander\" hiddenability=yes moves=superfang",
+        "Charcadet level=10 nickname=\"Spiral Knight\" hiddenability=yes moves=destinybond"
     ]
 }

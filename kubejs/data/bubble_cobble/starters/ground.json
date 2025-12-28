@@ -2,8 +2,8 @@
     "name": "Ground",
     "displayName": "§6Ground",
     "pokemon": [
-        "Sandile level=10",
-        "Trapinch level=10 nickname=\"Mob C\"",
-        "Rhyhorn level=10"
+        "Sandile level=10 nickname=\"Yam-Yum\" moves=stealthrock",
+        "Trapinch level=10 nickname=\"Cromchy\" moves=dragondance",
+        "Rhyhorn level=10 nickname=\"The Wall\" hiddenability=yes moves=supercellslam"
     ]
 }

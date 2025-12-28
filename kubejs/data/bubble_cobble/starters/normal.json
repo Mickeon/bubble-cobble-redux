@@ -2,8 +2,8 @@
     "name": "Normal",
     "displayName": "§fNormal",
     "pokemon": [
-        "Munchlax level=10 nickname=\"Poopdeck\"",
-        "Whismur level=10 nickname=\"salami\"",
-        "Teddiursa level=10 nickname=\"Romeo\""
+        "Eevee level=10 nickname=\"Raisin\" moves=wish",
+        "Porygon level=10 nickname=\"EP038\" hiddenability=yes moves=trickroom",
+        "Teddiursa level=10 nickname=\"Romeo\" moves=yawn"
     ]
 }

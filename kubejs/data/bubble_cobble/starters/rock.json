@@ -2,8 +2,8 @@
     "name": "Rock",
     "displayName": "§6Rock",
     "pokemon": [
-        "Roggenrola level=10 nickname=\"Deep Rock\"",
-        "Nacli level=10",
-        "Rolycoly level=10 nickname=\"Charcoal₆₄\""
+        "Roggenrola level=10 nickname=\"Bowling Ball\" moves=curse",
+        "Nacli level=10 nickname=\"Pretzel\" moves=bodypress",
+        "Rolycoly level=10 nickname=\"Charcoal₆₄\" moves=willowisp"
     ]
 }

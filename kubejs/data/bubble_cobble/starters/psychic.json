@@ -2,8 +2,8 @@
     "name": "Psychic",
     "displayName": "§dPsychic",
     "pokemon": [
-        "Ralts level=10 nickname=\"Coconut Head\"",
-        "Solosis level=10 nickname=\"N.Brio\"",
-        "Slowpoke level=10 galarian"
+        "Ralts level=10 nickname=\"Gender\" moves=healbell",
+        "Solosis level=10 nickname=\"11-12-2007\" hiddenability=yes moves=trickroom",
+        "Slowpoke galarian level=10 nickname=\"Mind Bullets\" hiddenability=yes moves=calmmind"
     ]
 }

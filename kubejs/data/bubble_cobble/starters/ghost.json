@@ -2,8 +2,8 @@
     "name": "Ghost",
     "displayName": "§5Ghost",
     "pokemon": [
-        "Gastly level=10 nickname=\"Fobìa\"",
-        "Litwik level=10 nickname=\"Candela\"",
-        "Honedge level=10 nickname=\"Honey\""
+        "Gastly level=10 nickname=\"Murdoc\" moves=perishsong",
+        "Litwick level=10 nickname=\"Pyro-Jack\" hiddenability=yes moves=clearsmog",
+        "Honedge level=10 nickname=\"Damocles\" moves=falseswipe"
     ]
 }

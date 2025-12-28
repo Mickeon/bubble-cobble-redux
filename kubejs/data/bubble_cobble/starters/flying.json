@@ -2,8 +2,8 @@
     "name": "Flying",
     "displayName": "§bFlying",
     "pokemon": [
-        "Yanma level=10 nickname=\"Messeger of God\"",
-        "Rookidee level=10 nickname=\"Boob\"",
-        "Starly level=10 nickname=\"Ranger\""
+        "Yanma level=10 nickname=\"Sparx\" moves=signalbeam",
+        "Starly level=10 nickname=\"Ranger\" hiddenability=yes moves=doubleedge",
+        "Drifloon level=10 nickname=\"M.O.A.B.\" hiddenability=yes moves=tailwind"
     ]
 }

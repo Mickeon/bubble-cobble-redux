@@ -2,8 +2,8 @@
     "name": "Poison",
     "displayName": "§5Poison",
     "pokemon": [
-        "Zubat level=10",
-        "Budew level=10",
-        "Skorupi level=10"
+        "Budew level=10 nickname=\"Rosette\" hiddenability=yes moves=hiddenpower hp_iv=10 attack_iv=29 defence_iv=4 special_attack_iv=26 special_defence_iv=17 speed_iv=26",
+        "Skorupi level=10 nickname=\"Botulinum\" moves=poisontail",
+        "Toxel level=10 nickname=\"Red Vox\" moves=acidspray"
     ]
 }

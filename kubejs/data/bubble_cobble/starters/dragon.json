@@ -2,8 +2,8 @@
     "name": "Dragon",
     "displayName": "§3Dragon",
     "pokemon": [
-        "Skrelp level=10",
-        "Noibat level=10",
-        "Applin level=10"
+        "Skrelp level=10 nickname=\"Tornado Fries\" hiddenability=yes moves=toxicspikes",
+        "Noibat level=10 nickname=\"Hydrogen Baby\" moves=defog",
+        "Applin level=10 nickname=\"Ambrosia\" moves=dracometeor,grassyglide,suckerpunch"
     ]
 }

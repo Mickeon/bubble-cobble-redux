@@ -2,8 +2,8 @@
     "name": "Water",
     "displayName": "§9Water",
     "pokemon": [
-        "Lotad level=10",
-        "Clauncher level=10",
-        "Horsea level=10"
+        "Lotad level=10 nickname=\"Barclaya\" moves=weatherball",
+        "Clauncher level=10 nickname=\"Gun Devil\" moves=terrainpulse",
+        "Horsea level=10 nickname=\"Oupid\" moves=clearsmog"
     ]
 }

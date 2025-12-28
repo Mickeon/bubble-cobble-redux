@@ -2,8 +2,8 @@
     "name": "Fairy",
     "displayName": "§dFairy",
     "pokemon": [
-        "Togepi level=10",
-        "Marill level=10",
-        "Flabebe level=10 nickname=\"Pixie\""
+        "Togepi level=10 nickname=\"Toothpaste\" moves=triattack",
+        "Azurill level=10 nickname=\"Belleh\" moves=knockoff",
+        "Flabebe level=10 nickname=\"Magnolia\" moves=healbell"
     ]
 }
