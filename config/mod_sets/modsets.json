@@ -37,7 +37,13 @@
   "sound_set": {
     "mods": [
       "sounds",
-      "more_sounds"
+      "more_sounds",
+      "coolrain"
+    ]
+  },
+  "realistic_sound_set": {
+    "mods": [
+      "sound_physics_remastered"
     ]
   },
   "particle_set": {

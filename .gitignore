@@ -77,3 +77,5 @@
 /config/waves-common.toml
 /config/waves
 /config/parcool*
+/config/presencefootsteps/userconfig.json
+*locomotionmap.json

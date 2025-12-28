@@ -50,7 +50,9 @@
         "!config/sourcecubed-common.toml",
         "!config/waves-common.toml",
         "!config/waves",
-        "!config/parcool*"
+        "!config/parcool*",
+        "!config/presencefootsteps/userconfig.json",
+        "!*locomotionmap.json"
     ],
     "paths": {
         "resource_packs": "global_packs/resourcepacks/",

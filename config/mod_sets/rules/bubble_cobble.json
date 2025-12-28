@@ -39,6 +39,14 @@
         "collapsed": true,
         "rules": [
           {
+            "text": "Realistic Sounds",
+            "description": ["Makes most ",{"color":"#76deea","text":"sounds"}," reverb, echo, and bounce across rooms in an exceedingly, ",{"color":"#76deea","text":"physically-accurate "},"fashion.\n\nThis has a huge performance impact. Disable if you believe the ",{"color":"dark_aqua","text":"CPU"}," is struggling.\nThese features can also be customized in the ",{"color":"#76deea","text":"Mods > Sound Physics Reloaded "},"menu, but they are ",{"color":"red","text":"reset"}," every Bubble Cobble update."],
+            "controller": {
+              "type": "boolean",
+              "id": "realistic_sound_set"
+            }
+          },
+          {
             "text": "Sounds",
             "description": ["Plays ",{"color":"#76deea","text":"sounds"}," for many more occasions, such as grabbing ",{"color":"#76deea","text":"items"}," and opening ",{"color":"#76deea","text":"menus"},", as well as adding unique ",{"color":"#76deea","text":"block sounds"},".\n\nDisable if the ",{"color":"dark_aqua","text":"CPU"}," is struggling.\nThese features can also be customized in the ",{"color":"#76deea","text":"Mods > Sounds"}, " menu"],
             "controller": {
@@ -64,7 +72,7 @@
           },
           {
             "text": "Shaders",
-            "description": ["",{"color":"blue","text":"Iris","clickEvent":{"action":"open_url","value":"https://www.irisshaders.dev/"}},", the mod that can make everything look like ",{"color":"#fafcff","text":"t"},{"color":"#f6f8fe","text":"h"},{"color":"#f1f5fe","text":"e"},{"color":"#ecf2fe","text":"y "},{"color":"#e3ebfd","text":"h"},{"color":"#dfe8fd","text":"i"},{"color":"#dae5fd","text":"r"},{"color":"#d5e2fd","text":"e"},{"color":"#d1defc","text":"d "},{"color":"#c7d8fc","text":"t"},{"color":"#c3d5fc","text":"h"},{"color":"#bed1fb","text":"a"},{"color":"#bacefb","text":"t "},{"color":"#b0c8fb","text":"m"},{"color":"#acc4fa","text":"a"},{"color":"#a7c1fa","text":"n"},".\n\nTo be honest, even if enabled, it doesn't have ",{"italic":true,"text":"much"}," of an impact on its own. Shaders, on the other hand...\nRemember, shaders can be accessed by pressing ",{"color":"aqua","keybind":"key_iris.keybind.shaderPackSelection"}," and toggled by pressing ",{"color":"aqua","keybind":"key_iris.keybind.toggleShaders"},"."],
+            "description": ["",{"color":"blue","text":"Iris","clickEvent":{"action":"open_url","value":"https://www.irisshaders.dev/"}},", the mod that can make everything look like ",{"color":"#fafcff","text":"t"},{"color":"#f6f8fe","text":"h"},{"color":"#f1f5fe","text":"e"},{"color":"#ecf2fe","text":"y "},{"color":"#e3ebfd","text":"h"},{"color":"#dfe8fd","text":"i"},{"color":"#dae5fd","text":"r"},{"color":"#d5e2fd","text":"e"},{"color":"#d1defc","text":"d "},{"color":"#c7d8fc","text":"t"},{"color":"#c3d5fc","text":"h"},{"color":"#bed1fb","text":"a"},{"color":"#bacefb","text":"t "},{"color":"#b0c8fb","text":"m"},{"color":"#acc4fa","text":"a"},{"color":"#a7c1fa","text":"n"},".\n\nTo be honest, even if enabled, it doesn't have ",{"italic":true,"text":"much"}," of an impact on its own. Shaders, on the other hand...\nRemember, shaders can be accessed by pressing ",{"color":"aqua","keybind":"iris.keybind.shaderPackSelection"}," and toggled by pressing ",{"color":"aqua","keybind":"iris.keybind.toggleShaders"},"."],
             "controller": {
               "type": "boolean",
               "id": "shader_set"
