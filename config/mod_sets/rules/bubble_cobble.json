@@ -16,11 +16,19 @@
       }
     },
     {
-      "text": "EMI",
+      "text": "EMI Recipe Viewer",
       "description": ["The ",{"color":"#76deea","text":"recipe viewer"}," and anything that has to do with it.\n\nDisable if another recipe viewer is desired.\n",{"color":"dark_gray","text":"Fun fact: EMI doesn't stand for anything, really."}],
       "controller": {
         "type": "boolean",
         "id": "emi_set"
+      }
+    },
+    {
+      "text": "Voice Chat",
+      "description": ["",{"color":"#76deea","text":"Simple Voice Chat"}," and other mods that depend on it.\n\nIf disabled, other players will know through an ",{"color":"#76deea","text":"icon"}," next to the nickname."],
+      "controller": {
+        "type": "boolean",
+        "id": "voice_chat_set"
       }
     },
     {
@@ -32,7 +40,7 @@
         "rules": [
           {
             "text": "Sounds",
-            "description": ["Plays ",{"color":"#76deea","text":"sounds"}," for many more occasions, such as grabbing ",{"color":"#76deea","text":"items"}," and opening ",{"color":"#76deea","text":"menus"},", as well as adding unique ",{"color":"#76deea","text":"block sounds"},".\n\nDisable if struggling with ",{"color":"dark_aqua","text":"CPU"}," usage."],
+            "description": ["Plays ",{"color":"#76deea","text":"sounds"}," for many more occasions, such as grabbing ",{"color":"#76deea","text":"items"}," and opening ",{"color":"#76deea","text":"menus"},", as well as adding unique ",{"color":"#76deea","text":"block sounds"},".\n\nDisable if the ",{"color":"dark_aqua","text":"CPU"}," is struggling.\nThese features can also be customized in the ",{"color":"#76deea","text":"Mods > Sounds"}, " menu"],
             "controller": {
               "type": "boolean",
               "id": "sound_set"
@@ -48,7 +56,7 @@
           },
           {
             "text": "Fog",
-            "description": ["Enhances Minecraft's fog to be thicker and more dynamic.\n\nDisable if you believe the ",{"color":"dark_aqua","text":"GPU"}," cannot keep up.\nRemember it can be toggled in-game by pressing ",{"color":"aqua","keybind":"key.fog.toggle"},"."],
+            "description": ["Enhances Minecraft's fog to be thicker and more dynamic.\n\nDisable if you believe the ",{"color":"dark_aqua","text":"GPU"}," cannot keep up.\nRemember, it can be toggled in-game by pressing ",{"color":"aqua","keybind":"key.fog.toggle"},".\nThese features can also be customized in the ",{"color":"#76deea","text":"Mods > Fog"}," menu."],
             "controller": {
               "type": "boolean",
               "id": "fog"
@@ -56,7 +64,7 @@
           },
           {
             "text": "Shaders",
-            "description": ["",{"color":"blue","text":"Iris","clickEvent":{"action":"open_url","value":"https://www.irisshaders.dev/"}},", the mod that can make everything look like ",{"color":"#fafcff","text":"t"},{"color":"#f6f8fe","text":"h"},{"color":"#f1f5fe","text":"e"},{"color":"#ecf2fe","text":"y"},{"color":"#e8effe","text":" "},{"color":"#e3ebfd","text":"h"},{"color":"#dfe8fd","text":"i"},{"color":"#dae5fd","text":"r"},{"color":"#d5e2fd","text":"e"},{"color":"#d1defc","text":"d"},{"color":"#ccdbfc","text":" "},{"color":"#c7d8fc","text":"t"},{"color":"#c3d5fc","text":"h"},{"color":"#bed1fb","text":"a"},{"color":"#bacefb","text":"t"},{"color":"#b5cbfb","text":" "},{"color":"#b0c8fb","text":"m"},{"color":"#acc4fa","text":"a"},{"color":"#a7c1fa","text":"n"},".\n\nTo be honest, even if enabled, it doesn't have ",{"italic":true,"text":"much"}," of an impact on its own. Shaders, on the other hand..."],
+            "description": ["",{"color":"blue","text":"Iris","clickEvent":{"action":"open_url","value":"https://www.irisshaders.dev/"}},", the mod that can make everything look like ",{"color":"#fafcff","text":"t"},{"color":"#f6f8fe","text":"h"},{"color":"#f1f5fe","text":"e"},{"color":"#ecf2fe","text":"y "},{"color":"#e3ebfd","text":"h"},{"color":"#dfe8fd","text":"i"},{"color":"#dae5fd","text":"r"},{"color":"#d5e2fd","text":"e"},{"color":"#d1defc","text":"d "},{"color":"#c7d8fc","text":"t"},{"color":"#c3d5fc","text":"h"},{"color":"#bed1fb","text":"a"},{"color":"#bacefb","text":"t "},{"color":"#b0c8fb","text":"m"},{"color":"#acc4fa","text":"a"},{"color":"#a7c1fa","text":"n"},".\n\nTo be honest, even if enabled, it doesn't have ",{"italic":true,"text":"much"}," of an impact on its own. Shaders, on the other hand...\nRemember, shaders can be accessed by pressing ",{"color":"aqua","keybind":"key_iris.keybind.shaderPackSelection"}," and toggled by pressing ",{"color":"aqua","keybind":"key_iris.keybind.toggleShaders"},"."],
             "controller": {
               "type": "boolean",
               "id": "shader_set"
@@ -64,7 +72,7 @@
           },
           {
             "text": "Animation",
-            "description": ["Enhances ",{"color":"#76deea","text":"animations "},"on several occasions.\n\nDisable if you believe the ",{"color":"dark_aqua","text":"CPU"}," cannot keep up."],
+            "description": ["Enhances ",{"color":"#76deea","text":"player animations "},"on several occasions. From showing players holding ",{"color":"#76deea","text":"Torches"}," upwards, to rummaging their ",{"color":"#76deea","text":"Inventory"},".\n\nDisable if you believe the ",{"color":"dark_aqua","text":"CPU"}," and ",{"color":"dark_aqua","text":"GPU"}," cannot keep up."],
             "controller": {
               "type": "boolean",
               "id": "animation_set"
@@ -160,7 +168,6 @@
           "extendedhotbar",
           "emojiful",
           "creativetabplus",
-          "chunky",
           "advancementplaques",
           "hideexperimentalwarning",
           "one_click_join"

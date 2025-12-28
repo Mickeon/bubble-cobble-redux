@@ -19,6 +19,13 @@
       "toomanyrecipeviewers"
     ]
   },
+  "voice_chat_set": {
+    "mods": [
+      "voicechat",
+      "voicechat_api",
+      "cpmsvcc"
+    ]
+  },
   "xaero_map_set": {
     "mods": [
       "maplink",
@@ -79,6 +86,7 @@
       "moogs_structures",
       "mvs",
       "mss",
+      "mns",
       "underground_bunkers",
       "repurposed_structures",
       "repurposed_structures_farmers_delight_compat"
