@@ -5,11 +5,11 @@
 		,
 		["",{"color":"#546d1b","text":"You can get string from killing spiders, or destroying cobwebs or tripwires."}]
 		,
-		["",{"color":"dark_aqua","text":"","extra":[{"bold":true,"text":"DID YOU KNOW? "},"Notch accidentally invented the creeper when he was trying to make a pig!"]}]
+		["",{"color":"dark_aqua","bold":true,"text":"DID YOU KNOW? "},"Notch accidentally invented the creeper when he was trying to make a pig!"]
 		,
-		["",{"color":"dark_aqua","text":"If a creeper is struck by lighting, it becomes a charged creeper, which will make it even more dangerous and explosive. Stay away!"}]
+		["If a ",{"color":"aqua","text":"creeper"}," is struck by lighting, it becomes a ",{"color":"aqua","text":"charged creeper"},", which will make it even more dangerous and explosive. Stay away!"]
 		,
-		["",{"color":"dark_aqua","text":"Chainmail armor also exists, although this can't be crafted."},"\n",{"color":"dark_aqua","text":"You can only get chainmail armor if a mob is wearing it and then drops it, or through trading with villagers."}]
+		["",{"color":"aqua","text":"Chainmail armor"}," also exists, although this can't be crafted.\nYou can only get ",{"color":"aqua","text":"chainmail armor"}," if a mob is wearing it and then drops it, or through trading with ",{"color":"aqua","text":"villagers"},"."]
 		,
 		["",{"color":"dark_aqua","text":"","extra":[{"bold":true,"text":"DID YOU KNOW? "},"If you dye your sheep before breeding them, the resulting baby sheep will also be dyed. It will either be the color of one of its parents, or a combination of the two if they are compatible colors."]}]
 		,

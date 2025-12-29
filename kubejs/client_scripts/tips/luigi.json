@@ -3,7 +3,7 @@
 	"tips": [
 		["Wow! You're smack in the\nmiddle of the battlefield.\nYou'll find the Power\nStars that Bowser stole\ninside the painting\nworlds.\n\nFirst, talk to the\nBob-omb Buddy. (Press ",{"bold":true,"text":"B"},"\nto talk.) He'll certainly\nhelp you out, and so will\nhis comrades in other\nareas.\n\nTo read signs, stop, face\nthem and press ",{"bold":true,"text":"B"},". Press ",{"bold":true,"text":"A"},"\nor ",{"bold":true,"text":"B"}," to scroll ahead. You\ncan talk to some other\ncharacters by facing them\nand pressing ",{"bold":true,"text":"B"},"."]
 		,
-		"PROTIP: To defeat the Cyberdemon, shoot at it until it dies."
+		["",{"bold":true,"text":"PROTIP:"}," To defeat the Cyberdemon, shoot at it until it dies."]
 		,
 		"The Nintendo 64 Control Stick uses an analog system to read the angles and directions of its movement. This allows subtle control that is not possible using the conventional + Control Pad."
 		,

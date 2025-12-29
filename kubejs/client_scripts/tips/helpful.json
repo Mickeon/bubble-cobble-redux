@@ -2,19 +2,31 @@
 	"title": {"text":"Tip", "bold": true, "underlined": true, "color": "#76D0EC"},
 	"helpful": true,
 	"tips": [
-		"The Blackboard accepts more than just dyes. Try Apricorns, Mints, Ingots... Chocolate?",
-		"A Copper Stick is quite the formidable tool for such a cheap price. Satisfactory.",
-		"Do you have a Charting Map yet? It's time to make a path...",
-		"Look up \"Mod presets\" to toggle a few mods you HATE.",
-		"Many bird Pokémon can be brushed for their feathers.",
-		"In the Inventory, click on the top-right icon on the character to open the Accessories menu. You can hide your armor in here!",
-		"The colored hearts roughly represent your Food Diversity. The richer your diet is, the greater its benefits. So, try cooking something new.",
-		"Higher Food Diversity means you'll go hungry less often!",
-		"Loads of slabs and stairs are no more clutter. Press TAB to bring up the Shape Selector.",
-		"Transgender people can double jump. It's got to be either the testosterone, the gaming mouse, or both.",
-		"Sneaking helps picking up items above and below you. Useful when building perilously!",
-		"Intoxication makes the player unable to gain Saturation from food.",
-		"They say that alcohol makes the pain go away, but it really just delays it until you're no longer Tipsy...",
-		"Food can be safely stored in a Lunch Bag, or a Lunch Basket!"
+		["The ",{"color":"#7CB3D6","text":"Blackboard "},"can be drawn on with more than just dyes. Try ",{"color":"#83BED9","text":"Apricorns"},", ",{"color":"#83BED9","text":"Mints"},", ",{"color":"#83BED9","text":"Ingots"},"... ",{"color":"#83BED9","text":"Chocolate"},"?"]
+		,
+		["A ",{"color":"#83BED9","text":"Copper Stick"}," is quite the formidable building tool for such a cheap price. ",{"italic":true,"text":"Satisfactory"},"."]
+		,
+		["Do you have a ",{"color":"#83BED9","text":"Charting Map"}," yet? It's time to make a path..."]
+		,
+		["Go to ",{"color":"#83BED9","text":"Mods > Mod Sets"}," to turn off the few mods you ",{"bold":true,"text":"HATE"},"."]
+		,
+		["Many bird Pokémon can be ",{"color":"#83BED9","text":"brushed"}," for their ",{"color":"#83BED9","text":"Feathers"},"."]
+		,
+		["In the ",{"color":"#83BED9","text":"Inventory"},", click on the top-right icon on the character to open the ",{"color":"#83BED9","text":"Accessories"}," menu.\nYou can wear ",{"color":"#83BED9","text":"vanity armor"},", or ",{"color":"#83BED9","text":"hide your armor"}," in here!\nYou can also access this menu by pressing ",{"color":"aqua","keybind":"accessories.key.open_accessories_screen"},"."]
+		,
+		["The extra colored hearts 🧡 roughly represent your ",{"color":"#83BED9","text":"Food Diversity"},". The richer your diet is, the greater its benefits.\nSo, try cooking something new, something fancy."]
+		,
+		["Higher ",{"color":"#83BED9","text":"Food Diversity"}," means you'll get hungry less often!"]
+		,
+		["Loads of slabs and stairs are no more clutter. Press ",{"color":"aqua","keybind":"key.clutternomore.change_block_shape"}," to bring up the ",{"color":"#83BED9","text":"Shape Selector"},"."]
+		,
+		["",{"color":"#8ec2e4","text":"T"},{"color":"#c2b5ce","text":"r"},{"color":"#f5a9b8","text":"a"},{"color":"#f8c6d0","text":"n"},{"color":"#fce2e7","text":"s"},{"color":"#ffffff","text":"g"},{"color":"#fce2e7","text":"e"},{"color":"#f8c6d0","text":"n"},{"color":"#f5a9b8","text":"d"},{"color":"#c2b5ce","text":"e"},{"color":"#8ec2e4","text":"r"}," people can double jump. It's got to be either the testosterone, the ",{"color":"#83BED9","text":"gaming mouse"},", or ",{"italic":true,"text":"both"},"."],
+		["",{"color":"#83BED9","text":"Sneaking"}," helps picking up items above and below you. Useful when building perilously!"]
+		,
+		["",{"color":"#83BED9","text":"Intoxication"}," makes the player unable to gain ",{"color":"#83BED9","text":"Saturation"}," from food.\nIt's... uhm, that ",{"color":"#faffcd","text":"yellow outline"}," around the morsels 🍖."]
+		,
+		["They say that alcohol makes the pain go away, but it really just ",{"color":"#83BED9","text":"delays the pain"}," until you're no longer ",{"color":"#83BED9","text":"Tipsy"},"..."]
+		,
+		["Food can be safely stored in a ",{"color":"#83BED9","text":"Lunchbag"},", or a ",{"color":"#83BED9","text":"Lunch Basket"},"!"]
 	]
 }

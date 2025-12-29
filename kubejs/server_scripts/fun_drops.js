@@ -51,7 +51,7 @@ EntityEvents.drops("minecraft:player", event => {
 			add_drop(player, Item.of("minecraft:pink_dye"), 0.75)
 			add_drop(player, Item.of("minecraft:amethyst_shard"), 0.75)
 		} break;
-		case "Giuly_Clockwork": { // Name outdated.
+		case "Giuly_Clockwork": {
 			add_drop(player, Item.of("minecraft:blue_dye"), 0.75)
 			// add_drop(player, Item.of("quark:blue_shard", 3), 0.5)
 			add_drop(player, Item.of("minecraft:soul_torch"), 0.25)
