@@ -80,7 +80,7 @@ key_gui.xaero_new_waypoint:key.keyboard.comma:
 key_gui.xaero_waypoints_key:key.keyboard.period:
 key_gui.xaero_enlarge_map:key.keyboard.n:
 key_gui.xaero_toggle_map:key.keyboard.f6:
-key_gui.xaero_toggle_waypoints:key.keyboard.f8:
+key_gui.xaero_toggle_waypoints:key.keyboard.f10:
 key_gui.xaero_toggle_map_waypoints:key.keyboard.unknown:
 key_gui.xaero_toggle_slime:key.keyboard.unknown:
 key_gui.xaero_toggle_grid:key.keyboard.unknown:
@@ -93,7 +93,7 @@ key_gui.xaero_reverse_entity_radar:key.keyboard.unknown:
 key_gui.xaero_toggle_manual_cave_mode:key.keyboard.unknown:
 key_gui.xaero_alternative_list_players:key.keyboard.unknown:
 key_gui.xaero_toggle_tracked_players_on_map:key.keyboard.unknown:
-key_gui.xaero_toggle_tracked_players_in_world:key.keyboard.f7:
+key_gui.xaero_toggle_tracked_players_in_world:key.keyboard.f9:
 key_gui.xaero_toggle_pac_chunk_claims:key.keyboard.unknown:
 key_key.clutternomore.change_block_shape:key.keyboard.tab:
 key_key.sidekick.teleport:key.keyboard.unknown:
@@ -153,8 +153,8 @@ key_key.carry.desc:key.keyboard.unknown:
 key_key.cnc.whistle:key.keyboard.unknown:
 key_key.cnc.caribou_dash:key.keyboard.space:
 key_key.extendedhotbar.switch:key.keyboard.x:
-key_key.extendedhotbar.toggle:key.keyboard.f10:
-key_key.fog.toggle:key.keyboard.f9:
+key_key.extendedhotbar.toggle:key.keyboard.f8:
+key_key.fog.toggle:key.keyboard.f7:
 key_key.kubejs.kubedex:key.keyboard.unknown:
 key_keyinfo.copycats.fill_copycat:key.keyboard.left.alt:
 key_key.crawl:key.keyboard.c:
@@ -181,11 +181,11 @@ key_key.cpm.qa_15:key.keyboard.unknown:
 key_key.cpm.qa_16:key.keyboard.unknown:
 key_key.ezactions.open:key.keyboard.grave.accent:
 key_key.ezactions.open_editor:key.keyboard.keypad.7:
-key_key.ezactions.bundle.map:key.keyboard.unknown:
-key_key.ezactions.bundle.configs:key.keyboard.f4:
-key_key.ezactions.bundle.advanced:key.keyboard.unknown:
-key_key.ezactions.bundle.storage:key.keyboard.h:
-key_key.ezactions.bundle.toggles:key.keyboard.f2:
+key_key.ezactions.bundle.map...:key.keyboard.j:
+key_key.ezactions.bundle.configs...:key.keyboard.f4:
+key_key.ezactions.bundle.advanced...:key.keyboard.unknown:
+key_key.ezactions.bundle.storage...:key.keyboard.h:
+key_key.ezactions.bundle.toggles...:key.keyboard.f2:
 key_key.jade.config:key.keyboard.unknown:
 key_key.jade.show_overlay:key.keyboard.unknown:
 key_key.jade.toggle_liquid:key.keyboard.unknown:
@@ -193,7 +193,6 @@ key_key.jade.show_recipes:key.keyboard.unknown:
 key_key.jade.show_uses:key.keyboard.u:
 key_key.jade.narrate:key.keyboard.unknown:
 key_key.jade.show_details:key.keyboard.left.shift:
-key_key.nbtedit.shortcut:key.keyboard.home:
 key_key.craftpresence.config_keycode.name:key.keyboard.unknown:
-key_key.entityculling.toggle:key.keyboard.unknown:
 key_keybind.invmove.toggleMove:key.keyboard.unknown:
+key_key.entityculling.toggle:key.keyboard.unknown:

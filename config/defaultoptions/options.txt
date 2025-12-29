@@ -91,7 +91,7 @@ menuBackgroundBlurriness:1
 soundCategory_master:0.5033112582781457
 soundCategory_music:0.0528169014084507
 soundCategory_record:1.0
-soundCategory_weather:0.15492957746478872
+soundCategory_weather:0.3028169014084507
 soundCategory_block:1.0
 soundCategory_hostile:1.0
 soundCategory_neutral:0.5035211267605634

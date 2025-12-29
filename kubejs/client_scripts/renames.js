@@ -23,6 +23,8 @@ ClientEvents.lang("en_us", event => {
 	event.add("advancement.create.hand_crank_000", "Cranking it")
 	event.add("item.minecraft.rabbit_stew", "Mimiga Stew")
 	event.add("item.minersdelight.rabbit_stew_cup", "Mimiga Stew Cup")
+	event.add("item.minecraft.lead", "Leash")
+	event.add("entity.minecraft.wandering_trader", "Free Leash Guy")
 
 	// Both Biomes o0 Plenty and Biomes We've Gone have Redwood wood.
 	Ingredient.of(/^biomesoplenty:.*redwood/).itemIds.forEach(item_id => {

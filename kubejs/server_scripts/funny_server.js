@@ -26,14 +26,14 @@ ServerEvents.recipes(event => {
 		},
 	)
 	event.recipes.create.crushing([
-			CreateItem.of("2x " + "minecraft:light_blue_dye"),
-			CreateItem.of("2x " + "minecraft:light_blue_dye", 0.5)
+			CreateItem.of(Item.of("minecraft:light_blue_dye", 2)),
+			CreateItem.of(Item.of("minecraft:light_blue_dye", 2), 0.5)
 		],
 		"kubejs:blue_mascot_cat"
 	)
 	event.recipes.create.milling([
-			CreateItem.of("2x " + "minecraft:light_blue_dye"),
-			CreateItem.of("2x " + "minecraft:light_blue_dye", 0.5)
+			CreateItem.of(Item.of("minecraft:light_blue_dye", 2)),
+			CreateItem.of(Item.of("minecraft:light_blue_dye", 2), 0.5)
 		],
 		"kubejs:blue_mascot_cat"
 	)
