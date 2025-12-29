@@ -1,4 +1,3 @@
-// requires:sounds
 // NOTE: Sounds's block definitions refresh after a full restart.
 
 ServerEvents.tags("block", event => {

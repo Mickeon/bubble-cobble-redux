@@ -152,7 +152,10 @@
     "fuzs.statuemenus.api.v1.client.gui.screens.ArmorStandEquipmentScreen": true,
     "fuzs.armorstatues.client.gui.screens.armorstand.ArmorStandAlignmentsScreen": true,
     "fuzs.statuemenus.api.v1.client.gui.screens.ArmorStandPositionScreen": true,
-    "fuzs.statuemenus.api.v1.client.gui.screens.ArmorStandStyleScreen": true
+    "fuzs.statuemenus.api.v1.client.gui.screens.ArmorStandStyleScreen": true,
+    "net.minecraft.client.gui.screens.social.SocialInteractionsScreen": true,
+    "org.embeddedt.modernfix.screen.ModernFixOptionInfoScreen": true,
+    "net.mehvahdjukaar.supplementaries.client.screens.RedMerchantScreen": true
   },
   "hideBackground": {
     "dev.emi.emi.screen.RecipeScreen": false,

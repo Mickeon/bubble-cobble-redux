@@ -2,6 +2,13 @@
 // requires: biomesoplenty
 // requires: farmersdelight
 
+// DO NOT USE the { output: } filter unless Brewin' and Chewin' recipes are filtered out, because on a dedicated server the script fails with this:
+// UnknownKubeRecipe.java#64: Error in 'ServerEvents.recipes': java.lang.NullPointerException:
+// Cannot invoke "umpaz.brewinandchewin.common.BnCConfiguration$Common.keg()"
+// because the return value of "house.greenhouse.greenhouseconfig.api.GreenhouseConfigHolder.get()" is null
+// `/reload` "fixes" it but I'd rather not have to reload Datapacks every server reboot.
+// event.remove({ output: "create:gearbox" }) // Big no-no, indeed.
+
 const MINECRAFT_WOOD_TYPES = ["oak", "birch", "spruce", "jungle", "dark_oak", "acacia", "warped", "crimson", "mangrove", "cherry", "bamboo"]
 
 ServerEvents.tags("item", event => {
@@ -18,8 +25,9 @@ ServerEvents.tags("item", event => {
 })
 
 ServerEvents.recipes(event => {
+	console.log("Changing recipes in misc.js")
 	// Lower overall cost of Gearbox.
-	event.remove({ output: "create:gearbox" })
+	event.remove({ id: "create:gearbox" })
 	event.shapeless(Item.of("create:gearbox"), ["create:andesite_casing", "2x create:large_cogwheel"])
 
 	// Recycle diamond tools & armor.

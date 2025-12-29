@@ -12,7 +12,7 @@ ServerEvents.tags("item", event => {
 	event.add("c:foods/cooked_fish", "create_bic_bit:cooked_herring")
 	event.add("c:foods/food_poisoning", "minersdelight:copper_carrot", "minersdelight:bat_wing", "minersdelight:arthropod", "minersdelight:squid", "farmersdelight:wheat_dough", "farmersdelight:raw_pasta", "mynethersdelight:ghasta", "mynethersdelight:ghast_dough")
 	event.add("c:foods/edible_when_placed", "#farmersdelight:feasts") // TODO: Report this, Stuffed Squid & co. missing. For our case we can just assume every Feast counts.
-	event.add("c:paper", "create_bic_bit:dirty_paper") // Reported: https://github.com/yajatkaul/CobblemonMegaShowdown/issues/144
+	event.add("c:paper", "create_bic_bit:dirty_paper")
 	event.add("c:doughs/wheat", "#c:dough/wheat") // Reported: https://github.com/vectorwing/FarmersDelight/issues/1215
 	event.add("c:buckets", "sliceanddice:fertilizer_bucket", "create_bic_bit:ketchup_bucket", "create_bic_bit:mayonnaise_bucket", "create_bic_bit:frying_oil_bucket", "biomesoplenty:blood_bucket", "undergroundworlds:quicksand_bucket", "biomesoplenty:liquid_null_bucket", /*"reptilian:treat_bucket",*/ "sophisticatedcore:xp_bucket") // TODO: Report this.
 	event.add("c:buckets/entity_water", "create_bic_bit:herring_bucket") // Reported: https://discord.com/channels/1141667941935501442/1448294211542716550/1448294211542716550

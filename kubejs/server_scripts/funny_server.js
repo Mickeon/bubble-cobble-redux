@@ -8,6 +8,7 @@ let $Player  = Java.loadClass("net.minecraft.world.entity.player.Player")
 let $FoodBuilder  = Java.loadClass("dev.latvian.mods.kubejs.item.FoodBuilder")
 
 ServerEvents.recipes(event => {
+	console.log("Changing recipes in funny_server.js")
 	event.recipes.create.mechanical_crafting(
 		Item.of("kubejs:blue_mascot_cat", {"minecraft:custom_data": {crafted: true}}), [
 			" AAA ",
