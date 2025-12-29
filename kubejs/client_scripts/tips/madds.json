@@ -3,7 +3,7 @@
 	"tips": [
 		["",{"bold":true,"text":"Food!!"}," Everybody loves food! Keep your food palette diverse for some yummy rewards!"]
 		,
-		["",{"text":"Pokemon enjoy "},{"color":"gold","text":"delicious sweets!"},{"text":" Mix and match different berries to draw out different types of "},{"color":"gold","italic":true,"text":"special"},{"text":"Pokemon!"}]
+		["",{"text":"Pokemon enjoy "},{"color":"gold","text":"delicious sweets!"},{"text":" Mix and match different berries to draw out different types of "},{"color":"gold","italic":true,"text":"special"},{"text":" Pokemon!"}]
 		,
 		["Pokemon enjoy ",{"color":"gold","text":"delicious sweets!"}," Mix and match different berries to draw out different types of ",{"color":"gold","italic":true,"text":"special"},"Pokemon!"]
 		,

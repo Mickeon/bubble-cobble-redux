@@ -39,15 +39,16 @@ const HELPFUL_CYCLE_TIME = 20000
 ClientEvents.generateAssets("before_mods", event => {
 	TIPS_FILENAMES.forEach(name => {
 		const path = TIPS_FOLDER_PATH + name + ".json"
-		const obj = JsonUtils.toObject(JsonIO.readJson(path))
+
+		const obj = try_read_and_parse_json(path)
 		if (!obj) {
-			console.warn(`Could not read JSON at path ${path}. Skipping.`)
+			console.warn(`Could not parse JSON at path ${path}. Skipping.`)
 			return
 		}
 
 		const title = obj.title ?? TITLE_PLACEHOLDER
 		const text_list = (Array.isArray(obj) ? obj : (obj.tips ?? []))
-		const helpful = Boolean(obj.helpful) // Undocumented.
+		const helpful = Boolean(obj.helpful)
 
 		console.log(`Found ${text_list.length} tips in \"${name}\"`)
 
@@ -151,4 +152,14 @@ function markdown_string_to_component(str) {
 	}
 
 	return final_text
+}
+
+
+function try_read_and_parse_json(path) {
+	try {
+		return JSON.parse(JsonIO.readJson(path).toString())
+	} catch (error) {
+		console.error(error)
+		return null
+	}
 }
