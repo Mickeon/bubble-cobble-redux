@@ -9304,6 +9304,43 @@
             ]
         },
         {
+            "pakku_id": "Aw55MRmms4dM5BHi",
+            "type": "MOD",
+            "side": "SERVER",
+            "slug": {
+                "modrinth": "navas-zamega"
+            },
+            "name": {
+                "modrinth": "[Cobblemon] Navas' ZAmega"
+            },
+            "id": {
+                "modrinth": "2V1Y86sc"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "zamega-neoforge-1.4.3.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/2V1Y86sc/versions/ceWqz9zh/zamega-neoforge-1.4.3.jar",
+                    "id": "ceWqz9zh",
+                    "parent_id": "2V1Y86sc",
+                    "hashes": {
+                        "sha512": "cc4d7c38faee1919c251e0fc62d1289e1bc6d11df9c1c2fb521b9454638b89dd81742ec9dac456667b6e66806a23d77f044389cd3312c4b4fdf57d221101fe20",
+                        "sha1": "1e66693d28f38d8dfe6b8339dd2694c347a8114a"
+                    },
+                    "required_dependencies": [],
+                    "size": 2163029,
+                    "date_published": "2025-12-30T09:36:20.616899Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "hQg4prIxmHXaUgkg",
             "pakku_links": [
                 "2yEhDv4DiDHeNYOg"
