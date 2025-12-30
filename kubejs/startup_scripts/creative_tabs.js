@@ -250,6 +250,10 @@ StartupEvents.modifyCreativeTab("minecraft:tools_and_utilities", event => {
 	event.add("sereneseasons:calendar")
 	event.add("haventrowel:trowel")
 })
+StartupEvents.modifyCreativeTab("ribbits:general", event => {
+	event.add("wanderer_ribbit:wanderer_ribbit_spawn_egg")
+	event.addAfter("ribbits:maraca", ["wanderer_ribbit:umbrellaleaf", "wanderer_ribbit:ribbit_map"])
+})
 
 // Remove all non-max level Enchanted Books from searches, which is more than whatever mod is doing this already.
 // Commenting out for now, as it fails on startup for some reason.

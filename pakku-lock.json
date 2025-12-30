@@ -9304,6 +9304,48 @@
             ]
         },
         {
+            "pakku_id": "0ScERRmTXes0Tg2J",
+            "pakku_links": [
+                "2yEhDv4DiDHeNYOg"
+            ],
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "modrinth": "yori3os-grappling-hooks"
+            },
+            "name": {
+                "modrinth": "Yori3o's Grappling Hooks"
+            },
+            "id": {
+                "modrinth": "t1p8V2nl"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "yo_hooks-neoforge-3.3.0.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/t1p8V2nl/versions/Excy78lB/yo_hooks-neoforge-3.3.0.jar",
+                    "id": "Excy78lB",
+                    "parent_id": "t1p8V2nl",
+                    "hashes": {
+                        "sha512": "e2f8300db6d6a57fec5f1eaf8f922dc6848e04a32b9b044d5e1cd12e170e6375e57cf0aa45474b99ff1d4d2118bc82b76804895dfd56a35218ad8a4dbd6929a6",
+                        "sha1": "82f046c85cd4abd1e5a48adad1575293ea6250c4"
+                    },
+                    "required_dependencies": [
+                        "lhGA9TYQ"
+                    ],
+                    "size": 431648,
+                    "date_published": "2025-12-29T19:21:42.670355Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "Aw55MRmms4dM5BHi",
             "type": "MOD",
             "side": "SERVER",

@@ -25,6 +25,7 @@ ClientEvents.lang("en_us", event => {
 	event.add("item.minersdelight.rabbit_stew_cup", "Mimiga Stew Cup")
 	event.add("item.minecraft.lead", "Leash")
 	event.add("entity.minecraft.wandering_trader", "Free Leash Guy")
+	event.add("haventrowel", "item.haventrowel.trowel", "Trowel at Home")
 
 	// Both Biomes o0 Plenty and Biomes We've Gone have Redwood wood.
 	Ingredient.of(/^biomesoplenty:.*redwood/).itemIds.forEach(item_id => {

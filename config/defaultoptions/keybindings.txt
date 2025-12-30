@@ -155,6 +155,9 @@ key_key.cnc.caribou_dash:key.keyboard.space:
 key_key.extendedhotbar.switch:key.keyboard.x:
 key_key.extendedhotbar.toggle:key.keyboard.f8:
 key_key.fog.toggle:key.keyboard.f7:
+key_key.yo_hooks.jump:key.keyboard.r:
+key_key.yo_hooks.climb:key.keyboard.space:
+key_key.yo_hooks.climb_down:key.keyboard.left.shift:
 key_key.kubejs.kubedex:key.keyboard.unknown:
 key_keyinfo.copycats.fill_copycat:key.keyboard.left.alt:
 key_key.crawl:key.keyboard.c:

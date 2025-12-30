@@ -1,0 +1,13 @@
+{
+  "ironHookDurabitility": 72,
+  "goldHookDurabitility": 36,
+  "diamondHookDurabitility": 144,
+  "netheriteHookDurabitility": 216,
+  "ironHookLength": 13,
+  "goldHookLength": 32,
+  "diamondHookLength": 21,
+  "netheriteHookLength": 26,
+  "climbSpeed": 0.25,
+  "softHook": false,
+  "stiffness": 0.1
+}

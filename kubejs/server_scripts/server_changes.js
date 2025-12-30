@@ -292,3 +292,39 @@ PlayerEvents.decorateChat(event => {
 		event.component = String(message).replace(regex, "[Image]($&)")
 	}
 })
+
+
+// Some items don't abide by the Mending Reworked balance. Let's have them to, albeit jankily.
+// Use Diamonds instead of Netherite Ingots to repair Netherite tools.
+ServerEvents.tags("item", event => {
+	event.add("bubble_cobble:netherite_diamond_repairable",
+		"constructionstick:netherite_stick",
+		"yo_hooks:netherite_grappling_hook",
+	)
+})
+
+/** @type {typeof import("net.neoforged.neoforge.event.AnvilUpdateEvent").$AnvilUpdateEvent } */
+let $AnvilUpdateEvent  = Java.loadClass("net.neoforged.neoforge.event.AnvilUpdateEvent")
+NativeEvents.onEvent($AnvilUpdateEvent, event => {
+	const { left, right } = event
+
+	if (left.hasTag("bubble_cobble:netherite_diamond_repairable") && right.id == "minecraft:netherite_ingot") {
+		event.setCanceled(true)
+	}
+
+	if (left.hasTag("bubble_cobble:netherite_diamond_repairable") &&
+		(right.id == "minecraft:diamond"
+		|| right.id == "minecraft:netherite_scrap")
+	) {
+		if (left.damageValue <= 0) {
+			event.setCanceled(true)
+		}
+		const output = left.copy()
+		const repair_amount = Math.floor(output.maxDamage * 0.33)
+		const new_damage = Math.max(output.damageValue - repair_amount, 0)
+		output.damageValue = new_damage
+		event.cost = 1
+		event.materialCost = 1
+		event.output = output
+	}
+});

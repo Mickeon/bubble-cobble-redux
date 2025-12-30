@@ -1,0 +1,20 @@
+{
+  "keys": [
+    "ribbits:maraca",
+    "ribbits:ribbit_nitwit_spawn_egg",
+    "ribbits:ribbit_fisherman_spawn_egg",
+    "ribbits:ribbit_gardener_spawn_egg",
+    "ribbits:ribbit_merchant_spawn_egg",
+    "ribbits:ribbit_sorcerer_spawn_egg",
+    "wanderer_ribbit:wanderer_ribbit_spawn_egg",
+    "wanderer_ribbit:umbrellaleaf",
+    "minecraft:ochre_froglight",
+    "minecraft:verdant_froglight",
+    "minecraft:pearlescent_froglight",
+    "minecraft:frog_spawn_egg",
+    "create:package_frogport"
+  ],
+  "pitch": 1.25,
+  "soundEvent": "ribbits:entity.ribbit.hurt",
+  "volume": 0.25
+}
