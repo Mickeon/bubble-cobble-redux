@@ -366,7 +366,7 @@
                 "Bk7wmInKb2yQxAJF"
             ],
             "type": "MOD",
-            "side": "CLIENT",
+            "side": "BOTH",
             "slug": {
                 "modrinth": "armor-statues"
             },
@@ -5141,7 +5141,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "lootr-neoforge-1.21.1-1.11.36.105.jar",
+                    "file_name": "lootr-neoforge-1.21.1-1.11.36.106.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -5149,16 +5149,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/EltpO5cN/versions/q7WFZhjB/lootr-neoforge-1.21.1-1.11.36.105.jar",
-                    "id": "q7WFZhjB",
+                    "url": "https://cdn.modrinth.com/data/EltpO5cN/versions/9JkMPvMq/lootr-neoforge-1.21.1-1.11.36.106.jar",
+                    "id": "9JkMPvMq",
                     "parent_id": "EltpO5cN",
                     "hashes": {
-                        "sha512": "57a367d74b189cff91c8839b748a1266c0e99c9c7c996ff92de14bacf30b2f13302afa32b2fa1f0ebb97a9137122f7687df0440e38c1ae993188744982395db7",
-                        "sha1": "879998de201460bdccc09db9a90998267151d239"
+                        "sha512": "51fe21fb220a8ae90149ba76a1e95c4d4a508ce93945f681aa68cce041f6d94817c4ce9b30c7feff6dd419c49cdaf24f29da1ab17d1e13df760562ba058a68e2",
+                        "sha1": "54b8973c2d9943c36a148f0876f0d97ca3640ab2"
                     },
                     "required_dependencies": [],
-                    "size": 685779,
-                    "date_published": "2025-12-26T10:37:14.780631Z"
+                    "size": 725449,
+                    "date_published": "2025-12-29T11:05:44.248470Z"
                 }
             ]
         },

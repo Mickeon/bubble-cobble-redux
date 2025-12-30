@@ -21,14 +21,10 @@ const FAILURE = 0
 let nicknames = {}
 
 const TEXT_NICKNAME_HINT = Text.of([
-	Text.of("If you don't know what you're doing, make yourself a nice nickname by clicking on "),
+	Text.of(" 🧊 If you don't know what you're doing, make yourself a nice nickname by clicking on "),
 	Text.of("this website").aqua().underlined().clickOpenUrl("https://text.datapackhub.net/").hover("https://text.datapackhub.net/"),
-	Text.of(" Click on the bottom-left on \"1.21.9+\" and set it to \"pre-1.21.5\", then write something down and click on the Copy icon on the bottom-left."),
+	Text.of(" On the bottom-left, click on \"1.21.9+\" and set it to \"pre-1.21.5\". Write something down, then click on the Copy icon on the bottom-left."),
 ]).color("#83BED9")
-const TEXT_LIMITED_HERE = [
-	Text.of(" 🧊 "),
-	Text.of("I'm limited here. This change will only apply next time you connect.").color("#83BED9")
-]
 
 ServerEvents.loaded(event => {
 	nicknames = try_read_and_parse_json(NICKNAME_JSON_PATH) ?? {}
@@ -117,7 +113,8 @@ function nickname_command(source, new_name) {
 
 		nicknames[player.uuid] = new_nickname
 		JsonIO.write(NICKNAME_JSON_PATH, JsonUtils.objectOf(nicknames))
-
+		player.refreshDisplayName()
+		player.refreshTabListName()
 		source.sendSuccess(
 			Text.translate(`Nicknamed "%s" to "%s".`,
 				Text.of(player.username).color(player.teamColor),
@@ -125,7 +122,6 @@ function nickname_command(source, new_name) {
 			.gray(),
 			true
 		)
-		player.tell(TEXT_LIMITED_HERE)
 		return SUCCESS
 	} catch (error) {
 		console.error(error)
@@ -145,6 +141,8 @@ function nickname_clear_command(source) {
 
 	delete nicknames[player.uuid]
 	JsonIO.write(NICKNAME_JSON_PATH, JsonUtils.objectOf(nicknames))
+	player.refreshDisplayName()
+	player.refreshTabListName()
 	source.sendSuccess(Text.translate(`Cleared nickname for "%s"`, Text.of(player.username).color(player.teamColor)).gray(), true)
 	return SUCCESS
 }
