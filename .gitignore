@@ -46,6 +46,7 @@
 /emi.json
 /options.txt
 /servers.dat*
+/nicknames.json
 
 # Cache.
 /cache
