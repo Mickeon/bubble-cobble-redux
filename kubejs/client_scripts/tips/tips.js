@@ -21,16 +21,17 @@
 const TITLE_PLACEHOLDER = Text.translate("Tip").color("gray").bold().underlined()
 const TIPS_FOLDER_PATH = "kubejs/client_scripts/tips/"
 const TIPS_FILENAMES = [
-	"sol",
-	"candle",
-	"candle_helpful",
-	"helpful",
-	"unhelpful",
 	"blu",
+	"candle_helpful",
+	"candle",
+	"cantie",
+	"helpful",
+	"luigi_handbook",
+	"luigi",
 	"madds",
 	"neo",
-	"luigi",
-	"luigi_handbook",
+	"sol",
+	"unhelpful",
 ]
 const DEBUG_CYCLE_TIME = 5000 // Constant not used, just for reference.
 const DEFAULT_CYCLE_TIME = 15000 // Constant not used, just for reference.
