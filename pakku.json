@@ -2,7 +2,7 @@
     "name": "Bubble Cobble Redux",
     "description": "A pinch of Cobblemon, Create, Farmer's Delight, and a Bubble Pub aftertaste.",
     "author": "Mickeon",
-    "version": "1.0.0-beta6",
+    "version": "1.0.0",
     "overrides": [
         "config",
         "configureddefaults",

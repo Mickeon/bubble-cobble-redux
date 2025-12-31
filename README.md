@@ -1,7 +1,7 @@
 ![Title](https://cdn.modrinth.com/data/cached_images/e656163a353938ac829703baba0c4ee3f8644df6.png)
 ###### _(The modpack still has nothing to do with bubbles. That's just the name of our group, and the icon is our mascot!)_
 
-Bubble Cobble Redux is the sequel to our [prior modpack](https://modrinth.com/modpack/bubble-cobble/), targetted to the members of our semi-private friend group, but potentially enjoyable by others, as well. It is designed to be played in a community setting where people come and go all the time.
+**Bubble Cobble Redux** is the sequel to our [prior modpack](https://modrinth.com/modpack/bubble-cobble/), targetted to the members of our semi-private friend group, but potentially enjoyable by others, as well. It is designed to be played in a community setting where people come and go all the time.
 
 This modpack has been remade, by me alone, from the ground up in order to target `1.21.1`, and is notably less of a kitchen sink compared to last time. It is heavily focused on integrating the original mainstays better, embellishing the mood with new sounds and particles, all the while introducing a few neat things just for the spectacle of it.
 
@@ -12,10 +12,16 @@ The world is prettier than ever to explore thanks to both [Biomes o' Plenty](htt
 As it stands, the modpack includes exclusive features, such as:
 - **Bubble-Cobble** food and drinks! Brewable from a [Keg](https://modrinth.com/mod/brewin-and-chewin).
   - ![Bubble-Cobble food and drinks](https://cdn.modrinth.com/data/cached_images/10dde7a94189e35a0b147c522e659fe9f63abf1f.gif)
-- A food diversity system, rewarding varied susteinance by having to eat less, and faster!
+- A **Food Diversity** system, rewarding varied susteinance by having to eat less, and notably faster!
+- Enemy tweaks. Creepers are somewhat innocuous and fewer hostiles at night.
+- Special sounds and particles when performing certain actions, such as when grabbing items or opening menus. Stylish!
+- A curated, client-side set of... **Mod Sets** to further tweak your experience!
+- Radial menus designed to ease you in and tweak everything to your liking.
+- No more **slabs**, no more **stairs** in your inventory, [Clutter No More](https://modrinth.com/mod/clutter-no-more), with additional tweaks to ease you in on the new mechanic.
+- Nicknames! Nicknames for everyone.
 - Exceedingly helpful tips!
   - !["Candle Tip: Dear Little Johnny, There will soon be GHOSTS! in your living room."](https://cdn.modrinth.com/data/cached_images/01aa1e207bf5e7668add05f115197d9dca22b0bf_0.webp)
-- And several... inside jokes. For the people.
+- And several... inside jokes and easter eggs. For the people, y'see.
 
 ###### Hooray
 
@@ -23,9 +29,8 @@ As it stands, the modpack includes exclusive features, such as:
   <strong>Click below</strong> for the list of included mods so far!
 </summary>
 <details>
-<html><body><ul>
+<ul>
 	<li><a href="https://modrinth.com/mod/jtmvUHXj">Accessories</a> by Blodhgarm, chyzman, Dr.Zeal</li>
-	<li><a href="https://modrinth.com/mod/PEPVViac">AdvancedLootInfo</a> by Yanny</li>
 	<li><a href="https://modrinth.com/mod/9NM0dXub">Advancement Plaques</a> by Grend</li>
 	<li><a href="https://modrinth.com/mod/tLuRLqpa">Advancements Reloaded</a> by @42atomys</li>
 	<li><a href="https://modrinth.com/mod/Gi02250Z">Almanac</a> by frikinjay</li>
@@ -35,6 +40,7 @@ As it stands, the modpack includes exclusive features, such as:
 	<li><a href="https://modrinth.com/mod/bbGCtEvb">Armor Statues</a> by Fuzs</li>
 	<li><a href="https://modrinth.com/mod/hXZ3rcle">Arrow Trails</a> by Biverom</li>
 	<li><a href="https://modrinth.com/mod/c3onkd5k">AsyncParticles</a> by Harvey_Husky</li>
+	<li><a href="https://modrinth.com/mod/Bk8h9V7t">Auto Replace Mod</a> by BarnameNevisetun</li>
 	<li><a href="https://modrinth.com/mod/ptzsjBKT">Awesome dungeon</a> by JTorLeon Studios</li>
 	<li><a href="https://modrinth.com/mod/hn56Bq5n">Awesome dungeon edition ocean</a> by JTorLeon Studios</li>
 	<li><a href="https://modrinth.com/mod/ftdbN0KK">Bad Packets</a> by deirn</li>
@@ -48,6 +54,7 @@ As it stands, the modpack includes exclusive features, such as:
 	<li><a href="https://modrinth.com/mod/HXF82T3G">Biomes O' Plenty</a> by Adubbz, Forstride</li>
 	<li><a href="https://modrinth.com/mod/uy4Cnpcm">Bookshelf</a> by Darkhax</li>
 	<li><a href="https://modrinth.com/mod/hIu9KJTT">Brewin' And Chewin'</a> by Probleyes, Umpaz, MerchantCalico</li>
+	<li><a href="https://modrinth.com/mod/xVbeCJyB">CPM SVC Compat</a> by tom5454</li>
 	<li><a href="https://modrinth.com/mod/joEfVgkn">Carry On</a> by Tschipp, PurpliciousCow</li>
 	<li><a href="https://modrinth.com/mod/dv57xmf9">Cerulean</a> by Toni, Mephodio</li>
 	<li><a href="https://modrinth.com/mod/JaNmzvA8">Chunks Fade In</a> by kerudion (koteinik)</li>
@@ -90,6 +97,7 @@ As it stands, the modpack includes exclusive features, such as:
 	<li><a href="https://modrinth.com/mod/h1E7sQNL">Customizable Player Models</a> by tom5454</li>
 	<li><a href="https://modrinth.com/mod/z2XEADmE">Data Anchor</a> by Corgi Taco</li>
 	<li><a href="https://modrinth.com/mod/WEg59z5b">Default Options</a> by BlayTheNinth</li>
+	<li><a href="https://modrinth.com/mod/yIWYj2mo">Discord &amp; Chat Images</a> by denisnumb</li>
 	<li><a href="https://modrinth.com/mod/BOFbTsjc">Drizzleproof</a> by DavigJ</li>
 	<li><a href="https://modrinth.com/mod/tpehi7ww">Dungeons and Taverns</a> by NovaWostra, Konci, Walls</li>
 	<li><a href="https://modrinth.com/mod/oHjYCS0f">Dungeons and Taverns Jungle Temple Replacement</a> by NovaWostra, Konci, Walls</li>
@@ -134,6 +142,7 @@ As it stands, the modpack includes exclusive features, such as:
 	<li><a href="https://modrinth.com/mod/nvQzSEkH">Jade</a> by Snownee</li>
 	<li><a href="https://modrinth.com/mod/xuDOzCLy">Jade Addons</a> by Snownee</li>
 	<li><a href="https://modrinth.com/mod/SGJfwZzw">JeremySeq's Damage Indicators</a> by JeremySeq</li>
+	<li><a href="https://modrinth.com/mod/edU0NbZZ">Just Hammers</a> by ErrorMikey</li>
 	<li><a href="https://modrinth.com/mod/ordsPcFz">Kotlin for Forge</a></li>
 	<li><a href="https://modrinth.com/mod/umyGl7zF">KubeJS</a> by latvian.dev</li>
 	<li><a href="https://modrinth.com/mod/T38eAZQC">KubeJS Create</a> by latvian.dev</li>
@@ -145,6 +154,7 @@ As it stands, the modpack includes exclusive features, such as:
 	<li><a href="https://modrinth.com/mod/bN3xUWdo">Lodestone</a> by Lodestar</li>
 	<li><a href="https://modrinth.com/mod/fJFETWDN">LootJS</a> by AlmostReliable</li>
 	<li><a href="https://modrinth.com/mod/EltpO5cN">Lootr</a> by Noobanidus</li>
+	<li><a href="https://modrinth.com/mod/ywwXJDli">Lootr &amp; Cobblemon Compatibility</a> by Noobanidus</li>
 	<li><a href="https://modrinth.com/mod/SNVQ2c0g">M.R.U</a> by IMB11 (mineblock11)</li>
 	<li><a href="https://modrinth.com/mod/kiByZ6gx">Map Link</a></li>
 	<li><a href="https://modrinth.com/mod/IEg0z2Uv">Mending Rework</a> by Dusk</li>
@@ -155,6 +165,7 @@ As it stands, the modpack includes exclusive features, such as:
 	<li><a href="https://modrinth.com/mod/nmDcB62a">ModernFix</a> by embeddedt</li>
 	<li><a href="https://modrinth.com/mod/Qekm44BX">Monster Plus</a> by Nitespring</li>
 	<li><a href="https://modrinth.com/mod/1oUDhxuy">Moog's Structure Lib</a> by FinnDog</li>
+	<li><a href="https://modrinth.com/mod/nGUXvjTa">MoogsNetherStructures</a> by FinnDog</li>
 	<li><a href="https://modrinth.com/mod/RJCLIx7k">MoogsSoaringStructures</a> by FinnDog</li>
 	<li><a href="https://modrinth.com/mod/OQAgZMH1">MoogsVoyagerStructures</a> by FinnDog</li>
 	<li><a href="https://modrinth.com/mod/twkfQtEc">Moonlight Lib</a> by MehVahdJukaar</li>
@@ -172,11 +183,10 @@ As it stands, the modpack includes exclusive features, such as:
 	<li><a href="https://modrinth.com/mod/g8NOG5OR">Oh The Trees You'll Grow</a> by Corgi Taco</li>
 	<li><a href="https://modrinth.com/mod/gmVdcG6g">One Click Join</a> by Caoimhe Byrne</li>
 	<li><a href="https://modrinth.com/mod/RSeLon5O">Particle Core</a> by fzzyhmstrs</li>
-	<li><a href="https://modrinth.com/mod/nrikgvxm">Particle Rain</a> by PigCart</li>
+	<li><a href="https://modrinth.com/mod/nrikgvxm">Particle Rain</a> by pigcart</li>
 	<li><a href="https://modrinth.com/mod/pYFUU6cq">Particular</a></li>
 	<li><a href="https://modrinth.com/mod/t5W7Jfwy">Pehkui</a> by Virtuoel</li>
 	<li><a href="https://modrinth.com/mod/gedNE4y2">Player Animator</a> by KosmX</li>
-	<li><a href="https://modrinth.com/mod/YeqRouX2">PlayerName Styler</a> by Sierra</li>
 	<li><a href="https://modrinth.com/mod/tagwiZkJ">Polymorph</a> by Illusive Soulworks</li>
 	<li><a href="https://modrinth.com/mod/FFeAJNCx">PreloadingTricks</a> by SettingDust</li>
 	<li><a href="https://modrinth.com/mod/aaRl8GiW">PrickleMC</a> by Darkhax</li>
@@ -200,6 +210,7 @@ As it stands, the modpack includes exclusive features, such as:
 	<li><a href="https://modrinth.com/mod/e0bNACJD">Serene Seasons</a> by Adubbz, Forstride</li>
 	<li><a href="https://modrinth.com/mod/Cl2eyShu">Server I18n API</a> by IAFEnvoy</li>
 	<li><a href="https://modrinth.com/mod/goA2JoBi">Sidekick</a> by unascribed</li>
+	<li><a href="https://modrinth.com/mod/9eGKb6K1">Simple Voice Chat</a> by Max Henkel</li>
 	<li><a href="https://modrinth.com/mod/yFqR0DNc">SimpleTMs</a></li>
 	<li><a href="https://modrinth.com/mod/Go1Kxy32">Smart Completion</a> by Endor H</li>
 	<li><a href="https://modrinth.com/mod/tah8XIYc">Sneaky Link</a> by DavigJ</li>
@@ -212,6 +223,7 @@ As it stands, the modpack includes exclusive features, such as:
 	<li><a href="https://modrinth.com/mod/MJ0hdevs">Sophisticated Storage Create Integration</a> by P3pp3rF1y</li>
 	<li><a href="https://modrinth.com/mod/X62RCnlU">SophisticatedFix</a> by altep</li>
 	<li><a href="https://modrinth.com/mod/MmUmcwom">Soulbound</a> by iMoonDay</li>
+	<li><a href="https://modrinth.com/mod/qyVF9oeo">Sound Physics Remastered</a> by Sonic Ether, vlad2305m, Max Henkel</li>
 	<li><a href="https://modrinth.com/mod/ZouiUX7t">Sounds</a> by IMB11, cassiancc</li>
 	<li><a href="https://modrinth.com/mod/qwvI41y9">SparseStructures</a> by MaxenceDC</li>
 	<li><a href="https://modrinth.com/mod/eHGYGKJz">Spice of Life Onion</a> by tarinoita, CreativeMD</li>
@@ -237,9 +249,12 @@ As it stands, the modpack includes exclusive features, such as:
 	<li><a href="https://modrinth.com/mod/cs7iGVq1">YUNG's Cave Biomes</a> by YUNGNICKYOUNG, HellionGames, Sully, LudoCrypt, Jasmine, K.jpg, Neko, Frenderman, Refresh Studios</li>
 	<li><a href="https://modrinth.com/mod/ZYgyPyfq">YUNG's Extras</a> by YUNGNICKYOUNG, Acarii</li>
 	<li><a href="https://modrinth.com/mod/1eAoo2KR">YetAnotherConfigLib</a> by isXander</li>
+	<li><a href="https://modrinth.com/mod/t1p8V2nl">Yori3o's Grappling Hooks</a> by Yori3o</li>
 	<li><a href="https://modrinth.com/mod/Eh11TaTm">[Let's Do] HerbalBrews</a> by satisfy</li>
 	<li><a href="https://modrinth.com/mod/b313lC4Y">mod_sets</a></li>
 	<li><a href="https://modrinth.com/mod/ccKDOlHs">oωo</a> by glisco, Blodhgarm, BasiqueEvangelist, Noaaan</li>
+	<li><a href="https://modrinth.com/mod/2V1Y86sc">zamega</a></li>
+</ul>
 </details>
 
 
