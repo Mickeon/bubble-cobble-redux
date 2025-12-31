@@ -30,7 +30,12 @@ ClientEvents.lang("en_us", event => {
 	// Both Biomes o0 Plenty and Biomes We've Gone have Redwood wood.
 	Ingredient.of(/^biomesoplenty:.*redwood/).itemIds.forEach(item_id => {
 		const item_name = Item.of(item_id).hoverName.getString().replace("Redwood", "Redderwood")
+		if (item_name == Item.of(item_id).descriptionId) {
+			console.log(`Could not fetch hover name for ${item_id}. Skipping`)
+			return
+		}
 		event.renameItem(item_id, item_name)
+		console.log(`Rename ${item_id} to "${item_name}"`)
 	})
 	// Both Biomes o' Plenty and Biomes We've Gone have Jacaranda wood.
 	Ingredient.of(/^biomesoplenty:.*jacaranda/).itemIds.forEach(item_id => {

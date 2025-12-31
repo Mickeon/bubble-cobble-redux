@@ -479,43 +479,6 @@
             ]
         },
         {
-            "pakku_id": "JJyXdWgBFxGS1RUB",
-            "type": "MOD",
-            "side": "BOTH",
-            "slug": {
-                "modrinth": "auto-replace"
-            },
-            "name": {
-                "modrinth": "Auto Replace"
-            },
-            "id": {
-                "modrinth": "Bk8h9V7t"
-            },
-            "files": [
-                {
-                    "type": "modrinth",
-                    "file_name": "autoreplacemod-1.0.0-1.21.1.jar",
-                    "mc_versions": [
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/Bk8h9V7t/versions/jkqZdy0T/autoreplacemod-1.0.0-1.21.1.jar",
-                    "id": "jkqZdy0T",
-                    "parent_id": "Bk8h9V7t",
-                    "hashes": {
-                        "sha512": "f7346fea92a5f5786090857862511d39a42cc23cb6690b46481b9dad88ca9238342f0024b7d4879576586f991cab5f63917ac402b44c8afdffff9a6ce557fcb7",
-                        "sha1": "b922674e33b70f481b1a986abe747ee6e63ecf03"
-                    },
-                    "required_dependencies": [],
-                    "size": 13394,
-                    "date_published": "2025-07-05T16:12:54.945098Z"
-                }
-            ]
-        },
-        {
             "pakku_id": "LeF2FvIw5W6PWL11",
             "pakku_links": [
                 "b0DpIvvJrjZ9jtpW"
