@@ -1533,29 +1533,29 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "mega_showdown-neoforge-1.5+1.7.1+1.21.1.jar",
+                    "file_name": "mega_showdown-neoforge-1.5.1+1.7.1+1.21.1-b-2.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
                     "loaders": [
                         "neoforge"
                     ],
-                    "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/SszvX85I/versions/v4TI8xAm/mega_showdown-neoforge-1.5+1.7.1+1.21.1.jar",
-                    "id": "v4TI8xAm",
+                    "release_type": "beta",
+                    "url": "https://cdn.modrinth.com/data/SszvX85I/versions/16L9myt6/mega_showdown-neoforge-1.5.1+1.7.1+1.21.1-b-2.jar",
+                    "id": "16L9myt6",
                     "parent_id": "SszvX85I",
                     "hashes": {
-                        "sha512": "c2da3e7668e15078c5a757b108e935eca317416d5ec486cdf1bbc68671698933b393c12bd6ca13c531a683c88fd504cc84ad61b1909765b24a5adf3c12e4dcf0",
-                        "sha1": "52de28b974906961d47174290991f5783580c058"
+                        "sha512": "ece7e96c839057d05b824877ef617672f7a1785cf3f102953cf8c66beee8f0e12f118b75d74fa26b7908abec07c9c1c44439e1174511d87694975f2c0b386df3",
+                        "sha1": "22caa12c898ff7366f7ef249fcc590b6dac012d3"
                     },
                     "required_dependencies": [
-                        "lhGA9TYQ",
                         "ccKDOlHs",
+                        "MdwFAVRL",
                         "jtmvUHXj",
-                        "MdwFAVRL"
+                        "lhGA9TYQ"
                     ],
-                    "size": 16029559,
-                    "date_published": "2025-12-23T08:37:02.610923Z"
+                    "size": 16119461,
+                    "date_published": "2025-12-31T12:04:45.170255Z"
                 }
             ]
         },
@@ -9479,7 +9479,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "zamega-neoforge-1.4.3.jar",
+                    "file_name": "zamega-neoforge-1.4.4.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -9487,16 +9487,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/2V1Y86sc/versions/ceWqz9zh/zamega-neoforge-1.4.3.jar",
-                    "id": "ceWqz9zh",
+                    "url": "https://cdn.modrinth.com/data/2V1Y86sc/versions/EyCBfOxC/zamega-neoforge-1.4.4.jar",
+                    "id": "EyCBfOxC",
                     "parent_id": "2V1Y86sc",
                     "hashes": {
-                        "sha512": "cc4d7c38faee1919c251e0fc62d1289e1bc6d11df9c1c2fb521b9454638b89dd81742ec9dac456667b6e66806a23d77f044389cd3312c4b4fdf57d221101fe20",
-                        "sha1": "1e66693d28f38d8dfe6b8339dd2694c347a8114a"
+                        "sha512": "2de81d3c5a12232f92815d8aa1ddc8b6c7c86bb30dcab98cec04923f56faaef1e2fbe663bdc24eda08564d2e6b31ed2c598cd0b7e82df0c91a3ff119ff9d87d9",
+                        "sha1": "7fad907813a57acb62d021400f7195d711ee8a3a"
                     },
                     "required_dependencies": [],
-                    "size": 2163029,
-                    "date_published": "2025-12-30T09:36:20.616899Z"
+                    "size": 2163043,
+                    "date_published": "2025-12-31T04:31:35.501563Z"
                 }
             ]
         },
