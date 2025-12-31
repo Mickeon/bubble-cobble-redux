@@ -11,33 +11,19 @@
 		,
 		["Wait wtf? JSON doesn't have comments? That's dumb.\n",{"color":"aqua","text":"Micky"},"? Fix it, please."]
 		,
-		["",{"bold":true,"text":"HEALTH: "},"You start at 100%, but you won't stay there long. At 0% it's time to start over. Try a little harder next time!"]
-		,
 		"You must fight with\nhonor! It is against the\nroyal rules to throw the\nking out of the ring!"
 		,
 		"Collect as many coins as\npossible! They'll refill\nyour Power Meter."
-		,
-		"Shhh! Please walk\nquietly in the hallway!"
-		,
-		"Santa Claus isn't the only one who can go down a chimney!"
-		,
-		"A few artifacts from the other dimension are now laying around and you may want them, too."
 		,
 		["Brush your teeth, ",{"bold":true,"italic":true,"text":"BITCH!"}]
 		,
 		"it is pointless"
 		,
-		"i am in a constant state of unbearable pain please make it stop i beg you"
-		,
 		{"text": " CALL APOGEE\nSAY \"AARDWOLF\"","color":"yellow","bold":true}
 		,
 		["",{"bold":true,"text":"Video unavailable\n"},"This video contains content from UMG, who has blocked it from display on this website or application\n",{"underlined":true,"text":"Watch on YouTube"}]
 		,
-		"every day is robert day"
-		,
 		"Don't ask questions you aren't prepared to handle the answers to."
-		,
-		["Your IP address is ",{"underlined":true,"text":"","extra":[{"obfuscated":true,"text":"192"},".",{"obfuscated":true,"text":"168"},".",{"obfuscated":true,"text":"0"},".",{"obfuscated":true,"text":"1"}]}]
 		,
 		"As a Heavy, the Tomislav not only spins up more quickly than the Minigun, it does so silently! Use it to ambush enemies and take them by surprise!"
 		,
@@ -51,10 +37,6 @@
 		,
 		"Try to hurt the wizard every time you see him."
 		,
-		"Never leave a single puppet alive. Man, puppets, fuck 'em"
-		,
-		"Never stop moving. Ever. Even if your legs fall off."
-		,
 		"Some enemies hate each other almost as much as they hate you."
 		,
 		"Wizards are the leading cause of wizard crimes."
@@ -63,25 +45,13 @@
 		,
 		["uhhh ",{"color":"dark_red","bold":true,"text":"shit"}," uhhh the ",{"color":"dark_red","bold":true,"text":"fuck\n"},"  was i gonna say uhh"]
 		,
-		"\"Buffalo buffalo Buffalo buffalo buffalo buffalo Buffalo buffalo\" is a valid English sentence about buffalos from a city in New York being assholes to other buffalos."
-		,
-		"Because of his confrontational approach to demonstrating his ideas about philosophy in public, Diogenes is often regarded as history's first asshole."
-		,
 		"Take a break once in a while. It's lovely out."
 		,
 		"Hydration is key to victory, so go get yourself a glass of water."
 		,
 		"Get 500,000,000 points to unlock the secret Dracula battle."
 		,
-		"Do you really still need these tips?"
-		,
-		"The simplest things can have hard-earned secrets within them..."
-		,
 		"...actually, you know what? Never mind."
-		,
-		"Take a nice big sip from your favorite beverage, you winner, you."
-		,
-		"Experiment with all the different weapons! You might find a new favorite."
 		,
 		["When getting your items from a ",{"color":"#83BED9","text":"Gravestone"},", note that you can also ",{"color":"aqua","text":"Sneak [","extra":[{"keybind":"key.sneak"},"]"]}," to instantly get your items back, hotbar placement and all!"]
 		,
@@ -89,23 +59,15 @@
 		,
 		"Nothing beats writing notes down on physical paper with a good pen or pencil.\nGo ahead and try it next time you need to jot something down!"
 		,
-		"I was gonna put a cool ASCII art of \"Kilroy was here\" but all the ones I saw were ass, so you just get this tip explaining that."
-		,
 		["Completing your Pokédex will unlock the secret final ",{"color":"aqua","text":"🧊MICKY CHALLENGE🧊"}]
 		,
 		["If you see a truck parked on the top of a cliff, go ahead and check underneath it. There might be a ",{"color":"#f7b8cf","italic":true,"text":"special surprise!"}]
-		,
-		["I can't believe I have to drive all the way to work on a Saturday! ",{"italic":true,"text":"ALL THE WAY TO WORK!"}]
 		,
 		["It's really weird that, unless you want an effect to apply to the entire tip, you need to add a nothing at the beginning (\"\" ← two quotation marks) if you have the first part of it ",{"bold":true,"text":"bold"},", ",{"italic":true,"text":"italicized"},", ",{"color":"#d55580","text":"c"},{"color":"#aa55aa","text":"o"},{"color":"#8055d5","text":"l"},{"color":"#5555ff","text":"o"},{"color":"#5580d5","text":"r"},{"color":"#55aaaa","text":"e"},{"color":"#55d580","text":"d"},", etc."]
 		,
 		"Why don't you try\ngoing to the Casino?"
 		,
-		["Rule 78: If it exists, there's a FNF mod of it\nRule 79: If there isn't one yet, ",{"bold":true,"text":"there will be"}]
-		,
 		"Hey you, yeah you. I see you playing with your dry ass lips\n\nAh ah ah! Don't try and lick them now! Dry ass lip having ass"
-		,
-		["",{"bold":true,"text":"WARNING\n"},"DO NOT PLAY TRACK 1 \nOF THIS GAME CD ON\nANY AUDIO CD PLAYER"]
 		,
 		["Go to your ",{"color":"#4ff9f9","text":"f"},{"color":"#4af4f4","text":"a"},{"color":"#44eeee","text":"m"},{"color":"#3ee8e8","text":"i"},{"color":"#39e3e3","text":"l"},{"color":"#33dddd","text":"y "},{"color":"#28d2d2","text":"c"},{"color":"#22cccc","text":"o"},{"color":"#1cc6c6","text":"m"},{"color":"#17c1c1","text":"p"},{"color":"#11bbbb","text":"u"},{"color":"#0bb5b5","text":"t"},{"color":"#06b0b0","text":"e"},{"color":"#00aaaa","text":"r"}," and download all the\n",{"color":"#ff00ff","text":"cool toolbars"},", ",{"color":"gold","text":"free screensavers"},", and ",{"color":"#8c56c2","text":"Bonzi Buddys"},"!\nDo it\nIt'll be funny"]
 	]
