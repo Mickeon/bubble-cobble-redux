@@ -1,0 +1,46 @@
+
+{
+	"title": {"text":"Cantine's Botany tips", "bold": true, "underlined": true, "color": "blue"},
+	"helpful": false,
+	"tips": [
+		["",{"color":"white","text":"first, you need Cheese for the "},{"color":"blue","underlined":true,"text":"Sweet Berry Cheesecake"},{"color":"white","text":".... Wait, let me google something... "},{"color":"dark_gray","text":"*","extra":[{"italic":true,"text":"loud typing sounds"},"*"]},{"color":"white","text":" Oh! I always thought Cheesecake was just a nickname, kinda like carrot cake....... Wait a second "},{"color":"dark_gray","text":"*","extra":[{"italic":true,"text":"loud typing sounds again"},"*           "]},{"color":"red","bold":true,"italic":true,"text":"WHAT!?"}]
+		,
+		["",{"color":"aqua","text":"M: "},{"color":"white","text":"Candle.\n"},{"color":"red","text":"C: "},{"color":"white","text":"Hi!\n"},{"color":"aqua","text":"M:"},{"color":"white","text":" Completely unrelated; I discovered that in the modpack there's like... Three Limestones.\n"},{"color":"red","text":"C"},{"color":"white","text":": That sucks. Get rid of em\n"},{"color":"aqua","text":"M:"},{"color":"white","text":" Which..... "},{"color":"dark_gray","italic":true,"text":"uninteligable stammering out of pure shock"}]
+		,
+		["",{"color":"dark_red","text":"r"},{"color":"red","text":"u"},{"color":"gold","text":"n"},{"color":"yellow","text":"s "},{"color":"green","text":"g"},{"color":"dark_green","text":"a"},{"color":"aqua","text":"y"},{"color":"dark_aqua","text":"l"},{"color":"blue","text":"y "},{"color":"dark_blue","text":"a"},{"color":"dark_purple","text":"t"},{"color":"light_purple","text":" y"},{"color":"dark_red","text":"o"},{"color":"red","text":"u"}]
+		,
+		["",{"color":"white","text":"Have you thanked "},{"color":"aqua","underlined":true,"text":"Little Mimmy"},{"color":"white","text":" for the modpack yet?"}]
+		,
+		["This Waistline is ",{"color":"blue","underlined":true,"text":"Incomplete\n"},{"color":"white","text":"You can help by "},{"color":"blue","underlined":true,"text":"expanding it"}]
+		,
+		["If you like Create. You should try out ",{"color":"gold","underlined":true,"text":"Factorio! "},{"color":"white","text":"You too could stop playing after automating "},{"color":"green","underlined":true,"text":"Logistics Science Packs."}]
+		,
+		["Look down, do you see a ",{"color":"gold","underlined":true,"text":"Train track? \n"},{"color":"white","text":"If not, carry on.\nIf you do. ","extra":[{"bold":true,"text":"Stand still for an achievement!"}]}]
+		,
+		["Weapons can be ",{"bold":true,"text":"enchanted"}," to add additional strengths to your items! here are a few examples:\n",{"bold":true,"text":"","extra":[{"color":"#301c41","text":"Obsidian"},":"]}," double the weapon's damage\n",{"color":"green","bold":true,"text":"Restorative"},": Heal equal to the weapon's damage\n",{"bold":true,"text":"","extra":[{"color":"yellow","text":"Shielded"},{"color":"white","text":":"}]},{"color":"white","text":" Gain shield equal to this weapon's damage"}]
+		,
+		["Wake up babe, New Kaiju just dropped.\n",{"color":"blue","underlined":true,"text":"            Image of Zorua"}]
+		,
+		["",{"bold":true,"text":"You Cease To Exist When Eating"}]
+		,
+		["",{"color":"white","text":"Here lies "},{"color":"#9A7CF4","underlined":true,"text":"Waigee"},{"color":"white","text":". She had to talk to more than two people at a time."}]
+		,
+		["In order to gain access to the end, you need to construct a ",{"color":"gold","underlined":true,"text":"Rocket silo"},{"color":"white","text":", and put a "},{"color":"gold","underlined":true,"text":"fish"},{"color":"white","text":" inside. If you have a Cargo Bay, a rocket pod will land in it and deliver 1000 "},{"color":"gold","underlined":true,"text":"Space science packs"}]
+		,
+		["You can Right click a ",{"color":"red","text":"Slugma"}," with an empty ",{"color":"gold","text":"blaze burner"}," in hand to use it as a blaze burner!"]
+		,
+		["",{"color":"oklab(0.906424 -0.000235766 -0.0028885)","text":"step 1) make a very absurd bet with your friend\nstep 2) make an equally absurd prize to match "},"\n",{"color":"oklab(0.906424 -0.000235766 -0.0028885)","text":"step 3) ","extra":[{"italic":true,"text":"they're talking about tens of thousands of dollars "}]},"\n",{"color":"oklab(0.906424 -0.000235766 -0.0028885)","text":"step 4)\n \n"},{"color":"oklab(0.999994 0.0000455678 0.0000200868)","bold":true,"text":"February 14th, 2024\nThe \"Papyrus Maze\" Incident"}]
+		,
+		["",{"color":"#212121","text":"You can build faster using building wands and hammers.\n"},{"color":"white","text":"damn, if only you brought your reading glasses"}]
+		,
+		["Act Like A ",{"color":"green","bold":true,"underlined":true,"text":"They/Them\n"},{"color":"white","text":"Look Like A "},{"color":"#dab4fb","bold":true,"underlined":true,"text":"She/Her\n"},{"color":"white","text":"Smoke Like A "},{"bold":true,"underlined":true,"text":"","extra":[{"color":"#87c5ff","text":"He/Him\n"},{"color":"yellow","text":"Francis"}]}]
+		,
+		["",{"color":"dark_red","bold":true,"underlined":true,"text":"POP QUIZ! SOLVE MY FUCKING PUZZLE!\n"},{"font":"minecraft:illageralt","text":"  _________________"},"|\n",{"font":"minecraft:illageralt","text":"|_____/____/____/_|\n|____/____/____/__|"},"\n",{"font":"minecraft:illageralt","text":"|___/____/____/___|\n|__/____/____/____|"},"\n",{"font":"minecraft:illageralt","text":"|_/____/____/_____|\n"},{"bold":true,"text":"o"}]
+		,
+		["",{"color":"yellow","underlined":true,"text":"Always"}," check if you can Click a circle in the sky or in the forest.",{"bold":true,"text":" I","extra":[{"color":"yellow","underlined":true,"text":"t might be an environmental puzzle!"}]}]
+		,
+		["",{"bold":true,"text":"what if we created an automated iron factory together? ☛☚\n"}]
+		,
+		["The world is full of delicacies!",{"bold":true,"text":" "},"have you ever tried a ",{"color":"red","bold":true,"text":"Copper Ingot"},"? or even ",{"color":"#ffc2ee","bold":true,"text":"Polished Rose Quartz"},"? \nMMMMMMmmmmmm.... ",{"color":"red","text":"","extra":[{"bold":true,"text":"Goppe"},"r"]},"......\n"]
+	]
+}

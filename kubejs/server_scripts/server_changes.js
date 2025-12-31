@@ -108,7 +108,7 @@ ItemEvents.dropped(event => {
 ServerEvents.tags("block", event => {
 	event.add("bubble_cobble:no_fast_travel_when_carrying",
 		/sophisticatedstorage:.*(chest|barrel)/,
-		/lootr:/,
+		"#lootr:containers",
 		"gravestone:gravestone"
 	)
 	// This is for later, container sounds.

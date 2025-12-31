@@ -479,6 +479,43 @@
             ]
         },
         {
+            "pakku_id": "JJyXdWgBFxGS1RUB",
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "modrinth": "auto-replace"
+            },
+            "name": {
+                "modrinth": "Auto Replace"
+            },
+            "id": {
+                "modrinth": "Bk8h9V7t"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "autoreplacemod-1.0.0-1.21.1.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/Bk8h9V7t/versions/jkqZdy0T/autoreplacemod-1.0.0-1.21.1.jar",
+                    "id": "jkqZdy0T",
+                    "parent_id": "Bk8h9V7t",
+                    "hashes": {
+                        "sha512": "f7346fea92a5f5786090857862511d39a42cc23cb6690b46481b9dad88ca9238342f0024b7d4879576586f991cab5f63917ac402b44c8afdffff9a6ce557fcb7",
+                        "sha1": "b922674e33b70f481b1a986abe747ee6e63ecf03"
+                    },
+                    "required_dependencies": [],
+                    "size": 13394,
+                    "date_published": "2025-07-05T16:12:54.945098Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "LeF2FvIw5W6PWL11",
             "pakku_links": [
                 "b0DpIvvJrjZ9jtpW"
@@ -3538,7 +3575,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "entityculling-neoforge-1.9.4-mc1.21.1.jar",
+                    "file_name": "entityculling-neoforge-1.9.5-mc1.21.1.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -3546,16 +3583,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/NNAgCjsB/versions/p1xJ9gcC/entityculling-neoforge-1.9.4-mc1.21.1.jar",
-                    "id": "p1xJ9gcC",
+                    "url": "https://cdn.modrinth.com/data/NNAgCjsB/versions/DwB2BGbW/entityculling-neoforge-1.9.5-mc1.21.1.jar",
+                    "id": "DwB2BGbW",
                     "parent_id": "NNAgCjsB",
                     "hashes": {
-                        "sha512": "1c97bcda9ff59b772b89f47beda8c60d08af26984d416af0a065c55b2586f770800e97a7c112bee6debb0cc012697770b62da771b25401be0ec2460476731a8a",
-                        "sha1": "d265fdd6f8c052873f098b7acd5db7617f6d7bc0"
+                        "sha512": "09fa3cfcf5c4b57291a0ebeb358e7fc2a3c0247647249f490680ba1c931263e49b55cba3e585606c2ce1e554140db6523b9e831220f03464d401834067ee540c",
+                        "sha1": "0b4a085c1b79c86d7054342123a0ce8deaa0b174"
                     },
                     "required_dependencies": [],
-                    "size": 1563532,
-                    "date_published": "2025-12-09T21:10:10.511600Z"
+                    "size": 1564767,
+                    "date_published": "2025-12-30T15:26:16.331652Z"
                 }
             ]
         },
@@ -4707,6 +4744,43 @@
             ]
         },
         {
+            "pakku_id": "qo9XltEQDyi8JTyX",
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "modrinth": "just-hammers"
+            },
+            "name": {
+                "modrinth": "Just Hammers"
+            },
+            "id": {
+                "modrinth": "edU0NbZZ"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "just-hammers-neoforge-21.1.3.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/edU0NbZZ/versions/lKdcLTOG/just-hammers-neoforge-21.1.3.jar",
+                    "id": "lKdcLTOG",
+                    "parent_id": "edU0NbZZ",
+                    "hashes": {
+                        "sha512": "f0389afab4b5cd22c6d612c6bd575f6e6870d3cc670995289c5b8f5692e6f2205ac3d2953409559a26a4d6f4c61396865fa0b2a8fd028119f5da2c7a652fef1d",
+                        "sha1": "7a394f37beae54eb2fdeabcaffb54f3e5b827137"
+                    },
+                    "required_dependencies": [],
+                    "size": 101607,
+                    "date_published": "2025-11-16T15:52:08.854867Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "tbL8tCkeGeSia2W2",
             "type": "MOD",
             "side": "BOTH",
@@ -5141,7 +5215,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "lootr-neoforge-1.21.1-1.11.36.106.jar",
+                    "file_name": "lootr-neoforge-1.21.1-1.11.36.108.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -5149,16 +5223,60 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/EltpO5cN/versions/9JkMPvMq/lootr-neoforge-1.21.1-1.11.36.106.jar",
-                    "id": "9JkMPvMq",
+                    "url": "https://cdn.modrinth.com/data/EltpO5cN/versions/NKHQVwFJ/lootr-neoforge-1.21.1-1.11.36.108.jar",
+                    "id": "NKHQVwFJ",
                     "parent_id": "EltpO5cN",
                     "hashes": {
-                        "sha512": "51fe21fb220a8ae90149ba76a1e95c4d4a508ce93945f681aa68cce041f6d94817c4ce9b30c7feff6dd419c49cdaf24f29da1ab17d1e13df760562ba058a68e2",
-                        "sha1": "54b8973c2d9943c36a148f0876f0d97ca3640ab2"
+                        "sha512": "6dba2d6154e6fb0d614978703edd5b839b65fbcfa5ccbc81384c96bcdf22f62edcc0c499a5db7d12cab8a734c3b111c5e69cdde712d447581b3c266895c64336",
+                        "sha1": "161e82a476cdb77e3ca848f0ddc2281057d2592e"
                     },
                     "required_dependencies": [],
-                    "size": 725449,
-                    "date_published": "2025-12-29T11:05:44.248470Z"
+                    "size": 725320,
+                    "date_published": "2025-12-31T04:58:55.398536Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "Jm3v2PL3kyoOnwfO",
+            "pakku_links": [
+                "rcNaZofHJ2yMvMzg",
+                "TFClERubiRcRvqNn"
+            ],
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "modrinth": "lootrmon"
+            },
+            "name": {
+                "modrinth": "Lootrmon: Lootr & Cobblemon Compatibility"
+            },
+            "id": {
+                "modrinth": "ywwXJDli"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "lootrmon-neoforge-1.21.1-0.0.0.1.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "alpha",
+                    "url": "https://cdn.modrinth.com/data/ywwXJDli/versions/yAwEi5ew/lootrmon-neoforge-1.21.1-0.0.0.1.jar",
+                    "id": "yAwEi5ew",
+                    "parent_id": "ywwXJDli",
+                    "hashes": {
+                        "sha512": "1b632999fed115623629bed41b0c736e06c8b1ba2878f8da6e6d91dc048ef045bfc19c6402fb6432cdbe5203b8072bb39f4f02945d07c451fdf74e4aff81b3cb",
+                        "sha1": "d5b06c65bbba9fd2d4f62768a413965a51bb6f42"
+                    },
+                    "required_dependencies": [
+                        "MdwFAVRL",
+                        "EltpO5cN"
+                    ],
+                    "size": 46718,
+                    "date_published": "2025-12-16T07:13:35.315954Z"
                 }
             ]
         },
@@ -5779,7 +5897,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "moonlight-1.21-2.29.3-neoforge.jar",
+                    "file_name": "moonlight-1.21-2.29.4-neoforge.jar",
                     "mc_versions": [
                         "1.21",
                         "1.21.1"
@@ -5788,16 +5906,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/twkfQtEc/versions/FNHtIMmA/moonlight-1.21-2.29.3-neoforge.jar",
-                    "id": "FNHtIMmA",
+                    "url": "https://cdn.modrinth.com/data/twkfQtEc/versions/lUuiBbG8/moonlight-1.21-2.29.4-neoforge.jar",
+                    "id": "lUuiBbG8",
                     "parent_id": "twkfQtEc",
                     "hashes": {
-                        "sha512": "66cbfdbc7eec17f43a8741ff98ee68b1bdfa96a9fd67bcbc34e738477fcba578341cadfb57a0ab1479ac0ae11d7e5d02c19294a086f4df9cd58731babcac5278",
-                        "sha1": "c73fe9d99743d84157bd6e997eb62a52f6192fa3"
+                        "sha512": "786062a4eb5635d486178ba4d2d2957a4758e7dee8747ce4d8701d1878e673ed64154543c5b0c2261a83cd81a64e587113726c9e30b7d8b35666e67fad3393f3",
+                        "sha1": "0d0971eaf086a3bd7743907757132f30c6f026c3"
                     },
                     "required_dependencies": [],
-                    "size": 1499028,
-                    "date_published": "2025-12-28T10:06:53.552270Z"
+                    "size": 1499413,
+                    "date_published": "2025-12-30T16:07:41.870122Z"
                 }
             ]
         },

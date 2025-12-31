@@ -255,5 +255,12 @@ ServerEvents.recipes(event => {
 
 	// Waigee's request. Pale Oak Shelf from Jacaranda wood.
 	event.shaped(Item.of("minecraft:pale_oak_shelf", 6), ["SSS", "   ", "SSS"], {S: "biomesoplenty:stripped_jacaranda_log"})
+
+	// Use our own recipes for more reasonable hammers.
+	event.remove({mod: "justhammers"})
+	event.shaped(Item.of("justhammers:stone_hammer"), [" II", " SI", "S  "], {I: "minecraft:stone", S: "minecraft:stick"})
+	event.shaped(Item.of("justhammers:stone_reinforced_hammer"), ["III", " SI", "S I"], {I: "minecraft:stone", S: "minecraft:stick"})
+	event.shaped(Item.of("justhammers:iron_hammer"), [" II", " SI", "S  "], {I: "minecraft:iron_block", S: "minecraft:stick"})
+	event.shaped(Item.of("justhammers:iron_reinforced_hammer"), ["III", " SI", "S I"], {I: "minecraft:iron_block", S: "minecraft:stick"})
 })
 

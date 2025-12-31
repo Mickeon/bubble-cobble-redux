@@ -32,7 +32,8 @@
       "ovh.corail.tombstone.particle.ParticleRounding",
       "concerrox.effective.particle.SplashParticle",
       "org.ladysnake.effective.particle.SplashParticle",
-      "net.mehvahdjukaar.dummmmmmy.client.DamageNumberParticle"
+      "net.mehvahdjukaar.dummmmmmy.client.DamageNumberParticle",
+      "com.cobblemon.mod.common.client.render.SnowstormParticle"
     ]
   },
   "valkyrienSkies": {

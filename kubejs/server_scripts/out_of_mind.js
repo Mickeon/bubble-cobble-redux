@@ -21,6 +21,12 @@ ServerEvents.recipes(event => {
 
 ServerEvents.tags("item", event => {
 	event.removeAllTagsFrom(global.DISABLED_ITEMS)
+
+	// Keeping only 4 hammers from this mod. More sane to do it manually, I guess.
+	event.add("c:hidden_from_recipe_viewers", "@justhammers")
+	event.remove("c:hidden_from_recipe_viewers", [
+		"justhammers:stone_hammer", "justhammers:stone_reinforced_hammer", "justhammers:iron_hammer", "justhammers:iron_reinforced_hammer"
+	])
 })
 
 // Hide advancements.
