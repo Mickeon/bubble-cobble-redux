@@ -53,7 +53,10 @@ LevelEvents.beforeExplosion(event => {
 // Creeper chain reaction.
 LevelEvents.afterExplosion(event => {
 	const { exploder } = event
-	if (exploder && exploder.type != "minecraft:creeper" && exploder.type != "undergroundworlds:icy_creeper") {
+	if (!exploder) {
+		return
+	}
+	if (exploder.type != "minecraft:creeper" && exploder.type != "undergroundworlds:icy_creeper") {
 		return
 	}
 	event.getAffectedEntities().forEach(entity => {
