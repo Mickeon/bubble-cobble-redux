@@ -40,7 +40,6 @@ As it stands, the modpack includes exclusive features, such as:
 	<li><a href="https://modrinth.com/mod/bbGCtEvb">Armor Statues</a> by Fuzs</li>
 	<li><a href="https://modrinth.com/mod/hXZ3rcle">Arrow Trails</a> by Biverom</li>
 	<li><a href="https://modrinth.com/mod/c3onkd5k">AsyncParticles</a> by Harvey_Husky</li>
-	<li><a href="https://modrinth.com/mod/Bk8h9V7t">Auto Replace Mod</a> by BarnameNevisetun</li>
 	<li><a href="https://modrinth.com/mod/ptzsjBKT">Awesome dungeon</a> by JTorLeon Studios</li>
 	<li><a href="https://modrinth.com/mod/hn56Bq5n">Awesome dungeon edition ocean</a> by JTorLeon Studios</li>
 	<li><a href="https://modrinth.com/mod/ftdbN0KK">Bad Packets</a> by deirn</li>
