@@ -154,7 +154,11 @@ LootJS.lootTables(event => {
 		furniture_pool.addEntry(LootEntry.empty().withWeight(50))
 
 		event.forEachTable(/.*chest.*/, table => {
-		// event.forEachTable(/supplementaries:loot\/galleon\/chest/, table => {
+			// event.forEachTable(/supplementaries:loot\/galleon\/chest/, table => {
+			// console.log(`${table.lootType} |\t\t ${table.location}`)
+			if (table.lootType == "BLOCK") {
+				return // Otherwise, Chests would drop furniture at random when destroyed.
+			}
 			table.createPool().rolls(1).addEntry(
 				LootEntry.reference("kubejs:furniture")
 				// .matchLocation({position: {y: Range.atLeast(50)}})
