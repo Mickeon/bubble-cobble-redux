@@ -372,7 +372,7 @@
 		#How tall (in blocks) the Sculptor's test will be
 		# Default: 60
 		# Range: 1 ~ 500
-		test_height = 60
+		test_height = 30
 		#The time limit (in seconds) for completing the Sculptor's test
 		# Default: 400
 		# Range: 1 ~ 36000
@@ -382,13 +382,13 @@
 		#Disable/enable the Sculptor's boss health bar
 		has_boss_bar = true
 		#Which item the Sculptor desires in exchange for a chance to try his challenge
-		trade_which_item = "mowziesmobs:bluff_rod"
+		trade_which_item = "cobblemon:relic_coin"
 		#How many of the item the Sculptor desires in exchange for a chance to try his challenge
 		# Default: 1
 		# Range: 0 ~ 64
 		trade_how_many = 1
 		#Set to true for the Sculptor to disappear after a player beats the test and claims the reward.
-		disappear_after_reward = true
+		disappear_after_reward = false
 
 		[mobs.sculptor.biome_config]
 			#Mowzie's Mobs bosses cannot generate in modded or non-overworld biomes unless the biome is added to the 'has_structure/has_mowzie_structure' tag via a datapack!
