@@ -95,7 +95,6 @@ ItemEvents.modification(event => {
 		/** @type {$List<$Tool$Rule>} */
 		const rules = Utils.newList()
 		rules.addAll(tool.rules())
-		rules.addFirst({speed: ore_breaking_speed, blocks: "#c:ores", correctForDrops: true})
 		rules.add({speed: axe_breaking_speed, blocks: "#minecraft:mineable/axe", correctForDrops: true})
 		rules.add({speed: axe_breaking_speed, blocks: "#c:glass_blocks", correctForDrops: false})
 		modified.tool = {
