@@ -330,4 +330,89 @@ NativeEvents.onEvent($AnvilUpdateEvent, event => {
 		event.materialCost = 1
 		event.output = output
 	}
-});
+})
+
+
+ServerEvents.tags("item", event => {
+	event.add("bubble_cobble:do_not_replace_when_in_offhand", [
+		"minecraft:lantern",
+		"ribbits:swamp_lantern",
+		/^minecraft:.*copper_lantern/,
+		"#minecraft:candles",
+		"#supplementaries:candle_holders"
+	])
+})
+
+// Replace destroyed blocks with the blocks in your offhand
+/** @type {typeof import("net.minecraft.world.item.context.UseOnContext").$UseOnContext } */
+let $UseOnContext  = Java.loadClass("net.minecraft.world.item.context.UseOnContext")
+/** @type {typeof import("net.minecraft.world.phys.BlockHitResult").$BlockHitResult } */
+let $BlockHitResult  = Java.loadClass("net.minecraft.world.phys.BlockHitResult")
+BlockEvents.broken(event => {
+	const player = event.player
+	if (!player) {
+		console.warn("No player for BlockEvents.broken(). This should never normally happer.")
+		return
+	}
+	const held_item = player.offHandItem
+	const held_block = held_item.block
+	if (!held_block) {
+		return
+	}
+
+	const level = event.level
+	const broken_block = event.block.getBlock()
+	// broken_block.getBlock().blockStates.forEach(block_state => {
+	// 	console.log(block_state.solid)
+	// })
+	if (held_item.id == broken_block.item.id) {
+		return // Don't replace the block I just destroyed with the same block I am holding.
+	}
+
+	const broken_block_state = event.block.getBlockState()
+	const broken_block_pos = event.block.getPos()
+	// console.log(broken_block_state.getDestroySpeed(level, broken_block_pos))
+	if (broken_block_state.getDestroySpeed(level, broken_block_pos) <= 0.1) {
+		// Don't replace blocks that break instantaneously.
+		// These usually include grass, torches, etc., or blocks whose destruction may be accidental.
+		return
+	}
+	if (held_block.defaultBlockState().getDestroySpeed(level, broken_block_pos) <= 0.1) {
+		// And don't let any block that would be broken instantly do the replacing.
+		// These usually include grass, torches, etc., or blocks whose placement may be accidental.
+		return
+	}
+	if (held_item.hasTag("bubble_cobble:do_not_replace_when_in_offhand")) {
+		return
+	}
+
+	level.server.scheduleInTicks(0, callback => {
+		if (!level.getBlock(broken_block_pos).hasTag("minecraft:air")) {
+			// Failsafe to not place blocks accidentally in front/back.
+			player.playNotifySound("relics:ability_locked", "players", 1.0, 1.0)
+			return
+		}
+
+		let interaction_result = held_item.useOn(new $UseOnContext(
+			level, player, "off_hand", held_item, new $BlockHitResult(
+					player.position(), player.facing, broken_block_pos, false
+			)
+		))
+		let sound_type = held_item.block.getSoundType(held_block.defaultBlockState(), level, broken_block_pos, player)
+		// level.playSound(player, broken_block_pos, sound_type.placeSound, "blocks")
+
+		if (interaction_result.indicateItemUse()) {
+			player.playNotifySound(sound_type.placeSound, "blocks", 1.0, 1.0)
+		}
+		if (interaction_result.shouldSwing()) {
+			level.server.scheduleInTicks(3, callback => {
+				player.swing("off_hand", true)
+			})
+		}
+		// player.swing("off_hand", true)
+		// Block.getBlock().stateDefinition.
+		// held_item.block.invokeGetSoundType("handcrafted:acacia_bench").placeSound
+	})
+	// event.level.setBlock()
+
+})
