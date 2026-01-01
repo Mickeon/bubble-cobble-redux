@@ -1,0 +1,9 @@
+{
+	"match": {
+		"items": [
+			"kubejs:sparkling_rose",
+			"kubejs:firebomb_whiskey"
+		]
+	},
+	"luminance": 15
+}
