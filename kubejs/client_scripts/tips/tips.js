@@ -26,6 +26,7 @@ const TIPS_FILENAMES = [
 	"candle",
 	"cantie",
 	"helpful",
+	"jaze",
 	"kaya",
 	"luigi_handbook",
 	"luigi",
