@@ -8,6 +8,8 @@
     "minecraft:lightning_bolt",
     "cobblemon:empty_pokeball",
     "cobblemon:poke_bobber",
-    "supplementaries:cannonball"
+    "supplementaries:cannonball",
+    "mowziesmobs:boulder_platform",
+    "mowziesmobs:boulder_platform_crumbling"
   ]
 }
