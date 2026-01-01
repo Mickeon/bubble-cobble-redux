@@ -110,6 +110,21 @@ ItemEvents.modification(event => {
 			modified.maxDamage = damage / (is_stone ? 6 : 3)
 		}
 	})
+
+	/** @param {import("net.minecraft.world.item.Item").$Item$$Type} item  @param {number} max_damage */
+	function set_max_damage(item, max_damage) {
+		event.modify(item, /** @param {$ItemModifications} modified */ modified => {
+			modified.maxDamage = max_damage
+			modified.damage = 0
+		})
+	}
+
+	// Fix Copper Armor having no durability.
+	set_max_damage("minecraft:copper_helmet", 121)
+	set_max_damage("minecraft:copper_chestplate", 176)
+	set_max_damage("minecraft:copper_leggings", 165)
+	set_max_damage("minecraft:copper_boots", 143)
+
 })
 
 StartupEvents.registry("item", event => {
