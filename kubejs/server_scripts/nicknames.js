@@ -18,7 +18,7 @@ const NICKNAME_MAX_STRING_LENGTH = 48
 const NICKNAME_MAX_JSON_LENGTH = 256
 const SUCCESS = 1
 const FAILURE = 0
-let nicknames = {}
+let nicknames = try_read_and_parse_json(NICKNAME_JSON_PATH) ?? {}
 
 const TEXT_NICKNAME_HINT = Text.of([
 	Text.of(" 🧊 If you don't know what you're doing, make yourself a nice nickname by clicking on "),
@@ -26,9 +26,9 @@ const TEXT_NICKNAME_HINT = Text.of([
 	Text.of(" On the bottom-left, click on \"1.21.9+\" and set it to \"pre-1.21.5\". Write something down, then click on the Copy icon on the bottom-left."),
 ]).color("#83BED9")
 
-ServerEvents.loaded(event => {
-	nicknames = try_read_and_parse_json(NICKNAME_JSON_PATH) ?? {}
-})
+// ServerEvents.loaded(event => {
+// 	nicknames = try_read_and_parse_json(NICKNAME_JSON_PATH) ?? {}
+// })
 
 NativeEvents.onEvent($PlayerEvent$NameFormat, event => {
 	const uuid = event.entity.uuid
