@@ -317,6 +317,7 @@ StartupEvents.modifyCreativeTab("ribbits:general", event => {
 	event.addAfter("ribbits:maraca", ["wanderer_ribbit:umbrellaleaf", "wanderer_ribbit:ribbit_map"])
 })
 StartupEvents.modifyCreativeTab("minecraft:tools_and_utilities", event => {
+	event.add("minecraft:bundle")
 	event.add("sereneseasons:calendar")
 	event.add("haventrowel:trowel")
 	event.addAfter("minecraft:iron_axe", ["justhammers:iron_reinforced_hammer", "justhammers:iron_hammer"])

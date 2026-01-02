@@ -193,7 +193,6 @@ ServerEvents.recipes(event => {
 	event.remove({id: "minecraft:painting"}) // In favour of Farmer's Delight's which requires Canvas.
 	event.remove({id: "immersive_paintings:painting"})
 	event.shaped(Item.of("immersive_paintings:painting", 2), ["SDS","DCD", "SDS"], {S: "minecraft:stick", D: "#c:dyes", C: "farmersdelight:canvas"})
-	event.remove({id: "minecraft:bundle"})
 	event.shaped("minecraft:bundle", ["SS", "CC"], {S: "minecraft:string", C: "farmersdelight:canvas"})
 	// event.replaceOutput({id: "immersive_paintings:graffiti"}, "immersive_paintings:graffiti", Item.of("immersive_paintings:graffiti", 4)) // Does not work.
 
