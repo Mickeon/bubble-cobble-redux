@@ -30,6 +30,7 @@ const DASH_STARTERS = [
 	"CantieLabs",
 	"Fableworks",
 	"LabbyRosenfeld",
+	"mAIgehound",
 	"Mickeon",
 	"pepperponyo",
 	"WaiGee",

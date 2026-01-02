@@ -24,6 +24,8 @@ EntityEvents.drops("minecraft:player", event => {
 		case "BlueBerryNice": {
 			add_drop(player, Item.of("minecraft:iron_nugget", 3), 0.5)
 			add_drop(player, Item.of("minecraft:blue_dye"), 0.5)
+			add_drop(player, Item.of("biomeswevegone:blueberries"), 0.5)
+			add_drop(player, Item.of("biomeswevegone:blueberry_pie"), 0.1)
 			// add_drop(player, Item.of("quark:iron_button")
 			// 		.withCustomName(Text.lightPurple("meowowwww skuwwssss shakingggg itttt nastyyyy styweeee innnn theeee fowowtniteeee wowobbyyyy owo"))
 			// 		, 0.1)
@@ -76,7 +78,8 @@ EntityEvents.drops("minecraft:player", event => {
 		case "luigiman0640": {
 			// add_drop(player, Item.of("nightlights:mushroom_green"), 0.25)
 			// add_drop(player, Item.of("nightlights:mushroom_lime"), 0.25)
-			add_drop(player, Item.of("minecraft:lime_dye"), 0.25)
+			add_drop(player, Item.of("minecraft:lime_dye"), 0.75)
+			add_drop(player, Item.of("biomeswevegone:green_mushroom"), 0.5)
 			add_drop(player, Item.of("minecraft:green_dye"), 0.25)
 			add_drop(player, Item.of("minecraft:arrow", 4).withCustomName("Shell"), 0.125)
 		} break;

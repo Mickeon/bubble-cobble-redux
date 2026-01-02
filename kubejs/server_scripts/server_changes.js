@@ -362,10 +362,7 @@ BlockEvents.broken(event => {
 
 	const level = event.level
 	const broken_block = event.block.getBlock()
-	// broken_block.getBlock().blockStates.forEach(block_state => {
-	// 	console.log(block_state.solid)
-	// })
-	if (held_item.id == broken_block.item.id) {
+	if (held_item.id == broken_block?.item.id) {
 		return // Don't replace the block I just destroyed with the same block I am holding.
 	}
 
@@ -389,7 +386,7 @@ BlockEvents.broken(event => {
 	level.server.scheduleInTicks(0, callback => {
 		if (!level.getBlock(broken_block_pos).hasTag("minecraft:air")) {
 			// Failsafe to not place blocks accidentally in front/back.
-			player.playNotifySound("relics:ability_locked", "players", 1.0, 1.0)
+			player.playNotifySound("bubble_cobble:buzz", "players", 1.0, 1.0)
 			return
 		}
 

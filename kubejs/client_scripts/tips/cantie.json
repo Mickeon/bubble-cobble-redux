@@ -29,8 +29,6 @@
 		,
 		["You can Right click a ",{"color":"red","text":"Slugma"}," with an empty ",{"color":"gold","text":"blaze burner"}," in hand to use it as a blaze burner!"]
 		,
-		["",{"color":"oklab(0.906424 -0.000235766 -0.0028885)","text":"step 1) make a very absurd bet with your friend\nstep 2) make an equally absurd prize to match "},"\n",{"color":"oklab(0.906424 -0.000235766 -0.0028885)","text":"step 3) ","extra":[{"italic":true,"text":"they're talking about tens of thousands of dollars "}]},"\n",{"color":"oklab(0.906424 -0.000235766 -0.0028885)","text":"step 4)\n \n"},{"color":"oklab(0.999994 0.0000455678 0.0000200868)","bold":true,"text":"February 14th, 2024\nThe \"Papyrus Maze\" Incident"}]
-		,
 		["",{"color":"#212121","text":"You can build faster using building wands and hammers.\n"},{"color":"white","text":"damn, if only you brought your reading glasses"}]
 		,
 		["Act Like A ",{"color":"green","bold":true,"underlined":true,"text":"They/Them\n"},{"color":"white","text":"Look Like A "},{"color":"#dab4fb","bold":true,"underlined":true,"text":"She/Her\n"},{"color":"white","text":"Smoke Like A "},{"bold":true,"underlined":true,"text":"","extra":[{"color":"#87c5ff","text":"He/Him\n"},{"color":"yellow","text":"Francis"}]}]

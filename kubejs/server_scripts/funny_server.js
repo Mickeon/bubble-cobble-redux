@@ -334,7 +334,7 @@ NetworkEvents.dataReceived("kubejs:dash", event => {
 	if (!dash.lower_tiredness) {
 		dash.lower_tiredness = event.server.scheduleRepeatingInTicks(5, () => {
 			if (dash.strength_multiplier >= 1.0) {
-				player.playNotifySound("minecraft:block.bubble_column.bubble_pop", "players", 1.0, 1.0)
+				player.playNotifySound("bubble_cobble:recharged", "players", 1.0, 1.0)
 				dash.bonus_restoration = 0.0
 
 				dash.lower_tiredness.clear()

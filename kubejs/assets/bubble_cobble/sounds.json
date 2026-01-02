@@ -80,5 +80,15 @@
 				"weight": 1
 			}
 		]
+	},
+	"dash": {
+		"sounds": [
+			"bubble_cobble:dash"
+		]
+	},
+	"recharged": {
+		"sounds": [
+			"bubble_cobble:recharged"
+		]
 	}
 }

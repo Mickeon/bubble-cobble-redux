@@ -161,7 +161,7 @@ LootJS.lootTables(event => {
 			}
 			table.createPool().rolls(1).addEntry(
 				LootEntry.reference("kubejs:furniture")
-				// .matchLocation({position: {y: Range.atLeast(50)}})
+				.matchLocation({position: {y: Range.atLeast(50)}})
 				.randomChance(0.5)
 			)
 		})

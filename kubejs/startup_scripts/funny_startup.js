@@ -242,7 +242,9 @@ StartupEvents.modifyCreativeTab("kubejs:tab", event => {
 })
 
 StartupEvents.registry("sound_event", event => {
+	event.create("bubble_cobble:buzz")
 	event.create("bubble_cobble:dash")
+	event.create("bubble_cobble:recharged")
 	event.create("kubejs:item.bearded_dragon_chirp")
 })
 

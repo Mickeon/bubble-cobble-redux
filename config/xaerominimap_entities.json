@@ -18,8 +18,8 @@
     "displayNameWhenIconFails": true,
     "entityNumber": 100.0,
     "alwaysDisplayNametags": false,
-    "dotSize": 1.0,
     "startFadingAt": 0.0,
+    "dotSize": 1.0,
     "renderOverMinimapFrame": 0.0,
     "icons": 1.0,
     "names": 0.0,
@@ -47,9 +47,9 @@
         "immersive_paintings:painting",
         "minecraft:leash_knot",
         "minecraft:painting",
-        "supplementaries:cannonball",
         "mowziesmobs:boulder_platform",
-        "mowziesmobs:boulder_platform_crumbling"
+        "mowziesmobs:boulder_platform_crumbling",
+        "supplementaries:cannonball"
       ],
       "includeListInSuperCategory": true,
       "excludeMode": "ONLY",
