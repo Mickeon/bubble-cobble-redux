@@ -28,6 +28,7 @@
 /config/discord_chat_mod-*
 /config/iris.properties
 /config/sidekick.ini
+/config/spark
 /config/one-click-join
 /config/voicechat/category-volumes.properties
 /config/voicechat/player-volumes.properties
