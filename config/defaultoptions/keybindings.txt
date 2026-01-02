@@ -126,6 +126,21 @@ key_key.constructionstick.show_previous:key.keyboard.unknown:
 key_treechop.key.toggle_chopping:key.keyboard.unknown:
 key_treechop.key.cycle_sneak_behavior:key.keyboard.unknown:
 key_treechop.key.open_settings_overlay:key.keyboard.unknown:
+key_key.craftingtweaks.rotate:key.keyboard.unknown:
+key_key.craftingtweaks.rotate_counter_clockwise:key.keyboard.unknown:
+key_key.craftingtweaks.balance:key.keyboard.unknown:
+key_key.craftingtweaks.spread:key.keyboard.unknown:
+key_key.craftingtweaks.clear:key.keyboard.unknown:
+key_key.craftingtweaks.force_clear:key.keyboard.unknown:
+key_key.craftingtweaks.compress_one:key.keyboard.k:
+key_key.craftingtweaks.compress_stack:key.keyboard.k:CONTROL
+key_key.craftingtweaks.compress_all:key.keyboard.k:SHIFT
+key_key.craftingtweaks.decompress_one:key.keyboard.unknown:
+key_key.craftingtweaks.decompress_stack:key.keyboard.unknown:
+key_key.craftingtweaks.decompress_all:key.keyboard.unknown:
+key_key.craftingtweaks.refill_last:key.keyboard.unknown:
+key_key.craftingtweaks.refill_last_stack:key.keyboard.unknown:
+key_key.craftingtweaks.transfer_stack:key.keyboard.unknown:
 key_key.cobblemonraiddens.mouse:key.keyboard.left.alt:
 key_key.cobblemonraiddens.accept:key.keyboard.unknown:
 key_key.cobblemonraiddens.deny:key.keyboard.n:
@@ -155,7 +170,7 @@ key_key.cnc.caribou_dash:key.keyboard.space:
 key_key.extendedhotbar.switch:key.keyboard.x:
 key_key.extendedhotbar.toggle:key.keyboard.f8:
 key_key.fog.toggle:key.keyboard.f7:
-key_key.yo_hooks.jump:key.keyboard.r:
+key_key.yo_hooks.jump:key.mouse.right:
 key_key.yo_hooks.climb:key.keyboard.space:
 key_key.yo_hooks.climb_down:key.keyboard.left.shift:
 key_key.kubejs.kubedex:key.keyboard.unknown:
@@ -197,5 +212,5 @@ key_key.jade.show_uses:key.keyboard.u:
 key_key.jade.narrate:key.keyboard.unknown:
 key_key.jade.show_details:key.keyboard.left.shift:
 key_key.craftpresence.config_keycode.name:key.keyboard.unknown:
-key_keybind.invmove.toggleMove:key.keyboard.unknown:
 key_key.entityculling.toggle:key.keyboard.unknown:
+key_keybind.invmove.toggleMove:key.keyboard.unknown:

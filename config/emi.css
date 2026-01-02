@@ -310,7 +310,7 @@
 	/**
 	 * Toggle the visibility of EMI.
 	 */
-	toggle-visibility: "key.keyboard.o";
+	toggle-visibility: "ctrl key.keyboard.o";
 
 	/**
 	 * Focuses the search bar.
