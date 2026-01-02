@@ -362,7 +362,7 @@ BlockEvents.broken(event => {
 
 	const level = event.level
 	const broken_block = event.block.getBlock()
-	if (held_item.id == broken_block?.item.id) {
+	if (held_item.id == broken_block?.item?.id) {
 		return // Don't replace the block I just destroyed with the same block I am holding.
 	}
 

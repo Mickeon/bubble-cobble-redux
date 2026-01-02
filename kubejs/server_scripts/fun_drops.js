@@ -106,7 +106,7 @@ EntityEvents.drops("minecraft:player", event => {
 		case "Polyfluff": {
 			add_drop(player, Item.of("minecraft:white_wool"), 0.75)
 			add_drop(player, Item.of("kubejs:music_disc_grapes"), 0.1)
-			player.playSound("supplementaries:item.bomb", 25.0, 1.0)
+			// player.playSound("supplementaries:item.bomb", 25.0, 1.0)
 			player.level.spawnParticles("minecraft:firework", false, player.x, player.eyeY, player.z, 0.1, 0.1, 0.1, 60, 0.1)
 		} break;
 		case "Rem_Phase02": {
