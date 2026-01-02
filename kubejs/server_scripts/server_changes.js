@@ -413,3 +413,31 @@ BlockEvents.broken(event => {
 	// event.level.setBlock()
 
 })
+
+
+// Teleport players hit by the Warden to their spawn point.
+/** @type {typeof import("net.minecraft.world.level.portal.DimensionTransition").$DimensionTransition } */
+let $DimensionTransition  = Java.loadClass("net.minecraft.world.level.portal.DimensionTransition")
+EntityEvents.beforeHurt("minecraft:player", event => {
+	if (event.source.getActual()?.type == "minecraft:warden") {
+		/** @type {import("net.minecraft.server.level.ServerPlayer").$ServerPlayer$$Type} */
+		const player = event.player
+		const spawn_angle = event.level.sharedSpawnAngle
+
+		let dimension_transition = player.findRespawnPositionAndUseSpawnBlock(false, $DimensionTransition.DO_NOTHING)
+		let spawn_pos = dimension_transition.pos()
+		player.playNotifySound("minecraft:entity.enderman.teleport", "players", 1.0, 1.0)
+		player.teleportTo(dimension_transition.newLevel().dimension, spawn_pos.x(), spawn_pos.y(), spawn_pos.z(), spawn_angle, player.pitch)
+		player.playNotifySound("minecraft:enchant.thorns.hit", "players", 0.5, 1.0)
+		player.addEffect(MobEffectUtil.of("minecraft:darkness", 5 * SEC, 200))
+		if (!player.isAdvancementDone("kubejs:bad_dream")) {
+			player.unlockAdvancement("kubejs:bad_dream")
+		}
+
+		/** @type {import("net.minecraft.world.entity.monster.warden.Warden").$Warden$$Type} */
+		const warden = event.source.getActual()
+		warden.clearAnger(player)
+		event.cancel()
+		return
+	}
+})

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://www.schemastore.org/minecraft-advancement.json",
+  "parent": "minecraft:adventure/root",
+  "display": {
+    "icon": {
+      "id": "minecraft:sculk_shrieker"
+    },
+    "title": "But If You Close Your Eyes",
+    "description": "Get attacked by a Warden."
+  },
+  "criteria": {
+    "aeugh": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}
