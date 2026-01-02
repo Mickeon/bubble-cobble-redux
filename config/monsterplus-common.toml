@@ -13,7 +13,7 @@
 	#Will the Lava Squid spawn?
 	spawn_lava_squid = true
 	#Will the Mother Lava Squid spawn?
-	spawn_mother_lava_squid = true
+	spawn_mother_lava_squid = false
 	#Will the Overgrown Skeleton spawn?
 	spawn_overgrown_skeleton = true
 	#Will the Demon Eye spawn?

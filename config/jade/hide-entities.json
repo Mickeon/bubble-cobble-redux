@@ -10,6 +10,7 @@
     "cobblemon:poke_bobber",
     "supplementaries:cannonball",
     "mowziesmobs:boulder_platform",
-    "mowziesmobs:boulder_platform_crumbling"
+    "mowziesmobs:boulder_platform_crumbling",
+    "yo_hooks:hook_entity"
   ]
 }

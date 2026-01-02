@@ -10,8 +10,8 @@
   "name": "gui.xaero_entity_category_root",
   "protection": true,
   "settingOverrides": {
-    "displayed": true,
     "displayHeight": 0.0,
+    "displayed": true,
     "heightBasedFade": true,
     "renderOrder": 0.0,
     "color": 13.0,
@@ -22,8 +22,8 @@
     "dotSize": 1.0,
     "renderOverMinimapFrame": 0.0,
     "icons": 1.0,
-    "names": 0.0,
     "heightLimit": 20.0,
+    "names": 0.0,
     "iconScale": 1.0
   },
   "subCategories": [
@@ -49,7 +49,8 @@
         "minecraft:painting",
         "mowziesmobs:boulder_platform",
         "mowziesmobs:boulder_platform_crumbling",
-        "supplementaries:cannonball"
+        "supplementaries:cannonball",
+        "yo_hooks:hook_entity"
       ],
       "includeListInSuperCategory": true,
       "excludeMode": "ONLY",
@@ -85,12 +86,12 @@
           "name": "gui.xaero_entity_category_players",
           "protection": true,
           "settingOverrides": {
-            "displayHeight": 2.0,
             "displayed": true,
+            "displayHeight": 2.0,
             "heightBasedFade": false,
             "renderOrder": 925.0,
-            "heightLimit": 200.0,
             "names": 1.0,
+            "heightLimit": 200.0,
             "color": -1.0,
             "renderOverMinimapFrame": 2.0,
             "icons": 2.0,
@@ -237,8 +238,8 @@
               "protection": true,
               "settingOverrides": {
                 "renderOrder": 4.0,
-                "heightLimit": 40.0,
                 "names": 1.0,
+                "heightLimit": 40.0,
                 "color": 11.0,
                 "displayNameWhenIconFails": true,
                 "renderOverMinimapFrame": 1.0,
