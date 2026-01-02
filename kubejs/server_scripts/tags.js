@@ -118,6 +118,9 @@ ServerEvents.tags("block", event => {
 	event.add("minecraft:strider_warm_blocks",    "#bubble_cobble:very_hot")
 	event.add("bubble_cobble:very_cold",  "cobblemon:ice_stone_block", "yungscavebiomes:rare_ice", /undergroundworlds:ice_/)
 	event.add("brewinandchewin:freeze_sources", "#bubble_cobble:very_cold")
+
+	// Normally these can't be chopped, yet they essentially make up some trees.
+	event.add("treechop:leaves_like", "#c:storage_blocks/allium")
 })
 
 ServerEvents.tags("fluid", event => {
