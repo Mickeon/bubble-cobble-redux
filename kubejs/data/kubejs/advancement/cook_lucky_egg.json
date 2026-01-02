@@ -9,6 +9,9 @@
     "frame": "goal"
   },
   "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    },
     "furnace": {
       "trigger": "minecraft:recipe_crafted",
       "conditions": {
@@ -38,7 +41,7 @@
     }
   },
   "requirements": [
-    ["furnace", "smoker", "campfire"]
+    ["furnace", "smoker", "campfire"], ["impossible"]
   ],
   "rewards": {
     "function": "kubejs:give_lucky_egg"
