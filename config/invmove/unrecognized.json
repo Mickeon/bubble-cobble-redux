@@ -158,7 +158,8 @@
     "net.mehvahdjukaar.supplementaries.client.screens.RedMerchantScreen": true,
     "net.minecraft.client.gui.screens.options.AccessibilityOptionsScreen": true,
     "de.maxhenkel.voicechat.gui.volume.AdjustVolumesScreen": true,
-    "net.minecraft.client.gui.screens.packs.PackSelectionScreen": true
+    "net.minecraft.client.gui.screens.packs.PackSelectionScreen": true,
+    "net.caffeinemc.mods.sodium.client.gui.SodiumOptionsGUI": true
   },
   "hideBackground": {
     "dev.emi.emi.screen.RecipeScreen": false,

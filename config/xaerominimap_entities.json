@@ -22,8 +22,8 @@
     "dotSize": 1.0,
     "renderOverMinimapFrame": 0.0,
     "icons": 1.0,
-    "heightLimit": 20.0,
     "names": 0.0,
+    "heightLimit": 20.0,
     "iconScale": 1.0
   },
   "subCategories": [
@@ -45,10 +45,12 @@
         "immersive_paintings:glow_painting",
         "immersive_paintings:graffiti",
         "immersive_paintings:painting",
+        "minecraft:experience_orb",
         "minecraft:leash_knot",
         "minecraft:painting",
         "mowziesmobs:boulder_platform",
         "mowziesmobs:boulder_platform_crumbling",
+        "relics:relic_experience_orb",
         "supplementaries:cannonball",
         "yo_hooks:hook_entity"
       ],
@@ -56,7 +58,7 @@
       "excludeMode": "ONLY",
       "excludeList": [],
       "name": "Hidden",
-      "protection": false,
+      "protection": true,
       "settingOverrides": {
         "displayed": false
       },
@@ -86,15 +88,15 @@
           "name": "gui.xaero_entity_category_players",
           "protection": true,
           "settingOverrides": {
-            "displayed": true,
             "displayHeight": 2.0,
+            "displayed": true,
             "heightBasedFade": false,
             "renderOrder": 925.0,
-            "names": 1.0,
-            "heightLimit": 200.0,
             "color": -1.0,
             "renderOverMinimapFrame": 2.0,
             "icons": 2.0,
+            "names": 1.0,
+            "heightLimit": 200.0,
             "iconScale": 1.0
           },
           "subCategories": [
@@ -163,6 +165,30 @@
           },
           "subCategories": [
             {
+              "hardInclude": "nothing",
+              "includeList": [
+                "minecraft:ender_dragon",
+                "minecraft:warden",
+                "minecraft:wither",
+                "mowziesmobs:ferrous_wroughtnaut",
+                "mowziesmobs:frostmaw",
+                "mowziesmobs:naga",
+                "mowziesmobs:sculptor"
+              ],
+              "includeListInSuperCategory": true,
+              "excludeMode": "ONLY",
+              "excludeList": [],
+              "name": "Bosses",
+              "protection": false,
+              "settingOverrides": {
+                "renderOrder": 500.0,
+                "dotSize": 2.0,
+                "renderOverMinimapFrame": 2.0,
+                "icons": 2.0
+              },
+              "subCategories": []
+            },
+            {
               "hardInclude": "tamed",
               "includeList": [],
               "includeListInSuperCategory": true,
@@ -203,8 +229,8 @@
               "name": "Villagers",
               "protection": false,
               "settingOverrides": {
-                "heightLimit": 40.0,
                 "icons": 2.0,
+                "heightLimit": 40.0,
                 "iconScale": 0.75
               },
               "subCategories": []
@@ -220,10 +246,10 @@
               "name": "Pokemon",
               "protection": false,
               "settingOverrides": {
-                "heightLimit": 40.0,
                 "color": 15.0,
                 "renderOverMinimapFrame": 1.0,
                 "icons": 2.0,
+                "heightLimit": 40.0,
                 "iconScale": 1.5
               },
               "subCategories": []
@@ -238,12 +264,12 @@
               "protection": true,
               "settingOverrides": {
                 "renderOrder": 4.0,
-                "names": 1.0,
-                "heightLimit": 40.0,
                 "color": 11.0,
                 "displayNameWhenIconFails": true,
                 "renderOverMinimapFrame": 1.0,
                 "icons": 2.0,
+                "names": 1.0,
+                "heightLimit": 40.0,
                 "iconScale": 1.0
               },
               "subCategories": []
@@ -262,10 +288,10 @@
       "protection": true,
       "settingOverrides": {
         "renderOrder": 1.0,
-        "names": 1.0,
         "color": 8.0,
         "entityNumber": 100.0,
-        "dotSize": 1.0
+        "dotSize": 1.0,
+        "names": 1.0
       },
       "subCategories": []
     },
@@ -278,8 +304,8 @@
       "name": "gui.xaero_entity_category_other_entities",
       "protection": true,
       "settingOverrides": {
-        "names": 1.0,
-        "color": 5.0
+        "color": 5.0,
+        "names": 1.0
       },
       "subCategories": []
     }
