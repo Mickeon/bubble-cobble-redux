@@ -249,6 +249,9 @@ PlayerEvents.loggedIn(event => {
 	if (DASH_STARTERS.includes(event.player.username)) {
 		event.player.setAttributeBaseValue("kubejs:dash_jump_count", 1)
 	}
+	// I know the consequences of this. If the server restarts, you will lose the leniency.
+	// But I can't be bothered storing dash data on disk.
+	player.removeAttribute("minecraft:generic.safe_fall_distance", "kubejs:dash_leniency")
 })
 
 // https://discord.com/channels/303440391124942858/303440391124942858/1450918369342521548
@@ -300,7 +303,7 @@ NetworkEvents.dataReceived("kubejs:dash", event => {
 	const dash_strength = DASH_FORCE * dash.strength_multiplier
 	player.addDeltaMovement(look_angle.scale(dash_strength * forward_back))
 	player.hurtMarked = true
-	player.addExhaustion(2.5)
+	player.addExhaustion(1.5)
 	player.playNotifySound("bubble_cobble:dash", "players",
 		remap(dash_strength, 1.0, 0.0, 0.75, 0.1),
 		remap(dash_strength, 1.0, 0.0, 1.0, 0.5)
@@ -309,6 +312,7 @@ NetworkEvents.dataReceived("kubejs:dash", event => {
 		player.x, player.y, player.z,
 		0.1, 0.1, 0.1, 10, 0.05
 	)
+	player.modifyAttribute("minecraft:generic.safe_fall_distance", "kubejs:dash_leniency", 3, "add_value")
 
 	dash.last_tick_used = event.server.tickCount
 	dash.jump_count += 1
@@ -320,12 +324,15 @@ NetworkEvents.dataReceived("kubejs:dash", event => {
 					player.x, player.y, player.z,
 					0.1, 0.1, 0.1, 2, 0.5
 				)
+				player.resetFallDistance()
 			}
 			dash.air_time_ticks += 1
 
-			if (player.onGround() || player.isSwimming()) {
+			// When fall distance is 0.0, that's the tick after fall damage is processed.
+			if (player.fallDistance <= 0.0 && (player.onGround() || player.isSwimming())) {
 				dash.jump_count = 0
 				dash.air_time_ticks = 0
+				player.removeAttribute("minecraft:generic.safe_fall_distance", "kubejs:dash_leniency")
 
 				dash.check_landed.clear()
 				delete dash.check_landed

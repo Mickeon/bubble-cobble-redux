@@ -28,6 +28,7 @@ const DASH_STARTERS = [
 	"BlueBerryNice",
 	"CafeJaze",
 	"CantieLabs",
+	"Giuly_Clockwork",
 	"Fableworks",
 	"LabbyRosenfeld",
 	"mAIgehound",
