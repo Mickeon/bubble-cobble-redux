@@ -105,8 +105,14 @@ EntityEvents.drops("minecraft:player", event => {
 		} break;
 		case "Polyfluff": {
 			add_drop(player, Item.of("minecraft:white_wool"), 0.75)
+			add_drop(player, Item.of("biomeswevegone:cattail_sprout"), 0.5)
+			add_drop(player, Item.of("biomesoplenty:cattail"), 0.25)
 			add_drop(player, Item.of("kubejs:music_disc_grapes"), 0.1)
-			// player.playSound("supplementaries:item.bomb", 25.0, 1.0)
+			player.level.spawnParticles("minecraft:dust_color_transition{from_color:[1.0, 1.0, 1.0], to_color:[1.0, 0.9, 0.5], scale: 4.0}", false,
+				player.x, player.y, player.z,
+				0.75, 0.5, 0.75, 50, 0.25
+			)
+			player.level.runCommandSilent(`execute as ${player.uuid} at ${player.uuid} run playsound supplementaries:item.bomb player @a ~ ~ ~ 1.0`)
 			player.level.spawnParticles("minecraft:firework", false, player.x, player.eyeY, player.z, 0.1, 0.1, 0.1, 60, 0.1)
 		} break;
 		case "Rem_Phase02": {
@@ -141,7 +147,10 @@ EntityEvents.drops("minecraft:player", event => {
 		case "SueTheMimiga": {
 			// add_drop(player, Item.of("splash_potion").withNBT({Potion: "gohome:recall"}).withLore(Text.red("GET THE HELL OUT OF HERE")), 0.75)
 			add_drop(player, Item.of("minecraft:rabbit").withCustomName("I think this is still funny."), 0.75)
-			add_drop(player, Item.of("farmersdelight:hamburger"), 0.5)
+			add_drop(player, Item.of("farmersdelight:beef_patty"), 0.5)
+			add_drop(player, Item.of("farmersdelight:cabbage_leaf"), 0.5)
+			add_drop(player, Item.of("farmersdelight:tomato"), 0.5)
+			add_drop(player, Item.of("farmersdelight:onion"), 0.5)
 			add_drop(player, Item.of("minersdelight:rabbit_stew_cup"), 0.1)
 			const killer_player = event.source.player
 			if (killer_player) {

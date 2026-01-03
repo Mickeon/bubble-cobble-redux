@@ -115,7 +115,7 @@ ItemEvents.firstRightClicked(["minecraft:raw_copper"], event => {
 	&& !player.crouching
 	) { // CantieLabs
 		const item_stack = event.item
-		item_stack.food = new $FoodBuilder().nutrition(1).alwaysEdible().build()
+		item_stack.food = new $FoodBuilder().nutrition(3).alwaysEdible().build()
 		item_stack.lore = Text.of("Yummy!")
 	}
 })
@@ -197,7 +197,13 @@ ItemEvents.entityInteracted("minecraft:name_tag", event => {
 PlayerEvents.decorateChat(event => {
 	const {player, message} = event
 	if (message.trim().toLowerCase() == "hi") {
-		player.runCommandSilent("damage @s 20 kubejs:pokemon_greeting by @n[type=cobblemon:pokemon, nbt={Pokemon:{PokemonOriginalTrainerType:NONE}}, distance=..4]")
+		player.attack(
+			new DamageSource(
+				"kubejs:pokemon_greeting",
+				player.level.getEntitiesWithin(AABB.CUBE.inflate(4).move(player.x, player.y, player.z)).filterSelector("@n[type=cobblemon:pokemon, nbt={Pokemon:{PokemonOriginalTrainerType:NONE}}]").first,
+				null
+			), 20
+		)
 	}
 })
 

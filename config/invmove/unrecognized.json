@@ -157,7 +157,8 @@
     "org.embeddedt.modernfix.screen.ModernFixOptionInfoScreen": true,
     "net.mehvahdjukaar.supplementaries.client.screens.RedMerchantScreen": true,
     "net.minecraft.client.gui.screens.options.AccessibilityOptionsScreen": true,
-    "de.maxhenkel.voicechat.gui.volume.AdjustVolumesScreen": true
+    "de.maxhenkel.voicechat.gui.volume.AdjustVolumesScreen": true,
+    "net.minecraft.client.gui.screens.packs.PackSelectionScreen": true
   },
   "hideBackground": {
     "dev.emi.emi.screen.RecipeScreen": false,

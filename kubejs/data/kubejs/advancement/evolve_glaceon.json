@@ -1,0 +1,19 @@
+{
+	"parent": "cobblemon:first_catch",
+	"display": {
+		"icon": {
+			"id": "cobblemon:azure_ball"
+		},
+		"title": "This Is Literally Mimmy",
+		"description": "Evolve an Eevee into Glaceon"
+	},
+	"criteria": {
+		"glaceon": {
+			"trigger": "cobblemon:pokemon_evolved",
+			"conditions": {
+				"species": "cobblemon:eevee",
+				"evolution": "cobblemon:glaceon"
+			}
+		}
+	}
+}

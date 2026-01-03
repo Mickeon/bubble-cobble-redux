@@ -424,8 +424,8 @@ EntityEvents.beforeHurt("minecraft:player", event => {
 		const player = event.player
 		const spawn_angle = event.level.sharedSpawnAngle
 
-		let dimension_transition = player.findRespawnPositionAndUseSpawnBlock(false, $DimensionTransition.DO_NOTHING)
-		let spawn_pos = dimension_transition.pos()
+		const dimension_transition = player.findRespawnPositionAndUseSpawnBlock(false, $DimensionTransition.DO_NOTHING)
+		const spawn_pos = dimension_transition.pos()
 		player.playNotifySound("minecraft:entity.enderman.teleport", "players", 1.0, 1.0)
 		player.teleportTo(dimension_transition.newLevel().dimension, spawn_pos.x(), spawn_pos.y(), spawn_pos.z(), spawn_angle, player.pitch)
 		player.playNotifySound("minecraft:enchant.thorns.hit", "players", 0.5, 1.0)
