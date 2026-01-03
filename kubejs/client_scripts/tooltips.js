@@ -268,6 +268,10 @@ ItemEvents.modifyTooltips(event => {
 		)
 	})
 
+	event.modifyAll({advanced: false}, text => {
+		text.dynamic("show_tool_durability")
+	})
+
 	// let recipe_manager = Client.player.level.recipeManager
 	// recipe_manager.byType("create:sequenced_assembly").forEach((id, sequenced_assembly) => {
 	// 	add_sequence_info(event, sequenced_assembly)
@@ -284,6 +288,34 @@ ItemEvents.dynamicTooltips("add_pelad", event => {
 	if (Client.player.username == "AceNil_" || Client.player.username == "SniperZee") {
 		event.lines[0] = Text.of(event.lines[0]).append(" 😳")
 	}
+})
+
+ItemEvents.dynamicTooltips("show_tool_durability", event => {
+	const item = event.item
+	if (!item.damaged) {
+		return
+	}
+
+	const durability = (item.maxDamage - item.damageValue)
+	const durability_ratio = durability / item.maxDamage
+	const damage_color = Color.GRAY
+
+	if (durability_ratio <= 0.1) {
+		damage_color = Color.DARK_RED
+	}
+	else if (durability_ratio <= 0.3) {
+		damage_color = Color.RED
+	}
+	else if (durability_ratio <= 0.5) {
+		damage_color = Color.GOLD
+	}
+
+	event.add([
+		Text.translatableWithFallback("", "Durability: %s / %s", [
+			Text.of(durability.toFixed(0)).color(damage_color),
+			Text.of(item.maxDamage).gray()
+		]).darkGray()
+	])
 })
 
 // /** @type {typeof import("net.neoforged.neoforge.client.event.RenderTooltipEvent$Color").$RenderTooltipEvent$Color } */
