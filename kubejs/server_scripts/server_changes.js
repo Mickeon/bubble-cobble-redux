@@ -441,3 +441,98 @@ EntityEvents.beforeHurt("minecraft:player", event => {
 		return
 	}
 })
+
+
+const FENCES = [
+	"biomesoplenty:dead_fence",
+	"biomesoplenty:empyreal_fence",
+	"biomesoplenty:fir_fence",
+	"biomesoplenty:hellbark_fence",
+	"biomesoplenty:jacaranda_fence",
+	"biomesoplenty:magic_fence",
+	"biomesoplenty:mahogany_fence",
+	"biomesoplenty:maple_fence",
+	"biomesoplenty:palm_fence",
+	"biomesoplenty:pine_fence",
+	"biomesoplenty:redwood_fence",
+	"biomesoplenty:umbran_fence",
+	"biomesoplenty:willow_fence",
+	"biomeswevegone:aspen_fence",
+	"biomeswevegone:baobab_fence",
+	"biomeswevegone:blue_enchanted_fence",
+	"biomeswevegone:cika_fence",
+	"biomeswevegone:cypress_fence",
+	"biomeswevegone:ebony_fence",
+	"biomeswevegone:fir_fence",
+	"biomeswevegone:florus_fence",
+	"biomeswevegone:green_enchanted_fence",
+	"biomeswevegone:holly_fence",
+	"biomeswevegone:ironwood_fence",
+	"biomeswevegone:jacaranda_fence",
+	"biomeswevegone:mahogany_fence",
+	"biomeswevegone:maple_fence",
+	"biomeswevegone:palm_fence",
+	"biomeswevegone:pine_fence",
+	"biomeswevegone:rainbow_eucalyptus_fence",
+	"biomeswevegone:redwood_fence",
+	"biomeswevegone:sakura_fence",
+	"biomeswevegone:skyris_fence",
+	"biomeswevegone:spirit_fence",
+	"biomeswevegone:white_mangrove_fence",
+	"biomeswevegone:willow_fence",
+	"biomeswevegone:witch_hazel_fence",
+	"biomeswevegone:zelkova_fence",
+	"cobblemon:apricorn_fence",
+	"cobblemon:saccharine_fence",
+	"copycats:copycat_fence",
+	"createdeco:andesite_mesh_fence",
+	"createdeco:brass_mesh_fence",
+	"createdeco:copper_mesh_fence",
+	"createdeco:industrial_iron_mesh_fence",
+	"createdeco:iron_mesh_fence",
+	"createdeco:zinc_mesh_fence",
+	"minecraft:acacia_fence",
+	"minecraft:bamboo_fence",
+	"minecraft:birch_fence",
+	"minecraft:cherry_fence",
+	"minecraft:crimson_fence",
+	"minecraft:dark_oak_fence",
+	"minecraft:jungle_fence",
+	"minecraft:mangrove_fence",
+	"minecraft:nether_brick_fence",
+	"minecraft:oak_fence",
+	"minecraft:spruce_fence",
+	"minecraft:warped_fence",
+	"mynethersdelight:powdery_fence",
+	"ribbits:mossy_oak_planks_fence"
+]
+for (const fence of FENCES) {
+	BlockEvents.rightClicked(fence, event => {
+		if (!event.player.mainHandItem.isEmpty() || !event.player.offhandItem.isEmpty()) {
+			return
+		}
+
+		/** @param {import("dev.latvian.mods.kubejs.level.LevelBlock").$LevelBlock$$Type} near_block @param {string} direction @returns {boolean} */
+		function should_connect(near_block, direction) {
+			if (near_block.hasTag("minecraft:fences")) {
+				return true
+			}
+
+			return false
+		}
+
+		const block = event.block
+		const pos = block.getPos()
+		event.level.setBlock(pos, Block.withProperties(
+			block.getBlockState(), {
+				north: should_connect(block.getNorth(), "north"),
+				south: should_connect(block.getSouth(), "south"),
+				west: should_connect(block.getWest(), "west"),
+				east: should_connect(block.getEast(), "east"),
+			}),
+			2 + 16 // Send update to clients, prevent neighbor updates.
+		)
+		event.level.runCommandSilent(`execute positioned ${pos.x} ${pos.y} ${pos.z} align xyz run playsound minecraft:entity.item_frame.remove_item player @a ~ ~ ~ 1.0`)
+		event.player.swing("main_hand", true)
+	})
+}
