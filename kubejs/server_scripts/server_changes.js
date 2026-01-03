@@ -250,7 +250,6 @@ const NO_NIGHT_LIGHT_MOBS = [
 	"monsterplus:overgrown_skeleton",
 	// Among others.
 	"minecraft:creeper",
-	"minecraft:spider",
 	"minecraft:witch",
 	"monsterplus:abyssologer",
 ]
@@ -264,10 +263,10 @@ NO_NIGHT_LIGHT_MOBS.forEach(entity_type => {
 })
 
 // After the above changes, a lot of Endermen spawn on the surface. Rectify that.
-const FEWER_NIGHT_LIGHT_MOBS = ["minecraft:enderman", "monsterplus:ender_eye"]
+const FEWER_NIGHT_LIGHT_MOBS = ["minecraft:enderman", "minecraft:spider", "monsterplus:ender_eye"]
 FEWER_NIGHT_LIGHT_MOBS.forEach(entity_type => {
 	EntityEvents.checkSpawn(entity_type, event => {
-		if (event.block.getSkyLight() >= 1 && event.type == "NATURAL" && Utils.getRandom().nextFloat() > 0.05) {
+		if (event.block.getSkyLight() >= 1 && event.type == "NATURAL" && Utils.getRandom().nextFloat() > 0.15) {
 			// console.log(`Trying to spawn ${event.entity.type}, but chance said no!`)
 			event.cancel()
 		}
