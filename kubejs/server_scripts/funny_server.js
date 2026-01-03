@@ -197,13 +197,15 @@ ItemEvents.entityInteracted("minecraft:name_tag", event => {
 PlayerEvents.decorateChat(event => {
 	const {player, message} = event
 	if (message.trim().toLowerCase() == "hi") {
-		player.attack(
-			new DamageSource(
-				"kubejs:pokemon_greeting",
-				player.level.getEntitiesWithin(AABB.CUBE.inflate(4).move(player.x, player.y, player.z)).filterSelector("@n[type=cobblemon:pokemon, nbt={Pokemon:{PokemonOriginalTrainerType:NONE}}]").first,
-				null
-			), 20
-		)
+		// const nearby_pokemon = player.level.getEntitiesWithin(AABB.CUBE.inflate(4).move(player.x, player.y, player.z)).filterSelector("@n[type=cobblemon:pokemon, nbt={Pokemon:{PokemonOriginalTrainerType:NONE}}]").first
+		/** @type {import("com.cobblemon.mod.common.entity.pokemon.PokemonEntity").$PokemonEntity$$Type} */
+		const traced = player.rayTrace()
+		const attacker = traced.entity
+		if (attacker?.type == "cobblemon:pokemon" && attacker?.nbt.getCompound("Pokemon").get("PokemonOriginalTrainerType") == "NONE") {
+			attacker.cry()
+			attacker.lookAt("eyes", player.eyePosition)
+			player.attack(new DamageSource("kubejs:pokemon_greeting", attacker, null), 15)
+		}
 	}
 })
 
@@ -251,7 +253,7 @@ PlayerEvents.loggedIn(event => {
 	}
 	// I know the consequences of this. If the server restarts, you will lose the leniency.
 	// But I can't be bothered storing dash data on disk.
-	player.removeAttribute("minecraft:generic.safe_fall_distance", "kubejs:dash_leniency")
+	event.player.removeAttribute("minecraft:generic.safe_fall_distance", "kubejs:dash_leniency")
 })
 
 // https://discord.com/channels/303440391124942858/303440391124942858/1450918369342521548
