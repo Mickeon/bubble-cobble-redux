@@ -10,16 +10,16 @@
   "name": "gui.xaero_entity_category_root",
   "protection": true,
   "settingOverrides": {
-    "displayHeight": 0.0,
     "displayed": true,
+    "displayHeight": 0.0,
     "heightBasedFade": true,
     "renderOrder": 0.0,
     "color": 13.0,
     "displayNameWhenIconFails": true,
     "entityNumber": 100.0,
     "alwaysDisplayNametags": false,
-    "startFadingAt": 0.0,
     "dotSize": 1.0,
+    "startFadingAt": 0.0,
     "renderOverMinimapFrame": 0.0,
     "icons": 1.0,
     "names": 0.0,
@@ -92,11 +92,11 @@
             "displayed": true,
             "heightBasedFade": false,
             "renderOrder": 925.0,
+            "names": 1.0,
+            "heightLimit": 200.0,
             "color": -1.0,
             "renderOverMinimapFrame": 2.0,
             "icons": 2.0,
-            "names": 1.0,
-            "heightLimit": 200.0,
             "iconScale": 1.0
           },
           "subCategories": [
@@ -229,8 +229,8 @@
               "name": "Villagers",
               "protection": false,
               "settingOverrides": {
-                "icons": 2.0,
                 "heightLimit": 40.0,
+                "icons": 2.0,
                 "iconScale": 0.75
               },
               "subCategories": []
@@ -246,10 +246,10 @@
               "name": "Pokemon",
               "protection": false,
               "settingOverrides": {
+                "heightLimit": 40.0,
                 "color": 15.0,
                 "renderOverMinimapFrame": 1.0,
                 "icons": 2.0,
-                "heightLimit": 40.0,
                 "iconScale": 1.5
               },
               "subCategories": []
@@ -264,12 +264,12 @@
               "protection": true,
               "settingOverrides": {
                 "renderOrder": 4.0,
+                "names": 1.0,
+                "heightLimit": 40.0,
                 "color": 11.0,
                 "displayNameWhenIconFails": true,
                 "renderOverMinimapFrame": 1.0,
                 "icons": 2.0,
-                "names": 1.0,
-                "heightLimit": 40.0,
                 "iconScale": 1.0
               },
               "subCategories": []
@@ -288,10 +288,10 @@
       "protection": true,
       "settingOverrides": {
         "renderOrder": 1.0,
+        "names": 1.0,
         "color": 8.0,
         "entityNumber": 100.0,
-        "dotSize": 1.0,
-        "names": 1.0
+        "dotSize": 1.0
       },
       "subCategories": []
     },
@@ -304,8 +304,8 @@
       "name": "gui.xaero_entity_category_other_entities",
       "protection": true,
       "settingOverrides": {
-        "color": 5.0,
-        "names": 1.0
+        "names": 1.0,
+        "color": 5.0
       },
       "subCategories": []
     }

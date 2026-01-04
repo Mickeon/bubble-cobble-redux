@@ -146,14 +146,16 @@ key_gui.xaero_map_zoom_in:key.keyboard.keypad.add:
 key_gui.xaero_map_zoom_out:key.keyboard.keypad.subtract:
 key_gui.xaero_quick_confirm:key.keyboard.right.shift:
 key_gui.xaero_toggle_dimension:key.keyboard.unknown:
+key_placebo.toggleTrails:key.keyboard.unknown:
+key_placebo.toggleWings:key.keyboard.unknown:
 key_keybind.sophisticatedbackpacks.open_backpack:key.keyboard.b:
 key_keybind.sophisticatedbackpacks.inventory_interaction:key.keyboard.c:
 key_keybind.sophisticatedbackpacks.tool_swap:key.keyboard.unknown:
-key_keybind.sophisticatedbackpacks.toggle_upgrade_3:key.keyboard.keypad.3:
-key_keybind.sophisticatedbackpacks.toggle_upgrade_4:key.keyboard.unknown:
 key_keybind.sophisticatedbackpacks.toggle_upgrade_5:key.keyboard.unknown:
-key_keybind.sophisticatedbackpacks.toggle_upgrade_1:key.keyboard.keypad.1:
+key_keybind.sophisticatedbackpacks.toggle_upgrade_4:key.keyboard.unknown:
+key_keybind.sophisticatedbackpacks.toggle_upgrade_3:key.keyboard.keypad.3:
 key_keybind.sophisticatedbackpacks.toggle_upgrade_2:key.keyboard.keypad.2:
+key_keybind.sophisticatedbackpacks.toggle_upgrade_1:key.keyboard.keypad.1:
 key_key.relics.active_abilities_list:key.keyboard.left.alt:
 key_key.relics.research_relic:key.keyboard.left.shift:
 key_key.carry.desc:key.keyboard.unknown:
@@ -161,6 +163,7 @@ key_key.cnc.whistle:key.keyboard.unknown:
 key_key.cnc.caribou_dash:key.keyboard.space:
 key_key.extendedhotbar.switch:key.keyboard.x:
 key_key.extendedhotbar.toggle:key.keyboard.f8:
+key_key.bridgingmod.toggle_bridging:key.keyboard.unknown:
 key_key.fog.toggle:key.keyboard.f7:
 key_key.yo_hooks.jump:key.mouse.right:
 key_key.yo_hooks.climb:key.keyboard.space:
@@ -204,5 +207,5 @@ key_key.jade.show_uses:key.keyboard.u:
 key_key.jade.narrate:key.keyboard.unknown:
 key_key.jade.show_details:key.keyboard.left.shift:
 key_key.craftpresence.config_keycode.name:key.keyboard.unknown:
-key_keybind.invmove.toggleMove:key.keyboard.unknown:
 key_key.entityculling.toggle:key.keyboard.unknown:
+key_keybind.invmove.toggleMove:key.keyboard.unknown:

@@ -23,7 +23,10 @@ global.DISABLED_ITEMS = [
 	// "astral_dimension:harsh_backpack",
 
 	// In favour of Minecraft's own Copper Nugget.
-	"create:copper_nugget"
+	"create:copper_nugget",
+
+	// Cobbreeding adds a lot of unnecessary, coloured Pokemon eggs.
+	/cobbreeding:.+pokemon_egg/,
 ]
 
 /** @type {Special.Fluid[]} */

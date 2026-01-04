@@ -434,6 +434,18 @@
         }
       },
       {
+        "id": "key_19b8afad8c5",
+        "title": "Reacharound Placement",
+        "icon": "minecraft:birch_slab",
+        "note": "From Bridging Mod",
+        "action": {
+          "type": "KEY",
+          "name": "key.bridgingmod.toggle_bridging",
+          "toggle": false,
+          "mode": "AUTO"
+        }
+      },
+      {
         "id": "key_19b61b1036f",
         "title": "Minimap",
         "icon": "minecraft:filled_map",

@@ -1229,6 +1229,50 @@
             ]
         },
         {
+            "pakku_id": "FoHfw97CC95hMUFr",
+            "pakku_links": [
+                "2KucOIIUkx0lTOwB",
+                "rcNaZofHJ2yMvMzg"
+            ],
+            "type": "MOD",
+            "side": "SERVER",
+            "slug": {
+                "modrinth": "cobblemon-capture-xp"
+            },
+            "name": {
+                "modrinth": "Cobblemon Capture XP"
+            },
+            "id": {
+                "modrinth": "LBl4Qguc"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "capturexp-neoforge-1.7.1-1.3.0.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/LBl4Qguc/versions/MoNv5bhj/capturexp-neoforge-1.7.1-1.3.0.jar",
+                    "id": "MoNv5bhj",
+                    "parent_id": "LBl4Qguc",
+                    "hashes": {
+                        "sha512": "d9587551d535268a89e26a521d8386a253cd5085ca541f95fc78641fd3b0fb97f5b90629d3bf8c39aa65e175698a743cee8020e0ecaff130fc8c56314213d498",
+                        "sha1": "fe266c29da5c30a72c3e74372f7c52e4631b2a75"
+                    },
+                    "required_dependencies": [
+                        "lVP9aUaY",
+                        "MdwFAVRL"
+                    ],
+                    "size": 22895,
+                    "date_published": "2025-11-30T04:36:01.830200Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "uUq7u08O3yDMkgsl",
             "type": "MOD",
             "side": "BOTH",
@@ -1434,6 +1478,48 @@
             ]
         },
         {
+            "pakku_id": "2KucOIIUkx0lTOwB",
+            "pakku_links": [
+                "rcNaZofHJ2yMvMzg"
+            ],
+            "type": "MOD",
+            "side": "SERVER",
+            "slug": {
+                "modrinth": "cobblemon-tim-core"
+            },
+            "name": {
+                "modrinth": "Cobblemon Tim Core"
+            },
+            "id": {
+                "modrinth": "lVP9aUaY"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "timcore-neoforge-1.7.1-1.27.1.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/lVP9aUaY/versions/8jSba7R1/timcore-neoforge-1.7.1-1.27.1.jar",
+                    "id": "8jSba7R1",
+                    "parent_id": "lVP9aUaY",
+                    "hashes": {
+                        "sha512": "547251799dc4bbc2d87a00cd87af29e8504329967731fc0118b52dcbf7ba44f6c1eb33b305448b04f64a31d9a043da26bd7e1e9c44e3e37eb33c7890a122fec8",
+                        "sha1": "032080d436d5c1c3c0f7e4b33a312f9529ab0a29"
+                    },
+                    "required_dependencies": [
+                        "MdwFAVRL"
+                    ],
+                    "size": 209769,
+                    "date_published": "2025-12-29T18:08:10.738925Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "sRDyFwwUN0z3F8da",
             "pakku_links": [
                 "rcNaZofHJ2yMvMzg"
@@ -1519,6 +1605,54 @@
                     ],
                     "size": 16119461,
                     "date_published": "2025-12-31T12:04:45.170255Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "ATSkN1ZbKNqLcpf1",
+            "pakku_links": [
+                "QYs6nSzVrLPKS2FG",
+                "2yEhDv4DiDHeNYOg",
+                "tbL8tCkeGeSia2W2",
+                "rcNaZofHJ2yMvMzg"
+            ],
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "modrinth": "cobbreeding"
+            },
+            "name": {
+                "modrinth": "Cobbreeding"
+            },
+            "id": {
+                "modrinth": "ItmVb4zY"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "Cobbreeding-neoforge-2.1.1.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/ItmVb4zY/versions/LnSjeUiM/Cobbreeding-neoforge-2.1.1.jar",
+                    "id": "LnSjeUiM",
+                    "parent_id": "ItmVb4zY",
+                    "hashes": {
+                        "sha512": "4806041462d7bcaa0ad0e352dd98d977c07812b68f6b86316e23cabdc706b0d8f432c594e001e9efee661fb628cd6d29dc912d8d6181e151d4bd27a8644cb4ad",
+                        "sha1": "4339873ea8e6556a1aa8a73624e562befb12e0e5"
+                    },
+                    "required_dependencies": [
+                        "9s6osm5g",
+                        "lhGA9TYQ",
+                        "ordsPcFz",
+                        "MdwFAVRL"
+                    ],
+                    "size": 307348,
+                    "date_published": "2025-11-29T10:35:35.737263Z"
                 }
             ]
         },
@@ -3924,6 +4058,45 @@
             ]
         },
         {
+            "pakku_id": "8tkJauAqiK1ml9Le",
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "modrinth": "gag"
+            },
+            "name": {
+                "modrinth": "Gadgets Against Grind"
+            },
+            "id": {
+                "modrinth": "IeYLjzpn"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "gag-neoforge-1.21.1-5.2.0.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/IeYLjzpn/versions/ND07gW3N/gag-neoforge-1.21.1-5.2.0.jar",
+                    "id": "ND07gW3N",
+                    "parent_id": "IeYLjzpn",
+                    "hashes": {
+                        "sha512": "0768f9034bf0d431b8576aefb2041557652197f4f56b6816463adedb72858cdbf746a4690e5036efe3b626de28929c5be8f1b2068247ca92458c1a9b0ba58476",
+                        "sha1": "64558e112de6c395a8f31afbef91f9e93ebc81fb"
+                    },
+                    "required_dependencies": [
+                        "tCkE8p2N"
+                    ],
+                    "size": 540286,
+                    "date_published": "2025-11-25T16:49:22.713268Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "VdaMvMbtfhQQ5wmg",
             "type": "MOD",
             "side": "BOTH",
@@ -4304,6 +4477,44 @@
                     "required_dependencies": [],
                     "size": 367790,
                     "date_published": "2025-12-18T11:58:09.043171Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "h2NCAlwI7OBVLmcq",
+            "type": "MOD",
+            "side": "SERVER",
+            "slug": {
+                "modrinth": "immersive-optimization"
+            },
+            "name": {
+                "modrinth": "Immersive Optimization"
+            },
+            "id": {
+                "modrinth": "vNZgQmjg"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "immersive_optimization-neoforge-1.21-0.1.0.jar",
+                    "mc_versions": [
+                        "1.21",
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/vNZgQmjg/versions/1xYKtazd/immersive_optimization-neoforge-1.21-0.1.0.jar",
+                    "id": "1xYKtazd",
+                    "parent_id": "vNZgQmjg",
+                    "hashes": {
+                        "sha512": "78b515e91e62694185ed0e6ed35e11d8b4ab724e354dd12ae4984fdeac221948215a33aafe56b8d981e244d32e900f6876399f7eff3a74c0a50176d1860d3b5b",
+                        "sha1": "610f59a189ac0fa4646f26fd6d795980649f2732"
+                    },
+                    "required_dependencies": [],
+                    "size": 50597,
+                    "date_published": "2025-09-06T17:35:07.798528Z"
                 }
             ]
         },

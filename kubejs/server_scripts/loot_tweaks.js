@@ -54,6 +54,7 @@ LootJS.lootTables(event => {
 			.addEntry(LootEntry.of("minersdelight:bat_rolls").withWeight(10).setCount([1, 2]))
 			.addEntry(LootEntry.of("cnc:wishbone").withWeight(10).setCount([1, 4]))
 			.addEntry(LootEntry.of("create:raw_zinc").withWeight(10).setCount([3, 8]))
+			.addEntry(LootEntry.of("gag:escape_rope").withWeight(10).setCount([1, 2]))
 			.addEntry(LootEntry.of("cobblemon:ancient_gigaton_ball").withWeight(7).setCount([3, 4]))
 			.addEntry(LootEntry.tag("simpletms:type_ground_tr", true).withWeight(5))
 			.addEntry(LootEntry.of("kubejs:doublemint_gum").withWeight(1).setCount([1, 2]))

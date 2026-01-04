@@ -271,5 +271,8 @@ ServerEvents.recipes(event => {
 	event.shaped(Item.of("justhammers:stone_reinforced_hammer"), ["III", " SI", "S I"], {I: "minecraft:stone", S: "minecraft:stick"})
 	event.shaped(Item.of("justhammers:iron_hammer"), [" II", " SI", "S  "], {I: "minecraft:iron_block", S: "minecraft:stick"})
 	event.shaped(Item.of("justhammers:iron_reinforced_hammer"), ["III", " SI", "S I"], {I: "minecraft:iron_block", S: "minecraft:stick"})
+
+	event.remove({id: "gag:escape_rope"})
+	event.shapeless("gag:escape_rope", ["yo_hooks:iron_hook_head", Ingredient.of("#c:ropes").withCount(3)])
 })
 

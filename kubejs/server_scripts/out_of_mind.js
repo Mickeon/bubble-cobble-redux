@@ -27,6 +27,12 @@ ServerEvents.tags("item", event => {
 	event.remove("c:hidden_from_recipe_viewers", [
 		"justhammers:stone_hammer", "justhammers:stone_reinforced_hammer", "justhammers:iron_hammer", "justhammers:iron_reinforced_hammer"
 	])
+
+	// Keeping only the Escape Rope from this mod, for now.
+	event.add("c:hidden_from_recipe_viewers", "@gag")
+	event.remove("c:hidden_from_recipe_viewers", [
+		"gag:escape_rope"
+	])
 })
 
 // Hide advancements.
