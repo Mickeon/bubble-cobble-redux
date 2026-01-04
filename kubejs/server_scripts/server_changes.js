@@ -429,6 +429,7 @@ EntityEvents.beforeHurt("minecraft:player", event => {
 		player.teleportTo(dimension_transition.newLevel().dimension, spawn_pos.x(), spawn_pos.y(), spawn_pos.z(), spawn_angle, player.pitch)
 		player.playNotifySound("minecraft:enchant.thorns.hit", "players", 0.5, 1.0)
 		player.addEffect(MobEffectUtil.of("minecraft:darkness", 5 * SEC, 200))
+		player.giveExperienceLevels(-5)
 		if (!player.isAdvancementDone("kubejs:bad_dream")) {
 			player.unlockAdvancement("kubejs:bad_dream")
 		}
