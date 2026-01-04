@@ -11,7 +11,6 @@
         "global_packs/desktop.ini",
         "kubejs",
         "!config/emixx/emixx-client.toml",
-        "!config/fog/config.json",
         "!config/immersive_paintings/client_config.toml",
         "!config/jade/jade.json",
         "!config/maplink/general.json5",

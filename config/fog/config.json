@@ -8,7 +8,7 @@
 		"minecraft:basalt_deltas"
 	],
 	"rainFogMultiplier": 0.3,
-	"undergroundFogMultiplier": 0.5,
+	"undergroundFogMultiplier": 0.25,
 	"enableBiomeSpecificFogColors": true,
 	"enableCloudWhitening": false,
 	"initialFogStart": 0.5,
