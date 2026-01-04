@@ -110,6 +110,7 @@ ServerEvents.tags("block", event => {
 
 	// Bugged. See also https://github.com/terrarium-earth/Handcrafted/issues/132.
 	event.add("c:relocation_not_supported",	"#handcrafted:nightstands", "#handcrafted:desks", "#handcrafted:counters", "#handcrafted:tables")
+	event.add("supplementaries:un_rotatable", "#c:relocation_not_supported")
 
 	event.add("bubble_cobble:very_hot", "#farmersdelight:heat_sources")
 	event.add("supplementaries:lights_gunpowder", "#bubble_cobble:very_hot") // This has weird consequences (e.g. Campfire lights up Gunpowder)

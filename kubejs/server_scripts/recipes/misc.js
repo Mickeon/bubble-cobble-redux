@@ -25,10 +25,26 @@ ServerEvents.tags("item", event => {
 })
 
 ServerEvents.recipes(event => {
+	/** @param {import("dev.latvian.mods.kubejs.recipe.filter.RecipeFilter").RecipeFilterObject} filter @param {number} new_count  */
+	function change_result_count(filter, new_count) {
+		event.forEachRecipe(filter, recipe => {
+			const json = JSON.parse(recipe.json)
+			const type_id = recipe.typeKey
+			if (type_id == "minecraft:crafting_shaped") {
+				json.result.count = new_count
+			} else if (type_id == "create:sequenced_assembly") {
+				json.results[0].count = new_count
+			} else {
+				console.warn(`Unsupported recipe type to change result's count for: ${type_id}`)
+				return
+			}
+			event.custom(json).id(recipe.getId())
+		})
+	}
+
 	console.log("Changing recipes in misc.js")
 	// Lower overall cost of Gearbox.
-	event.remove({ id: "create:gearbox" })
-	event.shapeless(Item.of("create:gearbox"), ["create:andesite_casing", "2x create:large_cogwheel"])
+	event.shapeless(Item.of("create:gearbox"), ["create:andesite_casing", Item.of("create:large_cogwheel", 2)]).id("create:crafting/kinetics/gearbox")
 
 	// Recycle diamond tools & armor.
 	event.recipes.create.crushing([
@@ -189,19 +205,15 @@ ServerEvents.recipes(event => {
 	event.replaceInput({id: "solonion:lunchbag"}, "minecraft:paper", "farmersdelight:canvas")
 	event.replaceInput({id: "supplementaries:lunch_basket"}, "minecraft:bamboo", "farmersdelight:canvas")
 	event.replaceInput({id: /^create:crafting.*filter$/}, "minecraft:white_wool", "farmersdelight:canvas")
-	// event.replaceInput({id: "minecraft:item_frame"}, "minecraft:leather", "farmersdelight:canvas")
+	// event.replaceInput({id: "minecraft:item_frame"}, "minecraft:leather", "farmersdelight:canvas") // Conflicts with alternative Painting recipe.
 	event.remove({id: "minecraft:painting"}) // In favour of Farmer's Delight's which requires Canvas.
 	event.remove({id: "immersive_paintings:painting"})
 	event.shaped(Item.of("immersive_paintings:painting", 2), ["SDS","DCD", "SDS"], {S: "minecraft:stick", D: "#c:dyes", C: "farmersdelight:canvas"})
 	event.shaped("minecraft:bundle", ["SS", "CC"], {S: "minecraft:string", C: "farmersdelight:canvas"})
-	// event.replaceOutput({id: "immersive_paintings:graffiti"}, "immersive_paintings:graffiti", Item.of("immersive_paintings:graffiti", 4)) // Does not work.
+	change_result_count({id: "immersive_paintings:graffiti"}, 4)
 
 	// Double output for Train Tracks recipe.
-	event.forEachRecipe({id: "create:sequenced_assembly/track"}, recipe => {
-		const json = JSON.parse(recipe.json)
-		json.results[0].count = 2
-		event.custom(json).id(recipe.getId())
-	})
+	change_result_count({id: "create:sequenced_assembly/track"}, 2)
 
 	// See https://modrinth.com/mod/create-copper-zinc.
 	event.recipes.create.mixing(CreateItem.of("create:asurine"), [
@@ -220,28 +232,24 @@ ServerEvents.recipes(event => {
 	event.replaceInput({id: "farmersdelight:fried_egg_from_smoker", input: "minecraft:egg"}, "minecraft:egg", "#c:eggs")
 	event.replaceInput({id: "farmersdelight:fried_egg_from_campfire_cooking", input: "minecraft:egg"}, "minecraft:egg", "#c:eggs")
 
-	// Make Rails considerably cheaper. See also https://modrinth.com/datapack/rail-recipe-rebalance
+	// Make Rails considerably cheaper. See also https://modrinth.com/datapack/rail-recipe-rebalance.
 	event.replaceInput({id: "minecraft:rail" }, "minecraft:iron_ingot", "minecraft:iron_nugget")
 	event.replaceInput({id: "minecraft:detector_rail" }, "minecraft:iron_ingot", "minecraft:iron_nugget")
-	event.replaceOutput({id: "minecraft:detector_rail" }, "*", Item.of("minecraft:detector_rail", 6) )
 	event.replaceInput({id: "minecraft:activator_rail" }, "minecraft:iron_ingot", "minecraft:iron_nugget")
-	event.replaceOutput({id: "minecraft:activator_rail" }, "*", Item.of("minecraft:activator_rail", 6) )
 	event.replaceInput({id: "minecraft:powered_rail" }, "minecraft:gold_ingot", "minecraft:gold_nugget")
-	event.replaceOutput({id: "minecraft:powered_rail" }, "*", Item.of("minecraft:powered_rail", 8) ) // FIXME: Should be 8 but it's still 6?
+	change_result_count({id: "minecraft:powered_rail" }, 8)
 
 	// Don't let any Create Cobblemon crossover nerf the base recipe.
-	event.forEachRecipe({id: /cobblemon:.*ball$/, type: "minecraft:crafting_shaped"}, recipe => {
+	event.forEachRecipe({mod: "cobblemon", id: /ball$/, type: "minecraft:crafting_shaped"}, recipe => {
 		const json = JSON.parse(recipe.json)
-		json.result.count = 4
-		event.custom(json).id(recipe.getId())
+		if (json.result.count == 2) {
+			json.result.count = 4
+			event.custom(json).id(recipe.getId())
+		}
 	})
 
 	// Instead, buff the Create version's output.
-	event.forEachRecipe({id: /createmonballsoverhaul:sequenced_assembly\/balls/}, recipe => {
-		const json = JSON.parse(recipe.json)
-		json.results[0].count = 2
-		event.custom(json).id(recipe.getId())
-	})
+	change_result_count({mod: "createmonballsoverhaul", id: /sequenced_assembly\/balls/}, 2)
 
 	// Merge Biomes o' Plenty and Biomes We've Gone's Cattail.
 	event.replaceInput({input: "biomesoplenty:cattail"}, "biomesoplenty:cattail", "#bubble_cobble:cattails")
