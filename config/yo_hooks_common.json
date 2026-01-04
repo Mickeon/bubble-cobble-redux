@@ -9,5 +9,6 @@
   "netheriteHookLength": 26,
   "climbSpeed": 0.25,
   "softHook": false,
-  "stiffness": 0.1
+  "stiffness": 0.1,
+  "funnyMode": false
 }
