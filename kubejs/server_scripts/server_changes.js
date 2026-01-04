@@ -333,10 +333,9 @@ NativeEvents.onEvent($AnvilUpdateEvent, event => {
 
 
 ServerEvents.tags("item", event => {
+	event.add("bubble_cobble:lanterns", "minecraft:lantern", "#minecraft:lanterns", "ribbits:swamp_lantern")
 	event.add("bubble_cobble:do_not_replace_when_in_offhand", [
-		"minecraft:lantern",
-		"ribbits:swamp_lantern",
-		/^minecraft:.*copper_lantern/,
+		"#bubble_cobble:lanterns",
 		"#minecraft:candles",
 		"#supplementaries:candle_holders"
 	])
@@ -578,3 +577,11 @@ for (const fence of FENCES) {
 		player.swing("main_hand", true)
 	})
 }
+
+// Avoid accidentally placing lanterns when held in offhand.
+// There's similar client-side code in client_changes.js.
+BlockEvents.rightClicked(event => {
+	if (event.hand == "OFF_HAND" && event.item.hasTag("bubble_cobble:lanterns") && !event.player.shiftKeyDown) {
+		event.cancel()
+	}
+})
