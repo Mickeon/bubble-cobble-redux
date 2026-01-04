@@ -3977,7 +3977,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "geckolib-neoforge-1.21.1-4.8.2.jar",
+                    "file_name": "geckolib-neoforge-1.21.1-4.8.3.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -3985,16 +3985,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/8BmcQJ2H/versions/RVIo5f6E/geckolib-neoforge-1.21.1-4.8.2.jar",
-                    "id": "RVIo5f6E",
+                    "url": "https://cdn.modrinth.com/data/8BmcQJ2H/versions/lWsXauBN/geckolib-neoforge-1.21.1-4.8.3.jar",
+                    "id": "lWsXauBN",
                     "parent_id": "8BmcQJ2H",
                     "hashes": {
-                        "sha512": "6b70d7dc11adb68cd590110c6b29de39eaae40b55f934026288a2018f6d529a2579124d0596825126db4a499f0dfc26248e4005a452bc1b0d4d05c0279e33602",
-                        "sha1": "b2d84a5ea8b8944be66dbf817f0d4aa3f494db7a"
+                        "sha512": "4b8f3bcdc04450aa97af136353341f136921259f16f2363f3cfe77956860455f27c38f9701b3f0e8a78ea86067411ecd35d391803b753276934057481e770556",
+                        "sha1": "fb0ac6ad63dc5f401c15c66a037c08e9709d1c42"
                     },
                     "required_dependencies": [],
-                    "size": 621848,
-                    "date_published": "2025-09-22T19:52:43.235896Z"
+                    "size": 622121,
+                    "date_published": "2026-01-04T07:23:41.319169Z"
                 }
             ]
         },
@@ -6922,7 +6922,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "preloading-tricks-3.4.1.jar",
+                    "file_name": "preloading-tricks-3.4.2.jar",
                     "mc_versions": [
                         "1.20.1",
                         "1.21",
@@ -6944,16 +6944,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/FFeAJNCx/versions/hg6V1nDW/preloading-tricks-3.4.1.jar",
-                    "id": "hg6V1nDW",
+                    "url": "https://cdn.modrinth.com/data/FFeAJNCx/versions/JX3kAuSJ/preloading-tricks-3.4.2.jar",
+                    "id": "JX3kAuSJ",
                     "parent_id": "FFeAJNCx",
                     "hashes": {
-                        "sha512": "85d28b43bd365e45e5dc97379270fd4fc0f4d131d43b54998b77e6cad7ac8ed26fb2c71dad5865030fc8d9a3dfabccf565b2a1ff95c3bb7fee639b822ece87fa",
-                        "sha1": "1305d1e07f65a467ff0a11e4e238ef4645926774"
+                        "sha512": "147f11240127e5cbf4ee37a709a1c2f573b4c44847747788a0f5b2dfacdd8fb13460b1cb95f398499ffa030b408d329acd07708ec54d159aa886e5d03ef97c58",
+                        "sha1": "9fe5d86ac2104ea843c86b768f4b273728e13cbd"
                     },
                     "required_dependencies": [],
-                    "size": 1854946,
-                    "date_published": "2026-01-03T12:52:53.656707Z"
+                    "size": 1874278,
+                    "date_published": "2026-01-04T05:17:30.982622Z"
                 }
             ]
         },
@@ -8041,7 +8041,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "sophisticatedbackpacks-1.21.1-3.25.21.1475.jar",
+                    "file_name": "sophisticatedbackpacks-1.21.1-3.25.22.1487.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -8049,18 +8049,18 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/TyCTlI4b/versions/K27VegQ6/sophisticatedbackpacks-1.21.1-3.25.21.1475.jar",
-                    "id": "K27VegQ6",
+                    "url": "https://cdn.modrinth.com/data/TyCTlI4b/versions/lzKRYdud/sophisticatedbackpacks-1.21.1-3.25.22.1487.jar",
+                    "id": "lzKRYdud",
                     "parent_id": "TyCTlI4b",
                     "hashes": {
-                        "sha512": "3a566835aabb55a0a9256f790640ab0683b720165be05e955077b3e071704b64096111c1570a519002571302b573088a6cdc340edafc68bd3aca437e0bb257c7",
-                        "sha1": "26fb3c0b046079180e9ca2952d73677f6fb51fe2"
+                        "sha512": "730a0f4758216e3d079870f09fe34900b2aa83476893c65b4e7083585a3e4a4cd37113473a896fb5e81a87355f7ea145bd531af31ee200c47d62d801f4c0548c",
+                        "sha1": "ea9d27904f269ebcd6df187cf5eb77d620266973"
                     },
                     "required_dependencies": [
                         "nmoqTijg"
                     ],
-                    "size": 986309,
-                    "date_published": "2025-12-28T11:08:47.930119Z"
+                    "size": 986360,
+                    "date_published": "2026-01-03T22:32:34.963375Z"
                 }
             ]
         },
