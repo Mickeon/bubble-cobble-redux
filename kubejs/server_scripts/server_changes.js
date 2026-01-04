@@ -442,7 +442,8 @@ EntityEvents.beforeHurt("minecraft:player", event => {
 	}
 })
 
-
+// Right-click with empty hand on fences to disconnect/reconnect them from solid faces.
+/** @import {$FenceBlock} from "net.minecraft.world.level.block.FenceBlock" */
 const FENCES = [
 	"biomesoplenty:dead_fence",
 	"biomesoplenty:empyreal_fence",
@@ -508,31 +509,72 @@ const FENCES = [
 ]
 for (const fence of FENCES) {
 	BlockEvents.rightClicked(fence, event => {
-		if (!event.player.mainHandItem.isEmpty() || !event.player.offhandItem.isEmpty()) {
+		const player = event.player
+		if (!player.mainHandItem.isEmpty() || !player.offhandItem.isEmpty() || player.swinging) {
 			return
 		}
 
-		/** @param {import("dev.latvian.mods.kubejs.level.LevelBlock").$LevelBlock$$Type} near_block @param {string} direction @returns {boolean} */
-		function should_connect(near_block, direction) {
-			if (near_block.hasTag("minecraft:fences")) {
-				return true
-			}
+		const level = event.level
+		const level_block = event.block
 
-			return false
+		/** @type {$FenceBlock} */
+		const block = level_block.getBlock()
+		const pos = level_block.getPos()
+
+		const state_north = level_block.getNorth().getBlockState()
+		const state_south = level_block.getSouth().getBlockState()
+		const state_east = level_block.getEast().getBlockState()
+		const state_west = level_block.getWest().getBlockState()
+		const is_north_face_sturdy = state_north.isFaceSturdy(level, pos, Direction.NORTH.opposite, "full")
+		const is_south_face_sturdy = state_south.isFaceSturdy(level, pos, Direction.SOUTH.opposite, "full")
+		const is_east_face_sturdy = state_east.isFaceSturdy(level, pos, Direction.EAST.opposite, "full")
+		const is_west_face_sturdy = state_west.isFaceSturdy(level, pos, Direction.WEST.opposite, "full")
+		if (!is_north_face_sturdy && !is_south_face_sturdy && !is_east_face_sturdy && !is_west_face_sturdy) {
+			player.swing("main_hand")
+			level.runCommandSilent(`execute positioned ${pos.x} ${pos.y} ${pos.z} align xyz run playsound bubble_cobble:buzz player @a ~ ~ ~ 0.25`)
+			return // Nothing to do, there's only fences here, maybe.
 		}
 
-		const block = event.block
-		const pos = block.getPos()
-		event.level.setBlock(pos, Block.withProperties(
-			block.getBlockState(), {
-				north: should_connect(block.getNorth(), "north"),
-				south: should_connect(block.getSouth(), "south"),
-				west: should_connect(block.getWest(), "west"),
-				east: should_connect(block.getEast(), "east"),
-			}),
-			2 + 16 // Send update to clients, prevent neighbor updates.
+		const states = level_block.getProperties()
+		const is_fence_disconnected_from_sturdy_faces = (
+			(states.get("north") == "false" || !is_north_face_sturdy)
+			&& (states.get("south") == "false" || !is_south_face_sturdy)
+			&& (states.get("east") == "false" || !is_east_face_sturdy)
+			&& (states.get("west") == "false" || !is_west_face_sturdy)
 		)
-		event.level.runCommandSilent(`execute positioned ${pos.x} ${pos.y} ${pos.z} align xyz run playsound minecraft:entity.item_frame.remove_item player @a ~ ~ ~ 1.0`)
-		event.player.swing("main_hand", true)
+
+		const block_set_flags = 2 | 16 // Send update to clients, do not update neighbors.
+		if (is_fence_disconnected_from_sturdy_faces) {
+			level.setBlock(pos, Block.withProperties(
+				level_block.getBlockState(), {
+					north: block.connectsTo(state_north, is_north_face_sturdy, Direction.NORTH),
+					south: block.connectsTo(state_south, is_south_face_sturdy, Direction.SOUTH),
+					east: block.connectsTo(state_east, is_east_face_sturdy, Direction.EAST),
+					west: block.connectsTo(state_west, is_west_face_sturdy, Direction.WEST),
+				}),
+				block_set_flags
+			)
+			level.runCommandSilent(`execute positioned ${pos.x} ${pos.y} ${pos.z} align xyz run playsound minecraft:block.wooden_trapdoor.open block @a ~ ~ ~ 1.0`)
+			// if (state_north.properties.contains("south")) {
+			//	 level_block.getNorth().setBlockState(Block.withProperties(state_north, {south: patch.north}))
+			// }
+		} else {
+			level.setBlock(pos, Block.withProperties(
+				level_block.getBlockState(), {
+					north: state_north.hasTag("minecraft:fences"),
+					south: state_south.hasTag("minecraft:fences"),
+					west: state_west.hasTag("minecraft:fences"),
+					east: state_east.hasTag("minecraft:fences"),
+				}),
+				block_set_flags
+			)
+			level.runCommandSilent(`execute positioned ${pos.x} ${pos.y} ${pos.z} align xyz run playsound minecraft:block.wooden_trapdoor.close block @a ~ ~ ~ 1.0`)
+			// if (block.getNorth().getProperties().get("north") == "true") {
+			// 	block.getNorth().setBlockState(Block.withProperties(block.getNorth().getBlockState(), {north: false}), 2 | 16)
+			// }
+		}
+
+		level.runCommandSilent(`execute at ${player.uuid} run playsound minecraft:entity.item_frame.remove_item player @a ~ ~ ~ 0.5`)
+		player.swing("main_hand", true)
 	})
 }
