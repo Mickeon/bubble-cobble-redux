@@ -1,0 +1,26 @@
+{
+  "parent": "farmersdelight:main/root",
+  "display": {
+    "icon": {
+      "id": "cobblemon:lucky_egg"
+    },
+    "title": "What? It's Just an Egg",
+    "description": "Eat a fried Lucky Egg",
+    "frame": "goal"
+  },
+  "criteria": {
+    "lucky_egg": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "farmersdelight:fried_egg",
+          "components": {
+            "minecraft:custom_data": {
+              "was_lucky_egg": true
+            }
+          }
+        }
+      }
+    }
+  }
+}

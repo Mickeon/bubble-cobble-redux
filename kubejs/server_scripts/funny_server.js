@@ -40,6 +40,11 @@ ServerEvents.recipes(event => {
 
 	event.shapeless("kubejs:banana_mayo_sandwich", ["#cobblemon:berries/colour/yellow", "create_bic_bit:mayonnaise_bottle", "minecraft:bread"])
 	event.shapeless(Item.of("kubejs:doublemint_gum", 2), ["#cobblemon:mints", "#c:slime_balls", "#cobblemon:mints", "minecraft:paper"])
+
+	const cooked_lucky_egg = Item.of("farmersdelight:fried_egg", {"minecraft:custom_data": {was_lucky_egg: true}, "minecraft:rarity": "uncommon"})
+	event.smelting(cooked_lucky_egg, "cobblemon:lucky_egg", 5)
+	event.smoking(cooked_lucky_egg, "cobblemon:lucky_egg", 2.5)
+	event.campfireCooking(cooked_lucky_egg, "cobblemon:lucky_egg", 5)
 })
 
 

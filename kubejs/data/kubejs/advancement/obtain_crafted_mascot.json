@@ -9,7 +9,7 @@
     "frame": "goal"
   },
   "criteria": {
-    "iron_boots": {
+    "blue_mascot_cat": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -23,7 +23,6 @@
           }
         ]
       }
-      
     }
   }
 }

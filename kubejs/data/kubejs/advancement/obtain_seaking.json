@@ -1,0 +1,36 @@
+{
+	"$schema": "https://www.schemastore.org/minecraft-advancement.json",
+	"parent": "cobblemon:full_party",
+	"display": {
+		"icon": {
+			"id": "immersive_paintings:painting"
+		},
+		"title": "The 9TH Annual Dallas Mower Expo",
+		"description": "Have a Seaking and Paintings in your party"
+	},
+	"criteria": {
+		"seaking": {
+			"trigger": "cobblemon:party",
+			"conditions": {
+				"party": [
+					"cobblemon:seaking"
+				]
+			}
+		},
+		"painting": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:painting",
+							"immersive_paintings:painting",
+							"immersive_paintings:glow_painting",
+							"handcrafted:fancy_painting"
+						]
+					}
+				]
+			}
+		}
+	}
+}

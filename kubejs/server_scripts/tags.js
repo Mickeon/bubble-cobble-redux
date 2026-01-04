@@ -54,7 +54,7 @@ ServerEvents.tags("item", event => {
 	// Makes sense.
 	event.add("c:tools", "#constructionstick:construction_sticks")
 	event.add("c:bones", "cnc:wishbone", "cnc:lucky_wishbone", "cnc:unlucky_wishbone")
-	event.add("c:eggs", "cobblemon:lucky_egg", "undergroundworlds:spider_egg") // Cookable Lucky Egg is hilarious.
+	event.add("c:eggs", "undergroundworlds:spider_egg")
 	event.add("c:mushrooms", "ribbits:toadstool") // No, it doesn't make sense?
 	event.add("create:pulpifiable", "biomeswevegone:shrub", "biomeswevegone:firecracker_flower_bush", "cobblemon:medicinal_leek")
 	event.add("create_bic_bit:tulip", "#biomeswevegone:flowers/tulips")

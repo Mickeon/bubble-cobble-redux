@@ -1,1 +1,0 @@
-give @s cobblemon:lucky_egg
