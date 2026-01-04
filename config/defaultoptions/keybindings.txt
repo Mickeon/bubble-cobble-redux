@@ -64,14 +64,6 @@ key_key.voice_chat_toggle_recording:key.keyboard.unknown:
 key_key.voice_chat_adjust_volumes:key.keyboard.unknown:
 key_keybinds.bettercombat.feint:key.mouse.4:
 key_keybinds.bettercombat.toggle_mine_with_weapons:key.keyboard.unknown:
-key_key.entris.left:key.keyboard.a:
-key_key.entris.right:key.keyboard.d:
-key_key.entris.down:key.keyboard.s:
-key_key.entris.up:key.keyboard.space:
-key_key.entris.hold:key.keyboard.left.shift:
-key_key.entris.hard_drop:key.keyboard.w:
-key_key.entris.right_rotate:key.mouse.left:
-key_key.entris.left_rotate:key.mouse.right:
 key_key.ponder.ponder:key.keyboard.w:
 key_gui.xaero_minimap_settings:key.keyboard.unknown:
 key_gui.xaero_zoom_in:key.keyboard.keypad.add:
@@ -157,11 +149,11 @@ key_gui.xaero_toggle_dimension:key.keyboard.unknown:
 key_keybind.sophisticatedbackpacks.open_backpack:key.keyboard.b:
 key_keybind.sophisticatedbackpacks.inventory_interaction:key.keyboard.c:
 key_keybind.sophisticatedbackpacks.tool_swap:key.keyboard.unknown:
-key_keybind.sophisticatedbackpacks.toggle_upgrade_1:key.keyboard.keypad.1:
-key_keybind.sophisticatedbackpacks.toggle_upgrade_2:key.keyboard.keypad.2:
 key_keybind.sophisticatedbackpacks.toggle_upgrade_3:key.keyboard.keypad.3:
 key_keybind.sophisticatedbackpacks.toggle_upgrade_4:key.keyboard.unknown:
 key_keybind.sophisticatedbackpacks.toggle_upgrade_5:key.keyboard.unknown:
+key_keybind.sophisticatedbackpacks.toggle_upgrade_1:key.keyboard.keypad.1:
+key_keybind.sophisticatedbackpacks.toggle_upgrade_2:key.keyboard.keypad.2:
 key_key.relics.active_abilities_list:key.keyboard.left.alt:
 key_key.relics.research_relic:key.keyboard.left.shift:
 key_key.carry.desc:key.keyboard.unknown:
@@ -212,5 +204,5 @@ key_key.jade.show_uses:key.keyboard.u:
 key_key.jade.narrate:key.keyboard.unknown:
 key_key.jade.show_details:key.keyboard.left.shift:
 key_key.craftpresence.config_keycode.name:key.keyboard.unknown:
-key_key.entityculling.toggle:key.keyboard.unknown:
 key_keybind.invmove.toggleMove:key.keyboard.unknown:
+key_key.entityculling.toggle:key.keyboard.unknown:
