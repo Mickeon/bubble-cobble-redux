@@ -954,6 +954,48 @@
             ]
         },
         {
+            "pakku_id": "nwT58hqojNyVpqCA",
+            "pakku_links": [
+                "WWiX8dynol1cESFV"
+            ],
+            "type": "MOD",
+            "side": "CLIENT",
+            "slug": {
+                "modrinth": "bridging-mod"
+            },
+            "name": {
+                "modrinth": "Bridging Mod"
+            },
+            "id": {
+                "modrinth": "lO3s8hjs"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "BridgingMod-2.6.2+1.21.1.neoforge-release.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/lO3s8hjs/versions/GiR8tHNc/BridgingMod-2.6.2+1.21.1.neoforge-release.jar",
+                    "id": "GiR8tHNc",
+                    "parent_id": "lO3s8hjs",
+                    "hashes": {
+                        "sha512": "315129fd67381cfc799aa51fcd6ee511fdb6959a8b60f33afc9ea48c7cc13c689d6d56fcd2c793d8ce9ba95f7a37a5fe94c4422baa8c011592153ad2bd47dbd5",
+                        "sha1": "18c4fdadf7d1b4632ae0e0914e4075847306b52f"
+                    },
+                    "required_dependencies": [
+                        "1eAoo2KR"
+                    ],
+                    "size": 5924051,
+                    "date_published": "2025-03-06T03:45:45.567596Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "D58P3nMcYOAMKDSa",
             "type": "MOD",
             "side": "BOTH",
