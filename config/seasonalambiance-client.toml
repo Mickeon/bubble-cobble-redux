@@ -40,4 +40,4 @@ enableInGame = false
 forceSeasonEnabled = true
 #Which season to force (select from dropdown)
 #Allowed Values: AUTUMN, WINTER, SPRING, SUMMER, NEW_YEAR, VALENTINES, HALLOWEEN, CHRISTMAS, PRIDE
-forcedSeason = "CHRISTMAS"
+forcedSeason = "WINTER"
