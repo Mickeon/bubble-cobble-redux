@@ -1,6 +1,6 @@
 [weather_settings]
 	#Generate snow and ice during the Winter season
-	generate_snow_ice = true
+	generate_snow_ice = false
 	#Change the frequency of rain/snow/storms based on the season
 	change_weather_frequency = true
 
@@ -76,8 +76,8 @@
 #max_thunder_time is the maximum time interval between thunder events in ticks. Set to -1 to disable thunder.
 [[season_properties]]
 	season = "EARLY_SUMMER"
-	melt_percent = 25.0
-	melt_rolls = 1
+	melt_percent = 50.0
+	melt_rolls = 3
 	biome_temp_adjustment = 0.0
 	min_rain_time = 12000
 	max_rain_time = 96000
@@ -195,8 +195,8 @@
 #max_thunder_time is the maximum time interval between thunder events in ticks. Set to -1 to disable thunder.
 [[season_properties]]
 	season = "LATE_SUMMER"
-	melt_percent = 25.0
-	melt_rolls = 1
+	melt_percent = 50.0
+	melt_rolls = 2
 	biome_temp_adjustment = 0.0
 	min_rain_time = 12000
 	max_rain_time = 96000
