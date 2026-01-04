@@ -1,5 +1,3 @@
-// /** @type {typeof import("net.minecraft.world.level.block.BedBlock").$BedBlock } */
-// let $BedBlock  = Java.loadClass("net.minecraft.world.level.block.BedBlock")
 /** @type {typeof import("net.minecraft.world.entity.animal.CatVariant").$CatVariant } */
 let $CatVariant  = Java.loadClass("net.minecraft.world.entity.animal.CatVariant")
 
@@ -286,41 +284,30 @@ function find_mickeon(server) {
 	return player_list.getPlayerByName("Mickeon")
 }
 
-// StartupEvents.registry("mob_effect", event => {
-// 	event.create("begone")
-// 		.color(0x000000)
-// 		.instant()
-// 		.effectTick(entity => begone_effect(entity))
-// })
 
-// /** @param {import("net.minecraft.world.entity.LivingEntity").$LivingEntity$$Type} entity */
-// function begone_effect(entity) {
-// 	if (entity instanceof $ServerPlayer) {
-// 		console.log(`Applied Begone to ${entity}!!!`)
+/** @type {typeof import("net.minecraft.server.level.ServerPlayer").$ServerPlayer } */
+let $ServerPlayer  = Java.loadClass("net.minecraft.server.level.ServerPlayer")
+/** @type {typeof import("net.minecraft.world.level.portal.DimensionTransition").$DimensionTransition } */
+let $DimensionTransition  = Java.loadClass("net.minecraft.world.level.portal.DimensionTransition")
+StartupEvents.registry("mob_effect", event => {
+	event.create("begone")
+		.color(0x000000)
+		.instant()
+		.effectTick(entity => global.begone_effect(entity))
+})
 
-// 		const server = entity.server
 
-// 		// const respawn_pos = entity.respawnPosition
-// 		// const respawn_dimension = entity.respawnDimension
-// 		// if (!respawn_pos) {
-// 			const overworld = server.getOverworld()
-// 			const shared_spawn_pos = overworld.getSharedSpawnPos()
-// 			const shared_spawn_angle = overworld.getSharedSpawnAngle()
-// 			entity.teleportTo("minecraft:overworld", shared_spawn_pos.x + 0.5, shared_spawn_pos.y + 0.1, shared_spawn_pos.z + 0.5, shared_spawn_angle, 0)
-// 		// }
-// 		// const respawn_level = server.getLevel(respawn_dimension)
-// 		// const respawn_block_state = respawn_level.getBlockState(respawn_pos)
-// 		// const respawn_block = respawn_block_state.block
-
-// 		// let spawn_point = respawn_pos
-// 		// if (respawn_block instanceof $BedBlock) {
-// 		// 	spawn_point = $BedBlock.findStandUpPosition("minecraft:player", respawn_dimension, respawn_pos, respawn_block_state.get($BedBlock.FACING), entity.respawnAngle)
-// 		// }
-
-// 		// entity.teleportTo(respawnDimension, spawn_point.x, spawn_point.y, spawn_point.z, entity.respawnAngle, 0)
-// 	}
-// 	entity.removeEffect("kubejs:begone")
-// }
+/** @param {import("net.minecraft.world.entity.LivingEntity").$LivingEntity$$Type} entity */
+global.begone_effect = function(entity) {
+	if (entity instanceof $ServerPlayer) {
+		let dimension_transition = entity.findRespawnPositionAndUseSpawnBlock(false, $DimensionTransition.DO_NOTHING)
+		let spawn_pos = dimension_transition.pos()
+		entity.playNotifySound("minecraft:entity.enderman.teleport", "players", 1.0, 1.0)
+		entity.teleportTo(dimension_transition.newLevel().dimension, spawn_pos.x(), spawn_pos.y(), spawn_pos.z(), dimension_transition.yRot(), dimension_transition.xRot())
+		entity.playNotifySound("minecraft:enchant.thorns.hit", "players", 0.5, 1.0)
+	}
+	entity.removeEffect("kubejs:begone")
+}
 
 StartupEvents.registry("cat_variant", event => {
 	event.createCustom("pipi", () => new $CatVariant("kubejs:textures/entity/cat/pipi.png"))
