@@ -318,15 +318,20 @@ ItemEvents.dynamicTooltips("show_tool_durability", event => {
 	])
 })
 
-// /** @type {typeof import("net.neoforged.neoforge.client.event.RenderTooltipEvent$Color").$RenderTooltipEvent$Color } */
-// let $RenderTooltipEvent$Color  = Java.loadClass("net.neoforged.neoforge.client.event.RenderTooltipEvent$Color")
-
-// NativeEvents.onEvent($RenderTooltipEvent$Color, event => {
-	// event.getGraphics().renderFakeItem("kubejs:blue_mascot_cat", event.x, event.y - 8, -20)
+/** @type {typeof import("net.neoforged.neoforge.client.event.RenderTooltipEvent$Color").$RenderTooltipEvent$Color } */
+let $RenderTooltipEvent$Color  = Java.loadClass("net.neoforged.neoforge.client.event.RenderTooltipEvent$Color")
+NativeEvents.onEvent("highest", $RenderTooltipEvent$Color, event => {
+	if (event.itemStack.mod == "kubejs") {
+		event.getGraphics().renderFakeItem("kubejs:blue_mascot_cat", event.x, event.y - 8)
+	} else if (event.itemStack.mod == "cobblemon") {
+		event.getGraphics().renderFakeItem("cobblemon:poke_ball", event.x, event.y - 10)
+	} else if (event.itemStack.mod == "mega_showdown") {
+		event.getGraphics().renderFakeItem("mega_showdown:swampertite", event.x, event.y - 10)
+	}
 	// event.setBackground(Color.rgba(8, 21, 95, 1).getArgb())
 	// event.setBackgroundStart(Color.rgba(26, 50, 184, 1).getArgb())
-	// event.setBorderStart(Color.rgba(26, 108, 184, 1).getArgb())
-// })
+	event.setBorderStart(Color.rgba(26, 108, 184, 1).getArgb())
+})
 
 // /** @type {typeof import("squeek.appleskin.api.event.TooltipOverlayEvent$Render").$TooltipOverlayEvent$Render } */
 // let $TooltipOverlayEvent$Render  = Java.loadClass("squeek.appleskin.api.event.TooltipOverlayEvent$Render")
