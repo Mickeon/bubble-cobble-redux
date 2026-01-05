@@ -1,3 +1,7 @@
+/** @type {typeof import("net.neoforged.neoforge.client.event.ContainerScreenEvent$Render$Foreground").$ContainerScreenEvent$Render$Foreground } */
+let $ContainerScreenEvent$Render$Foreground  = Java.loadClass("net.neoforged.neoforge.client.event.ContainerScreenEvent$Render$Foreground")
+/** @type {typeof import("net.neoforged.neoforge.event.ItemStackedOnOtherEvent").$ItemStackedOnOtherEvent } */
+let $ItemStackedOnOtherEvent  = Java.loadClass("net.neoforged.neoforge.event.ItemStackedOnOtherEvent")
 /** @type {typeof import("net.minecraft.world.entity.animal.CatVariant").$CatVariant } */
 let $CatVariant  = Java.loadClass("net.minecraft.world.entity.animal.CatVariant")
 
@@ -312,6 +316,51 @@ global.begone_effect = function(entity) {
 StartupEvents.registry("cat_variant", event => {
 	event.createCustom("pipi", () => new $CatVariant("kubejs:textures/entity/cat/pipi.png"))
 })
+
+NativeEvents.onEvent($ItemStackedOnOtherEvent, event => {
+	if (event.clickAction == "SECONDARY") {
+		const item_to_destroy = get_item_to_destroy(event.carriedItem, event.stackedOnItem)
+		if (item_to_destroy) {
+			if (Platform.clientEnvironment) {
+				Client.player.playNotifySound("minecraft:block.lava.extinguish", "master", 0.1, 1.0)
+			}
+			if (!item_to_destroy.getComponents().has("minecraft:fire_resistant")) {
+				item_to_destroy.shrink(99)
+			}
+			event.setCanceled(true)
+		}
+	}
+})
+
+NativeEvents.onEvent($ContainerScreenEvent$Render$Foreground, event => {
+	if (event.containerScreen.menu?.carried.isEmpty()) {
+		return
+	}
+	const container_screen = event.containerScreen
+	const focused_slot = container_screen.focusedSlot
+	if (!focused_slot) {
+		return
+	}
+
+	const item_to_destroy = get_item_to_destroy(Client.player.containerMenu.carried, container_screen.focusedSlot.item)
+	if (item_to_destroy) {
+		event.guiGraphics["renderTooltip(net.minecraft.client.gui.Font,net.minecraft.network.chat.Component,int,int)"](
+			Client.font, Text.translateWithFallback("", "%s to delete", [Text.translateWithFallback("", "Right-click").aqua()]).red(), event.mouseX - container_screen.x, event.mouseY - container_screen.y
+		)
+		event.guiGraphics.fill(focused_slot.x, focused_slot.y, focused_slot.x + 16, focused_slot.y + 16, 100, Color.ORANGE_DYE.getArgb())
+	}
+})
+
+/** @import {$ItemStack} from "net.minecraft.world.item.ItemStack" */
+/** @param {$ItemStack} carried_item @param {$ItemStack} stacked_on_item   */
+function get_item_to_destroy(carried_item, stacked_on_item) {
+	if (!carried_item.isEmpty() && stacked_on_item.id == "minecraft:lava_bucket") {
+		return carried_item
+	}
+	if (!stacked_on_item.isEmpty() && carried_item.id == "minecraft:lava_bucket") {
+		return stacked_on_item
+	}
+}
 
 // Dead code.
 // const ForgeRegistries = Java.loadClass("net.minecraftforge.registries.ForgeRegistries")
