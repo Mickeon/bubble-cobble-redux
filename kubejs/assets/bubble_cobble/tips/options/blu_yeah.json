@@ -1,0 +1,11 @@
+{
+  "type": "tipsmod:simple",
+  "text": ["",{"text":"mmnghgnh... yeah... change those f","color":"#C569C5"},{"text":"u","obfuscated":true,"color":"#C569C5"},{"text":"ckin' settings, babe..., f","color":"#C569C5"},{"text":"u","obfuscated":true,"color":"#C569C5"},{"text":"uck,,,","color":"#C569C5"}],
+  "conditions": {
+    "screens": {
+      "any_of": [
+        "minecraft:options_screen"
+      ]
+    }
+  }
+}
