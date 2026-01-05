@@ -1,9 +1,15 @@
+/** @type {typeof import("net.neoforged.neoforge.event.brewing.RegisterBrewingRecipesEvent").$RegisterBrewingRecipesEvent } */
+let $RegisterBrewingRecipesEvent  = Java.loadClass("net.neoforged.neoforge.event.brewing.RegisterBrewingRecipesEvent")
 /** @type {typeof import("net.neoforged.neoforge.client.event.ContainerScreenEvent$Render$Foreground").$ContainerScreenEvent$Render$Foreground } */
 let $ContainerScreenEvent$Render$Foreground  = Java.loadClass("net.neoforged.neoforge.client.event.ContainerScreenEvent$Render$Foreground")
 /** @type {typeof import("net.neoforged.neoforge.event.ItemStackedOnOtherEvent").$ItemStackedOnOtherEvent } */
 let $ItemStackedOnOtherEvent  = Java.loadClass("net.neoforged.neoforge.event.ItemStackedOnOtherEvent")
 /** @type {typeof import("net.minecraft.world.entity.animal.CatVariant").$CatVariant } */
 let $CatVariant  = Java.loadClass("net.minecraft.world.entity.animal.CatVariant")
+/** @type {typeof import("net.minecraft.server.level.ServerPlayer").$ServerPlayer } */
+let $ServerPlayer  = Java.loadClass("net.minecraft.server.level.ServerPlayer")
+/** @type {typeof import("net.minecraft.world.level.portal.DimensionTransition").$DimensionTransition } */
+let $DimensionTransition  = Java.loadClass("net.minecraft.world.level.portal.DimensionTransition")
 
 /** @typedef {import("dev.latvian.mods.kubejs.item.ItemModificationKubeEvent$ItemModifications").$ItemModificationKubeEvent$ItemModifications$$Original} $ItemModifications */
 
@@ -289,10 +295,6 @@ function find_mickeon(server) {
 }
 
 
-/** @type {typeof import("net.minecraft.server.level.ServerPlayer").$ServerPlayer } */
-let $ServerPlayer  = Java.loadClass("net.minecraft.server.level.ServerPlayer")
-/** @type {typeof import("net.minecraft.world.level.portal.DimensionTransition").$DimensionTransition } */
-let $DimensionTransition  = Java.loadClass("net.minecraft.world.level.portal.DimensionTransition")
 StartupEvents.registry("mob_effect", event => {
 	event.create("begone")
 		.color(0x000000)
@@ -300,6 +302,13 @@ StartupEvents.registry("mob_effect", event => {
 		.effectTick(entity => global.begone_effect(entity))
 })
 
+StartupEvents.registry("potion", event => {
+	event.create("begone").effect("kubejs:begone")
+})
+
+NativeEvents.onEvent($RegisterBrewingRecipesEvent, event => {
+	event.builder.addRecipe("minecraft:glass_bottle", "#c:ender_pearls", `minecraft:potion[minecraft:potion_contents={"potion":"kubejs:begone"}]`)
+})
 
 /** @param {import("net.minecraft.world.entity.LivingEntity").$LivingEntity$$Type} entity */
 global.begone_effect = function(entity) {
@@ -351,7 +360,6 @@ NativeEvents.onEvent($ContainerScreenEvent$Render$Foreground, event => {
 	}
 })
 
-/** @import {$ItemStack} from "net.minecraft.world.item.ItemStack" */
 /** @param {$ItemStack} carried_item @param {$ItemStack} stacked_on_item   */
 function get_item_to_destroy(carried_item, stacked_on_item) {
 	if (!carried_item.isEmpty() && stacked_on_item.id == "minecraft:lava_bucket") {

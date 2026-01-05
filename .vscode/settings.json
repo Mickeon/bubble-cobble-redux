@@ -46,5 +46,8 @@
         "`",
         "\""
     ],
-    "search.useIgnoreFiles": false
+    "search.useIgnoreFiles": false,
+    "errorLens.excludeByMessage": [
+        "Use of hardcoded text function. Consider using language keys instead."
+    ]
 }

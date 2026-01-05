@@ -36,8 +36,6 @@ function remove_and_merge_into_tab(from_id, to_id, items) {
 	})
 }
 
-// rename_tab("kubejs:tab", Text.of("Bubble Cobble").color("#83BED9"))//, "kubejs:blue_mascot_cat")
-
 rename_tab("create:base",                          " §6Create ")
 rename_tab("create:palettes",                      " §6Create§r's Building Blocks ")
 rename_tab("copycats:main",                        " §6Create: §rCopycats+ ")

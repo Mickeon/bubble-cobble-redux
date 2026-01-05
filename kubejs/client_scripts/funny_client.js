@@ -18,6 +18,15 @@ ClientEvents.tick(event => {
 	}
 })
 
+ClientEvents.lang("en_us", event => {
+	event.add("advancement.create.hand_crank_000", "Cranking it")
+	event.add("item.minecraft.rabbit_stew", "Mimiga Stew")
+	event.add("item.minersdelight.rabbit_stew_cup", "Mimiga Stew Cup")
+	event.add("item.minecraft.lead", "Leash")
+	event.add("entity.minecraft.wandering_trader", "Free Leash Guy")
+	event.add("haventrowel", "item.haventrowel.trowel", "Trowel at Home")
+})
+
 // KeyBindEvents.pressed("key.use", event => {
 // 	event.client.statusMessage = "Potato"
 // })

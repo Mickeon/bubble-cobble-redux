@@ -5,6 +5,10 @@ let $Player  = Java.loadClass("net.minecraft.world.entity.player.Player")
 /** @type {typeof import("dev.latvian.mods.kubejs.item.FoodBuilder").$FoodBuilder } */
 let $FoodBuilder  = Java.loadClass("dev.latvian.mods.kubejs.item.FoodBuilder")
 
+/**
+ * @import {$ItemStack} from "net.minecraft.world.item.ItemStack"
+ */
+
 const SEC = 20
 const MIN = SEC * 60
 

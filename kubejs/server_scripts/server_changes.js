@@ -393,11 +393,15 @@ BlockEvents.broken(event => {
 					player.position(), player.facing, broken_block_pos, false
 			)
 		))
-		let sound_type = held_item.block.getSoundType(held_block.defaultBlockState(), level, broken_block_pos, player)
-		// level.playSound(player, broken_block_pos, sound_type.placeSound, "blocks")
+		if (held_block) {
+			let sound_type = held_block.getSoundType(held_block.defaultBlockState(), level, broken_block_pos, player)
+			// level.playSound(player, broken_block_pos, sound_type.placeSound, "blocks")
 
-		if (interaction_result.indicateItemUse()) {
-			player.playNotifySound(sound_type.placeSound, "blocks", 1.0, 1.0)
+			if (interaction_result.indicateItemUse()) {
+				player.playNotifySound(sound_type.placeSound, "blocks", 1.0, 1.0)
+			}
+		} else {
+			console.warn(`Somehow held block for item ${held_item.id} is null. Investigate?`)
 		}
 		if (interaction_result.shouldSwing()) {
 			level.server.scheduleInTicks(3, callback => {

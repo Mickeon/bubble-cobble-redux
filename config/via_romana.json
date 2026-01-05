@@ -62,7 +62,9 @@
   "map_refresh_interval": 10,
   "map_refresh_threshold": 10,
   "map_save_interval": 5,
-  "biome_color_pairs": [],
+  "biome_color_pairs": [
+    "biomeswevegone:pale_bog\u003d22"
+  ],
   "use_biome_fallback_for_lowres": true,
   "enable_remote_map_access": true,
   "enable_surveyor_landmark": false,

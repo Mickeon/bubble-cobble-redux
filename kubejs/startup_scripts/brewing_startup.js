@@ -7,8 +7,6 @@ let $ProjectileImpactEvent  = Java.loadClass("net.neoforged.neoforge.event.entit
 let $Projectile  = Java.loadClass("net.minecraft.world.entity.projectile.Projectile")
 /** @type {typeof import("net.minecraft.world.level.Level").$Level } */
 let $Level  = Java.loadClass("net.minecraft.world.level.Level")
-/** @type {typeof import("net.minecraft.world.item.ItemStack").$ItemStack } */
-let $ItemStack  = Java.loadClass("net.minecraft.world.item.ItemStack")
 /** @type {typeof import("net.minecraft.world.item.Item$Properties").$Item$Properties } */
 let $Item$Properties  = Java.loadClass("net.minecraft.world.item.Item$Properties")
 /** @type {typeof import("umpaz.brewinandchewin.common.item.BoozeItem").$BoozeItem } */
@@ -17,7 +15,6 @@ let $BoozeItem  = Java.loadClass("umpaz.brewinandchewin.common.item.BoozeItem")
 let $ItemBuilder  = Java.loadClass("dev.latvian.mods.kubejs.item.ItemBuilder")
 
 /**
- * @import {$ItemStack} from "net.minecraft.world.item.ItemStack"
  * @import {$Level} from "net.minecraft.world.level.Level"
  * @import {$LivingEntity} from "net.minecraft.world.entity.LivingEntity"
  * @import {$Projectile} from "net.minecraft.world.entity.projectile.Projectile"
