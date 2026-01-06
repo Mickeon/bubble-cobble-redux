@@ -7920,6 +7920,44 @@
             ]
         },
         {
+            "pakku_id": "h2Ei2RsqA0IvBoSv",
+            "type": "MOD",
+            "side": "CLIENT",
+            "slug": {
+                "modrinth": "shoulder-surfing-reloaded"
+            },
+            "name": {
+                "modrinth": "Shoulder Surfing Reloaded"
+            },
+            "id": {
+                "modrinth": "kepjj2sy"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "ShoulderSurfing-NeoForge-1.21.1-4.18.1.jar",
+                    "mc_versions": [
+                        "1.21",
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/kepjj2sy/versions/bIqOHwvH/ShoulderSurfing-NeoForge-1.21.1-4.18.1.jar",
+                    "id": "bIqOHwvH",
+                    "parent_id": "kepjj2sy",
+                    "hashes": {
+                        "sha512": "4151622d00afbe29decc4abc192a0017a9752451878bc4f9777c04b62442544c3040f12a2349b89245325abe0af8f719886bbee831a40e7c6d76143f6f82cad7",
+                        "sha1": "a3afd7a1e2b11cf007019c7661d8e9ad9fba6ba4"
+                    },
+                    "required_dependencies": [],
+                    "size": 263907,
+                    "date_published": "2025-12-29T15:37:13.029836Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "sXW8o5uffTaZgjNd",
             "type": "MOD",
             "side": "BOTH",
