@@ -1,0 +1,298 @@
+{
+	"client_settings": {
+		"color_settings": {
+			"moon_texture_color": "FFFFFF",
+			"sky_light_color": "#FFDFDF"
+		},
+		"moon_size": 20.0,
+		"moon_texture_location": "bubble_cobble:textures/environment/ghostbusters.png",
+		"sound_track": {
+			"sound_id": "bubble_cobble:ghostbusters"
+		}
+	},
+	"dimension_chances": {
+		"minecraft:overworld": {
+			"chance": 0.1,
+			"min_number_of_nights_between": 4,
+			"valid_moon_phases": [
+				0,
+				1,
+				2,
+				3
+			]
+		}
+	},
+	"drops": {
+		"drop_enhancer": {}
+	},
+	"mob_settings": {
+		"blocks_sleeping": {
+			"type": "corgilib:flipped",
+			"condition_to_flip": {
+				"type": "corgilib:any"
+			}
+		},
+		"lunar_spawn_settings": {
+			"force_surface_spawning": true,
+			"mob_spawn_settings": {
+				"spawn_costs": {
+					"minecraft:enderman": {
+						"energy_budget": 10.0,
+						"charge": 0.5
+					},
+					"minecraft:spider": {
+						"energy_budget": 10.0,
+						"charge": 0.5
+					}
+				},
+				"spawners": {
+					"ambient": [],
+					"axolotls": [],
+					"creature": [],
+					"misc": [],
+					"monster": [
+						{
+							"type": "minecraft:enderman",
+							"weight": 50,
+							"minCount": 1,
+							"maxCount": 3
+						},
+						{
+							"type": "minecraft:spider",
+							"weight": 50,
+							"minCount": 1,
+							"maxCount": 3
+						}
+					],
+					"underground_water_creature": [],
+					"water_ambient": [],
+					"water_creature": []
+				}
+			},
+			"slimes_spawn_everywhere": false,
+			"use_biome_spawn_settings": true
+		},
+		"mob_effects": [
+			{
+				"filter": {
+					"type": "corgilib:conditions_pass",
+					"filters": [
+						{
+							"type": "corgilib:is_type",
+							"id": "minecraft:player"
+						},
+						{
+							"type": "corgilib:see_sky_at"
+						}
+					]
+				},
+				"mob_effect": {
+					"ambient": true,
+					"amplifier": 0,
+					"duration_in_ticks": 60,
+					"effect": "minecraft:unluck",
+					"show_icon": false,
+					"visible": true
+				}
+			},
+			{
+				"filter": {
+					"type": "corgilib:conditions_pass",
+					"filters": [
+						{
+							"type": "corgilib:is_type",
+							"id": "minecraft:player"
+						},
+						{
+							"type": "corgilib:see_sky_at"
+						}
+					]
+				},
+				"mob_effect": {
+					"ambient": true,
+					"amplifier": 0,
+					"duration_in_ticks": 60,
+					"effect": "minecraft:bad_omen",
+					"show_icon": false,
+					"visible": true
+				}
+			},
+			{
+				"filter": {
+					"type": "corgilib:conditions_pass",
+					"filters": [
+						{
+							"type": "corgilib:is_type",
+							"id": "minecraft:player"
+						},
+						{
+							"type": "corgilib:see_sky_at"
+						}
+					]
+				},
+				"mob_effect": {
+					"ambient": false,
+					"amplifier": 1,
+					"duration_in_ticks": 20,
+					"effect": "brewinandchewin:tipsy",
+					"show_icon": false,
+					"visible": true
+				}
+			},
+			{
+				"filter": {
+					"type": "corgilib:any_conditions_passes",
+					"filters": [
+						{
+							"type": "corgilib:is_type",
+							"id": "minecraft:player"
+						},
+						{
+							"type": "corgilib:is_type",
+							"id": "minecraft:chicken"
+						},
+						{
+							"type": "corgilib:is_type",
+							"id": "minecraft:spider"
+						},
+						{
+							"type": "corgilib:is_type_tag",
+							"tag": "#minecraft:undead"
+						},
+						{
+							"type": "corgilib:is_type_tag",
+							"tag": "#minecraft:illager"
+						}
+					]
+				},
+				"mob_effect": {
+					"ambient": false,
+					"amplifier": 10,
+					"duration_in_ticks": 5,
+					"effect": "minecraft:infested",
+					"show_icon": false,
+					"visible": true
+				}
+			},
+			{
+				"filter": {
+					"type": "corgilib:conditions_pass",
+					"filters": [
+						{
+							"type": "corgilib:see_sky_at"
+						}
+					]
+				},
+				"mob_effect": {
+					"ambient": true,
+					"amplifier": 1,
+					"duration_in_ticks": 60,
+					"effect": "minecraft:resistance",
+					"show_icon": false,
+					"visible": true
+				}
+			},
+			{
+				"filter": {
+					"type": "corgilib:conditions_pass",
+					"filters": [
+						{
+							"type": "corgilib:is_dead_or_dying"
+						},
+						{
+							"type": "corgilib:see_sky_at"
+						}
+					]
+				},
+				"mob_effect": {
+					"ambient": true,
+					"amplifier": 5,
+					"duration_in_ticks": 10,
+					"effect": "minecraft:levitation",
+					"show_icon": false,
+					"visible": true
+				}
+			},
+			{
+				"filter": {
+					"type": "corgilib:conditions_pass",
+					"filters": [
+						{
+							"type": "corgilib:last_injurer_has",
+							"conditions_to_apply": [
+								{
+									"type": "corgilib:any"
+								}
+							]
+						},
+						{
+							"type": "corgilib:flipped",
+							"condition_to_flip": {
+								"type": "corgilib:is_swimming"
+							}
+						},
+						{
+							"type": "corgilib:see_sky_at"
+						},
+						{
+							"type": "corgilib:any_conditions_passes",
+							"filters": [
+								{
+									"type": "corgilib:is_type",
+									"id": "minecraft:player"
+								},
+								{
+									"type": "corgilib:is_mob_category",
+									"mob_category": "creature"
+								},
+								{
+									"type": "corgilib:is_mob_category",
+									"mob_category": "monster"
+								},
+								{
+									"type": "corgilib:is_type_tag",
+									"tag": "#minecraft:illager"
+								}
+							]
+						}
+					]
+				},
+				"mob_effect": {
+					"ambient": true,
+					"amplifier": 0,
+					"duration_in_ticks": 100,
+					"effect": "create_bic_bit:oiled_up",
+					"show_icon": false,
+					"visible": true
+				}
+			}
+		],
+		"spawn_category_multiplier": {}
+	},
+	"text_components": {
+		"end_notification": {
+			"component": {
+				"key": "Jokes on you, dumbass! The chicken has ghost, too!!",
+				"style": {
+					"color": "#bbbb88"
+				}
+			},
+			"type": "CHAT"
+		},
+		"name": {
+			"key": "Super Ghostbusters",
+			"style": {
+				"color": "#cc6666"
+			}
+		},
+		"start_notification": {
+			"component": {
+				"key": "I got food poisoned. That made me angry. \nSo I called the ghostbuster:\n\"Hey ghostbuster man, MacDonalds have a ghost in the burger. What da fuck. Ow. You tell them! Get down to MechDonell, and use the Gun.\". The BURGER HAVE A GHOST-\n *gasp*-\nWHAT",
+				"style": {
+					"color": "#cc6666"
+				}
+			},
+			"type": "CHAT"
+		}
+	}
+}

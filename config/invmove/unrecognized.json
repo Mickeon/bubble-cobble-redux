@@ -161,7 +161,8 @@
     "net.minecraft.client.gui.screens.packs.PackSelectionScreen": true,
     "net.caffeinemc.mods.sodium.client.gui.SodiumOptionsGUI": true,
     "com.cobblemon.mod.common.client.gui.interact.moveselect.MoveSelectGUI": true,
-    "eu.midnightdust.lib.config.MidnightConfigScreen": true
+    "eu.midnightdust.lib.config.MidnightConfigScreen": true,
+    "net.minecraft.client.gui.screens.DisconnectedScreen": true
   },
   "hideBackground": {
     "dev.emi.emi.screen.RecipeScreen": false,

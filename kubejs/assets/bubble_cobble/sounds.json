@@ -91,5 +91,11 @@
 		"sounds": [
 			"bubble_cobble:recharged"
 		]
+	},
+	"ghostbusters": {
+		"sounds": [{
+			"name": "bubble_cobble:ghostbusters",
+			"volume": 0.05
+		}]
 	}
 }

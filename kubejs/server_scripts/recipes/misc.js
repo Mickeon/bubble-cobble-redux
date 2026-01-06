@@ -274,5 +274,14 @@ ServerEvents.recipes(event => {
 
 	event.remove({id: "gag:escape_rope"})
 	event.shapeless("gag:escape_rope", ["yo_hooks:iron_hook_head", Ingredient.of("#c:ropes").withCount(3)])
+
+	// Recipes for normally-unobtainable Applin evolution items.
+	event.shaped(Item.of("cobblemon:sweet_apple"), ["SSS", "SAS", "SSS"], {A: "minecraft:apple", S: "minecraft:sweet_berries"})
+	event.shaped(Item.of("cobblemon:tart_apple"), ["SSS", "SAS", "SSS"], {A: "minecraft:apple", S: "biomeswevegone:blueberries"})
+	event.shaped(Item.of("cobblemon:syrupy_apple"), ["SSS", "SAS", "SSS"], {A: "minecraft:apple", S: "minecraft:glow_berries"})
+	event.shaped(Item.of("cobblemon:metal_alloy"), ["ZIZ", "INI", "ZIZ"], {Z: "create:zinc_nugget", I: "minecraft:iron_ingot", N: "minecraft:netherite_scrap"})
+
+	// Cooking recipe schema test.
+	// event.recipes.farmersdelight.cooking("kubejs:blue_mascot_cat", ["cobblemon:red_apricorn", "cobblemon:blue_apricorn"], "minecraft:bowl")
 })
 

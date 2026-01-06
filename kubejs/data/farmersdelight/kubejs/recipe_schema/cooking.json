@@ -1,0 +1,70 @@
+{
+    "keys": [
+        {
+            "name": "result",
+            "type": "item_stack",
+            "role": "output"
+        },
+        {
+            "name": "ingredients",
+            "type": {
+                "type": "list",
+                "component": "ingredient"
+            },
+            "role": "input"
+        },
+        {
+            "name": "container",
+            "type": "item_stack",
+            "role": "input",
+            "optional": null,
+            "function_names": [
+                "container",
+                "inputContainer"
+            ]
+        },
+        {
+            "name": "experience",
+            "type": "float",
+            "role": "other",
+            "optional": 0.0,
+            "function_names": [
+                "experience",
+                "xp"
+            ]
+        },
+        {
+            "name": "cookingtime",
+            "type": "int",
+            "role": "other",
+            "optional": 200,
+            "function_names": [
+                "cookingTime",
+                "time",
+                "ticks",
+                "cookingTicks"
+            ]
+        },
+        {
+            "name": "recipe_book_tab",
+            "type": {
+                "type": "enum",
+                "enum": "vectorwing.farmersdelight.client.recipebook.CookingPotRecipeBookTab"
+            },
+            "role": "other",
+            "optional": "misc",
+            "function_names": [
+                "recipeBookTab"
+            ]
+        },
+        {
+            "name": "group",
+            "type": "optional_string",
+            "role": "other",
+            "optional": "",
+            "function_names": [
+                "group"
+            ]
+        }
+    ]
+}

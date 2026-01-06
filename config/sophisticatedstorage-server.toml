@@ -11,7 +11,7 @@
 	#Defines the maximum range of the controller at which it connects storage blocks to multiblock
 	# Default: 15
 	# Range: 4 ~ 64
-	controllerRange = 15
+	controllerRange = 64
 
 	#Wood Barrel Settings
 	[server.WoodBarrel]

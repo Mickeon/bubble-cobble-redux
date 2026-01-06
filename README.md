@@ -6,7 +6,7 @@
 This modpack has been remade, by me alone, from the ground up in order to target `1.21.1`, and is notably less of a kitchen sink compared to last time. It is heavily focused on integrating the original mainstays better, embellishing the mood with new sounds and particles, all the while introducing a few neat things just for the spectacle of it.
 
 Most people are here for [Cobblemon](https://modrinth.com/mod/cobblemon) which, thanks in part to a few other mods, integrates greatly with both [Create](https://modrinth.com/mod/create) and [Farmer's Delight](https://modrinth.com/mod/farmers-delight). All three receive additional fodder to crunch your teeth in.
-The world is prettier than ever to explore thanks to both [Biomes o' Plenty](https://modrinth.com/mod/HXF82T3G) and [Oh The Biomes We've Gone](https://modrinth.com/mod/NTi7d3Xc) combined, all kept varied thanks to [Serene Seasons](https://modrinth.com/mod/e0bNACJD) and [Enhanced Celestials](https://modrinth.com/mod/2rL16t1O).
+The world is prettier than ever to explore thanks to both [Biomes o' Plenty](https://modrinth.com/mod/HXF82T3G) and [Oh The Biomes We've Gone](https://modrinth.com/mod/NTi7d3Xc) combined, all kept varied thanks to mods like [Enhanced Celestials](https://modrinth.com/mod/2rL16t1O).
 [Supplementaries](https://modrinth.com/mod/fFEIiSDQ) and its vanilla-like gadgets are quite the wonderful addition too.
 
 As it stands, the modpack includes exclusive features, such as:
@@ -112,7 +112,6 @@ As it stands, the modpack includes exclusive features, such as:
 	<li><a href="https://modrinth.com/mod/UVtY3ZAC">EnchantmentDescriptions</a> by Darkhax</li>
 	<li><a href="https://modrinth.com/mod/2rL16t1O">Enhanced Celestials</a> by Corgi Taco</li>
 	<li><a href="https://modrinth.com/mod/NNAgCjsB">EntityCulling</a> by tr7zw</li>
-	<li><a href="https://modrinth.com/mod/CvZHwpSu">Entris</a> by Slainlight</li>
 	<li><a href="https://modrinth.com/mod/RV1qfVQ8">Explorer's Compass</a> by ChaosTheDude</li>
 	<li><a href="https://modrinth.com/mod/VNE7B6rB">Extended Hotbar</a> by denwav</li>
 	<li><a href="https://modrinth.com/mod/v1oDxPXx">Fallen Logs</a> by ALDgamer</li>
@@ -204,8 +203,6 @@ As it stands, the modpack includes exclusive features, such as:
 	<li><a href="https://modrinth.com/mod/8YcE8y4T">Ribbits</a> by Joosh, YUNGNICKYOUNG, HellionGames, Refresh Studios</li>
 	<li><a href="https://modrinth.com/mod/2eT495vq">Saturn</a> by AbdElAziz</li>
 	<li><a href="https://modrinth.com/mod/fuuu3xnx">Searchables</a> by Jaredlll08</li>
-	<li><a href="https://modrinth.com/mod/aRjMwfjG">Seasonal Ambiance</a> by MidnightTale_</li>
-	<li><a href="https://modrinth.com/mod/w3gipv9f">Seasonal Integration</a> by TheLambOfBernicia</li>
 	<li><a href="https://modrinth.com/mod/e0bNACJD">Serene Seasons</a> by Adubbz, Forstride</li>
 	<li><a href="https://modrinth.com/mod/Cl2eyShu">Server I18n API</a> by IAFEnvoy</li>
 	<li><a href="https://modrinth.com/mod/goA2JoBi">Sidekick</a> by unascribed</li>

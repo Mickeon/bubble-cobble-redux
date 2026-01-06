@@ -1,0 +1,143 @@
+{
+	"enabled": true,
+	"neededInstalledMods": ["enhancedcelestials"],
+	"spawns": [
+		{
+			"id": "gastly-ghostbusters",
+			"pokemon": "gastly",
+			"presets": [
+				"natural"
+			],
+			"type": "pokemon",
+			"spawnablePositionType": "grounded",
+			"bucket": "common",
+			"level": "6-31",
+			"weight": 9.0,
+			"condition": {
+				"minSkyLight": 2,
+				"maxSkyLight": 15,
+				"maxLight": 15,
+				"lunarEvent": "bubble_cobble:ghostbusters"
+			}
+		},
+		{
+			"id": "haunter-ghostbusters",
+			"pokemon": "haunter",
+			"presets": [
+				"natural"
+			],
+			"type": "pokemon",
+			"spawnablePositionType": "grounded",
+			"bucket": "common",
+			"level": "25-41",
+			"weight": 0.95,
+			"condition": {
+				"minSkyLight": 2,
+				"maxSkyLight": 15,
+				"maxLight": 15,
+				"lunarEvent": "bubble_cobble:ghostbusters"
+			}
+		},
+		{
+			"id": "gengar-ghostbusters",
+			"pokemon": "gengar",
+			"presets": [
+				"natural"
+			],
+			"type": "pokemon",
+			"spawnablePositionType": "grounded",
+			"bucket": "common",
+			"level": "36-50",
+			"weight": 0.05,
+			"condition": {
+				"minSkyLight": 2,
+				"maxSkyLight": 15,
+				"lunarEvent": "bubble_cobble:ghostbusters"
+			}
+		},
+		{
+			"id": "misdreavus-ghostbusters",
+			"pokemon": "misdreavus",
+			"presets": [
+				"natural"
+			],
+			"type": "pokemon",
+			"spawnablePositionType": "grounded",
+			"bucket": "common",
+			"level": "19-44",
+			"weight": 5.7,
+			"condition": {
+				"minSkyLight": 2,
+				"maxSkyLight": 15,
+				"lunarEvent": "bubble_cobble:ghostbusters"
+			}
+		},
+		{
+			"id": "litwick-ghostbusters",
+			"pokemon": "litwick",
+			"presets": [
+				"natural"
+			],
+			"type": "pokemon",
+			"spawnablePositionType": "grounded",
+			"bucket": "uncommon",
+			"level": "3-28",
+			"weight": 5.0,
+			"condition": {
+				"minSkyLight": 2,
+				"maxSkyLight": 15,
+				"lunarEvent": "bubble_cobble:ghostbusters"
+			}
+		},
+		{
+			"id": "lampent-ghostbusters",
+			"pokemon": "lampent",
+			"presets": [
+				"natural"
+			],
+			"type": "pokemon",
+			"spawnablePositionType": "grounded",
+			"bucket": "uncommon",
+			"level": "41-46",
+			"weight": 0.5,
+			"condition": {
+				"minSkyLight": 2,
+				"maxSkyLight": 15,
+				"lunarEvent": "bubble_cobble:ghostbusters"
+			}
+		},
+		{
+			"id": "chandelure-ghostbusters",
+			"pokemon": "chandelure",
+			"presets": [
+				"natural"
+			],
+			"type": "pokemon",
+			"spawnablePositionType": "grounded",
+			"bucket": "uncommon",
+			"level": "41-52",
+			"weight": 0.025,
+			"condition": {
+				"minSkyLight": 2,
+				"maxSkyLight": 15,
+				"lunarEvent": "bubble_cobble:ghostbusters"
+			}
+		},
+		{
+			"id": "gimmighoul-ghostbusters",
+			"pokemon": "gimmighoul roaming",
+			"type": "pokemon",
+			"spawnablePositionType": "grounded",
+			"bucket": "uncommon",
+			"level": "5-30",
+			"weight": 1.0,
+			"condition": {
+				"minSkyLight": 2,
+				"maxSkyLight": 15,
+				"lunarEvent": "bubble_cobble:ghostbusters",
+				"minY": -37,
+				"maxY": 90
+			}
+		}
+	]
+}
