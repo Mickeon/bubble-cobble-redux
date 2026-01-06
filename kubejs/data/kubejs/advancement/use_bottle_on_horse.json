@@ -1,0 +1,26 @@
+{
+  "$schema": "https://www.schemastore.org/minecraft-advancement.json",
+  "parent": "minecraft:adventure/root",
+  "display": {
+    "icon": {
+      "id": "kubejs:horse_urine_bottle"
+    },
+    "title": "dude",
+    "description": "...Milk a Horse"
+  },
+  "criteria": {
+    "aeugh": {
+      "trigger": "minecraft:player_interacted_with_entity",
+      "conditions": {
+        "item": [
+          {
+            "items": "minecraft:glass_bottle"
+          }
+        ],
+        "entity": {
+          "type": "#farmersdelight:horse_feed_users"
+        }
+      }
+    }
+  }
+}

@@ -181,6 +181,8 @@ ServerEvents.recipes(event => {
 
 	// Backport Lodestone recipe from 25w02a (1.21.5).
 	event.replaceInput({id: "minecraft:lodestone"}, "minecraft:netherite_ingot", "minecraft:iron_ingot")
+	// Backport Saddle recipe from 25w20a (1.21.6).
+	event.shaped("minecraft:saddle", [" L ", "LIL"], {L: "minecraft:leather", I: "minecraft:iron_ingot"})
 
 	// Allow any rope to be used for Safety Net.
 	event.replaceInput({id: "farmersdelight:safety_net"}, "farmersdelight:rope", "#c:ropes")

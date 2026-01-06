@@ -25,6 +25,11 @@ ClientEvents.lang("en_us", event => {
 	event.add("item.minecraft.lead", "Leash")
 	event.add("entity.minecraft.wandering_trader", "Free Leash Guy")
 	event.add("haventrowel", "item.haventrowel.trowel", "Trowel at Home")
+	event.add("enhancedcelestials", "enhancedcelestials.notification.blue_moon.rise", "The \"Blue Moon\" rises... You feel lucky!")
+	event.add("enhancedcelestials", "enhancedcelestials.notification.blue_moon.rise", "The \"Super Blue Moon\" rises... You feel very lucky! But joke's on you, dumbass! The shinies have ghosts too!",)
+	event.add("item.minecraft.potion.effect.girl_power", "Potion of Girl Power",)
+	event.add("item.minecraft.splash_potion.effect.girl_power", "Splash Potion of Girl Power",)
+	event.add("item.minecraft.lingering_potion.effect.girl_power", "Lingering Potion of Girl Power",)
 })
 
 // KeyBindEvents.pressed("key.use", event => {

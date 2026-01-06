@@ -214,6 +214,21 @@ StartupEvents.registry("item", event => {
 			.maxStackSize(63)
 			.rarity("uncommon")
 			.jukeboxPlayable("kubejs:mint")
+	event.create("horse_urine_bottle")
+			.maxStackSize(16)
+			.tooltip(Text.translatableWithFallback("", "dude").darkGray().italic())
+			.tag("c:drinks")
+			.tag("c:drinks/juice")
+			.tag("c:potions/bottle")
+			.useAnimation("drink")
+			.food(f => f
+					.alwaysEdible()
+					.effect("minecraft:nausea", 5 * SEC, 0, 1.0)
+					.effect("minecraft:nausea", 20 * SEC, 0, 0.75)
+					.effect("kubejs:girl_power", 30 * SEC, 0, 0.5)
+			)
+			.createItemProperties()
+					.craftRemainder("minecraft:glass_bottle")
 })
 
 StartupEvents.modifyCreativeTab("minecraft:food_and_drinks", event => {
@@ -225,6 +240,7 @@ StartupEvents.modifyCreativeTab("minecraft:food_and_drinks", event => {
 		Item.of("biomesoplenty:cattail"),
 		Item.of("biomeswevegone:cattail_sprout"),
 		Item.of("biomeswevegone:fluorescent_cattail_sprout"),
+		Item.of("kubejs:horse_urine_bottle"),
 	])
 })
 
@@ -297,17 +313,22 @@ function find_mickeon(server) {
 
 StartupEvents.registry("mob_effect", event => {
 	event.create("begone")
-		.color(0x000000)
+		.color("#AEFFF8")
 		.instant()
 		.effectTick(entity => global.begone_effect(entity))
+	event.create("girl_power")
+		.color("#FFAEE0")
+		.beneficial()
 })
 
 StartupEvents.registry("potion", event => {
 	event.create("begone").effect("kubejs:begone")
+	event.create("girl_power").effect("kubejs:girl_power", 5 * MIN, 1)
 })
 
 NativeEvents.onEvent($RegisterBrewingRecipesEvent, event => {
-	event.builder.addRecipe("minecraft:glass_bottle", "#c:ender_pearls", `minecraft:potion[minecraft:potion_contents={"potion":"kubejs:begone"}]`)
+	event.builder.addRecipe(`potion[minecraft:potion_contents={\"potion\":\"minecraft:awkward\"}]`, "#c:ender_pearls", `minecraft:potion[minecraft:potion_contents={"potion":"kubejs:begone"}]`)
+	event.builder.addRecipe("kubejs:horse_urine_bottle", "cobblemon:carbos" , `minecraft:potion[minecraft:potion_contents={"potion":"kubejs:girl_power"}]`)
 })
 
 /** @param {import("net.minecraft.world.entity.LivingEntity").$LivingEntity$$Type} entity */

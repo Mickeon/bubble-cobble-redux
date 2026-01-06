@@ -1,11 +1,13 @@
 // requires: cobblemon
 // requires: create
-// /** @type {typeof import("dev.latvian.mods.kubejs.script.data.GeneratedDataStage").$GeneratedDataStage } */
-// let $GeneratedDataStage  = Java.loadClass("dev.latvian.mods.kubejs.script.data.GeneratedDataStage")
 /** @type {typeof import("net.minecraft.world.entity.player.Player").$Player } */
 let $Player  = Java.loadClass("net.minecraft.world.entity.player.Player")
 /** @type {typeof import("dev.latvian.mods.kubejs.item.FoodBuilder").$FoodBuilder } */
 let $FoodBuilder  = Java.loadClass("dev.latvian.mods.kubejs.item.FoodBuilder")
+/** @type {typeof import("net.neoforged.neoforge.event.entity.living.MobEffectEvent$Expired").$MobEffectEvent$Expired } */
+let $MobEffectEvent$Expired  = Java.loadClass("net.neoforged.neoforge.event.entity.living.MobEffectEvent$Expired")
+/** @type {typeof import("net.neoforged.neoforge.event.entity.living.MobEffectEvent$Added").$MobEffectEvent$Added } */
+let $MobEffectEvent$Added  = Java.loadClass("net.neoforged.neoforge.event.entity.living.MobEffectEvent$Added")
 
 ServerEvents.recipes(event => {
 	console.log("Changing recipes in funny_server.js")
@@ -370,6 +372,27 @@ NetworkEvents.dataReceived("kubejs:dash", event => {
 				)
 			}
 		})
+	}
+})
+
+ItemEvents.entityInteracted("minecraft:glass_bottle", event => {
+	if (event.player && event.target.entityType.hasTag("farmersdelight:horse_feed_users")) {
+		if (!event.player.isCreative()) {
+			event.item.shrink(1)
+		}
+		event.player.give("kubejs:horse_urine_bottle")
+	}
+})
+
+NativeEvents.onEvent($MobEffectEvent$Added, event => {
+	if (event.effectInstance.is("kubejs:girl_power")) {
+		event.entity.modifyAttribute("kubejs:dash_jump_count", "kubejs:girl_power_effect", event.effectInstance.amplifier + 1, "add_value")
+	}
+})
+
+NativeEvents.onEvent($MobEffectEvent$Expired, event => {
+	if (event.effectInstance.is("kubejs:girl_power")) {
+		event.entity.removeAttribute("kubejs:dash_jump_count", "kubejs:girl_power_effect")
 	}
 })
 

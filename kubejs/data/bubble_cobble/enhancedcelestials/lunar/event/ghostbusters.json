@@ -272,9 +272,9 @@
 	"text_components": {
 		"end_notification": {
 			"component": {
-				"key": "Jokes on you, dumbass! The chicken has ghost, too!!",
+				"key": "Why the fuck is all the food full of ghost?! I call health inspector- NO!\nI call I call Ghöüstbusteir™ and I tell them: \"Destroy the city!\"",
 				"style": {
-					"color": "#bbbb88"
+					"color": "#cc6666"
 				}
 			},
 			"type": "CHAT"
