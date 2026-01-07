@@ -4905,7 +4905,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "Jade-1.21.1-NeoForge-15.10.3.jar",
+                    "file_name": "Jade-1.21.1-NeoForge-15.10.4.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -4913,16 +4913,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/nvQzSEkH/versions/43sRR8f6/Jade-1.21.1-NeoForge-15.10.3.jar",
-                    "id": "43sRR8f6",
+                    "url": "https://cdn.modrinth.com/data/nvQzSEkH/versions/VGRMP69T/Jade-1.21.1-NeoForge-15.10.4.jar",
+                    "id": "VGRMP69T",
                     "parent_id": "nvQzSEkH",
                     "hashes": {
-                        "sha512": "351926187c564d1f2bae2f084c77f80fe850dc90837153ef01506c049f16b02307196ed383ae25cd334530106aa741b12dd90f5e1b205439fde2b74d09274bc0",
-                        "sha1": "0c7e9b04e2481d26c9080dd5d32351490d1fed3a"
+                        "sha512": "2b5bada9a4ac58804c571e33f5c98c93e9903edffd92c4a870dd5f37eb12d901ed9fb854f69749fec256dd5f0c3c1fdbd3b8576aa5f6900e0857ebf3c517a66a",
+                        "sha1": "7d23a1dd515872bd6498b8edd06bb84e61f2c4e7"
                     },
                     "required_dependencies": [],
-                    "size": 725736,
-                    "date_published": "2025-08-06T00:53:03.569038Z"
+                    "size": 725725,
+                    "date_published": "2026-01-07T09:07:19.933157Z"
                 }
             ]
         },
@@ -9164,7 +9164,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "via_romana-2.2.1+1.21.1-neoforge.jar",
+                    "file_name": "via_romana-2.2.2+1.21.1-neoforge.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -9172,20 +9172,20 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/FVToiKwr/versions/HT6ZBxcV/via_romana-2.2.1+1.21.1-neoforge.jar",
-                    "id": "HT6ZBxcV",
+                    "url": "https://cdn.modrinth.com/data/FVToiKwr/versions/7sf8VbzB/via_romana-2.2.2+1.21.1-neoforge.jar",
+                    "id": "7sf8VbzB",
                     "parent_id": "FVToiKwr",
                     "hashes": {
-                        "sha512": "b5757fff32609f18be1bf86443827fec700d83e85da4d4a61e7e31e59fdff4b39ef229b848bd3667a78758a0d4899f5af4e8291a677525a3c93388708146fd31",
-                        "sha1": "7a321c1e26c9c9381de755c3d70ffc32f133b6d9"
+                        "sha512": "e227b4aa359ed9c8867fa572ff7c8370b5b942ce3aeebe2fa1d3589c07bf21f3c46764fe54c00e2097a4c948fece02a9b609a23b077cd18a7699d450aacebb3d",
+                        "sha1": "e25ffefdcfa2b5657cd048f9ba186f87f30475f4"
                     },
                     "required_dependencies": [
                         "z2XEADmE",
                         "codAaoxh",
                         "twkfQtEc"
                     ],
-                    "size": 1240105,
-                    "date_published": "2025-12-08T22:23:45.702792Z"
+                    "size": 1241040,
+                    "date_published": "2026-01-06T23:33:20.037701Z"
                 }
             ]
         },
