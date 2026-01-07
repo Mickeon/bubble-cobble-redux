@@ -20,7 +20,11 @@
     "volume": 1.0
   },
   "keys": [
-    "#bubble_cobble:glass_sounds",
+	  "#c:glass",
+    "#c:glass_panes",
+    "#c:glass_blocks",
+    "create:framed_glass_door",
+    "create:framed_glass_trapdoor",
     "supplementaries:redstone_illuminator"
   ]
 }

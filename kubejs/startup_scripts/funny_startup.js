@@ -349,7 +349,7 @@ NativeEvents.onEvent($ItemStackedOnOtherEvent, event => {
 	if (event.clickAction == "SECONDARY") {
 		const item_to_destroy = get_item_to_destroy(event.carriedItem, event.stackedOnItem)
 		if (item_to_destroy) {
-			if (Platform.clientEnvironment) {
+			if (Platform.isClientEnvironment()) {
 				Client.player.playNotifySound("minecraft:block.lava.extinguish", "master", 0.1, 1.0)
 			}
 			if (!item_to_destroy.getComponents().has("minecraft:fire_resistant")) {
@@ -360,9 +360,9 @@ NativeEvents.onEvent($ItemStackedOnOtherEvent, event => {
 	}
 })
 
-if (Platform.clientEnvironment) {
+if (Platform.isClientEnvironment()) {
 	/** @type {typeof import("net.neoforged.neoforge.client.event.ContainerScreenEvent$Render$Foreground").$ContainerScreenEvent$Render$Foreground } */
-	let $ContainerScreenEvent$Render$Foreground  = Java.tryLoadClass("net.neoforged.neoforge.client.event.ContainerScreenEvent$Render$Foreground")
+	let $ContainerScreenEvent$Render$Foreground  = Java.loadClass("net.neoforged.neoforge.client.event.ContainerScreenEvent$Render$Foreground")
 	NativeEvents.onEvent($ContainerScreenEvent$Render$Foreground, event => {
 		if (event.containerScreen.menu?.carried.isEmpty()) {
 			return

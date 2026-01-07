@@ -1,8 +1,6 @@
 // NOTE: Sounds's block definitions refresh after a full restart.
 
 ServerEvents.tags("block", event => {
-	event.add("bubble_cobble:glass_sounds", "#c:glass", "#c:glass_panes")
-	event.add("bubble_cobble:bookshelf_sounds", "#c:bookshelves")
 	// These sound like coins shattering.
 	event.add("bubble_cobble:raw_gold_block_sounds", /^createdeco:.*coinstack$/)
 	event.add("bubble_cobble:sandstone_sounds", "#c:sandstone/blocks") // Mutes Presence Footsteps for some reason.
@@ -38,7 +36,9 @@ ServerEvents.tags("block", event => {
 	event.add("minecraft:combination_step_sound_blocks", "yungscavebiomes:ice_sheet")
 	// event.add("minecraft:inside_step_sound_blocks", "")
 
-	// Defined in file instead.
+	// All of the ones below are defined in `sounds/blocks` instead.
+	// event.add("bubble_cobble:bookshelf_sounds", "#c:bookshelves")
+	// event.add("bubble_cobble:glass_sounds", "")
 	// This sounds like a very sturdy metal, with a bit of a high-pitched "pling".
 	// event.add("bubble_cobble:gold_sounds", "")
 	// event.add("bubble_cobble:sand_sounds", "#minecraft:sand")
