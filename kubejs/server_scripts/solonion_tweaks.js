@@ -4,11 +4,11 @@
 
 /** @type {typeof import("team.creative.solonion.api.SOLOnionAPI").$SOLOnionAPI } */
 const SOLOnionAPI = Java.loadClass("team.creative.solonion.api.SOLOnionAPI")
-/** @type {typeof import("virtuoel.pehkui.api.ScaleTypes").$ScaleTypes } */
-const ScaleTypes = Java.loadClass("virtuoel.pehkui.api.ScaleTypes")
+// /** @type {typeof import("virtuoel.pehkui.api.ScaleTypes").$ScaleTypes } */
+// const ScaleTypes = Java.loadClass("virtuoel.pehkui.api.ScaleTypes")
 const MAX_DIVERSITY = 32.0
 const LOSS_LIMIT = 0.2
-const MINING_SPEED_THRESHOLD = 18
+// const MINING_SPEED_THRESHOLD = 18
 const REGENERATION_THRESHOLD = 7
 
 // Tweaks to hunger system, featuring Spice of Life: Onion:
@@ -16,13 +16,13 @@ const REGENERATION_THRESHOLD = 7
 // - Starving is very funny.
 EntityEvents.spawned("minecraft:player", event => {
 	const player = event.player
-	const server = player.server
+	const server = event.server
 	/** @type {$ScheduledEvents$ScheduledEvent} */
 	let starve_event = null
 
 	let prior_exhaustion = player.getFoodData().getExhaustionLevel()
 
-	const mining_speed_scale = player.pehkui_getScaleData(ScaleTypes.MINING_SPEED)
+	// const mining_speed_scale = player.pehkui_getScaleData(ScaleTypes.MINING_SPEED)
 
 	const is_candle = player.username == "CandleClockwork"
 	const super_starve_starting_tick_rate = 60
@@ -105,7 +105,7 @@ EntityEvents.spawned("minecraft:player", event => {
 		// }
 
 		// mining_speed_scale.setScale(clamp(remap(food_diversity, MINING_SPEED_THRESHOLD, MAX_DIVERSITY, 1.0, 2.0), 1.0, 2.0))
-		mining_speed_scale.setScale(food_diversity >= MINING_SPEED_THRESHOLD ? 1.2 : 1.0)
+		// mining_speed_scale.setScale(food_diversity >= MINING_SPEED_THRESHOLD ? 1.2 : 1.0)
 
 		// Utils.server.tell(`${String(usual_loss).substring(0, 4) } => ${String(loss).substring(0, 4)}`)
 	})
