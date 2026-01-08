@@ -7,6 +7,8 @@
       "{id:\"item\",item:\"biomesoplenty:cattail\"}",
       "{id:\"item\",item:\"biomeswevegone:cattail_sprout\"}",
       "{id:\"item\",item:\"biomeswevegone:fluorescent_cattail_sprout\"}",
+      "{id:\"item\",item:\"kubejs:doublemint_gum\"}",
+      "{id:\"item\",item:\"kubejs:horse_urine_bottle\"}",
       "{id:\"itemtag\",tag:\"origins:ignore_diet\"}",
       "{id:\"itemtag\",tag:\"c:drinks/tea\"}"
     ],
@@ -64,6 +66,10 @@
     {
       "ingredient": "{id:\"itemtag\",tag:\"kubejs:wines\"}",
       "diversity": 3
+    },
+    {
+      "ingredient": "{id:\"item\",item:\"biomeswevegone:baobab_fruit\"}",
+      "diversity": 1
     }
   ]
 }

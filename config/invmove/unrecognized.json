@@ -162,7 +162,10 @@
     "net.caffeinemc.mods.sodium.client.gui.SodiumOptionsGUI": true,
     "com.cobblemon.mod.common.client.gui.interact.moveselect.MoveSelectGUI": true,
     "eu.midnightdust.lib.config.MidnightConfigScreen": true,
-    "net.minecraft.client.gui.screens.DisconnectedScreen": true
+    "net.minecraft.client.gui.screens.DisconnectedScreen": true,
+    "it.hurts.sskirillss.relics.client.screen.description.ability.AbilityDescriptionScreen": true,
+    "it.hurts.sskirillss.relics.client.screen.description.research.AbilityResearchScreen": true,
+    "dev.imb11.sounds.gui.SoundsConfigScreen": true
   },
   "hideBackground": {
     "dev.emi.emi.screen.RecipeScreen": false,

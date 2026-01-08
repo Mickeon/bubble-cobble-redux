@@ -81,3 +81,5 @@
 /config/parcool*
 /config/presencefootsteps/userconfig.json
 *locomotionmap.json
+*waterframes*
+*watermedia*

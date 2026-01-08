@@ -1,5 +1,11 @@
 // requires: cobblemon
 // requires: create
+// /** @type {typeof import("net.neoforged.neoforge.event.entity.player.PlayerEvent$BreakSpeed").$PlayerEvent$BreakSpeed } */
+// let $PlayerEvent$BreakSpeed  = Java.loadClass("net.neoforged.neoforge.event.entity.player.PlayerEvent$BreakSpeed")
+// /** @type {typeof import("net.neoforged.neoforge.event.entity.player.PlayerEvent$HarvestCheck").$PlayerEvent$HarvestCheck } */
+// let $PlayerEvent$HarvestCheck  = Java.loadClass("net.neoforged.neoforge.event.entity.player.PlayerEvent$HarvestCheck")
+// /** @type {typeof import("net.neoforged.neoforge.event.entity.living.LivingFallEvent").$LivingFallEvent } */
+// let $LivingFallEvent  = Java.loadClass("net.neoforged.neoforge.event.entity.living.LivingFallEvent")
 /** @type {typeof import("net.minecraft.world.entity.player.Player").$Player } */
 let $Player  = Java.loadClass("net.minecraft.world.entity.player.Player")
 /** @type {typeof import("dev.latvian.mods.kubejs.item.FoodBuilder").$FoodBuilder } */
@@ -395,6 +401,36 @@ NativeEvents.onEvent($MobEffectEvent$Expired, event => {
 		event.entity.removeAttribute("kubejs:dash_jump_count", "kubejs:girl_power_effect")
 	}
 })
+
+// NativeEvents.onEvent($PlayerEvent$BreakSpeed, event => {
+	// event.entity.statusMessage = "Mmm speed"
+	// event.state.
+// })
+
+// NativeEvents.onEvent($PlayerEvent$HarvestCheck, event => {
+	// event.entity.statusMessage = "Mmm harvest"
+// })
+
+// PlayerEvents.loggedIn(event => {
+// 	console.log("logged in")
+// 	const player = event.player
+// 	event.server.scheduleRepeatingInTicks(10, callback => {
+// 		if (player.isRemoved() || player.isDeadOrDying()) {
+// 			callback.clear()
+// 			return
+// 		}
+
+// 		if (player.blockStateOn.id == "minecraft:powder_snow") {
+// 			player.statusMessage = "AAAAAAAAAAAA"
+// 			player.teleportTo(player.x, player.blockY + 1.5, player.z)
+// 			player.setIsInPowderSnow(false)
+// 			player.setNoGravity(true)
+// 			player.hurtMarked = true
+// 		} else {
+// 			player.setNoGravity(false)
+// 		}
+// 	})
+// })
 
 // Debug.
 // ServerEvents.tick(event => {

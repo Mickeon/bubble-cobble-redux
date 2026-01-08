@@ -281,7 +281,19 @@ ServerEvents.recipes(event => {
 	event.shaped(Item.of("cobblemon:sweet_apple"), ["SSS", "SAS", "SSS"], {A: "minecraft:apple", S: "minecraft:sweet_berries"})
 	event.shaped(Item.of("cobblemon:tart_apple"), ["SSS", "SAS", "SSS"], {A: "minecraft:apple", S: "biomeswevegone:blueberries"})
 	event.shaped(Item.of("cobblemon:syrupy_apple"), ["SSS", "SAS", "SSS"], {A: "minecraft:apple", S: "minecraft:glow_berries"})
-	event.shaped(Item.of("cobblemon:metal_alloy"), ["ZIZ", "INI", "ZIZ"], {Z: "create:zinc_nugget", I: "minecraft:iron_ingot", N: "minecraft:netherite_scrap"})
+	event.shaped(Item.of("cobblemon:metal_alloy"), ["ZAZ", "ANA", "ZAZ"], {Z: "create:zinc_nugget", A: "create:andesite_alloy", N: "minecraft:netherite_scrap"})
+
+	// Make Lanterns craftable with Zinc Nuggets, too.
+	event.replaceInput({id: "minecraft:lantern"},  "minecraft:iron_nugget", ["minecraft:iron_nugget", "create:zinc_nugget"])
+
+	// Crush Honeycomb Block to get a few Honeycombs.
+	event.recipes.create.crushing([
+			CreateItem.of(Item.of("minecraft:honeycomb", 2)),
+			CreateItem.of(Item.of( "minecraft:honeycomb", 1), 0.5),
+			CreateItem.of(Item.of( "minecraft:honeycomb", 1), 0.5)
+		],
+		"minecraft:honeycomb_block"
+	)
 
 	// Cooking recipe schema test.
 	// event.recipes.farmersdelight.cooking("kubejs:blue_mascot_cat", ["cobblemon:red_apricorn", "cobblemon:blue_apricorn"], "minecraft:bowl")
