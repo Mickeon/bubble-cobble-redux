@@ -65,5 +65,13 @@
 			"pitch": 0.75,
 			"volume": 0.05
 		}]
+	},
+	"item.totem.use": {
+		"replace": true,
+		"sounds": [{
+			"name": "bubble_cobble:aku_aku_hurt",
+			"pitch": 0.8,
+			"volume": 0.75
+		}]
 	}
 }

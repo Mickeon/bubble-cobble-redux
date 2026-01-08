@@ -97,5 +97,23 @@
 			"name": "bubble_cobble:ghostbusters",
 			"volume": 0.05
 		}]
+	},
+	"crate_jump": {
+		"sounds": [{
+			"name": "bubble_cobble:crate_jump",
+			"pitch": 0.85
+		}]
+	},
+	"fruit_collected": {
+		"sounds": [{
+			"name": "bubble_cobble:fruit_collected",
+			"pitch": 0.85
+		}]
+	},
+	"life_got": {
+		"sounds": [{
+			"name": "bubble_cobble:life_got",
+			"pitch": 0.9
+		}]
 	}
 }

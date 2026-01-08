@@ -1,11 +1,5 @@
 // requires: cobblemon
 // requires: create
-// /** @type {typeof import("net.neoforged.neoforge.event.entity.player.PlayerEvent$BreakSpeed").$PlayerEvent$BreakSpeed } */
-// let $PlayerEvent$BreakSpeed  = Java.loadClass("net.neoforged.neoforge.event.entity.player.PlayerEvent$BreakSpeed")
-// /** @type {typeof import("net.neoforged.neoforge.event.entity.player.PlayerEvent$HarvestCheck").$PlayerEvent$HarvestCheck } */
-// let $PlayerEvent$HarvestCheck  = Java.loadClass("net.neoforged.neoforge.event.entity.player.PlayerEvent$HarvestCheck")
-// /** @type {typeof import("net.neoforged.neoforge.event.entity.living.LivingFallEvent").$LivingFallEvent } */
-// let $LivingFallEvent  = Java.loadClass("net.neoforged.neoforge.event.entity.living.LivingFallEvent")
 /** @type {typeof import("net.minecraft.world.entity.player.Player").$Player } */
 let $Player  = Java.loadClass("net.minecraft.world.entity.player.Player")
 /** @type {typeof import("dev.latvian.mods.kubejs.item.FoodBuilder").$FoodBuilder } */
@@ -110,7 +104,7 @@ ItemEvents.entityInteracted("create:wrench",  event => {
 ItemEvents.firstRightClicked(["create:chocolate_bucket", "create:honey_bucket", "create_bic_bit:mayonnaise_bucket", "create_bic_bit:ketchup_bucket"], event => {
 	const player = event.player
 	if (player
-	&& player.username == "AceNil_"
+	&& (player.username == "AceNil_" || player.username == "SniperZee")
 	&& player.foodData.needsFood()
 	&& !player.crouching
 	) { // AceNil_
@@ -267,6 +261,8 @@ PlayerEvents.loggedIn(event => {
 	// I know the consequences of this. If the server restarts, you will lose the leniency.
 	// But I can't be bothered storing dash data on disk.
 	event.player.removeAttribute("minecraft:generic.safe_fall_distance", "kubejs:dash_leniency")
+	event.player.removeAttribute("minecraft:generic.safe_fall_distance", "kubejs:powder_snow_leniency")
+	event.player.removeAttribute("minecraft:generic.gravity", "kubejs:powder_snow_pause")
 })
 
 // https://discord.com/channels/303440391124942858/303440391124942858/1450918369342521548
@@ -296,7 +292,7 @@ NetworkEvents.dataReceived("kubejs:dash", event => {
 
 	if (player.isSwimming()
 	|| player.onGround()
-	|| player.foodLevel <= 6
+	|| !player.canSprint()
 	|| dash.jump_count >= player.getAttributeTotalValue("kubejs:dash_jump_count")
 	|| dash.last_tick_used + DASH_COOLDOWN_TICKS > event.server.tickCount
 	) {
@@ -402,35 +398,118 @@ NativeEvents.onEvent($MobEffectEvent$Expired, event => {
 	}
 })
 
-// NativeEvents.onEvent($PlayerEvent$BreakSpeed, event => {
-	// event.entity.statusMessage = "Mmm speed"
-	// event.state.
-// })
+function PowderSnowData() {
+	this.combo = 0
+	this.snow_balls_stored = 0
+	this.last_tick_jumped = 0
+	this.check_landed = null
+	this.delayed_jump = null
+	this.reward_loop = null
+}
+const players_powder_snow_data = {}
+PlayerEvents.tick(event => {
+	/** @type {import("net.minecraft.server.level.ServerPlayer").$ServerPlayer$$Type} */
+	const player = event.player
+	// if (player.blockStateOn.block != Blocks.POWDER_SNOW) {
+	if (!player.isInPowderSnow || player.crouching) {
+		return
+	}
 
-// NativeEvents.onEvent($PlayerEvent$HarvestCheck, event => {
-	// event.entity.statusMessage = "Mmm harvest"
-// })
+	if (!players_powder_snow_data[player.uuid]) {
+		players_powder_snow_data[player.uuid] = new PowderSnowData()
+	}
+	/** @type {PowderSnowData} */
+	let powder_snow = players_powder_snow_data[player.uuid]
+	if (powder_snow.last_tick_jumped + 6 > event.server.tickCount) {
+		return
+	}
 
-// PlayerEvents.loggedIn(event => {
-// 	console.log("logged in")
-// 	const player = event.player
-// 	event.server.scheduleRepeatingInTicks(10, callback => {
-// 		if (player.isRemoved() || player.isDeadOrDying()) {
-// 			callback.clear()
-// 			return
-// 		}
+	const level = event.level
+	const bounding_box_min = player.boundingBox.minPosition
+	const bounding_box_max = player.boundingBox.maxPosition
+	const block_pos_around_head = BlockPos.betweenClosed(bounding_box_min.with("y", player.eyeY), bounding_box_max.with("y", player.eyeY + 0.5)).iterator()
+	while (block_pos_around_head.hasNext()) {
+		let block_pos = block_pos_around_head.next()
+		if (level.getBlockState(block_pos).block == Blocks.POWDER_SNOW) {
+			return
+		}
+	}
 
-// 		if (player.blockStateOn.id == "minecraft:powder_snow") {
-// 			player.statusMessage = "AAAAAAAAAAAA"
-// 			player.teleportTo(player.x, player.blockY + 1.5, player.z)
-// 			player.setIsInPowderSnow(false)
-// 			player.setNoGravity(true)
-// 			player.hurtMarked = true
-// 		} else {
-// 			player.setNoGravity(false)
-// 		}
-// 	})
-// })
+	BlockPos.betweenClosed(bounding_box_min, bounding_box_max).forEach(block_pos => {
+		const block = level.getBlockState(block_pos)
+		if (block.block != Blocks.POWDER_SNOW) {
+			return
+		}
+
+		level.setBlockAndUpdate(block_pos, Blocks.AIR)
+		level.spawnEntity("minecraft:falling_block", /** @param {import("net.minecraft.world.entity.item.FallingBlockEntity").$FallingBlockEntity$$Type} falling_block */ falling_block => {
+			falling_block.setBlockState(block)
+			falling_block.setPos(block_pos.center)
+			falling_block.addMotion(0, 0.25, 0)
+			falling_block.cancelDrop = true
+			level.playLocalSound(block_pos, falling_block.blockState.soundType.fallSound, "blocks", 1.0, 1.0, false)
+		})
+		if (powder_snow.combo > 2) {
+			powder_snow.snow_balls_stored += 1
+		}
+	})
+
+	player.setIsInPowderSnow(false)
+	player.modifyAttribute("minecraft:generic.gravity", "kubejs:powder_snow_pause", -player.getAttributeValue("minecraft:generic.gravity"), "add_multiplied_base")
+	player.motionX = 0.0
+	player.motionZ = 0.0
+	player.motionY = 0.25
+	player.hurtMarked = true
+
+	powder_snow.last_tick_jumped = event.server.tickCount
+	powder_snow.combo += 1
+	if (!powder_snow.delayed_jump) {
+		powder_snow.delayed_jump = level.server.scheduleInTicks(2, () => {
+			player.playNotifySound("bubble_cobble:crate_jump", "players", 1.0, 0.75 + powder_snow.combo * 0.05)
+			player.removeAttribute("minecraft:generic.gravity", "kubejs:powder_snow_pause")
+			player.modifyAttribute("minecraft:generic.safe_fall_distance", "kubejs:powder_snow_leniency", 5, "add_value")
+			player.motionY = 1.0
+			player.hurtMarked = true
+			delete powder_snow.delayed_jump
+
+			if (!powder_snow.reward_loop) {
+				powder_snow.reward_loop = level.server.scheduleRepeatingInTicks(3, () => {
+					if (powder_snow.snow_balls_stored <= 0) {
+						powder_snow.reward_loop.clear()
+						delete powder_snow.reward_loop
+						return
+					}
+					powder_snow.snow_balls_stored -= 1
+					let snow_ball = Item.of("minecraft:snowball", 1, {max_stack_size: 99})
+					let maxed_out_snow_balls_slot = player.inventory.find(/** @param {$ItemStack} item */ item => {
+						return item.count == 99 && item.areComponentsEqual(snow_ball)
+					})
+
+					if (maxed_out_snow_balls_slot != -1) {
+						player.inventory.getStackInSlot(maxed_out_snow_balls_slot).shrink(99)
+						player.give("minecraft:totem_of_undying")
+						player.playNotifySound("bubble_cobble:life_got", "players", 0.2, 1.0)
+					} else {
+						player.give(snow_ball)
+						player.playNotifySound("bubble_cobble:fruit_collected", "players", 0.2, 1.0)
+					}
+				})
+			}
+		})
+	}
+	if (!powder_snow.check_landed) {
+		// Extremely lazy check, it's not that serious.
+		powder_snow.check_landed = level.server.scheduleRepeatingInTicks(40, () => {
+			if (player.onGround() && player.blockStateOn.block != Blocks.POWDER_SNOW) {
+				player.removeAttribute("minecraft:generic.safe_fall_distance", "kubejs:powder_snow_leniency")
+				powder_snow.combo = 0
+				powder_snow.check_landed.clear()
+				delete powder_snow.check_landed
+				return
+			}
+		})
+	}
+})
 
 // Debug.
 // ServerEvents.tick(event => {

@@ -263,7 +263,7 @@ NO_NIGHT_LIGHT_MOBS.forEach(entity_type => {
 })
 
 // After the above changes, a lot of Endermen spawn on the surface. Rectify that.
-const FEWER_NIGHT_LIGHT_MOBS = ["minecraft:enderman", "minecraft:spider", "monsterplus:ender_eye"]
+const FEWER_NIGHT_LIGHT_MOBS = ["minecraft:enderman", "minecraft:spider", "monsterplus:ender_eye", "monsterplus:wisp"]
 FEWER_NIGHT_LIGHT_MOBS.forEach(entity_type => {
 	EntityEvents.checkSpawn(entity_type, event => {
 		if (event.block.getSkyLight() >= 1 && event.type == "NATURAL" && Utils.getRandom().nextFloat() > 0.5) {
