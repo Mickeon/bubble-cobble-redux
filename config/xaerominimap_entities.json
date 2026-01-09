@@ -22,8 +22,8 @@
     "startFadingAt": 0.0,
     "renderOverMinimapFrame": 0.0,
     "icons": 1.0,
-    "names": 0.0,
     "heightLimit": 20.0,
+    "names": 0.0,
     "iconScale": 1.0
   },
   "subCategories": [
@@ -88,15 +88,15 @@
           "name": "gui.xaero_entity_category_players",
           "protection": true,
           "settingOverrides": {
-            "displayHeight": 2.0,
             "displayed": true,
+            "displayHeight": 2.0,
             "heightBasedFade": false,
             "renderOrder": 925.0,
-            "names": 1.0,
-            "heightLimit": 200.0,
             "color": -1.0,
             "renderOverMinimapFrame": 2.0,
             "icons": 2.0,
+            "heightLimit": 200.0,
+            "names": 1.0,
             "iconScale": 1.0
           },
           "subCategories": [
@@ -186,7 +186,24 @@
                 "renderOverMinimapFrame": 2.0,
                 "icons": 2.0
               },
-              "subCategories": []
+              "subCategories": [
+                {
+                  "hardInclude": "nothing",
+                  "includeList": [
+                    "mowziesmobs:ferrous_wroughtnaut"
+                  ],
+                  "includeListInSuperCategory": true,
+                  "excludeMode": "ONLY",
+                  "excludeList": [],
+                  "name": "Hidden Bosses",
+                  "protection": true,
+                  "settingOverrides": {
+                    "displayNameWhenIconFails": false,
+                    "heightLimit": 15.0
+                  },
+                  "subCategories": []
+                }
+              ]
             },
             {
               "hardInclude": "tamed",
@@ -229,8 +246,8 @@
               "name": "Villagers",
               "protection": false,
               "settingOverrides": {
-                "heightLimit": 40.0,
                 "icons": 2.0,
+                "heightLimit": 40.0,
                 "iconScale": 0.75
               },
               "subCategories": []
@@ -246,10 +263,10 @@
               "name": "Pokemon",
               "protection": false,
               "settingOverrides": {
-                "heightLimit": 40.0,
                 "color": 15.0,
                 "renderOverMinimapFrame": 1.0,
                 "icons": 2.0,
+                "heightLimit": 40.0,
                 "iconScale": 1.5
               },
               "subCategories": []
@@ -264,12 +281,12 @@
               "protection": true,
               "settingOverrides": {
                 "renderOrder": 4.0,
-                "names": 1.0,
-                "heightLimit": 40.0,
                 "color": 11.0,
                 "displayNameWhenIconFails": true,
                 "renderOverMinimapFrame": 1.0,
                 "icons": 2.0,
+                "heightLimit": 40.0,
+                "names": 1.0,
                 "iconScale": 1.0
               },
               "subCategories": []
@@ -288,10 +305,10 @@
       "protection": true,
       "settingOverrides": {
         "renderOrder": 1.0,
-        "names": 1.0,
         "color": 8.0,
         "entityNumber": 100.0,
-        "dotSize": 1.0
+        "dotSize": 1.0,
+        "names": 1.0
       },
       "subCategories": []
     },
@@ -304,8 +321,8 @@
       "name": "gui.xaero_entity_category_other_entities",
       "protection": true,
       "settingOverrides": {
-        "names": 1.0,
-        "color": 5.0
+        "color": 5.0,
+        "names": 1.0
       },
       "subCategories": []
     }

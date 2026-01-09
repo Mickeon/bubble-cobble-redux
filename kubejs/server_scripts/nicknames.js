@@ -55,9 +55,13 @@ ServerEvents.commandRegistry(event => {
 		.then(commands.argument("new_nickname", arguments.COMPONENT.create(event))
 			.suggests((command, builder) => {
 				let player_nickname = get_nickname(command.source.getPlayer())
-				if (player_nickname && builder.input.endsWith("/nickname ")) { // Jank.
-					builder.suggest(Text.of(player_nickname).toJson().toString(), () => "Your current nickname")
+				if (builder.input.endsWith("/nickname ")) {
+					builder.suggest("help")
+					if (player_nickname) { // Jank.
+						builder.suggest(Text.of(player_nickname).toJson().toString(), () => "Your current nickname")
+					}
 				}
+				builder.suggest(Text.of(player_nickname).toJson().toString(), () => "Your current nickname")
 				return builder.buildFuture()
 			})
 			.executes(context => {

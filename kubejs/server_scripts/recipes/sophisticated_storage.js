@@ -115,8 +115,8 @@ ServerEvents.recipes(event => {
 	})
 
 	// Use Canvas as base for Backpack Upgrade Templates, as well as Zinc.
-	event.replaceInput({id: /^sophisticated.*upgrade/}, "minecraft:leather", "farmersdelight:canvas")
-	event.replaceInput({id: /^sophisticated.*upgrade/}, "minecraft:iron_ingot", "create:zinc_ingot")
+	event.replaceInput({id: /^sophisticated.*upgrade_base/}, "minecraft:leather", "farmersdelight:canvas")
+	event.replaceInput({id: /^sophisticated.*upgrade_base/}, "minecraft:iron_ingot", "create:zinc_ingot")
 	// Use Create's List Filter for Filter Upgrades.
 	event.replaceInput({id: /^sophisticated.*filter_upgrade/}, "minecraft:string", "create:filter")
 	// Use Cobblemon's Magnet for Magnet Upgrades.

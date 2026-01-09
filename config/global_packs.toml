@@ -16,7 +16,7 @@ log_pack_ids = false
 	required = ["global_packs/resourcepacks/", "global_packs/datapacks/", "global_packs/both"]
 	# Check game log if log_pack_ids is set to true, you need to add the full IDs listed in there.
 	# Search for "# Listing Resource Packs #" inside the log
-	enable_builtin = ["mod/item_interactions_mod:resourcepacks/example_gui_particles", "mod/cobblemon:resourcepacks/gyaradosjump", "mod/cobblemon:resourcepacks/regionbiasforms", "mod/cobblemon:resourcepacks/uniqueshinyforms", "mod/mega_showdown:resourcepacks/gyaradosjumpingmega", "mod/mega_showdown:resourcepacks/regionbiasmsd"]
+	enable_builtin = ["mod/item_interactions_mod:resourcepacks/example_gui_particles", "mod/cobblemon:resourcepacks/gyaradosjump", "mod/cobblemon:resourcepacks/regionbiasforms", "mod/cobblemon:resourcepacks/uniqueshinyforms", "mod/mega_showdown:resourcepacks/gyaradosjumpingmega", "mod/mega_showdown:resourcepacks/regionbiasmsd", "supplementaries:darker_ropes"]
 
 [datapacks]
 	required = ["global_packs/datapacks/", "global_packs/both"]
