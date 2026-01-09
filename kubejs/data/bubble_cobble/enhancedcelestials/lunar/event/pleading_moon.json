@@ -28,7 +28,10 @@
 	},
 	"mob_settings": {
 		"blocks_sleeping": {
-			"type": "corgilib:any"
+			"type": "corgilib:flipped",
+			"condition_to_flip": {
+				"type": "corgilib:any"
+			}
 		},
 		"lunar_spawn_settings": {
 			"force_surface_spawning": false,
@@ -65,7 +68,7 @@
 				"mob_effect": {
 					"ambient": true,
 					"amplifier": 0,
-					"duration_in_ticks": 100,
+					"duration_in_ticks": 300,
 					"effect": "farmersdelight:comfort",
 					"show_icon": false,
 					"visible": false

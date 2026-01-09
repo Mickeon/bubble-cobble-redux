@@ -33,7 +33,10 @@
 	},
 	"mob_settings": {
 		"blocks_sleeping": {
-			"type": "corgilib:any"
+			"type": "corgilib:flipped",
+			"condition_to_flip": {
+				"type": "corgilib:any"
+			}
 		},
 		"lunar_spawn_settings": {
 			"force_surface_spawning": true,
@@ -88,7 +91,7 @@
 				"mob_effect": {
 					"ambient": true,
 					"amplifier": 0,
-					"duration_in_ticks": 100,
+					"duration_in_ticks": 300,
 					"effect": "minecraft:oozing",
 					"show_icon": false,
 					"visible": true
@@ -107,7 +110,7 @@
 				"mob_effect": {
 					"ambient": true,
 					"amplifier": 0,
-					"duration_in_ticks": 100,
+					"duration_in_ticks": 300,
 					"effect": "minecraft:wind_charged",
 					"show_icon": false,
 					"visible": true
@@ -126,7 +129,7 @@
 				"mob_effect": {
 					"ambient": true,
 					"amplifier": 0,
-					"duration_in_ticks": 100,
+					"duration_in_ticks": 300,
 					"effect": "minecraft:slow_falling",
 					"show_icon": false,
 					"visible": true

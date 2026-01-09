@@ -168,7 +168,7 @@
 				"mob_effect": {
 					"ambient": false,
 					"amplifier": 10,
-					"duration_in_ticks": 5,
+					"duration_in_ticks": 60,
 					"effect": "minecraft:infested",
 					"show_icon": false,
 					"visible": true
