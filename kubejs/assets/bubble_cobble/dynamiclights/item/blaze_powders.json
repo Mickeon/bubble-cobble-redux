@@ -1,0 +1,9 @@
+{
+	"match": {
+		"items": [
+			"monsterplus:curseflame_powder",
+			"monsterplus:soulflame_powder"
+		]
+	},
+	"luminance": 10
+}
