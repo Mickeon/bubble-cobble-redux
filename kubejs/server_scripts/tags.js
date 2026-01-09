@@ -122,6 +122,9 @@ ServerEvents.tags("block", event => {
 
 	// Normally these can't be chopped, yet they essentially make up some trees.
 	event.add("treechop:leaves_like", "#c:storage_blocks/allium")
+
+	// Makes the items that drop from these fall straight instead of scattering.
+	event.add("drizzleproof:static_blocks", "#c:ropes")
 })
 
 ServerEvents.tags("fluid", event => {
