@@ -1,0 +1,599 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "bonus_rolls": 0,
+      "conditions": [
+        {
+          "condition": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "equipment": {
+              "mainhand": {
+                "items": "cobblemonraiddens:raid_pouch",
+                "predicates": {
+                  "cobblemonraiddens:raid_type": "NORMAL"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            }
+          ],
+          "name": "cobblemon:chilan_berry",
+          "weight": 1
+        }
+      ],
+      "rolls": 1
+    },
+	{
+      "bonus_rolls": 0,
+      "conditions": [
+        {
+          "condition": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "equipment": {
+              "mainhand": {
+                "items": "cobblemonraiddens:raid_pouch",
+                "predicates": {
+                  "cobblemonraiddens:raid_type": "FIRE"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            }
+          ],
+          "name": "cobblemon:occa_berry",
+          "weight": 1
+        }
+      ],
+      "rolls": 1
+    },
+	{
+      "bonus_rolls": 0,
+      "conditions": [
+        {
+          "condition": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "equipment": {
+              "mainhand": {
+                "items": "cobblemonraiddens:raid_pouch",
+                "predicates": {
+                  "cobblemonraiddens:raid_type": "FIGHTING"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            }
+          ],
+          "name": "cobblemon:chople_berry",
+          "weight": 1
+        }
+      ],
+      "rolls": 1
+    },
+	{
+      "bonus_rolls": 0,
+      "conditions": [
+        {
+          "condition": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "equipment": {
+              "mainhand": {
+                "items": "cobblemonraiddens:raid_pouch",
+                "predicates": {
+                  "cobblemonraiddens:raid_type": "WATER"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            }
+          ],
+          "name": "cobblemon:passho_berry",
+          "weight": 1
+        }
+      ],
+      "rolls": 1
+    },
+	{
+      "bonus_rolls": 0,
+      "conditions": [
+        {
+          "condition": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "equipment": {
+              "mainhand": {
+                "items": "cobblemonraiddens:raid_pouch",
+                "predicates": {
+                  "cobblemonraiddens:raid_type": "FLYING"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            }
+          ],
+          "name": "cobblemon:coba_berry",
+          "weight": 1
+        }
+      ],
+      "rolls": 1
+    },
+	{
+      "bonus_rolls": 0,
+      "conditions": [
+        {
+          "condition": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "equipment": {
+              "mainhand": {
+                "items": "cobblemonraiddens:raid_pouch",
+                "predicates": {
+                  "cobblemonraiddens:raid_type": "GRASS"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            }
+          ],
+          "name": "cobblemon:rindo_berry",
+          "weight": 1
+        }
+      ],
+      "rolls": 1
+    },
+	{
+      "bonus_rolls": 0,
+      "conditions": [
+        {
+          "condition": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "equipment": {
+              "mainhand": {
+                "items": "cobblemonraiddens:raid_pouch",
+                "predicates": {
+                  "cobblemonraiddens:raid_type": "POISON"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            }
+          ],
+          "name": "cobblemon:kebia_berry",
+          "weight": 1
+        }
+      ],
+      "rolls": 1
+    },
+	{
+      "bonus_rolls": 0,
+      "conditions": [
+        {
+          "condition": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "equipment": {
+              "mainhand": {
+                "items": "cobblemonraiddens:raid_pouch",
+                "predicates": {
+                  "cobblemonraiddens:raid_type": "ELECTRIC"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            }
+          ],
+          "name": "cobblemon:wacan_berry",
+          "weight": 1
+        }
+      ],
+      "rolls": 1
+    },
+	{
+      "bonus_rolls": 0,
+      "conditions": [
+        {
+          "condition": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "equipment": {
+              "mainhand": {
+                "items": "cobblemonraiddens:raid_pouch",
+                "predicates": {
+                  "cobblemonraiddens:raid_type": "GROUND"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            }
+          ],
+          "name": "cobblemon:shuca_berry",
+          "weight": 1
+        }
+      ],
+      "rolls": 1
+    },
+	{
+      "bonus_rolls": 0,
+      "conditions": [
+        {
+          "condition": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "equipment": {
+              "mainhand": {
+                "items": "cobblemonraiddens:raid_pouch",
+                "predicates": {
+                  "cobblemonraiddens:raid_type": "PSYCHIC"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            }
+          ],
+          "name": "cobblemon:payapa_berry",
+          "weight": 1
+        }
+      ],
+      "rolls": 1
+    },
+	{
+      "bonus_rolls": 0,
+      "conditions": [
+        {
+          "condition": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "equipment": {
+              "mainhand": {
+                "items": "cobblemonraiddens:raid_pouch",
+                "predicates": {
+                  "cobblemonraiddens:raid_type": "ROCK"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            }
+          ],
+          "name": "cobblemon:charti_berry",
+          "weight": 1
+        }
+      ],
+      "rolls": 1
+    },
+	{
+      "bonus_rolls": 0,
+      "conditions": [
+        {
+          "condition": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "equipment": {
+              "mainhand": {
+                "items": "cobblemonraiddens:raid_pouch",
+                "predicates": {
+                  "cobblemonraiddens:raid_type": "ICE"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            }
+          ],
+          "name": "cobblemon:yache_berry",
+          "weight": 1
+        }
+      ],
+      "rolls": 1
+    },
+	{
+      "bonus_rolls": 0,
+      "conditions": [
+        {
+          "condition": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "equipment": {
+              "mainhand": {
+                "items": "cobblemonraiddens:raid_pouch",
+                "predicates": {
+                  "cobblemonraiddens:raid_type": "BUG"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            }
+          ],
+          "name": "cobblemon:tanga_berry",
+          "weight": 1
+        }
+      ],
+      "rolls": 1
+    },
+	{
+      "bonus_rolls": 0,
+      "conditions": [
+        {
+          "condition": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "equipment": {
+              "mainhand": {
+                "items": "cobblemonraiddens:raid_pouch",
+                "predicates": {
+                  "cobblemonraiddens:raid_type": "DRAGON"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            }
+          ],
+          "name": "cobblemon:haban_berry",
+          "weight": 1
+        }
+      ],
+      "rolls": 1
+    },
+	{
+      "bonus_rolls": 0,
+      "conditions": [
+        {
+          "condition": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "equipment": {
+              "mainhand": {
+                "items": "cobblemonraiddens:raid_pouch",
+                "predicates": {
+                  "cobblemonraiddens:raid_type": "GHOST"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            }
+          ],
+          "name": "cobblemon:kasib_berry",
+          "weight": 1
+        }
+      ],
+      "rolls": 1
+    },
+	{
+      "bonus_rolls": 0,
+      "conditions": [
+        {
+          "condition": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "equipment": {
+              "mainhand": {
+                "items": "cobblemonraiddens:raid_pouch",
+                "predicates": {
+                  "cobblemonraiddens:raid_type": "DARK"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            }
+          ],
+          "name": "cobblemon:colbur_berry",
+          "weight": 1
+        }
+      ],
+      "rolls": 1
+    },
+	{
+      "bonus_rolls": 0,
+      "conditions": [
+        {
+          "condition": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "equipment": {
+              "mainhand": {
+                "items": "cobblemonraiddens:raid_pouch",
+                "predicates": {
+                  "cobblemonraiddens:raid_type": "FAIRY"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            }
+          ],
+          "name": "cobblemon:roseli_berry",
+          "weight": 1
+        }
+      ],
+      "rolls": 1
+    },
+	{
+      "bonus_rolls": 0,
+      "conditions": [
+        {
+          "condition": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "equipment": {
+              "mainhand": {
+                "items": "cobblemonraiddens:raid_pouch",
+                "predicates": {
+                  "cobblemonraiddens:raid_type": "STEEL"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            }
+          ],
+          "name": "cobblemon:babiri_berry",
+          "weight": 1
+        }
+      ],
+      "rolls": 1
+    }
+  ]
+}
