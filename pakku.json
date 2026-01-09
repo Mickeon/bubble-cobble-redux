@@ -36,6 +36,7 @@
         "!config/voicechat/translations.properties",
         "!config/voicechat/voicechat-client.properties",
         "!config/voicechat/username-cache.json",
+        "!config/chunkyborder/borders.json",
 
         "!*/jsconfig.json",
         "!kubejs/probe-settings.json",
@@ -53,7 +54,9 @@
         "!config/waves",
         "!config/parcool*",
         "!config/presencefootsteps/userconfig.json",
-        "!*locomotionmap.json"
+        "!*locomotionmap.json",
+        "!*waterframes*",
+        "!*watermedia*"
     ],
     "paths": {
         "resource_packs": "global_packs/resourcepacks/",
