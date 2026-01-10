@@ -308,6 +308,9 @@ ServerEvents.recipes(event => {
 		event.shapeless("waterframes:tv_box", [Ingredient.of("minecraft:note_block").or("create:cardboard_block"), "waterframes:frame"])
 	}
 
+	// All of the other types require differently colored torches, because Copper Torches didn't exist.
+	event.replaceInput({id: /createdeco:green_.*lamp/}, "minecraft:glow_berries", "minecraft:copper_torch")
+
 	// Cooking recipe schema test.
 	// event.recipes.farmersdelight.cooking("kubejs:blue_mascot_cat", ["cobblemon:red_apricorn", "cobblemon:blue_apricorn"], "minecraft:bowl")
 })
