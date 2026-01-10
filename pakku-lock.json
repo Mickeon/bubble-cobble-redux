@@ -1090,7 +1090,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "chunksfadein-neoforge-3.0.19-1.21.jar",
+                    "file_name": "chunksfadein-neoforge-3.0.20-1.21.jar",
                     "mc_versions": [
                         "1.21",
                         "1.21.1"
@@ -1099,18 +1099,18 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/JaNmzvA8/versions/sJ8h8PyD/chunksfadein-neoforge-3.0.19-1.21.jar",
-                    "id": "sJ8h8PyD",
+                    "url": "https://cdn.modrinth.com/data/JaNmzvA8/versions/HzZLXWx4/chunksfadein-neoforge-3.0.20-1.21.jar",
+                    "id": "HzZLXWx4",
                     "parent_id": "JaNmzvA8",
                     "hashes": {
-                        "sha512": "c921f7c57116a22d65c2be3c02bed8b41575d43626add42ea980fd5dbef4395d804a35e44826d95fb4a2d4bada99711e67146de12cdf5c8dd5b75f8032a2a7ab",
-                        "sha1": "559e19dd7cb9dada8b085d64326dfd0eed46bdb7"
+                        "sha512": "8bb88a362263bafd4644de5df804449b17eb20bad7ab9f38fa1d2dbe433674551e8fa95d6b51e20da70f11ad59eadde6b0ebb7154f1a92b4c1fb7ead7b2d4236",
+                        "sha1": "8d1314d879d161f66521c95b7f622e74ec6dc882"
                     },
                     "required_dependencies": [
                         "AANobbMI"
                     ],
-                    "size": 613724,
-                    "date_published": "2025-12-31T16:17:34.947642Z"
+                    "size": 613655,
+                    "date_published": "2026-01-10T17:43:15.796231Z"
                 }
             ]
         },
@@ -9645,7 +9645,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "yo_hooks-neoforge-3.7.0.jar",
+                    "file_name": "yo_hooks-neoforge-3.8.0.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -9653,18 +9653,18 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/t1p8V2nl/versions/d3SyaHEB/yo_hooks-neoforge-3.7.0.jar",
-                    "id": "d3SyaHEB",
+                    "url": "https://cdn.modrinth.com/data/t1p8V2nl/versions/Ld6eqMDX/yo_hooks-neoforge-3.8.0.jar",
+                    "id": "Ld6eqMDX",
                     "parent_id": "t1p8V2nl",
                     "hashes": {
-                        "sha512": "3595b79ee9fce77c16b463cb2f737275e7ec3c10d48994a6c005c258a5f43e2456d9c8ba8b9ff069bfc9e6eb13b655736e60a14c1db13574f96ab624536f1691",
-                        "sha1": "0a6f252ef2806eb84f5c4f104f1bf0c39ad1fd43"
+                        "sha512": "4652e77b68d7cf0d107efe1cbab9e40e70fc8eadea9cd444ad9270e785da9332aac2d6738f819bc59d2895f97816d69a6bae78e727d135b85a1557c990a55300",
+                        "sha1": "e887e14a4eee9f6070f6f68930a0567339e27bf3"
                     },
                     "required_dependencies": [
                         "lhGA9TYQ"
                     ],
-                    "size": 457557,
-                    "date_published": "2026-01-06T12:53:45.719344Z"
+                    "size": 465876,
+                    "date_published": "2026-01-10T16:46:26.082948Z"
                 }
             ]
         },
