@@ -1,0 +1,29 @@
+{
+  "$schema": "https://www.schemastore.org/minecraft-advancement.json",
+  "parent": "minecraft:adventure/root",
+  "display": {
+    "icon": {
+      "id": "biomeswevegone:quicksand"
+    },
+    "title": "HELP = 👍",
+    "description": "Won't someone please HELP ME?"
+  },
+  "criteria": {
+    "quicksand": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "block": {
+              "blocks": [
+                "biomeswevegone:quicksand",
+                "biomeswevegone:red_quicksand",
+                "undergroundworlds:quicksand"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
