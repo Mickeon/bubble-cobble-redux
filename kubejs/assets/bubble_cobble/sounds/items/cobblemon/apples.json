@@ -1,0 +1,8 @@
+{
+  "keys": [
+    "#cobblemon:apples"
+  ],
+  "pitch": 1.0,
+  "soundEvent": "bubble_cobble:fruit_collected",
+  "volume": 0.1
+}
