@@ -297,6 +297,17 @@ ServerEvents.recipes(event => {
 		"minecraft:honeycomb_block"
 	)
 
+	if (Platform.isLoaded("waterframes")) {
+		event.remove({mod: "waterframes"})
+		let copper_bulbs = Ingredient.of(/minecraft:.*copper_bulb/)
+		event.shaped("waterframes:remote", ["ZCZ", "ZTZ", "BBB"], {Z: "createdeco:zinc_sheet", C: "minecraft:copper_block", T: "create:transmitter", B: "#minecraft:stone_buttons"})
+		event.shaped("waterframes:frame", ["ZCZ", "STS", "ZRZ"], {Z: "createdeco:zinc_sheet", C: copper_bulbs, T: "minecraft:tinted_glass", S: "supplementaries:speaker_block", R: "waterframes:remote"})
+		event.shaped("waterframes:projector", ["ZZA", "SCS", "ZRZ"], {Z: "create:zinc_block", C: copper_bulbs, A: "minecraft:amethyst_shard", S: "supplementaries:speaker_block", R: "waterframes:remote"})
+		event.shaped("waterframes:tv", ["ZTZ", "SCS", "ZRZ"], {Z: "create:zinc_ingot", C: copper_bulbs, T: "minecraft:tinted_glass", S: "supplementaries:speaker_block", R: "waterframes:remote"})
+		event.shaped("waterframes:big_tv", [" T ", "TRT", " T "], {T: "minecraft:tinted_glass", R: "waterframes:tv"})
+		event.shapeless("waterframes:tv_box", [Ingredient.of("minecraft:note_block").or("create:cardboard_block"), "waterframes:frame"])
+	}
+
 	// Cooking recipe schema test.
 	// event.recipes.farmersdelight.cooking("kubejs:blue_mascot_cat", ["cobblemon:red_apricorn", "cobblemon:blue_apricorn"], "minecraft:bowl")
 })

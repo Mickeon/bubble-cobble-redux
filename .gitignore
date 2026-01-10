@@ -36,6 +36,7 @@
 /config/voicechat/voicechat-client.properties
 /config/voicechat/username-cache.json
 /config/chunkyborder/borders.json
+/config/waterframes-client.toml
 /cobblemon
 /cobblemoncreatified
 /cobblenav
@@ -82,5 +83,4 @@
 /config/parcool*
 /config/presencefootsteps/userconfig.json
 *locomotionmap.json
-*waterframes*
-*watermedia*
+*create_dragons_plus*
