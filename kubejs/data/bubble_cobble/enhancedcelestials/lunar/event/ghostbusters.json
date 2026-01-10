@@ -7,13 +7,13 @@
 		"moon_size": 20.0,
 		"moon_texture_location": "bubble_cobble:textures/environment/ghostbusters.png",
 		"sound_track": {
-			"sound_id": "bubble_cobble:ghostbusters"
+			"sound_id": "bubble_cobble:ghostbusters_moon"
 		}
 	},
 	"dimension_chances": {
 		"minecraft:overworld": {
 			"chance": 0.1,
-			"min_number_of_nights_between": 4,
+			"min_number_of_nights_between": 8,
 			"valid_moon_phases": [
 				0,
 				1,
@@ -133,7 +133,7 @@
 				"mob_effect": {
 					"ambient": false,
 					"amplifier": 1,
-					"duration_in_ticks": 20,
+					"duration_in_ticks": 60,
 					"effect": "brewinandchewin:tipsy",
 					"show_icon": false,
 					"visible": true
@@ -168,7 +168,7 @@
 				"mob_effect": {
 					"ambient": false,
 					"amplifier": 10,
-					"duration_in_ticks": 60,
+					"duration_in_ticks": 100,
 					"effect": "minecraft:infested",
 					"show_icon": false,
 					"visible": true
@@ -186,7 +186,7 @@
 				"mob_effect": {
 					"ambient": true,
 					"amplifier": 1,
-					"duration_in_ticks": 60,
+					"duration_in_ticks": 100,
 					"effect": "minecraft:resistance",
 					"show_icon": false,
 					"visible": true
@@ -272,7 +272,7 @@
 	"text_components": {
 		"end_notification": {
 			"component": {
-				"key": "Why the fuck is all the food full of ghost?! I call health inspector- NO!\nI call I call Ghöüstbusteir™ and I tell them: \"Destroy the city!\"",
+				"key": "I need to get milk, I need milk for my cereal.\nThere is no cow in my freaking world, so I get pissed.\nThis modpack has nothing to do with Ghostbusters.",
 				"style": {
 					"color": "#cc6666"
 				}
@@ -287,7 +287,7 @@
 		},
 		"start_notification": {
 			"component": {
-				"key": "I got food poisoned. That made me angry. \nSo I called the ghostbuster:\n\"Hey ghostbuster man, MacDonalds have a ghost in the burger. What da fuck. Ow. You tell them! Get down to MechDonell, and use the Gun.\". The BURGER HAVE A GHOST-\n *gasp*-\nWHAT",
+				"key": "I got food poisoned. That made me angry.\nSo I called the ghostbuster:\n\"Hey ghostbuster man, modpack have a ghost in the Overworld. What da fuck. Ow. You tell them! Get down to modpeck, and use the Gun.\". The WORLD HAVE A GHOST-\n*gasp*-",
 				"style": {
 					"color": "#cc6666"
 				}

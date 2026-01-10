@@ -11,7 +11,8 @@ const MUSIC_LIST = {
 	grapes: {duration: 180, description: "SolUrsidae - Can't Make Wine Without a Few Bit-crushed Grapes"},
 	void: {duration: 168.25, description: "Box Dragon - Void (Low Health)"},
 	fool: {duration: 118, description: "福山 光晴 - ばかみたい"},
-	mint: {duration: 131, description: "Shadownade - Double Mint Refreshed", no_disc: true}
+	mint: {duration: 131, description: "Shadownade - Double Mint Refreshed", no_disc: true},
+	ghostbusters: {duration: 162, description: "Joel - Super Ghostbusters", no_disc: true}
 }
 global.MUSIC_LIST = MUSIC_LIST
 

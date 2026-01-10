@@ -47,6 +47,8 @@ ServerEvents.recipes(event => {
 	event.smelting(cooked_lucky_egg, "cobblemon:lucky_egg", 5)
 	event.smoking(cooked_lucky_egg, "cobblemon:lucky_egg", 2.5)
 	event.campfireCooking(cooked_lucky_egg, "cobblemon:lucky_egg", 5)
+
+	event.shaped("kubejs:super_ghostbusters", [" T ", "TMT", " T "], {T: "mega_showdown:ghost_tera_shard", M: "cobblemon:moon_stone"})
 })
 
 
@@ -85,6 +87,10 @@ ItemEvents.foodEaten(["biomesoplenty:cattail", "biomeswevegone:cattail_sprout", 
 		event.player.addEffect(MobEffectUtil.of("minecraft:glowing", 3 * SEC))
 		event.player.drop("minecraft:glowstone_dust", false)
 	}
+})
+ItemEvents.foodEaten("kubejs:super_ghostbusters", event => {
+	event.player?.playNotifySound("supplementaries:block.jar.break", "players", 1, 0.5)
+	event.level.runCommandSilent(`enhancedcelestials setLunarEvent bubble_cobble:ghostbusters`)
 })
 
 // Funny Sopping Wet Thing thing.

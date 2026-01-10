@@ -130,6 +130,12 @@ ItemEvents.modification(event => {
 	set_max_damage("minecraft:copper_leggings", 165)
 	set_max_damage("minecraft:copper_boots", 143)
 
+	// TODO: Embed Fortune/Looting II into Golden tools (This is derived from Quark).
+	// Enchantments are not registered at this stage, so it's not possible like this.
+	// event.modify(["minecraft:golden_pickaxe", "minecraft:golden_axe", "minecraft:golden_shovel", "minecraft:golden_hoe", "minecraft:golden_sword", "farmersdelight:golden_knife"], /** @param {$ItemModifications} modified */ modified => {
+	// 	modified.resetComponents().set("minecraft:enchantments", {fortune:2,looting:2})
+	// })
+
 })
 
 StartupEvents.registry("item", event => {
@@ -227,6 +233,28 @@ StartupEvents.registry("item", event => {
 			)
 			.createItemProperties()
 					.craftRemainder("minecraft:glass_bottle")
+	event.create("super_ghostbusters")
+			.displayName("Super Ghostbusters")
+			.unstackable()
+			.rarity("rare")
+			.tooltip(Text.of("Why the fuck is all the modpack full of ghost?").color("#83BED9"))
+			.useAnimation("toot_horn")
+			.useDuration(item_stack => 30)
+			.use((level, player, hand) => {
+				if (level.isDay() || player.potionEffects.isActive("minecraft:infested")) {
+					player.playNotifySound("bubble_cobble:buzz", "players", 1, 0.1)
+					player.addItemCooldown(player.getItemInHand(hand), 40)
+					return false
+				}
+
+				return true
+			})
+			.food(f => f
+					.alwaysEdible()
+					.effect("minecraft:levitation", 5 * SEC, 0, 1.0)
+					.effect("brewinandchewin:intoxication", 5 * MIN, 0, 1.0)
+			)
+			.jukeboxPlayable("kubejs:ghostbusters")
 })
 
 StartupEvents.modifyCreativeTab("minecraft:food_and_drinks", event => {

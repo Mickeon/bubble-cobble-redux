@@ -23,24 +23,30 @@
 			"stream": true
 		}]
 	},
+	"music.ghostbusters": {
+		"sounds": [{
+			"name": "kubejs:music/ghostbusters",
+			"stream": true
+		}]
+	},
 	"item.bearded_dragon_chirp": {
-		"sounds": [ 
-			"kubejs:item/bearded_dragon_chirp" 
+		"sounds": [
+			"kubejs:item/bearded_dragon_chirp"
 		]
 	},
 	"advancement.mint_chewed" : {
 		"sounds": [
 			"kubejs:advancement/mint_chewed"
-		]	
+		]
 	},
 	"advancement.ahoy": {
-		"sounds": [ 
-			"kubejs:advancement/ahoy" 
+		"sounds": [
+			"kubejs:advancement/ahoy"
 		]
 	},
 	"advancement.cool": {
-		"sounds": [ 
-			"kubejs:advancement/cool" 
+		"sounds": [
+			"kubejs:advancement/cool"
 		]
 	}
 }

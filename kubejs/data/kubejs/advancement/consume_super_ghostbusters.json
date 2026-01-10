@@ -1,0 +1,21 @@
+{
+  "parent": "minecraft:adventure/root",
+  "display": {
+    "icon": {
+      "id": "kubejs:super_ghostbusters"
+    },
+    "title": "It hurts",
+    "description": "When they activate it to remove ghosts",
+    "frame": "goal"
+  },
+  "criteria": {
+    "super_ghostbusters": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "kubejs:super_ghostbusters"
+        }
+      }
+    }
+  }
+}

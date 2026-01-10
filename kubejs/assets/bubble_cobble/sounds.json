@@ -92,10 +92,11 @@
 			"bubble_cobble:recharged"
 		]
 	},
-	"ghostbusters": {
+	"ghostbusters_moon": {
 		"sounds": [{
-			"name": "bubble_cobble:ghostbusters",
-			"volume": 0.05
+			"name": "kubejs:music/ghostbusters",
+			"volume": 0.1,
+			"stream": true
 		}]
 	},
 	"crate_jump": {
