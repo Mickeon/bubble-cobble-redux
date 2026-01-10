@@ -1533,7 +1533,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "cobblemonraiddens-neoforge-0.5.4+1.21.1.jar",
+                    "file_name": "cobblemonraiddens-neoforge-0.5.2+1.21.1.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -1541,19 +1541,19 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/GebWh45l/versions/KY07UbJS/cobblemonraiddens-neoforge-0.5.4+1.21.1.jar",
-                    "id": "KY07UbJS",
+                    "url": "https://cdn.modrinth.com/data/GebWh45l/versions/rQorEoR6/cobblemonraiddens-neoforge-0.5.2+1.21.1.jar",
+                    "id": "rQorEoR6",
                     "parent_id": "GebWh45l",
                     "hashes": {
-                        "sha512": "5ebe72c85846ffa6c5e887966b0001927c6d5ccbd1c39334a17cea414ea270d94b37a0b665ec1a45f810a77a62a0f43af229990e911baf55b00bd83d7867a32b",
-                        "sha1": "8da03ea571c622e57eda25ba79779c1eb28168ae"
+                        "sha512": "58c3fdad4473f2505ce61c6235e129977e2ad5b9af2cadd2fa9329d69cd74a1d55db6b921450f39f0966da7bd691fd9caf21c3e42b19c762fb3a562c161a6fb8",
+                        "sha1": "8c699a4a568655d14ed23d29a11dfc19ea7d8d52"
                     },
                     "required_dependencies": [
-                        "MdwFAVRL",
-                        "8BmcQJ2H"
+                        "8BmcQJ2H",
+                        "MdwFAVRL"
                     ],
-                    "size": 2355070,
-                    "date_published": "2026-01-06T17:32:41.434543Z"
+                    "size": 2316268,
+                    "date_published": "2026-01-02T12:47:45.196814Z"
                 }
             ]
         },
