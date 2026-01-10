@@ -36,45 +36,49 @@
     //
     // tip: you can dump all structure sets in a file by running the custom command /dumpstructuresets
     // tip: the same spread factors rules apply here (set to 0 to disable said structure)
-	  {
+    {
       "structure": "minecraft:mansion",
       "factor": 0.5
     },
-	  {
+    {
       "structure": "minecraft:villages",
       "factor": 3
     },
-	  {
+    {
       "structure": "minecraft:ocean_ruin",
       "factor": 0.25
     },
-	  {
+    {
       "structure": "minecraft:trail_ruins",
       "factor": 0.25
     },
-  	{
+    {
       "structure": "mega_showdown:megaroid",
       "factor": 0.5
     },
-  	{
+    {
       "structure": "mowziesmobs:umvuthana_grove",
       "factor": 1
     },
-	  {
+    {
       "structure": "mowziesmobs:frostmaw_spawn",
       "factor": 1
     },
-  	{
+    {
       "structure": "repurposed_structures:mansions_overworld",
       "factor": 0.75
     },
-  	{
+    {
       "structure": "repurposed_structures:mansions_mangrove",
       "factor": 0.75
     },
-  	{
+    {
       "structure": "underground_bunkers:minor_structures",
       "factor": 3.0
+    },
+    {
+      "structure": "luistercorp:tiendas",
+      "factor": 4.0
     }
   ]
 }

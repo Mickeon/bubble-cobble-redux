@@ -50,6 +50,8 @@ ServerEvents.generateData("after_mods", event => {
 		"constructionstick:advancement/recipes/misc/template_unbreakable",
 		"haventrowel:advancement/trowel",
 		"haventrowel:advancement/recipes/misc/craft/trowel",
+		"luistercorp:advancement/troncos/tiendas",
+		"luistercorp:advancement/troncos/troncos",
 	]) {
 		event.json(advancement_id, {
 			criteria: {
