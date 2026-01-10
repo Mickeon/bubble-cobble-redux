@@ -3655,6 +3655,48 @@
             ]
         },
         {
+            "pakku_id": "FFEY9vDkkstaNcya",
+            "pakku_links": [
+                "Bk7wmInKb2yQxAJF"
+            ],
+            "type": "MOD",
+            "side": "CLIENT",
+            "slug": {
+                "modrinth": "effect-insights"
+            },
+            "name": {
+                "modrinth": "Effect Insights"
+            },
+            "id": {
+                "modrinth": "Kw73iLDq"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "EffectDescriptions-v21.1.1-1.21.1-NeoForge.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/Kw73iLDq/versions/gKgYWwEQ/EffectDescriptions-v21.1.1-1.21.1-NeoForge.jar",
+                    "id": "gKgYWwEQ",
+                    "parent_id": "Kw73iLDq",
+                    "hashes": {
+                        "sha512": "021336f44f9966da2089a813421601f2607646394f66762e673f4de644858fc0d4c3ee33bd376bb32bde2cd8ea592c7869a8c06a36ad7c157fbace4ae53a12c2",
+                        "sha1": "700355b3e6c5f11e56d0aff6cc6825604e910da0"
+                    },
+                    "required_dependencies": [
+                        "QAGBst4M"
+                    ],
+                    "size": 66316,
+                    "date_published": "2025-01-11T20:36:35.555092Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "cUJEZpHgdbl9HIWy",
             "type": "MOD",
             "side": "CLIENT",
