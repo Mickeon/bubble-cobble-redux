@@ -109,28 +109,6 @@
 					]
 				},
 				"mob_effect": {
-					"ambient": true,
-					"amplifier": 0,
-					"duration_in_ticks": 60,
-					"effect": "minecraft:bad_omen",
-					"show_icon": false,
-					"visible": true
-				}
-			},
-			{
-				"filter": {
-					"type": "corgilib:conditions_pass",
-					"filters": [
-						{
-							"type": "corgilib:is_type",
-							"id": "minecraft:player"
-						},
-						{
-							"type": "corgilib:see_sky_at"
-						}
-					]
-				},
-				"mob_effect": {
 					"ambient": false,
 					"amplifier": 1,
 					"duration_in_ticks": 60,
