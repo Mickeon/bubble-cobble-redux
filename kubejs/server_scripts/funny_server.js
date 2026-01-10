@@ -455,9 +455,7 @@ PlayerEvents.tick(event => {
 			falling_block.cancelDrop = true
 			level.playLocalSound(block_pos, falling_block.blockState.soundType.fallSound, "blocks", 1.0, 1.0, false)
 		})
-		if (powder_snow.combo > 2) {
-			powder_snow.snow_balls_stored += 1
-		}
+		powder_snow.snow_balls_stored += 1
 	})
 
 	player.setIsInPowderSnow(false)
