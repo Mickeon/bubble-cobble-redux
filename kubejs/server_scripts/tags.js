@@ -125,6 +125,9 @@ ServerEvents.tags("block", event => {
 
 	// Makes the items that drop from these fall straight instead of scattering.
 	event.add("drizzleproof:static_blocks", "#c:ropes")
+
+	// Allow Gravestones to replace way more blocks than defined normally.
+	event.add("gravestone:grave_replaceable", "#minecraft:replaceable", "#minecraft:replaceable_by_trees", "#c:ropes")
 })
 
 ServerEvents.tags("fluid", event => {
