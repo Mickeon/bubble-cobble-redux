@@ -1816,6 +1816,85 @@
             ]
         },
         {
+            "pakku_id": "mU7FDr585r79xhht",
+            "pakku_links": [
+                "V7GFstZuW7oFfpJt"
+            ],
+            "type": "MOD",
+            "side": "CLIENT",
+            "slug": {
+                "modrinth": "colorwheel"
+            },
+            "name": {
+                "modrinth": "Colorwheel"
+            },
+            "id": {
+                "modrinth": "BzHgFoGz"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "colorwheel-neoforge-1.2.0+mc1.21.1.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/BzHgFoGz/versions/ddDj2cfQ/colorwheel-neoforge-1.2.0+mc1.21.1.jar",
+                    "id": "ddDj2cfQ",
+                    "parent_id": "BzHgFoGz",
+                    "hashes": {
+                        "sha512": "51343c53faeab0248c58cbd7a1547f26f8d83f50e7ce93a656ed60e21de960ab31ff6ec7589377b01f645edd97fba47591dc448ab5f75a65a588ff9e28621e2c",
+                        "sha1": "e7c43a0418ddd3f9b422696a3435c250f88ac318"
+                    },
+                    "required_dependencies": [
+                        "YL57xq9U"
+                    ],
+                    "size": 372673,
+                    "date_published": "2026-01-03T13:15:57.229930Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "Be0i2Uynlsxd6ZVB",
+            "type": "MOD",
+            "side": "CLIENT",
+            "slug": {
+                "modrinth": "colorwheel-patcher"
+            },
+            "name": {
+                "modrinth": "Colorwheel Patcher"
+            },
+            "id": {
+                "modrinth": "KPsw5jDu"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "colorwheel_patcher-neoforge-1.0.4+mc1.21.1.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/KPsw5jDu/versions/oWMIIaH2/colorwheel_patcher-neoforge-1.0.4+mc1.21.1.jar",
+                    "id": "oWMIIaH2",
+                    "parent_id": "KPsw5jDu",
+                    "hashes": {
+                        "sha512": "9e9e260f23d7519472cc722352d61d845ed5da328c4f7686e0fe8bd16bc634681f924c68160bbddf09fda339985f81376b3467309b502851491fe91c12772267",
+                        "sha1": "63e91e5ad4853b3f1e973e03b37b74c0f09a8867"
+                    },
+                    "required_dependencies": [],
+                    "size": 206773,
+                    "date_published": "2025-12-30T19:55:37.360614Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "XyU6KkY1n8Ndk5aI",
             "type": "MOD",
             "side": "BOTH",
@@ -4763,48 +4842,6 @@
                     ],
                     "size": 103185,
                     "date_published": "2025-11-14T02:30:39.250334Z"
-                }
-            ]
-        },
-        {
-            "pakku_id": "v3QMtoP3mLk1LtoT",
-            "pakku_links": [
-                "V7GFstZuW7oFfpJt"
-            ],
-            "type": "MOD",
-            "side": "CLIENT",
-            "slug": {
-                "modrinth": "iris-flw-compat"
-            },
-            "name": {
-                "modrinth": "Iris & Oculus Flywheel Compat"
-            },
-            "id": {
-                "modrinth": "ndHYMY2K"
-            },
-            "files": [
-                {
-                    "type": "modrinth",
-                    "file_name": "iris-flywheel-compat-NeoForge-2.0.5.jar",
-                    "mc_versions": [
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/ndHYMY2K/versions/NECRBjgN/iris-flywheel-compat-NeoForge-2.0.5.jar",
-                    "id": "NECRBjgN",
-                    "parent_id": "ndHYMY2K",
-                    "hashes": {
-                        "sha512": "4a6f54cd34d50d4927db715568dccb23b32229d94cb35f4affca827448a828ca885f1d0221d5dcb1b87ab77e9dc49bcc9af681bf58a84cd639b534843631c8ac",
-                        "sha1": "fde6df059fe7b88007ca57a734b710dfd37c2c6e"
-                    },
-                    "required_dependencies": [
-                        "YL57xq9U"
-                    ],
-                    "size": 118696,
-                    "date_published": "2025-10-07T08:06:32.641890Z"
                 }
             ]
         },
