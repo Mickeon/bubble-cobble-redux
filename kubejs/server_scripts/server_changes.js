@@ -589,3 +589,27 @@ BlockEvents.rightClicked(event => {
 		event.cancel()
 	}
 })
+
+
+ServerEvents.basicCommand("currentstructure", event => {
+	/** @type {import("net.minecraft.server.level.ServerLevel").$ServerLevel$$Type} */
+	const level = event.level
+
+	const block_pos = event.block.getPos()
+	const structure_manager = level.structureManager()
+
+	if (!structure_manager.hasAnyStructureAt(block_pos)) {
+		event.respond("No structure at the current position").gray()
+		return
+	}
+
+	const structure_registry = event.registries.registry("worldgen/structure").get()
+
+	let response = Text.of("At the current position, the following structures were found:").gray()
+	structure_manager.getAllStructuresAt(block_pos).forEach((structure, set) => {
+		const string_id = structure_registry.getKey(structure).toString()
+		response = response.append("\n- ")
+		response = response.append(Text.of(string_id).green().hover("Click to copy").clickCopy(string_id))
+	})
+	event.respond(response)
+})
