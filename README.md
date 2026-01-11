@@ -53,22 +53,28 @@ As it stands, the modpack includes exclusive features, such as:
 	<li><a href="https://modrinth.com/mod/HXF82T3G">Biomes O' Plenty</a> by Adubbz, Forstride</li>
 	<li><a href="https://modrinth.com/mod/uy4Cnpcm">Bookshelf</a> by Darkhax</li>
 	<li><a href="https://modrinth.com/mod/hIu9KJTT">Brewin' And Chewin'</a> by Probleyes, Umpaz, MerchantCalico</li>
+	<li><a href="https://modrinth.com/mod/lO3s8hjs">Bridging Mod</a> by CG360</li>
 	<li><a href="https://modrinth.com/mod/xVbeCJyB">CPM SVC Compat</a> by tom5454</li>
 	<li><a href="https://modrinth.com/mod/joEfVgkn">Carry On</a> by Tschipp, PurpliciousCow</li>
 	<li><a href="https://modrinth.com/mod/dv57xmf9">Cerulean</a> by Toni, Mephodio</li>
 	<li><a href="https://modrinth.com/mod/JaNmzvA8">Chunks Fade In</a> by kerudion (koteinik)</li>
 	<li><a href="https://modrinth.com/mod/fALzjamp">Chunky</a> by pop4959</li>
+	<li><a href="https://modrinth.com/mod/s86X568j">ChunkyBorder</a> by pop4959</li>
 	<li><a href="https://modrinth.com/mod/9s6osm5g">Cloth Config v15 API</a> by shedaniel</li>
 	<li><a href="https://modrinth.com/mod/ewyjbmG4">Clutter No More</a> by Tazer, Farcr, cassiancc</li>
 	<li><a href="https://modrinth.com/mod/MdwFAVRL">Cobblemon</a> by The Cobblemon Team</li>
+	<li><a href="https://modrinth.com/mod/LBl4Qguc">Cobblemon Capture XP</a> by timinc aka Timothy Metcalfe</li>
 	<li><a href="https://modrinth.com/mod/MqcGBDhG">Cobblemon Move Inspector</a> by Starlotte</li>
 	<li><a href="https://modrinth.com/mod/GebWh45l">Cobblemon Raid Dens</a> by NecroSo1</li>
 	<li><a href="https://modrinth.com/mod/jlXFcQk4">Cobblemon: CobbleStats</a> by Flo_12344</li>
 	<li><a href="https://modrinth.com/mod/SszvX85I">Cobblemon:Mega Showdown</a> by Yajat Kaul</li>
 	<li><a href="https://modrinth.com/mod/NPCfuUI4">CobblemonIntegrations</a> by Arcaryx, 2ScoopsPlz</li>
 	<li><a href="https://modrinth.com/mod/bI8Nt3uA">Cobblenav</a> by gatekeep</li>
+	<li><a href="https://modrinth.com/mod/ItmVb4zY">Cobbreeding</a></li>
 	<li><a href="https://modrinth.com/mod/e0M1UDsY">Collective</a> by Rick South</li>
 	<li><a href="https://modrinth.com/mod/wQfMUdZT">Colorful Hearts</a> by Terrails</li>
+	<li><a href="https://modrinth.com/mod/BzHgFoGz">Colorwheel</a> by djefrey</li>
+	<li><a href="https://modrinth.com/mod/KPsw5jDu">Colorwheel Patcher</a> by djefrey</li>
 	<li><a href="https://modrinth.com/mod/SaCpeal4">Comforts</a> by Illusive Soulworks</li>
 	<li><a href="https://modrinth.com/mod/COlSi5iR">Concurrent Chunk Management Engine</a> by RelativityMC, ishland</li>
 	<li><a href="https://modrinth.com/mod/lGffrQ3O">Configurable</a> by Bawnorton</li>
@@ -79,6 +85,7 @@ As it stands, the modpack includes exclusive features, such as:
 	<li><a href="https://modrinth.com/mod/ziOp6EO8">CorgiLib</a> by Corgi Taco</li>
 	<li><a href="https://modrinth.com/mod/rLLJ1OZM">CoroUtil</a> by Corosus</li>
 	<li><a href="https://modrinth.com/mod/DFqQfIBR">CraftPresence</a> by CDAGaming</li>
+	<li><a href="https://modrinth.com/mod/DMu0oBKf">Crafting Tweaks</a> by BlayTheNinth</li>
 	<li><a href="https://modrinth.com/mod/H1JOVjhn">Crawl</a> by fewizz</li>
 	<li><a href="https://modrinth.com/mod/LNytGWDc">Create</a> by simibubi</li>
 	<li><a href="https://modrinth.com/mod/aXSKKweV">Create Cobblemon Balls Overhaul</a> by xKcinnay</li>
@@ -108,6 +115,7 @@ As it stands, the modpack includes exclusive features, such as:
 	<li><a href="https://modrinth.com/mod/AWMWYMwC">EMI++</a> by ConcerroX</li>
 	<li><a href="https://modrinth.com/mod/705gWllI">EMIffect</a> by Flamarine</li>
 	<li><a href="https://modrinth.com/mod/gJiy6dk4">EZActions</a> by Z2SIX</li>
+	<li><a href="https://modrinth.com/mod/Kw73iLDq">Effect Descriptions</a> by Fuzs</li>
 	<li><a href="https://modrinth.com/mod/KQwtIZnW">Emojis</a> by maDU59_</li>
 	<li><a href="https://modrinth.com/mod/UVtY3ZAC">EnchantmentDescriptions</a> by Darkhax</li>
 	<li><a href="https://modrinth.com/mod/2rL16t1O">Enhanced Celestials</a> by Corgi Taco</li>
@@ -120,6 +128,8 @@ As it stands, the modpack includes exclusive features, such as:
 	<li><a href="https://modrinth.com/mod/vgI7KTun">Fire Spread Tweaks</a> by Rick South</li>
 	<li><a href="https://modrinth.com/mod/WuGVWUF2">Fog</a> by IMB11,Steveplays</li>
 	<li><a href="https://modrinth.com/mod/hYykXjDp">Fzzy Config</a> by fzzyhmstrs</li>
+	<li><a href="https://modrinth.com/mod/5CTSrY8X">GPUTape</a> by mr_toad</li>
+	<li><a href="https://modrinth.com/mod/IeYLjzpn">Gadgets Against Grind</a> by MaxNeedsSnacks</li>
 	<li><a href="https://modrinth.com/mod/8BmcQJ2H">GeckoLib 4</a> by Gecko, Eliot, AzureDoom, DerToaster, Tslat, Witixin</li>
 	<li><a href="https://modrinth.com/mod/s3dmwKy5">GlitchCore</a> by Adubbz</li>
 	<li><a href="https://modrinth.com/mod/NRLPy2mk">Global Packs</a> by JTK222</li>
@@ -127,15 +137,14 @@ As it stands, the modpack includes exclusive features, such as:
 	<li><a href="https://modrinth.com/mod/gHoB7SHO">HT's TreeChop</a> by hammertater</li>
 	<li><a href="https://modrinth.com/mod/pJmCFF0p">Handcrafted</a> by Alex Nijjar, Kekie6</li>
 	<li><a href="https://www.curseforge.com/projects/1096328">HavenTrowel</a> by CathieNova</li>
-	<li><a href="https://modrinth.com/mod/Rm4OOdHd">Hide Experimental Warning</a> by Rick South</li>
 	<li><a href="https://modrinth.com/mod/5faXoLqX">Iceberg</a> by Grend</li>
 	<li><a href="https://modrinth.com/mod/5ZwdcRci">ImmediatelyFast</a> by RK_01</li>
+	<li><a href="https://modrinth.com/mod/vNZgQmjg">Immersive Optimization</a> by Luke100000</li>
 	<li><a href="https://modrinth.com/mod/6txNkua3">Immersive Paintings</a> by Luke100000</li>
 	<li><a href="https://modrinth.com/mod/Vr2eDeCw">In-game NBTEdit Reborn</a> by qyl27</li>
 	<li><a href="https://modrinth.com/mod/REfW2AEX">InvMove</a> by PieKing1215</li>
 	<li><a href="https://modrinth.com/mod/6IpcGP7T">InvMoveCompats</a> by PieKing1215</li>
 	<li><a href="https://modrinth.com/mod/YL57xq9U">Iris</a> by coderbot, IMS212</li>
-	<li><a href="https://modrinth.com/mod/ndHYMY2K">Iris Flywheel Compat</a> by Leon</li>
 	<li><a href="https://modrinth.com/mod/MC6hfccQ">Item interactions mod</a> by mineland</li>
 	<li><a href="https://modrinth.com/mod/nvQzSEkH">Jade</a> by Snownee</li>
 	<li><a href="https://modrinth.com/mod/xuDOzCLy">Jade Addons</a> by Snownee</li>
@@ -203,8 +212,9 @@ As it stands, the modpack includes exclusive features, such as:
 	<li><a href="https://modrinth.com/mod/8YcE8y4T">Ribbits</a> by Joosh, YUNGNICKYOUNG, HellionGames, Refresh Studios</li>
 	<li><a href="https://modrinth.com/mod/2eT495vq">Saturn</a> by AbdElAziz</li>
 	<li><a href="https://modrinth.com/mod/fuuu3xnx">Searchables</a> by Jaredlll08</li>
-	<li><a href="https://modrinth.com/mod/e0bNACJD">Serene Seasons</a> by Adubbz, Forstride</li>
+	<li><a href="https://modrinth.com/mod/aRjMwfjG">Seasonal Ambiance</a> by MidnightTale_</li>
 	<li><a href="https://modrinth.com/mod/Cl2eyShu">Server I18n API</a> by IAFEnvoy</li>
+	<li><a href="https://modrinth.com/mod/kepjj2sy">Shoulder Surfing Reloaded</a> by Exopandora</li>
 	<li><a href="https://modrinth.com/mod/goA2JoBi">Sidekick</a> by unascribed</li>
 	<li><a href="https://modrinth.com/mod/9eGKb6K1">Simple Voice Chat</a> by Max Henkel</li>
 	<li><a href="https://modrinth.com/mod/yFqR0DNc">SimpleTMs</a></li>
@@ -226,6 +236,7 @@ As it stands, the modpack includes exclusive features, such as:
 	<li><a href="https://modrinth.com/mod/fFEIiSDQ">Supplementaries</a> by MehVahdJukaar, Plantkillable</li>
 	<li><a href="https://www.curseforge.com/projects/1258324">Temperature Bands</a> by CosmicDan</li>
 	<li><a href="https://modrinth.com/mod/kkmrDlKT">TerraBlender</a> by Adubbz</li>
+	<li><a href="https://modrinth.com/mod/lVP9aUaY">Tim Core</a> by timinc aka Timothy Metcalfe</li>
 	<li><a href="https://modrinth.com/mod/AMCbgyVw">Tips</a> by Darkhax</li>
 	<li><a href="https://modrinth.com/mod/LSnXhPa7">Tomtaru's Cobblemon &amp; Farmer's Delights Tweaks</a> by Tomtaru</li>
 	<li><a href="https://modrinth.com/mod/yFypjcfd">TooManyRecipeViewers</a> by Nolij (@xdMatthewbx#1337) &amp; the Craftoria team</li>
@@ -236,6 +247,10 @@ As it stands, the modpack includes exclusive features, such as:
 	<li><a href="https://modrinth.com/mod/XwvK7Tzg">Useful Spyglass</a> by BrokenKeyboard</li>
 	<li><a href="https://modrinth.com/mod/FVToiKwr">Via Romana</a> by Rasa Novum</li>
 	<li><a href="https://modrinth.com/mod/qYSYk2ef">Wanderer_Ribbit</a> by cosmic_barri</li>
+	<li><a href="https://modrinth.com/mod/eBzFuVTM">WaterFrames</a> by SrRapero720</li>
+	<li><a href="https://modrinth.com/mod/G922NeHS">WaterMedia</a> by SrRapero720, Goedix</li>
+	<li><a href="https://modrinth.com/mod/P0w3IrnX">WaterMedia YT Plugin</a> by SrRapero720</li>
+	<li><a href="https://modrinth.com/mod/dGGbEGoV">WaterVision</a> by SrRapero720</li>
 	<li><a href="https://modrinth.com/mod/AtB5mHky">What Are They Up To</a> by Corosus</li>
 	<li><a href="https://modrinth.com/mod/Ov2r3aVY">Xaero Train Map</a> by 1Foxy2</li>
 	<li><a href="https://modrinth.com/mod/1bokaNcj">Xaero's Minimap</a> by xaero96</li>
@@ -249,6 +264,7 @@ As it stands, the modpack includes exclusive features, such as:
 	<li><a href="https://modrinth.com/mod/Eh11TaTm">[Let's Do] HerbalBrews</a> by satisfy</li>
 	<li><a href="https://modrinth.com/mod/b313lC4Y">mod_sets</a></li>
 	<li><a href="https://modrinth.com/mod/ccKDOlHs">oωo</a> by glisco, Blodhgarm, BasiqueEvangelist, Noaaan</li>
+	<li><a href="https://modrinth.com/mod/l6YH9Als">spark</a> by Luck</li>
 	<li><a href="https://modrinth.com/mod/2V1Y86sc">zamega</a></li>
 </ul>
 </details>
