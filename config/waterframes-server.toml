@@ -31,7 +31,7 @@
 		# Range: 10 ~ 120
 		maxVolume = 100
 		#Makes Minecraft master volume affects waterframes volume
-		masterVolume = false
+		masterVolume = true
 		#Enables compatibility with VSEureka
 		#In case VS breaks something on their side, this option should stop client/server crashing
 		#Or if the audio isn't working, disable this option should help
