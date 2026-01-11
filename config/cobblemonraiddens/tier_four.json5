@@ -23,7 +23,7 @@
 	"reward_level": 45,
 	// Reward Pokemon number of max IVs. Default: 3
 	"ivs": 3,
-	// The default shiny chance for raid bosses as 1 in X (Set to -1 to use the Cobblemon rate). Default: -1.0
+	// The default shiny chance for raid bosses (Set to -1 to use the Cobblemon rate). Default: -1.0
 	"shiny_rate": -1.0,
 	// How much currency is rewarded for clearing a raid boss (Requires CobbleDollars). Default: 10000
 	"currency": 10000,
@@ -32,7 +32,5 @@
 	// The default script to add to raid bosses without a script. Default: {}
 	"default_scripts": { },
 	// The battle AI used by the raid boss (Options: RANDOM, STRONG, RCT). Default: RANDOM
-	"raid_ai": "RANDOM",
-	// The list of marks the reward Pokemon will have. Default: [].
-	"marks": []
+	"raid_ai": "RANDOM"
 }

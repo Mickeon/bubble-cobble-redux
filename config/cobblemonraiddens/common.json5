@@ -24,7 +24,5 @@
 	// [EXPERIMENTAL] Caches raid dimensions instead of deleting them after a raid battle. Not recommended for large/public servers. Default: false
 	"cache_dimensions": false,
 	// Whether raid crystals can be broken. Default: true
-	"can_break": true,
-	// The reward distribution algorithm (RANDOM/DAMAGE/SURVIVOR). Default: RANDOM
-	"reward_distribution": "RANDOM"
+	"can_break": true
 }

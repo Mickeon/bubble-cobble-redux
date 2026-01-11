@@ -303,7 +303,7 @@
         "min": 3.0
       }
     },
-	{
+		{
       "bonus_rolls": 
 		{
 			"type": "minecraft:uniform",
