@@ -5430,7 +5430,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "lodestone-1.21.1-1.7.1.jar",
+                    "file_name": "lodestone-1.21.1-1.8.2.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -5438,16 +5438,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/bN3xUWdo/versions/46jCo03u/lodestone-1.21.1-1.7.1.jar",
-                    "id": "46jCo03u",
+                    "url": "https://cdn.modrinth.com/data/bN3xUWdo/versions/CohX6yP1/lodestone-1.21.1-1.8.2.jar",
+                    "id": "CohX6yP1",
                     "parent_id": "bN3xUWdo",
                     "hashes": {
-                        "sha512": "6d206540abf86f1fc21c47857399a372eed47f9ef5ab27073fb26c6377f0956ff869927894b9698b8459001bf76ee44eb18d7cfc00ee60e36059c826d0be8a86",
-                        "sha1": "bd0c9548412abbb7f164f12af70311ef268435d0"
+                        "sha512": "6917080339b982d96cb4a7c98205ade5d89730191bc9113f4f8cd36bb1a760a91ad2421c8869c7063f8dea22a200d7d1896e0bb5e0e64119bb7590e32a998a23",
+                        "sha1": "d1f7c638fac5192e01b1873f27e694a3c262ad11"
                     },
                     "required_dependencies": [],
-                    "size": 675765,
-                    "date_published": "2025-06-08T15:59:00.054082Z"
+                    "size": 818829,
+                    "date_published": "2026-01-12T01:39:43.145782Z"
                 }
             ]
         },
