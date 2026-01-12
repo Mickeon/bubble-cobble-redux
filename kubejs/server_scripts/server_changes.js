@@ -346,10 +346,14 @@ ServerEvents.tags("item", event => {
 let $UseOnContext  = Java.loadClass("net.minecraft.world.item.context.UseOnContext")
 /** @type {typeof import("net.minecraft.world.phys.BlockHitResult").$BlockHitResult } */
 let $BlockHitResult  = Java.loadClass("net.minecraft.world.phys.BlockHitResult")
+/** @type {typeof import("net.minecraft.world.level.block.SlabBlock").$SlabBlock } */
+let $SlabBlock  = Java.loadClass("net.minecraft.world.level.block.SlabBlock")
+/** @type {typeof import("net.minecraft.world.level.block.StairBlock").$StairBlock } */
+let $StairBlock  = Java.loadClass("net.minecraft.world.level.block.StairBlock")
 BlockEvents.broken(event => {
 	const player = event.player
 	if (!player) {
-		console.warn("No player for BlockEvents.broken(). This should never normally happer.")
+		console.warn("No player for BlockEvents.broken(). This should never normally happen.")
 		return
 	}
 	const held_item = player.offHandItem
@@ -359,20 +363,21 @@ BlockEvents.broken(event => {
 	}
 
 	const level = event.level
-	const broken_block = event.block.getBlock()
+	const broken_level_block = event.block // "Instance" of the block in the world.
+	const broken_block = broken_level_block.getBlock()
 	if (held_item.id == broken_block?.item?.id) {
 		return // Don't replace the block I just destroyed with the same block I am holding.
 	}
 
-	const broken_block_state = event.block.getBlockState()
-	const broken_block_pos = event.block.getPos()
-	// console.log(broken_block_state.getDestroySpeed(level, broken_block_pos))
-	if (broken_block_state.getDestroySpeed(level, broken_block_pos) <= 0.1) {
+	const broken_state = broken_level_block.getBlockState()
+	const broken_pos = broken_level_block.getPos()
+	// console.log(broken_state.getDestroySpeed(level, broken_pos))
+	if (broken_state.getDestroySpeed(level, broken_pos) <= 0.1) {
 		// Don't replace blocks that break instantaneously.
 		// These usually include grass, torches, etc., or blocks whose destruction may be accidental.
 		return
 	}
-	if (held_block.defaultBlockState().getDestroySpeed(level, broken_block_pos) <= 0.1) {
+	if (held_block.defaultBlockState().getDestroySpeed(level, broken_pos) <= 0.1) {
 		// And don't let any block that would be broken instantly do the replacing.
 		// These usually include grass, torches, etc., or blocks whose placement may be accidental.
 		return
@@ -382,7 +387,7 @@ BlockEvents.broken(event => {
 	}
 
 	level.server.scheduleInTicks(0, callback => {
-		if (!level.getBlock(broken_block_pos).hasTag("minecraft:air")) {
+		if (!level.getBlock(broken_pos).hasTag("minecraft:air")) {
 			// Failsafe to not place blocks accidentally in front/back.
 			player.playNotifySound("bubble_cobble:buzz", "players", 1.0, 1.0)
 			return
@@ -390,14 +395,17 @@ BlockEvents.broken(event => {
 
 		let interaction_result = held_item.useOn(new $UseOnContext(
 			level, player, "off_hand", held_item, new $BlockHitResult(
-					player.position(), player.facing, broken_block_pos, false
+					player.eyePosition, player.facing, broken_pos, false
 			)
 		))
-		if (held_block) {
-			let sound_type = held_block.getSoundType(held_block.defaultBlockState(), level, broken_block_pos, player)
-			// level.playSound(player, broken_block_pos, sound_type.placeSound, "blocks")
 
+		if (interaction_result == "fail") {
+			return
+		}
+		if (held_block) {
 			if (interaction_result.indicateItemUse()) {
+				let sound_type = held_block.getSoundType(held_block.defaultBlockState(), level, broken_pos, player)
+				// level.playSound(player, broken_pos, sound_type.placeSound, "blocks")
 				player.playNotifySound(sound_type.placeSound, "blocks", 1.0, 1.0)
 			}
 		} else {
@@ -407,6 +415,14 @@ BlockEvents.broken(event => {
 			level.server.scheduleInTicks(3, callback => {
 				player.swing("off_hand", true)
 			})
+		}
+
+		let placed_block = level.getBlock(broken_pos).getBlock()
+		if ((placed_block instanceof $SlabBlock && broken_block instanceof $SlabBlock)
+			|| (placed_block instanceof $StairBlock && broken_block instanceof $StairBlock)
+		) {
+			// Quite annoying that I depend on broken_level_block for this, because of the getProperties() Map.
+			level.setBlock(broken_pos, Block.withProperties(placed_block, broken_level_block.getProperties()), 2)
 		}
 		// player.swing("off_hand", true)
 		// Block.getBlock().stateDefinition.
