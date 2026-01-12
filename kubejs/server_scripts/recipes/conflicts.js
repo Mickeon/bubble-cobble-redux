@@ -19,7 +19,7 @@ ServerEvents.recipes(event => {
 		event.replaceInput({id: `handcrafted:${color}_sheet`}, `minecraft:${color}_wool`, `minecraft:${color}_carpet`)
 	}
 
-	// Recipe conflict between Minecraft's Copper Trapdoor and Minecraft's Copper Bars
+	// Recipe conflict between Minecraft's Copper Trapdoor and Minecraft's Copper Bars.
 	// Use the same recipe as 1.21.9.
 	event.shaped("minecraft:copper_trapdoor", [
 		"CC",
@@ -27,4 +27,15 @@ ServerEvents.recipes(event => {
 	], {
 		C: "minecraft:copper_ingot"
 	}).id("minecraft:copper_trapdoor")
+
+	// Recipe conflict between Create's Sand Paper and craftable Suspicious Sand from... I'm not sure what mod?
+	// While at it, make the recipe way more generous.
+	event.shapeless("create:sand_paper", [
+		Ingredient.of("#c:sands").except("#c:sands/red"),
+		Ingredient.of("paper", 2)
+	]).id("create:crafting/materials/sand_paper")
+	event.shapeless("create:red_sand_paper", [
+		Ingredient.of("#c:sands/red"),
+		Ingredient.of("paper", 2)
+	]).id("create:crafting/materials/red_sand_paper")
 })

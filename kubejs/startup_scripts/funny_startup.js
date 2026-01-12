@@ -130,6 +130,10 @@ ItemEvents.modification(event => {
 	set_max_damage("minecraft:copper_leggings", 165)
 	set_max_damage("minecraft:copper_boots", 143)
 
+	// Make Sandpaper last double as much.
+	set_max_damage("create:sand_paper", 16)
+	set_max_damage("create:red_sand_paper", 16)
+
 	// TODO: Embed Fortune/Looting II into Golden tools (This is derived from Quark).
 	// Enchantments are not registered at this stage, so it's not possible like this.
 	// event.modify(["minecraft:golden_pickaxe", "minecraft:golden_axe", "minecraft:golden_shovel", "minecraft:golden_hoe", "minecraft:golden_sword", "farmersdelight:golden_knife"], /** @param {$ItemModifications} modified */ modified => {
