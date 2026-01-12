@@ -8,7 +8,7 @@ let $ShapeMap = Java.loadClass("dev.tazer.clutternomore.common.shape_map.ShapeMa
 let $RegisterGuiLayersEvent  = Java.loadClass("net.neoforged.neoforge.client.event.RegisterGuiLayersEvent")
 
 NativeEvents.onEvent($RegisterGuiLayersEvent, event => {
-	event.registerAbove(
+	event.registerBelow(
 		"crosshair",
 		ID.kjs("shape_hint"),
 		(gui, delta) => global.draw_shape_hint(gui, delta)
@@ -26,7 +26,6 @@ global.draw_shape_hint = (gui_graphics, delta_tracker) => {
 		return
 	}
 
-	// Client.statusMessage = Client.isKeyBindDown("key.clutternomore.change_block_shape")
 	const held_stack = Client.player.mainHandItem
 	if (held_stack.isEmpty()
 	|| !held_stack.block
