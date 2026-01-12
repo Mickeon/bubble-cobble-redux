@@ -50,9 +50,11 @@ ServerEvents.tags("item", event => {
 	event.add("cobblemon:held/leaves_leftover", "create:honeyed_apple", "biomeswevegone:green_apple")
 	event.add("brewinandchewin:raw_meats", "#c:foods/raw_meat")
 	event.add("c:cheese", "#brewinandchewin:foods/cheese_wedge") // Required because we disabled Bitterballen's cheese.
+	event.add("c:drinks/milk", "farmersdelight:milk_bottle", "minersdelight:milk_cup")
+	event.add("c:foods/milk", "#c:drinks/milk")
 
 	// Makes sense.
-	event.add("c:tools", "#constructionstick:construction_sticks")
+	event.add("c:tools", "#constructionstick:construction_sticks", "#yo_hooks:enchantable/hooks")
 	event.add("c:bones", "cnc:wishbone", "cnc:lucky_wishbone", "cnc:unlucky_wishbone")
 	event.add("c:eggs", "undergroundworlds:spider_egg")
 	event.add("c:mushrooms", "ribbits:toadstool") // No, it doesn't make sense?
