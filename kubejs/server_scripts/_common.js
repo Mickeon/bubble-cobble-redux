@@ -1,6 +1,7 @@
 // priority: 1000
 
 /** @import {$Player} from "net.minecraft.world.entity.player.Player" */
+/** @import {$ServerPlayer} from "net.minecraft.server.level.ServerPlayer") */
 /** @import {$ItemStack} from "net.minecraft.world.item.ItemStack" */
 /** @import {$ScheduledEvents$ScheduledEvent} from "dev.latvian.mods.kubejs.util.ScheduledEvents$ScheduledEvent" */
 

@@ -53,7 +53,6 @@ ServerEvents.recipes(event => {
 	event.shaped("kubejs:super_ghostbusters", [" T ", "TMT", " T "], {T: "mega_showdown:ghost_tera_shard", M: "cobblemon:moon_stone"})
 })
 
-
 ItemEvents.foodEaten("cobblemon:ice_stone", event => {
 	if (event.level.isClientSide()) {
 		return
@@ -209,19 +208,40 @@ ItemEvents.entityInteracted("minecraft:name_tag", event => {
 	}
 })
 
+ServerEvents.tags("block", event => {
+	event.add("bubble_cobble:quicksand", "biomeswevegone:quicksand", "undergroundworlds:quicksand", "biomeswevegone:red_quicksand")
+})
+
 // Pokemon greeting easter egg.
+// Also help whoever is in quicksand with thumbs up.
 PlayerEvents.decorateChat(event => {
-	const {player, message} = event
-	if (message.trim().toLowerCase() == "hi") {
-		// const nearby_pokemon = player.level.getEntitiesWithin(AABB.CUBE.inflate(4).move(player.x, player.y, player.z)).filterSelector("@n[type=cobblemon:pokemon, nbt={Pokemon:{PokemonOriginalTrainerType:NONE}}]").first
+	const speaker = event.player
+	/** @type {String} */
+	const message = event.message
+	if (message.toLowerCase() == "hi") {
+		// const nearby_pokemon = speaker.level.getEntitiesWithin(AABB.CUBE.inflate(4).move(speaker.x, speaker.y, speaker.z)).filterSelector("@n[type=cobblemon:pokemon, nbt={Pokemon:{PokemonOriginalTrainerType:NONE}}]").first
+		const traced = speaker.rayTrace()
 		/** @type {import("com.cobblemon.mod.common.entity.pokemon.PokemonEntity").$PokemonEntity$$Type} */
-		const traced = player.rayTrace()
 		const attacker = traced.entity
 		if (attacker?.type == "cobblemon:pokemon" && attacker?.nbt.getCompound("Pokemon").get("PokemonOriginalTrainerType") == "NONE") {
 			attacker.cry()
-			attacker.lookAt("eyes", player.eyePosition)
-			player.attack(new DamageSource("kubejs:pokemon_greeting", attacker, null), 15)
+			attacker.lookAt("eyes", speaker.eyePosition)
+			speaker.attack(new DamageSource("kubejs:pokemon_greeting", attacker, null), 15)
 		}
+	}
+	else if (message.includes("👍")) {
+		let server = event.server
+		server.getPlayers().forEach(/** @param {$ServerPlayer} victim */ victim => {
+			if ((victim != speaker || server.isSingleplayer()) && victim.inBlockState.hasTag("bubble_cobble:quicksand") && victim.isAdvancementDone("kubejs:step_in_quicksand")) {
+				victim.motionY = 5
+				victim.hurtMarked = true
+				victim.addEffect(MobEffectUtil.of("minecraft:levitation", 2 * SEC))
+				victim.addEffect(MobEffectUtil.of("minecraft:slow_falling", 30 * SEC))
+				server.scheduleInTicks(3 * MIN, callback => {
+					victim.revokeAdvancement("kubejs:step_in_quicksand")
+				})
+			}
+		})
 	}
 })
 
@@ -428,7 +448,7 @@ function PowderSnowData() {
 }
 const players_powder_snow_data = {}
 PlayerEvents.tick(event => {
-	/** @type {import("net.minecraft.server.level.ServerPlayer").$ServerPlayer$$Type} */
+	/** @type {$ServerPlayer} */
 	const player = event.player
 	// if (player.blockStateOn.block != Blocks.POWDER_SNOW) {
 	if (!player.isInPowderSnow || player.crouching) {

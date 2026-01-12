@@ -15,11 +15,7 @@
         "player": {
           "location": {
             "block": {
-              "blocks": [
-                "biomeswevegone:quicksand",
-                "biomeswevegone:red_quicksand",
-                "undergroundworlds:quicksand"
-              ]
+              "blocks": "#bubble_cobble:quicksand"
             }
           }
         }
