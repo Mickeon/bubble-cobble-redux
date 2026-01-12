@@ -1,0 +1,18 @@
+{
+  "target": "cobblemon:bisharp",
+	"evolutions":[
+    {
+      "id": "bisharp_kingambit",
+      "variant": "trade",
+      "result": "kingambit",
+      "consumeHeldItem": true,
+      "learnableMoves": ["kowtowcleave"],
+      "requirements": [
+        {
+          "variant": "held_item",
+          "itemCondition": "cobblemon:kings_rock"
+        }
+      ]
+    }
+  ]
+}

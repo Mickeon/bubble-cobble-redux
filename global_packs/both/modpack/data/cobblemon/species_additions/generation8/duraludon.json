@@ -1,0 +1,8 @@
+{
+  "target": "cobblemon:duraludon",
+	"baseScale": 1.6,
+	"hitbox": {
+		"width": 1,
+		"height": 2
+	}
+}
