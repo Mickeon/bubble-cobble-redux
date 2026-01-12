@@ -4,10 +4,12 @@
 let $Player  = Java.loadClass("net.minecraft.world.entity.player.Player")
 /** @type {typeof import("dev.latvian.mods.kubejs.item.FoodBuilder").$FoodBuilder } */
 let $FoodBuilder  = Java.loadClass("dev.latvian.mods.kubejs.item.FoodBuilder")
-/** @type {typeof import("net.neoforged.neoforge.event.entity.living.MobEffectEvent$Expired").$MobEffectEvent$Expired } */
-let $MobEffectEvent$Expired  = Java.loadClass("net.neoforged.neoforge.event.entity.living.MobEffectEvent$Expired")
 /** @type {typeof import("net.neoforged.neoforge.event.entity.living.MobEffectEvent$Added").$MobEffectEvent$Added } */
 let $MobEffectEvent$Added  = Java.loadClass("net.neoforged.neoforge.event.entity.living.MobEffectEvent$Added")
+/** @type {typeof import("net.neoforged.neoforge.event.entity.living.MobEffectEvent$Expired").$MobEffectEvent$Expired } */
+let $MobEffectEvent$Expired  = Java.loadClass("net.neoforged.neoforge.event.entity.living.MobEffectEvent$Expired")
+/** @type {typeof import("net.neoforged.neoforge.event.entity.living.MobEffectEvent$Remove").$MobEffectEvent$Remove } */
+let $MobEffectEvent$Remove  = Java.loadClass("net.neoforged.neoforge.event.entity.living.MobEffectEvent$Remove")
 
 ServerEvents.recipes(event => {
 	console.log("Changing recipes in funny_server.js")
@@ -207,6 +209,7 @@ ItemEvents.entityInteracted("minecraft:name_tag", event => {
 	}
 })
 
+// Pokemon greeting easter egg.
 PlayerEvents.decorateChat(event => {
 	const {player, message} = event
 	if (message.trim().toLowerCase() == "hi") {
@@ -224,35 +227,35 @@ PlayerEvents.decorateChat(event => {
 
 ServerEvents.basicPublicCommand("suebegone", event => {
 	const invoker = event.entity
-	const bounds = AABB.CUBE.move(invoker.position()).inflate(5)
+	const invoker_pos = invoker.position()
+	const bounds = AABB.CUBE.move(invoker_pos.x(), invoker_pos.y(), invoker_pos.z()).inflate(5)
 	const nearby_entities = event.level.getEntitiesWithin(bounds)
 	nearby_entities.forEach(player => {
-		if (!(player instanceof $Player || player.username == "SueTheMimiga")) { // SueTheMimiga
+		if (player.username != "Mickeon") { // SueTheMimiga
 			return
 		}
 
 		let push_center = invoker.position()
 		if (invoker == player) {
-			let nearby_armor_stand = nearby_entities.filterType("minecraft:armor_stand").first
-			if (nearby_armor_stand) {
-				push_center = nearby_armor_stand.position()
-			} else {
-				player.statusMessage = Text.of("\"Hmm... Today I will banish myself.\" 😏")
-				player.server.schedule(4 * SECOND, callback => {
-					player.statusMessage = Text.of(["↓ ", Text.of("Clueless").gray(), " ↓"]).italic().bold().darkGray()
-				})
-				player.server.schedule(8 * SECOND, callback => {
+			player.statusMessage = Text.of("\"Hmm... Today I will banish myself.\" 😏")
+			player.server.schedule(4 * SECOND, callback => {
+				player.statusMessage = Text.of(["↓ ", Text.of("Clueless").gray(), " ↓"]).italic().bold().darkGray()
+			})
+			for (let i = 0; i < 32; i++) {
+				player.server.schedule(8 * SECOND + i * 0.1 * SECOND, callback => {
 					player.level.spawnEntity("minecraft:lightning_bolt", entity => {
+						entity.setCause(player)
 						entity.setPosition(player.block)
+						entity.setDamage(0.1)
 					})
 				})
-				return
 			}
+			return
 		}
 		const propel_angle = push_center.vectorTo(player.position()).normalize()
 		player.addMotion(
 			propel_angle.x * 2,
-			propel_angle.y * 0.5,
+			propel_angle.y * 0.5 + 0.5,
 			propel_angle.z * 2
 		)
 		player.hurtMarked = true
@@ -260,6 +263,7 @@ ServerEvents.basicPublicCommand("suebegone", event => {
 	})
 })
 
+// #region Dashing power.
 PlayerEvents.loggedIn(event => {
 	if (DASH_STARTERS.includes(event.player.username)) {
 		event.player.setAttributeBaseValue("kubejs:dash_jump_count", 1)
@@ -364,7 +368,7 @@ NetworkEvents.dataReceived("kubejs:dash", event => {
 	if (!dash.lower_tiredness) {
 		dash.lower_tiredness = event.server.scheduleRepeatingInTicks(5, () => {
 			if (dash.strength_multiplier >= 1.0) {
-				player.playNotifySound("bubble_cobble:recharged", "players", 1.0, 1.0)
+				player.playNotifySound("bubble_cobble:recharged", "players", 0.25, 1.0)
 				dash.bonus_restoration = 0.0
 
 				dash.lower_tiredness.clear()
@@ -382,6 +386,7 @@ NetworkEvents.dataReceived("kubejs:dash", event => {
 		})
 	}
 })
+// #endregion
 
 ItemEvents.entityInteracted("minecraft:glass_bottle", event => {
 	if (event.player && event.target.entityType.hasTag("farmersdelight:horse_feed_users")) {
@@ -392,17 +397,26 @@ ItemEvents.entityInteracted("minecraft:glass_bottle", event => {
 	}
 })
 
-NativeEvents.onEvent($MobEffectEvent$Added, event => {
-	if (event.effectInstance.is("kubejs:girl_power")) {
-		event.entity.modifyAttribute("kubejs:dash_jump_count", "kubejs:girl_power_effect", event.effectInstance.amplifier + 1, "add_value")
-	}
-})
+const GIRL_POWER_EFFECT = Registry.of("mob_effect").get("kubejs:girl_power")
+if (GIRL_POWER_EFFECT) {
+	NativeEvents.onEvent($MobEffectEvent$Added, event => {
+		if (event.effectInstance.is(GIRL_POWER_EFFECT)) {
+			event.entity.modifyAttribute("kubejs:dash_jump_count", "kubejs:girl_power_effect", event.effectInstance.amplifier + 1, "add_value")
+		}
+	})
 
-NativeEvents.onEvent($MobEffectEvent$Expired, event => {
-	if (event.effectInstance.is("kubejs:girl_power")) {
-		event.entity.removeAttribute("kubejs:dash_jump_count", "kubejs:girl_power_effect")
-	}
-})
+	NativeEvents.onEvent($MobEffectEvent$Expired, event => {
+		if (event.effectInstance.is(GIRL_POWER_EFFECT)) {
+			event.entity.removeAttribute("kubejs:dash_jump_count", "kubejs:girl_power_effect")
+		}
+	})
+
+	NativeEvents.onEvent($MobEffectEvent$Remove, event => {
+		if (event.effectInstance.is(GIRL_POWER_EFFECT)) {
+			event.entity.removeAttribute("kubejs:dash_jump_count", "kubejs:girl_power_effect")
+		}
+	})
+}
 
 function PowderSnowData() {
 	this.combo = 0
