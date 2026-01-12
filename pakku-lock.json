@@ -2843,7 +2843,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "create_ltab-3.6.1.jar",
+                    "file_name": "create_ltab-3.6.2.jar",
                     "mc_versions": [
                         "1.20.1",
                         "1.21.1"
@@ -2855,16 +2855,16 @@
                         "quilt"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/fUa6OtBG/versions/6wkXb1to/create_ltab-3.6.1.jar",
-                    "id": "6wkXb1to",
+                    "url": "https://cdn.modrinth.com/data/fUa6OtBG/versions/Vb1mZ3qu/create_ltab-3.6.2.jar",
+                    "id": "Vb1mZ3qu",
                     "parent_id": "fUa6OtBG",
                     "hashes": {
-                        "sha512": "90f414ec95d94d42aeb0e7d258372f6383a7f808f2c94c4f6619755206867a48dd04c01003c7c684cd804b1348a4eb0351392d0701b95d0c7470de6aaf4c0561",
-                        "sha1": "2637e48e9282ee27bd994f278ecec2172efb74e2"
+                        "sha512": "5a67b1ab61ae14258981d9a208b9cc8097da6e51cb0cfd60e3aed1fc6b90d7276ca2c3f103fc203dc37a11a3feaaebde98333af41f85711cb6b708d696dd2f72",
+                        "sha1": "330a27841d6472bd4a6994f3cf794b6a59909a38"
                     },
                     "required_dependencies": [],
-                    "size": 2160155,
-                    "date_published": "2026-01-04T10:38:36.018740Z"
+                    "size": 2178459,
+                    "date_published": "2026-01-12T18:44:27.969626Z"
                 }
             ]
         },
