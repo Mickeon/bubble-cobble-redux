@@ -19,6 +19,7 @@ EntityEvents.drops("minecraft:player", event => {
 		} break;
 		case "BluStar7": {
 			add_drop(player, Item.of("minecraft:blue_dye"), 0.75)
+			add_drop(player, Item.of("minecraft:blue_dye").withCustomName("Blue Lyve"), 0.5)
 			// add_drop(player, Item.of("fairylights:star_light").withNBT({color: 3949738}), 0.5)
 		} break;
 		case "BlueBerryNice": {
@@ -48,6 +49,10 @@ EntityEvents.drops("minecraft:player", event => {
 			add_drop(player, Item.of("cobblemon:dragon_scale"), 0.75)
 			add_drop(player, Item.of("create:cogwheel"), 0.5)
 			add_drop(player, Item.of("minecraft:blue_dye"), 0.25)
+		} break;
+		case "CyanGoat": {
+			add_drop(player, Item.of("minecraft:cyan_dye"), 0.75)
+			add_drop(player, Item.of("minecraft:goat_horn"), 0.1)
 		} break;
 		case "Fableworks": {
 			add_drop(player, Item.of("minecraft:pink_dye"), 0.75)

@@ -311,6 +311,13 @@ ServerEvents.recipes(event => {
 	// All of the other types require differently colored torches, because Copper Torches didn't exist.
 	event.replaceInput({id: /createdeco:green_.*lamp/}, "minecraft:glow_berries", "minecraft:copper_torch")
 
+	// TODO: Add recipes for (this modpack's) Pale Jacaranda and Redder Wood.
+	// event.shaped("biomesoplenty:stripped_jacaranda_log", ["DAD", "ADA", "DAD"], {D: "minecraft:white_dye", A: "biomeswevegone:stripped_jacaranda_log"})
+	// event.shaped("biomesoplenty:stripped_redwood_log", ["DAD", "ADA", "DAD"], {D: "minecraft:red_dye", A: "biomeswevegone:stripped_redwood_log"})
+
+	// TODO: Add recipes for all Music Discs whose method of obtaining them is genuinely obtuse.
+	// event.shaped("minecraft:music_disc_blocks", ["DAD", "AMA", "DAD"], {M: "minecraft:music_disc_13", A: "minecraft:copper_ingot", D: "create:sturdy_sheet"})
+
 	// Cooking recipe schema test.
 	// event.recipes.farmersdelight.cooking("kubejs:blue_mascot_cat", ["cobblemon:red_apricorn", "cobblemon:blue_apricorn"], "minecraft:bowl")
 })
