@@ -51,6 +51,7 @@ ServerEvents.recipes(event => {
 	event.campfireCooking(cooked_lucky_egg, "cobblemon:lucky_egg", 5)
 
 	event.shaped("kubejs:super_ghostbusters", [" T ", "TMT", " T "], {T: "mega_showdown:ghost_tera_shard", M: "cobblemon:moon_stone"})
+	event.shaped(Item.of("biomeswevegone:rose", 16), ["RR", "RR"], {R: "minecraft:rose_bush"})
 })
 
 ItemEvents.foodEaten("cobblemon:ice_stone", event => {
@@ -605,12 +606,15 @@ NativeEvents.onEvent($ProjectileImpactEvent, event => {
 // 	})
 // })
 
-///** @type {typeof import("net.neoforged.neoforge.event.entity.player.PlayerEvent$ItemCraftedEvent").$PlayerEvent$ItemCraftedEvent } */
-//let $PlayerEvent$ItemCraftedEvent  = Java.loadClass("net.neoforged.neoforge.event.entity.player.PlayerEvent$ItemCraftedEvent")
-// NativeEvents.onEvent($PlayerEvent$ItemCraftedEvent, event => {
-// 	if (event.getCrafting().id == "minecraft:crafting_table") {
-// 		event.entity.statusMessage = "What"
-// 		event.entity.addMotion(0, 5, 0)
-// 		event.entity.hurtMarked = true
-// 	}
-// })
+// Craftable Roses from Rose Bushes, but... owch.
+/** @type {typeof import("net.neoforged.neoforge.event.entity.player.PlayerEvent$ItemCraftedEvent").$PlayerEvent$ItemCraftedEvent } */
+let $PlayerEvent$ItemCraftedEvent  = Java.loadClass("net.neoforged.neoforge.event.entity.player.PlayerEvent$ItemCraftedEvent")
+NativeEvents.onEvent($PlayerEvent$ItemCraftedEvent, event => {
+	if (event.crafting.id == "biomeswevegone:rose" && event.inventory.countItem("minecraft:rose_bush")) {
+		let entity = event.entity
+		entity.attack(new DamageSource("biomesoplenty:bramble", entity, entity, entity.position().add(entity.forward)), 1)
+		entity.addMotion(0, 0.1, 0)
+		entity.hurtMarked = true
+		entity.statusMessage = "Ow my hand"
+	}
+})
