@@ -549,6 +549,51 @@ PlayerEvents.tick(event => {
 	}
 })
 
+// Make ghasts less dangerous.
+/** @type {typeof import("net.neoforged.neoforge.event.entity.ProjectileImpactEvent").$ProjectileImpactEvent } */
+let $ProjectileImpactEvent  = Java.loadClass("net.neoforged.neoforge.event.entity.ProjectileImpactEvent")
+NativeEvents.onEvent($ProjectileImpactEvent, event => {
+	if (event.projectile.type != "minecraft:fireball") {
+		return
+	}
+	/** @type {import("net.minecraft.world.entity.projectile.Fireball").$Fireball$$Type} */
+	const fireball = event.projectile
+	if (fireball.owner.type != "minecraft:ghast") {
+		return
+	}
+
+	if (event.rayTraceResult.type == "entity") {
+		/** @type {$Player} */
+		let first_collided_player = fireball.level.getEntitiesWithin(AABB.at(event.rayTraceResult.location)).filterPlayers().first
+		if (first_collided_player) {
+			first_collided_player.attack(new DamageSource("minecraft:fireball", fireball, fireball.owner), 4)
+			first_collided_player.setRemainingFireTicks(60)
+			fireball.level.runCommandSilent(`playsound cobblemon:item.berry.eat.full player @a ${fireball.x} ${fireball.y} ${fireball.z} 1.0 1`)
+			first_collided_player.give("minecraft:fire_charge")
+			if (Math.random() < 0.25) {
+				fireball.level.runCommandSilent(`playsound kubejs:advancement.mint_chewed player @a ${fireball.x} ${fireball.y} ${fireball.z} 1.0 1`)
+			}
+		}
+
+	} else {
+		fireball.level.runCommandSilent(`playsound create:chiff player @a ${fireball.x} ${fireball.y} ${fireball.z} 1.0 ${0.9 + Math.random() * 0.2}`)
+		fireball.block.explode({
+			source: fireball,
+			causesFire: true,
+			mode: "none",
+			strength: 1,
+			damageSource: new DamageSource("minecraft:fireball", fireball, fireball.owner)
+		})
+		fireball.level.spawnParticles("amendments:fireball_explosion", false,
+			fireball.x, fireball.y, fireball.z,
+			1, 1, 1, 10, 1
+		)
+	}
+
+	fireball.discard()
+	event.canceled = true
+})
+
 // Debug.
 // ServerEvents.tick(event => {
 // 	event.server.mcPlayers.forEach(player => {
