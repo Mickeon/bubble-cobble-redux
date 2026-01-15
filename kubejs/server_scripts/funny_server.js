@@ -565,7 +565,7 @@ NativeEvents.onEvent($ProjectileImpactEvent, event => {
 
 	if (event.rayTraceResult.type == "entity") {
 		/** @type {$Player} */
-		let first_collided_player = fireball.level.getEntitiesWithin(AABB.at(event.rayTraceResult.location)).filterPlayers().first
+		let first_collided_player = fireball.level.getEntitiesWithin(AABB.ofBlock(event.rayTraceResult.location)).filterPlayers().first
 		if (first_collided_player) {
 			first_collided_player.attack(new DamageSource("minecraft:fireball", fireball, fireball.owner), 4)
 			first_collided_player.setRemainingFireTicks(60)
