@@ -10,8 +10,9 @@
       ],
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "cobblemon:chilan_berry"
+          "type": "minecraft:tag",
+          "name": "simpletms:type_normal_tr",
+          "expand": true
         }
       ],
       "rolls": 1
@@ -25,8 +26,9 @@
       ],
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "cobblemon:occa_berry"
+          "type": "minecraft:tag",
+          "name": "simpletms:type_fire_tr",
+          "expand": true
         }
       ],
       "rolls": 1
@@ -40,8 +42,9 @@
       ],
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "cobblemon:chople_berry"
+          "type": "minecraft:tag",
+          "name": "simpletms:type_fighting_tr",
+          "expand": true
         }
       ],
       "rolls": 1
@@ -55,8 +58,9 @@
       ],
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "cobblemon:passho_berry"
+          "type": "minecraft:tag",
+          "name": "simpletms:type_water_tr",
+          "expand": true
         }
       ],
       "rolls": 1
@@ -70,8 +74,9 @@
       ],
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "cobblemon:coba_berry"
+          "type": "minecraft:tag",
+          "name": "simpletms:type_flying_tr",
+          "expand": true
         }
       ],
       "rolls": 1
@@ -85,8 +90,9 @@
       ],
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "cobblemon:rindo_berry"
+          "type": "minecraft:tag",
+          "name": "simpletms:type_grass_tr",
+          "expand": true
         }
       ],
       "rolls": 1
@@ -100,8 +106,9 @@
       ],
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "cobblemon:kebia_berry"
+          "type": "minecraft:tag",
+          "name": "simpletms:type_poison_tr",
+          "expand": true
         }
       ],
       "rolls": 1
@@ -115,8 +122,9 @@
       ],
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "cobblemon:wacan_berry"
+          "type": "minecraft:tag",
+          "name": "simpletms:type_electric_tr",
+          "expand": true
         }
       ],
       "rolls": 1
@@ -130,8 +138,9 @@
       ],
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "cobblemon:shuca_berry"
+          "type": "minecraft:tag",
+          "name": "simpletms:type_ground_tr",
+          "expand": true
         }
       ],
       "rolls": 1
@@ -145,8 +154,9 @@
       ],
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "cobblemon:payapa_berry"
+          "type": "minecraft:tag",
+          "name": "simpletms:type_psychic_tr",
+          "expand": true
         }
       ],
       "rolls": 1
@@ -160,8 +170,9 @@
       ],
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "cobblemon:charti_berry"
+          "type": "minecraft:tag",
+          "name": "simpletms:type_rock_tr",
+          "expand": true
         }
       ],
       "rolls": 1
@@ -175,8 +186,9 @@
       ],
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "cobblemon:yache_berry"
+          "type": "minecraft:tag",
+          "name": "simpletms:type_ice_tr",
+          "expand": true
         }
       ],
       "rolls": 1
@@ -190,8 +202,9 @@
       ],
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "cobblemon:tanga_berry"
+          "type": "minecraft:tag",
+          "name": "simpletms:type_bug_tr",
+          "expand": true
         }
       ],
       "rolls": 1
@@ -205,8 +218,9 @@
       ],
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "cobblemon:haban_berry"
+          "type": "minecraft:tag",
+          "name": "simpletms:type_dragon_tr",
+          "expand": true
         }
       ],
       "rolls": 1
@@ -220,8 +234,9 @@
       ],
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "cobblemon:kasib_berry"
+          "type": "minecraft:tag",
+          "name": "simpletms:type_ghost_tr",
+          "expand": true
         }
       ],
       "rolls": 1
@@ -235,8 +250,9 @@
       ],
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "cobblemon:colbur_berry"
+          "type": "minecraft:tag",
+          "name": "simpletms:type_dark_tr",
+          "expand": true
         }
       ],
       "rolls": 1
@@ -250,8 +266,9 @@
       ],
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "cobblemon:babiri_berry"
+          "type": "minecraft:tag",
+          "name": "simpletms:type_steel_tr",
+          "expand": true
         }
       ],
       "rolls": 1
@@ -265,8 +282,9 @@
       ],
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "cobblemon:roseli_berry"
+          "type": "minecraft:tag",
+          "name": "simpletms:type_fairy_tr",
+          "expand": true
         }
       ],
       "rolls": 1

@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "mega_showdown:keystone"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "mega_showdown:wishing_star",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "mega_showdown:sparkling_stone_light"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "mega_showdown:mega_stone"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "mega_showdown:blank_z"
+        }
+      ]
+    }
+  ]
+}

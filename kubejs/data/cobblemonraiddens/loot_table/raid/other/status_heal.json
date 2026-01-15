@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "conditions": [
+        {
+          "condition": "minecraft:reference",
+          "name": "cobblemonraiddens:tier_1"
+        }
+      ],
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:tag",
+          "name": "cobblemon:full_heal_bottles",
+          "expand": true
+        }
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "condition": "minecraft:reference",
+          "name": "cobblemonraiddens:tier_2"
+        }
+      ],
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:full_heal",
+          "expand": true
+        }
+      ]
+    }
+  ]
+}

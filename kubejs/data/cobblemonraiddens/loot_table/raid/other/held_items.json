@@ -1,0 +1,117 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "conditions": [
+        {
+          "condition": "minecraft:reference",
+          "name": "cobblemonraiddens:tier_1"
+        }
+      ],
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:tag",
+          "name": "cobblemon:evolution_stones",
+          "expand": true
+        }
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "condition": "minecraft:reference",
+          "name": "cobblemonraiddens:tier_2"
+        }
+      ],
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:tag",
+          "name": "cobblemon:evolution_items",
+          "expand": true
+        }
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "condition": "minecraft:reference",
+          "name": "cobblemonraiddens:tier_3"
+        }
+      ],
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:tag",
+          "name": "cobblemon:evolution_items",
+          "expand": true
+        }
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "condition": "minecraft:reference",
+          "name": "cobblemonraiddens:tier_4"
+        }
+      ],
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:tag",
+          "name": "cobblemonraiddens:good_held_items",
+          "expand": true
+        }
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "condition": "minecraft:reference",
+          "name": "cobblemonraiddens:tier_5"
+        }
+      ],
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:tag",
+          "name": "cobblemonraiddens:good_held_items",
+          "expand": true
+        }
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "condition": "minecraft:reference",
+          "name": "cobblemonraiddens:tier_6"
+        }
+      ],
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:tag",
+          "name": "cobblemonraiddens:great_held_items",
+          "expand": true
+        }
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "condition": "minecraft:reference",
+          "name": "cobblemonraiddens:tier_7"
+        }
+      ],
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:tag",
+          "name": "cobblemonraiddens:great_held_items",
+          "expand": true
+        }
+      ]
+    }
+  ]
+}

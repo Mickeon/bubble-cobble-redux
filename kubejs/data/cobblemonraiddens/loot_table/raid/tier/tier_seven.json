@@ -5,33 +5,17 @@
       "rolls": 1,
       "entries": [
         {
-          "type": "minecraft:loot_table",
-          "value": "cobblemonraiddens:raid/type/berry_rewards",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "type": "minecraft:uniform",
-                "min": 1,
-                "max": 2
-              }
-            }
-          ]
+          "type": "minecraft:item",
+          "name": "kubejs:blue_mascot_cat"
         }
       ]
     },
     {
-      "rolls": 1,
+      "rolls": 8,
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "cobblemon:exp_candy_m",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": 3
-            }
-          ]
+          "name": "cobblemon:exp_candy_xl"
         }
       ]
     },
@@ -44,14 +28,14 @@
           "functions": [
             {
               "function": "minecraft:set_count",
-              "count": 6
+              "count": 50
             }
           ]
         }
       ]
     },
     {
-      "rolls": 1,
+      "rolls": 3,
       "entries": [
         {
           "type": "minecraft:item",
@@ -68,59 +52,33 @@
       ]
     },
     {
-      "rolls": 3,
+      "rolls": 8,
       "entries": [
         {
-          "type": "minecraft:loot_table",
-          "value": "cobblemonraiddens:raid/other/crops",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": 2
-            }
-          ],
-          "weight": 10
-        },
-        {
           "type": "minecraft:item",
-          "name": "farmersdelight:hamburger",
+          "name": "minecraft:enchanted_golden_apple",
           "functions": [
             {
               "function": "minecraft:set_count",
               "count": 3
             }
           ],
-          "weight": 10
+          "weight": 5
         },
         {
           "type": "minecraft:loot_table",
           "value": "cobblemonraiddens:raid/other/iv_candies",
-          "weight": 10
-        },
-        {
-          "type": "minecraft:item",
-          "name": "cobblemon:ability_capsule",
-          "weight": 2
-        },
-        {
-          "type": "minecraft:loot_table",
-          "value": "cobblemonraiddens:raid/other/poke_balls",
-          "weight": 10
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:iron_ingot",
           "functions": [
             {
               "function": "minecraft:set_count",
-              "count": 4
+              "count": 10
             }
           ],
           "weight": 10
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:phantom_membrane",
+          "name": "cobblemon:ability_capsule",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -131,12 +89,32 @@
         },
         {
           "type": "minecraft:item",
-          "name": "cobblemon:pokerod_smithing_template",
-          "weight": 3
+          "name": "cobblemon:ability_patch",
+          "weight": 15
         },
         {
           "type": "minecraft:loot_table",
-          "value": "cobblemonraiddens:raid/other/archaeology",
+          "value": "cobblemonraiddens:raid/other/poke_balls",
+          "weight": 15
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:netherite_ingot",
+          "weight": 10
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:mace",
+          "weight": 5
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:nether_star",
+          "weight": 5
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:elytra",
           "weight": 5
         },
         {
@@ -150,58 +128,42 @@
           "functions": [
             {
               "function": "minecraft:set_count",
-              "count": 2
+              "count": 10
             }
           ],
-          "weight": 5
-        },
-        {
-          "type": "minecraft:item",
-          "name": "cobblemon:pp_up",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": 3
-            }
-          ],
-          "weight": 5
+          "weight": 10
         },
         {
           "type": "minecraft:loot_table",
-          "value": "cobblemonraiddens:raid/type/tr_rewards",
+          "value": "cobblemonraiddens:raid/type/tm_rewards",
           "weight": 10
         },
         {
           "type": "minecraft:item",
-          "name": "cobblemon:hyper_potion",
+          "name": "create:experience_block",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 32
+            }
+          ],
+          "weight": 10
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "cobblemonraiddens:raid/other/gimmick_items",
+          "weight": 15,
           "functions": [
             {
               "function": "minecraft:set_count",
               "count": 3
             }
-          ],
-          "weight": 10
-        },
-        {
-          "type": "minecraft:item",
-          "name": "create:experience_nugget",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": 6
-            }
-          ],
-          "weight": 10
+          ]
         },
         {
           "type": "minecraft:loot_table",
           "value": "cobblemonraiddens:raid/other/held_items",
-          "weight": 7
-        },
-        {
-          "type": "minecraft:loot_table",
-          "value": "cobblemonraiddens:raid/type/gems_rewards",
-          "weight": 10
+          "weight": 5
         }
       ]
     }

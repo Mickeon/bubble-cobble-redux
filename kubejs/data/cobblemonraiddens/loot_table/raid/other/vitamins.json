@@ -1,0 +1,159 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "conditions": [
+        {
+          "condition": "minecraft:reference",
+          "name": "cobblemonraiddens:tier_1"
+        }
+      ],
+      "rolls": 1,
+      "functions": [
+        {
+          "function": "minecraft:set_count",
+          "count": 1
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:tag",
+          "name": "cobblemon:mochis",
+          "expand": true
+        }
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "condition": "minecraft:reference",
+          "name": "cobblemonraiddens:tier_2"
+        }
+      ],
+      "rolls": 1,
+      "functions": [
+        {
+          "function": "minecraft:set_count",
+          "count": 2
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:tag",
+          "name": "cobblemon:mochis",
+          "expand": true
+        }
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "condition": "minecraft:reference",
+          "name": "cobblemonraiddens:tier_3"
+        }
+      ],
+      "rolls": 1,
+      "functions": [
+        {
+          "function": "minecraft:set_count",
+          "count": 3
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:tag",
+          "name": "cobblemon:mochis",
+          "expand": true
+        }
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "condition": "minecraft:reference",
+          "name": "cobblemonraiddens:tier_4"
+        }
+      ],
+      "rolls": 1,
+      "functions": [
+        {
+          "function": "minecraft:set_count",
+          "count": 2
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:tag",
+          "name": "cobblemon:vitamins",
+          "expand": true
+        }
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "condition": "minecraft:reference",
+          "name": "cobblemonraiddens:tier_5"
+        }
+      ],
+      "rolls": 1,
+      "functions": [
+        {
+          "function": "minecraft:set_count",
+          "count": 3
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:tag",
+          "name": "cobblemon:vitamins",
+          "expand": true
+        }
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "condition": "minecraft:reference",
+          "name": "cobblemonraiddens:tier_6"
+        }
+      ],
+      "rolls": 1,
+      "functions": [
+        {
+          "function": "minecraft:set_count",
+          "count": 10
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:tag",
+          "name": "cobblemon:vitamins",
+          "expand": true
+        }
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "condition": "minecraft:reference",
+          "name": "cobblemonraiddens:tier_7"
+        }
+      ],
+      "rolls": 1,
+      "functions": [
+        {
+          "function": "minecraft:set_count",
+          "count": 26
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:tag",
+          "name": "cobblemon:vitamins",
+          "expand": true
+        }
+      ]
+    }
+  ]
+}

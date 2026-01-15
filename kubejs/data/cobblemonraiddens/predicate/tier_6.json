@@ -1,0 +1,14 @@
+{
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "equipment": {
+      "mainhand": {
+        "items": "cobblemonraiddens:raid_pouch",
+        "predicates": {
+          "cobblemonraiddens:raid_tier": "TIER_SIX"
+        }
+      }
+    }
+  }
+}

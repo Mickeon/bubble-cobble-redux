@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "cobblemon:chilan_berry"
+          "name": "mega_showdown:normal_tera_shard"
         }
       ],
       "rolls": 1
@@ -26,7 +26,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "cobblemon:occa_berry"
+          "name": "mega_showdown:fire_tera_shard"
         }
       ],
       "rolls": 1
@@ -41,7 +41,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "cobblemon:chople_berry"
+          "name": "mega_showdown:fighting_tera_shard"
         }
       ],
       "rolls": 1
@@ -56,7 +56,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "cobblemon:passho_berry"
+          "name": "mega_showdown:water_tera_shard"
         }
       ],
       "rolls": 1
@@ -71,7 +71,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "cobblemon:coba_berry"
+          "name": "mega_showdown:flying_tera_shard"
         }
       ],
       "rolls": 1
@@ -86,7 +86,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "cobblemon:rindo_berry"
+          "name": "mega_showdown:grass_tera_shard"
         }
       ],
       "rolls": 1
@@ -101,7 +101,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "cobblemon:kebia_berry"
+          "name": "mega_showdown:poison_tera_shard"
         }
       ],
       "rolls": 1
@@ -116,7 +116,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "cobblemon:wacan_berry"
+          "name": "mega_showdown:electric_tera_shard"
         }
       ],
       "rolls": 1
@@ -131,7 +131,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "cobblemon:shuca_berry"
+          "name": "mega_showdown:ground_tera_shard"
         }
       ],
       "rolls": 1
@@ -146,7 +146,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "cobblemon:payapa_berry"
+          "name": "mega_showdown:psychic_tera_shard"
         }
       ],
       "rolls": 1
@@ -161,7 +161,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "cobblemon:charti_berry"
+          "name": "mega_showdown:rock_tera_shard"
         }
       ],
       "rolls": 1
@@ -176,7 +176,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "cobblemon:yache_berry"
+          "name": "mega_showdown:ice_tera_shard"
         }
       ],
       "rolls": 1
@@ -191,7 +191,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "cobblemon:tanga_berry"
+          "name": "mega_showdown:bug_tera_shard"
         }
       ],
       "rolls": 1
@@ -206,7 +206,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "cobblemon:haban_berry"
+          "name": "mega_showdown:dragon_tera_shard"
         }
       ],
       "rolls": 1
@@ -221,7 +221,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "cobblemon:kasib_berry"
+          "name": "mega_showdown:ghost_tera_shard"
         }
       ],
       "rolls": 1
@@ -236,7 +236,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "cobblemon:colbur_berry"
+          "name": "mega_showdown:dark_tera_shard"
         }
       ],
       "rolls": 1
@@ -251,7 +251,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "cobblemon:babiri_berry"
+          "name": "mega_showdown:steel_tera_shard"
         }
       ],
       "rolls": 1
@@ -266,7 +266,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "cobblemon:roseli_berry"
+          "name": "mega_showdown:fairy_tera_shard"
         }
       ],
       "rolls": 1

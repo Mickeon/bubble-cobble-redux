@@ -1,0 +1,61 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "conditions": [
+        {
+          "condition": "minecraft:reference",
+          "name": "cobblemonraiddens:tier_3"
+        }
+      ],
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:sniffer_egg"
+        },
+        {
+          "type": "minecraft:tag",
+          "name": "minecraft:decorated_pot_sherds",
+          "expand": true
+        }
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "condition": "minecraft:reference",
+          "name": "cobblemonraiddens:tier_4"
+        }
+      ],
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:sniffer_egg"
+        },
+        {
+          "type": "minecraft:tag",
+          "name": "cobblemon:fossils",
+          "expand": true
+        }
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "condition": "minecraft:reference",
+          "name": "cobblemonraiddens:tier_5"
+        }
+      ],
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:tag",
+          "name": "cobblemon:fossils",
+          "expand": true
+        }
+      ]
+    }
+  ]
+}

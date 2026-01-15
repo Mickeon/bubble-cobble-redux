@@ -1,0 +1,108 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "conditions": [
+        {
+          "condition": "minecraft:reference",
+          "name": "cobblemonraiddens:tier_1"
+        }
+      ],
+      "rolls": 1,
+      "functions": [
+        {
+          "function": "minecraft:set_count",
+          "count": 4
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:tag",
+          "name": "cobblemon:apricorns",
+          "expand": true
+        }
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "condition": "minecraft:reference",
+          "name": "cobblemonraiddens:tier_2"
+        }
+      ],
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:tag",
+          "name": "cobblemon:apricorn_sprouts",
+          "expand": true
+        }
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "condition": "minecraft:reference",
+          "name": "cobblemonraiddens:tier_3"
+        }
+      ],
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:tag",
+          "name": "cobblemon:mint_seeds",
+          "expand": true
+        }
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "condition": "minecraft:reference",
+          "name": "cobblemonraiddens:tier_4"
+        }
+      ],
+      "rolls": 1,
+      "functions": [
+        {
+          "function": "minecraft:set_count",
+          "count": 4
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:tag",
+          "name": "cobblemon:mint_leaves",
+          "expand": true
+        }
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "condition": "minecraft:reference",
+          "name": "cobblemonraiddens:tier_5"
+        }
+      ],
+      "rolls": 3,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:modest_mint"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:adamant_mint"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:jolly_mint"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:timid_mint"
+        }
+      ]
+    }
+  ]
+}
