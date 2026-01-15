@@ -3423,19 +3423,19 @@
                         "minecraft"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/Va3BanZa/versions/OQgouS3q/E19 Cobblemon Minimap Icons.zip",
-                    "id": "OQgouS3q",
+                    "url": "https://cdn.modrinth.com/data/Va3BanZa/versions/HbtFieA6/E19 Cobblemon Minimap Icons.zip",
+                    "id": "HbtFieA6",
                     "parent_id": "Va3BanZa",
                     "hashes": {
-                        "sha512": "0c165936d683e12aa5bf35a83245fbfd89707d24fbdbe11a3ca917ffe5bb683f4bf9789df24f4f82600fc05aded7efcf6d7f1b56e576140b24c2521ffa343470",
-                        "sha1": "8bf0397e150278bbf09bce33d1e32734e8a21b18"
+                        "sha512": "22b264f4661c7d30495010957ef6bd62704dbd4ad0aee8d504cfbc10f7a09fe99dd9d4f8268d0761648eb7a3506b6e30cc9be1baa65d5316c3fd304515462c89",
+                        "sha1": "c55160097545026f21ca837c80dbb141c35cc3f3"
                     },
                     "required_dependencies": [
-                        "MdwFAVRL",
-                        "1bokaNcj"
+                        "1bokaNcj",
+                        "MdwFAVRL"
                     ],
-                    "size": 15941923,
-                    "date_published": "2025-07-11T01:44:36.811685Z"
+                    "size": 17257831,
+                    "date_published": "2026-01-15T10:57:02.069523Z"
                 }
             ]
         },
