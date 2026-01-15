@@ -259,7 +259,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "amendments-1.21-2.0.14-neoforge.jar",
+                    "file_name": "amendments-1.21-2.0.15-neoforge.jar",
                     "mc_versions": [
                         "1.21",
                         "1.21.1"
@@ -268,18 +268,18 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/6iTJugQR/versions/UluDQqs7/amendments-1.21-2.0.14-neoforge.jar",
-                    "id": "UluDQqs7",
+                    "url": "https://cdn.modrinth.com/data/6iTJugQR/versions/8xf6Wpxs/amendments-1.21-2.0.15-neoforge.jar",
+                    "id": "8xf6Wpxs",
                     "parent_id": "6iTJugQR",
                     "hashes": {
-                        "sha512": "be8b7f5ef215cb19501ad74dc8567877f8200c652e0dd77d9cc68a8ae9ec38851494017cf342ec5b51debdcaedebe005ae54ef0226752daf47b755b96fe0f721",
-                        "sha1": "6d3610f1b3e181117ced9c67c4b5a473a1a5bbfe"
+                        "sha512": "a9ea5029cb4788e9e1dae8ed94f05e9111754e064d41fcd6bf7e570c28106dc1e680d2f2e82324b87a0a154a3d714bbdf2425124a62cba4765c41c1097d1609a",
+                        "sha1": "00056f29646f3bf86116b281c2362c0dabdb4533"
                     },
                     "required_dependencies": [
                         "twkfQtEc"
                     ],
-                    "size": 1143400,
-                    "date_published": "2026-01-10T03:29:01.649258Z"
+                    "size": 1143659,
+                    "date_published": "2026-01-14T22:57:50.718038Z"
                 }
             ]
         },
