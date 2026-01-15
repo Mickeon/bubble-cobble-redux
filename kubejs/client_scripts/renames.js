@@ -93,3 +93,19 @@ ClientEvents.lang("en_us", event => {
 // 	event.renameItem(item_id, item_name)
 // 	console.log(`Rename ${item_id} to "${item_name}"`)
 // })
+
+// Add somewhat-dummy textures for our music discs for spinning on a Jukebox.
+// ClientEvents.generateAssets("after_mods", event => {
+// 	Object.keys(MUSIC_LIST).forEach((key) => {
+// 		let loaded_texture = event.loadTexture(`kubejs:item/music_disc_${key}`)
+// 		event.texture(
+// 			`amendments:block/music_discs/kubejs/music_disc_${key}`,
+// 			loaded_texture
+// 		)
+// 	})
+// 	// let loaded_texture = event.loadTexture("kubejs:item/music_disc_fool")
+// 	// event.texture(
+// 	// 	"amendments:block/music_discs/kubejs/music_disc_fool",
+// 	// 	loaded_texture
+// 	// )
+// })

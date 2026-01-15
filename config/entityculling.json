@@ -59,7 +59,11 @@
     "minecraft:pale_oak_chest_boat",
     "minecraft:bamboo_chest_raft",
     "minecraft:mangrove_chest_boat",
-    "voidscape:corrupted_pawn"
+    "voidscape:corrupted_pawn",
+    "cobblemon:empty_pokeball",
+    "cobblemon:boat",
+    "cobblemon:chest_boat",
+    "cobblemon:poke_bobber"
   ],
   "disableF3": false,
   "skipEntityCulling": false,

@@ -13,12 +13,19 @@ const SEC = 20
 const MIN = SEC * 60
 
 if (Platform.isClientEnvironment()) {
-	// If it exists, we are NOT on a dedicated server.
-	/** @type {typeof import("net.minecraft.client.KeyMapping").$KeyMapping } */
-	let $KeyMapping  = Java.loadClass("net.minecraft.client.KeyMapping")
+	// Keybinds are not available in a dedicated server.
+	KeyBindEvents.registry(event => {
+		event.register("bubble_cobble.dash", "MOUSE_BUTTON_4").inputType("mouse").inGame().category("Bubble Cobble")
+	})
+
 	StartupEvents.postInit(event => {
-		global.DASH_KEY = Client.options.keyMappings.find(key_mapping => key_mapping.name == "keybinds.bettercombat.feint")
 		global.CHANGE_BLOCK_SHAPE_KEY = Client.options.keyMappings.find(key_mapping => key_mapping.name == "key.clutternomore.change_block_shape")
 		global.PLACE_BLOCK_KEY = Client.options.keyUse
+
+		// console.log(Client.options.keyMappings.filter(key_mapping => {
+		// 	return !key_mapping.getName().includes("qa")
+		// }).map(key_mapping => {
+		// 	return `${key_mapping.getName()} | ${key_mapping.getCategory()}}`
+		// }))
 	})
 }
