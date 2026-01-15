@@ -6,12 +6,12 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "mega_showdown:keystone"
+          "name": "mega_showdown:wishing_star",
+          "weight": 2
         },
         {
           "type": "minecraft:item",
-          "name": "mega_showdown:wishing_star",
-          "weight": 2
+          "name": "mega_showdown:keystone"
         },
         {
           "type": "minecraft:item",

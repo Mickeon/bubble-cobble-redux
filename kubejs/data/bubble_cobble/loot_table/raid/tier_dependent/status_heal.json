@@ -5,7 +5,7 @@
       "conditions": [
         {
           "condition": "minecraft:reference",
-          "name": "cobblemonraiddens:tier_1"
+          "name": "bubble_cobble:is_raid/tier/1"
         }
       ],
       "rolls": 1,
@@ -21,7 +21,7 @@
       "conditions": [
         {
           "condition": "minecraft:reference",
-          "name": "cobblemonraiddens:tier_2"
+          "name": "bubble_cobble:is_raid/tier/2"
         }
       ],
       "rolls": 1,

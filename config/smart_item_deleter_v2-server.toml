@@ -1,0 +1,30 @@
+[general]
+	# Default: 20
+	# Range: 1 ~ 20000
+	scanIntervalTicks = 20
+	# Default: 2
+	# Range: 0 ~ 40
+	scanJitterTicks = 2
+	scanJitterEnabled = true
+	# Default: 400
+	# Range: 1 ~ 10000
+	entityCountThreshold = 400
+	# Default: 80
+	# Range: 0 ~ 100
+	deletePercentage = 80
+	# Default: 15000
+	# Range: 0 ~ 86400000
+	minItemAgeMs = 15000
+
+[safety]
+	protectNamedItems = true
+
+[logging]
+	#When false, the mod will not print cleanup summaries to the server console.
+	consoleDebugLogging = false
+
+[filter]
+	#Allowed Values: BLACKLIST, WHITELIST
+	filterMode = "BLACKLIST"
+	#List of item IDs or tags (#tag)
+	filterList = ["minecraft:nether_star", "#modid:valuable"]

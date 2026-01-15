@@ -5,13 +5,13 @@
       "conditions": [
         {
           "condition": "minecraft:reference",
-          "name": "cobblemonraiddens:type_normal"
+          "name": "bubble_cobble:is_raid/type/normal"
         }
       ],
       "entries": [
         {
           "type": "minecraft:tag",
-          "name": "simpletms:type_normal_tm",
+          "name": "simpletms:type_normal_tr",
           "expand": true
         }
       ],
@@ -21,13 +21,13 @@
       "conditions": [
         {
           "condition": "minecraft:reference",
-          "name": "cobblemonraiddens:type_fire"
+          "name": "bubble_cobble:is_raid/type/fire"
         }
       ],
       "entries": [
         {
           "type": "minecraft:tag",
-          "name": "simpletms:type_fire_tm",
+          "name": "simpletms:type_fire_tr",
           "expand": true
         }
       ],
@@ -37,13 +37,13 @@
       "conditions": [
         {
           "condition": "minecraft:reference",
-          "name": "cobblemonraiddens:type_fighting"
+          "name": "bubble_cobble:is_raid/type/fighting"
         }
       ],
       "entries": [
         {
           "type": "minecraft:tag",
-          "name": "simpletms:type_fighting_tm",
+          "name": "simpletms:type_fighting_tr",
           "expand": true
         }
       ],
@@ -53,13 +53,13 @@
       "conditions": [
         {
           "condition": "minecraft:reference",
-          "name": "cobblemonraiddens:type_water"
+          "name": "bubble_cobble:is_raid/type/water"
         }
       ],
       "entries": [
         {
           "type": "minecraft:tag",
-          "name": "simpletms:type_water_tm",
+          "name": "simpletms:type_water_tr",
           "expand": true
         }
       ],
@@ -69,13 +69,13 @@
       "conditions": [
         {
           "condition": "minecraft:reference",
-          "name": "cobblemonraiddens:type_flying"
+          "name": "bubble_cobble:is_raid/type/flying"
         }
       ],
       "entries": [
         {
           "type": "minecraft:tag",
-          "name": "simpletms:type_flying_tm",
+          "name": "simpletms:type_flying_tr",
           "expand": true
         }
       ],
@@ -85,13 +85,13 @@
       "conditions": [
         {
           "condition": "minecraft:reference",
-          "name": "cobblemonraiddens:type_grass"
+          "name": "bubble_cobble:is_raid/type/grass"
         }
       ],
       "entries": [
         {
           "type": "minecraft:tag",
-          "name": "simpletms:type_grass_tm",
+          "name": "simpletms:type_grass_tr",
           "expand": true
         }
       ],
@@ -101,13 +101,13 @@
       "conditions": [
         {
           "condition": "minecraft:reference",
-          "name": "cobblemonraiddens:type_poison"
+          "name": "bubble_cobble:is_raid/type/poison"
         }
       ],
       "entries": [
         {
           "type": "minecraft:tag",
-          "name": "simpletms:type_poison_tm",
+          "name": "simpletms:type_poison_tr",
           "expand": true
         }
       ],
@@ -117,13 +117,13 @@
       "conditions": [
         {
           "condition": "minecraft:reference",
-          "name": "cobblemonraiddens:type_electric"
+          "name": "bubble_cobble:is_raid/type/electric"
         }
       ],
       "entries": [
         {
           "type": "minecraft:tag",
-          "name": "simpletms:type_electric_tm",
+          "name": "simpletms:type_electric_tr",
           "expand": true
         }
       ],
@@ -133,13 +133,13 @@
       "conditions": [
         {
           "condition": "minecraft:reference",
-          "name": "cobblemonraiddens:type_ground"
+          "name": "bubble_cobble:is_raid/type/ground"
         }
       ],
       "entries": [
         {
           "type": "minecraft:tag",
-          "name": "simpletms:type_ground_tm",
+          "name": "simpletms:type_ground_tr",
           "expand": true
         }
       ],
@@ -149,13 +149,13 @@
       "conditions": [
         {
           "condition": "minecraft:reference",
-          "name": "cobblemonraiddens:type_psychic"
+          "name": "bubble_cobble:is_raid/type/psychic"
         }
       ],
       "entries": [
         {
           "type": "minecraft:tag",
-          "name": "simpletms:type_psychic_tm",
+          "name": "simpletms:type_psychic_tr",
           "expand": true
         }
       ],
@@ -165,13 +165,13 @@
       "conditions": [
         {
           "condition": "minecraft:reference",
-          "name": "cobblemonraiddens:type_rock"
+          "name": "bubble_cobble:is_raid/type/rock"
         }
       ],
       "entries": [
         {
           "type": "minecraft:tag",
-          "name": "simpletms:type_rock_tm",
+          "name": "simpletms:type_rock_tr",
           "expand": true
         }
       ],
@@ -181,13 +181,13 @@
       "conditions": [
         {
           "condition": "minecraft:reference",
-          "name": "cobblemonraiddens:type_ice"
+          "name": "bubble_cobble:is_raid/type/ice"
         }
       ],
       "entries": [
         {
           "type": "minecraft:tag",
-          "name": "simpletms:type_ice_tm",
+          "name": "simpletms:type_ice_tr",
           "expand": true
         }
       ],
@@ -197,13 +197,13 @@
       "conditions": [
         {
           "condition": "minecraft:reference",
-          "name": "cobblemonraiddens:type_bug"
+          "name": "bubble_cobble:is_raid/type/bug"
         }
       ],
       "entries": [
         {
           "type": "minecraft:tag",
-          "name": "simpletms:type_bug_tm",
+          "name": "simpletms:type_bug_tr",
           "expand": true
         }
       ],
@@ -213,13 +213,13 @@
       "conditions": [
         {
           "condition": "minecraft:reference",
-          "name": "cobblemonraiddens:type_dragon"
+          "name": "bubble_cobble:is_raid/type/dragon"
         }
       ],
       "entries": [
         {
           "type": "minecraft:tag",
-          "name": "simpletms:type_dragon_tm",
+          "name": "simpletms:type_dragon_tr",
           "expand": true
         }
       ],
@@ -229,13 +229,13 @@
       "conditions": [
         {
           "condition": "minecraft:reference",
-          "name": "cobblemonraiddens:type_ghost"
+          "name": "bubble_cobble:is_raid/type/ghost"
         }
       ],
       "entries": [
         {
           "type": "minecraft:tag",
-          "name": "simpletms:type_ghost_tm",
+          "name": "simpletms:type_ghost_tr",
           "expand": true
         }
       ],
@@ -245,13 +245,13 @@
       "conditions": [
         {
           "condition": "minecraft:reference",
-          "name": "cobblemonraiddens:type_dark"
+          "name": "bubble_cobble:is_raid/type/dark"
         }
       ],
       "entries": [
         {
           "type": "minecraft:tag",
-          "name": "simpletms:type_dark_tm",
+          "name": "simpletms:type_dark_tr",
           "expand": true
         }
       ],
@@ -261,13 +261,13 @@
       "conditions": [
         {
           "condition": "minecraft:reference",
-          "name": "cobblemonraiddens:type_steel"
+          "name": "bubble_cobble:is_raid/type/steel"
         }
       ],
       "entries": [
         {
           "type": "minecraft:tag",
-          "name": "simpletms:type_steel_tm",
+          "name": "simpletms:type_steel_tr",
           "expand": true
         }
       ],
@@ -277,13 +277,13 @@
       "conditions": [
         {
           "condition": "minecraft:reference",
-          "name": "cobblemonraiddens:type_fairy"
+          "name": "bubble_cobble:is_raid/type/fairy"
         }
       ],
       "entries": [
         {
           "type": "minecraft:tag",
-          "name": "simpletms:type_fairy_tm",
+          "name": "simpletms:type_fairy_tr",
           "expand": true
         }
       ],

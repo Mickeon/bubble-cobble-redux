@@ -5,13 +5,14 @@
       "conditions": [
         {
           "condition": "minecraft:reference",
-          "name": "cobblemonraiddens:type_normal"
+          "name": "bubble_cobble:is_raid/type/normal"
         }
       ],
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "cobblemon:normal_gem"
+          "type": "minecraft:tag",
+          "name": "simpletms:type_normal_tm",
+          "expand": true
         }
       ],
       "rolls": 1
@@ -20,13 +21,14 @@
       "conditions": [
         {
           "condition": "minecraft:reference",
-          "name": "cobblemonraiddens:type_fire"
+          "name": "bubble_cobble:is_raid/type/fire"
         }
       ],
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "cobblemon:fire_gem"
+          "type": "minecraft:tag",
+          "name": "simpletms:type_fire_tm",
+          "expand": true
         }
       ],
       "rolls": 1
@@ -35,13 +37,14 @@
       "conditions": [
         {
           "condition": "minecraft:reference",
-          "name": "cobblemonraiddens:type_fighting"
+          "name": "bubble_cobble:is_raid/type/fighting"
         }
       ],
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "cobblemon:fighting_gem"
+          "type": "minecraft:tag",
+          "name": "simpletms:type_fighting_tm",
+          "expand": true
         }
       ],
       "rolls": 1
@@ -50,13 +53,14 @@
       "conditions": [
         {
           "condition": "minecraft:reference",
-          "name": "cobblemonraiddens:type_water"
+          "name": "bubble_cobble:is_raid/type/water"
         }
       ],
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "cobblemon:water_gem"
+          "type": "minecraft:tag",
+          "name": "simpletms:type_water_tm",
+          "expand": true
         }
       ],
       "rolls": 1
@@ -65,13 +69,14 @@
       "conditions": [
         {
           "condition": "minecraft:reference",
-          "name": "cobblemonraiddens:type_flying"
+          "name": "bubble_cobble:is_raid/type/flying"
         }
       ],
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "cobblemon:flying_gem"
+          "type": "minecraft:tag",
+          "name": "simpletms:type_flying_tm",
+          "expand": true
         }
       ],
       "rolls": 1
@@ -80,13 +85,14 @@
       "conditions": [
         {
           "condition": "minecraft:reference",
-          "name": "cobblemonraiddens:type_grass"
+          "name": "bubble_cobble:is_raid/type/grass"
         }
       ],
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "cobblemon:grass_gem"
+          "type": "minecraft:tag",
+          "name": "simpletms:type_grass_tm",
+          "expand": true
         }
       ],
       "rolls": 1
@@ -95,13 +101,14 @@
       "conditions": [
         {
           "condition": "minecraft:reference",
-          "name": "cobblemonraiddens:type_poison"
+          "name": "bubble_cobble:is_raid/type/poison"
         }
       ],
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "cobblemon:poison_gem"
+          "type": "minecraft:tag",
+          "name": "simpletms:type_poison_tm",
+          "expand": true
         }
       ],
       "rolls": 1
@@ -110,13 +117,14 @@
       "conditions": [
         {
           "condition": "minecraft:reference",
-          "name": "cobblemonraiddens:type_electric"
+          "name": "bubble_cobble:is_raid/type/electric"
         }
       ],
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "cobblemon:electric_gem"
+          "type": "minecraft:tag",
+          "name": "simpletms:type_electric_tm",
+          "expand": true
         }
       ],
       "rolls": 1
@@ -125,13 +133,14 @@
       "conditions": [
         {
           "condition": "minecraft:reference",
-          "name": "cobblemonraiddens:type_ground"
+          "name": "bubble_cobble:is_raid/type/ground"
         }
       ],
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "cobblemon:ground_gem"
+          "type": "minecraft:tag",
+          "name": "simpletms:type_ground_tm",
+          "expand": true
         }
       ],
       "rolls": 1
@@ -140,13 +149,14 @@
       "conditions": [
         {
           "condition": "minecraft:reference",
-          "name": "cobblemonraiddens:type_psychic"
+          "name": "bubble_cobble:is_raid/type/psychic"
         }
       ],
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "cobblemon:psychic_gem"
+          "type": "minecraft:tag",
+          "name": "simpletms:type_psychic_tm",
+          "expand": true
         }
       ],
       "rolls": 1
@@ -155,13 +165,14 @@
       "conditions": [
         {
           "condition": "minecraft:reference",
-          "name": "cobblemonraiddens:type_rock"
+          "name": "bubble_cobble:is_raid/type/rock"
         }
       ],
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "cobblemon:rock_gem"
+          "type": "minecraft:tag",
+          "name": "simpletms:type_rock_tm",
+          "expand": true
         }
       ],
       "rolls": 1
@@ -170,13 +181,14 @@
       "conditions": [
         {
           "condition": "minecraft:reference",
-          "name": "cobblemonraiddens:type_ice"
+          "name": "bubble_cobble:is_raid/type/ice"
         }
       ],
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "cobblemon:ice_gem"
+          "type": "minecraft:tag",
+          "name": "simpletms:type_ice_tm",
+          "expand": true
         }
       ],
       "rolls": 1
@@ -185,13 +197,14 @@
       "conditions": [
         {
           "condition": "minecraft:reference",
-          "name": "cobblemonraiddens:type_bug"
+          "name": "bubble_cobble:is_raid/type/bug"
         }
       ],
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "cobblemon:bug_gem"
+          "type": "minecraft:tag",
+          "name": "simpletms:type_bug_tm",
+          "expand": true
         }
       ],
       "rolls": 1
@@ -200,13 +213,14 @@
       "conditions": [
         {
           "condition": "minecraft:reference",
-          "name": "cobblemonraiddens:type_dragon"
+          "name": "bubble_cobble:is_raid/type/dragon"
         }
       ],
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "cobblemon:dragon_gem"
+          "type": "minecraft:tag",
+          "name": "simpletms:type_dragon_tm",
+          "expand": true
         }
       ],
       "rolls": 1
@@ -215,13 +229,14 @@
       "conditions": [
         {
           "condition": "minecraft:reference",
-          "name": "cobblemonraiddens:type_ghost"
+          "name": "bubble_cobble:is_raid/type/ghost"
         }
       ],
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "cobblemon:ghost_gem"
+          "type": "minecraft:tag",
+          "name": "simpletms:type_ghost_tm",
+          "expand": true
         }
       ],
       "rolls": 1
@@ -230,13 +245,14 @@
       "conditions": [
         {
           "condition": "minecraft:reference",
-          "name": "cobblemonraiddens:type_dark"
+          "name": "bubble_cobble:is_raid/type/dark"
         }
       ],
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "cobblemon:dark_gem"
+          "type": "minecraft:tag",
+          "name": "simpletms:type_dark_tm",
+          "expand": true
         }
       ],
       "rolls": 1
@@ -245,13 +261,14 @@
       "conditions": [
         {
           "condition": "minecraft:reference",
-          "name": "cobblemonraiddens:type_steel"
+          "name": "bubble_cobble:is_raid/type/steel"
         }
       ],
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "cobblemon:steel_gem"
+          "type": "minecraft:tag",
+          "name": "simpletms:type_steel_tm",
+          "expand": true
         }
       ],
       "rolls": 1
@@ -260,13 +277,14 @@
       "conditions": [
         {
           "condition": "minecraft:reference",
-          "name": "cobblemonraiddens:type_fairy"
+          "name": "bubble_cobble:is_raid/type/fairy"
         }
       ],
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "cobblemon:fairy_gem"
+          "type": "minecraft:tag",
+          "name": "simpletms:type_fairy_tm",
+          "expand": true
         }
       ],
       "rolls": 1

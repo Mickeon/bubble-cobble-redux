@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "value": "cobblemonraiddens:raid/type/berry_rewards",
+          "value": "bubble_cobble:raid/type_dependent/berries",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -34,7 +34,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "value": "cobblemonraiddens:raid/type/shards_rewards",
+          "value": "bubble_cobble:raid/type_dependent/shards",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -71,7 +71,7 @@
         },
         {
           "type": "minecraft:loot_table",
-          "value": "cobblemonraiddens:raid/other/iv_candies",
+          "value": "bubble_cobble:raid/other/iv_candies",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -92,7 +92,7 @@
         },
         {
           "type": "minecraft:loot_table",
-          "value": "cobblemonraiddens:raid/other/poke_balls",
+          "value": "bubble_cobble:raid/tier_dependent/poke_balls",
           "weight": 10
         },
         {
@@ -124,7 +124,7 @@
         },
         {
           "type": "minecraft:loot_table",
-          "value": "cobblemonraiddens:raid/other/tumblestones",
+          "value": "bubble_cobble:raid/other/tumblestones",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -135,7 +135,7 @@
         },
         {
           "type": "minecraft:loot_table",
-          "value": "cobblemonraiddens:raid/other/vitamins",
+          "value": "bubble_cobble:raid/tier_dependent/vitamins",
           "weight": 15
         },
         {
@@ -151,7 +151,7 @@
         },
         {
           "type": "minecraft:loot_table",
-          "value": "cobblemonraiddens:raid/type/tm_rewards",
+          "value": "bubble_cobble:raid/type_dependent/tms",
           "weight": 10
         },
         {
@@ -167,12 +167,12 @@
         },
         {
           "type": "minecraft:loot_table",
-          "value": "cobblemonraiddens:raid/other/gimmick_items",
+          "value": "bubble_cobble:raid/other/gimmick_items",
           "weight": 13
         },
         {
           "type": "minecraft:loot_table",
-          "value": "cobblemonraiddens:raid/other/held_items",
+          "value": "bubble_cobble:raid/tier_dependent/held_items",
           "weight": 13
         }
       ]

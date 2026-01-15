@@ -5,7 +5,7 @@
       "conditions": [
         {
           "condition": "minecraft:reference",
-          "name": "cobblemonraiddens:tier_1"
+          "name": "bubble_cobble:is_raid/tier/1"
         }
       ],
       "rolls": 1,
@@ -21,7 +21,7 @@
       "conditions": [
         {
           "condition": "minecraft:reference",
-          "name": "cobblemonraiddens:tier_2"
+          "name": "bubble_cobble:is_raid/tier/2"
         }
       ],
       "rolls": 1,
@@ -37,7 +37,7 @@
       "conditions": [
         {
           "condition": "minecraft:reference",
-          "name": "cobblemonraiddens:tier_3"
+          "name": "bubble_cobble:is_raid/tier/3"
         }
       ],
       "rolls": 1,
@@ -53,7 +53,7 @@
       "conditions": [
         {
           "condition": "minecraft:reference",
-          "name": "cobblemonraiddens:tier_4"
+          "name": "bubble_cobble:is_raid/tier/4"
         }
       ],
       "rolls": 1,
@@ -69,7 +69,7 @@
       "conditions": [
         {
           "condition": "minecraft:reference",
-          "name": "cobblemonraiddens:tier_5"
+          "name": "bubble_cobble:is_raid/tier/5"
         }
       ],
       "rolls": 1,
@@ -85,7 +85,7 @@
       "conditions": [
         {
           "condition": "minecraft:reference",
-          "name": "cobblemonraiddens:tier_6"
+          "name": "bubble_cobble:is_raid/tier/6"
         }
       ],
       "rolls": 1,
@@ -101,7 +101,7 @@
       "conditions": [
         {
           "condition": "minecraft:reference",
-          "name": "cobblemonraiddens:tier_7"
+          "name": "bubble_cobble:is_raid/tier/7"
         }
       ],
       "rolls": 1,

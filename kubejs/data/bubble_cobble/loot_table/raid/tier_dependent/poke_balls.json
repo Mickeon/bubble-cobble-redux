@@ -1,0 +1,152 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "conditions": [
+        {
+          "condition": "minecraft:reference",
+          "name": "bubble_cobble:is_raid/tier/1"
+        }
+      ],
+      "rolls": 1,
+      "functions": [
+        {
+          "function": "minecraft:set_count",
+          "count": 10
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:poke_ball"
+        }
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "condition": "minecraft:reference",
+          "name": "bubble_cobble:is_raid/tier/2"
+        }
+      ],
+      "rolls": 1,
+      "functions": [
+        {
+          "function": "minecraft:set_count",
+          "count": 10
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:tag",
+          "name": "cobblemon:tier_1_poke_balls",
+          "expand": true
+        }
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "condition": "minecraft:reference",
+          "name": "bubble_cobble:is_raid/tier/3"
+        }
+      ],
+      "rolls": 1,
+      "functions": [
+        {
+          "function": "minecraft:set_count",
+          "count": 10
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:tag",
+          "name": "cobblemon:tier_2_poke_balls",
+          "expand": true
+        }
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "condition": "minecraft:reference",
+          "name": "bubble_cobble:is_raid/tier/4"
+        }
+      ],
+      "rolls": 1,
+      "functions": [
+        {
+          "function": "minecraft:set_count",
+          "count": 10
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:tag",
+          "name": "cobblemon:tier_2_poke_balls",
+          "expand": true
+        }
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "condition": "minecraft:reference",
+          "name": "bubble_cobble:is_raid/tier/5"
+        }
+      ],
+      "rolls": 1,
+      "functions": [
+        {
+          "function": "minecraft:set_count",
+          "count": 10
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:tag",
+          "name": "cobblemon:tier_3_poke_balls",
+          "expand": true
+        }
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "condition": "minecraft:reference",
+          "name": "bubble_cobble:is_raid/tier/6"
+        }
+      ],
+      "rolls": 1,
+      "functions": [
+        {
+          "function": "minecraft:set_count",
+          "count": 5
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:tag",
+          "name": "cobblemon:tier_4_poke_balls",
+          "expand": true
+        }
+      ]
+    },
+    {
+      "conditions": [
+        {
+          "condition": "minecraft:reference",
+          "name": "bubble_cobble:is_raid/tier/7"
+        }
+      ],
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:tag",
+          "name": "cobblemon:tier_5_poke_balls",
+          "expand": true
+        }
+      ]
+    }
+  ]
+}

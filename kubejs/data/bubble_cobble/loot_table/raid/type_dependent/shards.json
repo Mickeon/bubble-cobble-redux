@@ -5,7 +5,7 @@
       "conditions": [
         {
           "condition": "minecraft:reference",
-          "name": "cobblemonraiddens:type_normal"
+          "name": "bubble_cobble:is_raid/type/normal"
         }
       ],
       "entries": [
@@ -20,7 +20,7 @@
       "conditions": [
         {
           "condition": "minecraft:reference",
-          "name": "cobblemonraiddens:type_fire"
+          "name": "bubble_cobble:is_raid/type/fire"
         }
       ],
       "entries": [
@@ -35,7 +35,7 @@
       "conditions": [
         {
           "condition": "minecraft:reference",
-          "name": "cobblemonraiddens:type_fighting"
+          "name": "bubble_cobble:is_raid/type/fighting"
         }
       ],
       "entries": [
@@ -50,7 +50,7 @@
       "conditions": [
         {
           "condition": "minecraft:reference",
-          "name": "cobblemonraiddens:type_water"
+          "name": "bubble_cobble:is_raid/type/water"
         }
       ],
       "entries": [
@@ -65,7 +65,7 @@
       "conditions": [
         {
           "condition": "minecraft:reference",
-          "name": "cobblemonraiddens:type_flying"
+          "name": "bubble_cobble:is_raid/type/flying"
         }
       ],
       "entries": [
@@ -80,7 +80,7 @@
       "conditions": [
         {
           "condition": "minecraft:reference",
-          "name": "cobblemonraiddens:type_grass"
+          "name": "bubble_cobble:is_raid/type/grass"
         }
       ],
       "entries": [
@@ -95,7 +95,7 @@
       "conditions": [
         {
           "condition": "minecraft:reference",
-          "name": "cobblemonraiddens:type_poison"
+          "name": "bubble_cobble:is_raid/type/poison"
         }
       ],
       "entries": [
@@ -110,7 +110,7 @@
       "conditions": [
         {
           "condition": "minecraft:reference",
-          "name": "cobblemonraiddens:type_electric"
+          "name": "bubble_cobble:is_raid/type/electric"
         }
       ],
       "entries": [
@@ -125,7 +125,7 @@
       "conditions": [
         {
           "condition": "minecraft:reference",
-          "name": "cobblemonraiddens:type_ground"
+          "name": "bubble_cobble:is_raid/type/ground"
         }
       ],
       "entries": [
@@ -140,7 +140,7 @@
       "conditions": [
         {
           "condition": "minecraft:reference",
-          "name": "cobblemonraiddens:type_psychic"
+          "name": "bubble_cobble:is_raid/type/psychic"
         }
       ],
       "entries": [
@@ -155,7 +155,7 @@
       "conditions": [
         {
           "condition": "minecraft:reference",
-          "name": "cobblemonraiddens:type_rock"
+          "name": "bubble_cobble:is_raid/type/rock"
         }
       ],
       "entries": [
@@ -170,7 +170,7 @@
       "conditions": [
         {
           "condition": "minecraft:reference",
-          "name": "cobblemonraiddens:type_ice"
+          "name": "bubble_cobble:is_raid/type/ice"
         }
       ],
       "entries": [
@@ -185,7 +185,7 @@
       "conditions": [
         {
           "condition": "minecraft:reference",
-          "name": "cobblemonraiddens:type_bug"
+          "name": "bubble_cobble:is_raid/type/bug"
         }
       ],
       "entries": [
@@ -200,7 +200,7 @@
       "conditions": [
         {
           "condition": "minecraft:reference",
-          "name": "cobblemonraiddens:type_dragon"
+          "name": "bubble_cobble:is_raid/type/dragon"
         }
       ],
       "entries": [
@@ -215,7 +215,7 @@
       "conditions": [
         {
           "condition": "minecraft:reference",
-          "name": "cobblemonraiddens:type_ghost"
+          "name": "bubble_cobble:is_raid/type/ghost"
         }
       ],
       "entries": [
@@ -230,7 +230,7 @@
       "conditions": [
         {
           "condition": "minecraft:reference",
-          "name": "cobblemonraiddens:type_dark"
+          "name": "bubble_cobble:is_raid/type/dark"
         }
       ],
       "entries": [
@@ -245,7 +245,7 @@
       "conditions": [
         {
           "condition": "minecraft:reference",
-          "name": "cobblemonraiddens:type_steel"
+          "name": "bubble_cobble:is_raid/type/steel"
         }
       ],
       "entries": [
@@ -260,7 +260,7 @@
       "conditions": [
         {
           "condition": "minecraft:reference",
-          "name": "cobblemonraiddens:type_fairy"
+          "name": "bubble_cobble:is_raid/type/fairy"
         }
       ],
       "entries": [

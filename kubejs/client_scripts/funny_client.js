@@ -25,4 +25,5 @@ ClientEvents.lang("en_us", event => {
 	event.add("item.minecraft.lingering_potion.effect.girl_power", "Lingering Potion of Girl Power",)
 	event.add("effect.kubejs.girl_power.description", "Gives access to the affectionately-nicknamed \"Trans dash\" by pressing a keybind in mid-air (Mouse 4 by default)")
 	event.add("effect.kubejs.begone.description", "Teleports players to their spawn point",)
+	event.add("key.kubejs.bubble_cobble.dash", "Girl Power Dash",)
 })
