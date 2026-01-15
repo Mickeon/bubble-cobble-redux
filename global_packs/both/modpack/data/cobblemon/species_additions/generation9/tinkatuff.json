@@ -1,0 +1,8 @@
+{
+	"target": "cobblemon:tinkatuff",
+	"baseScale": 0.85,
+	"hitbox": {
+		"width": 1,
+		"height": 1
+	}
+}

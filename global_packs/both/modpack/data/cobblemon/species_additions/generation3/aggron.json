@@ -1,0 +1,9 @@
+{
+	"target": "cobblemon:aggron",
+	"implemented": true,
+	"baseScale": 0.85,
+	"hitbox": {
+		"width": 2,
+		"height": 2
+	}
+}

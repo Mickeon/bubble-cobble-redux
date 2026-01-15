@@ -1,0 +1,8 @@
+{
+  "target": "cobblemon:ironboulder",
+	"baseScale": 0.9,
+	"hitbox": {
+		"width": 2,
+		"height": 2
+	}
+}

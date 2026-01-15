@@ -1,0 +1,8 @@
+{
+	"target": "cobblemon:tinkaton",
+	"baseScale": 0.85,
+	"hitbox": {
+		"width": 1.5,
+		"height": 3
+	}
+}

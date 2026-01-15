@@ -1,0 +1,8 @@
+{
+	"target": "cobblemon:ironmoth",
+	"baseScale": 0.6,
+	"hitbox": {
+		"width": 1.5,
+		"height": 2
+	}
+}

@@ -1,0 +1,9 @@
+{
+	"target": "cobblemon:applin",
+	"baseScale": 0.5,
+	"hitbox": {
+		"width": 0.4,
+		"height": 0.5,
+		"fixed": false
+	}
+}

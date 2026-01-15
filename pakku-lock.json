@@ -1933,48 +1933,6 @@
             ]
         },
         {
-            "pakku_id": "qEnPT1FDEsI5BOdf",
-            "pakku_links": [
-                "rcNaZofHJ2yMvMzg"
-            ],
-            "type": "DATA_PACK",
-            "side": "SERVER",
-            "slug": {
-                "modrinth": "complete-cobblemon-collection-myths-and-legends-compat"
-            },
-            "name": {
-                "modrinth": "Complete Cobblemon Collection"
-            },
-            "id": {
-                "modrinth": "qoL4kNxC"
-            },
-            "files": [
-                {
-                    "type": "modrinth",
-                    "file_name": "CCC_1.9.2.zip",
-                    "mc_versions": [
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "datapack"
-                    ],
-                    "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/qoL4kNxC/versions/AYOYyMAk/CCC_1.9.2.zip",
-                    "id": "AYOYyMAk",
-                    "parent_id": "qoL4kNxC",
-                    "hashes": {
-                        "sha512": "6488f932453fdfa02762d02deaa223cb3c1fcb94c6f4b8f8d7cc39b11cc94472b97365ff912f888b3fa18ba6d5fa4a6605cf78a9b771ae3876be5f876774f6b5",
-                        "sha1": "d4c88abf7601ac27157033e10f0059e95f568d5b"
-                    },
-                    "required_dependencies": [
-                        "MdwFAVRL"
-                    ],
-                    "size": 16593741,
-                    "date_published": "2025-12-18T01:19:30.149651Z"
-                }
-            ]
-        },
-        {
             "pakku_id": "Zc4IretlAaO2VeVD",
             "type": "MOD",
             "side": "SERVER",

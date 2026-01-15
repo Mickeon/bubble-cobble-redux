@@ -1,0 +1,8 @@
+{
+	"target": "cobblemon:gougingfire",
+	"baseScale": 1.3,
+	"hitbox": {
+		"width": 2.5,
+		"height": 2.5
+	}
+}

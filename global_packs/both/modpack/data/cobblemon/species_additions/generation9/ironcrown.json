@@ -1,0 +1,8 @@
+{
+	"target": "cobblemon:ironleaves",
+	"baseScale": 0.9,
+	"hitbox": {
+		"width": 1.5,
+		"height": 2
+	}
+}

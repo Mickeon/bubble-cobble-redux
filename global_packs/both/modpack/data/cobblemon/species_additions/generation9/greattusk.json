@@ -1,0 +1,8 @@
+{
+	"target": "cobblemon:greattusk",
+	"baseScale": 0.7,
+	"hitbox": {
+		"width": 2,
+		"height": 2
+	}
+}
