@@ -5410,7 +5410,7 @@
         {
             "pakku_id": "IXBUon5ytTw6qdYV",
             "type": "MOD",
-            "side": "BOTH",
+            "side": "SERVER",
             "slug": {
                 "modrinth": "log-begone"
             },
@@ -8134,6 +8134,43 @@
                     ],
                     "size": 825317,
                     "date_published": "2025-12-11T07:06:51.967528Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "bsiTRiILBkC95eQq",
+            "type": "MOD",
+            "side": "SERVER",
+            "slug": {
+                "modrinth": "smart-item-deleter-v2"
+            },
+            "name": {
+                "modrinth": "Smart item deleter V2"
+            },
+            "id": {
+                "modrinth": "bhzgSHHz"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "smart_item_deleter_v2-0.3.1-neoforged.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/bhzgSHHz/versions/gDvvKbrI/smart_item_deleter_v2-0.3.1-neoforged.jar",
+                    "id": "gDvvKbrI",
+                    "parent_id": "bhzgSHHz",
+                    "hashes": {
+                        "sha512": "c8361122f87a9e9087a286cbe58694939f39771b3989fdc893ad526086a9a5e024f303c25ad49008704c7b7a9ae4eeb5e18dfae8bdf9127113394abb61aa7658",
+                        "sha1": "0952c9fc9a3e208e911a97830f57423982774ffa"
+                    },
+                    "required_dependencies": [],
+                    "size": 41168,
+                    "date_published": "2025-11-29T00:37:31.860697Z"
                 }
             ]
         },
