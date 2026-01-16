@@ -1576,7 +1576,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "timcore-neoforge-1.7.1-1.27.1.jar",
+                    "file_name": "timcore-neoforge-1.7.1-1.28.0.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -1584,18 +1584,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/lVP9aUaY/versions/8jSba7R1/timcore-neoforge-1.7.1-1.27.1.jar",
-                    "id": "8jSba7R1",
+                    "url": "https://cdn.modrinth.com/data/lVP9aUaY/versions/W3mOYgvQ/timcore-neoforge-1.7.1-1.28.0.jar",
+                    "id": "W3mOYgvQ",
                     "parent_id": "lVP9aUaY",
                     "hashes": {
-                        "sha512": "547251799dc4bbc2d87a00cd87af29e8504329967731fc0118b52dcbf7ba44f6c1eb33b305448b04f64a31d9a043da26bd7e1e9c44e3e37eb33c7890a122fec8",
-                        "sha1": "032080d436d5c1c3c0f7e4b33a312f9529ab0a29"
+                        "sha512": "26d677d6e70b9ff182e9263ae521efa53e42cafedb36141761059f3cd926b30e04baaed631d06604366f3497b6a97a10b2a4a3cc70c060e2be102780ee07cdfa",
+                        "sha1": "7909287619930f6cf827c387363aff9336b5c1f6"
                     },
-                    "required_dependencies": [
-                        "MdwFAVRL"
-                    ],
-                    "size": 209769,
-                    "date_published": "2025-12-29T18:08:10.738925Z"
+                    "required_dependencies": [],
+                    "size": 273914,
+                    "date_published": "2026-01-16T02:48:37.155659Z"
                 }
             ]
         },

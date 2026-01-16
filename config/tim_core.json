@@ -18,5 +18,7 @@
     "ultra-rare": "tim_core.buckets.ultra_rare"
   },
   "unknownBucketKey": "tim_core.buckets.unknown",
+  "successKey": "tim_core.result.success",
+  "failureKey": "tim_core.result.failure",
   "debug": false
 }
