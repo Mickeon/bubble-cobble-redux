@@ -57,7 +57,7 @@ NativeEvents.onEvent($ScreenEvent$Init$Post, event => {
 		// .pos(screen.width * 0.5 + 104, screen.height * 0.5 - 24)
 		.pos(mods_button.right, mods_button.getY())
 		.width(32)
-		.tooltip($Tooltip.create(Text.translatableWithFallback("", "Toggle some mods\nyou HATE")))
+		.tooltip($Tooltip.create(Text.translatableWithFallback("", "Turn off the few\nmods you HATE")))
 		.build()
 
 	screen.addRenderableWidget(modsets_button)
