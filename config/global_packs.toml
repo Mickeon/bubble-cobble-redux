@@ -20,5 +20,5 @@ log_pack_ids = false
 
 [datapacks]
 	required = ["global_packs/datapacks/", "global_packs/both"]
-	optional = ["global_packs/datapacks_optional"]
+	optional = []
 	enable_builtin = []
