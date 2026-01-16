@@ -1,0 +1,13 @@
+{
+  "logbegone": {
+    "phrases": [
+      "PersistentEntitySectionManager]: Entity PokemonEntity",
+      "moved too quickly!",
+      "[voicechat/]",
+      "[Colorful Hearts/]",
+      "Received version check data:",
+      "copycats-neoforge.mixins.json:foundation.copycat.CopycatBlockMixin"
+    ],
+    "regex": []
+  }
+}

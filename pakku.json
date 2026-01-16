@@ -111,6 +111,9 @@
 
         "spark": {
             "side": "SERVER"
+        },
+        "log-begone": {
+            "side": "SERVER"
         }
     }
 }
