@@ -71,6 +71,20 @@ ClientEvents.generateAssets("before_mods", event => {
 			}
 			if (helpful) {
 				result.cycle_time = HELPFUL_CYCLE_TIME
+				result.conditions = {
+					screens: {
+						any_of: [
+							"tipsmod:built-in",
+							"minecraft:receiving_level_screen",
+							"minecraft:generic_waiting_screen",
+							"minecraft:options_screen",
+							"minecraft:controls_screen",
+							"minecraft:mouse_settings_screen",
+							"minecraft:skin_customization_screen",
+							"minecraft:stats_screen",
+						]
+					}
+				}
 			}
 
 			let result_path = `bubble_cobble:tips/${name}/${j}`

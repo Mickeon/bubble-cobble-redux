@@ -1,10 +1,14 @@
 {
   "type": "tipsmod:simple",
+  "title": {"text":"Blu's Message of the Day", "bold": true, "underlined": true, "color": "#0064FF"},
   "text": ["",{"text":"mmnghgnh... yeah... change those f","color":"#C569C5"},{"text":"u","obfuscated":true,"color":"#C569C5"},{"text":"ckin' settings, babe..., f","color":"#C569C5"},{"text":"u","obfuscated":true,"color":"#C569C5"},{"text":"uck,,,","color":"#C569C5"}],
+  "cycle_time": 1000,
   "conditions": {
     "screens": {
       "any_of": [
-        "minecraft:options_screen"
+        "minecraft:options_screen",
+        "minecraft:controls_screen",
+        "minecraft:mouse_settings_screen"
       ]
     }
   }
