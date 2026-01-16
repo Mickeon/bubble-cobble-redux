@@ -221,9 +221,9 @@ PlayerEvents.decorateChat(event => {
 	const message = event.message
 	if (message.toLowerCase() == "hi") {
 		// const nearby_pokemon = speaker.level.getEntitiesWithin(AABB.CUBE.inflate(4).move(speaker.x, speaker.y, speaker.z)).filterSelector("@n[type=cobblemon:pokemon, nbt={Pokemon:{PokemonOriginalTrainerType:NONE}}]").first
-		const traced = speaker.rayTrace()
+		let traced = speaker.rayTrace()
 		/** @type {import("com.cobblemon.mod.common.entity.pokemon.PokemonEntity").$PokemonEntity$$Type} */
-		const attacker = traced.entity
+		let attacker = traced.entity
 		if (attacker?.type == "cobblemon:pokemon" && attacker?.nbt.getCompound("Pokemon").get("PokemonOriginalTrainerType") == "NONE") {
 			attacker.cry()
 			attacker.lookAt("eyes", speaker.eyePosition)
