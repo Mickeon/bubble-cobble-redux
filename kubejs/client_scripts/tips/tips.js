@@ -21,6 +21,7 @@
 const TITLE_PLACEHOLDER = Text.translate("Tip").color("gray").bold().underlined()
 const TIPS_FOLDER_PATH = "kubejs/client_scripts/tips/"
 const TIPS_FILENAMES = [
+	"alice",
 	"blu",
 	"candle_helpful",
 	"candle",
@@ -31,7 +32,6 @@ const TIPS_FILENAMES = [
 	"luigi_handbook",
 	"luigi",
 	"madds",
-	"neo",
 	"sol",
 	"unhelpful",
 ]
