@@ -7,7 +7,7 @@
 		,
 		["Craft Paintings or Graffiti from ",{"color":"#83BED9","text":"Immersive Paintings"}," to enjoy the luxury of owning a huge painting of your fursona in your base."]
 		,
-		["Shift Right-Click most special blocks with an empty hand to ",{"color":"light_purple","text":"carry it around"},"! You may carry:\n- Mobs!\n- Chests!\n",{"color":"dark_red","underlined":true,"text":"- NOT SPAWNERS."},"\n- Furnaces!\n\nThe Possibilities are ",{"color":"dark_red","text":"e"},{"color":"gold","text":"n"},{"color":"yellow","text":"d"},{"color":"dark_green","text":"l"},{"color":"aqua","text":"e"},{"color":"dark_blue","text":"s"},{"color":"dark_purple","text":"s"},{"color":"light_purple","text":"!"}]
+		["Shift Right-click most special blocks with an empty hand to ",{"color":"light_purple","text":"carry it around"},"! You may carry:\n- Mobs!\n- Chests!\n",{"color":"dark_red","underlined":true,"text":"- NOT SPAWNERS."},"\n- Furnaces!\n\nThe Possibilities are ",{"color":"dark_red","text":"e"},{"color":"gold","text":"n"},{"color":"yellow","text":"d"},{"color":"dark_green","text":"l"},{"color":"aqua","text":"e"},{"color":"dark_blue","text":"s"},{"color":"dark_purple","text":"s"},{"color":"light_purple","text":"!"}]
 		,
 		["Craft a",{"color":"#83BED9","text":" Construction Stick "},"with ",{"color":"#a84e27","text":"Sticks"}," and various tiers of materials to expedite the boring process of building massive plain walls!"]
 		,
@@ -43,9 +43,9 @@
 		,
 		["",{"color":"#83BED9","text":"Create: Deepfried"}," allows you to make all kinds of fried food with ",{"color":"#83BED9","text":"Frying Oil"},"! \n\n",{"color":"#C3BEB6","italic":true,"text":"Burgers to fries, a shake or a friend, "},"\n",{"color":"#C3BEB6","italic":true,"text":"If you're hungry simply line up at the end."},"\n",{"color":"#C3BEB6","italic":true,"text":"- Beard Burger Master"}]
 		,
-				["If you mine a block while holding a ",{"underlined":true,"text":"different"}," block in your off-hand, it'll",{"color":"#83BED9","text":" immediately replace the one you just mined"},"; save your precious right-clicks for other fun activities!"]
+		["If you mine a block while holding a ",{"underlined":true,"text":"different"}," block in your off-hand, it'll",{"color":"#83BED9","text":" immediately replace the one you just mined"},"; save your precious right-clicks for other fun activities!"]
 		,
-		["",{"color":"#83BED9","text":"Right Click a Fence"}," with your empty hand to turn it into a ",{"color":"#83BED9","underlined":true,"text":"Post"},", which disconnects from all neighboring blocks except other fences!"]
+		["",{"color":"#83BED9","text":"Right-click a Fence"}," with your empty hand to turn it into a ",{"color":"#83BED9","underlined":true,"text":"Post"},", which disconnects from all neighboring blocks except other fences!"]
 		,
 		["Love strip mining but hate getting ",{"color":"#ff9d9d","text":"constantly lost in a"},{"color":"red","text":" maze of your"},{"color":"#db1b1b","text":" own creation"},"? Craft an ",{"color":"#83BED9","text":"Escape Rope"}," with Rope and Iron and never get punished ever!"]
 		,
@@ -59,7 +59,7 @@
 		,
 		["Powder Snow is known to ",{"color":"yellow","text":"Crash "},{"color":"white","text":"the game when stepped in. Tread carefully!"}]
 		,
-		["To avoid inventory clutter, most ",{"color":"#83BED9","text":"Slabs and Stairs"}," are now accessible from full blocks by holding ",{"color":"#83BED9","text":"[Tab]"},"!\nThis, in return, makes",{"color":"#83BED9","text":" Stairs cheaper"},", but ",{"color":"#d98282","text":"Slabs more expensive"},". A small price to pay."]
+		["To avoid inventory clutter, most ",{"color":"#83BED9","text":"Slabs and Stairs"}," are now accessible from full blocks by holding ",{"color":"#83BED9","text":"[","extra":[{"keybind":"key.clutternomore.change_block_shape"},"]!"]},"\nThis, in return, makes",{"color":"#83BED9","text":" Stairs cheaper"},", but ",{"color":"#d98282","text":"Slabs more expensive"},". A small price to pay."]
 		,
 		["",{"color":"#83BED9","text":"Cobblemon Raids"}," allow for up to ",{"color":"#83BED9","text":"4 raiders"}," per lobby, and ",{"color":"#83BED9","text":"2 extra"}," if you're tackling a ",{"color":"gold","text":"⭐⭐⭐⭐⭐⭐ "},"Raid. It's also much more fun; if you find a cool one, let everyone in the server know!"]
 		,
@@ -73,7 +73,7 @@
 		,
 		["",{"color":"gold","text":"⭐⭐⭐⭐⭐"}," and ",{"color":"gold","text":"⭐⭐⭐⭐⭐⭐"},"-Star Cobblemon Raid Dens are ",{"color":"#b84141","text":"VERY difficult"}," but contain incredible rewards, such as ",{"color":"83BED9","text":"tons of "},{"color":"#83BED9","text":"Exp. Candies, Ability Patches"},", and sometimes even ",{"color":"#83BED9","text":"Blank Mega Stones/Z-Crystals/Wishing Stars"},"!"]
 		,
-		["If you just hopped off ",{"color":"#83BED9","text":"Fortnite"}," to play this modpack, you can ease yourself in by accessing ",{"color":"#83BED9","text":"Shoulder Surfing"}," with ",{"color":"#83BED9","text":"[F5]"},"!"]
+		["If you just hopped off ",{"color":"#83BED9","text":"Fortnite"}," to play this modpack, you can ease yourself in by accessing ",{"color":"#83BED9","text":"Shoulder Surfing"}," with",{"color":"#83BED9","text":" [","extra":[{"keybind":"key.togglePerspective"},"]"]},"!"]
 		,
 		["Ever wanted to make a ",{"color":"red","text":"Nether Town"}," but you were scared of the frequent carpet bombing from those giant, flying bastards?\nYou'll be happy to know that ",{"color":"#83BED9","text":"Ghasts"}," (and ",{"color":"#9ed982","text":"Creepers"},") are now ",{"color":"#83BED9","underlined":true,"text":"harmless to the environment"},"."]
 		,
@@ -81,9 +81,9 @@
 		,
 		["Hop off ",{"color":"#7289DA","text":"Discord"}," and hop on our state-of-the-art",{"color":"#83BED9","text":" Proximity Voice Chat"},", which you can set up with",{"color":"#83BED9","text":" [","extra":[{"keybind":"key.voice_chat"},"]"]},"! \n",{"color":"dark_gray","text":"(Friends are not included.)"}]
 		,
-		["EMI might've led you to believe that ",{"color":"#83BED9","text":"Gilded Chests"}," are uncraftable. \nThey",{"italic":true,"text":" are "},{"color":"#83BED9","text":"craftable"}," you just need to click on one of the colors.\nIt's ",{"color":"#83BED9","text":"unintuitive"},", have some patience."]
+		["EMI might've led you to believe that ",{"color":"#83BED9","text":"Gilded Chests"}," are uncraftable. \nThey",{"italic":true,"text":" are "},{"color":"#83BED9","text":"craftable"}," you just need to left-click on one of the colors.\nIt's ",{"color":"#83BED9","text":"unintuitive"},", have some patience."]
 		,
-		["",{"color":"#83BED9","text":"Right-Clicking"}," a ",{"color":"red","text":"Lava Bucket"}," in your inventory with an item",{"italic":true,"text":" (or viceversa)"}," deletes it! A convenient way to ",{"color":"#83BED9","text":"trash loads of Netherrack"}," while meta-slaving for Netherite."]
+		["",{"color":"#83BED9","text":"Right-clicking"}," a ",{"color":"red","text":"Lava Bucket"}," in your inventory with an item",{"italic":true,"text":" (or viceversa)"}," deletes it! A convenient way to ",{"color":"#83BED9","text":"trash loads of Netherrack"}," while meta-slaving for Netherite."]
 		,
 		["Cobblemon's ",{"color":"#83BED9","text":"Pastures"}," allow you to make ",{"color":"#83BED9","text":"Pokémon Eggs"},"; Two parents with ",{"underlined":true,"text":"different OTs"}," have a ",{"color":"#83BED9","text":"MUCH higher Shiny Rate"},", similarly to the Masuda Method in the official games!"]
 		,

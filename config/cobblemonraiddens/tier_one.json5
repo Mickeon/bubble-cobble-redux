@@ -24,7 +24,7 @@
 	// Reward Pokemon number of max IVs. Default: 0
 	"ivs": 1,
 	// The default shiny chance for raid bosses (Set to -1 to use the Cobblemon rate). Default: -1.0
-	"shiny_rate": 0.0051,
+	"shiny_rate": 196,
 	// How much currency is rewarded for clearing a raid boss (Requires CobbleDollars). Default: 1000
 	"currency": 1000,
 	// The max number of Pokemon that can be caught from a raid battle. Default -1.
