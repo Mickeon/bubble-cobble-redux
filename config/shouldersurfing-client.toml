@@ -272,7 +272,7 @@
 	#Whether or not the first person perspective is enabled.
 	first_person_enabled = true
 	#Whether or not the third person front perspective is enabled.
-	third_person_front_enabled = true
+	third_person_front_enabled = false
 	#Whether or not the third person back perspective is enabled.
 	third_person_back_enabled = true
 
@@ -280,11 +280,11 @@
 	#Whether or not to adjust the player model transparency when view is obstructed. Changing this value may require a game restart to take full effect.
 	adjust_player_transparency = true
 	#Whether or not to turn the player model transparent when aiming. This config option only applies when adjust player transparency is enabled.
-	turn_player_transparent_when_aiming = false
+	turn_player_transparent_when_aiming = true
 	#The angle at which the player will no longer be rendered when looking up. Set to 0 to disable.
 	# Default: 0.0
 	# Range: 0.0 ~ 90.0
-	hide_player_when_looking_up_angle = 0.0
+	hide_player_when_looking_up_angle = 2.0
 	#Whether the x-rot of the player should follow the camera x-rot. This config option only applies when camera is decoupled.
 	player_x_rot_follows_camera = false
 	#Whether the y-rot of the player should follow the camera y-rot. This config option only applies when camera is decoupled.
