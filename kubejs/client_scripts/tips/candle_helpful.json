@@ -45,7 +45,7 @@
 		,
 				["If you mine a block while holding a ",{"underlined":true,"text":"different"}," block in your off-hand, it'll",{"color":"#83BED9","text":" immediately replace the one you just mined"},"; save your precious right-clicks for other fun activities!"]
 		,
-		["",{"color":"#83BED9","text":"Right Click a Fence"}," with your empty hand to turn it into a ",{"color":"#83BED9","underlined":true,"text":"Post"},", which only connects to other Fences/Posts and not neighboring blocks!"]
+		["",{"color":"#83BED9","text":"Right Click a Fence"}," with your empty hand to turn it into a ",{"color":"#83BED9","underlined":true,"text":"Post"},", which disconnects from all neighboring blocks except other fences!"]
 		,
 		["Love strip mining but hate getting ",{"color":"#ff9d9d","text":"constantly lost in a"},{"color":"red","text":" maze of your"},{"color":"#db1b1b","text":" own creation"},"? Craft an ",{"color":"#83BED9","text":"Escape Rope"}," with Rope and Iron and never get punished ever!"]
 		,
@@ -81,7 +81,7 @@
 		,
 		["Hop off ",{"color":"#7289DA","text":"Discord"}," and hop on our state-of-the-art",{"color":"#83BED9","text":" Proximity Voice Chat"},", which you can set up with",{"color":"#83BED9","text":" [","extra":[{"keybind":"key.voice_chat"},"]"]},"! \n",{"color":"dark_gray","text":"(Friends are not included.)"}]
 		,
-		["JEI might've led you to believe that ",{"color":"#83BED9","text":"Gilded Chests"}," are uncraftable. \nThey",{"italic":true,"text":" are "},{"color":"#83BED9","text":"craftable"}," you just need to click on one of the colors.\nIt's ",{"color":"#83BED9","text":"unintuitive"},", have some patience."]
+		["EMI might've led you to believe that ",{"color":"#83BED9","text":"Gilded Chests"}," are uncraftable. \nThey",{"italic":true,"text":" are "},{"color":"#83BED9","text":"craftable"}," you just need to click on one of the colors.\nIt's ",{"color":"#83BED9","text":"unintuitive"},", have some patience."]
 		,
 		["",{"color":"#83BED9","text":"Right-Clicking"}," a ",{"color":"red","text":"Lava Bucket"}," in your inventory with an item",{"italic":true,"text":" (or viceversa)"}," deletes it! A convenient way to ",{"color":"#83BED9","text":"trash loads of Netherrack"}," while meta-slaving for Netherite."]
 		,
