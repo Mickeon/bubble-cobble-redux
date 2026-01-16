@@ -67,16 +67,13 @@
         "kubejs-offline": {
             "export": false
         },
-        "probejs": {
+        "nbt-autocomplete": {
             "export": false
         },
         "resource_explorer": {
             "export": false
         },
-        "nbt-autocomplete": {
-            "export": false
-        },
-        "nbtedit-reborn": {
+        "probejs": {
             "export": false
         },
 
