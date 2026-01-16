@@ -9,7 +9,7 @@
       {
         "id": "key_19b1243ff05",
         "title": "World Map Settings",
-        "icon": "via_romana:charting_map",
+        "icon": "create:red_sand_paper",
         "action": {
           "type": "KEY",
           "name": "gui.xaero_open_settings",
@@ -20,7 +20,7 @@
       {
         "id": "key_19b14f8cbe7",
         "title": "Open World Map",
-        "icon": "minecraft:stone",
+        "icon": "via_romana:charting_map",
         "action": {
           "type": "KEY",
           "name": "gui.xaero_open_map",
@@ -31,7 +31,7 @@
       {
         "id": "key_19b126f62fc",
         "title": "Toggle in-world Waypoints",
-        "icon": "minecraft:stone",
+        "icon": "biomesoplenty:blackstone_bulb",
         "action": {
           "type": "KEY",
           "name": "gui.xaero_toggle_waypoints",
@@ -42,7 +42,7 @@
       {
         "id": "key_19b12704065",
         "title": "Toggle Minimap",
-        "icon": "minecraft:stone",
+        "icon": "minecraft:filled_map",
         "action": {
           "type": "KEY",
           "name": "gui.xaero_toggle_map",
@@ -103,8 +103,9 @@
       },
       {
         "id": "key_19b1271f7dc",
-        "title": "Jade",
+        "title": "Looked Object Info",
         "icon": "supplementaries:altimeter",
+        "note": "Jade",
         "action": {
           "type": "KEY",
           "name": "key.jade.config",
@@ -119,17 +120,6 @@
         "action": {
           "type": "COMMAND",
           "command": "/owo-config accessories",
-          "delayTicks": 0
-        }
-      },
-      {
-        "id": "cmd_19b12ab9945",
-        "title": "Particles",
-        "icon": "create:experience_nugget",
-        "note": "Particle Core",
-        "action": {
-          "type": "COMMAND",
-          "command": "/configure particle_core particle_core_config",
           "delayTicks": 0
         }
       },
@@ -252,15 +242,27 @@
               "toggle": false,
               "mode": "AUTO"
             }
+          },
+          {
+            "id": "cmd_19b12ab9945",
+            "title": "Particles",
+            "icon": "create:experience_nugget",
+            "note": "Particle Core",
+            "action": {
+              "type": "COMMAND",
+              "command": "/configure particle_core particle_core_config",
+              "delayTicks": 0
+            }
           }
         ]
       }
     ]
   },
   {
-    "id": "Development... (KubeJS \u0026 Co)",
-    "title": "Development... (KubeJS \u0026 Co)",
+    "id": "Development...",
+    "title": "Development...",
     "icon": "brewinandchewin:red_rum",
+    "note": "(KubeJS \u0026 Co.)",
     "children": [
       {
         "id": "cmd_19ada214524",

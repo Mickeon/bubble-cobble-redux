@@ -25,7 +25,7 @@ reducedDebugInfo:false
 renderClouds:"true"
 renderDistance:12
 simulationDistance:8
-screenEffectScale:1.0
+screenEffectScale:0.5
 soundDevice:""
 autoJump:false
 operatorItemsTab:true
@@ -49,7 +49,7 @@ mouseSensitivity:0.45422535211267606
 damageTiltStrength:1.0
 highContrast:false
 narratorHotkey:false
-resourcePacks:["vanilla","fabric","mod_resources","moonlight:merged_pack","mod/ezactions:resourcepacks/ezactions_no_menu_blur"]
+resourcePacks:["vanilla","fabric","mod_resources","moonlight:merged_pack"]
 incompatibleResourcePacks:[]
 lastServer:
 lang:en_us
