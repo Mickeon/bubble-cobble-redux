@@ -1,0 +1,16 @@
+{
+	"match": {
+		"items": [
+			"farmersdelight:glow_berry_custard",
+			"brewinandchewin:glow_berry_marmalade",
+			"brewinandchewin:glittering_grenadine",
+			"mynethersdelight:hot_cream",
+			"create:blaze_cake",
+			"create:creative_blaze_cake",
+			"create_deepfried:glow_berry_honey_glazed_donut",
+			"create_deepfried:glow_berry_chocolate_glazed_donut",
+			"sophisticatedcore:xp_bucket"
+		]
+	},
+	"luminance": 14
+}

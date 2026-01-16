@@ -1,0 +1,18 @@
+{
+	"match": {
+		"items": [
+			"mynethersdelight:golden_egg",
+			"mynethersdelight:enchanted_golden_egg",
+			"mynethersdelight:tear_popsicle",
+			"mynethersdelight:magma_cake_slice",
+			"brewinandchewin:dread_nog",
+			"brewinandchewin:red_rum",
+			"mega_showdown:sparkling_stone_light",
+			"mega_showdown:sparkling_stone_dark",
+			"mega_showdown:dormant_crystal",
+			"mega_showdown:likos_pendant",
+			"mega_showdown:dynamax_candy"
+		]
+	},
+	"luminance": 3
+}

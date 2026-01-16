@@ -1,0 +1,16 @@
+{
+	"match": {
+		"items": [
+			"mega_showdown:adamant_orb",
+			"mega_showdown:lustrous_orb",
+			"mega_showdown:soul_dew",
+			"mega_showdown:red_orb",
+			"mega_showdown:blue_orb",
+			"mega_showdown:star_core",
+			"mega_showdown:adamant_crystal",
+			"mega_showdown:lustrous_globe",
+			"mega_showdown:zygarde_cube"
+		]
+	},
+	"luminance": 10
+}

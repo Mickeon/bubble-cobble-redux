@@ -1,0 +1,27 @@
+{
+	"match": {
+		"items": [
+			"mynethersdelight:deviled_egg",
+			"mynethersdelight:spicy_noodle_soup",
+			"mynethersdelight:bullet_pepper",
+			"mynethersdelight:pepper_powder",
+			"mynethersdelight:stuffed_pepper",
+			"mynethersdelight:spicy_skewer",
+			"mynethersdelight:chilidog",
+			"mynethersdelight:spicy_hoglin_stew",
+			"mynethersdelight:hot_wings",
+			"mynethersdelight:hot_wings_bucket",
+			"mynethersdelight:spicy_curry",
+			"mynethersdelight:rock_soup",
+			"mynethersdelight:burnt_roll",
+			"minersdelight:rock_soup_cup",
+			"minersdelight:spicy_hoglin_stew_cup",
+			"minersdelight:spicy_noodle_soup_cup",
+			"minersdelight:spicy_noodle_soup_cup",
+			"mega_showdown:zygarde_cell",
+			"mega_showdown:zygarde_core",
+			"relics:relic_experience_bottle"
+		]
+	},
+	"luminance": 8
+}

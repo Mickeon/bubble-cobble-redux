@@ -1,0 +1,12 @@
+{
+	"match": {
+		"items": [
+			"minersdelight:glow_squid",
+			"minersdelight:glow_ink_pasta",
+			"minersdelight:glow_ink_pasta",
+			"mowziesmobs:glowing_jelly",
+			"mynethersdelight:hot_cream_cone"
+		]
+	},
+	"luminance": 12
+}

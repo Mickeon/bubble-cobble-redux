@@ -1,0 +1,13 @@
+{
+	"match": {
+		"items": [
+			"monsterplus:curseflame_powder",
+			"monsterplus:soulflame_powder",
+			"biomeswevegone:blue_glowcane_powder",
+			"biomeswevegone:green_glowcane_powder",
+			"biomeswevegone:red_glowcane_powder",
+			"biomeswevegone:yellow_glowcane_powder"
+		]
+	},
+	"luminance": 10
+}
