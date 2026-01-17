@@ -5044,7 +5044,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "kotlinforforge-5.10.0-all.jar",
+                    "file_name": "kotlinforforge-5.11.0-all.jar",
                     "mc_versions": [
                         "1.20.6",
                         "1.21",
@@ -5052,26 +5052,23 @@
                         "1.21.2",
                         "1.21.3",
                         "1.21.4",
-                        "1.21.5",
-                        "1.21.6",
-                        "1.21.7",
-                        "1.21.8"
+                        "1.21.5"
                     ],
                     "loaders": [
                         "forge",
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/ordsPcFz/versions/pp2cY80Q/kotlinforforge-5.10.0-all.jar",
-                    "id": "pp2cY80Q",
+                    "url": "https://cdn.modrinth.com/data/ordsPcFz/versions/NrSebcsG/kotlinforforge-5.11.0-all.jar",
+                    "id": "NrSebcsG",
                     "parent_id": "ordsPcFz",
                     "hashes": {
-                        "sha512": "0c7a23c6b8017c9a24694bc6c0dbcb3d9b4ec630ae2ff965c0ee478ca881ad70f4755388678430b0175c3abe18c66fcbc25ed9be6f600bcdc083743eaecbfc35",
-                        "sha1": "a86a436cb7ffd0509750ba7b078fe88143da1ea6"
+                        "sha512": "b32faa6d616511aff4f8b32197877c53b9f8bee103884ec37c632b5d017bb59a498ec971b68d8d94787043b0c5be666a330b61d285033c341bff83ac28a90992",
+                        "sha1": "4d83e8a8e8cb06b306d2cea1e903680fe513f1f3"
                     },
                     "required_dependencies": [],
-                    "size": 6730190,
-                    "date_published": "2025-09-13T21:05:34.825626Z"
+                    "size": 6869790,
+                    "date_published": "2026-01-17T01:22:52.020905Z"
                 }
             ]
         },
@@ -6182,7 +6179,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "moonlight-1.21-2.29.10-neoforge.jar",
+                    "file_name": "moonlight-1.21-2.29.11-neoforge.jar",
                     "mc_versions": [
                         "1.21",
                         "1.21.1"
@@ -6191,16 +6188,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/twkfQtEc/versions/gBbCg0eN/moonlight-1.21-2.29.10-neoforge.jar",
-                    "id": "gBbCg0eN",
+                    "url": "https://cdn.modrinth.com/data/twkfQtEc/versions/z4AJuNxo/moonlight-1.21-2.29.11-neoforge.jar",
+                    "id": "z4AJuNxo",
                     "parent_id": "twkfQtEc",
                     "hashes": {
-                        "sha512": "e1a648359cc3655a9e768e935634d7b09306019dd02a91e94ef4ef80e2051c4bea27dd8bea0aa188c2dd0d4324b909549ef19e868a7ea0a1d78115302485e81c",
-                        "sha1": "f58d48e56bcf350e819567edb8c983718e2fa231"
+                        "sha512": "133c22835d1745303e5f083ce580a0479cc92b7f4da5eac4fe78ce0b6158da0bf59586dee7fed2835f5f11b377eb260aabe4ecec68de102f8e1d90b5821df822",
+                        "sha1": "b5deaf117d5d0401053b28329e4d942a814177ad"
                     },
                     "required_dependencies": [],
-                    "size": 1548276,
-                    "date_published": "2026-01-14T00:49:49.481989Z"
+                    "size": 1550831,
+                    "date_published": "2026-01-17T11:55:16.900581Z"
                 }
             ]
         },
