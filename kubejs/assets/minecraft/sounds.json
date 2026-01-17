@@ -1,5 +1,5 @@
 {
-    "ui.button.click" : {
+	"ui.button.click" : {
 		"replace": true,
 		"sounds": [
 			{
@@ -73,5 +73,29 @@
 			"pitch": 0.8,
 			"volume": 0.75
 		}]
+	},
+	"entity.generic.extinguish_fire": {
+		"sounds": [{
+			"name": "random\/fizz",
+			"volume": 0.5
+		}],
+		"replace": true,
+		"subtitle": "subtitles.entity.generic.extinguish_fire"
+	},
+	"block.fire.extinguish": {
+		"sounds": [{
+			"name": "random\/fizz",
+			"volume": 0.5
+		}],
+		"replace": true,
+		"subtitle": "subtitles.block.fire.extinguish"
+	},
+	"block.fire.ambient": {
+		"sounds": [{
+			"name": "fire\/fire",
+			"volume": 0.25
+		}],
+		"replace": true,
+		"subtitle": "subtitles.block.fire.ambient"
 	}
 }

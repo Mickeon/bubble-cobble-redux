@@ -554,14 +554,11 @@ PlayerEvents.tick(event => {
 /** @type {typeof import("net.neoforged.neoforge.event.entity.ProjectileImpactEvent").$ProjectileImpactEvent } */
 let $ProjectileImpactEvent  = Java.loadClass("net.neoforged.neoforge.event.entity.ProjectileImpactEvent")
 NativeEvents.onEvent($ProjectileImpactEvent, event => {
-	if (event.projectile.type != "minecraft:fireball") {
+	if (event.projectile.type != "minecraft:fireball" || event.projectile.owner?.type != "minecraft:ghast") {
 		return
 	}
 	/** @type {import("net.minecraft.world.entity.projectile.Fireball").$Fireball$$Type} */
 	const fireball = event.projectile
-	if (fireball.owner.type != "minecraft:ghast") {
-		return
-	}
 
 	if (event.rayTraceResult.type == "entity") {
 		/** @type {$Player} */

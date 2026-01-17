@@ -50,6 +50,7 @@
 /options.txt
 /servers.dat*
 /nicknames.json
+/player_models
 
 # Cache.
 /cache

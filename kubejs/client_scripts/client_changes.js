@@ -67,3 +67,39 @@ NativeEvents.onEvent($ScreenEvent$Init$Post, event => {
 // 	event.client.statusMessage = "Potato"
 // })
 
+
+// Move EMI buttons away from the bottom-right.
+// Currently disabled as there's no reason to be doing this.
+// /** @import {$AbstractWidget} from "net.minecraft.client.gui.components.AbstractWidget" */
+// // https://github.com/emilyploszaj/emi/blob/1.21/xplat/src/main/java/dev/emi/emi/screen/EmiScreenManager.java
+// let $EmiScreenManager = Java.loadClass("dev.emi.emi.screen.EmiScreenManager")
+// /** @type {typeof import("net.minecraft.client.gui.screens.inventory.AbstractContainerScreen").$AbstractContainerScreen } */
+// let $AbstractContainerScreen  = Java.loadClass("net.minecraft.client.gui.screens.inventory.AbstractContainerScreen")
+// NativeEvents.onEvent("highest", $ScreenEvent$Render$Pre, event => {
+// 	console.log(event.screen.getMenu)
+// 	if (!event.screen instanceof $AbstractContainerScreen) {
+// 		return
+// 	}
+
+// 	console.log(event.screen)
+
+// 	const PADDING = 2
+// 	const screen = event.screen
+
+// 	const /** @type {$AbstractWidget} */ emi_config = $EmiScreenManager.emi
+// 	const /** @type {$AbstractWidget} */ emi_search = $EmiScreenManager.search
+// 	const /** @type {$AbstractWidget} */ emi_tree = $EmiScreenManager.tree
+// 	try {
+// 		// Debugging.
+// 		// let widget = emi_search
+// 		// console.log(`pos  x: ${widget.getX()}\ty: ${widget.getY()}`)
+// 		// console.log(`base x: ${widget.baseX()}\ty: ${widget.baseY()}`)
+// 		// console.log(`size x: ${widget.getWidth()}\ty: ${widget.getHeight()}`)
+// 		// console.log(`rectangle ${widget.rectangle}`)
+
+// 		emi_config.setX(emi_search.getX() - emi_config.getWidth() - PADDING)
+// 		emi_tree.setX(emi_config.getX() - emi_tree.getWidth() - PADDING)
+// 	} catch (error) {
+// 		console.error(error)
+// 	}
+// })
