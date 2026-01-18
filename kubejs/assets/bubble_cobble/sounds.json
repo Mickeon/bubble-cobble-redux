@@ -116,5 +116,10 @@
 			"name": "bubble_cobble:life_got",
 			"pitch": 0.9
 		}]
+	},
+	"chat": {
+		"sounds": [
+			"bubble_cobble:chat"
+		]
 	}
 }

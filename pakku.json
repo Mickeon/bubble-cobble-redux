@@ -15,7 +15,6 @@
         "!config/jade/jade.json",
         "!config/maplink/general.json5",
         "!config/maplink/friends.json5",
-        "!config/sounds/chat.json",
         "!config/sounds/event.json",
         "!config/sounds/mod_utils.json",
         "!config/sounds/ui.json",
