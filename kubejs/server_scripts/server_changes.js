@@ -298,6 +298,7 @@ PlayerEvents.decorateChat(event => {
 
 // Some items don't abide by the Mending Reworked balance. Let's have them to, albeit jankily.
 // Use Diamonds instead of Netherite Ingots to repair Netherite tools.
+// Use Rope to repair Escape Rope.
 ServerEvents.tags("item", event => {
 	event.add("bubble_cobble:netherite_diamond_repairable",
 		"constructionstick:netherite_stick",
@@ -309,6 +310,17 @@ ServerEvents.tags("item", event => {
 let $AnvilUpdateEvent  = Java.loadClass("net.neoforged.neoforge.event.AnvilUpdateEvent")
 NativeEvents.onEvent($AnvilUpdateEvent, event => {
 	const { left, right } = event
+
+	if (left.id == "gag:escape_rope" && right.hasTag("c:ropes")) {
+		const repair_per_material = left.maxDamage * 0.5
+		const repair_amount = Math.min(repair_per_material * right.count, left.maxDamage)
+		const new_damage = Math.max(left.damageValue - repair_amount, 0)
+		event.cost = 1
+		event.materialCost = Math.ceil(repair_amount / repair_per_material)
+		event.output = left.copy()
+		event.output.damageValue = new_damage
+		return
+	}
 
 	if (left.hasTag("bubble_cobble:netherite_diamond_repairable") && right.id == "minecraft:netherite_ingot") {
 		event.setCanceled(true)
@@ -341,7 +353,9 @@ ServerEvents.tags("item", event => {
 	])
 })
 
-// Replace destroyed blocks with the blocks in your offhand
+// Replace destroyed blocks with the blocks in your offhand.
+/** @type {typeof import("dev.latvian.mods.kubejs.block.BlockRightClickedKubeEvent").$BlockRightClickedKubeEvent } */
+let $BlockRightClickedKubeEvent  = Java.loadClass("dev.latvian.mods.kubejs.block.BlockRightClickedKubeEvent")
 /** @type {typeof import("net.minecraft.world.item.context.UseOnContext").$UseOnContext } */
 let $UseOnContext  = Java.loadClass("net.minecraft.world.item.context.UseOnContext")
 /** @type {typeof import("net.minecraft.world.phys.BlockHitResult").$BlockHitResult } */
@@ -358,7 +372,7 @@ BlockEvents.broken(event => {
 	}
 	const held_item = player.offHandItem
 	const held_block = held_item.block
-	if (!held_block) {
+	if (!held_block && held_item.id != "kubejs:trowel") {
 		return
 	}
 
@@ -377,7 +391,8 @@ BlockEvents.broken(event => {
 		// These usually include grass, torches, etc., or blocks whose destruction may be accidental.
 		return
 	}
-	if (held_block.defaultBlockState().getDestroySpeed(level, broken_pos) <= 0.1) {
+
+	if (held_block && held_block.defaultBlockState().getDestroySpeed(level, broken_pos) <= 0.1) {
 		// And don't let any block that would be broken instantly do the replacing.
 		// These usually include grass, torches, etc., or blocks whose placement may be accidental.
 		return
@@ -390,6 +405,16 @@ BlockEvents.broken(event => {
 		if (!level.getBlock(broken_pos).hasTag("minecraft:air")) {
 			// Failsafe to not place blocks accidentally in front/back.
 			player.playNotifySound("bubble_cobble:buzz", "players", 1.0, 1.0)
+			return
+		}
+
+		// Annoying special case. I don't know why the RightClickedEvent isn't fired in useOn().
+		if (held_item.id == "kubejs:trowel") {
+			global.use_trowel_on_block(new $BlockRightClickedKubeEvent(
+				held_item, player, "off_hand", broken_pos, player.facing, new $BlockHitResult(
+					player.eyePosition, player.facing, broken_pos, false
+				)
+			))
 			return
 		}
 
@@ -408,8 +433,6 @@ BlockEvents.broken(event => {
 				// level.playSound(player, broken_pos, sound_type.placeSound, "blocks")
 				player.playNotifySound(sound_type.placeSound, "blocks", 1.0, 1.0)
 			}
-		} else {
-			console.warn(`Somehow held block for item ${held_item.id} is null. Investigate?`)
 		}
 		if (interaction_result.shouldSwing()) {
 			level.server.scheduleInTicks(3, callback => {
@@ -424,12 +447,7 @@ BlockEvents.broken(event => {
 			// Quite annoying that I depend on broken_level_block for this, because of the getProperties() Map.
 			level.setBlock(broken_pos, Block.withProperties(placed_block, broken_level_block.getProperties()), 2)
 		}
-		// player.swing("off_hand", true)
-		// Block.getBlock().stateDefinition.
-		// held_item.block.invokeGetSoundType("handcrafted:acacia_bench").placeSound
 	})
-	// event.level.setBlock()
-
 })
 
 
