@@ -1,0 +1,14 @@
+{
+    "pokemon": {
+        "species": "bombirdier",
+        "moves": [
+            "dualwingbeat",
+            "payback",
+            "rocktomb",
+            "pluck"
+        ]
+    },
+    "raid_tier": "TIER_FOUR",
+    "raid_type": "FLYING",
+    "weight": 20.0
+}

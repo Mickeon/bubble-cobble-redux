@@ -1,0 +1,14 @@
+{
+    "pokemon": {
+        "species": "seismitoad",
+        "moves": [
+            "drainpunch",
+            "uproar",
+            "bubblebeam",
+            "round"
+        ]
+    },
+    "raid_tier": "TIER_FOUR",
+    "raid_type": "WATER",
+    "weight": 20.0
+}

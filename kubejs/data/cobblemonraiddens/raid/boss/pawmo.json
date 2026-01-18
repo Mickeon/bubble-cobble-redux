@@ -1,0 +1,14 @@
+{
+    "pokemon": {
+        "species": "pawmo",
+        "moves": [
+            "slam",
+            "spark",
+            "bite",
+            "dig"
+        ]
+    },
+    "raid_tier": "TIER_THREE",
+    "raid_type": "ELECTRIC",
+    "weight": 20.0
+}

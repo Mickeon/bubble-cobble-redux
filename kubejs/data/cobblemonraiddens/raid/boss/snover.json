@@ -1,0 +1,14 @@
+{
+    "pokemon": {
+        "species": "snover",
+        "moves": [
+            "icywind",
+            "razorleaf",
+            "iceshard",
+            "leafage"
+        ]
+    },
+    "raid_tier": "TIER_THREE",
+    "raid_type": "GRASS",
+    "weight": 20.0
+}

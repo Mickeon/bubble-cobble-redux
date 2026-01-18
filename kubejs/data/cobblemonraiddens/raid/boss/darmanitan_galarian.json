@@ -1,0 +1,20 @@
+{
+    "pokemon": {
+        "species": "darmanitan",
+        "moves": [
+            "iciclecrash",
+            "bite",
+            "headbutt",
+            "icepunch"
+        ]
+    },
+    "raid_tier": "TIER_FIVE",
+    "raid_type": "ICE",
+    "weight": 20.0,
+    "base_form": [
+        {
+            "name": "galarian",
+            "value": true
+        }
+    ]
+}

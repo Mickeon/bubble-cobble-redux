@@ -1,0 +1,14 @@
+{
+    "pokemon": {
+        "species": "ragingbolt",
+        "moves": [
+            "discharge",
+            "thunderclap",
+            "dragonpulse",
+            "calmmind"
+        ]
+    },
+    "raid_tier": "TIER_SIX",
+    "raid_type": "ELECTRIC",
+    "weight": 10.0
+}

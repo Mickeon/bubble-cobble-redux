@@ -1,0 +1,14 @@
+{
+    "pokemon": {
+        "species": "stunfisk",
+        "moves": [
+            "discharge",
+            "muddywater",
+            "mudbomb",
+            "mudshot"
+        ]
+    },
+    "raid_tier": "TIER_FOUR",
+    "raid_type": "GROUND",
+    "weight": 20.0
+}

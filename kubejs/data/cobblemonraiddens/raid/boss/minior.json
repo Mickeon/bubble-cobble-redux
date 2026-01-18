@@ -1,0 +1,14 @@
+{
+    "pokemon": {
+        "species": "minior",
+        "moves": [
+            "powergem",
+            "doubleedge",
+            "rollout",
+            "ancientpower"
+        ]
+    },
+    "raid_tier": "TIER_FOUR",
+    "raid_type": "ROCK",
+    "weight": 20.0
+}

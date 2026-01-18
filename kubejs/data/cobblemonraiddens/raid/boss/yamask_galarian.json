@@ -1,0 +1,18 @@
+{
+    "pokemon": {
+        "species": "yamask",
+        "moves": [
+            "brutalswing",
+            "astonish"
+        ]
+    },
+    "raid_tier": "TIER_TWO",
+    "raid_type": "GROUND",
+    "weight": 20.0,
+    "base_form": [
+        {
+            "name": "galarian",
+            "value": true
+        }
+    ]
+}

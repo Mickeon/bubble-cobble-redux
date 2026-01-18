@@ -1,0 +1,14 @@
+{
+    "pokemon": {
+        "species": "arctibax",
+        "moves": [
+            "takedown",
+            "icefang",
+            "bite",
+            "tackle"
+        ]
+    },
+    "raid_tier": "TIER_FOUR",
+    "raid_type": "DRAGON",
+    "weight": 20.0
+}
