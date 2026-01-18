@@ -21,9 +21,9 @@
 		},
 		"isDarkMode": false,
 		"showEquippedStackSlotType": true,
-		"entityLooksAtMouseCursor": false,
+		"entityLooksAtMouseCursor": true,
 		"allowSideBarCraftingGrid": true,
-		"showGroupTabs": true,
+		"showGroupTabs": false,
 		"hoveredOptions": {
 			"brightenHovered": true,
 			"cycleBrightness": true,

@@ -258,13 +258,13 @@ ItemEvents.modifyTooltips(event => {
 	event.modify(["sophisticatedbackpacks:deposit_upgrade", "sophisticatedbackpacks:advanced_deposit_upgrade"], text => {
 		text.removeLine(1)
 		text.insert(1, Text.translate("Deposits items from backpack when pressing %s on an inventory", [
-			Text.keybind("keybind.sophisticatedbackpacks.inventory_interaction").white()]).color(MASCOT_COLOR_DARK)
+			Text.keybind("key.sophisticatedbackpacks.inventory_interaction").white()]).color(MASCOT_COLOR_DARK)
 		)
 	})
 	event.modify(["sophisticatedbackpacks:restock_upgrade", "sophisticatedbackpacks:advanced_restock_upgrade"], text => {
 		text.removeLine(1)
 		text.insert(1, Text.translate("Restocks items from backpack when pressing %s on an inventory", [
-			Text.keybind("keybind.sophisticatedbackpacks.inventory_interaction").white()]).color(MASCOT_COLOR_DARK)
+			Text.keybind("key.sophisticatedbackpacks.inventory_interaction").white()]).color(MASCOT_COLOR_DARK)
 		)
 	})
 

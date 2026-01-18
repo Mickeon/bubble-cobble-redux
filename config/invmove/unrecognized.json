@@ -164,7 +164,8 @@
     "it.hurts.sskirillss.relics.client.screen.description.research.AbilityResearchScreen": true,
     "dev.imb11.sounds.gui.SoundsConfigScreen": true,
     "net.minecraft.client.gui.screens.options.ChatOptionsScreen": true,
-    "settingdust.mod_sets.game.ModSetsConfigScreen": true
+    "settingdust.mod_sets.game.ModSetsConfigScreen": true,
+    "io.wispforest.accessories.client.gui.AccessoriesScreen": true
   },
   "hideBackground": {
     "dev.emi.emi.screen.RecipeScreen": false,

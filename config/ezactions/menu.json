@@ -82,7 +82,7 @@
       },
       {
         "id": "cmd_19b12afd6fe",
-        "title": "Custom Model (Safety)",
+        "title": "Custom Player Models (Safety)",
         "icon": "minecraft:player_head",
         "action": {
           "type": "COMMAND",
@@ -102,15 +102,14 @@
         }
       },
       {
-        "id": "key_19b1271f7dc",
-        "title": "Looked Object Info",
+        "id": "cmd_19bd27f622c",
+        "title": "Infobox when staring at things",
         "icon": "supplementaries:altimeter",
         "note": "Jade",
         "action": {
-          "type": "KEY",
-          "name": "key.jade.config",
-          "toggle": false,
-          "mode": "AUTO"
+          "type": "COMMAND",
+          "command": "/jadec config",
+          "delayTicks": 0
         }
       },
       {
@@ -320,18 +319,18 @@
         "icon": "create:brass_hand",
         "action": {
           "type": "KEY",
-          "name": "keybind.sophisticatedcore.item_highlight",
+          "name": "key.sophisticateditemactions.item_highlight",
           "toggle": false,
           "mode": "AUTO"
         }
       },
       {
         "id": "key_19b1253d20e",
-        "title": "Restock Item from Storage/Backpack",
+        "title": "Restock Item from Storages",
         "icon": "sophisticatedbackpacks:restock_upgrade",
         "action": {
           "type": "KEY",
-          "name": "keybind.sophisticatedcore.restock_item",
+          "name": "key.sophisticateditemactions.restock_item",
           "toggle": false,
           "mode": "AUTO"
         }
@@ -352,7 +351,7 @@
         "id": "key_19b125fd2bd",
         "title": "Toggle Upgrade in the 2nd slot",
         "icon": "create:cardboard_package_12x10",
-        "note": "(Backpack)",
+        "note": "Backpack",
         "action": {
           "type": "KEY",
           "name": "keybind.sophisticatedbackpacks.toggle_upgrade_1",
@@ -374,11 +373,11 @@
       },
       {
         "id": "key_19b124db951",
-        "title": "Deposit Item into Storage/Backpack",
+        "title": "Deposit Item into Storages",
         "icon": "sophisticatedbackpacks:deposit_upgrade",
         "action": {
           "type": "KEY",
-          "name": "keybind.sophisticatedcore.deposit_item",
+          "name": "key.sophisticateditemactions.deposit_item",
           "toggle": false,
           "mode": "AUTO"
         }
@@ -389,7 +388,7 @@
         "icon": "sophisticatedbackpacks:advanced_restock_upgrade",
         "action": {
           "type": "KEY",
-          "name": "keybind.sophisticatedbackpacks.inventory_interaction",
+          "name": "key.sophisticatedbackpacks.inventory_interaction",
           "toggle": false,
           "mode": "AUTO"
         }

@@ -39,6 +39,8 @@ const DISABLED_KEY_IDS = new Set([
 	"key.cpm.qa_14",
 	"key.cpm.qa_15",
 	"key.cpm.qa_16",
+	"key.sophisticatedsorter.sort",
+	"key.sophisticatedsorter.disable",
 ])
 
 if (Platform.isClientEnvironment()) {
