@@ -318,6 +318,9 @@ StartupEvents.modifyCreativeTab("minecraft:tools_and_utilities", event => {
 	// event.removeFromParent(Ingredient.of("#minecraft:boats").except(/oak/))
 	// event.removeFromParent(Ingredient.of(/^snowyspirit:.*sled/))
 })
+StartupEvents.modifyCreativeTab("minecraft:redstone_blocks", event => {
+	event.removeFromParent("@copperagebackport")
+})
 
 // Remove all non-max level Enchanted Books from searches, which is more than whatever mod is doing this already.
 // Commenting out for now, as it fails on startup for some reason.
