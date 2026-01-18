@@ -51,7 +51,6 @@ rename_tab("cobblemon:blocks",         " §cCobblemon: §rBlocks ",          "co
 rename_tab("cobblemon:consumables",    " §cCobblemon: §rConsumables ",     "cobblemon:potion")
 rename_tab("cobblemon:evolution_item", " §cCobblemon: §rEvolution Items ", "cobblemon:sun_stone")
 rename_tab("cobblemon:held_item",      " §cCobblemon: §rHeld Items ")
-rename_tab("cobblemon:pokeball",       " §cCobblemon: §rPoké Balls ")
 rename_tab("cobblemon:utility_item",   " §cCobblemon: §rUtility ")
 
 rename_tab("mega_showdown:key_tab",     " §cCobblemon: §r§9Mega Showdown ")
