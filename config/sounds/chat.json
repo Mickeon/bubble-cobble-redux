@@ -20,7 +20,9 @@
 		"id": "mention",
 		"soundEvent": "minecraft:block.note_block.chime"
 	},
-	"mentionKeywords": [],
+	"mentionKeywords": [
+		"@Mickeon"
+	],
 	"ignoreSystemChats": true,
 	"enableChatSoundCooldown": false,
 	"chatSoundCooldown": 0.5
