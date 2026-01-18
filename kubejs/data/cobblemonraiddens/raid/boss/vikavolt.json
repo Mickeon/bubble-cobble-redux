@@ -1,0 +1,14 @@
+{
+    "pokemon": {
+        "species": "vikavolt",
+        "moves": [
+            "bugbuzz",
+            "spark",
+            "bite",
+            "crunch"
+        ]
+    },
+    "raid_tier": "TIER_FOUR",
+    "raid_type": "BUG",
+    "weight": 20.0
+}

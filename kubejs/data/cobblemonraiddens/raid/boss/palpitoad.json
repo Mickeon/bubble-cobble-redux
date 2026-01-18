@@ -1,0 +1,14 @@
+{
+    "pokemon": {
+        "species": "palpitoad",
+        "moves": [
+            "uproar",
+            "bubblebeam",
+            "round",
+            "mudshot"
+        ]
+    },
+    "raid_tier": "TIER_THREE",
+    "raid_type": "WATER",
+    "weight": 20.0
+}

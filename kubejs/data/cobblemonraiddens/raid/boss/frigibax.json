@@ -1,0 +1,14 @@
+{
+    "pokemon": {
+        "species": "frigibax",
+        "moves": [
+            "tackle",
+            "dragontail",
+            "dragonbreath",
+            "icywind"
+        ]
+    },
+    "raid_tier": "TIER_TWO",
+    "raid_type": "DRAGON",
+    "weight": 20.0
+}

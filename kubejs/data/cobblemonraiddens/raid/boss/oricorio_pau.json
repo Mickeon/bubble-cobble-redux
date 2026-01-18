@@ -1,0 +1,20 @@
+{
+    "pokemon": {
+        "species": "oricorio",
+        "moves": [
+            "hurricane",
+            "revelationdance",
+            "airslash",
+            "acrobatics"
+        ]
+    },
+    "raid_tier": "TIER_FOUR",
+    "raid_type": "PSYCHIC",
+    "weight": 20.0,
+    "base_form": [
+        {
+            "name": "dance_style",
+            "value": "pau"
+        }
+    ]
+}

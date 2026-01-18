@@ -1,0 +1,14 @@
+{
+    "pokemon": {
+        "species": "baxcalibur",
+        "moves": [
+            "iciclecrash",
+            "crunch",
+            "takedown",
+            "dragonclaw"
+        ]
+    },
+    "raid_tier": "TIER_FIVE",
+    "raid_type": "DRAGON",
+    "weight": 20.0
+}

@@ -1,0 +1,14 @@
+{
+    "pokemon": {
+        "species": "swalot",
+        "moves": [
+            "sludgebomb",
+            "acidspray",
+            "pound",
+            "sludge"
+        ]
+    },
+    "raid_tier": "TIER_FOUR",
+    "raid_type": "POISON",
+    "weight": 20.0
+}

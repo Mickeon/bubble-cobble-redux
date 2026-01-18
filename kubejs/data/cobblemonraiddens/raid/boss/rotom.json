@@ -1,0 +1,14 @@
+{
+    "pokemon": {
+        "species": "rotom",
+        "moves": [
+            "hex",
+            "shockwave",
+            "electroball",
+            "thundershock"
+        ]
+    },
+    "raid_tier": "TIER_FOUR",
+    "raid_type": "ELECTRIC",
+    "weight": 20.0
+}
