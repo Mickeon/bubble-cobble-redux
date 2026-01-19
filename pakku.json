@@ -97,6 +97,12 @@
         "armor-statues": {
             "side": "BOTH"
         },
+        "sophisticated-item-actions": {
+            "side": "BOTH"
+        },
+        "sophisticated-sorter": {
+            "side": "BOTH"
+        },
 
         "preloading-tricks": {
             "side": "CLIENT"

@@ -5497,7 +5497,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "lootr-neoforge-1.21.1-1.11.36.110.jar",
+                    "file_name": "lootr-neoforge-1.21.1-1.11.36.111.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -5505,16 +5505,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/EltpO5cN/versions/fAKcTzg3/lootr-neoforge-1.21.1-1.11.36.110.jar",
-                    "id": "fAKcTzg3",
+                    "url": "https://cdn.modrinth.com/data/EltpO5cN/versions/MUSxKfmE/lootr-neoforge-1.21.1-1.11.36.111.jar",
+                    "id": "MUSxKfmE",
                     "parent_id": "EltpO5cN",
                     "hashes": {
-                        "sha512": "9902345ef5cf80aa866329cb8f3db35c327a8a8128e995724add604bd89a996d613983f719fd08b4f082a2a7ff0039f75e3e347e1890a91c14abc667257b6064",
-                        "sha1": "406211226f2fe1e40eb29db9fcdba1a557c1a068"
+                        "sha512": "c31469f24e28fa9b110bffa7e2ce7752b5f44fcfbcff2ed24ba43ca7af37fc640a33a553dcd2f945bd2d95d2adcff0908a030ecad3daee01dab5f5acfff6e680",
+                        "sha1": "7a4100034c0df9d51b67cd13ad7d644d11cb48ca"
                     },
                     "required_dependencies": [],
-                    "size": 939085,
-                    "date_published": "2026-01-03T06:04:17.490318Z"
+                    "size": 947702,
+                    "date_published": "2026-01-19T10:45:07.464195Z"
                 }
             ]
         },
@@ -7449,7 +7449,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "rctapi-neoforge-1.21.1-0.14.5-beta.jar",
+                    "file_name": "rctapi-neoforge-1.21.1-0.14.6-beta.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -7457,19 +7457,19 @@
                         "neoforge"
                     ],
                     "release_type": "beta",
-                    "url": "https://cdn.modrinth.com/data/CBfM2yw7/versions/PPK1g5lk/rctapi-neoforge-1.21.1-0.14.5-beta.jar",
-                    "id": "PPK1g5lk",
+                    "url": "https://cdn.modrinth.com/data/CBfM2yw7/versions/lLY9Henp/rctapi-neoforge-1.21.1-0.14.6-beta.jar",
+                    "id": "lLY9Henp",
                     "parent_id": "CBfM2yw7",
                     "hashes": {
-                        "sha512": "9478932aec3493c262d8f8a211546cd0bebf5e2cf7907247bead80929d7b11daa5b77dcdf14e65f24ccbf3f569bc1c543bf7c8a449938ac029ee86033739051c",
-                        "sha1": "6f0b511797df0bf035234e0eaf196996d34bf6d0"
+                        "sha512": "94f2f76b91c1753a78fe9f991f8bd9e552714af663809b71320d6e329520f9ef9187a5619975479dacdb79185bdc32a77893f9f4949d2d33d1522e6cc070883c",
+                        "sha1": "5d5bbff1d8e8c544f1bb93e7cf33a684ae9ee5bc"
                     },
                     "required_dependencies": [
-                        "lhGA9TYQ",
-                        "MdwFAVRL"
+                        "MdwFAVRL",
+                        "lhGA9TYQ"
                     ],
-                    "size": 219837,
-                    "date_published": "2025-12-27T16:22:40.463802Z"
+                    "size": 222461,
+                    "date_published": "2026-01-18T18:03:30.088877Z"
                 }
             ]
         },
@@ -8151,7 +8151,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "smart_item_deleter_v2-0.3.1-neoforged.jar",
+                    "file_name": "smart_item_deleter_v2-0.4.5-neoforged.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -8159,16 +8159,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/bhzgSHHz/versions/gDvvKbrI/smart_item_deleter_v2-0.3.1-neoforged.jar",
-                    "id": "gDvvKbrI",
+                    "url": "https://cdn.modrinth.com/data/bhzgSHHz/versions/arPzu0cx/smart_item_deleter_v2-0.4.5-neoforged.jar",
+                    "id": "arPzu0cx",
                     "parent_id": "bhzgSHHz",
                     "hashes": {
-                        "sha512": "c8361122f87a9e9087a286cbe58694939f39771b3989fdc893ad526086a9a5e024f303c25ad49008704c7b7a9ae4eeb5e18dfae8bdf9127113394abb61aa7658",
-                        "sha1": "0952c9fc9a3e208e911a97830f57423982774ffa"
+                        "sha512": "ef9549a521a7f4c727b9b9240a19e2ef90459417fabecbd10493d533e61c2b0d7169e918f3656dd19a88b8df3ae3ffe9ce1e06853c61d6931f2d3e7fdb847110",
+                        "sha1": "f43e0e7a7161b97ef584b607fc9dbf9ef622627b"
                     },
                     "required_dependencies": [],
-                    "size": 41168,
-                    "date_published": "2025-11-29T00:37:31.860697Z"
+                    "size": 1103882,
+                    "date_published": "2026-01-18T20:35:49.229017Z"
                 }
             ]
         },
