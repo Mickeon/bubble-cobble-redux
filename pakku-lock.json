@@ -8136,6 +8136,43 @@
             ]
         },
         {
+            "pakku_id": "3PN5dtGyFUrLMnyP",
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "modrinth": "small-doubling"
+            },
+            "name": {
+                "modrinth": "Small Doubling"
+            },
+            "id": {
+                "modrinth": "92WiWwBD"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "smalldoubling-1.0.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/92WiWwBD/versions/OThjuJio/smalldoubling-1.0.jar",
+                    "id": "OThjuJio",
+                    "parent_id": "92WiWwBD",
+                    "hashes": {
+                        "sha512": "854374dfbc1f6001bcb8d468914401b0f4f86de12370b02eba67d2480c4ae2f66abe55b85949af35563ab29b11bf6465457196b5390032cbe2fcfa2c2e0f5c8b",
+                        "sha1": "e49371676365dd759e1b839727a55c7b9602846f"
+                    },
+                    "required_dependencies": [],
+                    "size": 5258,
+                    "date_published": "2025-11-29T13:34:21.210383Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "bsiTRiILBkC95eQq",
             "type": "MOD",
             "side": "SERVER",
