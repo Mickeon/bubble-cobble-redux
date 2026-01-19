@@ -91,8 +91,8 @@ ItemEvents.foodEaten(["biomesoplenty:cattail", "biomeswevegone:cattail_sprout", 
 	}
 })
 ItemEvents.foodEaten("kubejs:super_ghostbusters", event => {
-	event.player?.playNotifySound("supplementaries:block.jar.break", "players", 1, 0.5)
 	event.level.runCommandSilent(`enhancedcelestials setLunarEvent bubble_cobble:ghostbusters`)
+	event.player.playNotifySound("supplementaries:block.jar.break", "players", 1, 0.5)
 })
 
 // Funny Sopping Wet Thing thing.
