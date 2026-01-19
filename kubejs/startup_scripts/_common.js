@@ -1,16 +1,31 @@
 // priority: 1000
 
+Platform.setModName("kubejs", "Bubble Cobble")
+Platform.setModName("bubble_cobble", "Bubble Cobble")
+
 /** @type {typeof import("net.minecraft.world.entity.player.Player").$Player } */
 let $Player  = Java.loadClass("net.minecraft.world.entity.player.Player")
 /** @type {typeof import("dev.latvian.mods.kubejs.item.FoodBuilder").$FoodBuilder } */
 let $FoodBuilder  = Java.loadClass("dev.latvian.mods.kubejs.item.FoodBuilder")
 
 /**
+ * @import {$List} from "java.util.List"
  * @import {$ItemStack} from "net.minecraft.world.item.ItemStack"
+ * @import {$Item} from "net.minecraft.world.item.Item"
+ * @import {$Player} from "net.minecraft.world.entity.player.Player"
+ * @import {$LivingEntity} from "net.minecraft.world.entity.LivingEntity"
+ *
+ * @typedef {import("dev.latvian.mods.kubejs.item.ItemModificationKubeEvent$ItemModifications").$ItemModificationKubeEvent$ItemModifications$$Original} $ItemModifications
  */
 
 const SEC = 20
 const MIN = SEC * 60
+
+/** @param {number} value @param {number} min1 @param {number} max1 @param {number} min2 @param {number} max2 */
+function remap(value, min1, max1, min2, max2) {
+	let value_norm = (value - min1) / (max1 - min1) // Inverse linear interpolation function.
+	return min2 + (max2 - min2) * value_norm // Linear interpolation function.
+}
 
 // TODO: Make a distinction between dev-only and whatnot.
 const DISABLED_KEY_IDS = new Set([

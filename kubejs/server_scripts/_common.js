@@ -8,7 +8,7 @@
 const SEC = 20
 const MIN = SEC * 60
 
-/** @param {number} value @param {number} min1 @param {number} max1  @param {number} min2 @param {number} max2 */
+/** @param {number} value @param {number} min1 @param {number} max1 @param {number} min2 @param {number} max2 */
 function remap(value, min1, max1, min2, max2) {
 	let value_norm = (value - min1) / (max1 - min1) // Inverse linear interpolation function.
 	return min2 + (max2 - min2) * value_norm // Linear interpolation function.

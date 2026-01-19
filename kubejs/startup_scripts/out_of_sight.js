@@ -38,10 +38,6 @@ global.DISABLED_FLUIDS = [
 ]
 
 NativeEvents.onEvent("lowest", $BuildCreativeModeTabContentsEvent, event => {
-	// Caching fails to work, for some reason.
-	// if (!global.EVALUATED_DISABLED_ITEMS) {
-	// 	global.EVALUATED_DISABLED_ITEMS = Ingredient.of(global.DISABLED_ITEMS).stackArray
-	// }
 	let evaluated_items = Ingredient.of(global.DISABLED_ITEMS).stackArray
 	// console.log("Hiding the following items: " + evaluated_items)
 	for (const item of evaluated_items) {

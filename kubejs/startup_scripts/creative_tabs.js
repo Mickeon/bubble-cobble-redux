@@ -304,7 +304,6 @@ remove_and_merge_into_tab("immersive_paintings:paintings", "minecraft:functional
 ])
 
 remove_tab("haventrowel:haventrowel_tab")
-remove_tab("justhammers:creative_tab") // We are basically going to use only 4 Hammers from this.
 StartupEvents.modifyCreativeTab("ribbits:general", event => {
 	event.add("wanderer_ribbit:wanderer_ribbit_spawn_egg")
 	event.addAfter("ribbits:maraca", ["wanderer_ribbit:umbrellaleaf", "wanderer_ribbit:ribbit_map"])
@@ -313,8 +312,6 @@ StartupEvents.modifyCreativeTab("minecraft:tools_and_utilities", event => {
 	event.remove("minecraft:bundle") // In case its experimental datapack is enabled.
 	event.add("minecraft:bundle")
 	event.add("haventrowel:trowel")
-	event.addAfter("minecraft:iron_axe", ["justhammers:iron_reinforced_hammer", "justhammers:iron_hammer"])
-	event.addAfter("minecraft:stone_axe", ["justhammers:stone_reinforced_hammer", "justhammers:stone_hammer"])
 	// event.removeFromParent(Ingredient.of("#minecraft:boats").except(/oak/))
 	// event.removeFromParent(Ingredient.of(/^snowyspirit:.*sled/))
 })

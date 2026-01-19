@@ -1,22 +1,13 @@
-/** @type {typeof import("net.minecraft.world.item.component.Tool").$Tool } */
-let $Tool  = Java.loadClass("net.minecraft.world.item.component.Tool")
 /** @type {typeof import("net.minecraft.world.item.component.ItemAttributeModifiers").$ItemAttributeModifiers } */
 let $ItemAttributeModifiers  = Java.loadClass("net.minecraft.world.item.component.ItemAttributeModifiers")
 /** @type {typeof import("net.neoforged.neoforge.event.brewing.RegisterBrewingRecipesEvent").$RegisterBrewingRecipesEvent } */
 let $RegisterBrewingRecipesEvent  = Java.loadClass("net.neoforged.neoforge.event.brewing.RegisterBrewingRecipesEvent")
-/** @type {typeof import("net.neoforged.neoforge.event.ItemStackedOnOtherEvent").$ItemStackedOnOtherEvent } */
-let $ItemStackedOnOtherEvent  = Java.loadClass("net.neoforged.neoforge.event.ItemStackedOnOtherEvent")
 /** @type {typeof import("net.minecraft.world.entity.animal.CatVariant").$CatVariant } */
 let $CatVariant  = Java.loadClass("net.minecraft.world.entity.animal.CatVariant")
 /** @type {typeof import("net.minecraft.server.level.ServerPlayer").$ServerPlayer } */
 let $ServerPlayer  = Java.loadClass("net.minecraft.server.level.ServerPlayer")
 /** @type {typeof import("net.minecraft.world.level.portal.DimensionTransition").$DimensionTransition } */
 let $DimensionTransition  = Java.loadClass("net.minecraft.world.level.portal.DimensionTransition")
-
-/** @typedef {import("dev.latvian.mods.kubejs.item.ItemModificationKubeEvent$ItemModifications").$ItemModificationKubeEvent$ItemModifications$$Original} $ItemModifications */
-
-Platform.setModName("kubejs", "Bubble Cobble")
-Platform.setModName("bubble_cobble", "Bubble Cobble")
 
 
 ItemEvents.modification(event => {
@@ -32,118 +23,6 @@ ItemEvents.modification(event => {
 	event.modify(["biomesoplenty:cattail", "biomeswevegone:cattail_sprout", "biomeswevegone:fluorescent_cattail_sprout"], /** @param {$ItemModifications} item */ item => {
 		item.food = (new $FoodBuilder()).alwaysEdible().nutrition(1).build()
 	})
-
-	event.modify(["minecraft:potion", "minecraft:splash_potion", "minecraft:lingering_potion"], /** @param {ItemModifications} item */ item => {
-		item.maxStackSize = 12
-	})
-
-	// Lower how much time it takes to eat food in general.
-	event.modify("*", /** @param {$ItemModifications} modified */ modified => {
-		const item = modified.item()
-		const food_properties = item.getFoodProperties(Item.of(item), null)
-		if (!food_properties || food_properties.eatSeconds() <= 0.0) {
-			return
-		}
-
-		// Food with many effects should take longer to eat.
-		const eat_time = food_properties.eatSeconds()
-			* Math.min(0.6 + food_properties.effects().size() * 0.1, 1.0)
-
-		if (eat_time == food_properties.eatSeconds()) {
-			return // Same resulting value, no need to change anything.
-		}
-
-		const nutrition = food_properties.nutrition()
-		const saturation = food_properties.saturation()
-
-		// FoodBuilder does not use the saturation value as is when building. Weird.
-		// The final value results from `nutrition * provided_saturation * 2.0`. This is the reverse formula, plus a check to avoid NaN.
-		const reversed_saturation = (saturation != 0.0 ? (saturation / nutrition / 2.0) : 0.0)
-
-		const food_builder = (new $FoodBuilder())
-			.nutrition(nutrition)
-			.saturation(reversed_saturation)
-			.eatSeconds(eat_time)
-			.alwaysEdible(food_properties.canAlwaysEat())
-
-		if (food_properties.usingConvertsTo().present) {
-			food_builder.usingConvertsTo(food_properties.usingConvertsTo().get())
-		}
-
-		food_properties.effects().forEach(e => {
-			food_builder.effect(
-				e.effect().effect.getKey(),
-				e.effect().duration,
-				e.effect().amplifier,
-				e.probability()
-			)
-		})
-
-		const result = food_builder.build()
-		modified.food = result
-
-		if (saturation.toFixed(1) != result.saturation().toFixed(1)) {
-			console.warn(`Food "${item.id}" original saturation ${food_properties.saturation().toFixed(1)} was changed to ${result.saturation().toFixed(1)}.`)
-		}
-	})
-
-	/**
-	 * @import {$List} from "java.util.List"
-	 * @import {$Tool} from "net.minecraft.world.item.component.Tool"
-	 * @import {$Tool$Rule} from "net.minecraft.world.item.component.Tool$Rule"
-	 */
-
-	// Make hammers... break more stuff.
-	event.modify(["justhammers:stone_hammer", "justhammers:stone_reinforced_hammer", "justhammers:iron_hammer", "justhammers:iron_reinforced_hammer"], /** @param {$ItemModifications} modified */ modified => {
-		const item_path = modified.item().idLocation.getPath()
-		const is_stone = item_path.startsWith("stone")
-
-		const axe_breaking_speed = is_stone ? 3.0 : 5.0
-		const ore_breaking_speed = is_stone ? 2.0 : 4.0
-		/** @type {$Tool} */
-		const tool = modified.componentMap.get("minecraft:tool")
-		/** @type {$List<$Tool$Rule>} */
-		const rules = Utils.newList()
-		rules.addAll(tool.rules())
-		rules.add({speed: axe_breaking_speed, blocks: "#minecraft:mineable/axe", correctForDrops: true})
-		rules.add({speed: axe_breaking_speed, blocks: "#c:glass_blocks", correctForDrops: false})
-		modified.tool = {
-			damagePerBlock: tool.damagePerBlock(),
-			defaultMiningSpeed: tool.defaultMiningSpeed(),
-			rules: rules
-		}
-
-		// Reinforced Hammers lasts disproportionately too much.
-		if (item_path.includes("reinforced")) {
-			let damage = modified.componentMap.get("minecraft:max_damage")
-			modified.maxDamage = damage / (is_stone ? 6 : 3)
-		}
-	})
-
-	/** @param {import("net.minecraft.world.item.Item").$Item$$Type} item  @param {number} max_damage */
-	function set_max_damage(item, max_damage) {
-		event.modify(item, /** @param {$ItemModifications} modified */ modified => {
-			modified.maxDamage = max_damage
-			modified.damage = 0
-		})
-	}
-
-	// Fix Copper Armor having no durability.
-	set_max_damage("minecraft:copper_helmet", 121)
-	set_max_damage("minecraft:copper_chestplate", 176)
-	set_max_damage("minecraft:copper_leggings", 165)
-	set_max_damage("minecraft:copper_boots", 143)
-
-	// Make Sandpaper last double as much.
-	set_max_damage("create:sand_paper", 16)
-	set_max_damage("create:red_sand_paper", 16)
-
-	// TODO: Embed Fortune/Looting II into Golden tools (This is derived from Quark).
-	// Enchantments are not registered at this stage, so it's not possible like this.
-	// event.modify(["minecraft:golden_pickaxe", "minecraft:golden_axe", "minecraft:golden_shovel", "minecraft:golden_hoe", "minecraft:golden_sword", "farmersdelight:golden_knife"], /** @param {$ItemModifications} modified */ modified => {
-	// 	modified.resetComponents().set("minecraft:enchantments", {fortune:2,looting:2})
-	// })
-
 })
 
 StartupEvents.registry("item", event => {
@@ -263,88 +142,7 @@ StartupEvents.registry("item", event => {
 					.effect("brewinandchewin:intoxication", 5 * MIN, 0, 1.0)
 			)
 			.jukeboxPlayable("kubejs:ghostbusters")
-
-	/**
-	 * @param {import("net.minecraft.world.entity.ai.attributes.Attribute").$Attribute$$Type} attribute
-	 * @param {string} id
-	 * @param {number} amount
-	 * @param {import("net.minecraft.world.entity.ai.attributes.AttributeModifier$Operation").$AttributeModifier$Operation$$Type} operation
-	 * @param {import("net.minecraft.world.entity.EquipmentSlotGroup").$EquipmentSlotGroup$$Type} slot
-	 * @returns {import("net.minecraft.world.item.component.ItemAttributeModifiers$Entry").$ItemAttributeModifiers$Entry$$Type}
-	 */
-	function modifier(attribute, amount, operation, id, slot) {
-		return {attribute: attribute, slot: slot, modifier: {amount: amount, id: id, operation: operation}}
-	}
-
-	event.create("trowel")
-			.unstackable()
-			.tooltip(Text.translatableWithFallback("", "Randomly places blocks from your hotbar").gray())
-			.maxDamage(250)
-			.parentModel("minecraft:item/handheld")
-			.tag("minecraft:enchantable/durability")
-			.tag("c:tools")
-			.tag("nova_structures:enchantable/metal")
-			.component("minecraft:attribute_modifiers", new $ItemAttributeModifiers([
-				modifier("minecraft:generic.attack_speed", -2, "add_value", "minecraft:base_attack_speed", "mainhand"),
-				modifier("minecraft:player.block_interaction_range", 2, "add_value", "kubejs:trowel", "hand"),
-				modifier("minecraft:generic.attack_knockback", 5, "add_value", "kubejs:trowel", "mainhand"),
-			], true))
-			.component("minecraft:tool", new $Tool([
-					{ blocks: "#minecraft:incorrect_for_iron_tool", correct_for_drops: false },
-					{ blocks: "#minecraft:mineable/shovel", correct_for_drops: true, speed: 4.0 }
-				], 1.5, 1)
-			)
 })
-
-// Called on both clients and servers, ideally.
-/** @type {typeof import("java.util.Random").$Random } */
-let $Random  = Java.loadClass("java.util.Random")
-/** @type {typeof import("net.minecraft.world.item.context.UseOnContext").$UseOnContext } */
-let $UseOnContext  = Java.loadClass("net.minecraft.world.item.context.UseOnContext")
-/** @type {typeof import("net.minecraft.world.item.context.BlockPlaceContext").$BlockPlaceContext } */
-let $BlockPlaceContext  = Java.loadClass("net.minecraft.world.item.context.BlockPlaceContext")
-/** @type {typeof import("net.minecraft.world.phys.BlockHitResult").$BlockHitResult } */
-let $BlockHitResult  = Java.loadClass("net.minecraft.world.phys.BlockHitResult")
-/** @param {import("dev.latvian.mods.kubejs.block.BlockRightClickedKubeEvent").$BlockRightClickedKubeEvent$$Type} event */
-global.use_trowel_on_block = function (event) {
-	let player = event.player
-	let level = event.level
-	let hand = event.hand
-
-	let candidate_items = Utils.newList()
-	for (let i = 0; i < 9; i++) {
-		let item = player.inventory.getItem(i)
-		if (!item.block) {
-			continue
-		}
-		candidate_items.add(item)
-	}
-	if (candidate_items.isEmpty()) {
-		return false
-	}
-	/** @type {$ItemStack} */
-	let chosen_item = Utils.randomOf($Random.from($Random.getDefault()), candidate_items)
-
-	let block_place_context = new $BlockPlaceContext(
-		player, hand, chosen_item, new $BlockHitResult(
-			event.hitResult.location, event.facing, event.block.getPos(), false
-		)
-	)
-	let interaction_result = chosen_item.useOn(block_place_context)
-	if (interaction_result == "fail") {
-		player.playNotifySound("bubble_cobble:buzz", "blocks", 0.5, 1.0)
-		return false
-	}
-	if (interaction_result.consumesAction()) {
-		event.item.hurtAndBreak(1, player, "mainhand")
-	}
-	if (interaction_result.indicateItemUse()) {
-		let sound_type = chosen_item.block.getSoundType(chosen_item.block.defaultBlockState(), level, event.block.getPos(), player)
-		player.playNotifySound(sound_type.placeSound, "blocks", 1.0, 1.0)
-		player.swing(hand, true)
-	}
-	return true
-}
 
 StartupEvents.modifyCreativeTab("minecraft:food_and_drinks", event => {
 	event.add([
@@ -449,7 +247,7 @@ NativeEvents.onEvent($RegisterBrewingRecipesEvent, event => {
 	event.builder.addRecipe("kubejs:horse_urine_bottle", "cobblemon:carbos" , `minecraft:potion[minecraft:potion_contents={"potion":"kubejs:girl_power"}]`)
 })
 
-/** @param {import("net.minecraft.world.entity.LivingEntity").$LivingEntity$$Type} entity */
+/** @param {$LivingEntity} entity */
 global.begone_effect = function(entity) {
 	if (entity instanceof $ServerPlayer) {
 		let dimension_transition = entity.findRespawnPositionAndUseSpawnBlock(false, $DimensionTransition.DO_NOTHING)
@@ -464,44 +262,6 @@ global.begone_effect = function(entity) {
 StartupEvents.registry("cat_variant", event => {
 	event.createCustom("pipi", () => new $CatVariant("kubejs:textures/entity/cat/pipi.png"))
 })
-
-NativeEvents.onEvent($ItemStackedOnOtherEvent, event => {
-	if (event.clickAction == "SECONDARY") {
-		const item_to_destroy = get_item_to_destroy(event.carriedItem, event.stackedOnItem)
-		if (item_to_destroy) {
-			if (Platform.isClientEnvironment()) {
-				Client.player.playNotifySound("minecraft:block.lava.extinguish", "master", 0.1, 1.0)
-			}
-			if (!item_to_destroy.getComponents().has("minecraft:fire_resistant")) {
-				item_to_destroy.shrink(99)
-			}
-			event.setCanceled(true)
-		}
-	}
-})
-
-if (Platform.isClientEnvironment()) {
-	/** @type {typeof import("net.neoforged.neoforge.client.event.ContainerScreenEvent$Render$Foreground").$ContainerScreenEvent$Render$Foreground } */
-	let $ContainerScreenEvent$Render$Foreground  = Java.loadClass("net.neoforged.neoforge.client.event.ContainerScreenEvent$Render$Foreground")
-	NativeEvents.onEvent($ContainerScreenEvent$Render$Foreground, event => {
-		if (event.containerScreen.menu?.carried.isEmpty()) {
-			return
-		}
-		const container_screen = event.containerScreen
-		const focused_slot = container_screen.focusedSlot
-		if (!focused_slot) {
-			return
-		}
-
-		const item_to_destroy = get_item_to_destroy(Client.player.containerMenu.carried, container_screen.focusedSlot.item)
-		if (item_to_destroy) {
-			event.guiGraphics["renderTooltip(net.minecraft.client.gui.Font,net.minecraft.network.chat.Component,int,int)"](
-				Client.font, Text.translateWithFallback("", "%s to delete", [Text.translateWithFallback("", "Right-click").aqua()]).red(), event.mouseX - container_screen.x, event.mouseY - container_screen.y
-			)
-			event.guiGraphics.fill(focused_slot.x, focused_slot.y, focused_slot.x + 16, focused_slot.y + 16, 100, Color.ORANGE_DYE.getArgb())
-		}
-	})
-}
 
 /** @param {$ItemStack} carried_item @param {$ItemStack} stacked_on_item   */
 function get_item_to_destroy(carried_item, stacked_on_item) {

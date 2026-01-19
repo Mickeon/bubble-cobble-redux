@@ -16,7 +16,6 @@ let $ItemBuilder  = Java.loadClass("dev.latvian.mods.kubejs.item.ItemBuilder")
 
 /**
  * @import {$Level} from "net.minecraft.world.level.Level"
- * @import {$LivingEntity} from "net.minecraft.world.entity.LivingEntity"
  * @import {$Projectile} from "net.minecraft.world.entity.projectile.Projectile"
  * @import {$RegistryKubeEvent} from "dev.latvian.mods.kubejs.registry.RegistryKubeEvent"
  */
@@ -203,11 +202,5 @@ global.finish_using_firebomb_whiskey = function(item_stack, level, entity) {
 		entity.addItemCooldown(item_stack.getItem(), 10)
 	}
 	return entity.eat(level, item_stack)
-}
-
-/** @param {number} value @param {number} min1 @param {number} max1  @param {number} min2 @param {number} max2 */
-function remap(value, min1, max1, min2, max2) {
-	let value_norm = (value - min1) / (max1 - min1) // Inverse linear interpolation function.
-	return min2 + (max2 - min2) * value_norm // Linear interpolation function.
 }
 
