@@ -6659,7 +6659,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "Oh-The-Trees-Youll-Grow-neoforge-1.21.1-5.1.2.jar",
+                    "file_name": "Oh-The-Trees-Youll-Grow-neoforge-1.21.1-5.2.0.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -6667,16 +6667,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/g8NOG5OR/versions/44blpeJ7/Oh-The-Trees-Youll-Grow-neoforge-1.21.1-5.1.2.jar",
-                    "id": "44blpeJ7",
+                    "url": "https://cdn.modrinth.com/data/g8NOG5OR/versions/8i7uvcZx/Oh-The-Trees-Youll-Grow-neoforge-1.21.1-5.2.0.jar",
+                    "id": "8i7uvcZx",
                     "parent_id": "g8NOG5OR",
                     "hashes": {
-                        "sha512": "71c76e8354afd8ba1474e98ba2262a8f71d102d6674e5cc5d841ea318edabf281b5f798d87d931bff3d0fa1adc0ac4443d46faa87625ac48e54d12625c3f1eaf",
-                        "sha1": "32e7cd9e32ac0e4007754b79f5b08f9754c81fda"
+                        "sha512": "047fa35493fa2ba0806ddf4dcabf33e05161cee0aa10546cb1b05c6e730862f37d7d4280d24d76a0b97421301fbc617660bf40ba5269e8655c58d8b3c7a0adc9",
+                        "sha1": "82e14106325bebd5a536493aee90873a6cfb38fb"
                     },
                     "required_dependencies": [],
-                    "size": 136561,
-                    "date_published": "2025-10-11T21:10:41.270469Z"
+                    "size": 165280,
+                    "date_published": "2026-01-19T22:38:20.167602Z"
                 }
             ]
         },
@@ -10038,7 +10038,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "zamega-neoforge-1.4.6.jar",
+                    "file_name": "zamega-neoforge-1.4.7.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -10046,16 +10046,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/2V1Y86sc/versions/BviQhrWf/zamega-neoforge-1.4.6.jar",
-                    "id": "BviQhrWf",
+                    "url": "https://cdn.modrinth.com/data/2V1Y86sc/versions/k6M3zfHw/zamega-neoforge-1.4.7.jar",
+                    "id": "k6M3zfHw",
                     "parent_id": "2V1Y86sc",
                     "hashes": {
-                        "sha512": "391c724164bd9cc65517e6f851c547a31a844d3c016cf01d5048183edc58c598563405c304f9af30925d0239fa77bb3b572c198a38dd615abf1af6d3351e48e2",
-                        "sha1": "67968010967cb95807bbc399bc2a5db42a9f0bc0"
+                        "sha512": "91c098ec5073432f0ef656b0252cb214ef13e0841b2747ad7f56aa37889db7dd90d81cbcc21e927dd05f811fcf545e5ca2cadeb5b046456c43829be5cdc31288",
+                        "sha1": "56787c42e06babea92ab2b8dcf91092820ef681e"
                     },
                     "required_dependencies": [],
-                    "size": 2467846,
-                    "date_published": "2026-01-12T09:52:21.905376Z"
+                    "size": 2493087,
+                    "date_published": "2026-01-20T02:27:43.896259Z"
                 }
             ]
         },
