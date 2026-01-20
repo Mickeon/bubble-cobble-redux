@@ -49,7 +49,7 @@
 				}
 			},
 			"slimes_spawn_everywhere": false,
-			"use_biome_spawn_settings": true
+			"use_biome_spawn_settings": false
 		},
 		"mob_effects": [
 			{
