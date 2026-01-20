@@ -1,0 +1,102 @@
+{
+	"client_settings": {
+		"color_settings": {
+			"moon_texture_color": "F2A7EC",
+			"sky_light_color": "F2A7EC"
+		},
+		"moon_size": 30.0,
+		"moon_texture_location": "bubble_cobble:textures/environment/pleading_moon.png"
+	},
+	"dimension_chances": {
+		"minecraft:overworld": {
+			"chance": 0.1,
+			"min_number_of_nights_between": 4,
+			"valid_moon_phases": [
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7
+			]
+		}
+	},
+	"drops": {
+		"drop_enhancer": {}
+	},
+	"mob_settings": {
+		"blocks_sleeping": {
+			"type": "corgilib:flipped",
+			"condition_to_flip": {
+				"type": "corgilib:any"
+			}
+		},
+		"lunar_spawn_settings": {
+			"force_surface_spawning": false,
+			"mob_spawn_settings": {
+				"spawn_costs": {},
+				"spawners": {
+					"ambient": [],
+					"axolotls": [],
+					"creature": [],
+					"misc": [],
+					"monster": [],
+					"underground_water_creature": [],
+					"water_ambient": [],
+					"water_creature": []
+				}
+			},
+			"slimes_spawn_everywhere": false,
+			"use_biome_spawn_settings": true
+		},
+		"mob_effects": [
+			{
+				"filter": {
+					"type": "corgilib:conditions_pass",
+					"filters": [
+						{
+							"type": "corgilib:is_type",
+							"id": "minecraft:player"
+						}
+					]
+				},
+				"mob_effect": {
+					"ambient": true,
+					"amplifier": 0,
+					"duration_in_ticks": 300,
+					"effect": "kubejs:girl_power",
+					"show_icon": true,
+					"visible": true
+				}
+			}
+		],
+		"spawn_category_multiplier": {}
+	},
+	"text_components": {
+		"end_notification": {
+			"component": {
+				"key": "Pack it up, it's July 1st.",
+				"style": {
+					"color": "#f2a7ec"
+				}
+			},
+			"type": "CHAT"
+		},
+		"name": {
+			"key": "Pride Moon",
+			"style": {
+				"color": "#f2a7ec"
+			}
+		},
+		"start_notification": {
+			"component": {
+				"key": "The Moon comes out of the closet and shows its true colors.\nEveryone can Girl Power Dash!",
+				"style": {
+					"color": "#f2a7ec"
+				}
+			},
+			"type": "CHAT"
+		}
+	}
+}

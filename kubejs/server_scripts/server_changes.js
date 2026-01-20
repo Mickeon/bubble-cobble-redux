@@ -1,6 +1,7 @@
 // priority: 10
 // requires: create
 // requires: monsterplus
+// requires: enhancedcelestials
 
 // The End check.
 EntityEvents.spawned("minecraft:player", event => {
@@ -219,8 +220,23 @@ NO_FLAT_WORLD_MOBS.forEach(entity_type => {
 	})
 })
 
+// https://github.com/CorgiTaco-MC/Enhanced-Celestials/blob/1.21.X/Common/src/main/java/dev/corgitaco/enhancedcelestials/lunarevent/EnhancedCelestialsLunarForecastWorldData.java
+let $EnhancedCelestials = Java.loadClass("dev.corgitaco.enhancedcelestials.EnhancedCelestials")
+/** @type {typeof import("net.minecraft.core.Holder").$Holder } */
+let $Holder  = Java.loadClass("net.minecraft.core.Holder")
+
+/** @returns {import("net.minecraft.core.Holder").$Holder$$Type<T>} */
+function get_current_lunar_event_holder(level) {
+	let lunar_forecast = $EnhancedCelestials.lunarForecastWorldData(level).get()
+	return (lunar_forecast ? lunar_forecast.currentLunarEventHolder() : new $Holder())
+}
+
+function is_lunar_event_happening(level) {
+	return !get_current_lunar_event_holder(level).is("enhancedcelestials:default")
+}
+
 /** @type {Special.EntityType[]} */
-const NO_NIGHT_LIGHT_MOBS = [
+const NO_SKY_LIGHT_MOBS = [
 	// Basically all undead.
 	"cnc:wechuge",
 	"cnc:wendigo",
@@ -253,18 +269,22 @@ const NO_NIGHT_LIGHT_MOBS = [
 	"minecraft:witch",
 	"monsterplus:abyssologer",
 ]
-NO_NIGHT_LIGHT_MOBS.forEach(entity_type => {
+NO_SKY_LIGHT_MOBS.forEach(entity_type => {
 	EntityEvents.checkSpawn(entity_type, event => {
 		if (event.block.getSkyLight() >= 1 && event.type == "NATURAL") {
-			// console.log(`Trying to spawn ${event.entity.type}, but can't under the moon light!`)
+			if (event.block.getSkyLight() <= 7 && is_lunar_event_happening(event.level)) {
+				// console.log("Ignoring most sky light spawn rules, there's a Lunar Event happening")
+				return
+			}
+			// console.log(`Trying to spawn ${event.entity.type}, but can't under the sky light!`)
 			event.cancel()
 		}
 	})
 })
 
 // After the above changes, a lot of Endermen spawn on the surface. Rectify that.
-const FEWER_NIGHT_LIGHT_MOBS = ["minecraft:enderman", "minecraft:spider", "monsterplus:ender_eye", "monsterplus:wisp"]
-FEWER_NIGHT_LIGHT_MOBS.forEach(entity_type => {
+const FEWER_SKY_LIGHT_MOBS = ["minecraft:enderman", "minecraft:spider", "monsterplus:ender_eye", "monsterplus:wisp"]
+FEWER_SKY_LIGHT_MOBS.forEach(entity_type => {
 	EntityEvents.checkSpawn(entity_type, event => {
 		if (event.block.getSkyLight() >= 1 && event.type == "NATURAL" && Utils.getRandom().nextFloat() > 0.5) {
 			// console.log(`Trying to spawn ${event.entity.type}, but chance said no!`)
