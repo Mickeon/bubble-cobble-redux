@@ -1,0 +1,159 @@
+{
+	"client_settings": {
+		"color_settings": {
+			"moon_texture_color": "FFFFFF",
+			"sky_light_color": "99FF77"
+		},
+		"moon_size": 64.0,
+		"moon_texture_location": "bubble_cobble:textures/environment/weegee.png"
+	},
+	"dimension_chances": {
+		"minecraft:overworld": {
+			"chance": 0.05,
+			"min_number_of_nights_between": 8,
+			"valid_moon_phases": [
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7
+			]
+		}
+	},
+	"drops": {
+		"drop_enhancer": {
+			"#cobblemon:berries": 2,
+			"#cobblemon:berries/colour/green": 3,
+			"#cobblemon:mints": 1.5,
+			"#biomeswevegone:dye/makes_green": 2
+		}
+	},
+	"mob_settings": {
+		"blocks_sleeping": {
+			"type": "corgilib:flipped",
+			"condition_to_flip": {
+				"type": "corgilib:any"
+			}
+		},
+		"lunar_spawn_settings": {
+			"force_surface_spawning": false,
+			"mob_spawn_settings": {
+				"spawn_costs": {},
+				"spawners": {
+					"ambient": [],
+					"axolotls": [],
+					"creature": [],
+					"misc": [],
+					"monster": [
+						{
+							"type": "minecraft:enderman",
+							"weight": 50,
+							"minCount": 1,
+							"maxCount": 3
+						}
+					],
+					"underground_water_creature": [],
+					"water_ambient": [],
+					"water_creature": []
+				}
+			},
+			"slimes_spawn_everywhere": false,
+			"use_biome_spawn_settings": false
+		},
+		"mob_effects": [
+			{
+				"filter": {
+					"type": "corgilib:is_type",
+					"id": "minecraft:player"
+				},
+				"mob_effect": {
+					"ambient": true,
+					"amplifier": 0,
+					"duration_in_ticks": 300,
+					"effect": "minecraft:oozing",
+					"show_icon": true,
+					"visible": true
+				}
+			},
+			{
+				"filter": {
+					"type": "corgilib:is_type",
+					"id": "minecraft:player"
+				},
+				"mob_effect": {
+					"ambient": true,
+					"amplifier": 0,
+					"duration_in_ticks": 300,
+					"effect": "kubejs:girl_power",
+					"show_icon": true,
+					"visible": true
+				}
+			},
+			{
+				"filter": {
+					"type": "corgilib:conditions_pass",
+					"filters": [
+						{
+							"type": "corgilib:is_mob_category",
+							"mob_category": "monster"
+						},
+						{
+							"type": "corgilib:see_sky_at"
+						},
+						{
+							"type": "corgilib:flipped",
+							"condition_to_flip": {
+								"type": "corgilib:is_swimming"
+							}
+						},
+						{
+							"type": "corgilib:flipped",
+							"condition_to_flip": {
+								"type": "corgilib:has_effect",
+								"effects": ["minecraft:wither"],
+								"has_any": false
+							}
+						}
+					]
+				},
+				"mob_effect": {
+					"ambient": true,
+					"amplifier": 0,
+					"duration_in_ticks": 300,
+					"effect": "minecraft:wither",
+					"show_icon": false,
+					"visible": true
+				}
+			}
+		],
+		"spawn_category_multiplier": {}
+	},
+	"text_components": {
+		"end_notification": {
+			"component": {
+				"key": "That's not a Pokémon. That's a GAY LUIGI. Now, go away.",
+				"style": {
+					"color": "#009460"
+				}
+			},
+			"type": "CHAT"
+		},
+		"name": {
+			"key": "Weegee",
+			"style": {
+				"color": "#009460"
+			}
+		},
+		"start_notification": {
+			"component": {
+				"key": "\"Squidward!! The sky had a Pokémon from my cereal box! Squiiidward!! Squidward! The sky had a Pokémon!\"",
+				"style": {
+					"color": "#009460"
+				}
+			},
+			"type": "CHAT"
+		}
+	}
+}
