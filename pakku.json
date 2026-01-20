@@ -39,10 +39,8 @@
         "!config/waterframes-client.toml",
 
         "!*/jsconfig.json",
-        "!kubejs/probe-settings.json",
-        "!kubejs/web_server.json",
-        "!kubejs/probe-settings.json",
-        "!kubejs/web_server.json",
+        "!kubejs/config/probe-settings.json",
+        "!kubejs/config/web_server.json",
         "!config/simpletms/moves/default*",
         "!*.bak",
 

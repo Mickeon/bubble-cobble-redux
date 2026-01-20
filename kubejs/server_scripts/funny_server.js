@@ -609,7 +609,7 @@ NativeEvents.onEvent($EntityMobGriefingEvent, event => {
 			enderman.setAttributeBaseValue("minecraft:generic.max_health",
 				Math.max(enderman.getAttributeBaseValue("minecraft:generic.max_health") - 1, 8)
 			)
-			enderman.playSound("minecraft:entity.goat.horn_break", 10.0, 0.5)
+			enderman.playSound("minecraft:entity.goat.horn_break", 1.0, 0.5)
 			// enderman.setTicksFrozen(10 * SEC)
 			enderman.carriedBlock = "minecraft:cave_air"
 			enderman.server.scheduleInTicks(5, () => enderman.carriedBlock = "minecraft:air")

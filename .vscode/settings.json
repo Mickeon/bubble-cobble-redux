@@ -39,9 +39,6 @@
         "Xaero*": true
     },
     "typescript.tsserver.maxTsServerMemory": 4096,
-    "[jsonc]": {
-        "editor.defaultFormatter": "vscode.json-language-features",
-    },
     "mc-color.delimiters": [
         "`",
         "\""
@@ -49,5 +46,6 @@
     "search.useIgnoreFiles": false,
     "errorLens.excludeByMessage": [
         "Use of hardcoded text function. Consider using language keys instead."
-    ]
+    ],
+    "typescript.surveys.enabled": false
 }
