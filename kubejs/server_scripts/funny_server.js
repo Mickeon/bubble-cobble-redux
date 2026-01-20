@@ -1,5 +1,7 @@
 // requires: cobblemon
 // requires: create
+/** @type {typeof import("net.neoforged.neoforge.event.entity.EntityMobGriefingEvent").$EntityMobGriefingEvent } */
+let $EntityMobGriefingEvent  = Java.loadClass("net.neoforged.neoforge.event.entity.EntityMobGriefingEvent")
 /** @type {typeof import("net.minecraft.world.entity.player.Player").$Player } */
 let $Player  = Java.loadClass("net.minecraft.world.entity.player.Player")
 /** @type {typeof import("dev.latvian.mods.kubejs.item.FoodBuilder").$FoodBuilder } */
@@ -590,6 +592,29 @@ NativeEvents.onEvent($ProjectileImpactEvent, event => {
 
 	fireball.discard()
 	event.canceled = true
+})
+
+// Endermen suffer from Osteoporosis when trying to pick up blocks.
+NativeEvents.onEvent($EntityMobGriefingEvent, event => {
+	if (event.entity.type == "minecraft:enderman") {
+		event.setCanGrief(false)
+
+		/** @type {import("net.minecraft.world.entity.monster.EnderMan").$EnderMan$$Type} */
+		let enderman = event.entity
+
+		// Endermen check for this basically every tick. The paralysis isn't just for fun.
+		if (!enderman.isAngry() && enderman.tickCount % (10 * SEC) == 0) {
+			enderman.addEffect(MobEffectUtil.of("relics:paralysis", 2 * SEC))
+			enderman.addEffect(MobEffectUtil.of("minecraft:weakness", 4 * SEC, 3))
+			enderman.setAttributeBaseValue("minecraft:generic.max_health",
+				Math.max(enderman.getAttributeBaseValue("minecraft:generic.max_health") - 1, 8)
+			)
+			enderman.playSound("minecraft:entity.goat.horn_break", 10.0, 0.5)
+			// enderman.setTicksFrozen(10 * SEC)
+			enderman.carriedBlock = "minecraft:cave_air"
+			enderman.server.scheduleInTicks(5, () => enderman.carriedBlock = "minecraft:air")
+		}
+	}
 })
 
 // Debug.
