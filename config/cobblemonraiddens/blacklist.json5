@@ -1,11 +1,11 @@
 {
-	// List of blacklisted Pokemon in raid battles.
+	// List of blacklisted Pokemon for the player in raid battles.
 	"pokemon": [],
-	// List of blacklisted abilities in raid battles
+	// List of blacklisted abilities for the player in raid battles
 	"abilities": [
 		"wonderguard"
 	],
-	// List of blacklisted moves in raid battles.
+	// List of blacklisted moves for the player in raid battles.
 	"moves": [
 		"bestow",
 		"circlethrow",

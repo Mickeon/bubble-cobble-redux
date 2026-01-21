@@ -156,7 +156,8 @@
       "player_low_hp": "{_general.player != null ? (player.health.current <= 8 ? 'Wasting away' : '') : ''}",
       "forecast_overworld": "It's a {custom.forecast_weather} {custom.forecast_time} in the {dimension.name} ({world.time.format_24})",
       "player_info_items": "{item.main_hand.message} ? 'holding ' + item.main_hand.name : '' }",
-      "ingame_status": "{getFirst(custom.player_low_hp, entity.riding.message, 'Roaming')} {dimension.message}",
+      "in_raid": "{dimension.identifier == 'raid_dimension' ? 'Battling' : ''}",
+      "ingame_status": "{getFirst(custom.in_raid, custom.player_low_hp, entity.riding.message, 'Roaming')} {dimension.message}",
       "forecast_base": "{dimension.identifier == 'overworld' ? custom.forecast_overworld : 'Oh boy where am I'}",
       "forecast_weather": "{world.weather.name == 'Clear' ? 'beautiful' : 'melancholic'}"
     }
