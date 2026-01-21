@@ -439,6 +439,48 @@
             ]
         },
         {
+            "pakku_id": "fb3jLDTIl1r9qzbe",
+            "pakku_links": [
+                "bfo1VDLqtn0HGg7O"
+            ],
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "modrinth": "artsandcrafts"
+            },
+            "name": {
+                "modrinth": "Arts & Crafts"
+            },
+            "id": {
+                "modrinth": "JI9mEkvq"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "arts_and_crafts-neoforge-1.21.1-1.5.3.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/JI9mEkvq/versions/61y93vG7/arts_and_crafts-neoforge-1.21.1-1.5.3.jar",
+                    "id": "61y93vG7",
+                    "parent_id": "JI9mEkvq",
+                    "hashes": {
+                        "sha512": "6eeff8da44598bf573d8e44b2ece1b70b1a6f17462c43a1294830db11ea8905b5f01f54b2a90b369d65f5458ae0465656bcc158c5cd37a23bdde719d57e57ab2",
+                        "sha1": "5dcd51c5e6d2919e1f9e0f76f52c6e06e9c77353"
+                    },
+                    "required_dependencies": [
+                        "Vrr7WtS4"
+                    ],
+                    "size": 4970128,
+                    "date_published": "2025-12-23T19:48:03.051137Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "hISDgJM0x14iBfLa",
             "type": "MOD",
             "side": "CLIENT",
@@ -4988,6 +5030,43 @@
                     "required_dependencies": [],
                     "size": 53213,
                     "date_published": "2025-07-05T13:42:19.827736Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "bfo1VDLqtn0HGg7O",
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "modrinth": "jinxedlib"
+            },
+            "name": {
+                "modrinth": "JinxedLib"
+            },
+            "id": {
+                "modrinth": "Vrr7WtS4"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "jinxedlib-neoforge-1.21.1-1.0.4.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/Vrr7WtS4/versions/xcKH5vNL/jinxedlib-neoforge-1.21.1-1.0.4.jar",
+                    "id": "xcKH5vNL",
+                    "parent_id": "Vrr7WtS4",
+                    "hashes": {
+                        "sha512": "0c9044977e3203fb8f7f49417ca268d35ed3f7a39fcfd940e95c7142926cca8fb1f70a390e82b352ea70a2854f21d49f399f8931c13422b50adb38f2fe91d5d2",
+                        "sha1": "4fcb38e30b7654cf94bdf7b4e1511ed860c31aae"
+                    },
+                    "required_dependencies": [],
+                    "size": 69628,
+                    "date_published": "2025-07-04T00:21:01.850876Z"
                 }
             ]
         },
