@@ -1599,6 +1599,43 @@
             ]
         },
         {
+            "pakku_id": "ocEyTc7kNV1MK4hc",
+            "type": "DATA_PACK",
+            "side": "SERVER",
+            "slug": {
+                "modrinth": "cobble-caf-forms"
+            },
+            "name": {
+                "modrinth": "Cobblemon cafe"
+            },
+            "id": {
+                "modrinth": "469QXqgC"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "CobbleCafe [1.7].zip",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "datapack"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/469QXqgC/versions/JFs7irbp/CobbleCafe [1.7].zip",
+                    "id": "JFs7irbp",
+                    "parent_id": "469QXqgC",
+                    "hashes": {
+                        "sha512": "b907590861d4eb7408d8d3b89fac02ad11e117d88705ab2ce3a2f38f8872dd2e09347ca1790e8927ffd76604d3f528b42452ed3b713f91e2a0aa09823394bcf0",
+                        "sha1": "fa8a3c6edab8ccb6889b7043eda1c7e6c144aa48"
+                    },
+                    "required_dependencies": [],
+                    "size": 1013127,
+                    "date_published": "2025-12-28T17:40:21.938026Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "sRDyFwwUN0z3F8da",
             "pakku_links": [
                 "rcNaZofHJ2yMvMzg"
