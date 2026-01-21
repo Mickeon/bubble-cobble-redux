@@ -8,6 +8,6 @@
     "create:handheld_worldshaper"
   ],
   "pitch": 1.0,
-  "soundEvent": "bubble_cobble:buzz",
+  "soundEvent": "create:worldshaper_place",
   "volume": 0.1
 }

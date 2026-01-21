@@ -224,5 +224,6 @@ ClientEvents.generateAssets("before_mods", event => {
 	stacked_model("brewinandchewin:cheese_wheels/unripe", ["brewinandchewin:item/unripe_flaxen_cheese_wheel", "brewinandchewin:item/unripe_scarlet_cheese_wheel"])
 	stacked_model("create:pulpifiable", ["minecraft:item/bamboo", "cobblemon:item/medicine/medicinal_leek", "minecraft:item/sugar_cane", "minecraft:block/oak_sapling"])
 	stacked_model("cobblemon:berries", ["cobblemon:item/berries/cheri_berry", "cobblemon:item/berries/oran_berry", "cobblemon:item/berries/persim_berry"])
+	stacked_model("cobblemon:pokedex_screen", ["minecraft:item/glow_ink_sac", "cobblemon:item/held_items/bright_powder"])
 	stacked_model("farmersdelight:cabbage_roll_ingredients", ["minecraft:item/carrot", "farmersdelight:item/cod_slice", "minecraft:block/brown_mushroom", "farmersdelight:item/chicken_cuts"])
 })
