@@ -1,0 +1,39 @@
+{
+	"format_version": "1.21.6",
+	"credit": "Made with Blockbench",
+	"elements": [
+		{
+			"from": [-2, 2, 0],
+			"to": [14, 18, 16],
+			"rotation": {"angle": 0, "axis": "x", "origin": [-2, 2, 0]},
+			"faces": {
+				"south": {"uv": [0, 0, 16, 16], "texture": "#first", "cullface": "south"}
+			}
+		},
+		{
+			"from": [6, -2, 0],
+			"to": [18, 10, 12],
+			"rotation": {"angle": 0, "axis": "x", "origin": [2, -2, 0]},
+			"faces": {
+				"south": {"uv": [0, 0, 16, 16], "texture": "#second", "cullface": "south"}
+			}
+		},
+		{
+			"from": [9, 9, 0],
+			"to": [17, 17, 8],
+			"rotation": {"angle": 0, "axis": "x", "origin": [1, 1, 0]},
+			"faces": {
+				"south": {"uv": [0, 0, 16, 16], "texture": "#third", "cullface": "south"}
+			}
+		},
+		{
+			"from": [0, 0, 0],
+			"to": [16, 16, 4],
+			"rotation": {"angle": 0, "axis": "x", "origin": [-2, -2, 0]},
+			"faces": {
+				"south": {"uv": [0, 0, 16, 16], "texture": "#fourth", "cullface": "south"}
+			}
+		}
+	],
+	"gui_light": "front"
+}

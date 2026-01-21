@@ -423,19 +423,19 @@ ItemEvents.entityInteracted("minecraft:glass_bottle", event => {
 const GIRL_POWER_EFFECT = Registry.of("mob_effect").get("kubejs:girl_power")
 if (GIRL_POWER_EFFECT) {
 	NativeEvents.onEvent($MobEffectEvent$Added, event => {
-		if (event.effectInstance.is(GIRL_POWER_EFFECT)) {
+		if (event?.effectInstance.is(GIRL_POWER_EFFECT)) {
 			event.entity.modifyAttribute("kubejs:dash_jump_count", "kubejs:girl_power_effect", event.effectInstance.amplifier + 1, "add_value")
 		}
 	})
 
 	NativeEvents.onEvent($MobEffectEvent$Expired, event => {
-		if (event.effectInstance.is(GIRL_POWER_EFFECT)) {
+		if (event?.effectInstance.is(GIRL_POWER_EFFECT)) {
 			event.entity.removeAttribute("kubejs:dash_jump_count", "kubejs:girl_power_effect")
 		}
 	})
 
 	NativeEvents.onEvent($MobEffectEvent$Remove, event => {
-		if (event.effectInstance.is(GIRL_POWER_EFFECT)) {
+		if (event?.effectInstance.is(GIRL_POWER_EFFECT)) {
 			event.entity.removeAttribute("kubejs:dash_jump_count", "kubejs:girl_power_effect")
 		}
 	})
@@ -603,7 +603,7 @@ NativeEvents.onEvent($EntityMobGriefingEvent, event => {
 		let enderman = event.entity
 
 		// Endermen check for this basically every tick. The paralysis isn't just for fun.
-		if (!enderman.isAngry() && enderman.tickCount % (10 * SEC) == 0) {
+		if (!enderman.isAngry() && enderman.tickCount % (10 * SEC) < 10) {
 			enderman.addEffect(MobEffectUtil.of("relics:paralysis", 2 * SEC))
 			enderman.addEffect(MobEffectUtil.of("minecraft:weakness", 4 * SEC, 3))
 			enderman.setAttributeBaseValue("minecraft:generic.max_health",

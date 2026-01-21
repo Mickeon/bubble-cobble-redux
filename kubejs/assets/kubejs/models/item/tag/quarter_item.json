@@ -1,0 +1,35 @@
+{
+	"format_version": "1.21.6",
+	"credit": "Made with Blockbench",
+	"elements": [
+		{
+			"from": [0, 8, 0],
+			"to": [8, 16, 16],
+			"faces": {
+				"south": {"uv": [0, 0, 8, 8], "texture": "#first", "cullface": "south"}
+			}
+		},
+		{
+			"from": [8, 8, 0],
+			"to": [16, 16, 16],
+			"faces": {
+				"south": {"uv": [8, 0, 16, 8], "texture": "#second", "cullface": "south"}
+			}
+		},
+		{
+			"from": [0, 0, 0],
+			"to": [8, 8, 16],
+			"faces": {
+				"south": {"uv": [0, 8, 8, 16], "texture": "#third", "cullface": "south"}
+			}
+		},
+		{
+			"from": [8, 0, 0],
+			"to": [16, 8, 16],
+			"faces": {
+				"south": {"uv": [8, 8, 16, 16], "texture": "#fourth", "cullface": "south"}
+			}
+		}
+	],
+	"gui_light": "front"
+}

@@ -15,7 +15,7 @@ ServerEvents.tags("item", event => {
 	event.add("bubble_cobble:diamond_tools",
 		"minecraft:diamond_sword", "minecraft:diamond_shovel", "minecraft:diamond_pickaxe",
 		"minecraft:diamond_axe", "minecraft:diamond_hoe", "farmersdelight:diamond_knife",
-		"constructionstick:diamond_stick"
+		"constructionstick:diamond_stick", "yo_hooks:diamond_grappling_hook"
 	)
 	event.add("bubble_cobble:diamond_armor",
 		"minecraft:diamond_helmet", "minecraft:diamond_chestplate",

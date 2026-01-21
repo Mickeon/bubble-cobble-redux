@@ -103,3 +103,126 @@ NativeEvents.onEvent($ScreenEvent$Init$Post, event => {
 // 		console.error(error)
 // 	}
 // })
+
+
+const QUARTER_ITEM_MODEL = {
+	"gui_light": "front",
+	"elements": [
+		{
+			"from": [0, 8, 0],
+			"to": [8, 16, 16],
+			"faces": {
+				"south": {
+					"texture": "#first",
+					"cullface": "south"
+				}
+			}
+		},
+		{
+			"from": [8, 8, 0],
+			"to": [16, 16, 16],
+			"faces": {
+				"south": {
+					"texture": "#second",
+					"cullface": "south"
+				}
+			}
+		},
+		{
+			"from": [0, 0, 0],
+			"to": [8, 16, 8],
+			"faces": {
+				"south": {
+					"texture": "#third",
+					"cullface": "south"
+				}
+			}
+		},
+		{
+			"from": [8, 0, 0],
+			"to": [16, 16, 8],
+			"faces": {
+				"south": {
+					"texture": "#fourth",
+					"cullface": "south"
+				}
+			}
+		}
+	]
+}
+
+// Add models for EMI (the recipe viewer) to display when tags are referenced.
+// We could use resource packs for this,
+// but that would massively bloat the folders around the place.
+ClientEvents.generateAssets("before_mods", event => {
+	/** @param {Special.ItemTag} item_tag @param {Array<string>} texture_paths */
+	function split_model(item_tag, texture_paths) {
+		const [first, second, third, fourth] = texture_paths
+		const textures = {
+			first: first
+		}
+		const new_model = {
+			textures: textures
+		}
+		if (second) {
+			new_model.parent = "emi:item/half_item"
+			textures.second = second
+		}
+		if (third) {
+			new_model.parent = "emi:item/third_item"
+			textures.third = third
+		}
+		if (fourth) {
+			// I hate the way the EMI model does the split.
+			new_model.parent = "kubejs:item/tag/quarter_item"
+			textures.fourth = fourth
+		}
+		event.json(`${ID.namespace(item_tag)}:models/tag/item/${ID.path(item_tag)}`, new_model)
+	}
+
+	/** @param {Special.ItemTag} item_tag @param {Array<string>} texture_paths */
+	function stacked_model(item_tag, texture_paths) {
+		const new_model = {
+			parent: "kubejs:item/tag/stacked_two_item",
+			textures: {
+				first: texture_paths[0],
+				second: texture_paths[1]
+			}
+		}
+		if (texture_paths.length >= 3) {
+			new_model.parent = "kubejs:item/tag/stacked_three_item"
+			new_model.textures.third = texture_paths[2]
+		}
+		if (texture_paths.length >= 4) {
+			new_model.parent = "kubejs:item/tag/stacked_four_item"
+			new_model.textures.fourth = texture_paths[3]
+		}
+		// console.log(new_model)
+		event.json(`${ID.namespace(item_tag)}:models/tag/item/${ID.path(item_tag)}`, new_model)
+	}
+
+	split_model("cobblemon:apricorns", ["cobblemon:item/green_apricorn", "cobblemon:item/white_apricorn", "cobblemon:item/red_apricorn"])
+	split_model("simpletms:tm_items", ["simpletms:item/tm/fire", "simpletms:item/tm/dragon", "simpletms:item/tm/fairy", "simpletms:item/tm/grass"])
+	split_model("simpletms:tr_items", ["simpletms:item/tr/fire", "simpletms:item/tr/dragon", "simpletms:item/tr/fairy", "simpletms:item/tr/grass"])
+
+	stacked_model("bubble_cobble:cattails", ["biomeswevegone:item/cattails", "biomesoplenty:item/cattail"])
+	stacked_model("c:ropes", ["supplementaries:item/rope", "farmersdelight:item/rope"])
+	stacked_model("c:foods/safe_raw_fish", ["minecraft:item/cod", "farmersdelight:item/cod_slice", "minersdelight:item/tentacles"])
+	split_model("c:foods/dough", ["farmersdelight:item/wheat_dough", "farmersdelight:item/wheat_dough", "mynethersdelight:item/ghast_dough", "create:item/dough"])
+	stacked_model("c:crops/cabbage", ["farmersdelight:item/cabbage", "farmersdelight:item/cabbage_leaf"])
+	stacked_model("c:crops/rice", ["farmersdelight:item/rice", "cobblemon:item/hearty_grains"])
+	stacked_model("c:crops/grain", ["minecraft:item/wheat", "farmersdelight:item/rice"])
+	stacked_model("c:drinks/milk", ["farmersdelight:item/milk_bottle", "minecraft:item/milk_bucket"])
+	stacked_model("c:foods/pasta", ["farmersdelight:item/raw_pasta", "mynethersdelight:item/ghasta"])
+	stacked_model("c:foods/vegetable", ["minecraft:item/carrot", "cobblemon:item/medicine/medicinal_leek", "farmersdelight:item/tomato"])
+	stacked_model("c:foods/raw_beef", ["minecraft:item/beef", "farmersdelight:item/minced_beef"])
+	stacked_model("c:foods/raw_chicken", ["minecraft:item/chicken", "farmersdelight:item/chicken_cuts"])
+	stacked_model("c:foods/raw_meat", ["minecraft:item/beef", "farmersdelight:item/chicken_cuts", "farmersdelight:item/minced_beef", "cobblemon:item/food/tasty_tail"])
+	stacked_model("c:slime_balls", ["minecraft:item/slime_ball", "mowziesmobs:item/glowing_jelly"])
+	stacked_model("brewinandchewin:foods/cheese_wedge", ["brewinandchewin:item/flaxen_cheese_wedge", "brewinandchewin:item/scarlet_cheese_wedge"])
+	stacked_model("brewinandchewin:cheese_wheels/ripe", ["brewinandchewin:item/flaxen_cheese_wheel", "brewinandchewin:item/scarlet_cheese_wheel"])
+	stacked_model("brewinandchewin:cheese_wheels/unripe", ["brewinandchewin:item/unripe_flaxen_cheese_wheel", "brewinandchewin:item/unripe_scarlet_cheese_wheel"])
+	stacked_model("create:pulpifiable", ["minecraft:item/bamboo", "cobblemon:item/medicine/medicinal_leek", "minecraft:item/sugar_cane", "minecraft:block/oak_sapling"])
+	stacked_model("cobblemon:berries", ["cobblemon:item/berries/cheri_berry", "cobblemon:item/berries/oran_berry", "cobblemon:item/berries/persim_berry"])
+	stacked_model("farmersdelight:cabbage_roll_ingredients", ["minecraft:item/carrot", "farmersdelight:item/cod_slice", "minecraft:block/brown_mushroom", "farmersdelight:item/chicken_cuts"])
+})
