@@ -48,8 +48,6 @@ ServerEvents.generateData("after_mods", event => {
 		"constructionstick:advancement/recipes/misc/template_destruction",
 		"constructionstick:advancement/recipes/misc/template_replacement",
 		"constructionstick:advancement/recipes/misc/template_unbreakable",
-		"haventrowel:advancement/trowel",
-		"haventrowel:advancement/recipes/misc/craft/trowel",
 		"luistercorp:advancement/troncos/tiendas",
 		"luistercorp:advancement/troncos/troncos",
 	]) {

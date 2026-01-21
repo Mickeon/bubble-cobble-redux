@@ -303,7 +303,6 @@ remove_and_merge_into_tab("immersive_paintings:paintings", "minecraft:functional
 	"immersive_paintings:glow_graffiti",
 ])
 
-remove_tab("haventrowel:haventrowel_tab")
 StartupEvents.modifyCreativeTab("ribbits:general", event => {
 	event.add("wanderer_ribbit:wanderer_ribbit_spawn_egg")
 	event.addAfter("ribbits:maraca", ["wanderer_ribbit:umbrellaleaf", "wanderer_ribbit:ribbit_map"])
@@ -311,7 +310,6 @@ StartupEvents.modifyCreativeTab("ribbits:general", event => {
 StartupEvents.modifyCreativeTab("minecraft:tools_and_utilities", event => {
 	event.remove("minecraft:bundle") // In case its experimental datapack is enabled.
 	event.add("minecraft:bundle")
-	event.add("haventrowel:trowel")
 	// event.removeFromParent(Ingredient.of("#minecraft:boats").except(/oak/))
 	// event.removeFromParent(Ingredient.of(/^snowyspirit:.*sled/))
 })

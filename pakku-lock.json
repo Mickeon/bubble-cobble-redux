@@ -4482,42 +4482,6 @@
             ]
         },
         {
-            "pakku_id": "81Gu6g50TcWGd33G",
-            "type": "MOD",
-            "slug": {
-                "curseforge": "haven-trowel"
-            },
-            "name": {
-                "curseforge": "Haven Trowel"
-            },
-            "id": {
-                "curseforge": "1096328"
-            },
-            "files": [
-                {
-                    "type": "curseforge",
-                    "file_name": "HavenTrowel-NeoForge-1.21.1-1.0.0.jar",
-                    "mc_versions": [
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/6111/771/HavenTrowel-NeoForge-1.21.1-1.0.0.jar",
-                    "id": "6111771",
-                    "parent_id": "1096328",
-                    "hashes": {
-                        "sha1": "c0aea5ce7c52ba997d27923ba1ce6bf4051748d6",
-                        "md5": "72f7ececce5078eb89e2f6f0751f185e"
-                    },
-                    "required_dependencies": [],
-                    "size": 31534,
-                    "date_published": "2025-01-22T01:02:48.920Z"
-                }
-            ]
-        },
-        {
             "pakku_id": "gnrJZp6kYCOBXDXY",
             "type": "MOD",
             "side": "CLIENT",

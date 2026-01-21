@@ -27,9 +27,6 @@ global.DISABLED_ITEMS = [
 
 	// Cobbreeding adds a lot of unnecessary, coloured Pokemon eggs.
 	/cobbreeding:.+pokemon_egg/,
-
-	// In favour of our own Trowel.
-	"haventrowel:trowel",
 ]
 
 /** @type {Special.Fluid[]} */
