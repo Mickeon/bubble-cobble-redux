@@ -8506,7 +8506,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "sophisticateditemactions-1.21.1-0.2.0.41.jar",
+                    "file_name": "sophisticateditemactions-1.21.1-0.3.1.57.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -8514,18 +8514,18 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/RMW7bKVL/versions/4t2PdoTT/sophisticateditemactions-1.21.1-0.2.0.41.jar",
-                    "id": "4t2PdoTT",
+                    "url": "https://cdn.modrinth.com/data/RMW7bKVL/versions/qcHojhCY/sophisticateditemactions-1.21.1-0.3.1.57.jar",
+                    "id": "qcHojhCY",
                     "parent_id": "RMW7bKVL",
                     "hashes": {
-                        "sha512": "b1946346f259bd79689a7fd3b120a3d57032b7dfb0287d833a8b3cd1e2042ce28292c1e4ad6d4124da5cf6b3d6b1c907b91c2c32f85a1df3f47bed25b2feb8e1",
-                        "sha1": "e2bb29c7567a76c4b43f15d08ed6e21651358455"
+                        "sha512": "8293faa121518a8e87ee60ad3a4edf9f927a02d78205ff2baa18edc4c8dc19f5a18a117457018aa2ea2cc1b14c51998fa716d93ded5840fa79776e7fba99d153",
+                        "sha1": "27310b666adb38e1689e0b3a94e6dc18d1b173e1"
                     },
                     "required_dependencies": [
                         "nmoqTijg"
                     ],
-                    "size": 194760,
-                    "date_published": "2026-01-22T13:36:26.643652Z"
+                    "size": 200696,
+                    "date_published": "2026-01-22T20:13:00.244815Z"
                 }
             ]
         },
