@@ -1,9 +1,14 @@
 # Don't change this! Version used to track needed updates.
-version = 0
-turnOffPotionParticles = "SELF"
+version = 1
+disableParticles = false
+maxParticlesPerSheet = 16384
+particleRenderDistanceMultiplier = 1.0
+asynchronousTicking = true
 reduceAllChance = 0.0
 reduceDecreasedChance = 0.0
-disableParticles = false
+turnOffPotionParticlesV2 = [
+    "SELF"
+]
 
 [byTypeReductions]
 "minecraft:entity_effect" = 0.2549019607843137
