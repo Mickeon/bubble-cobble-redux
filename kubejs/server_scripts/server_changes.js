@@ -286,7 +286,7 @@ NO_SKY_LIGHT_MOBS.forEach(entity_type => {
 const FEWER_SKY_LIGHT_MOBS = ["minecraft:enderman", "minecraft:spider", "monsterplus:ender_eye", "monsterplus:wisp"]
 FEWER_SKY_LIGHT_MOBS.forEach(entity_type => {
 	EntityEvents.checkSpawn(entity_type, event => {
-		if (event.block.getSkyLight() >= 1 && event.type == "NATURAL" && Utils.getRandom().nextFloat() > 0.5) {
+		if (event.block.getSkyLight() >= 1 && event.type == "NATURAL" && Utils.getRandom().nextFloat() > 0.1) {
 			// console.log(`Trying to spawn ${event.entity.type}, but chance said no!`)
 			event.cancel()
 		}
