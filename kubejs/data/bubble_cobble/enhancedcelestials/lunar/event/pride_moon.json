@@ -5,7 +5,7 @@
 			"sky_light_color": "F2A7EC"
 		},
 		"moon_size": 30.0,
-		"moon_texture_location": "minecraft:textures/environment/moon_phases.png"
+		"moon_texture_location": "bubble_cobble:textures/environment/pride_moon.png"
 	},
 	"dimension_chances": {
 		"minecraft:overworld": {

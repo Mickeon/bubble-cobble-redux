@@ -7,19 +7,19 @@
 	#The X-Offset for the Curios GUI button
 	# Default: 0
 	# Range: -100 ~ 100
-	buttonXOffset = 0
+	buttonXOffset = -2
 	#The Y-Offset for the Curios GUI button
 	# Default: 0
 	# Range: -100 ~ 100
-	buttonYOffset = 0
+	buttonYOffset = -2
 	#The X-Offset for the Creative Curios GUI button
 	# Default: 0
 	# Range: -100 ~ 100
-	creativeButtonXOffset = 0
+	creativeButtonXOffset = -1
 	#The Y-Offset for the Creative Curios GUI button
 	# Default: 0
 	# Range: -100 ~ 100
-	creativeButtonYOffset = 0
+	creativeButtonYOffset = -1
 	#The corner for the Curios GUI button
 	#Allowed Values: TOP_LEFT, TOP_RIGHT, BOTTOM_LEFT, BOTTOM_RIGHT
 	buttonCorner = "TOP_LEFT"
