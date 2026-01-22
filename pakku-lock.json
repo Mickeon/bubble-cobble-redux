@@ -6168,43 +6168,6 @@
             ]
         },
         {
-            "pakku_id": "nVpgAgVNWG9KJilW",
-            "type": "MOD",
-            "side": "BOTH",
-            "slug": {
-                "modrinth": "monsterplus"
-            },
-            "name": {
-                "modrinth": "MonsterPlus"
-            },
-            "id": {
-                "modrinth": "Qekm44BX"
-            },
-            "files": [
-                {
-                    "type": "modrinth",
-                    "file_name": "MonsterPlus-Neoforge1.21.1-v1.2.0.0.jar",
-                    "mc_versions": [
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/Qekm44BX/versions/D93e0pzQ/MonsterPlus-Neoforge1.21.1-v1.2.0.0.jar",
-                    "id": "D93e0pzQ",
-                    "parent_id": "Qekm44BX",
-                    "hashes": {
-                        "sha512": "28d5e796c0fd694998fa89bb4a54831427c9dbe9871aa6ec8be6f3f9684bfb5f7ecaf62772b71c14d06b82891fae07904906c90d7b7ce7423562bb8cfbddbf7b",
-                        "sha1": "cd1a57020fb952b1174896617268d1bf671e8bd9"
-                    },
-                    "required_dependencies": [],
-                    "size": 1359194,
-                    "date_published": "2025-01-04T11:27:33.486677Z"
-                }
-            ]
-        },
-        {
             "pakku_id": "6vHwPYI1wvMA4F1o",
             "type": "MOD",
             "side": "SERVER",

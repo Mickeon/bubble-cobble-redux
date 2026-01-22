@@ -140,7 +140,6 @@ ServerEvents.tags("fluid", event => {
 })
 
 ServerEvents.tags("entity_type", event => {
-	event.add("minecraft:skeletons", "monsterplus:overgrown_skeleton") // TODO: Report this.
 	event.add("supplementaries:urn_spawn", "minecraft:tropical_fish", "minecraft:rabbit", "cnc:mouse") // Funny.
 	// event.add("supplementaries:ash_blacklist", "minecraft:allay", "") // TODO: Report this. No mob seems to drop ash for some reason?
 	// Tee-hee.

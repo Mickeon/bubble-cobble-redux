@@ -1,6 +1,5 @@
 // priority: 10
 // requires: create
-// requires: monsterplus
 // requires: enhancedcelestials
 
 // The End check.
@@ -254,20 +253,9 @@ const NO_SKY_LIGHT_MOBS = [
 	"minecraft:zombie_horse",
 	"minecraft:zombie_villager",
 	"minecraft:zombified_piglin",
-	"monsterplus:ancient_hero",
-	"monsterplus:ancient_hero_skull",
-	"monsterplus:crystal_zombie",
-	"monsterplus:demon_eye",
-	"monsterplus:glow_skeleton",
-	"monsterplus:opalescent_eye",
-	"monsterplus:spectral_skeleton",
-	"monsterplus:spectral_skull",
-	"monsterplus:swamp_zombie",
-	"monsterplus:overgrown_skeleton",
 	// Among others.
 	"minecraft:creeper",
 	"minecraft:witch",
-	"monsterplus:abyssologer",
 ]
 NO_SKY_LIGHT_MOBS.forEach(entity_type => {
 	EntityEvents.checkSpawn(entity_type, event => {
@@ -283,7 +271,7 @@ NO_SKY_LIGHT_MOBS.forEach(entity_type => {
 })
 
 // After the above changes, a lot of Endermen spawn on the surface. Rectify that.
-const FEWER_SKY_LIGHT_MOBS = ["minecraft:enderman", "minecraft:spider", "monsterplus:ender_eye", "monsterplus:wisp"]
+const FEWER_SKY_LIGHT_MOBS = ["minecraft:enderman", "minecraft:spider"]
 FEWER_SKY_LIGHT_MOBS.forEach(entity_type => {
 	EntityEvents.checkSpawn(entity_type, event => {
 		if (event.block.getSkyLight() >= 1 && event.type == "NATURAL" && Utils.getRandom().nextFloat() > 0.1) {
