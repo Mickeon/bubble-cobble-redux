@@ -48,5 +48,90 @@
 		"sounds": [
 			"kubejs:advancement/cool"
 		]
+	},
+	"block.chiseled_mud_bricks.break": {
+		"sounds": [
+			{
+				"name": "kubejs:block/chiseled_mud_bricks/break_1",
+				"pitch": 1.25
+			},
+			{
+				"name": "kubejs:block/chiseled_mud_bricks/break_2",
+				"pitch": 1.25
+			},
+			{
+				"name": "kubejs:block/chiseled_mud_bricks/break_3",
+				"pitch": 1.25
+			}
+		]
+	},
+	"block.chiseled_mud_bricks.place": {
+		"sounds": [
+			{
+				"name": "kubejs:block/chiseled_mud_bricks/place_1",
+				"pitch": 1.25,
+				"weight": 2
+			},
+			{
+				"name": "kubejs:block/chiseled_mud_bricks/place_2",
+				"pitch": 1.25,
+				"weight": 2
+			},
+			{
+				"name": "kubejs:block/chiseled_mud_bricks/place_3",
+				"pitch": 1.25,
+				"weight": 1
+			}
+		]
+	},
+	"block.chiseled_mud_bricks.hit": {
+		"sounds": [
+			{
+				"type": "event",
+				"name": "minecraft:block.mud_bricks.hit",
+				"weight": 10
+			},
+			{
+				"name": "kubejs:block/chiseled_mud_bricks/step_1",
+				"volume": 0.125,
+				"pitch": 2.0
+			},
+			{
+				"name": "kubejs:block/chiseled_mud_bricks/step_2",
+				"volume": 0.125,
+				"pitch": 2.0
+			}
+		]
+	},
+	"block.chiseled_mud_bricks.fall": {
+		"sounds": [
+			{
+				"name": "kubejs:block/chiseled_mud_bricks/step_1",
+				"volume": 0.25,
+				"pitch": 1.25
+			},
+			{
+				"name": "kubejs:block/chiseled_mud_bricks/step_2",
+				"volume": 0.25,
+				"pitch": 1.25
+			}
+		]
+	},
+	"block.chiseled_mud_bricks.step": {
+		"sounds": [
+			{
+				"type": "event",
+				"name": "minecraft:block.mud_bricks.step",
+				"weight": 10
+			},
+			{
+				"name": "kubejs:block/chiseled_mud_bricks/step_1",
+				"volume": 0.2
+			},
+			{
+				"name": "kubejs:block/chiseled_mud_bricks/step_2",
+				"volume": 0.2
+			}
+		]
 	}
 }

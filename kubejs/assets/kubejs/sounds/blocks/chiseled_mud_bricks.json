@@ -1,0 +1,25 @@
+{
+  "enabled": true,
+  "group": {
+    "break": {
+      "sound_id": "kubejs:block.chiseled_mud_bricks.break"
+    },
+    "fall": {
+      "sound_id": "kubejs:block.chiseled_mud_bricks.fall"
+    },
+    "hit": {
+      "sound_id": "kubejs:block.chiseled_mud_bricks.hit"
+    },
+    "place": {
+      "sound_id": "kubejs:block.chiseled_mud_bricks.place"
+    },
+    "step": {
+      "sound_id": "kubejs:block.chiseled_mud_bricks.step"
+    },
+    "pitch": 1.0,
+    "volume": 1.0
+  },
+  "keys": [
+    "kubejs:chiseled_mud_bricks"
+  ]
+}
