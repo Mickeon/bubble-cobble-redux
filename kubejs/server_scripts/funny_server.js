@@ -423,19 +423,19 @@ ItemEvents.entityInteracted("minecraft:glass_bottle", event => {
 const GIRL_POWER_EFFECT = Registry.of("mob_effect").get("kubejs:girl_power")
 if (GIRL_POWER_EFFECT) {
 	NativeEvents.onEvent($MobEffectEvent$Added, event => {
-		if (event?.effectInstance.is(GIRL_POWER_EFFECT)) {
+		if (event.effectInstance && event.effectInstance.is(GIRL_POWER_EFFECT)) {
 			event.entity.modifyAttribute("kubejs:dash_jump_count", "kubejs:girl_power_effect", event.effectInstance.amplifier + 1, "add_value")
 		}
 	})
 
 	NativeEvents.onEvent($MobEffectEvent$Expired, event => {
-		if (event?.effectInstance.is(GIRL_POWER_EFFECT)) {
+		if (event.effectInstance && event.effectInstance.is(GIRL_POWER_EFFECT)) {
 			event.entity.removeAttribute("kubejs:dash_jump_count", "kubejs:girl_power_effect")
 		}
 	})
 
 	NativeEvents.onEvent($MobEffectEvent$Remove, event => {
-		if (event?.effectInstance.is(GIRL_POWER_EFFECT)) {
+		if (event.effectInstance && event.effectInstance.is(GIRL_POWER_EFFECT)) {
 			event.entity.removeAttribute("kubejs:dash_jump_count", "kubejs:girl_power_effect")
 		}
 	})

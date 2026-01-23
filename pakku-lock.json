@@ -1574,7 +1574,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "cobblemonraiddens-neoforge-0.6.3+1.21.1.jar",
+                    "file_name": "cobblemonraiddens-neoforge-0.6.4+1.21.1.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -1582,19 +1582,19 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/GebWh45l/versions/5WjMNf6j/cobblemonraiddens-neoforge-0.6.3+1.21.1.jar",
-                    "id": "5WjMNf6j",
+                    "url": "https://cdn.modrinth.com/data/GebWh45l/versions/GEw0a3Pd/cobblemonraiddens-neoforge-0.6.4+1.21.1.jar",
+                    "id": "GEw0a3Pd",
                     "parent_id": "GebWh45l",
                     "hashes": {
-                        "sha512": "505644ff858665e761e69b5d4fb4ee575c8998be8e5c42cae86587954e5427574594e97ce28ca36787cd3c683af634b177e3bc339d358df636c1c6e2cac3dfb0",
-                        "sha1": "76834e943c7867ced36d47950293218327e5de2b"
+                        "sha512": "efd0a312704b7aa83f89591f91e02cb4a1e48b1b556e094e0383d402a66948e8fda32adc39dcc058d9c0682c5784b047a823ee8a4ac68be87b93710caaad9b6b",
+                        "sha1": "954aac66ec4a12e4189d530cf4765cd585ff06b0"
                     },
                     "required_dependencies": [
-                        "8BmcQJ2H",
-                        "MdwFAVRL"
+                        "MdwFAVRL",
+                        "8BmcQJ2H"
                     ],
-                    "size": 2453721,
-                    "date_published": "2026-01-21T06:19:37.261568Z"
+                    "size": 2455689,
+                    "date_published": "2026-01-23T04:15:08.501017Z"
                 }
             ]
         },
@@ -6146,7 +6146,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "modernfix-neoforge-5.25.1+mc1.21.1.jar",
+                    "file_name": "modernfix-neoforge-5.26.1+mc1.21.1.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -6154,16 +6154,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/nmDcB62a/versions/8Be8uJW6/modernfix-neoforge-5.25.1+mc1.21.1.jar",
-                    "id": "8Be8uJW6",
+                    "url": "https://cdn.modrinth.com/data/nmDcB62a/versions/c759JLsq/modernfix-neoforge-5.26.1+mc1.21.1.jar",
+                    "id": "c759JLsq",
                     "parent_id": "nmDcB62a",
                     "hashes": {
-                        "sha512": "e82ba385f2f4737bc5817db449c9e0082ec86e710265f6e991df562da8dbf2f27b1472c62f7f74ff9c38d51b49a5cc4acd8680d3aa00a266c10826a54624ca84",
-                        "sha1": "5407ee2d311f6f16773292fe22942a023a19677d"
+                        "sha512": "d6df16e21c454b86b07991408dd0eb0f611942ee01d9598375a6b0907167aaf29e2906c8ad11c5f0971979e68ea8267d9a8deb82ba638bd85ccd4265d2448a1d",
+                        "sha1": "50abc7ff4ef2fcbc3baf4c6b96e2a7141cbd1b8a"
                     },
                     "required_dependencies": [],
-                    "size": 569818,
-                    "date_published": "2025-11-08T20:05:02.536501Z"
+                    "size": 498852,
+                    "date_published": "2026-01-23T00:50:31.426622Z"
                 }
             ]
         },

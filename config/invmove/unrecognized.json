@@ -35,7 +35,6 @@
     "net.p3pp3rf1y.sophisticatedstorage.client.gui.LimitedBarrelSettingsScreen": true,
     "top.theillusivec4.curios.client.gui.CuriosScreen": true,
     "it.hurts.sskirillss.relics.client.screen.description.relic.RelicDescriptionScreen": true,
-    "net.mehvahdjukaar.sawmill.SawmillScreen": true,
     "net.nicguzzo.wands.client.screens.WandScreen": true,
     "net.nicguzzo.wands.client.screens.PaletteScreen": true,
     "com.necro.raid.dens.common.client.gui.screens.ClickHandler": true,
@@ -165,7 +164,9 @@
     "dev.imb11.sounds.gui.SoundsConfigScreen": true,
     "net.minecraft.client.gui.screens.options.ChatOptionsScreen": true,
     "settingdust.mod_sets.game.ModSetsConfigScreen": true,
-    "io.wispforest.accessories.client.gui.AccessoriesScreen": true
+    "io.wispforest.accessories.client.gui.AccessoriesScreen": true,
+    "net.minecraft.client.gui.screens.options.SoundOptionsScreen": true,
+    "com.cobblemon.mod.common.client.gui.trade.TradeGUI": true
   },
   "hideBackground": {
     "dev.emi.emi.screen.RecipeScreen": false,

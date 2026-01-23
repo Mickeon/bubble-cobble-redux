@@ -42,11 +42,13 @@ EntityEvents.drops("minecraft:player", event => {
 			add_drop(player, Item.of("minecraft:orange_stained_glass_pane"), 0.5)
 			// add_drop(player, Item.of("quark:orange_shard", 3), 0.5)
 			// add_drop(player, Item.of("quark:framed_glass"), 0.25)
+			add_drop(player, Item.of("kubejs:chiseled_mud_bricks"), 0.25)
 			add_drop(player, Item.of("minecraft:orange_candle").withCustomName("Fair enough."), 0.25)
 			add_drop(player, Item.of("supplementaries:candle_holder_orange"), 0.1)
 		} break;
 		case "CantieLabs": {
-			add_drop(player, Item.of("cobblemon:dragon_scale"), 0.75)
+			add_drop(player, Item.of("kubejs:chiseled_mud_bricks"), 0.75)
+			add_drop(player, Item.of("cobblemon:dragon_scale"), 0.25)
 			add_drop(player, Item.of("create:cogwheel"), 0.5)
 			add_drop(player, Item.of("minecraft:blue_dye"), 0.25)
 		} break;
