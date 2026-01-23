@@ -227,3 +227,87 @@ ClientEvents.generateAssets("before_mods", event => {
 	stacked_model("cobblemon:pokedex_screen", ["minecraft:item/glow_ink_sac", "cobblemon:item/held_items/bright_powder"])
 	stacked_model("farmersdelight:cabbage_roll_ingredients", ["minecraft:item/carrot", "farmersdelight:item/cod_slice", "minecraft:block/brown_mushroom", "farmersdelight:item/chicken_cuts"])
 })
+
+// Proper localization strings to some tags shown in EMI, including the above.
+// TODO: Some more programmatic way to handle it. You can see the repetition.
+ClientEvents.lang("en_us", event => {
+	event.addAll({
+		"tag.item.bubble_cobble.cattails": "Cattails",
+		"tag.item.c.crops.cabbage": "Cabbage",
+		"tag.item.c.crops.grain": "Grain",
+		"tag.item.c.crops.rice": "Rice",
+		"tag.item.c.drinks.tea": "Tea",
+		"tag.item.c.foods.cooked_beef": "Any Cooked Beef",
+		"tag.item.c.foods.cooked_chicken": "Any Cooked Chicken",
+		"tag.item.c.foods.cooked_cod": "Any Cooked Cod",
+		"tag.item.c.foods.cooked_egg": "Any Cooked Egg",
+		"tag.item.c.foods.cooked_hoglin": "Any Cooked Hogling",
+		"tag.item.c.foods.cooked_mutton": "Any Cooked Mutton",
+		"tag.item.c.foods.cooked_pork": "Any Cooked Pork",
+		"tag.item.c.foods.cooked_salmon": "Any Cooked Salmon",
+		"tag.item.c.foods.cooked_sausage": "Any Cooked Sausage",
+		"tag.item.c.foods.dough": "Dough",
+		"tag.item.c.foods.magma_cube": "Mmmm magma cubes yummy",
+		"tag.item.c.foods.pasta": "Pasta",
+		"tag.item.c.foods.raw_beef": "Any Raw Beef",
+		"tag.item.c.foods.raw_chicken": "Any Raw Chicken",
+		"tag.item.c.foods.raw_ghast": "Any Raw Ghast",
+		"tag.item.c.foods.raw_hoglin": "Any Raw Hogling",
+		"tag.item.c.foods.raw_mutton": "Any Raw Muttons",
+		"tag.item.c.foods.raw_pork": "Any Raw Pork",
+		"tag.item.c.foods.raw_salmon": "Any Raw Salmon",
+		"tag.item.c.foods.raw_squid": "Any Raw Squid",
+		"tag.item.c.foods.raw_strider": "Any Raw Strider",
+		"tag.item.c.foods.safe_raw_fish": "Safe Raw Fish",
+		"tag.item.c.foods.squid": "Any Squid",
+		"tag.item.c.foods.tentacles": "Any Tentacles",
+		"tag.item.c.tools.knife": "Knives",
+		"tag.item.conforts.hammocks": "Hammocks",
+		"tag.item.conforts.sleeping_bags": "Sleeping Bags",
+		"tag.item.constructionstick.construction_sticks": "Construction Sticks",
+		"tag.item.create_bic_bit.snacks": "Snacks",
+		"tag.item.create_bic_bit.snacks_deepfried": "Deepfried Snacks",
+		"tag.item.create_bic_bit.tulip": "Tulips",
+		"tag.item.create_bic_bit.wrapped_snacks": "Wrapped Snacks",
+		"tag.item.curios.back": "Fits in Curios's Back slot",
+		"tag.item.curios.belt": "Fits in Curios's Belt slot",
+		"tag.item.curios.charm": "Fits in Curios's Charm slot",
+		"tag.item.curios.feet": "Fits in Curios's Feet slot",
+		"tag.item.curios.head": "Fits in Curios's Head slot",
+		"tag.item.curios.necklace": "Fits in Curios' Necklace slot",
+		"tag.item.enhancedcelestials.harvest_moon_crops": "Crops enhanced by the Harvest Moon",
+		"tag.item.farmersdelight.cabbage_roll_ingredients": "Cabbage Roll Ingredients",
+		"tag.item.kubejs.wines": "Wines",
+		"tag.item.mega_showdown.mega_bracelets": "Mega Bracelets",
+		"tag.item.mega_showdown.mega_stone": "Mega Stones",
+		"tag.item.mega_showdown.rotom_appliances": "Rotom Appliances",
+		"tag.item.mega_showdown.tera_shards": "Tera Shards",
+		"tag.item.mega_showdown.z_crystal": "Z-Crystals",
+		"tag.item.mega_showdown.z_ring": "Z-Rings",
+		"tag.item.minersdelight.baked_cave_carrot": "Any Cave Carrot",
+		"tag.item.minersdelight.cooked_insect_meat": "Any Cooked Insect Meat",
+		"tag.item.minersdelight.insect_meat": "Any Insect Meat",
+		"tag.item.mynethersdelight.hot_spice": "Hot Spice",
+		"tag.item.mynethersdelight.stove_fire_fuel": "Stove Fire Fuel",
+		"tag.item.mynethersdelight.stuffed_hoglin_items": "Pieces of Stuffed Hoglin",
+		"tag.item.simpletms.category_physical_tm": "Physical TMs",
+		"tag.item.simpletms.category_physical_tr": "Physical TRs",
+		"tag.item.simpletms.category_special_tm": "Special TMs",
+		"tag.item.simpletms.category_special_tr": "Special TRs",
+		"tag.item.simpletms.category_status_tm": "Status TMs",
+		"tag.item.simpletms.category_status_tr": "Status TRs",
+		"tag.item.simpletms.tm_items": "TMs",
+		"tag.item.simpletms.tr_items": "TRs",
+		"tag.item.snowyspirit.gumdrops": "Gumdrops",
+		"tag.item.snowyspirit.sleds": "Sleds",
+		"tag.item.sophisticatedbackpacks.upgrade": "Backpack Upgrades",
+		"tag.item.sophisticatedstorage.all_storage": "All Storage",
+		"tag.item.sophisticatedstorage.base_tier_wooden_storage": "Base Tier Wooden Storage",
+		"tag.item.supplementaries.buntings": "Buntings", // Report the lack of this?
+		"tag.item.supplementaries.cannon_boats": "Cannon Boats", // Report the lack of this?
+		"tag.item.supplementaries.causes_lightning_when_held": "Causes Lightning When Held", // Report the lack of this?
+		"tag.item.supplementaries.flower_box_tall_plantable": "Tall Flowers Plantable in Flower Box", // Report the lack of this?
+		"tag.item.supplementaries.globes": "Globes", // Report the lack of this?
+		"tag.item.supplementaries.jar_cookies": "Jar Cookies", // Report the lack of this?
+	})
+})
