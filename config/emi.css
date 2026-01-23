@@ -121,7 +121,7 @@
 	 * can be, and where the page switching buttons go. The default is 176, the width
 	 * of most screens.
 	 */
-	minimum-recipe-screen-width: 256;
+	minimum-recipe-screen-width: 240;
 
 	/**
 	 * The amount of vertical margin to give in the recipe screen.
@@ -207,7 +207,7 @@
 	/**
 	 * The subpanels in the right sidebar
 	 */
-	right-sidebar-subpanels: none;
+	right-sidebar-subpanels: lookup-history 1, empty 1;
 
 	/**
 	 * How many columns and rows of ingredients to limit the right sidebar to
@@ -338,23 +338,24 @@
 	 * Favorite the item to display on the side of the screen opposite of recipies for
 	 * quick access.
 	 */
+	favorite: "shift key.mouse.left";
 	favorite: "key.keyboard.v";
 
 	/**
 	 * Set the default recipe for a given stack in the output of a recipe to that
 	 * recipe.
 	 */
-	default-stack: "ctrl key.mouse.left";
+	default-stack: "shift key.keyboard.v";
 
 	/**
 	 * Display the recipe tree for a given stack.
 	 */
-	view-stack-tree: "key.keyboard.unknown";
+	view-stack-tree: "key.keyboard.t";
 
 	/**
 	 * Display the recipe tree.
 	 */
-	view-tree: "key.keyboard.unknown";
+	view-tree: "key.keyboard.t";
 
 	/**
 	 * Return to the previous page in EMI.
@@ -406,12 +407,12 @@
 	/**
 	 * Cheat in one of an item into the inventory.
 	 */
-	cheat-one-to-inventory: "shift key.mouse.left";
+	cheat-one-to-inventory: "ctrl key.mouse.left";
 
 	/**
 	 * Cheat in a stack of an item into the inventory.
 	 */
-	cheat-stack-to-inventory: "shift key.mouse.right";
+	cheat-stack-to-inventory: "ctrl key.mouse.right";
 
 	/**
 	 * Cheat in one of an item into the cursor.
@@ -421,7 +422,7 @@
 	/**
 	 * Cheat in a stack of an item into the cursor.
 	 */
-	cheat-stack-to-cursor: "shift key.mouse.middle";
+	cheat-stack-to-cursor: "ctrl key.mouse.middle";
 
 	/**
 	 * Delete the stack in the cursor when hovering the index
@@ -436,12 +437,12 @@
 	/**
 	 * In edit mode, hide the hovered stack
 	 */
-	hide-stack: "ctrl key.mouse.left";
+	hide-stack: "ctrl key.keyboard.h";
 
 	/**
 	 * In edit mode, hide stacks with the hovered stack's id
 	 */
-	hide-stack-by-id: "ctrl shift key.mouse.left";
+	hide-stack-by-id: "ctrl shift key.keyboard.h";
 }
 
 #dev {
@@ -469,7 +470,7 @@
 	/**
 	 * Whether hovering the output of a recipe should show the recipe's EMI ID.
 	 */
-	show-recipe-ids: true;
+	show-recipe-ids: false;
 
 	/**
 	 * Whether to display additional widgets added to recipes from other mods.
