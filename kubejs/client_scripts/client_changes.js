@@ -298,16 +298,21 @@ ClientEvents.lang("en_us", event => {
 		"tag.item.simpletms.category_status_tr": "Status TRs",
 		"tag.item.simpletms.tm_items": "TMs",
 		"tag.item.simpletms.tr_items": "TRs",
+
+		// https://github.com/MehVahdJukaar/SnowySpirit/pull/123
 		"tag.item.snowyspirit.gumdrops": "Gumdrops",
 		"tag.item.snowyspirit.sleds": "Sleds",
+
 		"tag.item.sophisticatedbackpacks.upgrade": "Backpack Upgrades",
 		"tag.item.sophisticatedstorage.all_storage": "All Storage",
 		"tag.item.sophisticatedstorage.base_tier_wooden_storage": "Base Tier Wooden Storage",
-		"tag.item.supplementaries.buntings": "Buntings", // Report the lack of this?
-		"tag.item.supplementaries.cannon_boats": "Cannon Boats", // Report the lack of this?
-		"tag.item.supplementaries.causes_lightning_when_held": "Causes Lightning When Held", // Report the lack of this?
-		"tag.item.supplementaries.flower_box_tall_plantable": "Tall Flowers Plantable in Flower Box", // Report the lack of this?
-		"tag.item.supplementaries.globes": "Globes", // Report the lack of this?
-		"tag.item.supplementaries.jar_cookies": "Jar Cookies", // Report the lack of this?
+
+		// https://github.com/MehVahdJukaar/Supplementaries/pull/1869
+		"tag.item.supplementaries.buntings": "Buntings",
+		"tag.item.supplementaries.cannon_boats": "Cannon Boats",
+		"tag.item.supplementaries.causes_lightning_when_held": "Causes Lightning When Held",
+		"tag.item.supplementaries.flower_box_tall_plantable": "Tall Flowers Plantable in Flower Box",
+		"tag.item.supplementaries.globes": "Globes",
+		"tag.item.supplementaries.jar_cookies": "Jar Cookies",
 	})
 })

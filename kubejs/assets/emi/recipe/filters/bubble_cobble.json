@@ -1,0 +1,13 @@
+{
+	"filters": [
+		{
+			"category": "create:automatic_shapeless"
+		},
+		{
+			"category": "create:automatic_packing"
+		},
+		{
+			"category": "minersdelight:copper_pot_cooking"
+		}
+	]
+}

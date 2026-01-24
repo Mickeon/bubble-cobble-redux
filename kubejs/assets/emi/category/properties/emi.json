@@ -1,0 +1,57 @@
+{
+	"emi:info": {
+		"order": -1001
+	},
+
+	"emi:world_interaction": {
+		"order": -940
+	},
+	"minecraft:crafting": {
+		"order": -1000
+	},
+	"minecraft:smelting": {
+		"order": -950
+	},
+	"minecraft:stonecutting": {
+		"order": -560
+	},
+	"minecraft:brewing": {
+		"order": -510
+	},
+
+	"cobblemonintegrations:cobblemon_drops": {
+		"order": 98
+	},
+	"cobblemonintegrations:evo_items": {
+		"order": 99
+	},
+
+	"minecraft:blasting": {
+		"order": 530
+	},
+	"minecraft:smoking": {
+		"order": 540
+	},
+	"minecraft:campfire_cooking": {
+		"order": 550
+	},
+	"minecraft:smithing": {
+		"order": 810
+	},
+	"emi:anvil_repairing": {
+		"order": 820
+	},
+	"emi:grinding": {
+		"order": 830
+	},
+	"emixx:villager_trades": {
+		"order": 840
+	},
+
+	"emiffect:status_effect_info": {
+		"order": 960
+	},
+	"emi_enchanting:enchantments": {
+		"order": 970
+	}
+}

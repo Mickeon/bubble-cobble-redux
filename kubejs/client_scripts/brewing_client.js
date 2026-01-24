@@ -11,6 +11,8 @@
 // /** @type {typeof import("net.neoforged.neoforge.event.entity.living.MobEffectEvent$Added").$MobEffectEvent$Added } */
 // let $MobEffectEvent$Added  = Java.loadClass("net.neoforged.neoforge.event.entity.living.MobEffectEvent$Added")
 
+const WINES = ["kubejs:sweet_berry_wine", "kubejs:honey_liqueur", "kubejs:spumante", "kubejs:sparkling_rose", "kubejs:berry_juice_soda", "kubejs:firebomb_whiskey"]
+
 ItemEvents.modifyTooltips(event => {
 	event.add("kubejs:sweet_berry_wine", Text.gray("Huh? Are these grapes?"))
 	event.add("kubejs:honey_liqueur", Text.gray("Unusually bitter?"))
@@ -20,6 +22,20 @@ ItemEvents.modifyTooltips(event => {
 
 ClientEvents.lang("en_us", event => {
 	event.add("item.kubejs.sparkling_rose", "Sparkling Rosé")
+})
+
+// Generate icons to be displayed inside the Keg in the Pouring and Fermenting recipes.
+ClientEvents.generateAssets("after_mods", event => {
+	// The key is the fluid ID, and the value is a corresponding item ID, or similar. In our case they are the same ID.
+	const fluid_item_display = {
+		// Let's also display the honey liquid with a bucket, instead of bottles.
+		// Otherwise, it displays incorrectly because of the #c:honey tag... for some reason.
+		"#c:honey": "create:honey_bucket"
+	}
+	for (const wine of WINES) {
+		fluid_item_display[wine] = wine
+	}
+	event.json(`bubble_cobble:brewinandchewin/fluid_item_displays/wines`, fluid_item_display)
 })
 
 
