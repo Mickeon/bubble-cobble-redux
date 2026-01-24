@@ -1,8 +1,13 @@
 // priority: 10
 // requires: create
 // requires: enhancedcelestials
+// requires: cobblemonraiddens
+// requires: xaerominimap
+// requires: xaeroworldmap
 
-// The End check.
+const RAID_DIMENSION_EFFECTS = ["xaerominimap:no_minimap", "xaeroworldmap:no_world_map", "xaerominimap:no_waypoints"]
+
+// Safer End, and Raid Dimension stuff.
 EntityEvents.spawned("minecraft:player", event => {
 	const { player, server } = event
 	if (player.level.dimension == "minecraft:the_end") {
@@ -14,6 +19,24 @@ EntityEvents.spawned("minecraft:player", event => {
 			if (player.y <= -32) {
 				player.level.runCommandSilent(`execute at ${player.username} in minecraft:overworld run tp ~ 400 ~`)
 			}
+		})
+	}
+
+	else if (player.level.dimension == "cobblemonraiddens:raid_dimension") {
+		// This is nasty but I prefer it over another "else" for now.
+		let add_raid_effects = () => {
+			for (const effect of RAID_DIMENSION_EFFECTS) {
+				player.addEffect(MobEffectUtil.of(effect, 40, 0, true, false))
+			}
+		}
+		add_raid_effects()
+
+		server.scheduleRepeatingInTicks(10, callback => {
+			if (player.isRemoved() || player.level.dimension != "cobblemonraiddens:raid_dimension") {
+				callback.clear()
+				return
+			}
+			add_raid_effects()
 		})
 	}
 })
