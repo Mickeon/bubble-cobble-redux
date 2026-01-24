@@ -37,12 +37,12 @@
 			"mob_spawn_settings": {
 				"spawn_costs": {
 					"minecraft:enderman": {
-						"energy_budget": 10.0,
-						"charge": 0.5
+						"energy_budget": 1.0,
+						"charge": 1.0
 					},
 					"minecraft:spider": {
-						"energy_budget": 10.0,
-						"charge": 0.5
+						"energy_budget": 1.0,
+						"charge": 1.0
 					}
 				},
 				"spawners": {
@@ -53,13 +53,13 @@
 					"monster": [
 						{
 							"type": "minecraft:enderman",
-							"weight": 50,
+							"weight": 20,
 							"minCount": 1,
 							"maxCount": 3
 						},
 						{
 							"type": "minecraft:spider",
-							"weight": 50,
+							"weight": 20,
 							"minCount": 1,
 							"maxCount": 3
 						}
