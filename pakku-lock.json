@@ -298,7 +298,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "appleskin-neoforge-mc1.21-3.0.7.jar",
+                    "file_name": "appleskin-neoforge-mc1.21-3.0.8.jar",
                     "mc_versions": [
                         "1.21",
                         "1.21.1",
@@ -308,16 +308,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/EsAfCjCV/versions/kztxpjAA/appleskin-neoforge-mc1.21-3.0.7.jar",
-                    "id": "kztxpjAA",
+                    "url": "https://cdn.modrinth.com/data/EsAfCjCV/versions/8X2x5cPC/appleskin-neoforge-mc1.21-3.0.8.jar",
+                    "id": "8X2x5cPC",
                     "parent_id": "EsAfCjCV",
                     "hashes": {
-                        "sha512": "03a94fe4143250b8e80abe97770918ba0af1265110bb73c25444674f9cdf86164464332a913cbac29af82d8ed02dce6ef19bbb62fced92620817a7ec1e761b71",
-                        "sha1": "8f76d97a7f61f8d61db6d84a83baf29a3bb56330"
+                        "sha512": "f47c7228cb06693f118abfbd545c2cbacbe3ac4c779281d4464380dc4310de8a47e1ba73df3c7c6b8b670cca6ef49d9c14ccb93ba5a6705da9e3cf651eb63486",
+                        "sha1": "32be58815905e472016b6413175a27e6cbf05b90"
                     },
                     "required_dependencies": [],
-                    "size": 74100,
-                    "date_published": "2025-06-05T04:39:02.085702Z"
+                    "size": 75595,
+                    "date_published": "2026-01-24T11:32:28.726630Z"
                 }
             ]
         },
@@ -5802,7 +5802,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "MoogsVoyagerStructures-1.21-5.0.3.jar",
+                    "file_name": "MoogsVoyagerStructures-1.21-5.0.4.jar",
                     "mc_versions": [
                         "1.21",
                         "1.21.1",
@@ -5814,25 +5814,26 @@
                         "1.21.7",
                         "1.21.8",
                         "1.21.9",
-                        "1.21.10"
+                        "1.21.10",
+                        "1.21.11"
                     ],
                     "loaders": [
                         "fabric",
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/OQAgZMH1/versions/SwyMUOkx/MoogsVoyagerStructures-1.21-5.0.3.jar",
-                    "id": "SwyMUOkx",
+                    "url": "https://cdn.modrinth.com/data/OQAgZMH1/versions/BzZG02lx/MoogsVoyagerStructures-1.21-5.0.4.jar",
+                    "id": "BzZG02lx",
                     "parent_id": "OQAgZMH1",
                     "hashes": {
-                        "sha512": "c08ac02a21366ae95d9c34f7854a0b70df77156980b3fbad902754ea3003b94e75d279b3c1363ab1330974cac14645fffabce8ada0de3277b9fdd8572fe234cb",
-                        "sha1": "76779c5992bba7b1992f800697d17c03b68a3b31"
+                        "sha512": "0c3d4e862338e38b615928fe58dc079b7b71e5583fed55901a2fd389a9a74abd3ccceaeaad5ecb915158559227a34e6c7533b2c1ecb81a2f1bcb07d8f5f77ed2",
+                        "sha1": "5b33f740a89d0d9b4cf9bb58c82762bdc7c218ca"
                     },
                     "required_dependencies": [
                         "1oUDhxuy"
                     ],
-                    "size": 2658694,
-                    "date_published": "2025-12-09T14:05:35.324942Z"
+                    "size": 2683863,
+                    "date_published": "2026-01-24T12:10:44.971226Z"
                 }
             ]
         },
