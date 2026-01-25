@@ -59,9 +59,13 @@ BlockEvents.broken(event => {
 	}
 
 	level.server.scheduleInTicks(0, callback => {
+		// Failsafe to not place blocks accidentally in front/back.
 		if (!level.getBlock(broken_pos).hasTag("minecraft:air")) {
-			// Failsafe to not place blocks accidentally in front/back.
-			player.playNotifySound("bubble_cobble:buzz", "players", 1.0, 1.0)
+			// Hacky earrape prevention.
+			if (!player.cooldowns.isOnCooldown(held_item)) {
+				player.addItemCooldown(held_item, 1)
+				player.playNotifySound("bubble_cobble:buzz", "players", 1.0, 1.0)
+			}
 			return
 		}
 
