@@ -167,4 +167,10 @@ LootJS.lootTables(event => {
 		})
 	}
 
+	// Let Headhunter work with Wither Skeletons.
+	if (Platform.isLoaded("cnc")) {
+		event.getEntityTable("minecraft:wither_skeleton").createPool()
+			.when(c => c.killedByPlayer() && c.randomChanceWithEnchantment("cnc:headhunter", [0.0, 0.15]))
+			.addEntry("minecraft:wither_skeleton_skull")
+	}
 })

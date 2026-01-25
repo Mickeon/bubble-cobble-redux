@@ -7,7 +7,7 @@ ServerEvents.tags("item", event => {
 	// Some of these mods add them in the block tags, but not the item tags.
 	event.add("minecraft:rails", "create:controller_rail") // Reported: https://github.com/Creators-of-Create/Create/pull/9684
 	event.add("minecraft:fishes", "create_bic_bit:raw_herring", "create_bic_bit:cooked_herring")
-	event.add("c:foods/raw_fish", "create_bic_bit:raw_herring")
+	event.add("c:foods/raw_fish", "create_bic_bit:raw_herring", "minersdelight:squid", "minersdelight:glow_squid", "minersdelight:tentacles") // We only really use this ourselves for haunting Zinc. Perhaps these definitions should be removed.
 	event.add("c:foods/safe_raw_fish", "create_bic_bit:raw_herring")
 	event.add("c:foods/cooked_fish", "create_bic_bit:cooked_herring")
 	event.add("c:foods/food_poisoning", "minersdelight:copper_carrot", "minersdelight:bat_wing", "minersdelight:arthropod", "minersdelight:squid", "farmersdelight:wheat_dough", "farmersdelight:raw_pasta", "mynethersdelight:ghasta", "mynethersdelight:ghast_dough")

@@ -27,6 +27,7 @@ global.DISABLED_ITEMS = [
 
 	// Cobbreeding adds a lot of unnecessary, coloured Pokemon eggs.
 	/cobbreeding:.+pokemon_egg/,
+	"cobbreeding:manaphy_egg",
 
 	// Obsolete.
 	"createmonballsoverhaul:apricorn_punch"

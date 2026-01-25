@@ -1,0 +1,26 @@
+{
+  "parent": "kubejs:eat_cooked_lucky_egg",
+  "display": {
+    "icon": {
+      "id": "cobbreeding:pokemon_egg"
+    },
+    "title": "A bit of protein didn't hurt anyone",
+    "description": "Eat a fried Pokemon Egg",
+    "frame": "goal"
+  },
+  "criteria": {
+    "pokemon_egg": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "farmersdelight:fried_egg",
+          "components": {
+            "minecraft:custom_data": {
+              "was_pokemon_egg": true
+            }
+          }
+        }
+      }
+    }
+  }
+}

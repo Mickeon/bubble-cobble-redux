@@ -51,6 +51,10 @@ ServerEvents.recipes(event => {
 	event.smelting(cooked_lucky_egg, "cobblemon:lucky_egg", 5)
 	event.smoking(cooked_lucky_egg, "cobblemon:lucky_egg", 2.5)
 	event.campfireCooking(cooked_lucky_egg, "cobblemon:lucky_egg", 5)
+	const cooked_pokemon_egg = Item.of("farmersdelight:fried_egg", {"minecraft:custom_data": {was_pokemon_egg: true}, "minecraft:rarity": "uncommon"})
+	event.smelting(cooked_pokemon_egg, "cobbreeding:pokemon_egg", 5)
+	event.smoking(cooked_pokemon_egg, "cobbreeding:pokemon_egg", 2.5)
+	event.campfireCooking(cooked_pokemon_egg, "cobbreeding:pokemon_egg", 5)
 
 	event.shaped("kubejs:super_ghostbusters", [" T ", "TMT", " T "], {T: "mega_showdown:ghost_tera_shard", M: "cobblemon:moon_stone"})
 	event.shaped(Item.of("biomeswevegone:rose", 16), ["RR", "RR"], {R: "minecraft:rose_bush"})
