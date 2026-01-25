@@ -1,0 +1,29 @@
+{
+  "parent": "item_interactions:buckets/water_bucket",
+
+  "attributes": {
+    "duration": 15,
+    "speedY": 20,
+    "accelerationY": -4
+  },
+
+  "events": {
+    "splash": {
+      "attributes": {
+        "count": 1
+      }
+    }
+  },
+
+  "applies": [
+    {
+      "id": "minecraft:potion",
+      "components": {
+        "potion_contents": {
+          "potion": "minecraft:water"
+        }
+      }
+    }
+    ,{"id": "minersdelight:water_cup"}
+  ]
+}

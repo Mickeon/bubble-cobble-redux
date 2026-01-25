@@ -14,7 +14,7 @@
 
   "events": {
     "onCarried": {
-        "interval": 80
+        "interval": 140
     }
   },
 

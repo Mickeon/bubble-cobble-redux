@@ -1,0 +1,23 @@
+{
+  "parent": "item_interactions:buckets/milk_bucket",
+
+  "attributes": {
+    "duration": 15,
+    "speedY": 20,
+    "accelerationY": -4
+  },
+
+  "events": {
+    "splash": {
+      "attributes": {
+        "count": 1
+      }
+    }
+  },
+
+  "applies": [
+    {"id": "minersdelight:milk_cup"},
+    {"id": "farmersdelight:milk_bottle"},
+    {"id": "cobblemon:moomoo_milk"}
+  ]
+}

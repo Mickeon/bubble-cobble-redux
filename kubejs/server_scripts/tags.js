@@ -21,8 +21,8 @@ ServerEvents.tags("item", event => {
 	event.add("c:drinks/juice", "kubejs:berry_juice_soda", "biomeswevegone:aloe_vera_juice")
 	// event.add("c:obsidians", "astral_dimension:gloomy_obsidian", "astral_dimension:glowing_obsidian")
 	event.add("cobblemon:held/is_held_item", "cobblemon:soothe_bell") // Reported and fixed. Remove at earliest convenience: https://gitlab.com/cable-mc/cobblemon/-/merge_requests/2081
-	event.add("cobblemon:evolution_items", "cobblemon:syrupy_apple") // Reported https://gitlab.com/cable-mc/cobblemon/-/merge_requests/2120.
-	event.add("cobblemon:boats", "cobblemon:saccharine_boat", "cobblemon:saccharine_chest_boat") // Reported: https://gitlab.com/cable-mc/cobblemon/-/issues/1855
+	event.add("cobblemon:evolution_items", "cobblemon:syrupy_apple") // Reported and fixed. Remove at earliest convenience: https://gitlab.com/cable-mc/cobblemon/-/merge_requests/2120.
+	event.add("cobblemon:boats", "cobblemon:saccharine_boat", "cobblemon:saccharine_chest_boat") // Reported and fixed. Remove at earliest convenience: https://gitlab.com/cable-mc/cobblemon/-/issues/1855
 	event.add("minecraft:chest_boats", "cobblemon:saccharine_chest_boat")
 	event.add("supplementaries:statue_swords", "#minecraft:swords")
 	event.add("cobblemon:water_stone_ores", "mega_showdown:mega_meteorid_water_ore") // Reported: https://github.com/yajatkaul/CobblemonMegaShowdown/issues/144

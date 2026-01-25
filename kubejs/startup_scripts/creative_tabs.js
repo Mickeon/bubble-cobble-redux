@@ -164,6 +164,7 @@ remove_and_merge_into_tab("mega_showdown:tera_tab", "mega_showdown:key_tab", [
 	"mega_showdown:steel_tera_shard",
 	"mega_showdown:fairy_tera_shard",
 	"mega_showdown:stellar_tera_shard",
+	"mega_showdown:custom_tera_shard",
 	"mega_showdown:tera_orb",
 	"mega_showdown:likos_pendant",
 	"mega_showdown:dormant_crystal",
