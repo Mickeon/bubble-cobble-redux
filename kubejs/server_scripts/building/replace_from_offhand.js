@@ -63,7 +63,7 @@ BlockEvents.broken(event => {
 		if (!level.getBlock(broken_pos).hasTag("minecraft:air")) {
 			// Hacky earrape prevention.
 			if (!player.cooldowns.isOnCooldown(held_item)) {
-				player.addItemCooldown(held_item, 1)
+				player.addItemCooldown(held_item, 5)
 				player.playNotifySound("bubble_cobble:buzz", "players", 1.0, 1.0)
 			}
 			return
