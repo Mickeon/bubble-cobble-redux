@@ -2879,7 +2879,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "create_ltab-3.6.2.jar",
+                    "file_name": "create_ltab-3.7.0.jar",
                     "mc_versions": [
                         "1.20.1",
                         "1.21.1"
@@ -2891,16 +2891,16 @@
                         "quilt"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/fUa6OtBG/versions/Vb1mZ3qu/create_ltab-3.6.2.jar",
-                    "id": "Vb1mZ3qu",
+                    "url": "https://cdn.modrinth.com/data/fUa6OtBG/versions/6kDCA6vG/create_ltab-3.7.0.jar",
+                    "id": "6kDCA6vG",
                     "parent_id": "fUa6OtBG",
                     "hashes": {
-                        "sha512": "5a67b1ab61ae14258981d9a208b9cc8097da6e51cb0cfd60e3aed1fc6b90d7276ca2c3f103fc203dc37a11a3feaaebde98333af41f85711cb6b708d696dd2f72",
-                        "sha1": "330a27841d6472bd4a6994f3cf794b6a59909a38"
+                        "sha512": "6c054f04f5b01d59fac45f5f72d224e2a7e0313b34c69ddbf00621a2117e5e0b28374181f7ee2a33bb7ef402fb36c58c569c5d13aa44afc2c03099ca56da3422",
+                        "sha1": "c2439c3ad1b68e5b3d639cfe6c57b96a53ac9a94"
                     },
                     "required_dependencies": [],
-                    "size": 2178459,
-                    "date_published": "2026-01-12T18:44:27.969626Z"
+                    "size": 2246580,
+                    "date_published": "2026-01-25T17:59:55.350968Z"
                 }
             ]
         },
@@ -6780,7 +6780,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "particle_core-0.3.1-fix1+1.21+neoforge.jar",
+                    "file_name": "particle_core-0.3.2+1.21+neoforge.jar",
                     "mc_versions": [
                         "1.21",
                         "1.21.1"
@@ -6789,19 +6789,19 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/RSeLon5O/versions/yDBsYwsY/particle_core-0.3.1-fix1+1.21+neoforge.jar",
-                    "id": "yDBsYwsY",
+                    "url": "https://cdn.modrinth.com/data/RSeLon5O/versions/D0F04XQX/particle_core-0.3.2+1.21+neoforge.jar",
+                    "id": "D0F04XQX",
                     "parent_id": "RSeLon5O",
                     "hashes": {
-                        "sha512": "aceded23226df38369af6ce020596906805074f8f3575e820678b4fbd27be11b77d78cf48430ecd6c8bf7b495fccce4fb6c965d032ef7a80ccc7dd65ee2c0701",
-                        "sha1": "75801cd0ccc7454c08e38e2138f215515e0d9b1f"
+                        "sha512": "02d17f7864329b6ce3e81fc0cebf49e627edc175df7693bb151eaf3c4baf489b8802e1ab3bd45c58d206c3f0afdfcf2773ebb6cd1b46409606fd6abf25c18064",
+                        "sha1": "f37041047e060ac380c1c019737d15645abbd724"
                     },
                     "required_dependencies": [
-                        "hYykXjDp",
-                        "ordsPcFz"
+                        "ordsPcFz",
+                        "hYykXjDp"
                     ],
-                    "size": 135212,
-                    "date_published": "2026-01-22T10:54:57.602621Z"
+                    "size": 138142,
+                    "date_published": "2026-01-25T16:05:04.969407Z"
                 }
             ]
         },
@@ -8003,24 +8003,27 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "server_i18n_api-1.4.1-1.21.1-neoforge.jar",
+                    "file_name": "server_i18n_api-1.4.2-1.21.3-neoforge.jar",
                     "mc_versions": [
-                        "1.21.1"
+                        "1.21",
+                        "1.21.1",
+                        "1.21.2",
+                        "1.21.3"
                     ],
                     "loaders": [
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/Cl2eyShu/versions/RNpslFZb/server_i18n_api-1.4.1-1.21.1-neoforge.jar",
-                    "id": "RNpslFZb",
+                    "url": "https://cdn.modrinth.com/data/Cl2eyShu/versions/Jz8EoWCY/server_i18n_api-1.4.2-1.21.3-neoforge.jar",
+                    "id": "Jz8EoWCY",
                     "parent_id": "Cl2eyShu",
                     "hashes": {
-                        "sha512": "6385bd9b7a64836a7e2f09318c691c7052ce149d3f09ff68bf5da7c7905f8f7215ceef80c16f6b29e14bfaec9150ba91e22f40c9c3fd0b3a0287dc2c0eb68d84",
-                        "sha1": "46addd5125621a735355f12c96aa15a5bdb46db9"
+                        "sha512": "1d4c0ea6a0ad6f55a1289c7e3beb809b393321fb9326317fcd7a9e9f9b0477f5904cd9494c7097d9a3762024a7c54b152c72139fb07c3b5a5853df6bab1a957b",
+                        "sha1": "6af19005985f4fd68df51732b7649ff83cd46513"
                     },
                     "required_dependencies": [],
-                    "size": 26449,
-                    "date_published": "2025-11-05T14:11:07.535453Z"
+                    "size": 25137,
+                    "date_published": "2026-01-26T02:23:15.405784Z"
                 }
             ]
         },
