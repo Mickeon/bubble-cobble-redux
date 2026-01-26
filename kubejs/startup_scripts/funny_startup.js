@@ -1,5 +1,3 @@
-/** @type {typeof import("net.minecraft.world.item.component.ItemAttributeModifiers").$ItemAttributeModifiers } */
-let $ItemAttributeModifiers  = Java.loadClass("net.minecraft.world.item.component.ItemAttributeModifiers")
 /** @type {typeof import("net.neoforged.neoforge.event.brewing.RegisterBrewingRecipesEvent").$RegisterBrewingRecipesEvent } */
 let $RegisterBrewingRecipesEvent  = Java.loadClass("net.neoforged.neoforge.event.brewing.RegisterBrewingRecipesEvent")
 /** @type {typeof import("net.minecraft.world.entity.animal.CatVariant").$CatVariant } */

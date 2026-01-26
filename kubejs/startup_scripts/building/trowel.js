@@ -25,12 +25,8 @@ StartupEvents.registry("item", event => {
 
 	event.create("trowel")
 			.unstackable()
-			.tooltip(Text.translatableWithFallback("", "Randomly places blocks from your hotbar").gray())
 			.maxDamage(250)
-			.parentModel("minecraft:item/handheld")
-			.tag("minecraft:enchantable/durability")
-			.tag("c:tools")
-			.tag("nova_structures:enchantable/metal")
+			.tooltip(Text.of(`Randomly places blocks from your hotbar`).gray())
 			.component("minecraft:attribute_modifiers", new $ItemAttributeModifiers([
 				modifier("minecraft:generic.attack_speed", -2, "add_value", "minecraft:base_attack_speed", "mainhand"),
 				modifier("minecraft:player.block_interaction_range", 2, "add_value", "kubejs:trowel", "hand"),
@@ -41,6 +37,10 @@ StartupEvents.registry("item", event => {
 					{ blocks: "#minecraft:mineable/shovel", correct_for_drops: true, speed: 4.0 }
 				], 1.5, 1)
 			)
+			.parentModel("minecraft:item/handheld")
+			.tag("minecraft:enchantable/durability")
+			.tag("c:tools")
+			.tag("nova_structures:enchantable/metal")
 })
 
 StartupEvents.modifyCreativeTab("minecraft:tools_and_utilities", event => {

@@ -33,17 +33,30 @@ BlockEvents.rightClicked(event => {
 		return
 	}
 
-	// TODO: Do not trigger the ruler when trying to use blocks normally.
-	// const use_result = block.getBlockState().useItemOn(
-	// 	event.item, event.level, player, event.hand, event.hitResult
-	// )
-	// if (use_result.consumesAction()) {
-	// 	return
-	// }
-
 	const {player, block, item, server} = event
 	const ruler = RulerData.getOrCreate(player.uuid)
 	if (!ruler.measure_loop) {
+		// Do not activate the Ruler when trying to use blocks normally.
+		// Admittedly, I am not sure this is very ideal. The code here imitates vanilla Minecraft,
+		// but may break for more specific actions. If only there was a single method to do this...
+		// FIXME: Does not handle, for example, holding blocks in the offhand. Both the Ruler and the block are "activated".
+		if (!player.shiftKeyDown) {
+			let use_result = block.getBlockState().useItemOn(item, event.level, player, event.hand, event.hitResult)
+			// console.log(use_result, use_result.consumesAction(), use_result.result().indicateItemUse())
+			if (use_result.consumesAction()) {
+				event.cancel()
+				return
+			}
+			if (use_result == "pass_to_default_block_interaction") {
+				let default_use_result = block.getBlockState().useWithoutItem(event.level, player, event.hitResult)
+				// console.log(default_use_result, default_use_result.consumesAction())
+				if (default_use_result.consumesAction()) {
+					event.cancel()
+					return
+				}
+			}
+		}
+
 		/** @param {$Vec3} position @param {string} color @param {number} scale */
 		let draw_dust_at = function(position, color, scale) {
 			scale = scale || 1.0
@@ -58,7 +71,6 @@ BlockEvents.rightClicked(event => {
 			let step = particle_count ? (1 / particle_count) : 0.1
 			let ratio = draw_start_offset ? (draw_start_offset / from.distanceTo(to)) : 0.0
 			while (ratio < 1.0) {
-				// draw_dust_at(from.lerp(to, ratio).align(Direction.ALL_SET), color)
 				draw_dust_at(from.lerp(to, ratio), color, scale)
 				ratio += step
 			}
@@ -70,8 +82,9 @@ BlockEvents.rightClicked(event => {
 		ruler.draw_start = ruler.start_pos.center.add(ruler.target_face_normal.scale(0.6))
 		ruler.begun_tick = server.tickCount
 		ruler.measure_loop = server.scheduleRepeatingInTicks(2, () => {
-			if (!player.isHoldingInAnyHand(item) || player.isRemoved()) {
+			if (player.isRemoved() || !player.isHolding(item)) {
 				ruler.stop_measuring()
+				player.statusMessage = ""
 				return
 			}
 			const raytraced = player.rayTrace()
@@ -152,10 +165,12 @@ BlockEvents.rightClicked(event => {
 		})
 	} else {
 		ruler.stop_measuring()
+		player.statusMessage = ""
 	}
 
 	player.swing(event.hand, true)
 	player.playNotifySound("create:controller_click", "players", 0.5, 1.0)
+	player.unlockAdvancement("kubejs:use_ruler")
 
 	event.cancel()
 })
@@ -172,5 +187,6 @@ ItemEvents.firstRightClicked(event => {
 
 	player.swing(event.hand, true)
 	player.playNotifySound("create:controller_click", "players", 0.5, 0.8)
+	player.statusMessage = ""
 	ruler.stop_measuring()
 })

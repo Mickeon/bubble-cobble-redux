@@ -1,0 +1,16 @@
+{
+  "$schema": "https://www.schemastore.org/minecraft-advancement.json",
+  "parent": "minecraft:husbandry/root",
+  "display": {
+    "icon": {
+      "id": "kubejs:ruler"
+    },
+    "title": "That Was When I Ruled the Land",
+    "description": "Get yourself a Ruler and start taking measures."
+  },
+  "criteria": {
+    "ruler": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

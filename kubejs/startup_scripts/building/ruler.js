@@ -15,9 +15,12 @@ StartupEvents.registry("item", event => {
 	event.create("ruler")
 			.unstackable()
 			.tooltip(Text.of(`Right-click on a block to begin measuring`).gray())
+			.component("minecraft:attribute_modifiers", new $ItemAttributeModifiers([
+				modifier("minecraft:player.block_interaction_range", 2, "add_value", "kubejs:ruler", "hand"),
+			], true))
+			.burnTime(50)
 			.parentModel("minecraft:item/handheld")
 			.tag("c:tools")
-			.burnTime(50)
 })
 
 StartupEvents.modifyCreativeTab("minecraft:tools_and_utilities", event => {

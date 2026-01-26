@@ -7,6 +7,8 @@ Platform.setModName("bubble_cobble", "Bubble Cobble")
 let $Player  = Java.loadClass("net.minecraft.world.entity.player.Player")
 /** @type {typeof import("dev.latvian.mods.kubejs.item.FoodBuilder").$FoodBuilder } */
 let $FoodBuilder  = Java.loadClass("dev.latvian.mods.kubejs.item.FoodBuilder")
+/** @type {typeof import("net.minecraft.world.item.component.ItemAttributeModifiers").$ItemAttributeModifiers } */
+let $ItemAttributeModifiers  = Java.loadClass("net.minecraft.world.item.component.ItemAttributeModifiers")
 
 /**
  * @import {$List} from "java.util.List"

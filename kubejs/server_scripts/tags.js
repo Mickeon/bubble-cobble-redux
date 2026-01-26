@@ -61,6 +61,7 @@ ServerEvents.tags("item", event => {
 	event.add("c:mushrooms", "ribbits:toadstool") // No, it doesn't make sense?
 	event.add("create:pulpifiable", "biomeswevegone:shrub", "biomeswevegone:firecracker_flower_bush", "cobblemon:medicinal_leek")
 	event.add("create_bic_bit:tulip", "#biomeswevegone:flowers/tulips")
+	event.add("soulbound:enchantable", "#c:tools")
 
 	// Why not? It's fun.
 	event.add("supplementaries:blackboard_white",      "minecraft:sugar", "cobblemon:white_apricorn", "cobblemon:white_mint_leaf")
