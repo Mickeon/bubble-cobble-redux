@@ -223,7 +223,7 @@ ServerEvents.tags("block", event => {
 // Also help whoever is in quicksand with thumbs up.
 PlayerEvents.decorateChat(event => {
 	const speaker = event.player
-	/** @type {String} */
+	/** @type {string} */
 	const message = event.message
 	if (message.toLowerCase() == "hi") {
 		// const nearby_pokemon = speaker.level.getEntitiesWithin(AABB.CUBE.inflate(4).move(speaker.x, speaker.y, speaker.z)).filterSelector("@n[type=cobblemon:pokemon, nbt={Pokemon:{PokemonOriginalTrainerType:NONE}}]").first
@@ -240,6 +240,7 @@ PlayerEvents.decorateChat(event => {
 		let server = event.server
 		server.getPlayers().forEach(/** @param {$ServerPlayer} victim */ victim => {
 			if ((victim != speaker || server.isSingleplayer()) && victim.inBlockState.hasTag("bubble_cobble:quicksand") && victim.isAdvancementDone("kubejs:step_in_quicksand")) {
+				speaker.unlockAdvancement("kubejs:help_for_quicksand")
 				victim.motionY = 5
 				victim.hurtMarked = true
 				victim.addEffect(MobEffectUtil.of("minecraft:levitation", 2 * SEC))
@@ -292,14 +293,18 @@ ServerEvents.basicPublicCommand("suebegone", event => {
 
 // #region Dashing power.
 PlayerEvents.loggedIn(event => {
-	if (DASH_STARTERS.includes(event.player.username)) {
-		event.player.setAttributeBaseValue("kubejs:dash_jump_count", 1)
+	/** @type {$ServerPlayer} */
+	const player = event.player
+	if (DASH_STARTERS.includes(player.username)) {
+		player.setAttributeBaseValue("kubejs:dash_jump_count", 1)
 	}
 	// I know the consequences of this. If the server restarts, you will lose the leniency.
 	// But I can't be bothered storing dash data on disk.
-	event.player.removeAttribute("minecraft:generic.safe_fall_distance", "kubejs:dash_leniency")
-	event.player.removeAttribute("minecraft:generic.safe_fall_distance", "kubejs:powder_snow_leniency")
-	event.player.removeAttribute("minecraft:generic.gravity", "kubejs:powder_snow_pause")
+	player.removeAttribute("minecraft:generic.safe_fall_distance", "kubejs:dash_leniency")
+	player.removeAttribute("minecraft:generic.safe_fall_distance", "kubejs:powder_snow_leniency")
+	player.removeAttribute("minecraft:generic.gravity", "kubejs:powder_snow_pause")
+
+	player.revokeAdvancement("kubejs:step_in_quicksand")
 })
 
 // https://discord.com/channels/303440391124942858/303440391124942858/1450918369342521548

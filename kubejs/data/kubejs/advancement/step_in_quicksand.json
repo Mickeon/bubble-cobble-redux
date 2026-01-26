@@ -1,12 +1,13 @@
 {
   "$schema": "https://www.schemastore.org/minecraft-advancement.json",
-  "parent": "minecraft:adventure/root",
+  "parent": "kubejs:help_for_quicksand",
   "display": {
     "icon": {
       "id": "biomeswevegone:quicksand"
     },
     "title": "HELP = 👍",
-    "description": "Won't someone please HELP ME?"
+    "description": "Won't someone please HELP ME?",
+    "hidden": true
   },
   "criteria": {
     "quicksand": {

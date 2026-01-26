@@ -1,0 +1,20 @@
+{
+  "$schema": "https://www.schemastore.org/minecraft-advancement.json",
+  "parent": "minecraft:adventure/root",
+  "display": {
+    "icon": {
+      "id": "biomeswevegone:red_quicksand"
+    },
+    "title": "Helping Hand",
+    "description": "Rescue someone falling in Quicksand through the almighty pictograph"
+  },
+  "criteria": {
+    "thumbs_up": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "function": "kubejs:give_helping_hand",
+    "experience": 25
+  }
+}
