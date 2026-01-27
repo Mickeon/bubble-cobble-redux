@@ -25,6 +25,10 @@
     "farmersdelight:straw_bale",
     "supplementaries:flax_block",
     "farmersdelight:canvas_rug",
-    "brewinandchewin:coaster"
+    "brewinandchewin:coaster",
+    "biomeswevegone:cattail_thatch",
+    "biomeswevegone:cattail_thatch_stairs",
+    "biomeswevegone:cattail_thatch_slab",
+    "biomeswevegone:cattail_thatch_carpet"
   ]
 }

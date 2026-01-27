@@ -184,6 +184,7 @@ StartupEvents.registry("sound_event", event => {
 	event.create("bubble_cobble:fruit_collected")
 	event.create("bubble_cobble:life_got")
 	event.create("kubejs:item.bearded_dragon_chirp")
+	event.create("kubejs:entity.enderman.bones_cracking")
 })
 
 StartupEvents.registry("attribute", event => {

@@ -77,6 +77,9 @@ ClientEvents.lang("en_us", event => {
 	})
 	// Both Biomes o' Plenty and Biomes We've Gone have Cattail.
 	event.add("block.biomesoplenty.cattail", "Stupidly Ugly Cattail")
+
+	// Both Biomes o' Plenty and Biomes We've Gone have Roses.
+	event.add("block.biomesoplenty.rose", "Beta Rose")
 })
 
 // This doesn't work for the first load.

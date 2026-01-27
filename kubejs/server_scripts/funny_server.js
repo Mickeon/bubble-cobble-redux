@@ -1,5 +1,12 @@
 // requires: cobblemon
 // requires: create
+/** @type {typeof import("net.minecraft.world.entity.ai.targeting.TargetingConditions").$TargetingConditions } */
+let $TargetingConditions  = Java.loadClass("net.minecraft.world.entity.ai.targeting.TargetingConditions")
+/** @type {typeof import("virtuoel.pehkui.api.ScaleTypes").$ScaleTypes } */
+let $ScaleTypes  = Java.loadClass("virtuoel.pehkui.api.ScaleTypes")
+// https://github.com/Virtuoel/Pehkui/blob/neoforge/1.21/src/main/java/virtuoel/pehkui/api/ScaleEasings.java
+/** @type {typeof import("virtuoel.pehkui.api.ScaleEasings").$ScaleEasings } */
+let $ScaleEasings  = Java.loadClass("virtuoel.pehkui.api.ScaleEasings")
 /** @type {typeof import("net.neoforged.neoforge.event.entity.EntityMobGriefingEvent").$EntityMobGriefingEvent } */
 let $EntityMobGriefingEvent  = Java.loadClass("net.neoforged.neoforge.event.entity.EntityMobGriefingEvent")
 /** @type {typeof import("net.minecraft.world.entity.player.Player").$Player } */
@@ -603,26 +610,52 @@ NativeEvents.onEvent($ProjectileImpactEvent, event => {
 	event.canceled = true
 })
 
+const ENDERMAN_CRACKING_INTERVAL = 15 * SEC
+
 // Endermen suffer from Osteoporosis when trying to pick up blocks.
 NativeEvents.onEvent($EntityMobGriefingEvent, event => {
-	if (event.entity.type == "minecraft:enderman") {
-		event.setCanGrief(false)
+	if (event.entity.type != "minecraft:enderman") {
+		return
+	}
 
-		/** @type {import("net.minecraft.world.entity.monster.EnderMan").$EnderMan$$Type} */
-		let enderman = event.entity
+	event.setCanGrief(false)
 
-		// Endermen check for this basically every tick. The paralysis isn't just for fun.
-		if (!enderman.isAngry() && enderman.tickCount % (10 * SEC) < 10) {
-			enderman.addEffect(MobEffectUtil.of("relics:paralysis", 2 * SEC))
-			enderman.addEffect(MobEffectUtil.of("minecraft:weakness", 4 * SEC, 3))
-			enderman.setAttributeBaseValue("minecraft:generic.max_health",
-				Math.max(enderman.getAttributeBaseValue("minecraft:generic.max_health") - 1, 8)
-			)
-			enderman.playSound("minecraft:entity.goat.horn_break", 1.0, 0.5)
-			// enderman.setTicksFrozen(10 * SEC)
-			enderman.carriedBlock = "minecraft:cave_air"
-			enderman.server.scheduleInTicks(5, () => enderman.carriedBlock = "minecraft:air")
+	/** @type {import("net.minecraft.world.entity.monster.EnderMan").$EnderMan$$Type} */
+	let enderman = event.entity
+
+	// Endermen check for this basically every tick. The paralysis isn't just for fun.
+	if (!enderman.isAngry() && enderman.tickCount % (ENDERMAN_CRACKING_INTERVAL) < 5) {
+		// Long-winded way to check if the Enderman can truly pick up anything around him (such as Dirt).
+		if (!enderman.level.getBlockStates(AABB.ofBlock(enderman.getBlock().getPos()).inflate(0.5)).anyMatch(block_state => block_state.hasTag("minecraft:enderman_holdable"))) {
+			return
 		}
+
+		// Crack bones only with players around.
+		if (!enderman.level.hasNearbyAlivePlayer(enderman.x, enderman.y, enderman.z, 16)) {
+			return
+		}
+
+		enderman.addEffect(MobEffectUtil.of("relics:paralysis", 2 * SEC))
+		enderman.addEffect(MobEffectUtil.of("minecraft:weakness", 4 * SEC, 3))
+		enderman.setAttributeBaseValue("minecraft:generic.max_health",
+			Math.max(enderman.getAttributeBaseValue("minecraft:generic.max_health") - 1, 8)
+		)
+		enderman.playSound("kubejs:entity.enderman.bones_cracking", 1.0, 1.0)
+		enderman.carriedBlock = "minecraft:cave_air"
+
+		let height_scale_data = enderman.pehkui_getScaleData($ScaleTypes.MODEL_HEIGHT)
+		height_scale_data.setEasing($ScaleEasings.ELASTIC_OUT)
+		height_scale_data.setTargetScale(0.75)
+		height_scale_data.setScaleTickDelay(2 * SEC)
+
+		enderman.server.scheduleInTicks(5 * SEC, () => {
+			if (!enderman || enderman.isRemoved()) {
+				return
+			}
+			enderman.carriedBlock = "minecraft:air"
+			height_scale_data.setTargetScale(1.0)
+			height_scale_data.setScaleTickDelay(1 * SEC)
+		})
 	}
 })
 
