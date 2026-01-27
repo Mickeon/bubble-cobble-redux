@@ -820,7 +820,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "better_modlist-1.1.20.jar",
+                    "file_name": "better_modlist-1.1.21.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -828,16 +828,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/sbpqhzIG/versions/ZoMlh59X/better_modlist-1.1.20.jar",
-                    "id": "ZoMlh59X",
+                    "url": "https://cdn.modrinth.com/data/sbpqhzIG/versions/GiLH27s1/better_modlist-1.1.21.jar",
+                    "id": "GiLH27s1",
                     "parent_id": "sbpqhzIG",
                     "hashes": {
-                        "sha512": "6473fe5d124f7126697bdc4390b53ef6d9a9932aca9af7085ba432013b13fd455ab683bfe66b7d6bdd81cc6f71f0967c20dbd879cad55f7a46b9632b03b345b9",
-                        "sha1": "fa88e9304136c8ca9f769418b2c19f1ec0d08499"
+                        "sha512": "190f6afbb18c919aa9d02abe47c234b98f1d30e828bcc0b0f3d607716513075dad1fe494cd0ed9513afd4ec6e8a41989b0b7b93e9465f668e53fc7474e9e4057",
+                        "sha1": "9da2a1c4f5450695dd3cef2b760ef6ddb3f3e031"
                     },
                     "required_dependencies": [],
-                    "size": 803441,
-                    "date_published": "2025-10-01T18:53:23.906796Z"
+                    "size": 806109,
+                    "date_published": "2026-01-27T11:34:43.165578Z"
                 }
             ]
         },
@@ -6053,7 +6053,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "mod-sets-2.1.0.jar",
+                    "file_name": "mod-sets-2.1.1.jar",
                     "mc_versions": [
                         "1.20.1",
                         "1.21",
@@ -6075,18 +6075,18 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/b313lC4Y/versions/fTIs6sKy/mod-sets-2.1.0.jar",
-                    "id": "fTIs6sKy",
+                    "url": "https://cdn.modrinth.com/data/b313lC4Y/versions/Dh2cK33k/mod-sets-2.1.1.jar",
+                    "id": "Dh2cK33k",
                     "parent_id": "b313lC4Y",
                     "hashes": {
-                        "sha512": "7a0c46bcc79f9b7bd75a87fc5a163bffd227673ecb59241c63c18117d388d76f786d100c405a75dad71fc042a17a4792d9d75743b90a5c3ef768a966f7c81062",
-                        "sha1": "a563c3b1466b2341575fd3b27fc0f326ad2c2c5a"
+                        "sha512": "f14cbe6619a6dcdbca110d1c2891932d0e474d0b4d3df944e183456979ee116cb2b3b5727b8046dceb9064193f89249dab81307492e01f30f996092d69b18e16",
+                        "sha1": "dcc24f58d13ba298f29c7c8a753d35680e469224"
                     },
                     "required_dependencies": [
                         "FFeAJNCx"
                     ],
-                    "size": 213350,
-                    "date_published": "2026-01-26T16:33:32.395699Z"
+                    "size": 214435,
+                    "date_published": "2026-01-27T11:18:33.461843Z"
                 }
             ]
         },
@@ -8467,7 +8467,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "sophisticatedcore-1.21.1-1.4.0.1437.jar",
+                    "file_name": "sophisticatedcore-1.21.1-1.4.0.1438.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -8475,16 +8475,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/nmoqTijg/versions/F7eaYJs0/sophisticatedcore-1.21.1-1.4.0.1437.jar",
-                    "id": "F7eaYJs0",
+                    "url": "https://cdn.modrinth.com/data/nmoqTijg/versions/VxnFkdDs/sophisticatedcore-1.21.1-1.4.0.1438.jar",
+                    "id": "VxnFkdDs",
                     "parent_id": "nmoqTijg",
                     "hashes": {
-                        "sha512": "a6532d0a89aa22cfc9fe51e88e61afe7e82047ddd9aa86aff172f4b679c8e2e1768fc542380aafde90fc520519b80cff3b6c699a01a6c7f79aef3654426a2a79",
-                        "sha1": "99dab8ca7c4990ecb46f60de5946581423fae270"
+                        "sha512": "da0723244c3d6ca2f3b3be4b1bfe8057748d9b2f6f839e8712649badedea6e07d03f676c7b5e45d5cb5c94af98c6a29ef920894d020df619c27c7f4a9c439b50",
+                        "sha1": "a95d43d841565d2fec745c61e3a8ae13b33c03c8"
                     },
                     "required_dependencies": [],
-                    "size": 1455945,
-                    "date_published": "2026-01-26T16:45:13.749785Z"
+                    "size": 1455946,
+                    "date_published": "2026-01-26T19:57:29.629827Z"
                 }
             ]
         },
