@@ -1636,6 +1636,44 @@
             ]
         },
         {
+            "pakku_id": "ccQyEFEh00gEyhxk",
+            "type": "DATA_PACK",
+            "side": "SERVER",
+            "slug": {
+                "modrinth": "cobblemonraiddens-typedesigns"
+            },
+            "name": {
+                "modrinth": "Cobblemon Raid Dens Addon - Raid Den Designs"
+            },
+            "id": {
+                "modrinth": "ulsDecfN"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "CobblemonRaidDenDesigns-0.3_RELEASE.zip",
+                    "mc_versions": [
+                        "1.21",
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "datapack"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/ulsDecfN/versions/i3CzJDnS/CobblemonRaidDenDesigns-0.3_RELEASE.zip",
+                    "id": "i3CzJDnS",
+                    "parent_id": "ulsDecfN",
+                    "hashes": {
+                        "sha512": "7cb9a49f3ad09bf1e6e3c378f6c4e7c9d00a822346e1973f7aebdcfb5cf704e8b766e8449355d9087ab6feee5392c47f34bbb55515471e6393e0a9da056b2c57",
+                        "sha1": "fff895aabbd7eb76c355ae792bec56c8e59b0014"
+                    },
+                    "required_dependencies": [],
+                    "size": 1508459,
+                    "date_published": "2026-01-25T03:57:07.978561Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "2KucOIIUkx0lTOwB",
             "pakku_links": [
                 "rcNaZofHJ2yMvMzg"
