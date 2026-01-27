@@ -5,19 +5,20 @@
   "enableDistanceCulling": true,
   "enableTrackingCulling": true,
   "enableViewportCulling": true,
-  "minDistance": 6,
-  "blocksPerLevel": 64,
-  "blocksPerLevelDistanceCulled": 10,
-  "blocksPerLevelTrackingCulled": 10,
-  "blocksPerLevelViewportCulled": 20,
-  "maxLevel": 20,
+  "minDistance": 3,
+  "blocksPerLevel": 32,
+  "blocksPerLevelDistanceCulled": 5,
+  "blocksPerLevelTrackingCulled": 5,
+  "blocksPerLevelViewportCulled": 10,
+  "maxLevel": 40,
   "blocksPerLevelBlockEntities": 32,
   "stressedThreshold": 45,
   "minDecreaseFactor": 0.25,
   "dimensions": {
     "minecraft:overworld": true,
     "minecraft:the_nether": true,
-    "minecraft:the_end": true
+    "minecraft:the_end": true,
+    "cobblemonraiddens:raid_dimension": false
   },
   "entities": {
     "minecraft:ender_pearl": false,
