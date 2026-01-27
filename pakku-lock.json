@@ -7532,27 +7532,24 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "relics-1.21.1-0.11.6.jar",
+                    "file_name": "relics-1.21.1-0.10.7.7.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
                     "loaders": [
                         "neoforge"
                     ],
-                    "release_type": "beta",
-                    "url": "https://cdn.modrinth.com/data/OCJRPujW/versions/5HufKy1z/relics-1.21.1-0.11.6.jar",
-                    "id": "5HufKy1z",
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/OCJRPujW/versions/vuXgboB6/relics-1.21.1-0.10.7.7.jar",
+                    "id": "vuXgboB6",
                     "parent_id": "OCJRPujW",
                     "hashes": {
-                        "sha512": "83bfc2a12db8c8695edd5d7a2a8de653dc5f7eb88d649a24868e5d365a1207e7c00a0fe7b949e41f5309c47ddc3a1c21c52b6331c7ce7d249a6a1d74a8f79f4a",
-                        "sha1": "0a603d849b2a32e53d8f16d53106b37542d8a69b"
+                        "sha512": "a043134a5f17e69e9b2268f57a5854988d53e16ed6213a19b9d6695674b853cfe12b4679ec25045035473de3bc48070e8562e3515bc76603ac5189a13f56a469",
+                        "sha1": "64c303b1c9e7e3829141efc2a667aced62b3fe56"
                     },
-                    "required_dependencies": [
-                        "RH2KUdKJ",
-                        "vvuO3ImH"
-                    ],
-                    "size": 3837352,
-                    "date_published": "2026-01-07T23:27:29.181340Z"
+                    "required_dependencies": [],
+                    "size": 2753147,
+                    "date_published": "2026-01-27T00:45:20.071410Z"
                 }
             ]
         },
