@@ -1,0 +1,10 @@
+{
+  "keys": [
+    "cobblemonraiddens:cheer_attack",
+    "cobblemonraiddens:cheer_defense",
+    "cobblemonraiddens:cheer_heal"
+  ],
+  "pitch": 1.0,
+  "soundEvent": "bubble_cobble:pmd_encore",
+  "volume": 0.25
+}

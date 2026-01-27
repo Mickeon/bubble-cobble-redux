@@ -1,0 +1,8 @@
+{
+  "keys": [
+    "#cobblemon:mint_leaves"
+  ],
+  "pitch": 1.75,
+  "soundEvent": "minecraft:block.big_dripleaf.hit",
+  "volume": 0.1
+}

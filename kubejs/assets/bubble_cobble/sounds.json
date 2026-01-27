@@ -121,5 +121,16 @@
 		"sounds": [
 			"bubble_cobble:chat"
 		]
+	},
+	"pmd_encore": {
+		"sounds": [
+			"bubble_cobble:pmd_encore",
+			"bubble_cobble:pmd_odateru"
+		]
+	},
+	"pmd_item_equip": {
+		"sounds": [
+			"bubble_cobble:pmd_item_equip"
+		]
 	}
 }

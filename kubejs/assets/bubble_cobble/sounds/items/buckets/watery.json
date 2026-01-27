@@ -1,0 +1,12 @@
+{
+  "keys": [
+    "biomesoplenty:blood_bucket",
+    "biomesoplenty:liquid_null_bucket",
+    "create_bic_bit:frying_oil_bucket",
+    "sliceanddice:fertilizer_bucket",
+    "sophisticatedcore:xp_bucket"
+  ],
+  "pitch": 1.5,
+  "soundEvent": "minecraft:item.bucket.fill_milk",
+  "volume": 0.5
+}

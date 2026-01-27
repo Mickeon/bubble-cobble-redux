@@ -1,0 +1,10 @@
+{
+  "keys": [
+    "create:schematic",
+    "create:empty_schematic",
+    "create:schematic_and_quill"
+  ],
+  "pitch": 1.25,
+  "soundEvent": "sounds:block.loom.hit",
+  "volume": 0.5
+}

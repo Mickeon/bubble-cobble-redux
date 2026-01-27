@@ -1,0 +1,17 @@
+{
+  "keys": [
+    "create:chocolate_bucket",
+    "create:honey_bucket",
+    "create_bic_bit:ketchup_bucket",
+    "create_bic_bit:mayonnaise_bucket",
+    "createmonballsoverhaul:dense_tumblestone_coating_bucket",
+    "createmonballsoverhaul:light_tumblestone_coating_bucket",
+    "createmonballsoverhaul:standard_tumblestone_coating_bucket",
+    "minecraft:lava_bucket",
+    "mynethersdelight:hot_wings_bucket",
+    "supplementaries:lumisene_bucket"
+  ],
+  "pitch": 1.5,
+  "soundEvent": "minecraft:item.bucket.fill_lava",
+  "volume": 0.5
+}

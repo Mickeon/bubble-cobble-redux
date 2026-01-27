@@ -1,0 +1,16 @@
+{
+  "keys": [
+    "cobblemon:coarse_mulch",
+    "cobblemon:growth_mulch",
+    "cobblemon:humid_mulch",
+    "cobblemon:loamy_mulch",
+    "cobblemon:mulch_base",
+    "cobblemon:peat_mulch",
+    "cobblemon:rich_mulch",
+    "cobblemon:sandy_mulch",
+    "cobblemon:surprise_mulch"
+  ],
+  "pitch": 1.5,
+  "soundEvent": "supplementaries:block.sack.place",
+  "volume": 0.5
+}

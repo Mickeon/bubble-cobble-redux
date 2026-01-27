@@ -1,0 +1,15 @@
+{
+  "keys": [
+    "cobblemon:moomoo_milk",
+    "create_bic_bit:frying_oil_bottle",
+    "create_bic_bit:ketchup_bottle",
+    "create_bic_bit:mayonnaise_bottle",
+    "farmersdelight:milk_bottle",
+    "minersdelight:milk_cup",
+    "snowyspirit:eggnog",
+    "supplementaries:lumisene_bottle"
+  ],
+  "pitch": 1.25,
+  "soundEvent": "more_sounds:item.bottled_viscous.slosh",
+  "volume": 0.5
+}

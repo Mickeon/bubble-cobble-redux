@@ -1,0 +1,18 @@
+{
+  "__comment": "Partially overridden by evolution_items.json",
+  "keys": [
+    "#biomeswevegone:glowcane_powder",
+    "#cobblemon:remedies",
+    "create:powdered_obsidian",
+    "createmonballsoverhaul:black_tumblestone_dust",
+    "createmonballsoverhaul:sky_tumblestone_dust",
+    "createmonballsoverhaul:tumblestone_dust",
+    "cobblemon:bright_powder",
+    "cobblemon:metal_powder",
+    "cobblemon:quick_powder",
+    "cobblemon:silver_powder",
+    "mynethersdelight:pepper_powder"
+  ],
+  "pitch": 2.0,
+  "soundEvent": "minecraft:block.gravel.hit"
+}

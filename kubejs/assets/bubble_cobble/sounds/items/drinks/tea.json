@@ -1,0 +1,15 @@
+{
+  "keys": [
+    "create:builders_tea",
+    "herbalbrews:black_tea",
+    "herbalbrews:green_tea",
+    "herbalbrews:hibiscus_tea",
+    "herbalbrews:lavender_tea",
+    "herbalbrews:oolong_tea",
+    "herbalbrews:rooibos_tea",
+    "herbalbrews:yerba_mate_tea"
+  ],
+  "pitch": 1.8,
+  "soundEvent": "minecraft:block.brewing_stand.brew",
+  "volume": 0.25
+}

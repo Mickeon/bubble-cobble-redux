@@ -1,0 +1,9 @@
+{
+  "keys": [
+    "#cobblemon:aprijuices",
+    "cobblemon:berry_juice"
+  ],
+  "pitch": 1.0,
+  "soundEvent": "bubble_cobble:pmd_item_equip",
+  "volume": 0.5
+}

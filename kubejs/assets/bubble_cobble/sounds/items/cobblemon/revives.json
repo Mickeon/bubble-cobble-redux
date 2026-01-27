@@ -1,0 +1,8 @@
+{
+  "keys": [
+    "#cobblemon:revives"
+  ],
+  "pitch": 1.5,
+  "soundEvent": "supplementaries:block.sack.place",
+  "volume": 0.5
+}

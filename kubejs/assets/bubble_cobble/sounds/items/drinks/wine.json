@@ -1,0 +1,13 @@
+{
+  "keys": [
+    "kubejs:berry_juice_soda",
+    "kubejs:firebomb_whiskey",
+    "kubejs:honey_liqueur",
+    "kubejs:sparkling_rose",
+    "kubejs:spumante",
+    "kubejs:sweet_berry_wine"
+  ],
+  "pitch": 1.25,
+  "soundEvent": "minecraft:item.bottle.fill",
+  "volume": 0.25
+}

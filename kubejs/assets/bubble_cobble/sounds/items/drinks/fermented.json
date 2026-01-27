@@ -1,0 +1,8 @@
+{
+  "keys": [
+    "#brewinandchewin:fermented_drinks"
+  ],
+  "pitch": 1.5,
+  "soundEvent": "minecraft:block.bubble_column.upwards_ambient",
+  "volume": 0.25
+}
