@@ -604,6 +604,43 @@
             ]
         },
         {
+            "pakku_id": "lboeMUnTogI52YAZ",
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "modrinth": "backported-spears"
+            },
+            "name": {
+                "modrinth": "Backported Spears"
+            },
+            "id": {
+                "modrinth": "rVUtrHuM"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "spear-backport-neoforge-1.7.3-1.21.1.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/rVUtrHuM/versions/uUy23VAp/spear-backport-neoforge-1.7.3-1.21.1.jar",
+                    "id": "uUy23VAp",
+                    "parent_id": "rVUtrHuM",
+                    "hashes": {
+                        "sha512": "09c82a05f3ffa220d80a46c49cc9122138f4098661e21e5ad68527c40bbc192b301a1574a988e6092437c5b37421c6e4412cab7c0fa4f7490914bc2c58d0fb75",
+                        "sha1": "6d70d25430c771c5455751019cede5bbf41e6eb0"
+                    },
+                    "required_dependencies": [],
+                    "size": 416086,
+                    "date_published": "2026-01-09T07:59:38.122985Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "deBTSyGvs9xgT6S3",
             "type": "MOD",
             "side": "BOTH",
