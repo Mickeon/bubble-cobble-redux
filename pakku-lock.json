@@ -5651,7 +5651,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "lootr-neoforge-1.21.1-1.11.36.112.jar",
+                    "file_name": "lootr-neoforge-1.21.1-1.11.36.114.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -5659,16 +5659,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/EltpO5cN/versions/WlZ6FzSI/lootr-neoforge-1.21.1-1.11.36.112.jar",
-                    "id": "WlZ6FzSI",
+                    "url": "https://cdn.modrinth.com/data/EltpO5cN/versions/4dt0SxY0/lootr-neoforge-1.21.1-1.11.36.114.jar",
+                    "id": "4dt0SxY0",
                     "parent_id": "EltpO5cN",
                     "hashes": {
-                        "sha512": "dc1f899efbbf5763cde239068fec18da0b39baf6e2903053d929dc3c6ef2735b29ec58114e565f8758cc272e87d2a06f983da3a359a357721e33f5751d80fbab",
-                        "sha1": "d73d1e8d13f3680132653e03fde06550029c9078"
+                        "sha512": "25294239c1c5efa93c9f5502c53082fd17da29dc234fb95182d5c94c721b3f2dc583efd93c576edcf624e31ab798a8363864ce1b4ad288bebac76367dc80261d",
+                        "sha1": "931d703192a2de5052d5836bfda066ef7061b55f"
                     },
                     "required_dependencies": [],
-                    "size": 957940,
-                    "date_published": "2026-01-25T10:05:54.073646Z"
+                    "size": 958026,
+                    "date_published": "2026-01-26T02:45:30.507643Z"
                 }
             ]
         },
