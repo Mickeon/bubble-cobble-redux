@@ -1,6 +1,8 @@
 {
   "keys": [
-    "#cobblemon:mints"
+    "#cobblemon:mints",
+    "cobblemon:galarica_cuff",
+    "cobblemon:galarica_wreath"
   ],
   "pitch": 1.5,
   "soundEvent": "cobblemon:block.mint.place",

@@ -1,0 +1,10 @@
+{
+  "keys": [
+    "#cobblemon:teapots",
+    "cobblemon:loaded_dice",
+    "cobblemon:protector"
+  ],
+  "pitch": 2.0,
+  "soundEvent": "cobblemon:block.display_case.step",
+  "volume": 0.25
+}

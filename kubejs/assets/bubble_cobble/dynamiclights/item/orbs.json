@@ -1,6 +1,7 @@
 {
 	"match": {
 		"items": [
+			"cobblemon:light_ball",
 			"mega_showdown:adamant_orb",
 			"mega_showdown:lustrous_orb",
 			"mega_showdown:soul_dew",

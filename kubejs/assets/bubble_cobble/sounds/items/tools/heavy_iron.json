@@ -3,7 +3,10 @@
     "mowziesmobs:wrought_helmet",
     "mowziesmobs:wrought_axe",
     "cobblemon:auspicious_armor",
-    "cobblemon:malicious_armor"
+    "cobblemon:malicious_armor",
+    "cobblemon:heavy_duty_boots",
+    "mega_showdown:rusted_shield",
+    "mega_showdown:rusted_sword"
   ],
   "pitch": 1.25,
   "soundEvent": "minecraft:item.armor.equip_netherite"

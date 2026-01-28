@@ -1,10 +1,16 @@
 {
   "keys": [
+    "#c:foods/dough",
     "create:pulp",
     "mowziesmobs:glowing_jelly",
-    "cobblemon:black_sludge"
+    "cobblemon:black_sludge",
+    "cobblemon:light_clay",
+    "cobblemon:poke_bait",
+    "cobblemon:peat_block",
+    "mynethersdelight:ghast_sourdough",
+    "create_bic_bit:sweet_dough"
   ],
-  "pitch": 0.75,
-  "soundEvent": "minecraft:block.slime_block.hit",
+  "pitch": 1.25,
+  "soundEvent": "minecraft:entity.slime.squish",
   "volume": 0.25
 }

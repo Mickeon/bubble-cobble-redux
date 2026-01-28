@@ -1,5 +1,13 @@
 {
   "keys": [
+    "cobblemon:exp_share",
+    "cobblemon:iron_ball",
+    "cobblemon:magnet",
+    "cobblemon:metal_coat",
+    "cobblemon:shell_helmet",
+    "cobblemon:metal_alloy",
+    "cobblemon:terrain_extender",
+    "cobblemon:twisted_spoon",
     "handcrafted:hammer",
     "kubejs:trowel",
     "minecraft:iron_spear",

@@ -1,0 +1,14 @@
+{
+  "keys": [
+    "cobblemon:deep_sea_tooth",
+    "cobblemon:dragon_fang",
+    "cobblemon:grip_claw",
+    "cobblemon:quick_claw",
+    "cobblemon:razor_fang",
+    "mowziesmobs:naga_fang",
+    "undergroundworlds:spider_fang"
+  ],
+  "pitch": 2.0,
+  "soundEvent": "minecraft:block.bone_block.hit",
+  "volume": 0.25
+}

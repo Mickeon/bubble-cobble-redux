@@ -51,5 +51,6 @@ ServerEvents.tags("block", event => {
 ServerEvents.tags("item", event => {
 	event.add("bubble_cobble:pokenavs", "#cobblenav:pokenav", "cobblenav:pokenav_item_gholdengo", "cobblenav:pokenav_item_wanderer")
 	event.add("bubble_cobble:pokefinders", /^cobblenav:pokefinder_item/)
-	event.add("more_sounds:papers", "via_romana:charting_map", "wanderer_ribbit:ribbit_map")
+	event.add("more_sounds:plates", "create:schedule")
+	event.add("more_sounds:papers", "via_romana:charting_map", "wanderer_ribbit:ribbit_map", "cobblemon:blunder_policy", "cobblemon:cleanse_tag", "cobblemon:red_card", "cobblemon:spell_tag", "cobblemon:weakness_policy")
 })

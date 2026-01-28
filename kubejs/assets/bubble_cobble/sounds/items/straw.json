@@ -4,7 +4,8 @@
     "minecraft:wheat",
     "supplementaries:flax",
     "farmersdelight:cabbage",
-    "farmersdelight:cabbage_leaf"
+    "farmersdelight:cabbage_leaf",
+    "cobblemon:roasted_leek"
   ],
   "pitch": 1.5,
   "soundEvent": "minecraft:block.big_dripleaf.place",

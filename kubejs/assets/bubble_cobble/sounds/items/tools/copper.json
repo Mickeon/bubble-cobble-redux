@@ -1,5 +1,7 @@
 {
   "keys": [
+    "#mega_showdown:mega_bracelet",
+    "#mega_showdown:z_ring",
     "minecraft:copper_axe",
     "minecraft:copper_pickaxe",
     "minecraft:copper_sword",
@@ -11,9 +13,12 @@
     "minecraft:copper_boots",
     "minecraft:copper_horse_armor",
     "minecraft:copper_spear",
+    "cobblemon:wide_lens",
+    "cobblemon:zoom_lens",
+    "herbalbrews:copper_tea_kettle",
+    "mega_showdown:pika_case",
     "minersdelight:copper_carrot",
     "minersdelight:copper_cup",
-    "herbalbrews:copper_tea_kettle",
     "supplementaries:altimeter"
   ],
   "soundEvent": "minecraft:item.armor.equip_copper"

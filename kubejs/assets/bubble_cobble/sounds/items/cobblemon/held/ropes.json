@@ -1,0 +1,11 @@
+{
+  "keys": [
+    "cobblemon:binding_band",
+    "cobblemon:air_balloon",
+    "comforts:rope_and_nail",
+    "minecraft:lead"
+  ],
+  "pitch": 1.5,
+  "soundEvent": "supplementaries:block.rope.hit",
+  "volume": 0.5
+}

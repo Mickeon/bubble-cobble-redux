@@ -1,0 +1,15 @@
+{
+  "__comment": "Alphabetical order for file paths is important.",
+  "keys": [
+    "createmonballsoverhaul:black_apricorn_bits",
+    "createmonballsoverhaul:blue_apricorn_bits",
+    "createmonballsoverhaul:green_apricorn_bits",
+    "createmonballsoverhaul:pink_apricorn_bits",
+    "createmonballsoverhaul:red_apricorn_bits",
+    "createmonballsoverhaul:white_apricorn_bits",
+    "createmonballsoverhaul:yellow_apricorn_bits"
+  ],
+  "pitch": 2.0,
+  "soundEvent": "cobblemon:poke_ball.shut",
+  "volume": 0.25
+}

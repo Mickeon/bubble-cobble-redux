@@ -1,0 +1,12 @@
+{
+  "keys": [
+    "cobblemon:wise_glasses",
+    "cobblemon:black_glasses",
+    "mega_showdown:maxie_glasses",
+    "mega_showdown:reveal_glass",
+    "cobblemon:metronome"
+  ],
+  "pitch": 2.0,
+  "soundEvent": "cobblemon:block.display_case.hit",
+  "volume": 0.25
+}

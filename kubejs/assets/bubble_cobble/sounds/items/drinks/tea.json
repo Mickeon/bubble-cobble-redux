@@ -1,6 +1,9 @@
 {
   "keys": [
     "create:builders_tea",
+    "farmersdelight:hot_cocoa",
+    "farmersdelight:apple_cider",
+    "farmersdelight:melon_juice",
     "herbalbrews:black_tea",
     "herbalbrews:green_tea",
     "herbalbrews:hibiscus_tea",

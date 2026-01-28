@@ -4,7 +4,8 @@
     "#cobblemon:potions",
     "#cobblemon:ethers",
     "cobblemon:medicinal_brew",
-    "cobblemon:moomoo_milk"
+    "cobblemon:moomoo_milk",
+    "cobblemon:throat_spray"
   ],
   "pitch": 1.75,
   "soundEvent": "cobblemon:item.medicine.liquid.use",
