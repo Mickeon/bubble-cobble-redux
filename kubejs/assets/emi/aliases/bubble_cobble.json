@@ -1,0 +1,105 @@
+{
+	"aliases": [
+		{
+			"stacks": [
+				"item:farmersdelight:cabbage",
+				"item:farmersdelight:cabbage_leaf",
+				"item:farmersdelight:cabbage_rolls",
+				"item:farmersdelight:wild_cabbage",
+				"item:farmersdelight:cabbage_crate"
+			],
+			"text": [
+				"Lettuce"
+			]
+		},
+		{
+			"stacks": [
+				"#item:create:seats"
+			],
+			"text": [
+				"Stool"
+			]
+		},
+		{
+			"stacks": [
+				"#item:c:dyed",
+				"#item:c:dyes"
+			],
+			"text": [
+				"Color",
+				"Colour",
+				"Dye",
+				"Tint"
+			]
+		},
+		{
+			"stacks": [
+				"#item:supplementaries:awnings"
+			],
+			"text": [
+				"Tent"
+			]
+		},
+		{
+			"stacks": [
+				"#item:supplementaries:buntings"
+			],
+			"text": [
+				"Pennant",
+				"Pendant",
+				"Flag"
+			]
+		},
+		{
+			"stacks": [
+				"#item:handcrafted:cushions"
+			],
+			"text": [
+				"Pillow"
+			]
+		},
+		{
+			"stacks": [
+				"#item:constructionstick:construction_sticks"
+			],
+			"text": [
+				"Wand"
+			]
+		},
+		{
+			"stacks": [
+				"#item:c:tools/knife"
+			],
+			"text": [
+				"Dagger"
+			]
+		},
+		{
+			"stacks": [
+				"#item:c:tools/shears"
+			],
+			"text": [
+				"Scissor"
+			]
+		},
+		{
+			"stacks": [
+				"#item:c:dyed/blue",
+				"#item:c:dyed/light_blue",
+				"#item:biomeswevegone:dye/makes_blue",
+				"#item:biomeswevegone:dye/makes_light_blue"
+			],
+			"text": [
+				"Kaya"
+			]
+		},
+		{
+			"stacks": [
+				"item:kubejs:blue_mascot_cat"
+			],
+			"text": [
+				"Micky"
+			]
+		}
+	]
+}
