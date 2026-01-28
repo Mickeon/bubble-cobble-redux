@@ -19,6 +19,10 @@
         },
         {
           "type": "minecraft:item",
+          "name": "mega_showdown:sparkling_stone_dark"
+        },
+        {
+          "type": "minecraft:item",
           "name": "mega_showdown:mega_stone"
         },
         {

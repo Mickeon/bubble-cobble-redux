@@ -1,0 +1,15 @@
+{
+  "keys": [
+    "cobblemon:lucky_egg",
+    "cobbreeding:pokemon_egg",
+    "minecraft:sniffer_egg",
+    "minecraft:dragon_egg",
+    "mynethersdelight:boiled_egg",
+    "mynethersdelight:golden_egg",
+    "mynethersdelight:enchanted_golden_egg",
+    "undergroundworlds:spider_egg"
+  ],
+  "pitch": 0.5,
+  "soundEvent": "minecraft:block.sniffer_egg.plop",
+  "volume": 0.25
+}

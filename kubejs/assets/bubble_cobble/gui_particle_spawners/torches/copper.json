@@ -1,0 +1,20 @@
+{
+  "parent": "item_interactions:torch",
+
+  "attributes": {
+    "color_start": "#FFC7F8C7",
+    "color_end": "#FF97E897"
+  },
+
+  "events": {
+    "onCarried": {
+        "particles": [
+            { "id": "minecraft:copper_fire_flame" }
+        ]
+    }
+  },
+
+  "applies": [
+    {"id": "minecraft:copper_torch"}
+  ]
+}

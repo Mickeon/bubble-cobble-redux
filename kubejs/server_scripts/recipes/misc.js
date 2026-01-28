@@ -311,6 +311,9 @@ ServerEvents.recipes(event => {
 	// All of the other types require differently colored torches, because Copper Torches didn't exist.
 	event.replaceInput({id: /createdeco:green_.*lamp/}, "minecraft:glow_berries", "minecraft:copper_torch")
 
+	event.shaped("mega_showdown:sparkling_stone_light", ["AAA", "ASA", "AAA"], {A: "minecraft:white_dye", S: "mega_showdown:sparkling_stone_dark"})
+	event.shaped("mega_showdown:sparkling_stone_dark", ["AAA", "ASA", "AAA"], {A: "minecraft:black_dye", S: "mega_showdown:sparkling_stone_light"})
+
 	// TODO: Add recipes for (this modpack's) Pale Jacaranda and Redder Wood.
 	// event.shaped("biomesoplenty:stripped_jacaranda_log", ["DAD", "ADA", "DAD"], {D: "minecraft:white_dye", A: "biomeswevegone:stripped_jacaranda_log"})
 	// event.shaped("biomesoplenty:stripped_redwood_log", ["DAD", "ADA", "DAD"], {D: "minecraft:red_dye", A: "biomeswevegone:stripped_redwood_log"})

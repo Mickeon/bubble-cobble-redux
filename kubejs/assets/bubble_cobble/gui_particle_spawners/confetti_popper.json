@@ -1,0 +1,44 @@
+{
+  "attributes": {
+      "x": 3,
+      "y": 3,
+      "duration": 100,
+      "speedY": 64,
+      "speedX": 64,
+      "frictionX": 0.9,
+      "frictionY": 0.95,
+      "accelerationY": -2.5,
+      "count": 8
+  },
+  "attributes_variance": {
+    "x": 4,
+    "y": 4,
+    "speedY": 2,
+    "speedX": 4,
+    "frictionX": 0.05,
+    "frictionY": 0.01,
+    "duration": 20,
+    "count": 4
+  },
+  "events": {
+      "onCarried": {
+        "interval": 100,
+        "interval_variance": 40,
+        "particles": [
+            {"id": "supplementaries:confetti_dyed", "color_start": "#FFEE4444"},
+            {"id": "supplementaries:confetti_dyed", "color_start": "#FF33EE44"},
+            {"id": "supplementaries:confetti_dyed", "color_start": "#FFEEDD33"},
+            {"id": "supplementaries:confetti_dyed", "color_start": "#FF4444FF"}
+        ]
+      },
+      "onShake": {
+          "use": "onCarried",
+          "interval": 50,
+          "interval_variance": 20
+      }
+  },
+
+  "applies": [
+    {"id": "supplementaries:confetti_popper"}
+  ]
+}

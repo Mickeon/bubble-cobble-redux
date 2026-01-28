@@ -2,9 +2,11 @@
   "keys": [
     "cobblemon:wise_glasses",
     "cobblemon:black_glasses",
+    "cobblemon:metronome",
     "mega_showdown:maxie_glasses",
     "mega_showdown:reveal_glass",
-    "cobblemon:metronome"
+    "snowyspirit:snow_globe",
+    "supplementaries:hourglass"
   ],
   "pitch": 2.0,
   "soundEvent": "cobblemon:block.display_case.hit",

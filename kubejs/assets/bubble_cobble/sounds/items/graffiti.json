@@ -1,0 +1,9 @@
+{
+  "keys": [
+    "immersive_paintings:graffiti",
+    "immersive_paintings:glow_graffiti"
+  ],
+  "pitch": 1.25,
+  "soundEvent": "cobblemon:item.medicine.spray.use",
+  "volume": 0.25
+}

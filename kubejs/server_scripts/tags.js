@@ -45,6 +45,8 @@ ServerEvents.tags("item", event => {
 	event.add("minecraft:horse_food", "biomeswevegone:green_apple") // TODO: Report this.
 	event.add("cobblemon:mint_leaf", "#cobblemon:mint_leaves") // Was fixed, keep until next update. https://gitlab.com/cable-mc/cobblemon/-/commit/7c824a2b72f198133ca4f3e3a3a6b102869ccaae.
 	event.add("mega_showdown:rotom_appliances", "mega_showdown:rotom_oven", "mega_showdown:rotom_mow", "mega_showdown:rotom_washing_machine", "mega_showdown:rotom_fan", "mega_showdown:rotom_fridge") // Reported https://github.com/yajatkaul/CobblemonMegaShowdown/issues/153
+	event.add("c:music_discs", "cnc:music_disc_slough_choir", "cnc:music_disc_wreck_of_the_old_97", "cnc:music_disc_hills")
+	event.removeAll("minecraft:music_discs")
 	// TODO: Copper Chests missing from c:chests item tag.
 
 	// More compatibility.

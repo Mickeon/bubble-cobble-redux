@@ -1,0 +1,7 @@
+{
+  "parent": "item_interactions:redstone_torch_likes/redstone_torch",
+
+  "applies": [
+    {"id": "supplementaries:sconce_lever"}
+  ]
+}

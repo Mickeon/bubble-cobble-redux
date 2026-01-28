@@ -1,0 +1,45 @@
+{
+  "attributes": {
+      "duration": 20,
+      "speedY": 1,
+      "color_start": "#FFFFFFFF",
+      "color_end": "#F0DECCB9"
+  },
+  "attributes_variance": {
+    "x": 4,
+    "y": 4,
+    "duration": 5
+  },
+  "events": {
+      "onCarried": {
+        "interval": 100,
+        "interval_variance": 40,
+        "particles": [
+            {"id": "supplementaries:sparkle"}
+        ]
+      },
+
+      "onIdle": "onCarried",
+
+      "onShake": {
+          "use": "onCarried",
+          "interval": 50,
+          "interval_variance": 20
+      }
+  },
+
+  "applies": [
+    {"id": "create:brass_ingot"},
+    {"id": "create:brass_block"},
+    {"id": "cobblemon:ability_patch"},
+    {"id": "cobblemon:master_ball"},
+    {"id": "minecraft:netherite_ingot"},
+    {"id": "minecraft:netherite_block"},
+    {"id": "minecraft:nether_star"},
+    {"id": "mega_showdown:keystone"},
+    {"id": "mega_showdown:mega_stone"},
+    {"id": "mega_showdown:sparkling_stone_dark"},
+    {"id": "mega_showdown:sparkling_stone_light"},
+    {"id": "mega_showdown:zygarde_cube"}
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "item_interactions:soul_torch",
+
+  "applies": [
+    {"id": "supplementaries:sconce_soul"}
+  ]
+}

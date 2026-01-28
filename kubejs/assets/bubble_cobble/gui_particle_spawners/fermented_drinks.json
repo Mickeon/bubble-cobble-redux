@@ -1,0 +1,64 @@
+{
+  "attributes": {
+    "y": 2,
+    "speedY": 12,
+    "brightness_start": 1.0,
+    "color_start": "#FFFC8F36",
+    "color_end": "#FFFCAF96",
+    "duration": 40
+  },
+  "attributes_variance": {
+    "duration": 20,
+    "speedY": 4,
+    "x": 3,
+    "speedX": 4,
+    "accelerationY": 0.1,
+    "color_start": "#00101060",
+    "color_end": "#00201030",
+    "brightness_start": 0.2
+  },
+  "events": {
+      "onCarried": {
+          "interval": 40,
+          "interval_variance": 20,
+          "particles": [
+            {
+              "id": "minecraft:wax_on",
+              "accelerationY": -0.05,
+              "frictionY": 0.95
+            },
+            {
+              "id": "minecraft:bubble",
+              "color_start": "#22FC8FF6",
+              "color_end": "#22FC8FF6",
+              "duration": 20
+            }
+          ]
+      },
+      "onIdle": "onCarried",
+
+      "onShake": {
+          "use": "onCarried",
+          "interval": 10
+      }
+  },
+
+  "applies": [
+    {"id": "brewinandchewin:beer"},
+    {"id": "brewinandchewin:bloody_mary"},
+    {"id": "brewinandchewin:dread_nog"},
+    {"id": "brewinandchewin:egg_grog"},
+    {"id": "brewinandchewin:glittering_grenadine"},
+    {"id": "brewinandchewin:kombucha"},
+    {"id": "brewinandchewin:mead"},
+    {"id": "brewinandchewin:pale_jane"},
+    {"id": "brewinandchewin:red_rum"},
+    {"id": "brewinandchewin:rice_wine"},
+    {"id": "brewinandchewin:saccharine_rum"},
+    {"id": "brewinandchewin:salty_folly"},
+    {"id": "brewinandchewin:steel_toe_stout"},
+    {"id": "brewinandchewin:strongroot_ale"},
+    {"id": "brewinandchewin:vodka"},
+    {"id": "brewinandchewin:withering_dross"}
+  ]
+}

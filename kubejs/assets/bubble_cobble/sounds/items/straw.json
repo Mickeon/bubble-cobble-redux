@@ -3,9 +3,11 @@
     "farmersdelight:straw",
     "minecraft:wheat",
     "supplementaries:flax",
+    "farmersdelight:rice_panicle",
     "farmersdelight:cabbage",
     "farmersdelight:cabbage_leaf",
-    "cobblemon:roasted_leek"
+    "cobblemon:roasted_leek",
+    "create:tree_fertilizer"
   ],
   "pitch": 1.5,
   "soundEvent": "minecraft:block.big_dripleaf.place",

@@ -1,6 +1,10 @@
 {
   "keys": [
     "minecraft:barrier",
+    "minecraft:structure_void",
+    "minecraft:jigsaw",
+    "minecraft:structure_block",
+    "moonlight:spawn_box",
     "create:creative_crate",
     "create:creative_fluid_tank",
     "create:creative_motor",
