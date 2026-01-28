@@ -1,0 +1,9 @@
+{
+  "keys": [
+    "#minecraft:bookshelf_books",
+    "handcrafted:stackable_book"
+  ],
+  "pitch": 1.25,
+  "soundEvent": "minecraft:block.chiseled_bookshelf.pickup",
+  "volume": 0.1
+}

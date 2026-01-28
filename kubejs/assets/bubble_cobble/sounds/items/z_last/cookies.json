@@ -1,0 +1,9 @@
+{
+  "__comment": "Alphabetical order for file paths is important.",
+  "keys": [
+    "#c:foods/cookie"
+  ],
+  "pitch": 2.0,
+  "soundEvent": "snowyspirit:block.gingerbread.break",
+  "volume": 0.1
+}

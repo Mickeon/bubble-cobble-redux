@@ -1,6 +1,7 @@
 {
   "keys": [
-    "#cobblemon:feathers"
+    "#cobblemon:feathers",
+    "cobblemon:fairy_feather"
   ],
   "pitch": 1.25,
   "soundEvent": "cobblemon:item.medicine.feather.use",

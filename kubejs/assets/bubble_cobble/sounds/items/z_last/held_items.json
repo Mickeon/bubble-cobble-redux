@@ -1,0 +1,9 @@
+{
+  "__comment": "Sound entries closer alphabetically last (including their whole paths, not just their file names) are parsed last. I do not want these entries to override more specific entries.",
+  "keys": [
+    "#cobblemon:held/is_held_item"
+  ],
+  "pitch": 1.0,
+  "soundEvent": "bubble_cobble:grab_whimsy",
+  "volume": 0.25
+}

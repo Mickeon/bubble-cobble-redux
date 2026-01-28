@@ -1,0 +1,6 @@
+{
+  "keys": [
+    "#constructionstick:construction_sticks"
+  ],
+  "soundEvent": "minecraft:item.armor.equip_chain"
+}

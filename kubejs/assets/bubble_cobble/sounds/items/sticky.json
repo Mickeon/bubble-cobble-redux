@@ -1,0 +1,10 @@
+{
+  "keys": [
+    "create:pulp",
+    "mowziesmobs:glowing_jelly",
+    "cobblemon:black_sludge"
+  ],
+  "pitch": 0.75,
+  "soundEvent": "minecraft:block.slime_block.hit",
+  "volume": 0.25
+}

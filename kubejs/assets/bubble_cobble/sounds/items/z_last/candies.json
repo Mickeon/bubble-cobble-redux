@@ -1,0 +1,11 @@
+{
+  "__comment": "Alphabetical order for file paths is important.",
+  "keys": [
+    "#c:foods/candy",
+    "#arts_and_crafts:chalk_sticks",
+    "supplementaries:soap"
+  ],
+  "pitch": 2.0,
+  "soundEvent": "snowyspirit:block.gingerbread.hit",
+  "volume": 0.2
+}

@@ -1,0 +1,9 @@
+{
+  "__comment": "Alphabetical order for file paths is important.",
+  "keys": [
+    "#cobblemon:tier_5_poke_balls"
+  ],
+  "pitch": 1.5,
+  "soundEvent": "cobblemon:poke_ball.shake.ancient",
+  "volume": 0.25
+}

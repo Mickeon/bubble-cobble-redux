@@ -1,0 +1,8 @@
+{
+  "keys": [
+    "minecraft:enchanted_book"
+  ],
+  "pitch": 0.75,
+  "soundEvent": "minecraft:block.chiseled_bookshelf.pickup.enchanted",
+  "volume": 0.1
+}

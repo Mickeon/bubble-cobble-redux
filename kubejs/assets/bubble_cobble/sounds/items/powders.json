@@ -1,5 +1,5 @@
 {
-  "__comment": "Partially overridden by evolution_items.json",
+  "__comment": "Alphabetical order for file paths is important. Otherwise, this would be partially overridden by evolution_items.json",
   "keys": [
     "#biomeswevegone:glowcane_powder",
     "#cobblemon:remedies",
@@ -11,6 +11,11 @@
     "cobblemon:metal_powder",
     "cobblemon:quick_powder",
     "cobblemon:silver_powder",
+    "cobblemon:soft_sand",
+    "herbalbrews:dried_black_tea",
+    "herbalbrews:dried_green_tea",
+    "herbalbrews:dried_oolong_tea",
+    "herbalbrews:herbal_infusion",
     "mynethersdelight:pepper_powder"
   ],
   "pitch": 2.0,

@@ -11,5 +11,5 @@
   ],
   "pitch": 1.25,
   "soundEvent": "more_sounds:item.bottled_viscous.slosh",
-  "volume": 0.5
+  "volume": 0.25
 }

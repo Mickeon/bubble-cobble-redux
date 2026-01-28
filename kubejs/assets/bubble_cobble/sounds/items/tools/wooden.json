@@ -1,0 +1,13 @@
+{
+  "keys": [
+    "#snowyspirit:sleds",
+    "kubejs:ruler",
+    "minecraft:wooden_spear",
+    "mowziesmobs:blowgun",
+    "mowziesmobs:dart",
+    "mowziesmobs:sculptor_staff",
+    "supplementaries:flute",
+    "supplementaries:slingshot"
+  ],
+  "soundEvent": "minecraft:item.axe.strip"
+}

@@ -1,0 +1,33 @@
+{
+  "keys": [
+    "#arts_and_crafts:paintbrushes",
+    "cobblemon:covert_cloak",
+    "cobblemon:choice_band",
+    "cobblemon:focus_band",
+    "cobblemon:focus_sash",
+    "cobblemon:muscle_band",
+    "cobblemon:choice_scarf",
+    "cobblemon:expert_belt",
+    "cobblemon:eject_pack",
+    "cobblemon:silk_scarf",
+    "cobblemon:destiny_knot",
+    "cobblemon:assault_vest",
+    "cobblemon:sachet",
+    "sophisticatedstorage:paintbrush",
+    "cnc:buckskin_helmet",
+    "cnc:buckskin_chestplate",
+    "cnc:buckskin_leggings",
+    "cnc:buckskin_boots",
+    "herbalbrews:top_hat",
+    "herbalbrews:witch_hat",
+    "mowziesmobs:geomancer_beads",
+    "mowziesmobs:geomancer_robe",
+    "mowziesmobs:geomancer_belt",
+    "mowziesmobs:geomancer_sandals",
+    "undergroundworlds:spider_helmet",
+    "undergroundworlds:spider_chestplate",
+    "undergroundworlds:spider_leggings",
+    "undergroundworlds:spider_boots"
+  ],
+  "soundEvent": "minecraft:item.armor.equip_leather"
+}

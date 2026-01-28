@@ -1,0 +1,8 @@
+{
+  "keys": [
+    "#create:toolboxes"
+  ],
+  "pitch": 1.25,
+  "soundEvent": "create:packager",
+  "volume": 0.5
+}

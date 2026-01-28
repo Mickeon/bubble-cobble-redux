@@ -1,0 +1,10 @@
+{
+  "keys": [
+    "mowziesmobs:wrought_helmet",
+    "mowziesmobs:wrought_axe",
+    "cobblemon:auspicious_armor",
+    "cobblemon:malicious_armor"
+  ],
+  "pitch": 1.25,
+  "soundEvent": "minecraft:item.armor.equip_netherite"
+}

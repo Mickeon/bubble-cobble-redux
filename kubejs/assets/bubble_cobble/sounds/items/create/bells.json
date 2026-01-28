@@ -1,0 +1,10 @@
+{
+  "keys": [
+    "create:peculiar_bell",
+    "create:haunted_bell",
+    "minecraft:bell"
+  ],
+  "pitch": 0.5,
+  "soundEvent": "create:desk_bell",
+  "volume": 0.5
+}

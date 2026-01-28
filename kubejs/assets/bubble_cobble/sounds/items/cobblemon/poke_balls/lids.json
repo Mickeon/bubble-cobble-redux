@@ -1,0 +1,10 @@
+{
+  "__comment": "Alphabetical order for file paths is important.",
+  "keys": [
+    "#createmonballsoverhaul:blastable_ball_lids",
+    "#createmonballsoverhaul:spherical_shaped_items_for_lids"
+  ],
+  "pitch": 1.5,
+  "soundEvent": "cobblemon:poke_ball.shut",
+  "volume": 0.25
+}

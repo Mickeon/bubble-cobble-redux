@@ -1,0 +1,11 @@
+{
+  "__comment": "Alphabetical order for file paths is important. Otherwise, this would be partially overridden by held_items.json",
+  "keys": [
+    "create:desk_bell",
+    "cobblemon:shell_bell",
+    "cobblemon:soothe_bell"
+  ],
+  "pitch": 1.5,
+  "soundEvent": "create:desk_bell",
+  "volume": 0.5
+}
