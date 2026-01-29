@@ -10,6 +10,7 @@ let $BuildCreativeModeTabContentsEvent  = Java.loadClass("net.neoforged.neoforge
 global.DISABLED_ITEMS = [
 	// Unused.
 	/^libraryferret/,
+	"relics:researching_table",
 
 	// In favour of Brewin' and Chewin's cheese.
 	/^create_bic_bit:(?!.*souffle).*cheese/,

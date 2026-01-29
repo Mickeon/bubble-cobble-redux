@@ -17,7 +17,8 @@
 				"#item:create:seats"
 			],
 			"text": [
-				"Stool"
+				"Stool",
+				"Sit"
 			]
 		},
 		{
@@ -71,7 +72,8 @@
 				"#item:c:tools/knife"
 			],
 			"text": [
-				"Dagger"
+				"Dagger",
+				"Cut"
 			]
 		},
 		{
@@ -98,7 +100,9 @@
 				"item:kubejs:blue_mascot_cat"
 			],
 			"text": [
-				"Micky"
+				"Micky",
+				"Mickeon",
+				"Glaceon"
 			]
 		}
 	]

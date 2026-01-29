@@ -20,16 +20,21 @@ EntityEvents.drops("minecraft:player", event => {
 		case "BluStar7": {
 			add_drop(player, Item.of("minecraft:blue_dye"), 0.75)
 			add_drop(player, Item.of("minecraft:blue_dye").withCustomName("Blue Lyve"), 0.5)
-			// add_drop(player, Item.of("fairylights:star_light").withNBT({color: 3949738}), 0.5)
 		} break;
 		case "BlueBerryNice": {
 			add_drop(player, Item.of("minecraft:iron_nugget", 3), 0.5)
 			add_drop(player, Item.of("minecraft:blue_dye"), 0.5)
 			add_drop(player, Item.of("biomeswevegone:blueberries"), 0.5)
 			add_drop(player, Item.of("biomeswevegone:blueberry_pie"), 0.1)
-			// add_drop(player, Item.of("quark:iron_button")
-			// 		.withCustomName(Text.lightPurple("meowowwww skuwwssss shakingggg itttt nastyyyy styweeee innnn theeee fowowtniteeee wowobbyyyy owo"))
-			// 		, 0.1)
+		} break;
+		case "ButteryInkling": {
+			add_drop(player, Item.of("minecraft:apple"), 0.75)
+			add_drop(player, Item.of("biomeswevegone:green_apple"), 0.75)
+			add_drop(player, Item.of("brewinandchewin:pizza_slice"), 0.75)
+			add_drop(player, Item.of("minecraft:cake"), 0.2)
+			add_drop(player, Item.of("farmersdelight:apple_pie"), 0.2)
+			add_drop(player, Item.of("biomeswevegone:green_apple_pie"), 0.2)
+			add_drop(player, Item.of("cobblemon:leftovers"), 0.01)
 		} break;
 		case "CafeJaze": {
 			add_drop(player, Item.of("minecraft:brown_dye"), 0.75)
@@ -40,8 +45,6 @@ EntityEvents.drops("minecraft:player", event => {
 		case "CandleClockwork": {
 			add_drop(player, Item.of("minecraft:orange_stained_glass"), 0.5)
 			add_drop(player, Item.of("minecraft:orange_stained_glass_pane"), 0.5)
-			// add_drop(player, Item.of("quark:orange_shard", 3), 0.5)
-			// add_drop(player, Item.of("quark:framed_glass"), 0.25)
 			add_drop(player, Item.of("kubejs:chiseled_mud_bricks"), 0.25)
 			add_drop(player, Item.of("minecraft:orange_candle").withCustomName("Fair enough."), 0.25)
 			add_drop(player, Item.of("supplementaries:candle_holder_orange"), 0.1)
@@ -62,7 +65,6 @@ EntityEvents.drops("minecraft:player", event => {
 		} break;
 		case "Giuly_Clockwork": {
 			add_drop(player, Item.of("minecraft:blue_dye"), 0.75)
-			// add_drop(player, Item.of("quark:blue_shard", 3), 0.5)
 			add_drop(player, Item.of("minecraft:soul_torch"), 0.25)
 			add_drop(player, Item.of("minecraft:blue_candle"), 0.25)
 			add_drop(player, Item.of("supplementaries:candle_holder_blue"), 0.1)
@@ -79,36 +81,36 @@ EntityEvents.drops("minecraft:player", event => {
 		} break;
 		case "LuckyAquapura": {
 			add_drop(player, Item.of("minecraft:white_dye"), 0.75)
-			// add_drop(player, Item.of("quark:bottled_cloud"), 0.5)
+			add_drop(player, Item.of("minecraft:white_dye"), 0.5)
 			add_drop(player, get_funny_salmon(), 0.5)
 		} break;
 		case "luigiman0640": {
-			// add_drop(player, Item.of("nightlights:mushroom_green"), 0.25)
-			// add_drop(player, Item.of("nightlights:mushroom_lime"), 0.25)
 			add_drop(player, Item.of("minecraft:lime_dye"), 0.75)
 			add_drop(player, Item.of("biomeswevegone:green_mushroom"), 0.5)
 			add_drop(player, Item.of("minecraft:green_dye"), 0.25)
 			add_drop(player, Item.of("minecraft:arrow", 4).withCustomName("Shell"), 0.125)
 		} break;
 		case "mAIgehound": {
-			// add_drop(player, Item.of("quark:pink_shard", 2), 0.75)
-			// add_drop(player, Item.of("quark:black_shard", 2), 0.25)
+			const scene_style = ["",
+				{color:"#9ef4b1",text:`S`},{color:"#8ce9c0",text:`c`},{color:"#7bdfd0",text:`e`},{color:"#69d4e0",text:`n`},{color:"#58c9ef",text:`e`},
+				{color:"#46beff",text:`-`},{color:"#60aaff",text:`S`},{color:"#7a96ff",text:`t`},{color:"#9582ff",text:`y`},{color:"#af6eff",text:`l`},{color:"#c95aff",text:`e`}
+			]
+			add_drop(player, Item.of("minecraft:bone").withCustomName("Buppy"), 0.75)
+			add_drop(player, Item.of("minecraft:magenta_dye").withCustomName(scene_style), 0.75)
 			add_drop(player, Item.of("minecraft:black_dye"), 0.25)
 			add_drop(player, Item.of("minecraft:black_wool"), 0.25)
 		} break;
 		case "NightingaleNil": {
-			add_drop(player, Item.of("minecraft:potion").withCustomName("Ginseng Bottle").enchant("quick_charge", 3)
-					// .withNBT({Potion: "minecraft:mundane", CustomPotionColor: 14466167})
-					, 0.75)
-			// add_drop(player, Item.of("alexsmobs:lava_bottle"), 0.5)
+			add_drop(player, Item.of("minecraft:potion", {"minecraft:potion_contents": {potion: "minecraft:mundane", custom_color: 14466167}})
+					.withCustomName("Ginseng Bottle").enchant("quick_charge", 3), 0.75)
 			add_drop(player, Item.of("minecraft:green_dye"), 0.25)
+			add_drop(player, Item.of("minecraft:lava_bucket"), 0.1)
 		} break;
 		case "minusjos": {
 			add_drop(player, get_funny_salmon(), 0.75)
 		} break;
 		case "pepperponyo": {
 			add_drop(player, Item.of("farmersdelight:hamburger").withCustomName("Hamburger :) 🍔"), 0.75)
-			// add_drop(player, Item.of("myths_and_legends:teal_mask"), 0.05)
 		} break;
 		case "Polyfluff": {
 			add_drop(player, Item.of("minecraft:white_wool"), 0.75)
@@ -152,7 +154,7 @@ EntityEvents.drops("minecraft:player", event => {
 			add_drop(player, Item.of("create_deepfried:fish_and_chips"), 0.1)
 		} break;
 		case "SueTheMimiga": {
-			// add_drop(player, Item.of("splash_potion").withNBT({Potion: "gohome:recall"}).withLore(Text.red("GET THE HELL OUT OF HERE")), 0.75)
+			add_drop(player, Item.of("splash_potion", {"minecraft:potion_contents": {potion: "kubejs:recall"}}).withLore(Text.red("Get out, get out!")), 0.1)
 			add_drop(player, Item.of("minecraft:rabbit").withCustomName("I think this is still funny."), 0.75)
 			add_drop(player, Item.of("farmersdelight:beef_patty"), 0.5)
 			add_drop(player, Item.of("farmersdelight:cabbage_leaf"), 0.5)
@@ -165,7 +167,8 @@ EntityEvents.drops("minecraft:player", event => {
 			}
 		} break;
 		case "SunGlaceon": {
-			// add_drop(player, Item.of("delightful:salmonberry_ice_cream"), 0.5)
+			add_drop(player, Item.of("farmersdelight:melon_popsicle"), 0.5)
+			add_drop(player, Item.of("mynethersdelight:tear_popsicle"), 0.1)
 		} break;
 		case "8chazyplays8":
 		case "TheDukeOfSlimes": {
@@ -174,6 +177,7 @@ EntityEvents.drops("minecraft:player", event => {
 		} break;
 		case "UnkemptMoss": {
 			add_drop(player, Item.of("minecraft:bread"), 0.75)
+			add_drop(player, Item.of("minecraft:moss_block").withCustomName("Kept Moss"), 0.5)
 			add_drop(player, Item.of("mynethersdelight:boiled_egg"), 0.5)
 		} break;
 		case "WaiGee": {
@@ -183,8 +187,6 @@ EntityEvents.drops("minecraft:player", event => {
 			add_drop(player, Item.of("minecraft:purple_dye"), 0.5)
 		} break;
 		case "wyanido": {
-			// add_drop(player, Item.of("alexsmobs:shark_tooth"), 0.75)
-			// add_drop(player, Item.of("alexscaves:gumball_pile"), 0.75)
 			add_drop(player, get_funny_salmon(), 0.5)
 		} break;
 		case "Mickeon": {
