@@ -439,6 +439,43 @@
             ]
         },
         {
+            "pakku_id": "uJkZkRyqCEvtxti5",
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "modrinth": "artifacts"
+            },
+            "name": {
+                "modrinth": "Artifacts"
+            },
+            "id": {
+                "modrinth": "P0Mu4wcQ"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "artifacts-neoforge-13.2.0.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/P0Mu4wcQ/versions/bYbUZqGA/artifacts-neoforge-13.2.0.jar",
+                    "id": "bYbUZqGA",
+                    "parent_id": "P0Mu4wcQ",
+                    "hashes": {
+                        "sha512": "cd7132ed680ee73cc08b4058e3e1cb658eec8df9236780bf8315f2400ec3e5c8c734e0b7ae20cf08385f074599ffc93283152926aad5231220805144526f3801",
+                        "sha1": "01e4df6f6a0d8d73190c0fc4a5493db79fa5386c"
+                    },
+                    "required_dependencies": [],
+                    "size": 1022570,
+                    "date_published": "2026-01-16T16:04:16.291431Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "fb3jLDTIl1r9qzbe",
             "pakku_links": [
                 "bfo1VDLqtn0HGg7O"
@@ -7626,6 +7663,51 @@
                     "required_dependencies": [],
                     "size": 2753147,
                     "date_published": "2026-01-27T00:45:20.071410Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "1P5npKtD62frljh0",
+            "pakku_links": [
+                "uJkZkRyqCEvtxti5",
+                "qjtj1Mo40p0UcVrE"
+            ],
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "modrinth": "rar-compat"
+            },
+            "name": {
+                "modrinth": "Relics: Artifacts Compat"
+            },
+            "id": {
+                "modrinth": "GnU07giL"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "rarcompat-1.21-0.9.7.jar",
+                    "mc_versions": [
+                        "1.21",
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/GnU07giL/versions/RjDi7tua/rarcompat-1.21-0.9.7.jar",
+                    "id": "RjDi7tua",
+                    "parent_id": "GnU07giL",
+                    "hashes": {
+                        "sha512": "a4cacdde7db4b8eace4e50bfead8c17a69250e928169c667dff3bd32188b997a6c7434b6dd16b7d82664e1aabaec96b316645af5869283647b0416c7c216b999",
+                        "sha1": "55c301ea622fc5a613531715c99b7d1d66f2e1d6"
+                    },
+                    "required_dependencies": [
+                        "P0Mu4wcQ",
+                        "OCJRPujW"
+                    ],
+                    "size": 451470,
+                    "date_published": "2025-08-12T20:41:55.931219Z"
                 }
             ]
         },
