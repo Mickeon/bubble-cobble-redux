@@ -3,10 +3,11 @@
 		{
 			"stacks": [
 				"item:farmersdelight:cabbage",
+				"item:farmersdelight:cabbage_crate",
 				"item:farmersdelight:cabbage_leaf",
 				"item:farmersdelight:cabbage_rolls",
-				"item:farmersdelight:wild_cabbage",
-				"item:farmersdelight:cabbage_crate"
+				"item:farmersdelight:cabbage_seeds",
+				"item:farmersdelight:wild_cabbages"
 			],
 			"text": [
 				"Lettuce"

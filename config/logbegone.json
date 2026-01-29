@@ -6,7 +6,8 @@
       "[voicechat/]",
       "[Colorful Hearts/]",
       "Received version check data:",
-      "copycats-neoforge.mixins.json:foundation.copycat.CopycatBlockMixin"
+      "copycats-neoforge.mixins.json:foundation.copycat.CopycatBlockMixin",
+      "[EMI] Untranslated alias"
     ],
     "regex": []
   }

@@ -1,0 +1,6 @@
+{
+	"type": "emi:world_interaction",
+	"left": "item:cobblemon:pokemon_model{'cobblemon:pokemon_item': {species: 'cobblemon:skitty', aspects: ['']}}",
+	"right": "item:farmersdelight:hamburger",
+	"output": "item:cobblemon:pokemon_model{'cobblemon:pokemon_item': {species: 'cobblemon:skitty', aspects: ['']}, item_name: 'awesome'}"
+}

@@ -1,0 +1,12 @@
+{
+	"type": "emi:world_interaction",
+	"left": {
+		"type": "item",
+		"id": "cobblemon:pasture"
+	},
+	"right": [
+		"item:cobblemon:pokemon_model{'cobblemon:pokemon_item': {species: 'cobblemon:skitty', aspects: ['']}}",
+		"item:cobblemon:pokemon_model{'cobblemon:pokemon_item': {species: 'cobblemon:wailord', aspects: ['']}}"
+	],
+	"output": "item:cobbreeding:pokemon_egg"
+}
