@@ -1,6 +1,6 @@
 
 RecipeViewerEvents.removeEntriesCompletely("item", event => {
-	event.remove(global.DISABLED_ITEMS)
+	// event.remove(global.get_disabled_ingredient())
 })
 
 RecipeViewerEvents.removeEntriesCompletely("fluid", event => {
@@ -10,8 +10,12 @@ RecipeViewerEvents.removeEntriesCompletely("fluid", event => {
 })
 
 ItemEvents.modifyTooltips(event => {
-	event.add(global.DISABLED_ITEMS, [
-		Text.of("This is supposed to be disabled...").color("red_dye"),
-		Text.of("How are you seeing this!?").color("red"),
+	try {
+	event.add(global.get_disabled_ingredient(), [
+		Text.of(`This is supposed to be disabled...`).color("red_dye"),
+		Text.of(`How are you seeing this!?`).color("red"),
 	])
+	} catch (error) {
+	console.error(error)
+	}
 })

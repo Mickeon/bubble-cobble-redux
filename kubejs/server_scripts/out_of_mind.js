@@ -9,30 +9,20 @@
 
 ServerEvents.recipes(event => {
 	console.log("Changing recipes in out_of_mind.js")
-	// event.remove({input: global.DISABLED_ITEMS}) // Doesn't seem to do much of anything?
-	event.remove({output: global.DISABLED_ITEMS, not: {type: "brewinandchewin:fermenting"}})
 
 	// Gotta do this manually I guess.
 	event.remove({id: "create_bic_bit:mixing/curdled_milk" })
 	event.remove({id: "create:crafting/materials/copper_ingot"}) // Duplicate because of Minecraft's own recipe.
 	event.replaceInput({input: "create:copper_nugget"}, "create:copper_nugget", "minecraft:copper_nugget" )
 	event.replaceOutput({output: "create:copper_nugget", not: {type: "brewinandchewin:fermenting"}}, "create:copper_nugget", "minecraft:copper_nugget")
+
+	event.remove({input: global.get_disabled_ingredient().stackArray, not: {type: "brewinandchewin:fermenting"}}) // Doesn't seem to do much of anything?
+	event.remove({output: global.get_disabled_ingredient().stackArray, not: {type: "brewinandchewin:fermenting"}})
 })
 
 ServerEvents.tags("item", event => {
-	event.removeAllTagsFrom(global.DISABLED_ITEMS)
-
-	// Keeping only 4 hammers from this mod. More sane to do it manually, I guess.
-	event.add("c:hidden_from_recipe_viewers", "@justhammers")
-	event.remove("c:hidden_from_recipe_viewers", [
-		"justhammers:stone_hammer", "justhammers:stone_reinforced_hammer", "justhammers:iron_hammer", "justhammers:iron_reinforced_hammer"
-	])
-
-	// Keeping only the Escape Rope from this mod, for now.
-	event.add("c:hidden_from_recipe_viewers", "@gag")
-	event.remove("c:hidden_from_recipe_viewers", [
-		"gag:escape_rope"
-	])
+	event.removeAllTagsFrom(global.get_disabled_ingredient().itemIds)
+	event.add("c:hidden_from_recipe_viewers", global.get_disabled_ingredient().itemIds)
 })
 
 // Hide advancements.
