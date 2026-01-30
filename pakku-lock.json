@@ -8625,7 +8625,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "sophisticatedcore-1.21.1-1.4.1.1445.jar",
+                    "file_name": "sophisticatedcore-1.21.1-1.4.1.1452.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -8633,16 +8633,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/nmoqTijg/versions/GP7WlVZi/sophisticatedcore-1.21.1-1.4.1.1445.jar",
-                    "id": "GP7WlVZi",
+                    "url": "https://cdn.modrinth.com/data/nmoqTijg/versions/7uWTG8f8/sophisticatedcore-1.21.1-1.4.1.1452.jar",
+                    "id": "7uWTG8f8",
                     "parent_id": "nmoqTijg",
                     "hashes": {
-                        "sha512": "cbd2e5f230c45beb98f0cfe70187546d18c75dc03f8442b27ed3778a88e46a42a61ed66c0816f1cab72f652cb820f82e846c99fe3c54ab97967140a6f480c9ff",
-                        "sha1": "7adb02421f9ab96512cc94bfb21d713afcc2e4b3"
+                        "sha512": "465aa2ac07ad5b19986bb4b397714d5b9c7d41d0c8bbb40a69f500041ece9a0b4cb1822679b4d4a6524c5e8c701c2a59681d9406bc16f4f5dc01ac1c0f3e90d4",
+                        "sha1": "db064e5c10277515d184ec5ba036271d35e9ac74"
                     },
                     "required_dependencies": [],
-                    "size": 1456019,
-                    "date_published": "2026-01-28T22:22:05.793179Z"
+                    "size": 1455748,
+                    "date_published": "2026-01-30T09:04:57.932374Z"
                 }
             ]
         },
@@ -8665,7 +8665,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "sophisticateditemactions-1.21.1-0.3.3.71.jar",
+                    "file_name": "sophisticateditemactions-1.21.1-0.3.3.78.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -8673,18 +8673,18 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/RMW7bKVL/versions/imUGJxjL/sophisticateditemactions-1.21.1-0.3.3.71.jar",
-                    "id": "imUGJxjL",
+                    "url": "https://cdn.modrinth.com/data/RMW7bKVL/versions/HkvfS1ZU/sophisticateditemactions-1.21.1-0.3.3.78.jar",
+                    "id": "HkvfS1ZU",
                     "parent_id": "RMW7bKVL",
                     "hashes": {
-                        "sha512": "85a1eb1a9f25d393e89c2206c834ca472ba11341127a5892bf855c13fa0709154c9c8550e2f244a4baf752ec5744b9c2fc59b3177ba60b7c8bd8e1d541b7bd79",
-                        "sha1": "0e8defbc2d2b4961fc7133b91f8940e70da2fa74"
+                        "sha512": "a9f2d4ee04931443f8d36ef673c26672ebb6d4e56184b64f4fb07ccbd5e5ff34148abf246be75b1e7fab05df5e0c88675755bc5a129724630bd3228b13eaef4e",
+                        "sha1": "63df4170d3bc0231cd1eccd1259e4ba547473755"
                     },
                     "required_dependencies": [
                         "nmoqTijg"
                     ],
-                    "size": 200864,
-                    "date_published": "2026-01-23T13:58:20.733844Z"
+                    "size": 200885,
+                    "date_published": "2026-01-29T22:18:26.612076Z"
                 }
             ]
         },
@@ -9027,7 +9027,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "Spice of Life Onion_NEOFORGE_v1.5.3_mc1.21.1.jar",
+                    "file_name": "Spice of Life Onion_NEOFORGE_v1.5.4_mc1.21.1.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -9035,18 +9035,18 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/eHGYGKJz/versions/QI3fsHR4/Spice of Life Onion_NEOFORGE_v1.5.3_mc1.21.1.jar",
-                    "id": "QI3fsHR4",
+                    "url": "https://cdn.modrinth.com/data/eHGYGKJz/versions/RfDQ8ILM/Spice of Life Onion_NEOFORGE_v1.5.4_mc1.21.1.jar",
+                    "id": "RfDQ8ILM",
                     "parent_id": "eHGYGKJz",
                     "hashes": {
-                        "sha512": "15880b1e3e0a71ef3775e2810760c46850220723d72ad3ad01f291dd92a30e7bfad2fae398c13368ae285fe322f14a41ddbc65bf4b513cefe45d05778aee3221",
-                        "sha1": "65b38b8d6031bf7d68494d82dada945ceab1fb02"
+                        "sha512": "5a32b1ab1a210c1e13ce28c400bf134cdf66c70f2b7a6697f4d5e214780d464dffb170c519d2b21a950f6520996bb28fff28a175505d9a389b7ca6f02db8028c",
+                        "sha1": "6d440296ae7b09a2147244423c19a92c22704f9f"
                     },
                     "required_dependencies": [
                         "OsZiaDHq"
                     ],
-                    "size": 290220,
-                    "date_published": "2025-11-21T12:17:18.393613Z"
+                    "size": 290295,
+                    "date_published": "2026-01-30T12:16:45.383755Z"
                 }
             ]
         },
