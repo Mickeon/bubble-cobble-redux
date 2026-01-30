@@ -1,7 +1,8 @@
 {
   "__comment": "Alphabetical order for file paths is important. Otherwise, this would be partially overridden by evolution_items.json",
   "keys": [
-    "#cobblemon:evolution_stones"
+    "#cobblemon:evolution_stones",
+    "#cobblemon:fossils"
   ],
   "pitch": 1.5,
   "soundEvent": "cobblemon:block.evolution_stone_block.step",

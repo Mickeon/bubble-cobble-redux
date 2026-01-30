@@ -10,7 +10,8 @@
     "herbalbrews:lavender_tea",
     "herbalbrews:oolong_tea",
     "herbalbrews:rooibos_tea",
-    "herbalbrews:yerba_mate_tea"
+    "herbalbrews:yerba_mate_tea",
+    "herbalbrews:flask"
   ],
   "pitch": 1.8,
   "soundEvent": "minecraft:block.brewing_stand.brew",

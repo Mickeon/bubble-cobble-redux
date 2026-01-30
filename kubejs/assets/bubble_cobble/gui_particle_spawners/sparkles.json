@@ -29,13 +29,14 @@
   },
 
   "applies": [
-    {"id": "create:brass_ingot"},
-    {"id": "create:brass_block"},
+    {"id": "cobblemon:ancient_origin_ball"},
     {"id": "cobblemon:ability_patch"},
     {"id": "cobblemon:master_ball"},
-    {"id": "minecraft:netherite_ingot"},
-    {"id": "minecraft:netherite_block"},
+    {"id": "create:brass_ingot"},
+    {"id": "create:brass_block"},
     {"id": "minecraft:nether_star"},
+    {"id": "minecraft:netherite_block"},
+    {"id": "minecraft:netherite_ingot"},
     {"id": "mega_showdown:keystone"},
     {"id": "mega_showdown:keystone_block"},
     {"id": "mega_showdown:keystone_ore"},

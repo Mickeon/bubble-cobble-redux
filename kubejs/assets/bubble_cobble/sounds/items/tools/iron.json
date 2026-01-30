@@ -14,6 +14,8 @@
     "minecraft:golden_spear",
     "minecraft:diamond_spear",
     "minecraft:netherite_spear",
+    "sophisticatedstorage:storage_tool",
+    "sophisticatedstorage:debug_tool",
     "yo_hooks:iron_grappling_hook",
     "yo_hooks:gold_grappling_hook",
     "yo_hooks:diamond_grappling_hook",
