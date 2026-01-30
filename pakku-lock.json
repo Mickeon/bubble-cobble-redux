@@ -3524,7 +3524,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "dynamic-fps-3.11.3+minecraft-1.21.0-neoforge.jar",
+                    "file_name": "dynamic-fps-3.11.4+minecraft-1.21.0-neoforge.jar",
                     "mc_versions": [
                         "1.21",
                         "1.21.1"
@@ -3533,16 +3533,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/LQ3K71Q1/versions/MHg23IvY/dynamic-fps-3.11.3+minecraft-1.21.0-neoforge.jar",
-                    "id": "MHg23IvY",
+                    "url": "https://cdn.modrinth.com/data/LQ3K71Q1/versions/T238FZpQ/dynamic-fps-3.11.4+minecraft-1.21.0-neoforge.jar",
+                    "id": "T238FZpQ",
                     "parent_id": "LQ3K71Q1",
                     "hashes": {
-                        "sha512": "ac28179ab54baa20f9f4aca4029804f3b1439ce6cff63c58469e484931c8fa6103c79e9e4d8579268724b7d2b0a5a631a54495e4d573581ebab2beaa0d9d45aa",
-                        "sha1": "7fd7557ce08e8692eae9518df5491e997658ac18"
+                        "sha512": "8eb18a280b265e598540306275b51a165836f4b14c6c703b6ced11fcac50bfab439e4deb69e222f62614a9f15fa0ef58e5bd84e20e37ae57755d9c2f8b134057",
+                        "sha1": "35b17e95b2b65930116ccc83e0cc358ac1bfcf9e"
                     },
                     "required_dependencies": [],
-                    "size": 220370,
-                    "date_published": "2026-01-03T16:41:23.453456Z"
+                    "size": 220193,
+                    "date_published": "2026-01-29T18:23:47.709725Z"
                 }
             ]
         },
