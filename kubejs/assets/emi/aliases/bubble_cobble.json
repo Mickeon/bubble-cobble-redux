@@ -15,7 +15,8 @@
 		},
 		{
 			"stacks": [
-				"#item:create:seats"
+				"#item:create:seats",
+				"#handcrafted:dining_benches"
 			],
 			"text": [
 				"Stool",
@@ -39,7 +40,9 @@
 				"#item:supplementaries:awnings"
 			],
 			"text": [
-				"Tent"
+				"Tent",
+				"Cover",
+				"Canopy"
 			]
 		},
 		{
@@ -104,6 +107,95 @@
 				"Micky",
 				"Mickeon",
 				"Glaceon"
+			]
+		},
+		{
+			"stacks": [
+				"item:cobblemon:pasture",
+				"item:cobbreeding:pokemon_egg"
+			],
+			"text": [
+				"Breeding"
+			]
+		},
+		{
+			"stacks": [
+				"#item:bubble_cobble:lanterns",
+				"#item:supplementaries:candle_holders",
+				"item:minecraft:sea_lantern",
+				"item:minecraft:redstone_lamp",
+				"item:createdeco:blue_andesite_lamp",
+				"item:createdeco:blue_brass_lamp",
+				"item:createdeco:blue_copper_lamp",
+				"item:createdeco:blue_industrial_iron_lamp",
+				"item:createdeco:blue_iron_lamp",
+				"item:createdeco:blue_zinc_lamp",
+				"item:createdeco:green_andesite_lamp",
+				"item:createdeco:green_brass_lamp",
+				"item:createdeco:green_copper_lamp",
+				"item:createdeco:green_industrial_iron_lamp",
+				"item:createdeco:green_iron_lamp",
+				"item:createdeco:green_zinc_lamp",
+				"item:createdeco:red_andesite_lamp",
+				"item:createdeco:red_brass_lamp",
+				"item:createdeco:red_copper_lamp",
+				"item:createdeco:red_industrial_iron_lamp",
+				"item:createdeco:red_iron_lamp",
+				"item:createdeco:red_zinc_lamp",
+				"item:createdeco:yellow_andesite_lamp",
+				"item:createdeco:yellow_brass_lamp",
+				"item:createdeco:yellow_copper_lamp",
+				"item:createdeco:yellow_industrial_iron_lamp",
+				"item:createdeco:yellow_iron_lamp",
+				"item:createdeco:yellow_zinc_lamp",
+				"supplementaries:blackstone_lamp",
+				"supplementaries:deepslate_lamp",
+				"supplementaries:end_stone_lamp",
+				"supplementaries:stone_lamp"
+			],
+			"text": [
+				"Lamp",
+				"Lantern"
+			]
+		},
+		{
+			"stacks": [
+				"#item:supplementaries:candle_holders"
+			],
+			"text": [
+				"Chandelier",
+				"Candelabra"
+			]
+		},
+		{
+			"stacks": [
+				"item:create:chute",
+				"item:create:smart_chute"
+			],
+			"text": [
+				"Pipe"
+			]
+		},
+		{
+			"stacks": [
+				"#item:handcrafted:benches",
+				"#item:handcrafted:chairs"	
+			],
+			"text": [
+				"Chair",
+				"Bench"
+			]
+		},
+		{
+			"stacks": [
+				"#item:create:table_cloths",
+				"#item:handcrafted:sheets"
+			],
+			"text": [
+				"Cloth",
+				"Sheet",
+				"Towel",
+				"Cover"
 			]
 		}
 	]

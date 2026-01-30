@@ -76,7 +76,6 @@ remove_tab("constructionstick:tab") // Items also exist in Tools & Utilities tab
 remove_tab("sophisticatedcore:main") // Only contains "sophisticatedcore:xp_bucket".
 remove_tab("lootr:lootr") // Only contains "lootr:trophy".
 
-
 // I need to do this to have the items appear in a proper order. Annoyingly manual.
 remove_and_merge_into_tab("cobblenav:cobblenav", "cobblemon:utility_item", [
 	"cobblenav:pokenav_item_base",
@@ -316,6 +315,11 @@ StartupEvents.modifyCreativeTab("minecraft:tools_and_utilities", event => {
 })
 StartupEvents.modifyCreativeTab("minecraft:redstone_blocks", event => {
 	event.removeFromParent("@copperagebackport")
+})
+
+remove_tab("artifacts:main") // Items also exist in "Relics" tab. Well, except the mimic.
+StartupEvents.modifyCreativeTab("relics:relics", event => {
+	event.add("artifacts:mimic_spawn_egg")
 })
 
 // Remove all non-max level Enchanted Books from searches, which is more than whatever mod is doing this already.

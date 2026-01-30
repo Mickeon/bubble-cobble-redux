@@ -10,7 +10,7 @@ let $SlabBlock  = Java.loadClass("net.minecraft.world.level.block.SlabBlock")
 let $StairBlock  = Java.loadClass("net.minecraft.world.level.block.StairBlock")
 
 ServerEvents.tags("item", event => {
-	event.add("bubble_cobble:lanterns", "minecraft:lantern", "#minecraft:lanterns", "ribbits:swamp_lantern")
+	event.add("bubble_cobble:lanterns", "minecraft:lantern", "minecraft:soul_lantern", "#minecraft:lanterns", "ribbits:swamp_lantern")
 	event.add("bubble_cobble:do_not_replace_when_in_offhand", [
 		"#bubble_cobble:lanterns",
 		"#minecraft:candles",

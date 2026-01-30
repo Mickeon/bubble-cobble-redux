@@ -37,6 +37,8 @@
     {"id": "minecraft:netherite_block"},
     {"id": "minecraft:nether_star"},
     {"id": "mega_showdown:keystone"},
+    {"id": "mega_showdown:keystone_block"},
+    {"id": "mega_showdown:keystone_ore"},
     {"id": "mega_showdown:mega_stone"},
     {"id": "mega_showdown:sparkling_stone_dark"},
     {"id": "mega_showdown:sparkling_stone_light"},

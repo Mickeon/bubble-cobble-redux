@@ -18,7 +18,8 @@
     "herbalbrews:dried_green_tea",
     "herbalbrews:dried_oolong_tea",
     "herbalbrews:herbal_infusion",
-    "mynethersdelight:pepper_powder"
+    "mynethersdelight:pepper_powder",
+    "rarcompat:mimi_dust"
   ],
   "pitch": 2.0,
   "soundEvent": "minecraft:block.gravel.hit"

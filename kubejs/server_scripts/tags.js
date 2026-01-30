@@ -83,7 +83,21 @@ ServerEvents.tags("item", event => {
 	// event.add("supplementaries:blackboard_magenta",    /*"reptilian:magenta_chameleon_scales"*/)
 	event.add("supplementaries:blackboard_pink",       "cobblemon:pink_apricorn")
 
-	event.add("supplementaries:hourglass_dusts", "create:powdered_obsidian", "cobblemon:bright_powder", "cobblemon:metal_powder", "cobblemon:quick_powder", "cobblemon:silver_powder", "cobblemon:heal_powder", "cobblemon:soft_sand", "biomeswevegone:red_glowcane_powder", "biomeswevegone:blue_glowcane_powder", "biomeswevegone:green_glowcane_powder", "biomeswevegone:yellow_glowcane_powder", "mynethersdelight:pepper_powder")
+	event.add("supplementaries:hourglass_dusts", 
+		"#biomeswevegone:glowcane_powder",
+		"#cobblemon:remedies",
+		"create:powdered_obsidian",
+		"createmonballsoverhaul:black_tumblestone_dust",
+		"createmonballsoverhaul:sky_tumblestone_dust",
+		"createmonballsoverhaul:tumblestone_dust",
+		"cobblemon:bright_powder",
+		"cobblemon:metal_powder",
+		"cobblemon:quick_powder",
+		"cobblemon:silver_powder",
+		"cobblemon:soft_sand",
+		"mynethersdelight:pepper_powder",
+		"rarcompat:mimi_dust",
+	)
 	event.add("supplementaries:pancake_syrup", "create:chocolate_bucket")
 	event.add("supplementaries:causes_lightning_when_held", "constructionstick:copper_stick", "minecraft:copper_sword", "minecraft:copper_axe") // Funny.
 	// event.add("supplementaries:overencumbering", "sophisticatedbackpacks:backpack") // Handled in Sophisticated Backpacks config. Also doesn't work anyway.
