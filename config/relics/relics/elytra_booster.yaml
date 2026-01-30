@@ -60,11 +60,11 @@ lootData:
         - minecraft:the_end
         tables:
         - '[\w]+:chests\/[\w_\/]*[\w]+[\w_\/]*'
-        weight: 100
+        weight: 0
     -   biomes:
         - .*
         dimensions:
         - .*
         tables:
         - '[\w]+:chests\/[\w_\/]*(end|stronghold)[\w_\/]*'
-        weight: 500
+        weight: 0

@@ -91,8 +91,13 @@ ServerEvents.tags("item", event => {
 	// Make Construction sticks enchantable with Mending and Unbreaking.
 	event.add("minecraft:enchantable/durability", "#constructionstick:construction_sticks")
 
-	// We reserve Accessories for Mega Showdown, and use Curios for this.
-	event.remove("accessories:back", /sophisticatedbackpacks:.*backpack/)
+	// We reserve Accessories for Mega Showdown, and use Curios for Backpacks/Artifacts.
+	event.removeAll("accessories:back")
+	event.removeAll("accessories:hat")
+	event.removeAll("accessories:necklace")
+	event.removeAll("accessories:hand")
+	event.removeAll("accessories:belt")
+	event.removeAll("accessories:shoes")
 })
 
 ServerEvents.tags("block", event => {

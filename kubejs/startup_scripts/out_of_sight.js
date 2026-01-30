@@ -35,6 +35,28 @@ global.DISABLED_ITEMS = [
 	/^justhammers/,
 	// Keeping only the Escape Rope from this mod, for now.
 	/^gag/,
+
+	// These Artifacts are ridiculous.
+	"artifacts:eternal_steak",
+	"artifacts:everlasting_beef",
+	"artifacts:aqua_dashers", // In favour of Relics's Aqua-Walker.
+	"artifacts:strider_shoes", // In favour of Relics's Magma Walker.
+	// Disabling these Relics here is not enough, remember to also disable them in their respective configs!
+	"relics:infinity_ham", // Dude.
+	"relics:magic_mirror", // The Begone Potion exists.
+	"relics:leather_belt", // Needs balancing.
+	"relics:drowned_belt", // Needs balancing.
+	"relics:hunter_belt", // Needs balancing.
+	"relics:elytra_booster", // I do not want to even encourage using the Elytra.
+	"relics:amphibian_boot", // Needs balancing.
+	// "relics:leafy_ring", // Self-stated to be WIP.
+	"relics:phantom_boot", // Free-flight, but actually you're walking. No cooldowns or anything.
+	"artifacts:umbrella", // People love it but it is ridiculous how much it trivializes movement.
+	"artifacts:villager_hat", // I do not want to even encourage trading.
+	"artifacts:night_vision_goggles", // Free Night Vision is always a big no-no.
+	"artifacts:scarf_of_invisibility", // In favour of Relics's Midnight Robe.
+	// "artifacts:crystal_heart", // Needs balancing. Too many hearts at max.
+	// "artifacts:helium_flamingo", // Needs balancing. Ridiculous air time at max.
 ]
 
 global.DISABLED_ITEM_EXCEPTIONS = [

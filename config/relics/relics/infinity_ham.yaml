@@ -130,4 +130,4 @@ lootData:
         - .*
         tables:
         - '[\w]+:chests\/[\w_\/]*(village|pillage)[\w_\/]*'
-        weight: 500
+        weight: 0

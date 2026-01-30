@@ -42,14 +42,14 @@ lootData:
         - .*
         tables:
         - '[\w]+:chests\/[\w_\/]*[\w]+[\w_\/]*'
-        weight: 300
+        weight: 0
     -   biomes:
         - .*
         dimensions:
         - .*
         tables:
         - '[\w]+:chests\/[\w_\/]*(mine)[\w_\/]*'
-        weight: 500
+        weight: 0
     -   biomes:
         - '[\w]+:.*(sculk|warden)[\w_\/]*'
         - minecraft:deep_dark
@@ -57,4 +57,4 @@ lootData:
         - .*
         tables:
         - '[\w]+:chests\/[\w_\/]*[\w]+[\w_\/]*'
-        weight: 500
+        weight: 0

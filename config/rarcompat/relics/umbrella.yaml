@@ -86,11 +86,11 @@ lootData:
         - .*
         tables:
         - '[\w]+:chests\/[\w_\/]*(village|pillage)[\w_\/]*'
-        weight: 500
+        weight: 0
     -   biomes:
         - '[\w]+:.*(mountain|peak|summit|ridge|alp|highland|hill|cliff|height)[\w_\/]*'
         dimensions:
         - .*
         tables:
         - '[\w]+:chests\/[\w_\/]*[\w]+[\w_\/]*'
-        weight: 300
+        weight: 0
