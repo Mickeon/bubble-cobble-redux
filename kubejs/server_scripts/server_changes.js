@@ -250,7 +250,7 @@ let $Holder  = Java.loadClass("net.minecraft.core.Holder")
 /** @returns {import("net.minecraft.core.Holder").$Holder$$Type<T>} */
 function get_current_lunar_event_holder(level) {
 	let lunar_forecast = $EnhancedCelestials.lunarForecastWorldData(level).orElse(null)
-	return (lunar_forecast ? lunar_forecast.currentLunarEventHolder() : new $Holder())
+	return (lunar_forecast ? lunar_forecast.currentLunarEventHolder() : $Holder.direct())
 }
 
 function is_lunar_event_happening(level) {
