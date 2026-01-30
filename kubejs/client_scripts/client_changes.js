@@ -1,6 +1,4 @@
 //#region More imports than you will ever know what to do with.
-// https://github.com/SettingDust/ModSets/blob/main/src/common/game/main/java/settingdust/mod_sets/game/ModSetsConfigScreenGenerator.java
-let $ModSetsConfigScreenGenerator = Java.loadClass("settingdust.mod_sets.game.ModSetsConfigScreenGenerator")
 /** @type {typeof import("net.neoforged.neoforge.client.event.ClientPauseChangeEvent$Post").$ClientPauseChangeEvent$Post } */
 let $ClientPauseChangeEvent$Post  = Java.loadClass("net.neoforged.neoforge.client.event.ClientPauseChangeEvent$Post")
 /** @type {typeof import("net.neoforged.neoforge.client.event.ScreenEvent$Init$Post").$ScreenEvent$Init$Post } */
@@ -29,6 +27,9 @@ BlockEvents.rightClicked(event => {
 })
 
 // Add easily-accessible Mod Sets button.
+if (Platform.isLoaded("mod_sets")) {
+// https://github.com/SettingDust/ModSets/blob/main/src/common/game/main/java/settingdust/mod_sets/game/ModSetsConfigScreenGenerator.java
+let $ModSetsConfigScreenGenerator = Java.loadClass("settingdust.mod_sets.game.ModSetsConfigScreenGenerator")
 NativeEvents.onEvent($ScreenEvent$Init$Post, event => {
 	if (!(event.screen instanceof $PauseScreen || event.screen instanceof $TitleScreen)) {
 		return
@@ -62,6 +63,7 @@ NativeEvents.onEvent($ScreenEvent$Init$Post, event => {
 
 	screen.addRenderableWidget(modsets_button)
 })
+}
 
 // KeyBindEvents.pressed("key.use", event => {
 // 	event.client.statusMessage = "Potato"
