@@ -1,9 +1,11 @@
 // priority: 1000
 
-/** @import {$Player} from "net.minecraft.world.entity.player.Player" */
-/** @import {$ServerPlayer} from "net.minecraft.server.level.ServerPlayer") */
-/** @import {$ItemStack} from "net.minecraft.world.item.ItemStack" */
-/** @import {$ScheduledEvents$ScheduledEvent} from "dev.latvian.mods.kubejs.util.ScheduledEvents$ScheduledEvent" */
+/**
+ * @import {$Player} from "net.minecraft.world.entity.player.Player"
+ * @import {$ServerPlayer} from "net.minecraft.server.level.ServerPlayer")
+ * @import {$ItemStack} from "net.minecraft.world.item.ItemStack"
+ * @import {$ScheduledEvents$ScheduledEvent} from "dev.latvian.mods.kubejs.util.ScheduledEvents$ScheduledEvent"
+ */
 
 const SEC = 20
 const MIN = SEC * 60
@@ -26,6 +28,7 @@ function pick_random(array) {
 
 const DASH_STARTERS = [
 	"AceNil_",
+	"LuckyAquapura",
 	"BlueBerryNice",
 	"CafeJaze",
 	"CantieLabs",
@@ -34,6 +37,7 @@ const DASH_STARTERS = [
 	"LabbyRosenfeld",
 	"mAIgehound",
 	"Mickeon",
+	"SueTheMimiga",
 	"pepperponyo",
 	"WaiGee",
 ]

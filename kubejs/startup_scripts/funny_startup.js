@@ -21,13 +21,17 @@ ItemEvents.modification(event => {
 	event.modify(["biomesoplenty:cattail", "biomeswevegone:cattail_sprout", "biomeswevegone:fluorescent_cattail_sprout"], /** @param {$ItemModifications} item */ item => {
 		item.food = (new $FoodBuilder()).alwaysEdible().nutrition(1).build()
 	})
+
+	event.modify("farmersdelight:skillet",  /** @param {$ItemModifications} modified */ modified => {
+		modified.addAttributeModifier("minecraft:generic.armor", {id: "minecraft:generic.armor_resistance", amount: 2, operation: "add_value"}, "head")
+	})
 })
 
 StartupEvents.registry("item", event => {
 	event.create("blue_mascot_cat")
 			.displayName("Sopping Wet Thing")
 			.rarity("rare")
-			.tooltip(Text.of("Shake him comedically for some cool noises!").color("#83BED9"))
+			.tooltip(Text.of(`Shake him comedically for some cool noises!`).color("#83BED9"))
 			.useAnimation("brush")
 			.useDuration(item_stack => 30)
 			.use((level, player, hand) => {
@@ -105,7 +109,7 @@ StartupEvents.registry("item", event => {
 			.jukeboxPlayable("kubejs:mint")
 	event.create("horse_urine_bottle")
 			.maxStackSize(16)
-			.tooltip(Text.translatableWithFallback("", "dude").darkGray().italic())
+			.tooltip(Text.of(`dude`).darkGray().italic())
 			.tag("c:drinks")
 			.tag("c:drinks/juice")
 			.tag("c:potions/bottle")
@@ -122,7 +126,7 @@ StartupEvents.registry("item", event => {
 			.displayName("Super Ghostbusters")
 			.unstackable()
 			.rarity("rare")
-			.tooltip(Text.of("Why the fuck is all the modpack full of ghost?").color("#83BED9"))
+			.tooltip(Text.of(`Why the fuck is all the modpack full of ghost?`).color("#83BED9"))
 			.useAnimation("toot_horn")
 			.useDuration(item_stack => 30)
 			.use((level, player, hand) => {
@@ -161,18 +165,18 @@ StartupEvents.modifyCreativeTab("kubejs:tab", event => {
 	event.add(Item.of("kubejs:bearded_dragon_bowl").withCustomName("Baby Dandy"))
 	event.remove("kubejs:doublemint_gum") // Sssh.
 
-	event.add(Item.of("constructionstick:netherite_stick", 1, {
+	event.add(Item.of("constructionstick:netherite_stick", {
 		"constructionstick:lock": "nolock",
 		"constructionstick:direction": "target",
-		"constructionstick:destruction":true,
-		"constructionstick:angel":true,
-		"constructionstick:replacement":true,
+		"constructionstick:destruction": true,
+		"constructionstick:angel": true,
+		"constructionstick:replacement": true,
 		"constructionstick:unbreakable": true,
 		"constructionstick:selected": "constructionstick:default",
 		"minecraft:unbreakable": {show_in_tooltip: false},
-		"minecraft:item_name": Text.of("God Stick"),
+		"minecraft:item_name": Text.of(`God Stick`),
 		"minecraft:rarity": "epic",
-		"minecraft:lore": Text.of("Only available in Creative Mode").lightPurple()
+		"minecraft:lore": Text.of(`Only available in Creative Mode`).lightPurple()
 	}))
 })
 
@@ -192,7 +196,7 @@ StartupEvents.registry("attribute", event => {
 		.attachToPlayers()
 		.range(0, 0, 128)
 		.sentiment("positive")
-		.displayName(Text.of("Air Dash")
+		.displayName(Text.of(`Air Dash`)
 	)
 })
 
@@ -271,6 +275,24 @@ function get_item_to_destroy(carried_item, stacked_on_item) {
 		return stacked_on_item
 	}
 }
+
+// Put Skillet on your head with some really shoddy code.
+NativeEvents.onEvent($ItemStackedOnOtherEvent, event => {
+	// console.log(event.slot.getSlotIndex())
+	if (event.carriedItem.isEmpty()
+	&& event.stackedOnItem.is("farmersdelight:skillet")
+	&& event.clickAction == "SECONDARY"
+	) {
+		event.player.inventory.insertItem(event.player.getEquipment("head").copyAndClear(), false)
+		event.player.setEquipment("head", event.stackedOnItem.copyAndClear())
+		event.setCanceled(true)
+	}
+	if (event.carriedItem.is("farmersdelight:skillet") && event.slot.getSlotIndex() == 39) {
+		event.player.inventory.insertItem(event.slot.item.copyAndClear(), false)
+		event.slot.set(event.carriedItem.copyAndClear())
+		event.setCanceled(true)
+	}
+})
 
 // Dead code.
 // const ForgeRegistries = Java.loadClass("net.minecraftforge.registries.ForgeRegistries")

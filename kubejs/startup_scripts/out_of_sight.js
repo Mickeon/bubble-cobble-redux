@@ -59,6 +59,7 @@ global.DISABLED_ITEMS = [
 	// "artifacts:helium_flamingo", // Needs balancing. Ridiculous air time at max.
 ]
 
+/** @type {Special.Item[]} */
 global.DISABLED_ITEM_EXCEPTIONS = [
 	"cobbreeding:pokemon_egg",
 	"justhammers:stone_hammer",
@@ -66,6 +67,7 @@ global.DISABLED_ITEM_EXCEPTIONS = [
 	"justhammers:iron_hammer",
 	"justhammers:iron_reinforced_hammer",
 	"gag:escape_rope",
+	"gag:time_sand_pouch"
 ]
 
 global.get_disabled_ingredient = function () {

@@ -294,14 +294,28 @@ NO_SKY_LIGHT_MOBS.forEach(entity_type => {
 })
 
 // After the above changes, a lot of Endermen spawn on the surface. Rectify that.
-const FEWER_SKY_LIGHT_MOBS = ["minecraft:enderman", "minecraft:spider"]
-FEWER_SKY_LIGHT_MOBS.forEach(entity_type => {
-	EntityEvents.checkSpawn(entity_type, event => {
-		if (event.block.getSkyLight() >= 1 && event.type == "NATURAL" && Utils.getRandom().nextFloat() > 0.1) {
-			// console.log(`Trying to spawn ${event.entity.type}, but chance said no!`)
-			event.cancel()
-		}
-	})
+// const FEWER_SKY_LIGHT_MOBS = ["minecraft:enderman", "minecraft:spider"]
+// FEWER_SKY_LIGHT_MOBS.forEach(entity_type => {
+// 	EntityEvents.checkSpawn(entity_type, event => {
+// 		if (event.block.getSkyLight() >= 1 && event.type == "NATURAL" && Utils.getRandom().nextFloat() > 0.3) {
+// 			// console.log(`Trying to spawn ${event.entity.type}, but chance said no!`)
+// 			event.cancel()
+// 		}
+// 	})
+// })
+
+EntityEvents.checkSpawn("minecraft:enderman", event => {
+	if (event.block.getSkyLight() >= 1 && event.type == "NATURAL" && Utils.getRandom().nextFloat() > 0.3) {
+		// console.log(`Trying to spawn ${event.entity.type}, but chance said no!`)
+		event.cancel()
+	}
+})
+
+EntityEvents.checkSpawn("minecraft:spider", event => {
+	if (event.block.getSkyLight() >= 1 && event.type == "NATURAL" && Utils.getRandom().nextFloat() > 0.1) {
+		// console.log(`Trying to spawn ${event.entity.type}, but chance said no!`)
+		event.cancel()
+	}
 })
 
 // No baby zombies, unless Chicken Jockey?

@@ -144,7 +144,7 @@ ItemEvents.firstRightClicked(["minecraft:raw_copper"], event => {
 	) { // CantieLabs
 		const item_stack = event.item
 		item_stack.food = new $FoodBuilder().nutrition(3).alwaysEdible().build()
-		item_stack.lore = Text.of("Yummy!")
+		item_stack.lore = Text.of(`Yummy!`)
 	}
 })
 

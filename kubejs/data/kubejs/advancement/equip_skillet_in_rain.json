@@ -1,0 +1,35 @@
+{
+  "$schema": "https://www.schemastore.org/minecraft-advancement.json",
+  "parent": "minecraft:adventure/root",
+  "display": {
+    "icon": {
+      "id": "farmersdelight:skillet"
+    },
+    "title": "Hey, I Know!",
+    "description": "I'll use my trusty Skillet as a Rain Kill-et"
+  },
+  "criteria": {
+    "equip_skillet_in_rain": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:weather_check",
+            "raining": true
+          },
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "equipment": {
+                "head": {
+                  "items": "farmersdelight:skillet"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

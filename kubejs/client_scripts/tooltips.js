@@ -272,6 +272,8 @@ ItemEvents.modifyTooltips(event => {
 		text.dynamic("show_tool_durability")
 	})
 
+	event.add(["farmersdelight:skillet"], [subtle("Right-click in inventory to equip")])
+
 	// let recipe_manager = Client.player.level.recipeManager
 	// recipe_manager.byType("create:sequenced_assembly").forEach((id, sequenced_assembly) => {
 	// 	add_sequence_info(event, sequenced_assembly)

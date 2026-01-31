@@ -112,6 +112,8 @@ ServerEvents.tags("item", event => {
 	event.removeAll("accessories:hand")
 	event.removeAll("accessories:belt")
 	event.removeAll("accessories:shoes")
+	
+	event.add("curios:back", "#supplementaries:sacks")
 })
 
 ServerEvents.tags("block", event => {

@@ -274,8 +274,9 @@ ServerEvents.recipes(event => {
 	event.shaped(Item.of("justhammers:iron_hammer"), [" II", " SI", "S  "], {I: "minecraft:iron_block", S: "minecraft:stick"})
 	event.shaped(Item.of("justhammers:iron_reinforced_hammer"), ["III", " SI", "S I"], {I: "minecraft:iron_block", S: "minecraft:stick"})
 
-	// Remove everything from Gadgets Against Grind, except the Escape Rope.
-	event.remove({mod: "gag"})
+	// New recipe for Gadgets Against Grind's Escape Rope.
+	// event.remove({mod: "gag"})
+	event.remove({id: "gag:escape_rope"})
 	event.shapeless("gag:escape_rope", ["yo_hooks:iron_hook_head", Ingredient.of("#c:ropes").withCount(3)])
 
 	// Recipes for normally-unobtainable Applin evolution items.
@@ -290,8 +291,8 @@ ServerEvents.recipes(event => {
 	// Crush Honeycomb Block to get a few Honeycombs.
 	event.recipes.create.crushing([
 			CreateItem.of(Item.of("minecraft:honeycomb", 2)),
-			CreateItem.of(Item.of( "minecraft:honeycomb", 1), 0.5),
-			CreateItem.of(Item.of( "minecraft:honeycomb", 1), 0.5)
+			CreateItem.of(Item.of("minecraft:honeycomb", 1), 0.5),
+			CreateItem.of(Item.of("minecraft:honeycomb", 1), 0.5)
 		],
 		"minecraft:honeycomb_block"
 	)

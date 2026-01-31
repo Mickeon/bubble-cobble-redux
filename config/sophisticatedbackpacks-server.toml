@@ -1,7 +1,32 @@
 #Server Settings
 [server]
 	#List of items that are not allowed to be put in backpacks - e.g. "minecraft:shulker_box"
-	disallowedItems = ["supplementaries:sack"]
+	disallowedItems = [
+		"supplementaries:sack",
+		"minecraft:shulker_box",
+		"minecraft:red_shulker_box",
+		"minecraft:pink_shulker_box",
+		"minecraft:gray_shulker_box",
+		"minecraft:lime_shulker_box",
+		"minecraft:blue_shulker_box",
+		"minecraft:cyan_shulker_box",
+		"minecraft:green_shulker_box",
+		"minecraft:black_shulker_box",
+		"minecraft:brown_shulker_box",
+		"minecraft:white_shulker_box",
+		"minecraft:purple_shulker_box",
+		"minecraft:orange_shulker_box",
+		"minecraft:yellow_shulker_box",
+		"minecraft:magenta_shulker_box",
+		"minecraft:light_gray_shulker_box",
+		"minecraft:light_blue_shulker_box",
+		"sophisticatedstorage:shulker_box",
+		"sophisticatedstorage:iron_shulker_box",
+		"sophisticatedstorage:gold_shulker_box",
+		"sophisticatedstorage:copper_shulker_box",
+		"sophisticatedstorage:diamond_shulker_box",
+		"sophisticatedstorage:netherite_shulker_box"
+	]
 	#Determines if container items (those that override canFitInsideContainerItems to false) are able to fit in backpacks
 	containerItemsDisallowed = false
 	#List of blocks that inventory interaction upgrades can't interact with - e.g. "minecraft:shulker_box"
