@@ -197,6 +197,50 @@
 				"Towel",
 				"Cover"
 			]
+		},
+		{
+			"stacks": [
+				"item:farmersdelight:skillet"
+			],
+			"text": [
+				"Frying Pan"
+			]
+		},
+		{
+			"stacks": [
+				"item:createdeco:black_shipping_container",
+				"item:createdeco:blue_shipping_container",
+				"item:createdeco:brown_shipping_container",
+				"item:createdeco:cyan_shipping_container",
+				"item:createdeco:gray_shipping_container",
+				"item:createdeco:green_shipping_container",
+				"item:createdeco:light_blue_shipping_container",
+				"item:createdeco:light_gray_shipping_container",
+				"item:createdeco:lime_shipping_container",
+				"item:createdeco:magenta_shipping_container",
+				"item:createdeco:orange_shipping_container",
+				"item:createdeco:pink_shipping_container",
+				"item:createdeco:purple_shipping_container",
+				"item:createdeco:red_shipping_container",
+				"item:createdeco:white_shipping_container",
+				"item:createdeco:yellow_shipping_container"
+			],
+			"text": [
+				"Cargo Box"
+			]
+		},
+		{
+			"stacks": [
+				"item:create:cardboard_block",
+				"item:create:bound_cardboard_block",
+				"item:create:cardboard_package_12x10",
+				"item:create:cardboard_package_10x8",
+				"item:create:cardboard_package_10x12",
+				"item:create:cardboard_package_12x12"
+			],
+			"text": [
+				"Cardboard Box"
+			]
 		}
 	]
 }

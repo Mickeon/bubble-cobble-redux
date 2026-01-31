@@ -1,0 +1,35 @@
+{
+  "attributes": {
+    "x": 0,
+    "y": 6,
+    "speedY": 24,
+    "frictionY": 0.8,
+    "color_start": "#FFFFB428",
+    "color_end": "#00FFFFFF",
+    "duration": 40,
+    "count": 1
+  },
+  "attributes_variance": {
+    "x": 6,
+    "y": 2,
+    "color_start": "#00408080",
+    "duration": 10,
+    "count": 1
+  },
+  "events": {
+    "onPut": {
+      "use": "onIdle",
+      "interval": 1,
+      "interval_variance": 1,
+      "particles": [
+        {
+          "id": "minecraft:heart"          
+        }
+      ]
+    }
+  },
+
+  "applies": [
+    {"id": "cobbreeding:pokemon_egg"}
+  ]
+}

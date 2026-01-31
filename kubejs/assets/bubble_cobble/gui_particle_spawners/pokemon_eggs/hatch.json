@@ -1,0 +1,47 @@
+{
+  "attributes": {
+      "color_start": "#FFFFFFFF",
+      "x": 0,
+      "y": 0,
+      "duration": 60,
+      "speedY": 24,
+      "speedX": 0,
+      "frictionX": 0.9,
+      "frictionY": 0.95,
+      "accelerationY": -0.5,
+      "count": 8
+  },
+  "attributes_variance": {
+    "color_start": "#00209040",
+    "color_end": "#00209040",
+    "x": 8,
+    "y": 8,
+    "speedY": 32,
+    "speedX": 32,
+    "frictionX": 0.05,
+    "frictionY": 0.01,
+    "duration": 20,
+    "count": 4
+  },
+  "events": {
+    "onIdle": {
+      "interval": 5,
+      "interval_variance": 2,
+      "particles": [
+        { "id": "minecraft:wax_on" }
+      ]
+    },
+
+    "onCarried": {
+      "use": "onIdle"
+    },
+
+    "onShake": {
+      "use": "onIdle"
+    }
+  },
+
+  "applies": [
+    {"id": "cobbreeding:pokemon_egg", "components": {"cobbreeding:timer": 0}}
+  ]
+}

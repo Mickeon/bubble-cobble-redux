@@ -1,0 +1,100 @@
+{
+  "attributes": {
+    "x": 2,
+    "y": -2,
+    "color_start": "#DDFFB428",
+    "color_end": "#FFFFFFFF",
+    "duration": 20,
+    "count": 1
+  },
+  "attributes_variance": {
+    "x": 6,
+    "y": 6,
+    "color_start": "#44408080",
+    "duration": 10,
+    "count": 1
+  },
+  "events": {
+    "onIdle": {
+      "interval": 5,
+      "interval_variance": 2,
+      "particles": [
+        {
+          "id": "supplementaries:sparkle"
+        }
+      ]
+    },
+
+    "onCarried": {
+      "use": "onIdle"
+    },
+
+    "onShake": {
+      "use": "onCarried",
+      "interval": 2
+    }
+  },
+
+  "applies": [
+    {"id": "cobbreeding:pokemon_egg", "components": {"cobbreeding:timer": 1200}},
+    {"id": "cobbreeding:pokemon_egg", "components": {"cobbreeding:timer": 1180}},
+    {"id": "cobbreeding:pokemon_egg", "components": {"cobbreeding:timer": 1160}},
+    {"id": "cobbreeding:pokemon_egg", "components": {"cobbreeding:timer": 1140}},
+    {"id": "cobbreeding:pokemon_egg", "components": {"cobbreeding:timer": 1120}},
+    {"id": "cobbreeding:pokemon_egg", "components": {"cobbreeding:timer": 1100}},
+    {"id": "cobbreeding:pokemon_egg", "components": {"cobbreeding:timer": 1080}},
+    {"id": "cobbreeding:pokemon_egg", "components": {"cobbreeding:timer": 1060}},
+    {"id": "cobbreeding:pokemon_egg", "components": {"cobbreeding:timer": 1040}},
+    {"id": "cobbreeding:pokemon_egg", "components": {"cobbreeding:timer": 1020}},
+    {"id": "cobbreeding:pokemon_egg", "components": {"cobbreeding:timer": 1000}},
+    {"id": "cobbreeding:pokemon_egg", "components": {"cobbreeding:timer": 980}},
+    {"id": "cobbreeding:pokemon_egg", "components": {"cobbreeding:timer": 960}},
+    {"id": "cobbreeding:pokemon_egg", "components": {"cobbreeding:timer": 940}},
+    {"id": "cobbreeding:pokemon_egg", "components": {"cobbreeding:timer": 920}},
+    {"id": "cobbreeding:pokemon_egg", "components": {"cobbreeding:timer": 900}},
+    {"id": "cobbreeding:pokemon_egg", "components": {"cobbreeding:timer": 880}},
+    {"id": "cobbreeding:pokemon_egg", "components": {"cobbreeding:timer": 860}},
+    {"id": "cobbreeding:pokemon_egg", "components": {"cobbreeding:timer": 840}},
+    {"id": "cobbreeding:pokemon_egg", "components": {"cobbreeding:timer": 820}},
+    {"id": "cobbreeding:pokemon_egg", "components": {"cobbreeding:timer": 800}},
+    {"id": "cobbreeding:pokemon_egg", "components": {"cobbreeding:timer": 780}},
+    {"id": "cobbreeding:pokemon_egg", "components": {"cobbreeding:timer": 760}},
+    {"id": "cobbreeding:pokemon_egg", "components": {"cobbreeding:timer": 740}},
+    {"id": "cobbreeding:pokemon_egg", "components": {"cobbreeding:timer": 720}},
+    {"id": "cobbreeding:pokemon_egg", "components": {"cobbreeding:timer": 700}},
+    {"id": "cobbreeding:pokemon_egg", "components": {"cobbreeding:timer": 680}},
+    {"id": "cobbreeding:pokemon_egg", "components": {"cobbreeding:timer": 660}},
+    {"id": "cobbreeding:pokemon_egg", "components": {"cobbreeding:timer": 640}},
+    {"id": "cobbreeding:pokemon_egg", "components": {"cobbreeding:timer": 620}},
+    {"id": "cobbreeding:pokemon_egg", "components": {"cobbreeding:timer": 600}},
+    {"id": "cobbreeding:pokemon_egg", "components": {"cobbreeding:timer": 580}},
+    {"id": "cobbreeding:pokemon_egg", "components": {"cobbreeding:timer": 560}},
+    {"id": "cobbreeding:pokemon_egg", "components": {"cobbreeding:timer": 540}},
+    {"id": "cobbreeding:pokemon_egg", "components": {"cobbreeding:timer": 520}},
+    {"id": "cobbreeding:pokemon_egg", "components": {"cobbreeding:timer": 500}},
+    {"id": "cobbreeding:pokemon_egg", "components": {"cobbreeding:timer": 480}},
+    {"id": "cobbreeding:pokemon_egg", "components": {"cobbreeding:timer": 460}},
+    {"id": "cobbreeding:pokemon_egg", "components": {"cobbreeding:timer": 440}},
+    {"id": "cobbreeding:pokemon_egg", "components": {"cobbreeding:timer": 420}},
+    {"id": "cobbreeding:pokemon_egg", "components": {"cobbreeding:timer": 400}},
+    {"id": "cobbreeding:pokemon_egg", "components": {"cobbreeding:timer": 380}},
+    {"id": "cobbreeding:pokemon_egg", "components": {"cobbreeding:timer": 360}},
+    {"id": "cobbreeding:pokemon_egg", "components": {"cobbreeding:timer": 340}},
+    {"id": "cobbreeding:pokemon_egg", "components": {"cobbreeding:timer": 320}},
+    {"id": "cobbreeding:pokemon_egg", "components": {"cobbreeding:timer": 300}},
+    {"id": "cobbreeding:pokemon_egg", "components": {"cobbreeding:timer": 280}},
+    {"id": "cobbreeding:pokemon_egg", "components": {"cobbreeding:timer": 260}},
+    {"id": "cobbreeding:pokemon_egg", "components": {"cobbreeding:timer": 240}},
+    {"id": "cobbreeding:pokemon_egg", "components": {"cobbreeding:timer": 220}},
+    {"id": "cobbreeding:pokemon_egg", "components": {"cobbreeding:timer": 100}},
+    {"id": "cobbreeding:pokemon_egg", "components": {"cobbreeding:timer": 180}},
+    {"id": "cobbreeding:pokemon_egg", "components": {"cobbreeding:timer": 160}},
+    {"id": "cobbreeding:pokemon_egg", "components": {"cobbreeding:timer": 140}},
+    {"id": "cobbreeding:pokemon_egg", "components": {"cobbreeding:timer": 120}},
+    {"id": "cobbreeding:pokemon_egg", "components": {"cobbreeding:timer": 100}},
+    {"id": "cobbreeding:pokemon_egg", "components": {"cobbreeding:timer": 80}},
+    {"id": "cobbreeding:pokemon_egg", "components": {"cobbreeding:timer": 60}},
+    {"id": "cobbreeding:pokemon_egg", "components": {"cobbreeding:timer": 40}},
+    {"id": "cobbreeding:pokemon_egg", "components": {"cobbreeding:timer": 20}}
+  ]
+}
