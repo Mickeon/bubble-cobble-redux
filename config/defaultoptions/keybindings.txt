@@ -49,7 +49,7 @@ key_key.cobblemon.ridingfreelook:key.keyboard.left.alt:
 key_accessories.key.open_accessories_screen:key.keyboard.keypad.4:
 key_key.dynamic_fps.toggle_forced:key.keyboard.unknown:
 key_key.dynamic_fps.toggle_disabled:key.keyboard.unknown:
-key_key.sophisticateditemactions.item_highlight:key.keyboard.h:
+key_key.sophisticateditemactions.item_highlight:key.keyboard.semicolon:
 key_key.sophisticateditemactions.deposit_item:key.keyboard.apostrophe:
 key_key.sophisticateditemactions.restock_item:key.keyboard.backslash:
 key_key.solonion.open_food_book:key.keyboard.unknown:
@@ -161,10 +161,10 @@ key_gui.xaero_toggle_dimension:key.keyboard.unknown:
 key_key.sophisticatedbackpacks.open_backpack:key.keyboard.b:
 key_key.sophisticatedbackpacks.inventory_interaction:key.keyboard.c:
 key_key.sophisticatedbackpacks.tool_swap:key.keyboard.unknown:
-key_key.sophisticatedbackpacks.toggle_upgrade_1:key.keyboard.keypad.1:
-key_key.sophisticatedbackpacks.toggle_upgrade_2:key.keyboard.keypad.2:
-key_key.sophisticatedbackpacks.toggle_upgrade_3:key.keyboard.keypad.3:
 key_key.sophisticatedbackpacks.toggle_upgrade_4:key.keyboard.unknown:
+key_key.sophisticatedbackpacks.toggle_upgrade_3:key.keyboard.keypad.3:
+key_key.sophisticatedbackpacks.toggle_upgrade_2:key.keyboard.keypad.2:
+key_key.sophisticatedbackpacks.toggle_upgrade_1:key.keyboard.keypad.1:
 key_key.sophisticatedbackpacks.toggle_upgrade_5:key.keyboard.unknown:
 key_key.relics.active_abilities_list:key.keyboard.left.alt:
 key_key.relics.research_relic:key.keyboard.left.shift:
@@ -182,6 +182,12 @@ key_key.kubejs.kubedex:key.keyboard.unknown:
 key_key.kubejs.bubble_cobble.dash:key.mouse.4:
 key_keyinfo.copycats.fill_copycat:key.keyboard.left.alt:
 key_key.crawl:key.keyboard.c:
+key_artifacts.key.helium_flamingo.activate:key.keyboard.unknown:
+key_artifacts.key.charm_of_shrinking.toggle:key.keyboard.unknown:
+key_artifacts.key.charm_of_sinking.toggle:key.keyboard.unknown:
+key_artifacts.key.night_vision_goggles.toggle:key.keyboard.unknown:
+key_artifacts.key.scarf_of_invisibility.toggle:key.keyboard.unknown:
+key_artifacts.key.universal_attractor.toggle:key.keyboard.unknown:
 key_key.cpm.gestureMenu:key.keyboard.keypad.9:
 key_key.cpm.renderToggle:key.keyboard.unknown:
 key_key.cpm.qa_1:key.keyboard.unknown:
