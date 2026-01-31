@@ -1,6 +1,10 @@
 // priority: 10
 
 const CREATE_STONE_TYPES = ["granite", "diorite", "andesite", "calcite", "dripstone", "deepslate", "tuff", "asurine", "crimsite", "limestone", "ochrum", "scoria", "scorchia", "veridium"]
+const COPPER_BUTTONS = [
+	"copperagebackport:copper_button", "copperagebackport:exposed_copper_button", "copperagebackport:oxidized_copper_button", "copperagebackport:weathered_copper_button",
+	"copperagebackport:waxed_copper_button", "copperagebackport:waxed_exposed_copper_button", "copperagebackport:waxed_oxidized_copper_button",  "copperagebackport:waxed_weathered_copper_button"
+]
 
 ServerEvents.tags("item", event => {
 	// Accidental omissions from the mod creators.
@@ -47,6 +51,7 @@ ServerEvents.tags("item", event => {
 	event.add("mega_showdown:rotom_appliances", "mega_showdown:rotom_oven", "mega_showdown:rotom_mow", "mega_showdown:rotom_washing_machine", "mega_showdown:rotom_fan", "mega_showdown:rotom_fridge") // Reported https://github.com/yajatkaul/CobblemonMegaShowdown/issues/153
 	event.add("c:music_discs", "cnc:music_disc_slough_choir", "cnc:music_disc_wreck_of_the_old_97", "cnc:music_disc_hills")
 	event.removeAll("minecraft:music_discs")
+	event.add("minecraft:buttons", COPPER_BUTTONS)
 	// TODO: Copper Chests missing from c:chests item tag.
 
 	// More compatibility.
@@ -127,6 +132,8 @@ ServerEvents.tags("block", event => {
 	event.add("minecraft:guarded_by_piglins", "handcrafted:golden_thin_pot", "handcrafted:golden_thick_pot", "handcrafted:golden_wide_pot", "handcrafted:golden_medium_pot") // Reported: https://github.com/terrarium-earth/Handcrafted/issues/152
 	event.add("cobblemon:machines", "simpletms:machine_tm")
 	event.add("create:single_block_inventories", "supplementaries:sack", "supplementaries:safe", "supplementaries:pulley_block") // TODO: Report this.
+	event.add("minecraft:buttons", COPPER_BUTTONS)
+	event.add("minecraft:mineable/pickaxe", COPPER_BUTTONS)
 
 	// Other omissions that make sense.
 	event.add("create:windmill_sails", "#supplementaries:flags")

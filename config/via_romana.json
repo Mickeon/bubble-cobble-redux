@@ -8,7 +8,8 @@
     "minecraft:dirt_path",
     "minecraft:packed_mud",
     "minecraft:coarse_dirt",
-    "minecraft:rooted_dirt"
+    "minecraft:rooted_dirt",
+    "create:framed_glass"
   ],
   "path_block_tags": [
     "create:tracks"
@@ -44,7 +45,9 @@
     "diagonalfences:",
     "diagonalwindows:"
   ],
-  "invalid_dimensions": [],
+  "invalid_dimensions": [
+    "cobblemonraiddens:raid_dimension_type"
+  ],
   "no_gui_charting": false,
   "invalid_entities": [],
   "warp_block_ids": [

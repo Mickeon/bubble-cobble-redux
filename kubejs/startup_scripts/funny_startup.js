@@ -23,7 +23,7 @@ ItemEvents.modification(event => {
 	})
 
 	event.modify("farmersdelight:skillet",  /** @param {$ItemModifications} modified */ modified => {
-		modified.addAttributeModifier("minecraft:generic.armor", {id: "minecraft:generic.armor_resistance", amount: 2, operation: "add_value"}, "head")
+		modified.addAttributeModifier("minecraft:generic.armor", {id: "minecraft:generic.armor_resistance", amount: 1, operation: "add_value"}, "head")
 	})
 })
 
