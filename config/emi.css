@@ -350,7 +350,7 @@
 	/**
 	 * Display the recipe tree for a given stack.
 	 */
-	view-stack-tree: "key.keyboard.t";
+	view-stack-tree: "ctrl key.keyboard.t";
 
 	/**
 	 * Display the recipe tree.
