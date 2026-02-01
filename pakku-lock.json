@@ -243,6 +243,48 @@
             ]
         },
         {
+            "pakku_id": "NpHkyOH22Lpg6UCI",
+            "pakku_links": [
+                "WWiX8dynol1cESFV"
+            ],
+            "type": "MOD",
+            "side": "CLIENT",
+            "slug": {
+                "modrinth": "aiutd"
+            },
+            "name": {
+                "modrinth": "Am I Up To Date?"
+            },
+            "id": {
+                "modrinth": "tgacmJEn"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "aiutd-2.1.0+1.21.1-neoforge.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/tgacmJEn/versions/1I9meD2c/aiutd-2.1.0+1.21.1-neoforge.jar",
+                    "id": "1I9meD2c",
+                    "parent_id": "tgacmJEn",
+                    "hashes": {
+                        "sha512": "d3b09f5b2968a11b6c5c5a4bf6e4eebdec09a5d82382bcc8821932bfbcf3a9870d59fce993845910eebcbd265f66586b8b428688e4031a85eab06e2d96ab0e20",
+                        "sha1": "2bb19f597443133870a0b9c9dfc341fa0400caa7"
+                    },
+                    "required_dependencies": [
+                        "1eAoo2KR"
+                    ],
+                    "size": 2146278,
+                    "date_published": "2026-02-01T01:31:59.513819Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "YULE3WxogdemndZT",
             "type": "MOD",
             "side": "BOTH",
