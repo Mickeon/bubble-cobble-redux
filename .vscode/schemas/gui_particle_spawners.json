@@ -1,0 +1,197 @@
+{
+	"$schema": "https://json-schema.org/draft-07/schema",
+	"title": "Gui Particle Spawners Schema",
+	"description": "Used by Inventory Interactions. See also https://github.com/mineland-2048/item_interactions_mod/wiki/Attributes",
+	"type": "object",
+	"additionalProperties": false,
+	"properties": {
+		"parent": {
+			"$ref": "#/definitions/spawner_id",
+			"description": "A parent to inherit its properties and events from."
+		},
+		"children": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/spawner_id"
+			},
+			"minItems": 1,
+			"description": "A list of child spawners that will be appended to the applied items."
+		},
+		"attributes": {
+			"$ref": "#/definitions/attributes",
+			"additionalProperties": false
+		},
+		"attributes_variance": {
+			"$ref": "#/definitions/attributes",
+			"additionalProperties": false
+		},
+		"events": {
+			"type": "object",
+			"properties": {
+				"onIdle": {
+					"$ref": "#/definitions/event"
+				},
+				"onPickup": {
+					"$ref": "#/definitions/event"
+				},
+				"onCarried": {
+					"$ref": "#/definitions/event"
+				},
+				"onPut": {
+					"$ref": "#/definitions/event"
+				},
+				"onShake": {
+					"$ref": "#/definitions/event"
+				}
+			},
+			"propertyNames": {
+				"pattern": "^[A-Za-z_][A-Za-z0-9_]*$"
+			}
+		},
+		"applies": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"properties": {
+					"id": {
+						"$ref": "#/definitions/spawner_id"
+					},
+					"count": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 99
+					},
+					"components": {
+						"type": "object"
+					}
+				},
+				"required": [
+					"id"
+				]
+			},
+			"minItems": 1,
+			"uniqueItems": true
+		}
+	},
+	"definitions": {
+		"spawner_id": {
+			"type": "string",
+			"pattern": "^[A-Za-z0-9_:/]*$"
+		},
+		"attributes": {
+			"type": "object",
+			"properties": {
+				"x": {
+					"$ref": "#/definitions/attributes.position"
+				},
+				"y": {
+					"$ref": "#/definitions/attributes.position"
+				},
+				"speedX": {
+					"$ref": "#/definitions/attributes.speed"
+				},
+				"speedY": {
+					"$ref": "#/definitions/attributes.speed"
+				},
+				"accelerationX": {
+					"type": "number"
+				},
+				"accelerationY": {
+					"type": "number"
+				},
+				"frictionX": {
+					"$ref": "#/definitions/attributes.friction"
+				},
+				"frictionY": {
+					"$ref": "#/definitions/attributes.friction"
+				},
+				"color_start": {
+					"$ref": "#/definitions/attributes.color"
+				},
+				"color_end": {
+					"$ref": "#/definitions/attributes.color",
+					"description": "inherits color_start if not present"
+				},
+				"brightness_start": {
+					"$ref": "#/definitions/attributes.brightness",
+					"description": "Range: 0.0 - 1.0"
+				},
+				"brightness_end": {
+					"$ref": "#/definitions/attributes.brightness",
+					"description": "Range: 0.0 - 1.0.\ninherits brightness_start if not present"
+				},
+				"duration": {
+					"type": "integer",
+					"minimum": 1,
+					"duration": "How long until a particle expires, in ticks.\n20 ticks == 1 second"
+				},
+				"count": {
+					"type": "integer",
+					"minimum": 1
+				}
+			}
+		},
+		"attributes.position": {
+			"type": "number",
+			"description": "Position is measured from the center of the item. The origin of a particle is also its center"
+		},
+		"attributes.speed": {
+			"type": "number",
+			"description": "Speed is measured in pixels/second.\n16 == 1 slot / second"
+		},
+		"attributes.friction": {
+			"type": "number",
+			"minimum": 0,
+			"maximum": 1,
+			"description": "1.0 == no movement resistance\n0.0 == unable to move",
+			"default": 1.0
+		},
+		"attributes.color": {
+			"type": "string",
+			"pattern": "^#([0-9a-fA-F]{8})$"
+		},
+		"attributes.brightness": {
+			"type": "number",
+			"minimum": 0,
+			"maximum": 1,
+			"default": 1.0
+		},
+		"event": {
+			"type": ["object", "string"],
+			"pattern": "^[A-Za-z_][A-Za-z0-9_]*$",
+			"properties": {
+				"use": {
+					"type": "string",
+					"examples": ["onIdle", "onPickup", "onCarried", "onPut", "onShake"],
+					"pattern": "^[A-Za-z_][A-Za-z0-9_]*$"
+				},
+				"interval": {
+					"type": "integer",
+					"minimum": 1
+				},
+				"interval_variance": {
+					"type": "integer",
+					"minimum": 0
+				},
+				"particles": {
+					"type": "array",
+					"items": {
+						"allOf": [
+							{
+								"$ref": "#/definitions/attributes"
+							},
+							{
+								"properties": {
+									"id": {
+										"type": "string"
+									}
+								}
+							}
+						]
+					},
+					"minItems": 1
+				}
+			}
+		}
+	}
+}

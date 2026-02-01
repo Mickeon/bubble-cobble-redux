@@ -4,9 +4,7 @@
   "attributes": {
     "color_start": "#FFCCEEFF",
     "color_end": "#22FFFFFF",
-    "duration": 20,
-    "brightness_start": 2.0,
-    "brightness_end": 1.0
+    "duration": 20
   },
   "attributes_variance": {
     "duration": 5

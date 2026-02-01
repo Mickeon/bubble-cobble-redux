@@ -8,6 +8,12 @@
                 "/recipe_schema/*.json"
             ],
             "url": "./.vscode/recipe.json"
+        },
+        {
+            "fileMatch": [
+                "/gui_particle_spawners/**/*.json"
+            ],
+            "url": "./.vscode/schemas/gui_particle_spawners.json"
         }
     ],
     "files.trimTrailingWhitespace": true,
