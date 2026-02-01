@@ -5,7 +5,7 @@
     "speedY": 10,
     "frictionY": 0.75,
     "color_start": "#FFFFFFFF",
-    "color_end": "#CCFFFFFDD",
+    "color_end": "#CCFFFFDD",
     "duration": 20
   },
   "attributes_variance": {

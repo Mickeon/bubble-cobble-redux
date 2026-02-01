@@ -179,7 +179,7 @@
 		{
 			"stacks": [
 				"#item:handcrafted:benches",
-				"#item:handcrafted:chairs"	
+				"#item:handcrafted:chairs"
 			],
 			"text": [
 				"Chair",
@@ -240,6 +240,14 @@
 			],
 			"text": [
 				"Cardboard Box"
+			]
+		},
+		{
+			"stacks": [
+				"#item:create:postboxes"
+			],
+			"text": [
+				"Mailbox"
 			]
 		}
 	]

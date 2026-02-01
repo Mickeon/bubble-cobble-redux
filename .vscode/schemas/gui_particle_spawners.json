@@ -1,5 +1,5 @@
 {
-	"$schema": "https://json-schema.org/draft-07/schema",
+	"$schema": "https://json-schema.org/draft-07/schema#",
 	"title": "Gui Particle Spawners Schema",
 	"description": "Used by Inventory Interactions. See also https://github.com/mineland-2048/item_interactions_mod/wiki/Attributes",
 	"type": "object",
