@@ -1,12 +1,12 @@
 {
-  "minBreedingTimeInTicks": 8000,
-  "maxBreedingTimeInTicks": 14000,
+  "minBreedingTimeInTicks": 6000,
+  "maxBreedingTimeInTicks": 12000,
   "mirrorHerbTimeInTicks": 600,
   "eggHatchMultiplier": 1.0,
   "shinyMethod": {
     "masuda": 8.0,
     "crystal": 1.0,
-    "always": 1.0
+    "always": 2.0
   },
   "hiddenAbilitiesEnabled": true,
   "forcedAbilitiesEnabled": false,
