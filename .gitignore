@@ -85,5 +85,6 @@
 /config/waves
 /config/parcool*
 /config/presencefootsteps/userconfig.json
+/config/better-damage-indicator.json
 *locomotionmap.json
 *create_dragons_plus*
