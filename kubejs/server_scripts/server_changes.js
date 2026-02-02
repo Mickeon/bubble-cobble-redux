@@ -440,3 +440,79 @@ ServerEvents.basicCommand("currentstructure", event => {
 	event.respond(response)
 })
 
+// HACK: I have code below to mitigate this, but it's nasty, on server loaded. FluidInteractionRegistry persists
+// when the server is closed. This is fine for dedicated servers, but you will eventually run out of memory in singleplayer.
+// At the same time, interactions can't be added properly on startup as some registries are not ready yet(?)
+// /** @type {typeof import("java.util.function.Function").$Function } */
+// let $JavaFunction  = Java.loadClass("java.util.function.Function")
+// https://lexxie.dev/neoforge/1.21.1/net/neoforged/neoforge/fluids/FluidInteractionRegistry.FluidInteraction.html
+/** @type {typeof import("net.neoforged.neoforge.fluids.FluidInteractionRegistry").$FluidInteractionRegistry } */
+let $FluidInteractionRegistry  = Java.loadClass("net.neoforged.neoforge.fluids.FluidInteractionRegistry")
+/** @type {typeof import("net.neoforged.neoforge.fluids.FluidInteractionRegistry$InteractionInformation").$FluidInteractionRegistry$InteractionInformation } */
+let $InteractionInformation = Java.loadClass("net.neoforged.neoforge.fluids.FluidInteractionRegistry$InteractionInformation")
+ServerEvents.loaded(event => {
+	const LAVA = Fluid.lava().getFluidType()
+
+	// The method to access this property has been added by Create. Prepare for the worst.
+	// Nasty hack to not add fluid interactions every time.
+	const interactions = $FluidInteractionRegistry.getInteractions()
+	const interactions_with_lava = interactions.get(LAVA).size()
+	if (interactions_with_lava > 13) {
+		console.log(`Bubble Cobble fluid interactions already registered (Lava has ${interactions_with_lava} of them)`)
+		return
+	}
+	console.log("Adding Bubble Cobble fluid interactions")
+
+	$FluidInteractionRegistry.addInteraction(LAVA, new $InteractionInformation(
+		Fluid.getType("createmonballsoverhaul:source_standard_tumblestone_coating").getFluidType(),
+		Blocks.GRANITE.defaultBlockState()
+	))
+
+	$FluidInteractionRegistry.addInteraction(LAVA, new $InteractionInformation(
+		Fluid.getType("createmonballsoverhaul:source_light_tumblestone_coating").getFluidType(),
+		Blocks.DIORITE.defaultBlockState()
+	))
+
+	$FluidInteractionRegistry.addInteraction(LAVA, new $InteractionInformation(
+		Fluid.getType("createmonballsoverhaul:source_dense_tumblestone_coating").getFluidType(),
+		Blocks.BLACKSTONE.defaultBlockState()
+	))
+
+	$FluidInteractionRegistry.addInteraction(LAVA, new $InteractionInformation(
+		Fluid.getType("create_bic_bit:ketchup").getFluidType(),
+		Block.getBlock("arts_and_crafts:red_soapstone").defaultBlockState()
+	))
+
+	$FluidInteractionRegistry.addInteraction(LAVA, new $InteractionInformation(
+		Fluid.getType("create_bic_bit:mayonnaise").getFluidType(),
+		Blocks.CALCITE.defaultBlockState()
+	))
+
+	// Note that Curdled Milk is currently unavailable.
+	$FluidInteractionRegistry.addInteraction(LAVA, new $InteractionInformation(
+		Fluid.getType("create_bic_bit:curdled_milk").getFluidType(),
+		Block.getBlock("arts_and_crafts:gypsum").defaultBlockState()
+	))
+
+	// Funny.
+	$FluidInteractionRegistry.addInteraction(Fluid.getType("create_bic_bit:mayonnaise").getFluidType(), new $InteractionInformation(
+		Fluid.getType("create:chocolate").getFluidType(),
+		Block.getBlock("kubejs:chiseled_mud_bricks").defaultBlockState()
+	))
+
+	// console.log(`There are ${interactions.size()} fluids with registered interactions:`)
+	// interactions.forEach((fluid_type, list) => {
+	// 	console.log(`${fluid_type} has ${list.size()} fluid interactions`)
+	// })
+
+	// TODO: Cobblestone generator on top of Bedrock randomly makes Andesite, Granite, or Diorite.
+	// This works now but it's not currently needed.
+	// $FluidInteractionRegistry.addInteraction(Fluid.water().getFluidType(), new $InteractionInformation["(net.neoforged.neoforge.fluids.FluidType,java.util.function.Function)"](
+	// 	Fluid.getType("createmonballsoverhaul:source_standard_tumblestone_coating").getFluidType(),
+	// 	new $JavaFunction({
+	// 		apply: (fluid_state) => {
+	// 			return Math.random() > 0.5 ? Blocks.IRON_BLOCK.defaultBlockState() : Blocks.GOLD_BLOCK.defaultBlockState()
+	// 		}
+	// 	})
+	// ))
+})
