@@ -8667,7 +8667,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "sophisticatedcore-1.21.1-1.4.1.1452.jar",
+                    "file_name": "sophisticatedcore-1.21.1-1.4.1.1459.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -8675,16 +8675,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/nmoqTijg/versions/7uWTG8f8/sophisticatedcore-1.21.1-1.4.1.1452.jar",
-                    "id": "7uWTG8f8",
+                    "url": "https://cdn.modrinth.com/data/nmoqTijg/versions/23alQult/sophisticatedcore-1.21.1-1.4.1.1459.jar",
+                    "id": "23alQult",
                     "parent_id": "nmoqTijg",
                     "hashes": {
-                        "sha512": "465aa2ac07ad5b19986bb4b397714d5b9c7d41d0c8bbb40a69f500041ece9a0b4cb1822679b4d4a6524c5e8c701c2a59681d9406bc16f4f5dc01ac1c0f3e90d4",
-                        "sha1": "db064e5c10277515d184ec5ba036271d35e9ac74"
+                        "sha512": "9ad51af2ccaf6187ce788010e68abf651fb56adc0bb75203f11bc5a9540fcba9d05846a37ff26ceb598986ee444be91d9e30e101fc3a71aea63e33fc1574e45f",
+                        "sha1": "3c64d31392ba06f676f0ade2022ffc3f68a0976b"
                     },
                     "required_dependencies": [],
-                    "size": 1455748,
-                    "date_published": "2026-01-30T09:04:57.932374Z"
+                    "size": 1455484,
+                    "date_published": "2026-01-30T20:56:41.702356Z"
                 }
             ]
         },
@@ -8786,7 +8786,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "sophisticatedstorage-1.21.1-1.5.24.1460.jar",
+                    "file_name": "sophisticatedstorage-1.21.1-1.5.25.1467.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -8794,18 +8794,18 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/hMlaZH8f/versions/bGWTJh9A/sophisticatedstorage-1.21.1-1.5.24.1460.jar",
-                    "id": "bGWTJh9A",
+                    "url": "https://cdn.modrinth.com/data/hMlaZH8f/versions/VSTZtc0d/sophisticatedstorage-1.21.1-1.5.25.1467.jar",
+                    "id": "VSTZtc0d",
                     "parent_id": "hMlaZH8f",
                     "hashes": {
-                        "sha512": "a364786395ae6ccfd8b536805c4b3a2a5f55da6b529287d9698d97280e36772cb3013d240928b29e9e481a3be6f98bc21a7a97576669e38ecfe11ad4eec2e756",
-                        "sha1": "9b70fd1373ce186fa39582e6cab5bd8f62c3e44e"
+                        "sha512": "ed89011e70215aff57a515e9d51c6198ce2ce6781fe688cb5c976b6edbfc9130c8d528c7d24d4aac42ada44edc79c34b13672a6b49f8c6e2f9d52b2d8c49886f",
+                        "sha1": "91e5495bf87d863a9e618920856e4154a0f53d50"
                     },
                     "required_dependencies": [
                         "nmoqTijg"
                     ],
-                    "size": 1657542,
-                    "date_published": "2026-01-26T16:49:00.656567Z"
+                    "size": 1657705,
+                    "date_published": "2026-02-01T13:22:03.589417Z"
                 }
             ]
         },
