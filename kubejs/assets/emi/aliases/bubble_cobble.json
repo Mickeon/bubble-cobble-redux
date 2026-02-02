@@ -148,10 +148,10 @@
 				"item:createdeco:yellow_industrial_iron_lamp",
 				"item:createdeco:yellow_iron_lamp",
 				"item:createdeco:yellow_zinc_lamp",
-				"supplementaries:blackstone_lamp",
-				"supplementaries:deepslate_lamp",
-				"supplementaries:end_stone_lamp",
-				"supplementaries:stone_lamp"
+				"item:supplementaries:blackstone_lamp",
+				"item:supplementaries:deepslate_lamp",
+				"item:supplementaries:end_stone_lamp",
+				"item:supplementaries:stone_lamp"
 			],
 			"text": [
 				"Lamp",

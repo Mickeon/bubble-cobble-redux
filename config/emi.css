@@ -355,7 +355,7 @@
 	/**
 	 * Display the recipe tree.
 	 */
-	view-tree: "key.keyboard.t";
+	view-tree: "ctrl key.keyboard.t";
 
 	/**
 	 * Return to the previous page in EMI.
