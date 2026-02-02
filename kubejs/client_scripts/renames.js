@@ -80,6 +80,14 @@ ClientEvents.lang("en_us", event => {
 
 	// Both Biomes o' Plenty and Biomes We've Gone have Roses.
 	event.add("block.biomesoplenty.rose", "Beta Rose")
+
+	// These are accidentally unnamed, which...
+	// TODO: Should probably be reported.
+	event.addAll("createmonballsoverhaul", {
+		"block.createmonballsoverhaul.dense_tumblestone_coating_block": "Dense Tumblestone Coating",
+		"block.createmonballsoverhaul.light_tumblestone_coating_block": "Light Tumblestone Coating",
+		"block.createmonballsoverhaul.standard_tumblestone_coating_block": "Standard Tumblestone Coating",
+	})
 })
 
 // This doesn't work for the first load.
