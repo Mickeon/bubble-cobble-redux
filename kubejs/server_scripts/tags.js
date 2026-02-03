@@ -88,7 +88,7 @@ ServerEvents.tags("item", event => {
 	// event.add("supplementaries:blackboard_magenta",    /*"reptilian:magenta_chameleon_scales"*/)
 	event.add("supplementaries:blackboard_pink",       "cobblemon:pink_apricorn")
 
-	event.add("supplementaries:hourglass_dusts", 
+	event.add("supplementaries:hourglass_dusts",
 		"#biomeswevegone:glowcane_powder",
 		"#cobblemon:remedies",
 		"create:powdered_obsidian",
@@ -117,7 +117,7 @@ ServerEvents.tags("item", event => {
 	event.removeAll("accessories:hand")
 	event.removeAll("accessories:belt")
 	event.removeAll("accessories:shoes")
-	
+
 	event.add("curios:back", "#supplementaries:sacks")
 })
 

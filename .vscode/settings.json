@@ -50,7 +50,6 @@
         "xaero": true,
         "Xaero*": true
     },
-    "typescript.tsserver.maxTsServerMemory": 4096,
     "mc-color.delimiters": [
         "`",
         "\""
@@ -59,5 +58,8 @@
     "errorLens.excludeByMessage": [
         "Use of hardcoded text function. Consider using language keys instead."
     ],
-    "typescript.surveys.enabled": false
+    "[yaml]": {
+        "files.trimTrailingWhitespace": false
+    },
+    "typescript.surveys.enabled": false,
 }

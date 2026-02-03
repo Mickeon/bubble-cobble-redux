@@ -13,7 +13,7 @@ let $TitleScreen  = Java.loadClass("net.minecraft.client.gui.screens.TitleScreen
 let $Button  = Java.loadClass("net.minecraft.client.gui.components.Button")
 /** @type {typeof import("net.minecraft.client.gui.components.Button$Builder").$Button$Builder } */
 let $Button$Builder  = Java.loadClass("net.minecraft.client.gui.components.Button$Builder")
-/** @type {typeof import("net.neoforged.neoforge.client.gui.widget.ModsButton").$PauseScreen } */
+/** @type {typeof import("net.neoforged.neoforge.client.gui.widget.ModsButton").$ModsButton } */
 let $ModsButton  = Java.loadClass("net.neoforged.neoforge.client.gui.widget.ModsButton")
 //#endregion
 

@@ -168,7 +168,8 @@
     "net.minecraft.client.gui.screens.options.SoundOptionsScreen": true,
     "com.cobblemon.mod.common.client.gui.trade.TradeGUI": true,
     "fudge.notenoughcrashes.gui.CrashScreen": true,
-    "it.hurts.sskirillss.relics.client.screen.description.experience.ExperienceDescriptionScreen": true
+    "it.hurts.sskirillss.relics.client.screen.description.experience.ExperienceDescriptionScreen": true,
+    "me.srrapero720.watervision.client.screens.VisionScreen": true
   },
   "hideBackground": {
     "dev.emi.emi.screen.RecipeScreen": false,
