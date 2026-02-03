@@ -212,27 +212,9 @@ ServerEvents.tags("worldgen/biome", event => {
 	event.add("c:is_dead", "biomeswevegone:pale_bog")
 
 	event.add("mss:has_structure/cherry_biomes", "biomesoplenty:snowblossom_grove")
-	event.add("mvs:has_structure/cherry_biomes", "biomesoplenty:snowblossom_grove")
+	event.add("c:primary_wood_type/cherry", "biomesoplenty:snowblossom_grove") // Used by MVS.
 
-	// TODO: Report this.
-	event.add("mvs:has_structure/birch_biomes", "#c:is_birch_forest") // TODO: Report this. MMS is unaffected.
-	event.add("mvs:has_structure/deep_ocean_biomes", "#minecraft:is_deep_ocean")
-	event.add("mvs:has_structure/desert_biomes", "#c:is_desert") // MMS is unaffected. Accidentally includes #forge:is_desert instead.
-	event.add("mvs:has_structure/end_biomes", "#c:is_end") // MMS is unaffected.
-	event.add("mvs:has_structure/flower_biomes", "#c:is_flower_forest") // MMS is unaffected. Although it doesn't encompass much.
-	event.add("mvs:has_structure/jungle_biomes", "#c:is_jungle") // MMS is unaffected. Although #minecraft:is_jungle is already included.
-	event.add("mvs:has_structure/mountain_biomes", "#c:is_mountain") // MMS is unaffected. Accidentally includes #forge:is_mountain instead.
-	event.add("mvs:has_structure/mushroom_island_biomes", "#c:is_mushroom") // MMS is unaffected.
-	event.add("mvs:has_structure/nether_biomes", "#c:is_nether") // MMS is unaffected. Although #minecraft:is_nether is already included.
-	event.add("mvs:has_structure/oak_forest", "#c:is_forest") // MMS is unaffected.
-	event.add("mvs:has_structure/ocean_biomes", "#minecraft:is_ocean") // The original tag only includes vanilla and #forge:is_water/overworld?
 	event.add("mss:has_structure/ocean_biomes", "#minecraft:is_ocean") // The original tag only includes vanilla and #c:is_water/overworld?
-	event.add("mvs:has_structure/overworld_biomes", "#c:is_badlands", "#c:is_beach", "#c:is_forest", "#c:is_hill", "#c:is_jungle", "#c:is_plains", "#c:is_taiga") // MMS is unaffected. Christ.
-	event.add("mvs:has_structure/plains_and_oak_biomes", "#c:is_forest", "#c:is_plains") // MMS is unaffected.
-	event.add("mvs:has_structure/snowy_biomes", "#c:is_snowy") // MMS is unaffected.
-	event.add("mvs:has_structure/stony_shore_biomes", "#c:is_stony_shores") // MMS is unaffected. Although it doesn't encompass anything for us. What mod even adds this c tag?
-	event.add("mvs:has_structure/swampy_biomes", "#c:is_swamp") // MMS is unaffected. Although #minecraft:is_swamp is already included.
-	event.add("mvs:has_structure/taiga_biomes", "#c:is_taiga") // MMS is unaffected. Although #minecraft:is_taiga is already included.
 
 	event.add("yungsextras:has_structure/desert_decorations", "#c:is_desert")
 	event.add("yungsextras:has_structure/swamp_structures", "#c:is_swamp")

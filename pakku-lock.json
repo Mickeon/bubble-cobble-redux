@@ -5957,7 +5957,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "MoogsVoyagerStructures-1.21-5.0.4.jar",
+                    "file_name": "MoogsVoyagerStructures-1.21-5.0.5.jar",
                     "mc_versions": [
                         "1.21",
                         "1.21.1",
@@ -5977,18 +5977,18 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/OQAgZMH1/versions/BzZG02lx/MoogsVoyagerStructures-1.21-5.0.4.jar",
-                    "id": "BzZG02lx",
+                    "url": "https://cdn.modrinth.com/data/OQAgZMH1/versions/aHamoWna/MoogsVoyagerStructures-1.21-5.0.5.jar",
+                    "id": "aHamoWna",
                     "parent_id": "OQAgZMH1",
                     "hashes": {
-                        "sha512": "0c3d4e862338e38b615928fe58dc079b7b71e5583fed55901a2fd389a9a74abd3ccceaeaad5ecb915158559227a34e6c7533b2c1ecb81a2f1bcb07d8f5f77ed2",
-                        "sha1": "5b33f740a89d0d9b4cf9bb58c82762bdc7c218ca"
+                        "sha512": "bc6f2a0590816e20a9df722181221e4e7769e64f9fe0efdb88666bae3443354ad59df95a0562f5a854cdc3d5d9a9c12448b605cc3b7fee51e61a85b397fd8f05",
+                        "sha1": "6335b4caf8d5f969c948b5a2ce6c675d367a600b"
                     },
                     "required_dependencies": [
                         "1oUDhxuy"
                     ],
-                    "size": 2683863,
-                    "date_published": "2026-01-24T12:10:44.971226Z"
+                    "size": 2670229,
+                    "date_published": "2026-01-28T14:48:40.872304Z"
                 }
             ]
         },
