@@ -9264,7 +9264,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "Tomtaru's Cobblemon & Farmer's Delight Tweaks - 1.21.1 - R.1.10.jar",
+                    "file_name": "TMTCF-NF-1.21.1-2.0.2.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -9272,19 +9272,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/LSnXhPa7/versions/BLyfbgZX/Tomtaru's Cobblemon & Farmer's Delight Tweaks - 1.21.1 - R.1.10.jar",
-                    "id": "BLyfbgZX",
+                    "url": "https://cdn.modrinth.com/data/LSnXhPa7/versions/rOYqWmEY/TMTCF-NF-1.21.1-2.0.2.jar",
+                    "id": "rOYqWmEY",
                     "parent_id": "LSnXhPa7",
                     "hashes": {
-                        "sha512": "fc5dd95367e9b9617dfca2327cc9d6808f09bf17ee7cd9e0d749a9b4069f192cbfc4bef4837082e6202f671935125bf8e854987f601078c557c3e587a58a900b",
-                        "sha1": "5317ef7de74d7055d3567b6b7cd043cb2222388d"
+                        "sha512": "ca92b67a7f5c8c1f2c6a867b045b10159ac02f721209c8b34481c4877734cbcb326cdda48a464e7bea322ac1934b68c868cc6059eb829f806f98c467f26da8cb",
+                        "sha1": "4101b1a06ba953d37ada1cf121d58b5148664f4c"
                     },
-                    "required_dependencies": [
-                        "R2OftAxM",
-                        "MdwFAVRL"
-                    ],
-                    "size": 82669,
-                    "date_published": "2025-12-22T13:57:38.649075Z"
+                    "required_dependencies": [],
+                    "size": 124891,
+                    "date_published": "2026-02-02T22:51:08.309357Z"
                 }
             ]
         },

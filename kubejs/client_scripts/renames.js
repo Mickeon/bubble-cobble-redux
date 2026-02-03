@@ -88,6 +88,7 @@ ClientEvents.lang("en_us", event => {
 		"block.createmonballsoverhaul.light_tumblestone_coating_block": "Light Tumblestone Coating",
 		"block.createmonballsoverhaul.standard_tumblestone_coating_block": "Standard Tumblestone Coating",
 	})
+	event.add("tmtcobfarm", "block.tmtcobfarm.stove_campfire", "Stove with Campfire Pot")
 })
 
 // This doesn't work for the first load.
