@@ -241,18 +241,6 @@ ServerEvents.recipes(event => {
 	event.replaceInput({id: "minecraft:powered_rail" }, "minecraft:gold_ingot", "minecraft:gold_nugget")
 	change_result_count({id: "minecraft:powered_rail" }, 8)
 
-	// Don't let any Create Cobblemon crossover nerf the base recipe.
-	event.forEachRecipe({mod: "cobblemon", id: /ball$/, type: "minecraft:crafting_shaped"}, recipe => {
-		const json = JSON.parse(recipe.json)
-		if (json.result.count == 2) {
-			json.result.count = 4
-			event.custom(json).id(recipe.getId())
-		}
-	})
-
-	// Instead, buff the Create version's output.
-	change_result_count({mod: "createmonballsoverhaul", id: /sequenced_assembly\/balls/}, 2)
-
 	// Merge Biomes o' Plenty and Biomes We've Gone's Cattail.
 	event.replaceInput({input: "biomesoplenty:cattail"}, "biomesoplenty:cattail", "#bubble_cobble:cattails")
 	event.replaceInput({input: "biomeswevegone:cattail_sprout"}, "biomeswevegone:cattail_sprout", "#bubble_cobble:cattails")
