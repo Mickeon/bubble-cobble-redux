@@ -37,5 +37,5 @@
   "dropFromEggMoveList": true,
   "dropFromLegacyMoveList": false,
   "dropFromSpecialMoveList": false,
-  "allowCustomMovesAndEditing": false
+  "allowCustomMovesAndEditing": true
 }
