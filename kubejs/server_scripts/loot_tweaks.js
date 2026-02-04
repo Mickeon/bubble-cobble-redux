@@ -173,4 +173,10 @@ LootJS.lootTables(event => {
 			.when(c => c.killedByPlayer() && c.randomChanceWithEnchantment("cnc:headhunter", [0.0, 0.15]))
 			.addEntry("minecraft:wither_skeleton_skull")
 	}
+
+	// // This block normally requires Vanilla Backport to be dropped.
+	if (Item.exists("minecraft:pale_oak_shelf")) {
+		// event.getBlockTable("minecraft:pale_oak_shelf").firstPool().when(c => c.survivesExplosion()).addEntry("minecraft:pale_oak_shelf")
+		event.create("minecraft:blocks/pale_oak_shelf", "block").createPool().when(c => c.survivesExplosion()).addEntry("minecraft:pale_oak_shelf")
+	}
 })
