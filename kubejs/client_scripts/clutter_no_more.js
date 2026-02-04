@@ -60,3 +60,36 @@ ItemEvents.dynamicTooltips("show_available_shapes", event => {
 
 	event.lines.addAll(1, new_lines)
 })
+
+
+// With this very ungodly hack, I prevent the "Change Shape" key (usually TAB) from triggering other menu actions.
+// This artificially skips any mixin logic and triggers the KeyPressed.Post event directly.
+// No More Clutter executes its block-changing logic there.
+
+/** @type {typeof import("net.neoforged.neoforge.common.NeoForge").$NeoForge } */
+let $NeoForge = Java.loadClass("net.neoforged.neoforge.common.NeoForge")
+/** @type {typeof import("net.minecraft.client.gui.screens.inventory.AbstractContainerScreen").$AbstractContainerScreen } */
+let $AbstractContainerScreen = Java.loadClass("net.minecraft.client.gui.screens.inventory.AbstractContainerScreen")
+/** @type {typeof import("net.neoforged.neoforge.client.event.ScreenEvent$KeyPressed$Pre").$ScreenEvent$KeyPressed$Pre } */
+let $ScreenEvent$KeyPressed$Pre = Java.loadClass("net.neoforged.neoforge.client.event.ScreenEvent$KeyPressed$Pre")
+/** @type {typeof import("net.neoforged.neoforge.client.event.ScreenEvent$KeyPressed$Post").$ScreenEvent$KeyPressed$Post } */
+let $ScreenEvent$KeyPressed$Post = Java.loadClass("net.neoforged.neoforge.client.event.ScreenEvent$KeyPressed$Post")
+
+/** @type {import("net.minecraft.client.KeyMapping").$KeyMapping$$Original} */
+const CHANGE_BLOCK_SHAPE_KEY = global.CHANGE_BLOCK_SHAPE_KEY
+NativeEvents.onEvent($ScreenEvent$KeyPressed$Pre, event => {
+	if (CHANGE_BLOCK_SHAPE_KEY.getKey().getValue() != event.getKeyCode()) {
+		return
+	}
+
+	const screen = event.screen
+	if (!(screen instanceof $AbstractContainerScreen)) {
+		return
+	}
+	const item = screen.hoveredSlot?.item?.item
+	if (item && $ShapeMap.contains(item)) {
+		event.setCanceled(true)
+		let new_event = new $ScreenEvent$KeyPressed$Post(event.screen, event.getKeyCode(), event.getScanCode(), event.getModifiers())
+		$NeoForge.EVENT_BUS.post(new_event)
+	}
+})
