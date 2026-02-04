@@ -76,7 +76,7 @@ let $ScreenEvent$KeyPressed$Pre = Java.loadClass("net.neoforged.neoforge.client.
 let $ScreenEvent$KeyPressed$Post = Java.loadClass("net.neoforged.neoforge.client.event.ScreenEvent$KeyPressed$Post")
 
 /** @type {import("net.minecraft.client.KeyMapping").$KeyMapping$$Original} */
-const CHANGE_BLOCK_SHAPE_KEY = global.CHANGE_BLOCK_SHAPE_KEY
+const CHANGE_BLOCK_SHAPE_KEY = global.CHANGE_BLOCK_SHAPE_KEY = Client.options.keyMappings.find(key_mapping => key_mapping.name == "key.clutternomore.change_block_shape")
 NativeEvents.onEvent($ScreenEvent$KeyPressed$Pre, event => {
 	if (CHANGE_BLOCK_SHAPE_KEY.getKey().getValue() != event.getKeyCode()) {
 		return
