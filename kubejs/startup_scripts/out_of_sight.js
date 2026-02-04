@@ -44,9 +44,6 @@ global.DISABLED_ITEMS = [
 	// Disabling these Relics here is not enough, remember to also disable them in their respective configs!
 	"relics:infinity_ham", // Dude.
 	"relics:magic_mirror", // The Begone Potion exists.
-	"relics:leather_belt", // Needs balancing.
-	"relics:drowned_belt", // Needs balancing.
-	"relics:hunter_belt", // Needs balancing.
 	"relics:elytra_booster", // I do not want to even encourage using the Elytra.
 	"relics:amphibian_boot", // Needs balancing.
 	// "relics:leafy_ring", // Self-stated to be WIP.
