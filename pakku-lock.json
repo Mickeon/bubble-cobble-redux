@@ -1442,7 +1442,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "Cobblemon-neoforge-1.7.1+1.21.1.jar",
+                    "file_name": "Cobblemon-neoforge-1.7.3+1.21.1.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -1450,18 +1450,18 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/MdwFAVRL/versions/Uz1QF4Md/Cobblemon-neoforge-1.7.1+1.21.1.jar",
-                    "id": "Uz1QF4Md",
+                    "url": "https://cdn.modrinth.com/data/MdwFAVRL/versions/S1TrAn8c/Cobblemon-neoforge-1.7.3+1.21.1.jar",
+                    "id": "S1TrAn8c",
                     "parent_id": "MdwFAVRL",
                     "hashes": {
-                        "sha512": "667ac5ecd55b8dcbdcc72f88745a64d7f4a3d9f1a6b91073fc132ec5fde3bf97d456992b316b41a57181ac9a3fe616e17c74bb85ffdeee9a6b4e31f6c65bdf69",
-                        "sha1": "8135b55ab1ae2aaaaf6f44883a757f7c5aee3420"
+                        "sha512": "609b435cf0cfedbfb8d54f6355b37b547306c0d3a3aab241ba5643ed8dc82e084d5a7d80d9661b786f9a0fa295b506be78e608281f5972019e6cff691aee50df",
+                        "sha1": "580ea363bbc391c98e548962a47c683155522f38"
                     },
                     "required_dependencies": [
                         "ordsPcFz"
                     ],
-                    "size": 123744060,
-                    "date_published": "2025-11-29T02:16:57.041032Z"
+                    "size": 128748941,
+                    "date_published": "2026-01-31T01:12:38.347439Z"
                 }
             ]
         },
@@ -1690,7 +1690,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "cobblemonraiddens-neoforge-0.6.4+1.21.1.jar",
+                    "file_name": "cobblemonraiddens-neoforge-0.6.5+1.21.1.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -1698,19 +1698,19 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/GebWh45l/versions/GEw0a3Pd/cobblemonraiddens-neoforge-0.6.4+1.21.1.jar",
-                    "id": "GEw0a3Pd",
+                    "url": "https://cdn.modrinth.com/data/GebWh45l/versions/TROOhda1/cobblemonraiddens-neoforge-0.6.5+1.21.1.jar",
+                    "id": "TROOhda1",
                     "parent_id": "GebWh45l",
                     "hashes": {
-                        "sha512": "efd0a312704b7aa83f89591f91e02cb4a1e48b1b556e094e0383d402a66948e8fda32adc39dcc058d9c0682c5784b047a823ee8a4ac68be87b93710caaad9b6b",
-                        "sha1": "954aac66ec4a12e4189d530cf4765cd585ff06b0"
+                        "sha512": "bcddaed061b36006ea9f076eb4715f181f373ccf361620ab754cd23b53ca731d221846c60ccdb03bf272f12521c7eeefcd9f763004197837777ca1b7b65902b4",
+                        "sha1": "1430aee73c124139b455d932dbd4ad58dcbf78c4"
                     },
                     "required_dependencies": [
-                        "MdwFAVRL",
-                        "8BmcQJ2H"
+                        "8BmcQJ2H",
+                        "MdwFAVRL"
                     ],
-                    "size": 2455689,
-                    "date_published": "2026-01-23T04:15:08.501017Z"
+                    "size": 2457755,
+                    "date_published": "2026-01-29T13:42:08.975506Z"
                 }
             ]
         },
@@ -1771,7 +1771,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "timcore-neoforge-1.7.1-1.29.1.jar",
+                    "file_name": "timcore-neoforge-1.7.3-1.31.0.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -1779,18 +1779,18 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/lVP9aUaY/versions/ky9gl9Gm/timcore-neoforge-1.7.1-1.29.1.jar",
-                    "id": "ky9gl9Gm",
+                    "url": "https://cdn.modrinth.com/data/lVP9aUaY/versions/OrncUkpj/timcore-neoforge-1.7.3-1.31.0.jar",
+                    "id": "OrncUkpj",
                     "parent_id": "lVP9aUaY",
                     "hashes": {
-                        "sha512": "3510ad1dd56e0166db38535a0e403a1c774c3133d2d7190d48c2a07055b75bb965e2a833bdacf3571e9e7ddb9bcc96a9aef5fa0a88045b4a12111637fa31d2ed",
-                        "sha1": "2341187459ab1076beafe36686250e8a7458fb06"
+                        "sha512": "e92f511ebf988262759c5f52233711a2ee9247c123a57e020b1dae107907b2108a1ea20b334f630885bc51bf99538279f49faf3e8075934ae1d98cdaaeb78c03",
+                        "sha1": "0ee7e9c7fec9185d9ee6065582a59dce38d938ca"
                     },
                     "required_dependencies": [
                         "MdwFAVRL"
                     ],
-                    "size": 282247,
-                    "date_published": "2026-01-22T03:37:20.063904Z"
+                    "size": 299471,
+                    "date_published": "2026-02-02T17:57:46.394279Z"
                 }
             ]
         },
@@ -1894,7 +1894,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "mega_showdown-neoforge-1.5.1+1.7.1+1.21.1-hotfix-hotfix.jar",
+                    "file_name": "mega_showdown-neoforge-1.6.8+1.7.3+1.21.1.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -1902,21 +1902,21 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/SszvX85I/versions/QOT9kU2X/mega_showdown-neoforge-1.5.1+1.7.1+1.21.1-hotfix-hotfix.jar",
-                    "id": "QOT9kU2X",
+                    "url": "https://cdn.modrinth.com/data/SszvX85I/versions/qVK6bf8X/mega_showdown-neoforge-1.6.8+1.7.3+1.21.1.jar",
+                    "id": "qVK6bf8X",
                     "parent_id": "SszvX85I",
                     "hashes": {
-                        "sha512": "f0bd258b195314132a074a8d9f3687a2cb741cd04e100bb954ca0bc5c3e1b9f439cd95c684e76f8d5d8c6c9cb03acad4e542de17643be98200f99db65081638f",
-                        "sha1": "c9b822964fc547675fd29c3869f22c8158b9a6df"
+                        "sha512": "085e3582e79896e9d337e0215cdb4c944067d9d12eeb59ab2194f865950711e1ffa9d61a5c5302a8fc200b5b8017047d2f506897aaf46a10a8273adfc35a14ce",
+                        "sha1": "1a8c95550364ae0399dece82a603efaca05fe59f"
                     },
                     "required_dependencies": [
                         "ccKDOlHs",
                         "jtmvUHXj",
-                        "MdwFAVRL",
-                        "lhGA9TYQ"
+                        "lhGA9TYQ",
+                        "MdwFAVRL"
                     ],
-                    "size": 16319993,
-                    "date_published": "2026-01-19T12:32:15.387959Z"
+                    "size": 16371885,
+                    "date_published": "2026-02-04T16:09:47.733610Z"
                 }
             ]
         },
@@ -6640,6 +6640,49 @@
             ]
         },
         {
+            "pakku_id": "Aw55MRmms4dM5BHi",
+            "type": "MOD",
+            "side": "SERVER",
+            "slug": {
+                "modrinth": "navas-zamega"
+            },
+            "name": {
+                "modrinth": "Navas ZA Megas"
+            },
+            "id": {
+                "modrinth": "2V1Y86sc"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "zamega-neoforge-1.5.3.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/2V1Y86sc/versions/KtRgNdOE/zamega-neoforge-1.5.3.jar",
+                    "id": "KtRgNdOE",
+                    "parent_id": "2V1Y86sc",
+                    "hashes": {
+                        "sha512": "7274b5fec4e7d575d58336eb44daf4b9a88f07551be091d7b3eb4f7cf637040d18b09af19573e96f6270122aec695aeb12912cdf3504acef6ab7d75885b7e4a8",
+                        "sha1": "9f0cf1376c8e15e60d18c135f7d08b4f55451c92"
+                    },
+                    "required_dependencies": [
+                        "jtmvUHXj",
+                        "lhGA9TYQ",
+                        "ccKDOlHs",
+                        "MdwFAVRL",
+                        "SszvX85I"
+                    ],
+                    "size": 2389052,
+                    "date_published": "2026-02-03T15:48:03.070224Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "OSWIU1QrrfcHKNeY",
             "type": "MOD",
             "side": "BOTH",
@@ -7607,7 +7650,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "rctmod-neoforge-1.21.1-0.17.4-beta.jar",
+                    "file_name": "rctmod-neoforge-1.21.1-0.17.6-beta.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -7615,19 +7658,19 @@
                         "neoforge"
                     ],
                     "release_type": "beta",
-                    "url": "https://cdn.modrinth.com/data/lRwTUnD7/versions/62LcpnUU/rctmod-neoforge-1.21.1-0.17.4-beta.jar",
-                    "id": "62LcpnUU",
+                    "url": "https://cdn.modrinth.com/data/lRwTUnD7/versions/FWxzGtfz/rctmod-neoforge-1.21.1-0.17.6-beta.jar",
+                    "id": "FWxzGtfz",
                     "parent_id": "lRwTUnD7",
                     "hashes": {
-                        "sha512": "6a5a3a6db8f0afef20c5404acaf86464367b95219a6adae76c3551db407fd4a4d14b24fc94c35259667aedca136fda80c2469fc109524f22092c21de4ad65366",
-                        "sha1": "13e7d2a4d663c8c868a87c91fb1c116f60e407e3"
+                        "sha512": "aba5a6ecfba592c8478da97932dc23d8794bad72b9c3d907dca3541bcc663a61dc2a81361181aa6e952b6b3ffb6781e515db9c4ae5a94d54e67aafc84f2e8205",
+                        "sha1": "f58457cd67609ba8e292035cc1d7a3c2c503a8cc"
                     },
                     "required_dependencies": [
                         "CBfM2yw7",
                         "MdwFAVRL"
                     ],
-                    "size": 4741201,
-                    "date_published": "2025-11-30T21:09:32.287331Z"
+                    "size": 4764199,
+                    "date_published": "2026-01-29T16:30:37.931831Z"
                 }
             ]
         },
@@ -10259,43 +10302,6 @@
                     ],
                     "size": 465977,
                     "date_published": "2026-01-29T12:34:58.555455Z"
-                }
-            ]
-        },
-        {
-            "pakku_id": "Aw55MRmms4dM5BHi",
-            "type": "MOD",
-            "side": "SERVER",
-            "slug": {
-                "modrinth": "navas-zamega"
-            },
-            "name": {
-                "modrinth": "[Cobblemon] Navas' ZAmega"
-            },
-            "id": {
-                "modrinth": "2V1Y86sc"
-            },
-            "files": [
-                {
-                    "type": "modrinth",
-                    "file_name": "zamega-neoforge-1.4.7.jar",
-                    "mc_versions": [
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/2V1Y86sc/versions/k6M3zfHw/zamega-neoforge-1.4.7.jar",
-                    "id": "k6M3zfHw",
-                    "parent_id": "2V1Y86sc",
-                    "hashes": {
-                        "sha512": "91c098ec5073432f0ef656b0252cb214ef13e0841b2747ad7f56aa37889db7dd90d81cbcc21e927dd05f811fcf545e5ca2cadeb5b046456c43829be5cdc31288",
-                        "sha1": "56787c42e06babea92ab2b8dcf91092820ef681e"
-                    },
-                    "required_dependencies": [],
-                    "size": 2493087,
-                    "date_published": "2026-01-20T02:27:43.896259Z"
                 }
             ]
         },

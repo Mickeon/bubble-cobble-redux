@@ -24,10 +24,6 @@ ServerEvents.tags("item", event => {
 	event.add("c:drinks/tea", "herbalbrews:green_tea", "herbalbrews:black_tea", "herbalbrews:hibiscus_tea", "herbalbrews:lavender_tea", "herbalbrews:rooibos_tea", "herbalbrews:oolong_tea", "herbalbrews:yerba_mate_tea") // TODO: Report this.
 	event.add("c:drinks/juice", "kubejs:berry_juice_soda", "biomeswevegone:aloe_vera_juice")
 	// event.add("c:obsidians", "astral_dimension:gloomy_obsidian", "astral_dimension:glowing_obsidian")
-	event.add("cobblemon:held/is_held_item", "cobblemon:soothe_bell") // Reported and fixed. Remove at earliest convenience: https://gitlab.com/cable-mc/cobblemon/-/merge_requests/2081
-	event.add("cobblemon:evolution_items", "cobblemon:syrupy_apple") // Reported and fixed. Remove at earliest convenience: https://gitlab.com/cable-mc/cobblemon/-/merge_requests/2120.
-	event.add("cobblemon:boats", "cobblemon:saccharine_boat", "cobblemon:saccharine_chest_boat") // Reported and fixed. Remove at earliest convenience: https://gitlab.com/cable-mc/cobblemon/-/issues/1855
-	event.add("minecraft:chest_boats", "cobblemon:saccharine_chest_boat")
 	event.add("supplementaries:statue_swords", "#minecraft:swords")
 	event.add("cobblemon:water_stone_ores", "mega_showdown:mega_meteorid_water_ore") // Reported: https://github.com/yajatkaul/CobblemonMegaShowdown/issues/144
 	event.add("cobblemon:dawn_stone_ores", "mega_showdown:mega_meteorid_dawn_ore")
@@ -47,8 +43,6 @@ ServerEvents.tags("item", event => {
 	event.add("c:storage_blocks/industrial_iron", "create:industrial_iron_block")
 	event.add("minecraft:piglin_loved", "solonion:golden_lunchbox", "handcrafted:golden_thin_pot", "handcrafted:golden_thick_pot", "handcrafted:golden_wide_pot", "handcrafted:golden_medium_pot", /*"astral_dimension:golden_bone", "astral_dimension:golden_bone_meal", "astral_dimension:astral_gold_ore", "astral_dimension:gold_eye_block"*/) // Partially reported: https://github.com/terrarium-earth/Handcrafted/issues/152
 	event.add("minecraft:horse_food", "biomeswevegone:green_apple") // TODO: Report this.
-	event.add("cobblemon:mint_leaf", "#cobblemon:mint_leaves") // Was fixed, keep until next update. https://gitlab.com/cable-mc/cobblemon/-/commit/7c824a2b72f198133ca4f3e3a3a6b102869ccaae.
-	event.add("mega_showdown:rotom_appliances", "mega_showdown:rotom_oven", "mega_showdown:rotom_mow", "mega_showdown:rotom_washing_machine", "mega_showdown:rotom_fan", "mega_showdown:rotom_fridge") // Reported https://github.com/yajatkaul/CobblemonMegaShowdown/issues/153
 	event.add("c:music_discs", "cnc:music_disc_slough_choir", "cnc:music_disc_wreck_of_the_old_97", "cnc:music_disc_hills")
 	event.removeAll("minecraft:music_discs")
 	event.add("minecraft:buttons", COPPER_BUTTONS)
