@@ -1888,7 +1888,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "cobblestats-neoforge-1.9+1.21.1.jar",
+                    "file_name": "cobblestats-neoforge-1.9.2+1.21.1.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -1896,16 +1896,18 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/jlXFcQk4/versions/GCVN2n9J/cobblestats-neoforge-1.9+1.21.1.jar",
-                    "id": "GCVN2n9J",
+                    "url": "https://cdn.modrinth.com/data/jlXFcQk4/versions/nXjZdYx4/cobblestats-neoforge-1.9.2+1.21.1.jar",
+                    "id": "nXjZdYx4",
                     "parent_id": "jlXFcQk4",
                     "hashes": {
-                        "sha512": "7ec29058db0c644b807a509f164c53a05e3778f04271aef4c15969213a9934d83972f34ef56f2ce84d1b214260312241fd06febd08d1ded7d9f2b6abcce933c7",
-                        "sha1": "145c8ea6c8230429b80f6734c2c483156578de23"
+                        "sha512": "297e7021a1cc6fb0525cd392549939aba27e195ea791b1ef7a434596f30bd817b9be88f593033d695c9f9048ca41c6153d61449238147f17ed788723949e5c82",
+                        "sha1": "3e61f8968da3415e26f36c12955c657340fb77bf"
                     },
-                    "required_dependencies": [],
-                    "size": 69018,
-                    "date_published": "2026-02-05T12:52:26.858534Z"
+                    "required_dependencies": [
+                        "MdwFAVRL"
+                    ],
+                    "size": 68993,
+                    "date_published": "2026-02-05T20:13:24.962304Z"
                 }
             ]
         },
