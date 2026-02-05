@@ -659,6 +659,7 @@
     {"id": "simpletms:tm_yawn"},
     {"id": "simpletms:tm_zapcannon"},
     {"id": "simpletms:tm_zenheadbutt"},
-    {"id": "simpletms:tm_zingzap"}
+    {"id": "simpletms:tm_zingzap"},
+    {"id": "simpletms:tm_barrage"}
   ]
 }

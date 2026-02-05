@@ -50,12 +50,12 @@ ItemEvents.dynamicTooltips("show_available_shapes", event => {
 			if (stack.item.id == shape.id) {
 				return
 			}
-			new_lines.add(Text.of("• ").append(shape.description).color("dark_gray"))
+			new_lines.add(Text.of(`• `).append(shape.description).color("dark_gray"))
 		})
 
 		new_lines.add(Text.translate("Hold %s to change shape", [Text.keybind("key.clutternomore.change_block_shape").color(MASCOT_COLOR)]).color(MASCOT_COLOR_DARK))
 	} else {
-		new_lines.add(Text.translate("Scroll the %s", [Text.of("Mouse Wheel").color(MASCOT_COLOR)]).color(MASCOT_COLOR_DARK))
+		new_lines.add(Text.translate("Scroll the %s", [Text.of(`Mouse Wheel`).color(MASCOT_COLOR)]).color(MASCOT_COLOR_DARK))
 	}
 
 	event.lines.addAll(1, new_lines)
