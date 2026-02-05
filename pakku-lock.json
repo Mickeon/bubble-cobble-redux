@@ -3056,6 +3056,48 @@
             ]
         },
         {
+            "pakku_id": "GdFsiAyW4ZUBeC3r",
+            "pakku_links": [
+                "mjse1gMXfneuvrpy"
+            ],
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "modrinth": "extended-wrenches"
+            },
+            "name": {
+                "modrinth": "Create: Extended Wrenches"
+            },
+            "id": {
+                "modrinth": "WNRCHiE5"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "create-extended-wrenches-1.21.1-2.0.1.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/WNRCHiE5/versions/BM3Pr9Mj/create-extended-wrenches-1.21.1-2.0.1.jar",
+                    "id": "BM3Pr9Mj",
+                    "parent_id": "WNRCHiE5",
+                    "hashes": {
+                        "sha512": "7aa1d515b3841a7d8eacf753500576c3322126758f76478ccd692ac7e8b40753122d247609c034f17e4ac1a37c6aedc57d51acfbe5c546154051ae5d629b4d37",
+                        "sha1": "24b8bdd2e1ae864bbf80667b70b636a87e3707de"
+                    },
+                    "required_dependencies": [
+                        "LNytGWDc"
+                    ],
+                    "size": 401219,
+                    "date_published": "2026-01-02T19:43:25.164768Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "cn9HX3SST1KS9Q3M",
             "type": "MOD",
             "side": "SERVER",
