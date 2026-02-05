@@ -39,14 +39,14 @@ key_iris.keybind.toggleShaders:key.keyboard.i:
 key_iris.keybind.shaderPackSelection:key.keyboard.o:
 key_iris.keybind.wireframe:key.keyboard.unknown:
 key_supplementaries.keybind.quiver:key.keyboard.r:
-key_key.curios.open.desc:key.keyboard.keypad.5:
+key_key.curios.open.desc:key.keyboard.e:SHIFT
 key_key.cobblemon.hideparty:key.keyboard.unknown:
 key_key.cobblemon.summary:key.keyboard.y:
 key_key.cobblemon.downshiftparty:key.keyboard.down:
 key_key.cobblemon.upshiftparty:key.keyboard.up:
 key_key.cobblemon.throwpartypokemon:key.keyboard.r:
 key_key.cobblemon.ridingfreelook:key.keyboard.left.alt:
-key_accessories.key.open_accessories_screen:key.keyboard.keypad.4:
+key_accessories.key.open_accessories_screen:key.keyboard.e:CONTROL
 key_key.dynamic_fps.toggle_forced:key.keyboard.unknown:
 key_key.dynamic_fps.toggle_disabled:key.keyboard.unknown:
 key_key.sophisticateditemactions.item_highlight:key.keyboard.semicolon:
