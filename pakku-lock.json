@@ -1550,6 +1550,44 @@
             ]
         },
         {
+            "pakku_id": "LeWXVZxQ8OVjGedJ",
+            "type": "MOD",
+            "side": "SERVER",
+            "slug": {
+                "modrinth": "cobblemon-journey-mounts"
+            },
+            "name": {
+                "modrinth": "Cobblemon Journey Mounts"
+            },
+            "id": {
+                "modrinth": "Vn5WCYr6"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "cobblemon-journey-mounts-1.7.2.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "fabric",
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/Vn5WCYr6/versions/RKZyNI1R/cobblemon-journey-mounts-1.7.2.jar",
+                    "id": "RKZyNI1R",
+                    "parent_id": "Vn5WCYr6",
+                    "hashes": {
+                        "sha512": "cced2b3ef034e3f57c3e4271b64f5fd776ac7b56329b400018d7ca9b99c5e44c11a76acf2283c2bb3bb1eef40a9be9fb9eb360de0f7e48842689c69fa107005b",
+                        "sha1": "e9934906ef119dc7ab1001f72d4e7b23c2f73220"
+                    },
+                    "required_dependencies": [],
+                    "size": 7368421,
+                    "date_published": "2026-01-24T07:16:37.057247Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "B4tMH1ytL119P0PP",
             "type": "DATA_PACK",
             "side": "SERVER",
