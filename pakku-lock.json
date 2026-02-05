@@ -4,7 +4,7 @@
         "1.21.1"
     ],
     "loaders": {
-        "neoforge": "21.1.216"
+        "neoforge": "21.1.218"
     },
     "projects": [
         {
@@ -4375,7 +4375,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "ferritecore-7.0.2-neoforge.jar",
+                    "file_name": "ferritecore-7.0.3-neoforge.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -4383,16 +4383,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/uXXizFIs/versions/CnpoQxCx/ferritecore-7.0.2-neoforge.jar",
-                    "id": "CnpoQxCx",
+                    "url": "https://cdn.modrinth.com/data/uXXizFIs/versions/x7kQWVju/ferritecore-7.0.3-neoforge.jar",
+                    "id": "x7kQWVju",
                     "parent_id": "uXXizFIs",
                     "hashes": {
-                        "sha512": "2a5a7b79473c42572bdbbd1f429a459630d793b35f3eb17051139a94bced2d13c39e9c6309c81368d5502bc46c509e9868a8b5fa3cf93c51375a694cd96c20ac",
-                        "sha1": "7279fc52c32a033acc2864a9bcb018b2e04bbd03"
+                        "sha512": "19af89a2075bb10a63884fa853ebf84b02c79dc3242430ecdad056fd764fdcde367a7303276b329df01b0736e2ef264c5d80c7dc92c6aebd244f556a230bb417",
+                        "sha1": "9563692efb708b6b568df27a01ec52f6311928ef"
                     },
                     "required_dependencies": [],
-                    "size": 118911,
-                    "date_published": "2024-10-27T07:58:51.198350Z"
+                    "size": 121559,
+                    "date_published": "2026-01-25T12:59:45.271417Z"
                 }
             ]
         },
