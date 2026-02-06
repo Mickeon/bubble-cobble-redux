@@ -36,5 +36,9 @@
 	// The list of marks the reward Pokemon will have. Default: [].
 	"marks": [
 		"cobblemon:mark_mightiest"
-	]
+	],
+	// The number of lives a player has per raid battle. Default: 1
+	"lives": 1,
+	// How much raid energy is given from a cleared raid. Default: 20
+	"energy": 20
 }

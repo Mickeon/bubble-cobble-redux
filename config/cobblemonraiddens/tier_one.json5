@@ -34,5 +34,9 @@
 	// The battle AI used by the raid boss (Options: RANDOM, STRONG, RCT). Default: RANDOM
 	"raid_ai": "RANDOM",
 	// The list of marks the reward Pokemon will have. Default: [].
-	"marks": []
+	"marks": [],
+	// The number of lives a player has per raid battle. Default: 1
+	"lives": 1,
+	// How much raid energy is given from a cleared raid. Default: 0
+	"energy": 0
 }
