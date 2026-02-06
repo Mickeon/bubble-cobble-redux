@@ -42,4 +42,4 @@ lootData:
         - minecraft:overworld
         tables:
         - '[\w]+:chests\/[\w_\/]*[\w]+[\w_\/]*'
-        weight: 0
+        weight: 100
