@@ -6,15 +6,15 @@
             "shockwave",
             "discharge",
             "leafstorm"
+        ],
+        "custom_properties": [
+            {
+                "name": "appliance",
+                "value": "mow"
+            }
         ]
     },
     "raid_tier": "TIER_FIVE",
     "raid_type": "ELECTRIC",
-    "weight": 20.0,
-    "base_form": [
-        {
-            "name": "appliance",
-            "value": "mow"
-        }
-    ]
+    "weight": 20.0
 }

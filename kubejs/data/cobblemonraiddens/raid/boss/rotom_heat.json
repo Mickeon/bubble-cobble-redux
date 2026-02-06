@@ -6,15 +6,15 @@
             "shockwave",
             "discharge",
             "overheat"
+        ],
+        "custom_properties": [
+            {
+                "name": "appliance",
+                "value": "heat"
+            }
         ]
     },
     "raid_tier": "TIER_FIVE",
     "raid_type": "ELECTRIC",
-    "weight": 20.0,
-    "base_form": [
-        {
-            "name": "appliance",
-            "value": "heat"
-        }
-    ]
+    "weight": 20.0
 }

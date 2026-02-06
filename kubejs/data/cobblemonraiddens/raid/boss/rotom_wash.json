@@ -6,15 +6,15 @@
             "shockwave",
             "discharge",
             "hydropump"
+        ],
+        "custom_properties": [
+            {
+                "name": "appliance",
+                "value": "wash"
+            }
         ]
     },
     "raid_tier": "TIER_FIVE",
     "raid_type": "ELECTRIC",
-    "weight": 20.0,
-    "base_form": [
-        {
-            "name": "appliance",
-            "value": "wash"
-        }
-    ]
+    "weight": 20.0
 }

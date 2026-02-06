@@ -6,15 +6,15 @@
             "revelationdance",
             "airslash",
             "acrobatics"
+        ],
+        "custom_properties": [
+            {
+                "name": "dance_style",
+                "value": "baile"
+            }
         ]
     },
     "raid_tier": "TIER_FOUR",
     "raid_type": "FIRE",
-    "weight": 20.0,
-    "base_form": [
-        {
-            "name": "dance_style",
-            "value": "baile"
-        }
-    ]
+    "weight": 20.0
 }

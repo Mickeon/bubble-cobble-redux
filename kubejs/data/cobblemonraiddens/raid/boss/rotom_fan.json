@@ -6,15 +6,15 @@
             "shockwave",
             "discharge",
             "airslash"
+        ],
+        "custom_properties": [
+            {
+                "name": "appliance",
+                "value": "fan"
+            }
         ]
     },
     "raid_tier": "TIER_FIVE",
     "raid_type": "ELECTRIC",
-    "weight": 20.0,
-    "base_form": [
-        {
-            "name": "appliance",
-            "value": "fan"
-        }
-    ]
+    "weight": 20.0
 }

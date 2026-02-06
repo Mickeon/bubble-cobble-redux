@@ -6,15 +6,15 @@
             "mountaingale",
             "doubleedge",
             "crunch"
+        ],
+        "custom_properties": [
+            {
+                "name": "hisuian",
+                "value": true
+            }
         ]
     },
     "raid_tier": "TIER_FIVE",
     "raid_type": "ICE",
-    "weight": 20.0,
-    "base_form": [
-        {
-            "name": "hisuian",
-            "value": true
-        }
-    ]
+    "weight": 20.0
 }

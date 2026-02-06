@@ -6,15 +6,15 @@
             "shockwave",
             "discharge",
             "blizzard"
+        ],
+        "custom_properties": [
+            {
+                "name": "appliance",
+                "value": "frost"
+            }
         ]
     },
     "raid_tier": "TIER_FIVE",
     "raid_type": "ELECTRIC",
-    "weight": 20.0,
-    "base_form": [
-        {
-            "name": "appliance",
-            "value": "frost"
-        }
-    ]
+    "weight": 20.0
 }

@@ -6,15 +6,15 @@
             "revelationdance",
             "airslash",
             "acrobatics"
+        ],
+        "custom_properties": [
+            {
+                "name": "dance_style",
+                "value": "pau"
+            }
         ]
     },
     "raid_tier": "TIER_FOUR",
     "raid_type": "PSYCHIC",
-    "weight": 20.0,
-    "base_form": [
-        {
-            "name": "dance_style",
-            "value": "pau"
-        }
-    ]
+    "weight": 20.0
 }

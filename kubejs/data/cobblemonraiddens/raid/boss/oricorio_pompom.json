@@ -6,15 +6,15 @@
             "revelationdance",
             "airslash",
             "acrobatics"
+        ],
+        "custom_properties": [
+            {
+                "name": "dance_style",
+                "value": "pom-pom"
+            }
         ]
     },
     "raid_tier": "TIER_FOUR",
     "raid_type": "ELECTRIC",
-    "weight": 20.0,
-    "base_form": [
-        {
-            "name": "dance_style",
-            "value": "pom-pom"
-        }
-    ]
+    "weight": 20.0
 }

@@ -6,15 +6,15 @@
             "bite",
             "headbutt",
             "icepunch"
+        ],
+        "custom_properties": [
+            {
+                "name": "galarian",
+                "value": true
+            }
         ]
     },
     "raid_tier": "TIER_FIVE",
     "raid_type": "ICE",
-    "weight": 20.0,
-    "base_form": [
-        {
-            "name": "galarian",
-            "value": true
-        }
-    ]
+    "weight": 20.0
 }
