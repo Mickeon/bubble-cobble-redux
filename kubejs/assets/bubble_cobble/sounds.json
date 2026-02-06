@@ -132,5 +132,20 @@
 		"sounds": [
 			"bubble_cobble:pmd_item_equip"
 		]
+	},
+	"grab_type_gem": {
+		"sounds": [
+			{
+				"type": "event",
+				"name": "sounds:block.copper_ore.break",
+				"pitch": 1.75,
+				"weight": 50
+			},
+			{
+				"name": "bubble_cobble:grab_emerald",
+				"volume": 0.15,
+				"weight": 1
+			}
+		]
 	}
 }

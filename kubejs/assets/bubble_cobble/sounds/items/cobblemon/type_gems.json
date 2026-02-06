@@ -2,7 +2,7 @@
   "keys": [
     "#cobblemon:type_gems"
   ],
-  "pitch": 1.75,
-  "soundEvent": "sounds:block.copper_ore.break",
+  "pitch": 1.0,
+  "soundEvent": "bubble_cobble:grab_type_gem",
   "volume": 0.25
 }
