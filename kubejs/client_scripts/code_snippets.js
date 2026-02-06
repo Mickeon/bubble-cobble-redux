@@ -1,5 +1,5 @@
-// require: probejs
-// require: cobblemon
+// requires: probejs
+// requires: cobblemon
 /** @type {typeof import("com.cobblemon.mod.common.api.pokemon.PokemonSpecies").$PokemonSpecies } */
 let $PokemonSpecies  = Java.loadClass("com.cobblemon.mod.common.api.pokemon.PokemonSpecies")
 /** @type {typeof import("com.cobblemon.mod.common.pokemon.properties.PropertiesCompletionProvider").$PropertiesCompletionProvider } */
