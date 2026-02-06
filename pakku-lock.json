@@ -8033,6 +8033,50 @@
             ]
         },
         {
+            "pakku_id": "FSqtWqtlwV6CLO2H",
+            "pakku_links": [
+                "MxaX5tahc4l2zYkS",
+                "nbS3vgjcQgtwKLyb"
+            ],
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "modrinth": "resource-trimmer"
+            },
+            "name": {
+                "modrinth": "Resource Trimmer"
+            },
+            "id": {
+                "modrinth": "TVKrCZNh"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "resourcetrimmer-neoforge-1.21.1-21.1.5.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/TVKrCZNh/versions/nExH8OVD/resourcetrimmer-neoforge-1.21.1-21.1.5.jar",
+                    "id": "nExH8OVD",
+                    "parent_id": "TVKrCZNh",
+                    "hashes": {
+                        "sha512": "1781459f4e7d0240b40a2a5f5f1978adffc43284f50f544305667f9dcca468fc6808a2932f1019df741115dd0ce4349257580d4dfad363a2a420278600d96d79",
+                        "sha1": "eb379e610e30d284381b8aa71a500f0add851941"
+                    },
+                    "required_dependencies": [
+                        "aaRl8GiW",
+                        "uy4Cnpcm"
+                    ],
+                    "size": 16667,
+                    "date_published": "2025-04-06T07:59:39.269364Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "TWcQvkq104b07fXX",
             "type": "MOD",
             "side": "SERVER",
