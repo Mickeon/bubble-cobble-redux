@@ -42,7 +42,6 @@
         "!*/jsconfig.json",
         "!kubejs/config/probe-settings.json",
         "!kubejs/config/web_server.json",
-        "!config/simpletms/moves/default*",
         "!*.bak",
 
         "!config/ali",
