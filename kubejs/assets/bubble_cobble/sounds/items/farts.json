@@ -1,0 +1,14 @@
+{
+  "keys": [
+    "cobblemon:utility_umbrella",
+    "cobblemon:ring_target",
+    "cobblemon:grip_claw",
+    "cobblemon:binding_band",
+    "cobblemon:sticky_barb",
+    "cobblemon:float_stone",
+    "kubejs:super_ghostbusters"
+  ],
+  "pitch": 1.75,
+  "soundEvent": "artifacts:item.whoopee_cushion.fart",
+  "volume": 0.25
+}
