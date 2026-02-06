@@ -1,7 +1,7 @@
 {
 	"menuAlert": true,
 	"chatAlert": false,
-	"localVersion": "1.7.0",
+	"localVersion": "1.7.1",
 	"versionAPI": "https://api.modrinth.com/v2/project/9ncdAbx0/version?include_changelog=false",
 	"changelogLink": "https://modrinth.com/modpack/bubble-cobble-redux/changelog",
 	"multiVersion": false,
