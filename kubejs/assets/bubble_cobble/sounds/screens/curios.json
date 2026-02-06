@@ -1,0 +1,8 @@
+{
+  "keys": [
+    "curios:curios_container"
+  ],
+  "soundEvent": "relics:ability_cooldown",
+  "volume": 0.25,
+  "pitch": 1.0
+}

@@ -1,0 +1,9 @@
+{
+  "keys": [
+    "accessories:experimental_menu",
+    "accessories:original_menu"
+  ],
+  "soundEvent": "cobblemon:item.pokedex.scan_register_aspect",
+  "volume": 0.15,
+  "pitch": 0.5
+}

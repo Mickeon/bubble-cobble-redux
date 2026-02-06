@@ -136,10 +136,19 @@
 	"grab_type_gem": {
 		"sounds": [
 			{
-				"type": "event",
-				"name": "sounds:block.copper_ore.break",
+				"name": "sounds:block/copper_ore/break1",
 				"pitch": 1.75,
-				"weight": 50
+				"weight": 30
+			},
+			{
+				"name": "sounds:block/copper_ore/break2",
+				"pitch": 1.75,
+				"weight": 30
+			},
+			{
+				"name": "sounds:block/copper_ore/break3",
+				"pitch": 1.75,
+				"weight": 30
 			},
 			{
 				"name": "bubble_cobble:grab_emerald",
