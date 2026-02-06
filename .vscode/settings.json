@@ -61,5 +61,5 @@
     "[yaml]": {
         "files.trimTrailingWhitespace": false
     },
-    "typescript.surveys.enabled": false,
+    "typescript.surveys.enabled": false
 }
