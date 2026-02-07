@@ -1,0 +1,18 @@
+{
+	"parent": "minecraft:item/generated",
+	"textures": {
+		"layer0": "create:item/brass_hand"
+	},
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [-7, -15, 45],
+			"translation": [-0.5, -0.5, -1],
+			"scale": [0.55, 0.55, 0.55]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [-7, -15, -45],
+			"translation": [-0.5, -0.5, -1],
+			"scale": [0.55, 0.55, 0.55]
+		}
+	}
+}

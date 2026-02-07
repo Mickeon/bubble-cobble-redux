@@ -1,6 +1,6 @@
 {
 	"parent": "kubejs:item/wine_bottle",
 	"textures": {
-		"layer0": "kubejs:item/sparkling_rose"
+		"layer0": "kubejs:item/firebomb_whiskey"
 	}
 }

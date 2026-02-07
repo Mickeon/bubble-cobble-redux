@@ -1,5 +1,5 @@
 {
-	"parent": "item/generated",
+	"parent": "kubejs:item/wine_bottle",
 	"textures": {
 		"layer0": "kubejs:item/spumante"
 	}
