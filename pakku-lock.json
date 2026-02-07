@@ -102,7 +102,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "accessories-neoforge-1.1.0-beta.52+1.21.1.jar",
+                    "file_name": "accessories-neoforge-1.1.0-beta.53+1.21.1.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -110,18 +110,18 @@
                         "neoforge"
                     ],
                     "release_type": "beta",
-                    "url": "https://cdn.modrinth.com/data/jtmvUHXj/versions/CtRim6mz/accessories-neoforge-1.1.0-beta.52+1.21.1.jar",
-                    "id": "CtRim6mz",
+                    "url": "https://cdn.modrinth.com/data/jtmvUHXj/versions/Fb55Fgjz/accessories-neoforge-1.1.0-beta.53+1.21.1.jar",
+                    "id": "Fb55Fgjz",
                     "parent_id": "jtmvUHXj",
                     "hashes": {
-                        "sha512": "1f2559a1362978ec168c7e366f278f3ec6305800b264841f1d1a573a93b3951441f35e6dfcbc19e7edd9d52e28ac5a2fbf49dfe2d1997b48270cd577a92af82a",
-                        "sha1": "c2b288a7fa9ae595e3fa9cc7deee56306474e300"
+                        "sha512": "baafa9a5e48c17c243d45b6260095ffef2ad00e4e970aafc5b1ca9ab5f4a542b18b0fb35d4584318791edbaf00a3c44806f62062513d991383192aca4df27a07",
+                        "sha1": "77d75c2e13cfdf56a45cdd29806c1c97c3d250fc"
                     },
                     "required_dependencies": [
                         "ccKDOlHs"
                     ],
-                    "size": 1078973,
-                    "date_published": "2025-09-29T18:35:20.703559Z"
+                    "size": 1078697,
+                    "date_published": "2026-02-06T07:37:51.455441Z"
                 }
             ]
         },
@@ -4926,7 +4926,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "immersive_paintings-neoforge-1.21.1-0.7.4.jar",
+                    "file_name": "immersive_paintings-neoforge-1.21.1-0.7.6.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -4934,18 +4934,18 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/6txNkua3/versions/wVfl5LeH/immersive_paintings-neoforge-1.21.1-0.7.4.jar",
-                    "id": "wVfl5LeH",
+                    "url": "https://cdn.modrinth.com/data/6txNkua3/versions/cEaVxjXh/immersive_paintings-neoforge-1.21.1-0.7.6.jar",
+                    "id": "cEaVxjXh",
                     "parent_id": "6txNkua3",
                     "hashes": {
-                        "sha512": "23f376cd649a241a0d8e8da6876669516b0213f6b7c0503163f29fcee5d1e929c049c19af2a676bdc5432ab3250406e297736157309c67bd6d60203cbcae93dc",
-                        "sha1": "937f192e9cdc1d50e997df0aef6ddfea87771e92"
+                        "sha512": "b6ce9659c431e20c1062caf0a53a37abe1663f468f9738a170829517e1548910bf7e82a92eef89a3ab25ba814d4fdcf28a189a8e164432d4797dbc43ca3455fe",
+                        "sha1": "0f2acb69a6a7a8694de296ac5785dc13e814e413"
                     },
                     "required_dependencies": [
                         "hYykXjDp"
                     ],
-                    "size": 5342505,
-                    "date_published": "2025-09-21T17:50:59.064488Z"
+                    "size": 5350777,
+                    "date_published": "2026-02-06T11:40:37.212625Z"
                 }
             ]
         },
@@ -7810,7 +7810,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "relics-1.21.1-0.10.7.7.jar",
+                    "file_name": "relics-1.21.1-0.10.7.8.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -7818,16 +7818,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/OCJRPujW/versions/vuXgboB6/relics-1.21.1-0.10.7.7.jar",
-                    "id": "vuXgboB6",
+                    "url": "https://cdn.modrinth.com/data/OCJRPujW/versions/nvZZMhJS/relics-1.21.1-0.10.7.8.jar",
+                    "id": "nvZZMhJS",
                     "parent_id": "OCJRPujW",
                     "hashes": {
-                        "sha512": "a043134a5f17e69e9b2268f57a5854988d53e16ed6213a19b9d6695674b853cfe12b4679ec25045035473de3bc48070e8562e3515bc76603ac5189a13f56a469",
-                        "sha1": "64c303b1c9e7e3829141efc2a667aced62b3fe56"
+                        "sha512": "eee8bc6a1c676f6c513d59732f12bb6415cc7c7fb639ad8f9d7dc9958e4b6726226106715119d8c083c49628db1cf7e3a433716425016d6d025d1730885fbce1",
+                        "sha1": "7f7fd59273ac5ef6511a811518bc9af01705a528"
                     },
                     "required_dependencies": [],
-                    "size": 2753147,
-                    "date_published": "2026-01-27T00:45:20.071410Z"
+                    "size": 2753166,
+                    "date_published": "2026-02-06T22:47:29.956301Z"
                 }
             ]
         },
@@ -8953,7 +8953,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "sophisticatedstorage-1.21.1-1.5.25.1467.jar",
+                    "file_name": "sophisticatedstorage-1.21.1-1.5.26.1480.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -8961,18 +8961,18 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/hMlaZH8f/versions/VSTZtc0d/sophisticatedstorage-1.21.1-1.5.25.1467.jar",
-                    "id": "VSTZtc0d",
+                    "url": "https://cdn.modrinth.com/data/hMlaZH8f/versions/VVCdFN6L/sophisticatedstorage-1.21.1-1.5.26.1480.jar",
+                    "id": "VVCdFN6L",
                     "parent_id": "hMlaZH8f",
                     "hashes": {
-                        "sha512": "ed89011e70215aff57a515e9d51c6198ce2ce6781fe688cb5c976b6edbfc9130c8d528c7d24d4aac42ada44edc79c34b13672a6b49f8c6e2f9d52b2d8c49886f",
-                        "sha1": "91e5495bf87d863a9e618920856e4154a0f53d50"
+                        "sha512": "3f03e00701f8e9f918f9b44134a430e35946e5cc8ac4039f4c7caf75fbd1e2c83cc1b86c9d08ae718ac42be7e9242eb56d574a9e5bf70de752f811257d44981d",
+                        "sha1": "09ad8ff8d06d381f7474328953d6221ad8fbdf7c"
                     },
                     "required_dependencies": [
                         "nmoqTijg"
                     ],
-                    "size": 1657705,
-                    "date_published": "2026-02-01T13:22:03.589417Z"
+                    "size": 1657276,
+                    "date_published": "2026-02-05T20:39:20.392427Z"
                 }
             ]
         },

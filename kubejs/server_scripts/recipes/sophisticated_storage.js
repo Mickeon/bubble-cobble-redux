@@ -24,12 +24,12 @@ ServerEvents.recipes(event => {
 		R: "minecraft:redstone_torch",
 	}).id("sophisticatedstorage:basic_tier_upgrade")
 
-	// Require Basic Tier Upgrade for all storage, instead of Redstone Torch.
-	event.replaceInput({mod: "sophisticatedstorage"}, "minecraft:redstone_torch", "sophisticatedstorage:basic_tier_upgrade")
+	// Require Basic Tier Upgrade for all storage, instead of Lever.
+	event.replaceInput({mod: "sophisticatedstorage"}, "minecraft:lever", "sophisticatedstorage:basic_tier_upgrade")
 	// Replacing doesn't work here with the usual function. We do it manually.
 	event.forEachRecipe({type: "sophisticatedstorage:generic_wood_storage"}, recipe => {
 		const json = JSON.parse(recipe.json)
-		json.key.R = Ingredient.of("sophisticatedstorage:basic_tier_upgrade")
+		json.key.L = Ingredient.of("sophisticatedstorage:basic_tier_upgrade")
 		event.custom(json).id(recipe.getId())
 	})
 	event.forEachRecipe({type: "sophisticatedstorage:shulker_box_from_vanilla_shapeless"}, recipe => {
