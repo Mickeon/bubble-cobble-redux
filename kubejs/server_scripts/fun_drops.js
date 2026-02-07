@@ -62,6 +62,7 @@ EntityEvents.drops("minecraft:player", event => {
 		case "Fableworks": {
 			add_drop(player, Item.of("minecraft:pink_dye"), 0.75)
 			add_drop(player, Item.of("minecraft:amethyst_shard"), 0.75)
+			add_drop(player, Item.of("supplementaries:flute").withCustomName(Text.of(`Attack on Titan`).italic(false).color("black").obfuscated()), 0.25)
 		} break;
 		case "Giuly_Clockwork": {
 			add_drop(player, Item.of("minecraft:blue_dye"), 0.75)
@@ -185,6 +186,7 @@ EntityEvents.drops("minecraft:player", event => {
 			add_drop(player, Item.of("minecraft:prismarine_shard"), 0.5)
 			add_drop(player, Item.of("minecraft:white_dye"), 0.5)
 			add_drop(player, Item.of("minecraft:purple_dye"), 0.5)
+			add_drop(player, Item.of("supplementaries:flute").withCustomName(Text.of(`Cara Mia Addio`).italic(false).color("black").obfuscated()), 0.25)
 		} break;
 		case "wyanido": {
 			add_drop(player, get_funny_salmon(), 0.5)

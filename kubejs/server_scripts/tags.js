@@ -6,6 +6,11 @@ const COPPER_BUTTONS = [
 	"copperagebackport:waxed_copper_button", "copperagebackport:waxed_exposed_copper_button", "copperagebackport:waxed_oxidized_copper_button",  "copperagebackport:waxed_weathered_copper_button"
 ]
 
+const COPPER_CHAINS = [
+	"minecraft:copper_chain", "minecraft:exposed_copper_chain", "minecraft:weathered_copper_chain", "minecraft:oxidized_copper_chain",
+	"minecraft:waxed_copper_chain", "minecraft:waxed_exposed_copper_chain", "minecraft:waxed_weathered_copper_chain", "minecraft:waxed_oxidized_copper_chain"
+]
+
 ServerEvents.tags("item", event => {
 	// Accidental omissions from the mod creators.
 	// Some of these mods add them in the block tags, but not the item tags.
@@ -45,8 +50,13 @@ ServerEvents.tags("item", event => {
 	event.add("minecraft:horse_food", "biomeswevegone:green_apple") // TODO: Report this.
 	event.add("c:music_discs", "cnc:music_disc_slough_choir", "cnc:music_disc_wreck_of_the_old_97", "cnc:music_disc_hills")
 	event.removeAll("minecraft:music_discs") // This tag doesn't exist anymore.
+	event.add("minecraft:pickaxes", "undergroundworlds:temple_pickaxe", "undergroundworlds:freezing_pickaxe")
+	event.add("minecraft:axes", "undergroundworlds:temple_axe", "undergroundworlds:freezing_axe", "undergroundworlds:axe_of_regrowth")
+	event.add("minecraft:hoes", "undergroundworlds:temple_hoe", "undergroundworlds:freezing_hoe")
+	event.add("minecraft:shovels", "undergroundworlds:temple_shovel", "undergroundworlds:freezing_shovel")
+	event.add("minecraft:swords", "undergroundworlds:temple_sword", "undergroundworlds:freezing_sword", "undergroundworlds:blade_of_the_jungle")
 	event.add("minecraft:buttons", COPPER_BUTTONS)
-	event.remove("create:chain_rideable", Ingredient.of("#c:chains").itemIds) // They didn't realise this was plainly wrong.
+	event.remove("create:chain_rideable", COPPER_CHAINS) // They didn't realise this was plainly wrong.
 	// TODO: Copper Chests missing from c:chests item tag.
 
 	// More compatibility.
@@ -116,7 +126,11 @@ ServerEvents.tags("item", event => {
 	event.add("curios:back", "#supplementaries:sacks")
 
 	// Allow more tools to ride Chain Conveyors, as not everyone has a Wrench in hand.
-	event.add("create:chain_rideable", Ingredient.of("#minecraft:pickaxes").or("#minecraft:hoes").itemIds) // This currently includes Hammers, which is nonsensical but is the other tags' fault.
+	event.add("create:chain_rideable", "#minecraft:pickaxes", "#minecraft:hoes") // Without the code below this would also include Hammers.
+
+	// Tidy up the way Hammers are tagged.
+	event.remove("minecraft:pickaxes", Ingredient.of("#justhammers:hammer").itemIds)
+	event.add("c:tools/mining_tool", "#justhammers:hammer")
 })
 
 ServerEvents.tags("block", event => {
