@@ -44,8 +44,9 @@ ServerEvents.tags("item", event => {
 	event.add("minecraft:piglin_loved", "solonion:golden_lunchbox", "handcrafted:golden_thin_pot", "handcrafted:golden_thick_pot", "handcrafted:golden_wide_pot", "handcrafted:golden_medium_pot", /*"astral_dimension:golden_bone", "astral_dimension:golden_bone_meal", "astral_dimension:astral_gold_ore", "astral_dimension:gold_eye_block"*/) // Partially reported: https://github.com/terrarium-earth/Handcrafted/issues/152
 	event.add("minecraft:horse_food", "biomeswevegone:green_apple") // TODO: Report this.
 	event.add("c:music_discs", "cnc:music_disc_slough_choir", "cnc:music_disc_wreck_of_the_old_97", "cnc:music_disc_hills")
-	event.removeAll("minecraft:music_discs")
+	event.removeAll("minecraft:music_discs") // This tag doesn't exist anymore.
 	event.add("minecraft:buttons", COPPER_BUTTONS)
+	event.remove("create:chain_rideable", Ingredient.of("#c:chains").itemIds) // They didn't realise this was plainly wrong.
 	// TODO: Copper Chests missing from c:chests item tag.
 
 	// More compatibility.
@@ -113,6 +114,9 @@ ServerEvents.tags("item", event => {
 	event.removeAll("accessories:shoes")
 
 	event.add("curios:back", "#supplementaries:sacks")
+
+	// Allow more tools to ride Chain Conveyors, as not everyone has a Wrench in hand.
+	event.add("create:chain_rideable", Ingredient.of("#minecraft:pickaxes").or("#minecraft:hoes").itemIds) // This currently includes Hammers, which is nonsensical but is the other tags' fault.
 })
 
 ServerEvents.tags("block", event => {
