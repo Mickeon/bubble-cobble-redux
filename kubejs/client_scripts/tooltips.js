@@ -274,6 +274,16 @@ ItemEvents.modifyTooltips(event => {
 
 	event.add(["farmersdelight:skillet"], [subtle("Right-click in inventory to equip")])
 
+	event.add([
+		"#cobblemon:potions",
+		"#cobblemon:restores",
+		"#cobblemon:ethers",
+		"#cobblemon:battle_items",
+		"cobblemon:cleanse_tag",
+		"cobblemon:spell_tag",
+		"cobblemon:weakness_policy",
+		"cobblemon:blunder_policy",
+	], PLACEABLE_TOOLTIP)
 	// let recipe_manager = Client.player.level.recipeManager
 	// recipe_manager.byType("create:sequenced_assembly").forEach((id, sequenced_assembly) => {
 	// 	add_sequence_info(event, sequenced_assembly)
