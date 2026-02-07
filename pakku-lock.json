@@ -7058,7 +7058,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "particle_core-0.3.2+1.21+neoforge.jar",
+                    "file_name": "particle_core-0.3.3+1.21+neoforge.jar",
                     "mc_versions": [
                         "1.21",
                         "1.21.1"
@@ -7067,19 +7067,19 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/RSeLon5O/versions/D0F04XQX/particle_core-0.3.2+1.21+neoforge.jar",
-                    "id": "D0F04XQX",
+                    "url": "https://cdn.modrinth.com/data/RSeLon5O/versions/2QF4NhZD/particle_core-0.3.3+1.21+neoforge.jar",
+                    "id": "2QF4NhZD",
                     "parent_id": "RSeLon5O",
                     "hashes": {
-                        "sha512": "02d17f7864329b6ce3e81fc0cebf49e627edc175df7693bb151eaf3c4baf489b8802e1ab3bd45c58d206c3f0afdfcf2773ebb6cd1b46409606fd6abf25c18064",
-                        "sha1": "f37041047e060ac380c1c019737d15645abbd724"
+                        "sha512": "bf14200f4f279c2c5f5a50e09ef561f34463848fde507cb5930e4f4dbfed107697387ce030593be37a14da73cc459b0901928466fb44b2c2a387c584f38ec489",
+                        "sha1": "f859d68818e522fb00056d3ed1603ca4300eb681"
                     },
                     "required_dependencies": [
-                        "ordsPcFz",
-                        "hYykXjDp"
+                        "hYykXjDp",
+                        "ordsPcFz"
                     ],
-                    "size": 138142,
-                    "date_published": "2026-01-25T16:05:04.969407Z"
+                    "size": 138375,
+                    "date_published": "2026-02-05T19:48:24.325701Z"
                 }
             ]
         },
