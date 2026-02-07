@@ -243,14 +243,15 @@ NO_FLAT_WORLD_MOBS.forEach(entity_type => {
 })
 
 // https://github.com/CorgiTaco-MC/Enhanced-Celestials/blob/1.21.X/Common/src/main/java/dev/corgitaco/enhancedcelestials/lunarevent/EnhancedCelestialsLunarForecastWorldData.java
+/** @type {typeof import("dev.corgitaco.enhancedcelestials.EnhancedCelestials").$EnhancedCelestials } */
 let $EnhancedCelestials = Java.loadClass("dev.corgitaco.enhancedcelestials.EnhancedCelestials")
 /** @type {typeof import("net.minecraft.core.Holder").$Holder } */
 let $Holder  = Java.loadClass("net.minecraft.core.Holder")
 
-/** @returns {import("net.minecraft.core.Holder").$Holder$$Type<T>} */
+// This logic is very flawed for any non-Overworld dimension, but I just want to get it done for now.
 function get_current_lunar_event_holder(level) {
 	let lunar_forecast = $EnhancedCelestials.lunarForecastWorldData(level).orElse(null)
-	return (lunar_forecast ? lunar_forecast.currentLunarEventHolder() : $Holder.direct())
+	return (lunar_forecast ? lunar_forecast.currentLunarEventHolder() : $Holder.direct(null))
 }
 
 function is_lunar_event_happening(level) {
