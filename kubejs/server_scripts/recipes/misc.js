@@ -302,6 +302,12 @@ ServerEvents.recipes(event => {
 	event.shaped("mega_showdown:sparkling_stone_light", ["AAA", "ASA", "AAA"], {A: "minecraft:white_dye", S: "mega_showdown:sparkling_stone_dark"})
 	event.shaped("mega_showdown:sparkling_stone_dark", ["AAA", "ASA", "AAA"], {A: "minecraft:black_dye", S: "mega_showdown:sparkling_stone_light"})
 
+	event.recipes.create.compacting("minecraft:tuff", Ingredient.of("supplementaries:ash").withCount(8)).heated()
+
+	// All any Crafting Table type to be used for recipes, not just vanilla.
+	event.replaceInput({input: "minecraft:crafting_table"}, "minecraft:crafting_table", "#c:player_workstations/crafting_tables")
+	event.replaceInput({id: "minecraft:lectern"}, "minecraft:bookshelf", "#c:bookshelves")
+
 	// TODO: Add recipes for (this modpack's) Pale Jacaranda and Redder Wood.
 	// event.shaped("biomesoplenty:stripped_jacaranda_log", ["DAD", "ADA", "DAD"], {D: "minecraft:white_dye", A: "biomeswevegone:stripped_jacaranda_log"})
 	// event.shaped("biomesoplenty:stripped_redwood_log", ["DAD", "ADA", "DAD"], {D: "minecraft:red_dye", A: "biomeswevegone:stripped_redwood_log"})

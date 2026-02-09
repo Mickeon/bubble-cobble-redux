@@ -1,0 +1,21 @@
+{
+	"blocks": "#handcrafted:cushions",
+	"mappings": {
+		"arts_and_crafts:white_paintbrush": "handcrafted:white_cushion",
+		"arts_and_crafts:light_gray_paintbrush": "handcrafted:light_gray_cushion",
+		"arts_and_crafts:gray_paintbrush": "handcrafted:gray_cushion",
+		"arts_and_crafts:black_paintbrush": "handcrafted:black_cushion",
+		"arts_and_crafts:brown_paintbrush": "handcrafted:brown_cushion",
+		"arts_and_crafts:red_paintbrush": "handcrafted:red_cushion",
+		"arts_and_crafts:orange_paintbrush": "handcrafted:orange_cushion",
+		"arts_and_crafts:yellow_paintbrush": "handcrafted:yellow_cushion",
+		"arts_and_crafts:lime_paintbrush": "handcrafted:lime_cushion",
+		"arts_and_crafts:green_paintbrush": "handcrafted:green_cushion",
+		"arts_and_crafts:cyan_paintbrush": "handcrafted:cyan_cushion",
+		"arts_and_crafts:light_blue_paintbrush": "handcrafted:light_blue_cushion",
+		"arts_and_crafts:blue_paintbrush": "handcrafted:blue_cushion",
+		"arts_and_crafts:purple_paintbrush": "handcrafted:purple_cushion",
+		"arts_and_crafts:magenta_paintbrush": "handcrafted:magenta_cushion",
+		"arts_and_crafts:pink_paintbrush": "handcrafted:pink_cushion"
+	}
+}

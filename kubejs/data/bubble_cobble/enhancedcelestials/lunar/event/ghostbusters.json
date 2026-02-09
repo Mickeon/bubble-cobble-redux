@@ -53,13 +53,7 @@
 					"monster": [
 						{
 							"type": "minecraft:enderman",
-							"weight": 20,
-							"minCount": 1,
-							"maxCount": 3
-						},
-						{
-							"type": "minecraft:spider",
-							"weight": 20,
+							"weight": 40,
 							"minCount": 1,
 							"maxCount": 3
 						}
@@ -112,7 +106,7 @@
 					"ambient": false,
 					"amplifier": 1,
 					"duration_in_ticks": 60,
-					"effect": "brewinandchewin:tipsy",
+					"effect": "brewinandchewin:intoxication",
 					"show_icon": false,
 					"visible": true
 				}

@@ -1,0 +1,11 @@
+{
+	"match": {
+		"type": [
+			"relics:thrown_relic_experience_bottle",
+			"supplementaries:slingshot_projectile"
+		]
+	},
+	"luminance": {
+		"type": "lambdynlights:projectile/throwable_item"
+	}
+}

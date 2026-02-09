@@ -1,0 +1,14 @@
+{
+	"match": {
+		"items": "#minecraft:enchantable/fire_aspect",
+		"predicates": {
+			"minecraft:enchantments": [
+				{
+					"enchantments": "minecraft:fire_aspect"
+				}
+			]
+		}
+	},
+	"luminance": 12,
+	"water_sensitive": true
+}

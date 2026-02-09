@@ -1,0 +1,19 @@
+{
+	"match": {
+		"type": "mowziesmobs:lantern",
+		"located": {
+			"light": {
+				"sky": {
+					"min": 12,
+					"max": 15
+				}
+			}
+		}
+	},
+	"luminance": {
+		"type": "lambdynlights:item",
+		"item": {
+			"id": "mowziesmobs:glowing_jelly"
+		}
+	}
+}

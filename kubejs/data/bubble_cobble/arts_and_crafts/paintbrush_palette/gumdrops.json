@@ -1,0 +1,21 @@
+{
+	"blocks": "#snowyspirit:gumdrops",
+	"mappings": {
+		"arts_and_crafts:white_paintbrush": "snowyspirit:gumdrop_white",
+		"arts_and_crafts:light_gray_paintbrush": "snowyspirit:gumdrop_light_gray",
+		"arts_and_crafts:gray_paintbrush": "snowyspirit:gumdrop_gray",
+		"arts_and_crafts:black_paintbrush": "snowyspirit:gumdrop_black",
+		"arts_and_crafts:brown_paintbrush": "snowyspirit:gumdrop_brown",
+		"arts_and_crafts:red_paintbrush": "snowyspirit:gumdrop_red",
+		"arts_and_crafts:orange_paintbrush": "snowyspirit:gumdrop_orange",
+		"arts_and_crafts:yellow_paintbrush": "snowyspirit:gumdrop_yellow",
+		"arts_and_crafts:lime_paintbrush": "snowyspirit:gumdrop_lime",
+		"arts_and_crafts:green_paintbrush": "snowyspirit:gumdrop_green",
+		"arts_and_crafts:cyan_paintbrush": "snowyspirit:gumdrop_cyan",
+		"arts_and_crafts:light_blue_paintbrush": "snowyspirit:gumdrop_light_blue",
+		"arts_and_crafts:blue_paintbrush": "snowyspirit:gumdrop_blue",
+		"arts_and_crafts:purple_paintbrush": "snowyspirit:gumdrop_purple",
+		"arts_and_crafts:magenta_paintbrush": "snowyspirit:gumdrop_magenta",
+		"arts_and_crafts:pink_paintbrush": "snowyspirit:gumdrop_pink"
+	}
+}

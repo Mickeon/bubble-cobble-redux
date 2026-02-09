@@ -286,7 +286,7 @@ ClientEvents.lang("en_us", event => {
 		"tag.item.mega_showdown.tera_shards": "Tera Shards",
 		"tag.item.mega_showdown.z_crystal": "Z-Crystals",
 		"tag.item.mega_showdown.z_ring": "Z-Rings",
-		"tag.item.minersdelight.baked_cave_carrot": "Any Cave Carrot",
+		"tag.item.minersdelight.baked_cave_carrot": "Any Baked Cave Carrot",
 		"tag.item.minersdelight.cooked_insect_meat": "Any Cooked Insect Meat",
 		"tag.item.minersdelight.insect_meat": "Any Insect Meat",
 		"tag.item.mynethersdelight.hot_spice": "Hot Spice",

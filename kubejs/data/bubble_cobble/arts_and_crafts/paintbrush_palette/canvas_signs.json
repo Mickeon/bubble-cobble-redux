@@ -1,0 +1,40 @@
+{
+	"blocks": [
+		"farmersdelight:black_canvas_sign",
+		"farmersdelight:blue_canvas_sign",
+		"farmersdelight:brown_canvas_sign",
+		"farmersdelight:canvas_sign",
+		"farmersdelight:cyan_canvas_sign",
+		"farmersdelight:gray_canvas_sign",
+		"farmersdelight:green_canvas_sign",
+		"farmersdelight:light_blue_canvas_sign",
+		"farmersdelight:light_gray_canvas_sign",
+		"farmersdelight:lime_canvas_sign",
+		"farmersdelight:magenta_canvas_sign",
+		"farmersdelight:orange_canvas_sign",
+		"farmersdelight:pink_canvas_sign",
+		"farmersdelight:purple_canvas_sign",
+		"farmersdelight:red_canvas_sign",
+		"farmersdelight:white_canvas_sign",
+		"farmersdelight:yellow_canvas_sign"
+	],
+	"mappings": {
+		"arts_and_crafts:white_paintbrush": "farmersdelight:white_canvas_sign",
+		"arts_and_crafts:light_gray_paintbrush": "farmersdelight:light_gray_canvas_sign",
+		"arts_and_crafts:gray_paintbrush": "farmersdelight:gray_canvas_sign",
+		"arts_and_crafts:black_paintbrush": "farmersdelight:black_canvas_sign",
+		"arts_and_crafts:brown_paintbrush": "farmersdelight:brown_canvas_sign",
+		"arts_and_crafts:red_paintbrush": "farmersdelight:red_canvas_sign",
+		"arts_and_crafts:orange_paintbrush": "farmersdelight:orange_canvas_sign",
+		"arts_and_crafts:yellow_paintbrush": "farmersdelight:yellow_canvas_sign",
+		"arts_and_crafts:lime_paintbrush": "farmersdelight:lime_canvas_sign",
+		"arts_and_crafts:green_paintbrush": "farmersdelight:green_canvas_sign",
+		"arts_and_crafts:cyan_paintbrush": "farmersdelight:cyan_canvas_sign",
+		"arts_and_crafts:light_blue_paintbrush": "farmersdelight:light_blue_canvas_sign",
+		"arts_and_crafts:blue_paintbrush": "farmersdelight:blue_canvas_sign",
+		"arts_and_crafts:purple_paintbrush": "farmersdelight:purple_canvas_sign",
+		"arts_and_crafts:magenta_paintbrush": "farmersdelight:magenta_canvas_sign",
+		"arts_and_crafts:pink_paintbrush": "farmersdelight:pink_canvas_sign",
+		"arts_and_crafts:bleachdew_paintbrush": "farmersdelight:canvas_sign"
+	}
+}

@@ -1,0 +1,14 @@
+{
+	"match": {
+		"items": [
+			"mynethersdelight:hot_cream",
+			"create:blaze_cake",
+			"create:creative_blaze_cake"
+		]
+	},
+	"luminance": {
+		"type": "block",
+		"block": "minecraft:lava"
+	},
+	"water_sensitive": true
+}

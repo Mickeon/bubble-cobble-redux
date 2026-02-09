@@ -1,0 +1,40 @@
+{
+	"blocks": [
+		"supplementaries:awning",
+		"supplementaries:awning_white",
+		"supplementaries:awning_black",
+		"supplementaries:awning_blue",
+		"supplementaries:awning_brown",
+		"supplementaries:awning_cyan",
+		"supplementaries:awning_gray",
+		"supplementaries:awning_green",
+		"supplementaries:awning_light_blue",
+		"supplementaries:awning_light_gray",
+		"supplementaries:awning_lime",
+		"supplementaries:awning_magenta",
+		"supplementaries:awning_orange",
+		"supplementaries:awning_pink",
+		"supplementaries:awning_purple",
+		"supplementaries:awning_red",
+		"supplementaries:awning_yellow"
+	],
+	"mappings": {
+		"arts_and_crafts:white_paintbrush": "supplementaries:awning_white",
+		"arts_and_crafts:light_gray_paintbrush": "supplementaries:awning_light_gray",
+		"arts_and_crafts:gray_paintbrush": "supplementaries:awning_gray",
+		"arts_and_crafts:black_paintbrush": "supplementaries:awning_black",
+		"arts_and_crafts:brown_paintbrush": "supplementaries:awning_brown",
+		"arts_and_crafts:red_paintbrush": "supplementaries:awning_red",
+		"arts_and_crafts:orange_paintbrush": "supplementaries:awning_orange",
+		"arts_and_crafts:yellow_paintbrush": "supplementaries:awning_yellow",
+		"arts_and_crafts:lime_paintbrush": "supplementaries:awning_lime",
+		"arts_and_crafts:green_paintbrush": "supplementaries:awning_green",
+		"arts_and_crafts:cyan_paintbrush": "supplementaries:awning_cyan",
+		"arts_and_crafts:light_blue_paintbrush": "supplementaries:awning_light_blue",
+		"arts_and_crafts:blue_paintbrush": "supplementaries:awning_blue",
+		"arts_and_crafts:purple_paintbrush": "supplementaries:awning_purple",
+		"arts_and_crafts:magenta_paintbrush": "supplementaries:awning_magenta",
+		"arts_and_crafts:pink_paintbrush": "supplementaries:awning_pink",
+		"arts_and_crafts:bleachdew_paintbrush": "supplementaries:awning"
+	}
+}

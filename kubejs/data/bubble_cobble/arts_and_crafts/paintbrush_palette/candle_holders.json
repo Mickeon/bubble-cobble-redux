@@ -1,0 +1,22 @@
+{
+	"blocks": "#supplementaries:candle_holders",
+	"mappings": {
+		"arts_and_crafts:white_paintbrush": "supplementaries:candle_holder_white",
+		"arts_and_crafts:light_gray_paintbrush": "supplementaries:candle_holder_light_gray",
+		"arts_and_crafts:gray_paintbrush": "supplementaries:candle_holder_gray",
+		"arts_and_crafts:black_paintbrush": "supplementaries:candle_holder_black",
+		"arts_and_crafts:brown_paintbrush": "supplementaries:candle_holder_brown",
+		"arts_and_crafts:red_paintbrush": "supplementaries:candle_holder_red",
+		"arts_and_crafts:orange_paintbrush": "supplementaries:candle_holder_orange",
+		"arts_and_crafts:yellow_paintbrush": "supplementaries:candle_holder_yellow",
+		"arts_and_crafts:lime_paintbrush": "supplementaries:candle_holder_lime",
+		"arts_and_crafts:green_paintbrush": "supplementaries:candle_holder_green",
+		"arts_and_crafts:cyan_paintbrush": "supplementaries:candle_holder_cyan",
+		"arts_and_crafts:light_blue_paintbrush": "supplementaries:candle_holder_light_blue",
+		"arts_and_crafts:blue_paintbrush": "supplementaries:candle_holder_blue",
+		"arts_and_crafts:purple_paintbrush": "supplementaries:candle_holder_purple",
+		"arts_and_crafts:magenta_paintbrush": "supplementaries:candle_holder_magenta",
+		"arts_and_crafts:pink_paintbrush": "supplementaries:candle_holder_pink",
+		"arts_and_crafts:bleachdew_paintbrush": "supplementaries:candle_holder"
+	}
+}

@@ -1,0 +1,38 @@
+{
+	"blocks": [
+		"createdeco:black_shipping_container",
+		"createdeco:blue_shipping_container",
+		"createdeco:brown_shipping_container",
+		"createdeco:cyan_shipping_container",
+		"createdeco:gray_shipping_container",
+		"createdeco:green_shipping_container",
+		"createdeco:light_blue_shipping_container",
+		"createdeco:light_gray_shipping_container",
+		"createdeco:lime_shipping_container",
+		"createdeco:magenta_shipping_container",
+		"createdeco:orange_shipping_container",
+		"createdeco:pink_shipping_container",
+		"createdeco:purple_shipping_container",
+		"createdeco:red_shipping_container",
+		"createdeco:white_shipping_container",
+		"createdeco:yellow_shipping_container"
+	],
+	"mappings": {
+		"arts_and_crafts:white_paintbrush": "createdeco:white_shipping_container",
+		"arts_and_crafts:light_gray_paintbrush": "createdeco:light_gray_shipping_container",
+		"arts_and_crafts:gray_paintbrush": "createdeco:gray_shipping_container",
+		"arts_and_crafts:black_paintbrush": "createdeco:black_shipping_container",
+		"arts_and_crafts:brown_paintbrush": "createdeco:brown_shipping_container",
+		"arts_and_crafts:red_paintbrush": "createdeco:red_shipping_container",
+		"arts_and_crafts:orange_paintbrush": "createdeco:orange_shipping_container",
+		"arts_and_crafts:yellow_paintbrush": "createdeco:yellow_shipping_container",
+		"arts_and_crafts:lime_paintbrush": "createdeco:lime_shipping_container",
+		"arts_and_crafts:green_paintbrush": "createdeco:green_shipping_container",
+		"arts_and_crafts:cyan_paintbrush": "createdeco:cyan_shipping_container",
+		"arts_and_crafts:light_blue_paintbrush": "createdeco:light_blue_shipping_container",
+		"arts_and_crafts:blue_paintbrush": "createdeco:blue_shipping_container",
+		"arts_and_crafts:purple_paintbrush": "createdeco:purple_shipping_container",
+		"arts_and_crafts:magenta_paintbrush": "createdeco:magenta_shipping_container",
+		"arts_and_crafts:pink_paintbrush": "createdeco:pink_shipping_container"
+	}
+}

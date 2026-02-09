@@ -1,0 +1,8 @@
+{
+	"match": {
+		"type": [
+			"gag:time_accelerator"
+		]
+	},
+	"luminance": 5
+}

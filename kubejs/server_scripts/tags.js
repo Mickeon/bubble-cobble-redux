@@ -5,10 +5,27 @@ const COPPER_BUTTONS = [
 	"copperagebackport:copper_button", "copperagebackport:exposed_copper_button", "copperagebackport:oxidized_copper_button", "copperagebackport:weathered_copper_button",
 	"copperagebackport:waxed_copper_button", "copperagebackport:waxed_exposed_copper_button", "copperagebackport:waxed_oxidized_copper_button",  "copperagebackport:waxed_weathered_copper_button"
 ]
-
 const COPPER_CHAINS = [
 	"minecraft:copper_chain", "minecraft:exposed_copper_chain", "minecraft:weathered_copper_chain", "minecraft:oxidized_copper_chain",
 	"minecraft:waxed_copper_chain", "minecraft:waxed_exposed_copper_chain", "minecraft:waxed_weathered_copper_chain", "minecraft:waxed_oxidized_copper_chain"
+]
+const PLACARDS = [
+	"create:placard",
+	"createdeco:black_placard",
+	"createdeco:blue_placard",
+	"createdeco:brown_placard",
+	"createdeco:cyan_placard",
+	"createdeco:gray_placard",
+	"createdeco:green_placard",
+	"createdeco:light_blue_placard",
+	"createdeco:light_gray_placard",
+	"createdeco:lime_placard",
+	"createdeco:magenta_placard",
+	"createdeco:orange_placard",
+	"createdeco:pink_placard",
+	"createdeco:purple_placard",
+	"createdeco:red_placard",
+	"createdeco:yellow_placard"
 ]
 
 ServerEvents.tags("item", event => {
@@ -129,8 +146,11 @@ ServerEvents.tags("item", event => {
 	event.add("create:chain_rideable", "#minecraft:pickaxes", "#minecraft:hoes") // Without the code below this would also include Hammers.
 
 	// Tidy up the way Hammers are tagged.
-	event.remove("minecraft:pickaxes", Ingredient.of("#justhammers:hammer").itemIds)
+	event.remove("minecraft:pickaxes", Ingredient.of("@justhammers").itemIds)
 	event.add("c:tools/mining_tool", "#justhammers:hammer")
+
+	// Bugged.
+	event.add("supplementaries:cannon_blacklist", "#comforts:sleeping_bags")
 })
 
 ServerEvents.tags("block", event => {
@@ -146,6 +166,7 @@ ServerEvents.tags("block", event => {
 	event.add("create:single_block_inventories", "supplementaries:sack", "supplementaries:safe", "supplementaries:pulley_block") // TODO: Report this.
 	event.add("minecraft:buttons", COPPER_BUTTONS)
 	event.add("minecraft:mineable/pickaxe", COPPER_BUTTONS)
+	event.add("createdeco:placards", PLACARDS)
 
 	// Other omissions that make sense.
 	event.add("create:windmill_sails", "#supplementaries:flags")
@@ -159,7 +180,9 @@ ServerEvents.tags("block", event => {
 
 	// Bugged. See also https://github.com/terrarium-earth/Handcrafted/issues/132.
 	event.add("c:relocation_not_supported",	"#handcrafted:nightstands", "#handcrafted:desks", "#handcrafted:counters", "#handcrafted:tables")
-	event.add("supplementaries:un_rotatable", "#c:relocation_not_supported")
+
+	// Weird, and bugged.
+	event.add("supplementaries:un_rotatable", "#c:relocation_not_supported", "#lootr:containers")
 
 	event.add("bubble_cobble:very_hot", "#farmersdelight:heat_sources")
 	event.add("supplementaries:lights_gunpowder", "#bubble_cobble:very_hot") // This has weird consequences (e.g. Campfire lights up Gunpowder)

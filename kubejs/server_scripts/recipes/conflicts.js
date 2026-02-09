@@ -38,4 +38,7 @@ ServerEvents.recipes(event => {
 		Ingredient.of("#c:sands/red"),
 		Ingredient.of("paper", 2)
 	]).id("create:crafting/materials/red_sand_paper")
+
+	// Recipe conflict between Minecraft's Crafting Table and Biomes We've Gone's Crafting Table variations.
+	event.replaceInput({id: "minecraft:crafting_table"}, "*", Ingredient.of("#minecraft:planks").except("@biomeswevegone"))
 })

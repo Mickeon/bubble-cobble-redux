@@ -11,6 +11,8 @@
     "supplementaries:cannonball",
     "mowziesmobs:boulder_platform",
     "mowziesmobs:boulder_platform_crumbling",
-    "yo_hooks:hook_entity"
+    "yo_hooks:hook_entity",
+    "minecraft:experience_orb",
+    "relics:relic_experience_orb"
   ]
 }

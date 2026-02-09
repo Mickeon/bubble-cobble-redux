@@ -1,0 +1,21 @@
+{
+	"blocks": "#create:toolboxes",
+	"mappings": {
+		"arts_and_crafts:white_paintbrush": "create:white_toolbox",
+		"arts_and_crafts:light_gray_paintbrush": "create:light_gray_toolbox",
+		"arts_and_crafts:gray_paintbrush": "create:gray_toolbox",
+		"arts_and_crafts:black_paintbrush": "create:black_toolbox",
+		"arts_and_crafts:brown_paintbrush": "create:brown_toolbox",
+		"arts_and_crafts:red_paintbrush": "create:red_toolbox",
+		"arts_and_crafts:orange_paintbrush": "create:orange_toolbox",
+		"arts_and_crafts:yellow_paintbrush": "create:yellow_toolbox",
+		"arts_and_crafts:lime_paintbrush": "create:lime_toolbox",
+		"arts_and_crafts:green_paintbrush": "create:green_toolbox",
+		"arts_and_crafts:cyan_paintbrush": "create:cyan_toolbox",
+		"arts_and_crafts:light_blue_paintbrush": "create:light_blue_toolbox",
+		"arts_and_crafts:blue_paintbrush": "create:blue_toolbox",
+		"arts_and_crafts:purple_paintbrush": "create:purple_toolbox",
+		"arts_and_crafts:magenta_paintbrush": "create:magenta_toolbox",
+		"arts_and_crafts:pink_paintbrush": "create:pink_toolbox"
+	}
+}
