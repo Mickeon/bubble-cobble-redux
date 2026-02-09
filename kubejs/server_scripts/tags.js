@@ -40,12 +40,11 @@ ServerEvents.tags("item", event => {
 	event.add("c:foods/edible_when_placed", "#farmersdelight:feasts") // TODO: Report this, Stuffed Squid & co. missing. For our case we can just assume every Feast counts.
 	event.add("c:paper", "create_bic_bit:dirty_paper")
 	event.add("c:doughs/wheat", "#c:dough/wheat") // Reported: https://github.com/vectorwing/FarmersDelight/issues/1215
-	event.add("c:buckets", "sliceanddice:fertilizer_bucket", "create_bic_bit:ketchup_bucket", "create_bic_bit:mayonnaise_bucket", "create_bic_bit:frying_oil_bucket", "biomesoplenty:blood_bucket", "undergroundworlds:quicksand_bucket", "biomesoplenty:liquid_null_bucket", /*"reptilian:treat_bucket",*/ "sophisticatedcore:xp_bucket") // TODO: Report this.
+	event.add("c:buckets", "sliceanddice:fertilizer_bucket", "create_bic_bit:ketchup_bucket", "create_bic_bit:mayonnaise_bucket", "create_bic_bit:frying_oil_bucket", "biomesoplenty:blood_bucket", "undergroundworlds:quicksand_bucket", "biomesoplenty:liquid_null_bucket", "sophisticatedcore:xp_bucket") // TODO: Report this.
 	event.add("c:buckets/entity_water", "create_bic_bit:herring_bucket") // Reported: https://discord.com/channels/1141667941935501442/1448294211542716550/1448294211542716550
 	event.add("c:drinks", "#c:drinks/tea", "create_bic_bit:ketchup_bottle", "create_bic_bit:mayonnaise_bottle", "create_bic_bit:frying_oil_bottle") // Reported: https://discord.com/channels/1141667941935501442/1448294211542716550/1448294211542716550
 	event.add("c:drinks/tea", "herbalbrews:green_tea", "herbalbrews:black_tea", "herbalbrews:hibiscus_tea", "herbalbrews:lavender_tea", "herbalbrews:rooibos_tea", "herbalbrews:oolong_tea", "herbalbrews:yerba_mate_tea") // TODO: Report this.
 	event.add("c:drinks/juice", "kubejs:berry_juice_soda", "biomeswevegone:aloe_vera_juice")
-	// event.add("c:obsidians", "astral_dimension:gloomy_obsidian", "astral_dimension:glowing_obsidian")
 	event.add("supplementaries:statue_swords", "#minecraft:swords")
 	event.add("cobblemon:water_stone_ores", "mega_showdown:mega_meteorid_water_ore") // Reported: https://github.com/yajatkaul/CobblemonMegaShowdown/issues/144
 	event.add("cobblemon:dawn_stone_ores", "mega_showdown:mega_meteorid_dawn_ore")
@@ -63,7 +62,7 @@ ServerEvents.tags("item", event => {
 	event.add("c:ingots", "#c:ingots/industrial_iron")
 	event.add("c:storage_blocks", "#c:storage_blocks/industrial_iron")
 	event.add("c:storage_blocks/industrial_iron", "create:industrial_iron_block")
-	event.add("minecraft:piglin_loved", "solonion:golden_lunchbox", "handcrafted:golden_thin_pot", "handcrafted:golden_thick_pot", "handcrafted:golden_wide_pot", "handcrafted:golden_medium_pot", /*"astral_dimension:golden_bone", "astral_dimension:golden_bone_meal", "astral_dimension:astral_gold_ore", "astral_dimension:gold_eye_block"*/) // Partially reported: https://github.com/terrarium-earth/Handcrafted/issues/152
+	event.add("minecraft:piglin_loved", "solonion:golden_lunchbox", "handcrafted:golden_thin_pot", "handcrafted:golden_thick_pot", "handcrafted:golden_wide_pot", "handcrafted:golden_medium_pot") //Reported: https://github.com/terrarium-earth/Handcrafted/issues/152
 	event.add("minecraft:horse_food", "biomeswevegone:green_apple") // TODO: Report this.
 	event.add("c:music_discs", "cnc:music_disc_slough_choir", "cnc:music_disc_wreck_of_the_old_97", "cnc:music_disc_hills")
 	event.removeAll("minecraft:music_discs") // This tag doesn't exist anymore.
@@ -107,7 +106,7 @@ ServerEvents.tags("item", event => {
 	event.add("supplementaries:blackboard_light_blue", "minecraft:diamond", "biomesoplenty:glowworm_silk", "biomeswevegone:blue_glowcane_powder")
 	event.add("supplementaries:blackboard_blue",       "minecraft:lapis_lazuli", "cobblemon:blue_apricorn", "cobblemon:blue_mint_leaf", "biomeswevegone:blueberries")
 	event.add("supplementaries:blackboard_purple",     "minecraft:amethyst_shard")
-	// event.add("supplementaries:blackboard_magenta",    /*"reptilian:magenta_chameleon_scales"*/)
+	event.add("supplementaries:blackboard_magenta",    "arts_and_crafts:magenta_paintbrush")
 	event.add("supplementaries:blackboard_pink",       "cobblemon:pink_apricorn")
 
 	event.add("supplementaries:hourglass_dusts",

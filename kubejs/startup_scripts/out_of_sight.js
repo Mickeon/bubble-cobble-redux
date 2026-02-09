@@ -22,10 +22,6 @@ global.DISABLED_ITEMS = [
 	// Overpowered.
 	/^constructionstick:template/,
 
-	// In favour of Sophisticated Backpacks.
-	// "astral_dimension:backpack",
-	// "astral_dimension:harsh_backpack",
-
 	// In favour of Minecraft's own Copper Nugget.
 	"create:copper_nugget",
 
