@@ -92,22 +92,22 @@ ServerEvents.tags("item", event => {
 	event.add("soulbound:enchantable", "#c:tools")
 
 	// Why not? It's fun.
-	event.add("supplementaries:blackboard_white",      "minecraft:sugar", "cobblemon:white_apricorn", "cobblemon:white_mint_leaf")
-	event.add("supplementaries:blackboard_light_gray", "minecraft:iron_ingot", "minecraft:clay_ball")
-	event.add("supplementaries:blackboard_gray",       "supplementaries:ash", "supplementaries:ash_brick")
-	event.add("supplementaries:blackboard_black",      "minecraft:ink_sac", "minecraft:flint", "minecraft:netherite_ingot", "cobblemon:black_apricorn")
-	event.add("supplementaries:blackboard_brown",      "create:bar_of_chocolate")
-	event.add("supplementaries:blackboard_red",        "minecraft:redstone", "minecraft:beetroot", "minecraft:nether_wart", "minecraft:brick", "cobblemon:red_apricorn", "cobblemon:red_mint_leaf", "biomeswevegone:red_glowcane_powder")
-	event.add("supplementaries:blackboard_orange",     "minecraft:copper_ingot")
-	event.add("supplementaries:blackboard_yellow",     "minecraft:gold_ingot", "cobblemon:yellow_apricorn", "biomeswevegone:yellow_glowcane_powder")
-	event.add("supplementaries:blackboard_lime",       "minecraft:emerald", "cobblemon:green_mint_leaf", "biomeswevegone:green_glowcane_powder")
-	event.add("supplementaries:blackboard_green",      "minecraft:moss_block", "minecraft:moss_carpet", "minersdelight:moss", "cobblemon:green_apricorn")
-	event.add("supplementaries:blackboard_cyan",       "minecraft:prismarine_shard", "cobblemon:cyan_mint_leaf")
-	event.add("supplementaries:blackboard_light_blue", "minecraft:diamond", "biomesoplenty:glowworm_silk", "biomeswevegone:blue_glowcane_powder")
-	event.add("supplementaries:blackboard_blue",       "minecraft:lapis_lazuli", "cobblemon:blue_apricorn", "cobblemon:blue_mint_leaf", "biomeswevegone:blueberries")
-	event.add("supplementaries:blackboard_purple",     "minecraft:amethyst_shard")
-	event.add("supplementaries:blackboard_magenta",    "arts_and_crafts:magenta_paintbrush")
-	event.add("supplementaries:blackboard_pink",       "cobblemon:pink_apricorn")
+	event.add("supplementaries:blackboard_white",      "minecraft:sugar", "cobblemon:white_apricorn", "cobblemon:white_mint_leaf", "arts_and_crafts:white_paintbrush", "arts_and_crafts:white_chalk_stick")
+	event.add("supplementaries:blackboard_light_gray", "minecraft:iron_ingot", "minecraft:clay_ball", "arts_and_crafts:light_gray_paintbrush", "arts_and_crafts:light_gray_chalk_stick")
+	event.add("supplementaries:blackboard_gray",       "supplementaries:ash", "supplementaries:ash_brick", "arts_and_crafts:gray_paintbrush", "arts_and_crafts:gray_chalk_stick")
+	event.add("supplementaries:blackboard_black",      "minecraft:ink_sac", "minecraft:flint", "minecraft:netherite_ingot", "cobblemon:black_apricorn", "arts_and_crafts:black_paintbrush", "arts_and_crafts:black_chalk_stick")
+	event.add("supplementaries:blackboard_brown",      "create:bar_of_chocolate", "arts_and_crafts:brown_paintbrush", "arts_and_crafts:brown_chalk_stick")
+	event.add("supplementaries:blackboard_red",        "minecraft:redstone", "minecraft:beetroot", "minecraft:nether_wart", "minecraft:brick", "cobblemon:red_apricorn", "cobblemon:red_mint_leaf", "biomeswevegone:red_glowcane_powder", "arts_and_crafts:red_paintbrush", "arts_and_crafts:red_chalk_stick")
+	event.add("supplementaries:blackboard_orange",     "minecraft:copper_ingot", "arts_and_crafts:orange_paintbrush", "arts_and_crafts:orange_stick")
+	event.add("supplementaries:blackboard_yellow",     "minecraft:gold_ingot", "cobblemon:yellow_apricorn", "biomeswevegone:yellow_glowcane_powder", "arts_and_crafts:yellow_paintbrush", "arts_and_crafts:yellow_chalk_stick")
+	event.add("supplementaries:blackboard_lime",       "minecraft:emerald", "cobblemon:green_mint_leaf", "biomeswevegone:green_glowcane_powder", "arts_and_crafts:lime_paintbrush", "arts_and_crafts:lime_chalk_stick")
+	event.add("supplementaries:blackboard_green",      "minecraft:moss_block", "minecraft:moss_carpet", "minersdelight:moss", "cobblemon:green_apricorn", "arts_and_crafts:green_paintbrush", "arts_and_crafts:green_chalk_stick")
+	event.add("supplementaries:blackboard_cyan",       "minecraft:prismarine_shard", "cobblemon:cyan_mint_leaf", "arts_and_crafts:cyan_paintbrush", "arts_and_crafts:cyan_chalk_stick")
+	event.add("supplementaries:blackboard_light_blue", "minecraft:diamond", "biomesoplenty:glowworm_silk", "biomeswevegone:blue_glowcane_powder", "arts_and_crafts:light_blue_paintbrush", "arts_and_crafts:light_blue_chalk_stick")
+	event.add("supplementaries:blackboard_blue",       "minecraft:lapis_lazuli", "cobblemon:blue_apricorn", "cobblemon:blue_mint_leaf", "biomeswevegone:blueberries", "arts_and_crafts:blue_paintbrush", "arts_and_crafts:blue_chalk_stick")
+	event.add("supplementaries:blackboard_purple",     "minecraft:amethyst_shard", "arts_and_crafts:purple_paintbrush", "arts_and_crafts:purple_chalk_stick")
+	event.add("supplementaries:blackboard_magenta",    "arts_and_crafts:magenta_paintbrush", "arts_and_crafts:magenta_chalk_stick")
+	event.add("supplementaries:blackboard_pink",       "cobblemon:pink_apricorn", "arts_and_crafts:pink_paintbrush", "arts_and_crafts:pink_chalk_stick")
 
 	event.add("supplementaries:hourglass_dusts",
 		"#biomeswevegone:glowcane_powder",
@@ -293,7 +293,6 @@ ServerEvents.tags("worldgen/biome", event => {
 ServerEvents.tags("worldgen/structure", event => {
 	// For advancement.
 	event.add("bubble_cobble:ships",
-		"#cobblemon:fishing_boat",
 		"supplementaries:galleon",
 		"awesomedungeonocean:frigate_medium",
 		"awesomedungeonocean:frigate_large",
