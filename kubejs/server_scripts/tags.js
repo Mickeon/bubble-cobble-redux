@@ -36,10 +36,9 @@ ServerEvents.tags("item", event => {
 	event.add("c:foods/raw_fish", "create_bic_bit:raw_herring", "minersdelight:squid", "minersdelight:glow_squid", "minersdelight:tentacles") // We only really use this ourselves for haunting Zinc. Perhaps these definitions should be removed.
 	event.add("c:foods/safe_raw_fish", "create_bic_bit:raw_herring")
 	event.add("c:foods/cooked_fish", "create_bic_bit:cooked_herring")
-	event.add("c:foods/food_poisoning", "minersdelight:copper_carrot", "minersdelight:bat_wing", "minersdelight:arthropod", "minersdelight:squid", "farmersdelight:wheat_dough", "farmersdelight:raw_pasta", "mynethersdelight:ghasta", "mynethersdelight:ghast_dough")
+	event.add("c:foods/food_poisoning", "minersdelight:copper_carrot", "minersdelight:bat_wing", "minersdelight:arthropod", "minersdelight:squid", "mynethersdelight:ghasta", "mynethersdelight:ghast_dough")
 	event.add("c:foods/edible_when_placed", "#farmersdelight:feasts") // TODO: Report this, Stuffed Squid & co. missing. For our case we can just assume every Feast counts.
 	event.add("c:paper", "create_bic_bit:dirty_paper")
-	event.add("c:doughs/wheat", "#c:dough/wheat") // Reported: https://github.com/vectorwing/FarmersDelight/issues/1215
 	event.add("c:buckets", "sliceanddice:fertilizer_bucket", "create_bic_bit:ketchup_bucket", "create_bic_bit:mayonnaise_bucket", "create_bic_bit:frying_oil_bucket", "biomesoplenty:blood_bucket", "undergroundworlds:quicksand_bucket", "biomesoplenty:liquid_null_bucket", "sophisticatedcore:xp_bucket") // TODO: Report this.
 	event.add("c:buckets/entity_water", "create_bic_bit:herring_bucket") // Reported: https://discord.com/channels/1141667941935501442/1448294211542716550/1448294211542716550
 	event.add("c:drinks", "#c:drinks/tea", "create_bic_bit:ketchup_bottle", "create_bic_bit:mayonnaise_bottle", "create_bic_bit:frying_oil_bottle") // Reported: https://discord.com/channels/1141667941935501442/1448294211542716550/1448294211542716550
@@ -79,8 +78,8 @@ ServerEvents.tags("item", event => {
 	event.add("cobblemon:held/leaves_leftover", "create:honeyed_apple", "biomeswevegone:green_apple")
 	event.add("brewinandchewin:raw_meats", "#c:foods/raw_meat")
 	event.add("c:cheese", "#brewinandchewin:foods/cheese_wedge") // Required because we disabled Bitterballen's cheese.
-	event.add("c:drinks/milk", "farmersdelight:milk_bottle", "minersdelight:milk_cup")
-	event.add("c:foods/milk", "#c:drinks/milk")
+	event.add("c:drinks/milk", "minersdelight:milk_cup")
+	event.add("c:foods/milk", "minersdelight:milk_cup", "cobblemon:moomoo_milk") // Deprecated tag.
 
 	// Makes sense.
 	event.add("c:tools", "#constructionstick:construction_sticks", "#yo_hooks:enchantable/hooks")
@@ -158,7 +157,6 @@ ServerEvents.tags("block", event => {
 	event.add("c:chests", "#minecraft:copper_chests", "undergroundworlds:ice_chest", "undergroundworlds:temple_chest", "undergroundworlds:web_covered_chest") // TODO: Report this.
 	event.add("minecraft:wither_summon_base_blocks", "mynethersdelight:resurgent_soil") // TODO: Report on My Nether Delight.
 	event.add("minecraft:hoglin_repellents", "mynethersdelight:warped_fungus_colony") // TODO: Report on My Nether Delight. Used to be reported on https://github.com/Chefs-Delight/NethersDelight_Forge/issues/46
-	event.add("minecraft:mineable/shear", "farmersdelight:rope")
 	event.add("minecraft:enchantment_power_provider", "#handcrafted:shelves") // https://github.com/terrarium-earth/Handcrafted/issues/136
 	event.add("minecraft:guarded_by_piglins", "handcrafted:golden_thin_pot", "handcrafted:golden_thick_pot", "handcrafted:golden_wide_pot", "handcrafted:golden_medium_pot") // Reported: https://github.com/terrarium-earth/Handcrafted/issues/152
 	event.add("cobblemon:machines", "simpletms:machine_tm")
@@ -166,6 +164,7 @@ ServerEvents.tags("block", event => {
 	event.add("minecraft:buttons", COPPER_BUTTONS)
 	event.add("minecraft:mineable/pickaxe", COPPER_BUTTONS)
 	event.add("createdeco:placards", PLACARDS)
+	event.add("farmersdelight:mineable/knife", "#c:ropes") // Just to include Supplementaries's rope. Probably should be reported.
 
 	// Other omissions that make sense.
 	event.add("create:windmill_sails", "#supplementaries:flags")
@@ -174,7 +173,7 @@ ServerEvents.tags("block", event => {
 	event.add("create:fan_processing_catalysts/smoking", "supplementaries:fire_pit", "cobblemon:campfire")
 	event.add("create:fan_processing_catalysts/blasting", "mynethersdelight:magma_cake_block", "cobblemon:fire_stone_block")
 	event.add("supplementaries:water_holder", "minersdelight:sticky_basket") // TODO: Report this? Supplementaries can't account for everyone, can it?
-	event.add("farmersdelight:mineable/knife", "#c:ropes") // Just to include other ropes, too.
+	event.add("minecraft:mineable/shear", "farmersdelight:rope")
 	event.add("herbalbrews:allows_cooking", "mynethersdelight:nether_stove")
 
 	// Bugged. See also https://github.com/terrarium-earth/Handcrafted/issues/132.
