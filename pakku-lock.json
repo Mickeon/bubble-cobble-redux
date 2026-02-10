@@ -8392,6 +8392,43 @@
             ]
         },
         {
+            "pakku_id": "kCn5C5mwmI49i1QS",
+            "type": "MOD",
+            "side": "SERVER",
+            "slug": {
+                "modrinth": "servercore"
+            },
+            "name": {
+                "modrinth": "ServerCore"
+            },
+            "id": {
+                "modrinth": "4WWQxlQP"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "servercore-neoforge-1.5.10+1.21.1.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "beta",
+                    "url": "https://cdn.modrinth.com/data/4WWQxlQP/versions/77MAnmOn/servercore-neoforge-1.5.10+1.21.1.jar",
+                    "id": "77MAnmOn",
+                    "parent_id": "4WWQxlQP",
+                    "hashes": {
+                        "sha512": "eb6ed9c72219de80b22d2c9ca63a5cd4c613fd02d72d5bc1de432fe6c501afa2fecf271bb1696ffc987146192de2cba47e7a34fae87076e0a400b962ce3b67bc",
+                        "sha1": "4524cd40cfa5019d8b5fbcb628b1616031838a0c"
+                    },
+                    "required_dependencies": [],
+                    "size": 1429522,
+                    "date_published": "2025-04-06T10:55:50.886716Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "h2Ei2RsqA0IvBoSv",
             "type": "MOD",
             "side": "CLIENT",
