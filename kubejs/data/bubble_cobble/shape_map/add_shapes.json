@@ -1,0 +1,58 @@
+{
+	"copycats:copycat_block": [
+		"copycats:copycat_slab",
+		"copycats:copycat_stairs",
+		"copycats:copycat_wall"
+	],
+	"copycats:copycat_pane": [
+		"copycats:copycat_flat_pane"
+	],
+	"create:copycat_step": [
+		"copycats:copycat_vertical_step"
+	],
+	"copycats:copycat_slope": [
+		"copycats:copycat_vertical_slope"
+	],
+	"copycats:copycat_fence": [
+		"copycats:copycat_fence_gate"
+	],
+	"copycats:copycat_wooden_pressure_plate": [
+		"copycats:copycat_stone_pressure_plate"
+	],
+	"copycats:copycat_light_weighted_pressure_plate": [
+		"copycats:copycat_heavy_weighted_pressure_plate"
+	],
+	"create:framed_glass": [
+		"create:vertical_framed_glass",
+		"create:horizontal_framed_glass",
+		"create:tiled_glass"
+	],
+	"create:framed_glass_pane": [
+		"create:vertical_framed_glass_pane",
+		"create:horizontal_framed_glass_pane",
+		"create:tiled_glass_pane"
+	],
+	"createdeco:decal_warning": [
+		"createdeco:decal_creeper",
+		"createdeco:decal_skull",
+		"createdeco:decal_flow",
+		"createdeco:decal_ice",
+		"createdeco:decal_radioactive",
+		"createdeco:decal_cross"
+	],
+	"createdeco:decal_top_left": [
+		"createdeco:decal_up",
+		"createdeco:decal_top_right",
+		"createdeco:decal_left",
+		"createdeco:decal_right",
+		"createdeco:decal_down_left",
+		"createdeco:decal_down",
+		"createdeco:decal_down_right"
+	],
+	"createdeco:decal_fluid": [
+		"createdeco:decal_fire",
+		"createdeco:decal_electrical",
+		"createdeco:decal_fire_diamond",
+		"createdeco:decal_no_entry"
+	]
+}
