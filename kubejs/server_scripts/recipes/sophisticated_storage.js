@@ -122,4 +122,76 @@ ServerEvents.recipes(event => {
 	// Use Cobblemon's Magnet for Magnet Upgrades.
 	// Too expensive. Needs more complex replacement.
 	// event.replaceInput({id: /^sophisticated.*magnet_upgrade$/}, "minecraft:iron_ingot", "cobblemon:magnet")
+
+	add_sophisticated_storage_recipes_for_modded_wood_types(event)
 })
+
+const STORAGE_WOOD_TYPES = [
+	{
+		id: "biomeswevegone:zelkova",
+		name: "zelkova",
+		planks: "biomeswevegone:zelkova_planks",
+		slabs: "biomeswevegone:zelkova_slab",
+		main_color: -4166102,
+		accent_color: -10011877,
+	},
+	{
+		id: "biomesoplenty:jacaranda",
+		name: "pale_jacaranda",
+		planks: "biomesoplenty:jacaranda_planks",
+		slabs: "biomesoplenty:jacaranda_slab",
+		main_color: Color.wrap("#FFF9FFFE").getArgb(),
+		accent_color: Color.wrap("#FFEBCEFB").getArgb(),
+	}
+]
+
+const Patterns = {
+	CHEST: ["PPP", "PRP", "PPP"],
+	BARREL: ["PSP", "PRP", "PSP"],
+	LIMITED_BARREL_1: ["PSP", "PRP", "PPP"],
+	LIMITED_BARREL_2: ["PPP", "SRS", "PPP"],
+	LIMITED_BARREL_3: ["PSP", "PRP", "SPS"],
+	LIMITED_BARREL_4: ["SPS", "PRP", "SPS"],
+}
+
+/**
+ * @param {import("dev.latvian.mods.kubejs.recipe.RecipesKubeEvent").$RecipesKubeEvent$$Original} event
+ */
+function add_sophisticated_storage_recipes_for_modded_wood_types(event) {
+	for (const type of STORAGE_WOOD_TYPES) {
+		let {id, name, planks, slabs, main_color, accent_color} = type
+
+		let components = {
+			"sophisticatedstorage:wood_type": id,
+			"sophisticatedcore:main_color": main_color,
+			"sophisticatedcore:accent_color": accent_color,
+		}
+		event.shaped(Item.of("sophisticatedstorage:chest", components),
+			Patterns.CHEST,
+			{
+				P: planks,
+				R: "sophisticatedstorage:basic_tier_upgrade"
+			}
+		).id(`kubejs:sophisticatedstorage/${name}_chest`)
+
+		let barrel_keys = {
+			P: planks,
+			S: slabs,
+			R: "sophisticatedstorage:basic_tier_upgrade"
+		}
+		event.shaped(Item.of("sophisticatedstorage:barrel", components), Patterns.BARREL, barrel_keys)
+				.id(`kubejs:sophisticatedstorage/${name}_barrel`)
+
+		event.shaped(Item.of("sophisticatedstorage:limited_barrel_1", components), Patterns.LIMITED_BARREL_1, barrel_keys)
+				.id(`kubejs:sophisticatedstorage/${name}_limited_barrel_1`)
+
+		event.shaped(Item.of("sophisticatedstorage:limited_barrel_2", components), Patterns.LIMITED_BARREL_2, barrel_keys)
+				.id(`kubejs:sophisticatedstorage/${name}_limited_barrel_2`)
+
+		event.shaped(Item.of("sophisticatedstorage:limited_barrel_3", components), Patterns.LIMITED_BARREL_3, barrel_keys)
+				.id(`kubejs:sophisticatedstorage/${name}_limited_barrel_3`)
+
+		event.shaped(Item.of("sophisticatedstorage:limited_barrel_4", components), Patterns.LIMITED_BARREL_4, barrel_keys)
+				.id(`kubejs:sophisticatedstorage/${name}_limited_barrel_4`)
+	}
+}

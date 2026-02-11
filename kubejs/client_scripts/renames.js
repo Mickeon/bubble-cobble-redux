@@ -15,6 +15,7 @@ ClientEvents.lang("en_us", event => {
 	event.add("farmersdelight", "block.farmersdelight.rope", "Straw Rope")
 	event.add("cobblemon", "block.cobblemon.tatami_block", "Hearty Tatami Block")
 	event.add("cobblemon", "block.cobblemon.tatami_mat", "Hearty Tatami Mat")
+	event.add("sophisticatedstorage", "item.sophisticatedstorage.paintbrush", "Storage Paintbrush")
 
 	// Accounting for Mending Rework.
 	event.add("enchdesc", "enchantment.minecraft.mending.desc", "When repaired, restores more durability and never damages the Anvil.")
@@ -89,6 +90,11 @@ ClientEvents.lang("en_us", event => {
 		"block.createmonballsoverhaul.standard_tumblestone_coating_block": "Standard Tumblestone Coating",
 	})
 	event.add("tmtcobfarm", "block.tmtcobfarm.stove_campfire", "Stove with Campfire Pot")
+
+	event.addAll("sophisticatedstorage", {
+		"wood_name.sophisticatedstorage.biomeswevegone:zelkova": "Zelkova",
+		"wood_name.sophisticatedstorage.biomesoplenty:jacaranda": "Pale Jacaranda",
+	})
 })
 
 // This doesn't work for the first load.
