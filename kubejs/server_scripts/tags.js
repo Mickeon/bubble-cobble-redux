@@ -37,7 +37,7 @@ ServerEvents.tags("item", event => {
 	event.add("c:foods/safe_raw_fish", "create_bic_bit:raw_herring")
 	event.add("c:foods/cooked_fish", "create_bic_bit:cooked_herring")
 	event.add("c:foods/food_poisoning", "minersdelight:copper_carrot", "minersdelight:bat_wing", "minersdelight:arthropod", "minersdelight:squid", "mynethersdelight:ghasta", "mynethersdelight:ghast_dough")
-	event.add("c:foods/edible_when_placed", "#farmersdelight:feasts") // TODO: Report this, Stuffed Squid & co. missing. For our case we can just assume every Feast counts.
+	event.add("c:foods/edible_when_placed", "#farmersdelight:feasts") // Reported https://github.com/vectorwing/FarmersDelight/issues/1234. Stuffed Squid & co. missing. For our case we can just assume every Feast counts.
 	event.add("c:paper", "create_bic_bit:dirty_paper")
 	event.add("c:buckets", "sliceanddice:fertilizer_bucket", "create_bic_bit:ketchup_bucket", "create_bic_bit:mayonnaise_bucket", "create_bic_bit:frying_oil_bucket", "biomesoplenty:blood_bucket", "undergroundworlds:quicksand_bucket", "biomesoplenty:liquid_null_bucket", "sophisticatedcore:xp_bucket") // TODO: Report this.
 	event.add("c:buckets/entity_water", "create_bic_bit:herring_bucket") // Reported: https://discord.com/channels/1141667941935501442/1448294211542716550/1448294211542716550
@@ -97,7 +97,7 @@ ServerEvents.tags("item", event => {
 	event.add("supplementaries:blackboard_black",      "minecraft:ink_sac", "minecraft:flint", "minecraft:netherite_ingot", "cobblemon:black_apricorn", "arts_and_crafts:black_paintbrush", "arts_and_crafts:black_chalk_stick")
 	event.add("supplementaries:blackboard_brown",      "create:bar_of_chocolate", "arts_and_crafts:brown_paintbrush", "arts_and_crafts:brown_chalk_stick")
 	event.add("supplementaries:blackboard_red",        "minecraft:redstone", "minecraft:beetroot", "minecraft:nether_wart", "minecraft:brick", "cobblemon:red_apricorn", "cobblemon:red_mint_leaf", "biomeswevegone:red_glowcane_powder", "arts_and_crafts:red_paintbrush", "arts_and_crafts:red_chalk_stick")
-	event.add("supplementaries:blackboard_orange",     "minecraft:copper_ingot", "arts_and_crafts:orange_paintbrush", "arts_and_crafts:orange_stick")
+	event.add("supplementaries:blackboard_orange",     "minecraft:copper_ingot", "arts_and_crafts:orange_paintbrush", "arts_and_crafts:orange_chalk_stick")
 	event.add("supplementaries:blackboard_yellow",     "minecraft:gold_ingot", "cobblemon:yellow_apricorn", "biomeswevegone:yellow_glowcane_powder", "arts_and_crafts:yellow_paintbrush", "arts_and_crafts:yellow_chalk_stick")
 	event.add("supplementaries:blackboard_lime",       "minecraft:emerald", "cobblemon:green_mint_leaf", "biomeswevegone:green_glowcane_powder", "arts_and_crafts:lime_paintbrush", "arts_and_crafts:lime_chalk_stick")
 	event.add("supplementaries:blackboard_green",      "minecraft:moss_block", "minecraft:moss_carpet", "minersdelight:moss", "cobblemon:green_apricorn", "arts_and_crafts:green_paintbrush", "arts_and_crafts:green_chalk_stick")
@@ -170,7 +170,7 @@ ServerEvents.tags("block", event => {
 	event.add("create:windmill_sails", "#supplementaries:flags")
 	event.add("create:fan_transparent",	"farmersdelight:safety_net", /^minecraft:.*copper_(bars|trapdoor)$/, /ladder$/, "cobblemon:water_stone_block", "cobblemon:fire_stone_block") // Fun.
 	event.add("create:fan_processing_catalysts/splashing", "cobblemon:water_stone_block")
-	event.add("create:fan_processing_catalysts/smoking", "supplementaries:fire_pit", "cobblemon:campfire")
+	event.add("create:fan_processing_catalysts/smoking", "supplementaries:fire_pit", "cobblemon:campfire") // Reported. https://github.com/MehVahdJukaar/Supplementaries/pull/1884.
 	event.add("create:fan_processing_catalysts/blasting", "mynethersdelight:magma_cake_block", "cobblemon:fire_stone_block")
 	event.add("supplementaries:water_holder", "minersdelight:sticky_basket") // TODO: Report this? Supplementaries can't account for everyone, can it?
 	event.add("minecraft:mineable/shear", "farmersdelight:rope")
@@ -185,8 +185,7 @@ ServerEvents.tags("block", event => {
 	event.add("bubble_cobble:very_hot", "#farmersdelight:heat_sources")
 	event.add("supplementaries:lights_gunpowder", "#bubble_cobble:very_hot") // This has weird consequences (e.g. Campfire lights up Gunpowder)
 	event.add("create:passive_boiler_heaters", "#bubble_cobble:very_hot")
-	// event.add("farmersdelight:heat_sources", "#bubble_cobble:very_hot") // Unnecessary.
-	event.add("minecraft:strider_warm_blocks",    "#bubble_cobble:very_hot")
+	event.add("minecraft:strider_warm_blocks", "#bubble_cobble:very_hot")
 	event.add("bubble_cobble:very_cold",  "cobblemon:ice_stone_block", "yungscavebiomes:rare_ice", /undergroundworlds:ice_/)
 	event.add("brewinandchewin:freeze_sources", "#bubble_cobble:very_cold")
 

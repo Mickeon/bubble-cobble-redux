@@ -10,7 +10,7 @@
     "preventEnderpearl": true,
     "preventChorusFruit": true,
     "visualizerEnabled": true,
-    "visualizerRange": 8,
+    "visualizerRange": 32,
     "visualizerColor": "20A0FF"
   },
   "mapOptions": {

@@ -8,6 +8,9 @@
 		},
 		{
 			"category": "minersdelight:copper_pot_cooking"
+		},
+		{
+			"id": "toomanyrecipeviewers:/create/potion_of_luck1"
 		}
 	]
 }
