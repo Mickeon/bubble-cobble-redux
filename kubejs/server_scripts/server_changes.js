@@ -444,8 +444,8 @@ ServerEvents.basicCommand("currentstructure", event => {
 // HACK: I have code below to mitigate this, but it's nasty, on server loaded. FluidInteractionRegistry persists
 // when the server is closed. This is fine for dedicated servers, but you will eventually run out of memory in singleplayer.
 // At the same time, interactions can't be added properly on startup as some registries are not ready yet(?)
-// /** @type {typeof import("java.util.function.Function").$Function } */
-// let $JavaFunction  = Java.loadClass("java.util.function.Function")
+/** @type {typeof import("java.util.function.Function").$Function } */
+let $JavaFunction  = Java.loadClass("java.util.function.Function")
 // https://lexxie.dev/neoforge/1.21.1/net/neoforged/neoforge/fluids/FluidInteractionRegistry.FluidInteraction.html
 /** @type {typeof import("net.neoforged.neoforge.fluids.FluidInteractionRegistry").$FluidInteractionRegistry } */
 let $FluidInteractionRegistry  = Java.loadClass("net.neoforged.neoforge.fluids.FluidInteractionRegistry")
@@ -463,21 +463,6 @@ ServerEvents.loaded(event => {
 		return
 	}
 	console.log("Adding Bubble Cobble fluid interactions")
-
-	$FluidInteractionRegistry.addInteraction(LAVA, new $InteractionInformation(
-		Fluid.getType("createmonballsoverhaul:source_standard_tumblestone_coating").getFluidType(),
-		Blocks.GRANITE.defaultBlockState()
-	))
-
-	$FluidInteractionRegistry.addInteraction(LAVA, new $InteractionInformation(
-		Fluid.getType("createmonballsoverhaul:source_light_tumblestone_coating").getFluidType(),
-		Blocks.DIORITE.defaultBlockState()
-	))
-
-	$FluidInteractionRegistry.addInteraction(LAVA, new $InteractionInformation(
-		Fluid.getType("createmonballsoverhaul:source_dense_tumblestone_coating").getFluidType(),
-		Blocks.BLACKSTONE.defaultBlockState()
-	))
 
 	$FluidInteractionRegistry.addInteraction(LAVA, new $InteractionInformation(
 		Fluid.getType("create_bic_bit:ketchup").getFluidType(),
@@ -501,19 +486,93 @@ ServerEvents.loaded(event => {
 		Block.getBlock("kubejs:chiseled_mud_bricks").defaultBlockState()
 	))
 
+	$FluidInteractionRegistry.addInteraction(Fluid.lava().getFluidType(), new $InteractionInformation["(net.neoforged.neoforge.fluids.FluidType,java.util.function.Function)"](
+		Fluid.getType("createmonballsoverhaul:source_standard_tumblestone_coating").getFluidType(),
+		new $JavaFunction({
+			apply: (fluid_state) => {
+				let chance = Math.random()
+				if (chance > 0.666) {
+					return Blocks.GRANITE.defaultBlockState()
+				} else if (chance > 0.333) {
+					return Blocks.DIORITE.defaultBlockState()
+				}
+				return Blocks.ANDESITE.defaultBlockState()
+			}
+		})
+	))
+
+	$FluidInteractionRegistry.addInteraction(Fluid.lava().getFluidType(), new $InteractionInformation["(net.neoforged.neoforge.fluids.FluidType,java.util.function.Function)"](
+		Fluid.getType("createmonballsoverhaul:source_light_tumblestone_coating").getFluidType(),
+		/** @param {import("net.minecraft.world.level.material.FluidState").$FluidState$$Type} fluid_state */ fluid_state => {
+			let chance = Utils.getRandom().nextDouble()
+			if (chance > 0.666) {
+				return Blocks.CALCITE.defaultBlockState()
+			} else if (chance > 0.333) {
+				return Blocks.TUFF.defaultBlockState()
+			}
+			return Block.getBlock("biomeswevegone:dacite").defaultBlockState()
+		}
+	))
+
+	$FluidInteractionRegistry.addInteraction(Fluid.lava().getFluidType(), new $InteractionInformation["(net.neoforged.neoforge.fluids.FluidType,java.util.function.Function)"](
+		Fluid.getType("createmonballsoverhaul:source_dense_tumblestone_coating").getFluidType(),
+		/** @param {import("net.minecraft.world.level.material.FluidState").$FluidState$$Type} fluid_state */ fluid_state => {
+			let chance = Utils.getRandom().nextDouble()
+			if (chance > 0.666) {
+				return Block.getBlock("arts_and_crafts:soapstone").defaultBlockState()
+			} else if (chance > 0.333) {
+				return Block.getBlock("arts_and_crafts:beige_pietraforte").defaultBlockState()
+			}
+			return Block.getBlock("arts_and_crafts:gypsum").defaultBlockState()
+		}
+	))
+
 	// console.log(`There are ${interactions.size()} fluids with registered interactions:`)
 	// interactions.forEach((fluid_type, list) => {
 	// 	console.log(`${fluid_type} has ${list.size()} fluid interactions`)
 	// })
+})
 
-	// TODO: Cobblestone generator on top of Bedrock randomly makes Andesite, Granite, or Diorite.
-	// This works now but it's not currently needed.
-	// $FluidInteractionRegistry.addInteraction(Fluid.water().getFluidType(), new $InteractionInformation["(net.neoforged.neoforge.fluids.FluidType,java.util.function.Function)"](
-	// 	Fluid.getType("createmonballsoverhaul:source_standard_tumblestone_coating").getFluidType(),
-	// 	new $JavaFunction({
-	// 		apply: (fluid_state) => {
-	// 			return Math.random() > 0.5 ? Blocks.IRON_BLOCK.defaultBlockState() : Blocks.GOLD_BLOCK.defaultBlockState()
-	// 		}
-	// 	})
-	// ))
+// Put logs back together with Tree Bark.
+BlockEvents.rightClicked(event => {
+	if (!event.item.is("farmersdelight:tree_bark")) {
+		return
+	}
+
+	const item = event.item
+	const level_block = event.block
+	// Commenting this out makes the check way less sophisticated, but some mods did not add tags properly.
+	// if (!level_block.hasTag("c:stripped_logs") && !level_block.hasTag("c:stripped_woods")) {
+	// 	return
+	// }
+	const stripped_id = level_block.getId()
+	if (!stripped_id.includes("stripped")) {
+		return // Not a Stripped Log/Wood.
+	}
+
+	const unstripped_id = stripped_id.replace("_stripped", "").replace("stripped_", "")
+	const unstripped_block = Block.getBlock(unstripped_id)
+	if (!unstripped_block) {
+		console.warn(`Trying to use bark to convert block into ${unstripped_id}, but it does not exist. Ignoring.`)
+		return
+	}
+
+	level_block.set(unstripped_block, level_block.getProperties())
+
+	const player = event.player
+	player.swing(event.hand, true)
+
+	const position = level_block.getPos().getCenter()
+	event.level.runCommandSilent(`playsound minecraft:item.axe.strip block @a ${position.x()} ${position.y()} ${position.z()}`)
+
+	event.level.sendParticles(player, `minecraft:block{block_state:{Name:"${unstripped_id}"}}`, false,
+		position.x(), position.y(), position.z(),
+		15, 0.5, 0.5, 0.5, 1.0
+	)
+
+	if (!event.player.isCreative()) {
+		item.shrink(1)
+	}
+
+	event.success()
 })
