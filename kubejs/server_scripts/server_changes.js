@@ -116,7 +116,7 @@ ItemEvents.dropped(event => {
 		let starting_pos = dropper.eyePosition
 		let ending_pos = result.hit
 		for (let progress = 0.0; progress < range; progress += 1.0) {
-			let box_extent = 1 + 0.25 * progress
+			let box_extent = 1 + 0.1 * progress
 			let box = AABB.ofSize(starting_pos.add(dropper.getForward().scale(progress)), box_extent, 1, box_extent)
 			// event.level.sendParticles(dropper, `supplementaries:air_burst`, true,
 			// 	box.getCenter().x(), box.getCenter().y(), box.getCenter().z(),
