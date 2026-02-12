@@ -8467,6 +8467,43 @@
             ]
         },
         {
+            "pakku_id": "FId4w7fv3hn6CC0O",
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "modrinth": "shutter-up"
+            },
+            "name": {
+                "modrinth": "Shutter Up!"
+            },
+            "id": {
+                "modrinth": "xaH4PQRj"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "shutterup-neoforge-1.21.1-1.0.5.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/xaH4PQRj/versions/HUOw26ej/shutterup-neoforge-1.21.1-1.0.5.jar",
+                    "id": "HUOw26ej",
+                    "parent_id": "xaH4PQRj",
+                    "hashes": {
+                        "sha512": "5665992d67463147f0e5928fe2966a921f04374b3b38b319b23bd8043873d7822a7147839343c4dc5b14a36b93686a2e43e49cc0fa4facb45f81b2d01db4f4a7",
+                        "sha1": "cdfbbd648cae747a197d8034cb535c5d6c9b5efd"
+                    },
+                    "required_dependencies": [],
+                    "size": 230887,
+                    "date_published": "2026-02-04T08:05:03.626876Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "sXW8o5uffTaZgjNd",
             "type": "MOD",
             "side": "BOTH",
