@@ -1,6 +1,6 @@
 {
     "name": "Bubble Cobble Redux",
-    "version": "1.7.3",
+    "version": "1.8.0",
     "description": "A pinch of Cobblemon, Create, Farmer's Delight, and a Bubble Pub aftertaste.",
     "author": "Mickeon",
     "overrides": [
@@ -56,6 +56,7 @@
         "!config/smooth_hover.json",
         "!config/smoothskies.json",
         "!config/chatnotify.json",
+        "!config/open_in_inventory.json",
         "!*locomotionmap.json",
         "!*create_dragons_plus*"
     ],

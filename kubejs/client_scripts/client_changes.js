@@ -29,6 +29,7 @@ BlockEvents.rightClicked(event => {
 // Add easily-accessible Mod Sets button.
 if (Platform.isLoaded("mod_sets")) {
 // https://github.com/SettingDust/ModSets/blob/main/src/common/game/main/java/settingdust/mod_sets/game/ModSetsConfigScreenGenerator.java
+/** @type {typeof import("settingdust.mod_sets.game.ModSetsConfigScreenGenerator").$ModSetsConfigScreenGenerator} */
 let $ModSetsConfigScreenGenerator = Java.loadClass("settingdust.mod_sets.game.ModSetsConfigScreenGenerator")
 NativeEvents.onEvent($ScreenEvent$Init$Post, event => {
 	if (!(event.screen instanceof $PauseScreen || event.screen instanceof $TitleScreen)) {
@@ -105,53 +106,6 @@ NativeEvents.onEvent($ScreenEvent$Init$Post, event => {
 // 		console.error(error)
 // 	}
 // })
-
-
-const QUARTER_ITEM_MODEL = {
-	"gui_light": "front",
-	"elements": [
-		{
-			"from": [0, 8, 0],
-			"to": [8, 16, 16],
-			"faces": {
-				"south": {
-					"texture": "#first",
-					"cullface": "south"
-				}
-			}
-		},
-		{
-			"from": [8, 8, 0],
-			"to": [16, 16, 16],
-			"faces": {
-				"south": {
-					"texture": "#second",
-					"cullface": "south"
-				}
-			}
-		},
-		{
-			"from": [0, 0, 0],
-			"to": [8, 16, 8],
-			"faces": {
-				"south": {
-					"texture": "#third",
-					"cullface": "south"
-				}
-			}
-		},
-		{
-			"from": [8, 0, 0],
-			"to": [16, 16, 8],
-			"faces": {
-				"south": {
-					"texture": "#fourth",
-					"cullface": "south"
-				}
-			}
-		}
-	]
-}
 
 // Add models for EMI (the recipe viewer) to display when tags are referenced.
 // We could use resource packs for this,
