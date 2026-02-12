@@ -1,0 +1,10 @@
+{
+	"__comment": "This is not sophisticated at all. I will have to make separate recipes for each wood type eventually.",
+	"type": "emi:world_interaction",
+	"left": [
+		"#item:c:stripped_woods",
+		"#item:c:stripped_logs"
+	],
+	"right": "item:farmersdelight:tree_bark",
+	"output": "#item:minecraft:logs"
+}

@@ -288,6 +288,8 @@ ItemEvents.modifyTooltips(event => {
 	// recipe_manager.byType("create:sequenced_assembly").forEach((id, sequenced_assembly) => {
 	// 	add_sequence_info(event, sequenced_assembly)
 	// })
+
+	event.add(["farmersdelight:tree_bark"], [subtle("Use on stripped wood to defy logic")])
 })
 
 ItemEvents.dynamicTooltips("sue_banana_mayo_sandwich", event => {

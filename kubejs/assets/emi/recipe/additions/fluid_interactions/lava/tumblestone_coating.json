@@ -1,0 +1,40 @@
+{
+	"type": "emi:world_interaction",
+	"left": {
+		"type": "fluid",
+		"amount": 1000,
+		"id": "minecraft:lava",
+		"remainder": {
+			"type": "fluid",
+			"amount": 1000,
+			"id": "minecraft:lava"
+		}
+	},
+	"right": {
+		"type": "fluid",
+		"amount": 1000,
+		"id": "createmonballsoverhaul:source_standard_tumblestone_coating",
+		"remainder": {
+			"type": "fluid",
+			"amount": 1000,
+			"id": "createmonballsoverhaul:source_standard_tumblestone_coating"
+		}
+	},
+	"output": [
+		{
+			"type": "item",
+			"id": "minecraft:granite",
+			"chance": 0.333
+		},
+		{
+			"type": "item",
+			"id": "minecraft:diorite",
+			"chance": 0.333
+		},
+		{
+			"type": "item",
+			"id": "minecraft:andesite",
+			"chance": 0.333
+		}
+	]
+}

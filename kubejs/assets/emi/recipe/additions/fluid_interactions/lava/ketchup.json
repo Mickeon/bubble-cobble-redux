@@ -1,0 +1,27 @@
+{
+	"type": "emi:world_interaction",
+	"left": {
+		"type": "fluid",
+		"amount": 1000,
+		"id": "minecraft:lava",
+		"remainder": {
+			"type": "fluid",
+			"amount": 1000,
+			"id": "minecraft:lava"
+		}
+	},
+	"right": {
+		"type": "fluid",
+		"amount": 1000,
+		"id": "create_bic_bit:ketchup",
+		"remainder": {
+			"type": "fluid",
+			"amount": 1000,
+			"id": "create_bic_bit:ketchup"
+		}
+	},
+	"output": {
+		"type": "item",
+		"id": "arts_and_crafts:red_soapstone"
+	}
+}

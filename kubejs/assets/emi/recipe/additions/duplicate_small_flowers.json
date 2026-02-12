@@ -1,0 +1,12 @@
+{
+	"__comment": "This is not sophisticated at all. I will have to make separate recipes for each flower eventually.",
+	"type": "emi:world_interaction",
+	"left": [
+		"#item:minecraft:flowers"
+	],
+	"right": "item:minecraft:bone_meal",
+	"output": [
+		"#item:minecraft:flowers",
+		"#item:minecraft:flowers"
+	]
+}

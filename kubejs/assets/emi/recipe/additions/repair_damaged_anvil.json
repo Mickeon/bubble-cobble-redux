@@ -1,0 +1,6 @@
+{
+	"type": "emi:world_interaction",
+	"left": "item:minecraft:damaged_anvil",
+	"right": "item:minecraft:iron_block",
+	"output": "item:minecraft:chipped_anvil"
+}
