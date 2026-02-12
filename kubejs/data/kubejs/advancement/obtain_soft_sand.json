@@ -12,22 +12,14 @@
     "soft_sand_from_desert": {
       "trigger": "minecraft:thrown_item_picked_up_by_player",
       "conditions": {
-        "item": [
-          {
-            "items": "cobblemon:soft_sand"
-          }
-        ],
+        "item": {
+          "items": "cobblemon:soft_sand"
+        },
         "entity": {
           "location": {
             "biomes": "#c:is_desert"
           }
         }
-      }
-    },
-    "player_in_desert": {
-      "trigger": "minecraft:location",
-      "conditions": {
-        "biomes": "#c:is_desert"
       }
     }
   }
