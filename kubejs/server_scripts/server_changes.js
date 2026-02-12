@@ -558,21 +558,50 @@ BlockEvents.rightClicked(event => {
 	}
 
 	level_block.set(unstripped_block, level_block.getProperties())
-
 	const player = event.player
+	if (!player.isCreative()) {
+		item.shrink(1)
+	}
 	player.swing(event.hand, true)
 
 	const position = level_block.getPos().getCenter()
 	event.level.runCommandSilent(`playsound minecraft:item.axe.strip block @a ${position.x()} ${position.y()} ${position.z()}`)
-
 	event.level.sendParticles(player, `minecraft:block{block_state:{Name:"${unstripped_id}"}}`, false,
 		position.x(), position.y(), position.z(),
 		15, 0.5, 0.5, 0.5, 1.0
 	)
 
-	if (!event.player.isCreative()) {
-		item.shrink(1)
+	event.cancel()
+})
+
+// Repair Anvil with Iron Blocks.
+BlockEvents.rightClicked(["minecraft:chipped_anvil", "minecraft:damaged_anvil"], event => {
+	if (!event.item.is("minecraft:iron_block")) {
+		return
 	}
 
-	event.success()
+	const item = event.item
+	const player = event.player
+	const level_block = event.block
+	if (player.isShiftKeyDown()) {
+		return
+	}
+
+	const is_fully_damaged = level_block.getId() == "minecraft:damaged_anvil"
+	const repaired_anvil = is_fully_damaged ? Block.getBlock("minecraft:chipped_anvil") : Block.getBlock("minecraft:anvil")
+
+	level_block.set(repaired_anvil, level_block.getProperties())
+	if (!player.isCreative()) {
+		item.shrink(1)
+	}
+	player.swing(event.hand, true)
+
+	const position = level_block.getPos().getCenter()
+	event.level.runCommandSilent(`playsound minecraft:block.anvil.place block @a ${position.x()} ${position.y()} ${position.z()} 0.25 ${is_fully_damaged ? 0.9 : 1.0}`)
+	event.level.sendParticles(player, `supplementaries:air_burst`, false,
+		position.x(), position.y() + 0.4, position.z(),
+		20, 0.15, 0.1, 0.15, 0.01
+	)
+
+	event.cancel()
 })
