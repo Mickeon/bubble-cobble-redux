@@ -99,34 +99,60 @@ LevelEvents.afterExplosion(event => {
 // Give items to other players directly!
 ItemEvents.dropped(event => {
 	const item = event.item
-	const entity = event.entity
+	const dropper = event.entity
 	const item_entity = event.itemEntity
 
-	const result = entity.rayTrace()
-	if (result.distance > entity.blockReach ?? 1) {
-		return
+	const result = dropper.rayTrace(dropper.entityInteractionRange() + 1)
+	let target = result.entity
+
+	/** @param {import("net.minecraft.world.entity.LivingEntity").$LivingEntity$$Original} target */
+	const can_receive_dropped_item = (target) => {
+		return target && target != dropper && (target.isPlayer() || target.type == "minecraft:armor_stand") && target.isAlive()
 	}
-	const target = result.entity
-	if (target && (target.isPlayer() || target.type == "minecraft:armor_stand")) {
+
+	if (!target) {
+		// Let's try a more generous check.
+		let range = dropper.entityInteractionRange()
+		let starting_pos = dropper.eyePosition
+		let ending_pos = result.hit
+		for (let progress = 0.0; progress < range; progress += 1.0) {
+			let box_extent = 1 + 0.25 * progress
+			let box = AABB.ofSize(starting_pos.add(dropper.getForward().scale(progress)), box_extent, 1, box_extent)
+			// event.level.sendParticles(dropper, `supplementaries:air_burst`, true,
+			// 	box.getCenter().x(), box.getCenter().y(), box.getCenter().z(),
+			// 	0, 0.0, 0.0, 0.0, 4.0
+			// )
+			let found_entities = event.level.getEntitiesWithin(box).oneFilter(can_receive_dropped_item)
+			if (!found_entities.isEmpty()) {
+				target = found_entities.getFirst()
+				break
+			}
+		}
+	}
+	if (can_receive_dropped_item(target)) {
+		// Getting these now, as the item may be copied and cleared later.
+		let item_count = item.count
+		let item_display_name = item.displayName
 		if (target.isPlayer()) {
-			target.give(item)
-			item_entity.remove(0)
+			target.give(item.copyAndClear())
 		} else {
-			item_entity.teleportTo(target.level.dimension, target.x, target.y, target.z, 0, 0)
-			item_entity.pickUpDelay = 0
+			/** @type {import("net.minecraft.world.entity.LivingEntity").$LivingEntity$$Original} */
+			let armor_stand = target
+			if (armor_stand.mainHandItem.isEmpty()) {
+				armor_stand.mainHandItem = item.copyAndClear()
+			} else {
+				item_entity.teleportTo(target.level.dimension, target.x, target.y, target.z, 0, 0)
+				item_entity.pickUpDelay = 0
+			}
 		}
 		// For some reason "remove" with "Owner" tag specifically does not work.
 		// So we can't do this, as it'd be impossible to grab the item back up by other players.
 		// item_entity.mergeNbt({Owner: target.nbt.get("UUID")})
 
-		entity.level.runCommandSilent(`playsound minecraft:entity.glow_item_frame.remove_item player @a ${entity.x} ${entity.y} ${entity.z} 0.2 ${remap(item.count, 1, 64, 1.1, 0.5)}`)
-		entity.server.runCommandSilent(`title ${entity.username} actionbar ${
-			Text.gray(["Gave ", item.displayName, " to ", target.displayName]).toJson()
-		}`)
+		dropper.level.runCommandSilent(`playsound minecraft:entity.glow_item_frame.remove_item player @a ${dropper.x} ${dropper.y} ${dropper.z} 0.2 ${remap(item_count, 1, 64, 1.1, 0.5)}`)
+		dropper.statusMessage = Text.translateWithFallback("", "Gave %s to %s", [item_display_name, target.displayName]).gray()
 		target.level.runCommandSilent(`playsound minecraft:item.armor.equip_generic player @a ${target.x} ${target.y} ${target.z}`)
-		target.server.runCommandSilent(`title ${target.username} actionbar ${
-			Text.gray(["Received ", item.displayName, " from ", entity.displayName]).toJson()
-		}`)
+		target.statusMessage = Text.translateWithFallback("", "Received %s from %s", [item_display_name, dropper.displayName]).gray()
 	}
 })
 
