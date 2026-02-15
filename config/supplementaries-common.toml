@@ -410,7 +410,7 @@
 	[building.gravel_bricks]
 		enabled = true
 		#Allows gravel bricks to break when fallen upon or when an entity walks on them with enough falling speed
-		allow_breaking = true
+		allow_breaking = false
 
 	[building.slidy_block]
 		enabled = false

@@ -47,7 +47,7 @@ StartupEvents.modifyCreativeTab("minecraft:tools_and_utilities", event => {
 	event.add("kubejs:trowel")
 })
 
-// Called on both clients and servers, ideally.
+// TODO: Should be called on both clients and servers, ideally. Currently only on server.
 /** @param {import("dev.latvian.mods.kubejs.block.BlockRightClickedKubeEvent").$BlockRightClickedKubeEvent$$Type} event */
 global.use_trowel_on_block = function (event) {
 	const player = event.player
@@ -76,7 +76,8 @@ global.use_trowel_on_block = function (event) {
 	}
 	if (interaction_result.indicateItemUse()) {
 		let sound_type = chosen_item.block.getSoundType(chosen_item.block.defaultBlockState(), level, event.block.getPos(), player)
-		player.playNotifySound(sound_type.placeSound, "blocks", 1.0, 1.0)
+		let placed_block_center = event.block.getPos().relative(event.facing).getCenter()
+		play_sound_globally(level, placed_block_center, sound_type.placeSound, "blocks")
 		player.swing(hand, true)
 	}
 	return true

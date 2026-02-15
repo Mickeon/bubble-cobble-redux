@@ -91,8 +91,7 @@ BlockEvents.broken(event => {
 		if (held_block) {
 			if (interaction_result.indicateItemUse()) {
 				let sound_type = held_block.getSoundType(held_block.defaultBlockState(), level, broken_pos, player)
-				// level.playSound(player, broken_pos, sound_type.placeSound, "blocks")
-				player.playNotifySound(sound_type.placeSound, "blocks", 1.0, 1.0)
+				play_sound_globally(level, broken_pos, sound_type.placeSound, "blocks")
 			}
 		}
 		if (interaction_result.shouldSwing()) {
@@ -209,7 +208,7 @@ for (const fence of FENCES) {
 		const is_west_face_sturdy = state_west.isFaceSturdy(level, pos, Direction.WEST.opposite, "full")
 		if (!is_north_face_sturdy && !is_south_face_sturdy && !is_east_face_sturdy && !is_west_face_sturdy) {
 			player.swing("main_hand")
-			level.runCommandSilent(`execute positioned ${pos.x} ${pos.y} ${pos.z} align xyz run playsound bubble_cobble:buzz player @a ~ ~ ~ 0.25`)
+			play_sound_globally(level, pos.getCenter(), "bubble_cobble:buzz", "players", 0.25)
 			return // Nothing to do, there's only fences here, maybe.
 		}
 
@@ -232,7 +231,7 @@ for (const fence of FENCES) {
 				}),
 				block_set_flags
 			)
-			level.runCommandSilent(`execute positioned ${pos.x} ${pos.y} ${pos.z} align xyz run playsound minecraft:block.wooden_trapdoor.open block @a ~ ~ ~ 1.0`)
+			play_sound_globally(level, pos.getCenter(), "minecraft:block.wooden_trapdoor.open", "blocks", 1.0)
 			// if (state_north.properties.contains("south")) {
 			//	 level_block.getNorth().setBlockState(Block.withProperties(state_north, {south: patch.north}))
 			// }
@@ -246,13 +245,13 @@ for (const fence of FENCES) {
 				}),
 				block_set_flags
 			)
-			level.runCommandSilent(`execute positioned ${pos.x} ${pos.y} ${pos.z} align xyz run playsound minecraft:block.wooden_trapdoor.close block @a ~ ~ ~ 1.0`)
+			play_sound_globally(level, pos.getCenter(), "minecraft:block.wooden_trapdoor.close", "blocks", 1.0)
 			// if (block.getNorth().getProperties().get("north") == "true") {
 			// 	block.getNorth().setBlockState(Block.withProperties(block.getNorth().getBlockState(), {north: false}), 2 | 16)
 			// }
 		}
 
-		level.runCommandSilent(`execute at ${player.uuid} run playsound minecraft:entity.item_frame.remove_item player @a ~ ~ ~ 0.5`)
+		play_sound_globally(level, pos.getCenter(), "minecraft:entity.item_frame.remove_item", "players", 0.5)
 		player.swing("main_hand", true)
 	})
 }

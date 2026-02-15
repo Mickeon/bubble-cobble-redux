@@ -149,9 +149,9 @@ ItemEvents.dropped(event => {
 		// So we can't do this, as it'd be impossible to grab the item back up by other players.
 		// item_entity.mergeNbt({Owner: target.nbt.get("UUID")})
 
-		dropper.level.runCommandSilent(`playsound minecraft:entity.glow_item_frame.remove_item player @a ${dropper.x} ${dropper.y} ${dropper.z} 0.2 ${remap(item_count, 1, 64, 1.1, 0.5)}`)
+		play_sound_at_entity(dropper, "minecraft:entity.glow_item_frame.remove_item", "players", 0.2, remap(item_count, 1, 64, 1.1, 0.5))
 		dropper.statusMessage = Text.translateWithFallback("", "Gave %s to %s", [item_display_name, target.displayName]).gray()
-		target.level.runCommandSilent(`playsound minecraft:item.armor.equip_generic player @a ${target.x} ${target.y} ${target.z}`)
+		play_sound_at_entity(target, "minecraft:item.armor.equip_generic", "players")
 		target.statusMessage = Text.translateWithFallback("", "Received %s from %s", [item_display_name, dropper.displayName]).gray()
 	}
 })
@@ -187,8 +187,8 @@ ServerEvents.tick(event => {
 			return
 		}
 		if (player.carryOnData.block.hasTag("bubble_cobble:no_fast_travel_when_carrying")) {
-			player.addEffect(MobEffectUtil.of("via_romana:travellers_fatigue", 20, 0, true, true))
-			player.addEffect(MobEffectUtil.of("supplementaries:overencumbered", 20, 5, true, true))
+			player.addEffect(MobEffectUtil.of("via_romana:travellers_fatigue", SEC, 0, true, true))
+			player.addEffect(MobEffectUtil.of("supplementaries:overencumbered", SEC, 5, true, true))
 			player.unRide()
 			player.modifyAttribute("minecraft:generic.jump_strength", "bubble_cobble:carrying", -2, "add_multiplied_total")
 			player.server.scheduleInTicks(1, callback => {
@@ -230,16 +230,16 @@ if (Item.exists("herbalbrews:flask")) {
 		if (!event.item.customData.getBoolean("kubejs:fixed")) {
 			event.item.customData.putBoolean("kubejs:fixed", true)
 			event.item.setLore([
-				Text.of("You probably tried drinking this.").darkGray(),
-				Text.of("It doesn't last as long as it says,").darkGray(),
-				Text.of("but it still is a lot. Forgive me").darkGray()
+				Text.of(`You probably tried drinking this.`).darkGray(),
+				Text.of(`It doesn't last as long as it says,`).darkGray(),
+				Text.of(`but it still is a lot. Forgive me`).darkGray()
 			])
 
-			/** @type {import("net.minecraft.world.item.alchemy.PotionContents").$PotionContents$$Original} */
+			/** @type {$PotionContents} */
 			let current_contents = event.item.getComponentMap().get("minecraft:potion_contents")
 			let modified_effects = Utils.newList()
 			current_contents.customEffects().forEach(effect => {
-				modified_effects.add(MobEffectUtil.of(effect.effect, effect.duration * 20))
+				modified_effects.add(MobEffectUtil.of(effect.effect, effect.duration * SEC))
 			})
 
 			let new_contents = new $PotionContents(current_contents.potion(), current_contents.customColor(), modified_effects)
@@ -591,7 +591,7 @@ BlockEvents.rightClicked(event => {
 	player.swing(event.hand, true)
 
 	const position = level_block.getPos().getCenter()
-	event.level.runCommandSilent(`playsound minecraft:item.axe.strip block @a ${position.x()} ${position.y()} ${position.z()}`)
+	play_sound_globally(event.level, position, "minecraft:item.axe.strip", "blocks")
 	event.level.sendParticles(player, `minecraft:block{block_state:{Name:"${unstripped_id}"}}`, false,
 		position.x(), position.y(), position.z(),
 		15, 0.5, 0.5, 0.5, 1.0
@@ -623,7 +623,7 @@ BlockEvents.rightClicked(["minecraft:chipped_anvil", "minecraft:damaged_anvil"],
 	player.swing(event.hand, true)
 
 	const position = level_block.getPos().getCenter()
-	event.level.runCommandSilent(`playsound minecraft:block.anvil.place block @a ${position.x()} ${position.y()} ${position.z()} 0.25 ${is_fully_damaged ? 0.9 : 1.0}`)
+	play_sound_globally(event.level, position, "minecraft:block.anvil.place", "blocks", 0.25, is_fully_damaged ? 0.9 : 1.0)
 	event.level.sendParticles(player, `supplementaries:air_burst`, false,
 		position.x(), position.y() + 0.4, position.z(),
 		20, 0.15, 0.1, 0.15, 0.01

@@ -3,12 +3,8 @@ StartupEvents.registry("block", event => {
 	// Blocks.MUD_BRICKS
 	event.create("cracked_mud_bricks")
 			.copyPropertiesFrom(Blocks.MUD_BRICKS)
-			// .tagBlock(Blocks.MUD_BRICKS.getTags())
-			// .tagItem(Blocks.MUD_BRICKS.asItem().getTags())
 	event.create("chiseled_mud_bricks")
 			.copyPropertiesFrom(Blocks.MUD_BRICKS)
-			// .tagBlock(Blocks.MUD_BRICKS.getTags())
-			// .tagItem(Blocks.MUD_BRICKS.asItem().getTags())
 			.parentModel("minecraft:block/cube_column")
 			.textures({
 				end: "kubejs:block/mud_pillar_top",
@@ -26,8 +22,6 @@ StartupEvents.registry("block", event => {
 	event.create("mud_pillar")
 			.copyPropertiesFrom(Blocks.MUD_BRICKS)
 			.property(BlockProperties.AXIS)
-			// .tagBlock(Blocks.MUD_BRICKS.getTags())
-			// .tagItem(Blocks.MUD_BRICKS.asItem().getTags())
 			.placementState(/** @param {import("dev.latvian.mods.kubejs.block.callback.BlockStateModifyPlacementCallback").$BlockStateModifyPlacementCallback$$Type} callback */ callback => {
 				callback.set(BlockProperties.AXIS, callback.clickedFace.axis)
 			})

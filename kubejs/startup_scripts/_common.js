@@ -29,6 +29,18 @@ function remap(value, min1, max1, min2, max2) {
 	return min2 + (max2 - min2) * value_norm // Linear interpolation function.
 }
 
+/**
+ * Equivalent to a function in the server scripts.
+ * @param {$Level} level @param {$Vec3} pos @param {Special.SoundEvent} sound_event @param {$SoundSource$$Type} source @param {number?} pitch @param {number?} volume
+ */
+function play_sound_globally(level, pos, sound_event, source, volume, pitch) {
+	volume = volume || 1.0
+	pitch = pitch || 1.0
+
+	level["playSound(net.minecraft.world.entity.player.Player,double,double,double,net.minecraft.sounds.SoundEvent,net.minecraft.sounds.SoundSource,float,float)"]
+			(null, pos.x(), pos.y(), pos.z(), sound_event, source, volume, pitch)
+}
+
 // TODO: Make a distinction between dev-only and whatnot.
 const DISABLED_KEY_IDS = new Set([
 	"chunksfadein.keybinds.toggleMod",

@@ -122,7 +122,7 @@ EntityEvents.drops("minecraft:player", event => {
 				player.x, player.y, player.z,
 				0.75, 0.5, 0.75, 50, 0.25
 			)
-			player.level.runCommandSilent(`execute as ${player.uuid} at ${player.uuid} run playsound supplementaries:item.bomb player @a ~ ~ ~ 1.0`)
+			play_sound_at_entity(player, "supplementaries:item.bomb", 1.0)
 			player.level.spawnParticles("minecraft:firework", false, player.x, player.eyeY, player.z, 0.1, 0.1, 0.1, 60, 0.1)
 		} break;
 		case "Rem_Phase02": {

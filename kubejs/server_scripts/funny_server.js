@@ -96,7 +96,7 @@ ItemEvents.foodEaten(["biomesoplenty:cattail", "biomeswevegone:cattail_sprout", 
 		0.75, 0.5, 0.75, 50, 0.25
 	)
 	entity.attack(new DamageSource("biomeswevegone:cattail_explosion", particle_point), 1.0)
-	entity.level.runCommandSilent(`execute as ${entity.uuid} at ${entity.uuid} run playsound minecraft:entity.llama.spit player @a ~ ~ ~ 1.0`)
+	play_sound_at_entity(entity, "minecraft:entity.llama.spit", "players")
 
 	if (event.player && event.item.id == "biomeswevegone:fluorescent_cattail_sprout") {
 		event.player.addEffect(MobEffectUtil.of("minecraft:glowing", 3 * SEC))
@@ -119,21 +119,6 @@ ItemEvents.entityInteracted("create:wrench",  event => {
 	player.give("kubejs:blue_mascot_cat")
 	const spawn_position = player.server.getOverworld().sharedSpawnPos
 	player.teleportTo("minecraft:overworld", spawn_position.x, spawn_position.y, spawn_position.y, player.yaw, player.pitch)
-})
-
-// Some of us can eat the inedible, even by pure accident.
-ItemEvents.firstRightClicked(["create:chocolate_bucket", "create:honey_bucket", "create_bic_bit:mayonnaise_bucket", "create_bic_bit:ketchup_bucket"], event => {
-	const player = event.player
-	if (player
-	&& (player.username == "AceNil_" || player.username == "SniperZee")
-	&& player.foodData.needsFood()
-	&& !player.crouching
-	) { // AceNil_
-		const item_stack = event.item
-		player.eat(player.level, item_stack, new $FoodBuilder().nutrition(5).build())
-		player.give("minecraft:bucket")
-		player.tell("hungi")
-	}
 })
 
 ItemEvents.firstRightClicked(["minecraft:raw_copper"], event => {
@@ -180,9 +165,7 @@ if (Item.exists("kubejs:bearded_dragon_bowl")) {
 		const chosen_quote = pick_random(BEARDED_QUOTES)
 		bearded_dragon_speak(player, item_stack.displayName, chosen_quote)
 
-		// Usual server jank because playSound doesn't want to work with players.
-		level.runCommandSilent(`execute as ${player.uuid} at ${player.uuid} run playsound kubejs:item.bearded_dragon_chirp player @a ~ ~ ~ 1.0 ${1.25 + 0.25 * Math.random()}`)
-		// player.playSound("kubejs:item.bearded_dragon_chirp", 1.0, 1.25 + 0.25 * Math.random())
+		play_sound_at_entity(player, "kubejs:item.bearded_dragon_chirp", "players", 1.0, 1.25 + 0.25 * Math.random())
 		player.addItemCooldown(item_stack.item, 10)
 		player.potionEffects.add("farmersdelight:comfort", 20, 1)
 	})
@@ -364,7 +347,7 @@ NetworkEvents.dataReceived("kubejs:dash", event => {
 	player.addDeltaMovement(look_angle.scale(dash_strength * forward_back))
 	player.hurtMarked = true
 	player.addExhaustion(1.5)
-	player.playNotifySound("bubble_cobble:dash", "players",
+	play_sound_at_entity(player, "bubble_cobble:dash", "players",
 		remap(dash_strength, 1.0, 0.0, 0.75, 0.1),
 		remap(dash_strength, 1.0, 0.0, 1.0, 0.5)
 	)
@@ -455,6 +438,31 @@ if (GIRL_POWER_EFFECT) {
 			event.entity.removeAttribute("kubejs:dash_jump_count", "kubejs:girl_power_effect")
 		}
 	})
+
+	/**
+	 * @import {$PokemonEntity} from "com.cobblemon.mod.common.entity.pokemon.PokemonEntity"
+	 */
+
+	ItemEvents.entityInteracted("minecraft:potion", event => {
+		if (event.entity.type != "cobblemon:pokemon") {
+			return
+		}
+
+		/** @type {$PokemonEntity} */
+		const pokemon_entity = event.target
+		const pokemon = pokemon_entity.pokemon
+		const item = event.item
+
+		/** @type {$PotionContents} */
+		const current_contents = item.getComponents().get("minecraft:potion_contents")
+		if (!current_contents.is("kubejs:girl_power") || pokemon.gender == "genderless") {
+			return
+		}
+
+		pokemon.gender = pokemon.gender == "female" ? "male" : "female"
+		item.consume(1, pokemon_entity)
+		event.success()
+	})
 }
 
 function PowderSnowData() {
@@ -522,7 +530,7 @@ PlayerEvents.tick(event => {
 	powder_snow.combo += 1
 	if (!powder_snow.delayed_jump) {
 		powder_snow.delayed_jump = level.server.scheduleInTicks(2, () => {
-			player.playNotifySound("bubble_cobble:crate_jump", "players", 1.0, 0.75 + powder_snow.combo * 0.05)
+			play_sound_at_entity(player, "bubble_cobble:crate_jump", "players", 1.0, 0.75 + powder_snow.combo * 0.05)
 			player.removeAttribute("minecraft:generic.gravity", "kubejs:powder_snow_pause")
 			player.modifyAttribute("minecraft:generic.safe_fall_distance", "kubejs:powder_snow_leniency", 5, "add_value")
 			player.motionY = 1.0
@@ -548,7 +556,7 @@ PlayerEvents.tick(event => {
 						player.playNotifySound("bubble_cobble:life_got", "players", 0.2, 1.0)
 					} else {
 						player.give(snow_ball)
-						player.playNotifySound("bubble_cobble:fruit_collected", "players", 0.2, 1.0)
+						player.playNotifySound("bubble_cobble:fruit_collected", "blocks", 0.2, 1.0)
 					}
 				})
 			}
@@ -583,16 +591,16 @@ NativeEvents.onEvent($ProjectileImpactEvent, event => {
 		let first_collided_player = fireball.level.getEntitiesWithin(AABB.ofBlock(event.rayTraceResult.location)).filterPlayers().first
 		if (first_collided_player) {
 			first_collided_player.attack(new DamageSource("minecraft:fireball", fireball, fireball.owner), 4)
-			first_collided_player.setRemainingFireTicks(60)
-			fireball.level.runCommandSilent(`playsound cobblemon:item.berry.eat.full player @a ${fireball.x} ${fireball.y} ${fireball.z} 1.0 1`)
+			first_collided_player.setRemainingFireTicks(SEC * 3)
+			fireball.playSound("cobblemon:item.berry.eat.full", 1.0, 1.0)
 			first_collided_player.give("minecraft:fire_charge")
 			if (Math.random() < 0.25) {
-				fireball.level.runCommandSilent(`playsound kubejs:advancement.mint_chewed player @a ${fireball.x} ${fireball.y} ${fireball.z} 1.0 1`)
+				fireball.playSound("kubejs:advancement.mint_chewed", 1.0, 1.0)
 			}
 		}
 
 	} else {
-		fireball.level.runCommandSilent(`playsound create:chiff player @a ${fireball.x} ${fireball.y} ${fireball.z} 1.0 ${0.9 + Math.random() * 0.2}`)
+		fireball.playsound("create:chiff player", 1.0, 0.9 + Math.random() * 0.2)
 		fireball.block.explode({
 			source: fireball,
 			causesFire: true,
