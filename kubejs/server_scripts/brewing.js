@@ -97,20 +97,3 @@ ServerEvents.tags("item", event => {
 		"kubejs:firebomb_whiskey"
 	)
 })
-
-// 	/** @type {Internal.Player} */
-// 	const player = event.player
-
-// 	if (!player || !player.hasEffect("brewinandchewin:tipsy")) {
-// 		return
-// 	}
-// 	/** @type {MobEffectInstance} */
-// 	const effect = player.getEffect("brewinandchewin:tipsy")
-// 	if (effect.getAmplifier() < 9) {
-// 		player.potionEffects.add("brewinandchewin:tipsy",
-// 				effect.getDuration() + 30 * SEC,
-// 				effect.getAmplifier() + 1, false, false)
-// 	}
-// })
-
-

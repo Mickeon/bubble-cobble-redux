@@ -9,19 +9,19 @@ ServerEvents.recipes(event => {
 
 // Somewhat shoddy Ruler mechanic. I can only work with particles here.
 function RulerData() {
-	this.start_pos = new BlockPos(0, 0, 0)
-	this.target_pos = new BlockPos(0, 0, 0)
-	this.target_face_normal = new Vec3d(0, 0, 0)
-	this.draw_start = new Vec3d(0, 0, 0)
+	this.start_pos = BlockPos.ZERO
+	this.target_pos = BlockPos.ZERO
+	this.target_face_normal = Vec3d.ZERO
+	this.draw_start = Vec3d.ZERO
 
-	this.measure_loop = null
+	this.measure_loop = /** @type {$ScheduledEvents$ScheduledEvent?} */ (null)
 	this.stop_measuring = function() {
 		this.measure_loop.clear()
 		delete this.measure_loop
 	}
 }
-/** @param {$UUID} uuid  @returns {RulerData} */
-RulerData.getOrCreate = function(uuid) {
+/** @param {$UUID} uuid @returns {RulerData} */
+RulerData.get_or_create = function(uuid) {
 	if (!players_ruler_data[uuid]) {
 		players_ruler_data[uuid] = new RulerData()
 	}
@@ -34,7 +34,7 @@ BlockEvents.rightClicked(event => {
 	}
 
 	const {player, block, item, server} = event
-	const ruler = RulerData.getOrCreate(player.uuid)
+	const ruler = RulerData.get_or_create(player.uuid)
 	if (!ruler.measure_loop) {
 		// Do not activate the Ruler when trying to use blocks normally.
 		// Admittedly, I am not sure this is very ideal. The code here imitates vanilla Minecraft,

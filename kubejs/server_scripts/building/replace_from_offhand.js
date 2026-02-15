@@ -42,7 +42,6 @@ BlockEvents.broken(event => {
 
 	const broken_state = broken_level_block.getBlockState()
 	const broken_pos = broken_level_block.getPos()
-	// console.log(broken_state.getDestroySpeed(level, broken_pos))
 	if (broken_state.getDestroySpeed(level, broken_pos) <= 0.1) {
 		// Don't replace blocks that break instantaneously.
 		// These usually include grass, torches, etc., or blocks whose destruction may be accidental.
@@ -58,7 +57,7 @@ BlockEvents.broken(event => {
 		return
 	}
 
-	level.server.scheduleInTicks(0, callback => {
+	level.server.scheduleInTicks(0, () => {
 		// Failsafe to not place blocks accidentally in front/back.
 		if (!level.getBlock(broken_pos).hasTag("minecraft:air")) {
 			// Hacky earrape prevention.
@@ -69,20 +68,17 @@ BlockEvents.broken(event => {
 			return
 		}
 
-		// Annoying special case. I don't know why the RightClickedEvent isn't fired in useOn().
+		let block_hit_result = new $BlockHitResult(player.eyePosition, player.facing, broken_pos, false)
 		if (held_item.id == "kubejs:trowel") {
+			// Annoying special case. I don't know why the RightClickedEvent isn't fired in useOn().
 			global.use_trowel_on_block(new $BlockRightClickedKubeEvent(
-				held_item, player, "off_hand", broken_pos, player.facing, new $BlockHitResult(
-					player.eyePosition, player.facing, broken_pos, false
-				)
+				held_item, player, "off_hand", broken_pos, player.facing, block_hit_result
 			))
 			return
 		}
 
 		let interaction_result = held_item.useOn(new $UseOnContext(
-			level, player, "off_hand", held_item, new $BlockHitResult(
-					player.eyePosition, player.facing, broken_pos, false
-			)
+			level, player, "off_hand", held_item, block_hit_result
 		))
 
 		if (interaction_result == "fail") {
@@ -95,7 +91,7 @@ BlockEvents.broken(event => {
 			}
 		}
 		if (interaction_result.shouldSwing()) {
-			level.server.scheduleInTicks(3, callback => {
+			level.server.scheduleInTicks(3, () => {
 				player.swing("off_hand", true)
 			})
 		}

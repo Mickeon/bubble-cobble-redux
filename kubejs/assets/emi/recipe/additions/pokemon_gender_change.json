@@ -1,0 +1,6 @@
+{
+	"type": "emi:world_interaction",
+	"left": "item:cobblemon:pokemon_model{'cobblemon:pokemon_item': {species: 'cobblemon:indeedee', aspects: ['male']}}",
+	"right": "item:minecraft:potion{potion_contents:{potion:'kubejs:girl_power'}}",
+	"output": "item:cobblemon:pokemon_model{'cobblemon:pokemon_item': {species: 'cobblemon:indeedee', aspects: ['female']}, lore: ['{text:\"With a new perspective on life\", color: \"green\", italic: false}']}"
+}

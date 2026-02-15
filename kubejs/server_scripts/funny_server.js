@@ -38,12 +38,6 @@ ServerEvents.recipes(event => {
 			S: "minecraft:diamond",
 		},
 	)
-	event.recipes.create.crushing([
-			CreateItem.of(Item.of("minecraft:light_blue_dye", 2)),
-			CreateItem.of(Item.of("minecraft:light_blue_dye", 2), 0.5)
-		],
-		"kubejs:blue_mascot_cat"
-	)
 	event.recipes.create.milling([
 			CreateItem.of(Item.of("minecraft:light_blue_dye", 2)),
 			CreateItem.of(Item.of("minecraft:light_blue_dye", 2), 0.5)
@@ -98,9 +92,10 @@ ItemEvents.foodEaten(["biomesoplenty:cattail", "biomeswevegone:cattail_sprout", 
 	entity.attack(new DamageSource("biomeswevegone:cattail_explosion", particle_point), 1.0)
 	play_sound_at_entity(entity, "minecraft:entity.llama.spit", "players")
 
-	if (event.player && event.item.id == "biomeswevegone:fluorescent_cattail_sprout") {
-		event.player.addEffect(MobEffectUtil.of("minecraft:glowing", 3 * SEC))
-		event.player.drop("minecraft:glowstone_dust", false)
+	const player = event.player
+	if (player && event.item.id == "biomeswevegone:fluorescent_cattail_sprout") {
+		player.addEffect(MobEffectUtil.of("minecraft:glowing", 3 * SEC))
+		player.drop("minecraft:glowstone_dust", false)
 	}
 })
 ItemEvents.foodEaten("kubejs:super_ghostbusters", event => {
@@ -133,27 +128,35 @@ ItemEvents.firstRightClicked(["minecraft:raw_copper"], event => {
 	}
 })
 
-// #region Bearded Dragon Logic
-const BEARDED_QUOTES = [
-	"you can do it!",
-	"am ok! ❤",
-	"yippie!",
-	"oh!",
-	"hehe",
-	"wow...",
-	"yip!",
-	"am soup",
-	"love you!",
-]
-const BEARDED_GREETING_QUOTES = [
-	"helo!",
-	"good morning!",
-]
-const BEARDED_GOODBYE_QUOTES = [
-	"goo bye",
-	"weee!",
-]
+// #region Bearded Dragon Logic.
 if (Item.exists("kubejs:bearded_dragon_bowl")) {
+	/** @readonly */ let BeardedDragon = {
+		Quotes: {
+			USE: [
+				"you can do it!",
+				"am ok! ❤",
+				"yippie!",
+				"oh!",
+				"hehe",
+				"wow...",
+				"yip!",
+				"am soup",
+				"love you!",
+			],
+			GREETING: [
+				"helo!",
+				"good morning!",
+			],
+			GOODBYE: [
+				"goo bye",
+				"weee!",
+			],
+		},
+		speak: function(to_player, display_name, quote) {
+			const name = display_name.getString().replace("[", "").replace("]", "")
+			to_player.tell([Text.yellow(name + " : "), quote])
+		}
+	}
 	ItemEvents.rightClicked("kubejs:bearded_dragon_bowl", event => {
 		const player = event.player
 		const level = event.level
@@ -162,8 +165,8 @@ if (Item.exists("kubejs:bearded_dragon_bowl")) {
 			return
 		}
 
-		const chosen_quote = pick_random(BEARDED_QUOTES)
-		bearded_dragon_speak(player, item_stack.displayName, chosen_quote)
+		const chosen_quote = pick_random(BeardedDragon.Quotes.USE)
+		BeardedDragon.speak(player, item_stack.displayName, chosen_quote)
 
 		play_sound_at_entity(player, "kubejs:item.bearded_dragon_chirp", "players", 1.0, 1.25 + 0.25 * Math.random())
 		player.addItemCooldown(item_stack.item, 10)
@@ -171,13 +174,17 @@ if (Item.exists("kubejs:bearded_dragon_bowl")) {
 	})
 
 	ItemEvents.pickedUp("kubejs:bearded_dragon_bowl", event => {
-		if (!event.entity.player) { return }
-		bearded_dragon_speak(event.entity, event.item.displayName, pick_random(BEARDED_GREETING_QUOTES))
+		if (!event.entity.isPlayer()) {
+			return
+		}
+		BeardedDragon.speak(event.entity, event.item.displayName, pick_random(BeardedDragon.Quotes.GREETING))
 	})
 
 	ItemEvents.dropped("kubejs:bearded_dragon_bowl", event => {
-		if (!event.entity.player) { return }
-		bearded_dragon_speak(event.entity, event.item.displayName, pick_random(BEARDED_GOODBYE_QUOTES))
+		if (!event.entity.isPlayer()) {
+			return
+		}
+		BeardedDragon.speak(event.entity, event.item.displayName, pick_random(BeardedDragon.Quotes.GOODBYE))
 
 		const item_entity = event.itemEntity
 		event.entity.server.scheduleRepeatingInTicks(40, callback => {
@@ -189,11 +196,6 @@ if (Item.exists("kubejs:bearded_dragon_bowl")) {
 			callback.timer = 40 + 40 * Math.random()
 		})
 	})
-}
-
-function bearded_dragon_speak(to_player, display_name, quote) {
-	const name = display_name.getString().replace("[", "").replace("]", "")
-	to_player.tell([Text.yellow(name + " : "), quote])
 }
 // #endregion
 
@@ -247,17 +249,13 @@ ServerEvents.basicPublicCommand("suebegone", event => {
 	const invoker = event.entity
 	const invoker_pos = invoker.position()
 	const bounds = AABB.CUBE.move(invoker_pos.x(), invoker_pos.y(), invoker_pos.z()).inflate(5)
-	const nearby_entities = event.level.getEntitiesWithin(bounds)
+	const nearby_entities = event.level.getEntitiesWithin(bounds).oneFilter(e => e.username == "SueTheMimiga")
 	nearby_entities.forEach(player => {
-		if (player.username != "Mickeon") { // SueTheMimiga
-			return
-		}
-
-		let push_center = invoker.position()
+		const push_center = invoker.position()
 		if (invoker == player) {
-			player.statusMessage = Text.of("\"Hmm... Today I will banish myself.\" 😏")
+			player.statusMessage = Text.of(`"Hmm... Today I will banish myself." 😏`)
 			player.server.schedule(4 * SECOND, callback => {
-				player.statusMessage = Text.of(["↓ ", Text.of("Clueless").gray(), " ↓"]).italic().bold().darkGray()
+				player.statusMessage = Text.of(["↓ ", Text.of(`Clueless`).gray(), " ↓"]).italic().bold().darkGray()
 			})
 			for (let i = 0; i < 32; i++) {
 				player.server.schedule(8 * SECOND + i * 0.1 * SECOND, callback => {
@@ -283,8 +281,7 @@ ServerEvents.basicPublicCommand("suebegone", event => {
 
 // #region Dashing power.
 PlayerEvents.loggedIn(event => {
-	/** @type {$ServerPlayer} */
-	const player = event.player
+	const player = /** @type {$ServerPlayer} */ (event.player)
 	if (DASH_STARTERS.includes(player.username)) {
 		player.setAttributeBaseValue("kubejs:dash_jump_count", 1)
 	}
@@ -304,23 +301,24 @@ function DashData() {
 	this.jump_count = 0
 	this.strength_multiplier = 1.0
 	this.restoration = DASH_BASE_RESTORATION
-	this.check_landed = null
-	this.lower_tiredness = null
+	this.check_landed = /** @type {$ScheduledEvents$ScheduledEvent?} */ (null)
+	this.lower_tiredness = /** @type {$ScheduledEvents$ScheduledEvent?} */ (null)
 }
 
 const DASH_FORCE = 1.0
 const DASH_COOLDOWN_TICKS = 10
 const DASH_BASE_RESTORATION = 0.0125
+/** @param {$UUID} uuid @returns {DashData} */
+DashData.get_or_create = function(uuid) {
+	if (!players_dash_data[uuid]) {
+		players_dash_data[uuid] = new DashData()
+	}
+	return players_dash_data[uuid]
+}
 const players_dash_data = {}
 NetworkEvents.dataReceived("kubejs:dash", event => {
 	const player = event.player
-
-	if (!players_dash_data[player.uuid]) {
-		players_dash_data[player.uuid] = new DashData()
-	}
-
-	/** @type {DashData} */
-	const dash = players_dash_data[player.uuid]
+	const dash = DashData.get_or_create(player.uuid)
 
 	if (player.isSwimming()
 	|| player.onGround()
@@ -444,23 +442,45 @@ if (GIRL_POWER_EFFECT) {
 	 */
 
 	ItemEvents.entityInteracted("minecraft:potion", event => {
-		if (event.entity.type != "cobblemon:pokemon") {
+		if (event.target.type != "cobblemon:pokemon") {
 			return
 		}
 
-		/** @type {$PokemonEntity} */
-		const pokemon_entity = event.target
+		const pokemon_entity = /** @type {$PokemonEntity} */ (event.target)
 		const pokemon = pokemon_entity.pokemon
 		const item = event.item
+		const player = event.entity
 
-		/** @type {$PotionContents} */
-		const current_contents = item.getComponents().get("minecraft:potion_contents")
-		if (!current_contents.is("kubejs:girl_power") || pokemon.gender == "genderless") {
+		const current_contents = /** @type {$PotionContents} */ (item.getComponents().get("minecraft:potion_contents"))
+		if (!current_contents.is("kubejs:girl_power")) {
 			return
 		}
 
+		// Try to change gender.
+		const previous_gender = pokemon.gender
 		pokemon.gender = pokemon.gender == "female" ? "male" : "female"
-		item.consume(1, pokemon_entity)
+		if (pokemon.gender == previous_gender) {
+			// Either genderless or limited. Either way, nothing changed.
+			player.playNotifySound("bubble_cobble:buzz", "players", 1.0, 1.0)
+			return
+		}
+
+		if (!player.isCreative()) {
+			item.consume(1, pokemon_entity)
+		}
+
+		pokemon_entity.playSound("bubble_cobble:life_got", 0.25, 1.0)
+		pokemon_entity.playAmbientSound()
+
+		const is_male_to_female = pokemon.gender == "female"
+		const from_color = is_male_to_female ? "[0.8, 0.8, 1.0]" : "[1.0, 0.8, 1.0]"
+		const to_color = is_male_to_female ? "[1.0, 0.0, 1.0]" : "[0.0, 0.1, 1.0]"
+		const particle_box = pokemon_entity.boundingBox.deflate(0.5)
+		pokemon_entity.level.spawnParticles(`minecraft:dust_color_transition{from_color:${from_color}, to_color:${to_color}, scale: 3.0}`, false,
+			particle_box.center.x(), particle_box.center.y(), particle_box.center.z(),
+			particle_box.xsize, particle_box.ysize, particle_box.zsize, 40, 0.5
+		)
+
 		event.success()
 	})
 }
@@ -469,24 +489,26 @@ function PowderSnowData() {
 	this.combo = 0
 	this.snow_balls_stored = 0
 	this.last_tick_jumped = 0
-	this.check_landed = null
-	this.delayed_jump = null
-	this.reward_loop = null
+	this.check_landed = /** @type {$ScheduledEvents$ScheduledEvent?} */ (null)
+	this.delayed_jump = /** @type {$ScheduledEvents$ScheduledEvent?} */ (null)
+	this.reward_loop = /** @type {$ScheduledEvents$ScheduledEvent?} */ (null)
+}
+/** @param {$UUID} uuid @returns {PowderSnowData} */
+PowderSnowData.get_or_create = function(uuid) {
+	if (!players_powder_snow_data[uuid]) {
+		players_powder_snow_data[uuid] = new PowderSnowData()
+	}
+	return players_powder_snow_data[uuid]
 }
 const players_powder_snow_data = {}
 PlayerEvents.tick(event => {
-	/** @type {$ServerPlayer} */
-	const player = event.player
+	const player = /** @type {$ServerPlayer} */ (event.player)
 	// if (player.blockStateOn.block != Blocks.POWDER_SNOW) {
 	if (!player.isInPowderSnow || player.crouching) {
 		return
 	}
 
-	if (!players_powder_snow_data[player.uuid]) {
-		players_powder_snow_data[player.uuid] = new PowderSnowData()
-	}
-	/** @type {PowderSnowData} */
-	let powder_snow = players_powder_snow_data[player.uuid]
+	const powder_snow = PowderSnowData.get_or_create(player.uuid)
 	if (powder_snow.last_tick_jumped + 6 > event.server.tickCount) {
 		return
 	}
@@ -546,7 +568,7 @@ PlayerEvents.tick(event => {
 					}
 					powder_snow.snow_balls_stored -= 1
 					let snow_ball = Item.of("minecraft:snowball", 1, {max_stack_size: 99})
-					let maxed_out_snow_balls_slot = player.inventory.find(/** @param {$ItemStack} item */ item => {
+					let maxed_out_snow_balls_slot = player.inventory.find(item => {
 						return item.count == 99 && item.areComponentsEqual(snow_ball)
 					})
 
@@ -587,8 +609,7 @@ NativeEvents.onEvent($ProjectileImpactEvent, event => {
 	const fireball = event.projectile
 
 	if (event.rayTraceResult.type == "entity") {
-		/** @type {$Player} */
-		let first_collided_player = fireball.level.getEntitiesWithin(AABB.ofBlock(event.rayTraceResult.location)).filterPlayers().first
+		let first_collided_player = /** @type {$Player} */ (fireball.level.getEntitiesWithin(AABB.ofBlock(event.rayTraceResult.location)).filterPlayers().first)
 		if (first_collided_player) {
 			first_collided_player.attack(new DamageSource("minecraft:fireball", fireball, fireball.owner), 4)
 			first_collided_player.setRemainingFireTicks(SEC * 3)
@@ -629,7 +650,7 @@ NativeEvents.onEvent($EntityMobGriefingEvent, event => {
 	event.setCanGrief(false)
 
 	/** @type {import("net.minecraft.world.entity.monster.EnderMan").$EnderMan$$Type} */
-	let enderman = event.entity
+	const enderman = event.entity
 
 	// Endermen check for this basically every tick. The paralysis isn't just for fun.
 	if (!enderman.isAngry() && enderman.tickCount % (ENDERMAN_CRACKING_INTERVAL) < 5) {
