@@ -4529,6 +4529,43 @@
             ]
         },
         {
+            "pakku_id": "9annwtPtLJACfJqb",
+            "type": "MOD",
+            "side": "CLIENT",
+            "slug": {
+                "modrinth": "gui-tween"
+            },
+            "name": {
+                "modrinth": "GUI Tween"
+            },
+            "id": {
+                "modrinth": "6aRXFBGk"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "guitween-2.0.1.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/6aRXFBGk/versions/mIWgbhUA/guitween-2.0.1.jar",
+                    "id": "mIWgbhUA",
+                    "parent_id": "6aRXFBGk",
+                    "hashes": {
+                        "sha512": "e935f0693958822a3de5f6fd1ccbc211200714b8b88fd4e87d90530ee6d5030e947b76a041a0fffe110eb87853d6b3faa3152d1d124087b612ab14fbe257b665",
+                        "sha1": "f96fb925632da6a982de2384488396f0040006f0"
+                    },
+                    "required_dependencies": [],
+                    "size": 59803,
+                    "date_published": "2026-01-18T15:22:09.228992Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "8tkJauAqiK1ml9Le",
             "type": "MOD",
             "side": "BOTH",
