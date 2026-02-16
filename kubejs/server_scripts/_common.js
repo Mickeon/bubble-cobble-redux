@@ -55,7 +55,21 @@ function play_sound_at_entity(entity, sound_event, source, volume, pitch) {
 	play_sound_globally(entity.level, entity.position(), sound_event, source, volume, pitch)
 }
 
-const DASH_STARTERS = [
+/**
+ * @description Returns `true` if the given player matches one or more usernames. Always returns `true` in singleplayer. Intended for funny consequences.
+ * @param {$Player} player @param {string | Array<string>} usernames
+ */
+function is_eligible_for_easter_egg(player, usernames) {
+	if (Client.isSingleplayer()) {
+		return true
+	}
+	if (typeof usernames === "string") {
+		return player.username == usernames
+	}
+	return usernames.includes(player.username)
+}
+
+/** @private */ const DASH_STARTERS = [
 	"AceNil_",
 	"LuckyAquapura",
 	"BlueBerryNice",
@@ -65,8 +79,12 @@ const DASH_STARTERS = [
 	"Fableworks",
 	"LabbyRosenfeld",
 	"mAIgehound",
-	"Mickeon",
 	"SueTheMimiga",
 	"pepperponyo",
 	"WaiGee",
 ]
+
+/** @param {$Player} player */
+function has_bonus_dash(player) {
+	return is_eligible_for_easter_egg(player, DASH_STARTERS)
+}

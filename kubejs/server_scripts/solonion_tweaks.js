@@ -24,7 +24,7 @@ EntityEvents.spawned("minecraft:player", event => {
 
 	// const mining_speed_scale = player.pehkui_getScaleData(ScaleTypes.MINING_SPEED)
 
-	const is_candle = player.username == "CandleClockwork"
+	const is_candle = is_eligible_for_easter_egg(player, "CandleClockwork")
 	const super_starve_starting_tick_rate = 60
 	const super_starve_lowest_tick_rate = is_candle ? 2 : 40
 

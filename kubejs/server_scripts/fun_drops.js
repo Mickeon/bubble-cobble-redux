@@ -62,7 +62,7 @@ EntityEvents.drops("minecraft:player", event => {
 		case "Fableworks": {
 			add_drop(player, Item.of("minecraft:pink_dye"), 0.75)
 			add_drop(player, Item.of("minecraft:amethyst_shard"), 0.75)
-			add_drop(player, Item.of("supplementaries:flute").withCustomName(Text.of(`Attack on Titan`).italic(false).color("black").obfuscated()), 0.25)
+			add_drop(get_funny_flute("Attack on Titan"), 0.25)
 		} break;
 		case "Giuly_Clockwork": {
 			add_drop(player, Item.of("minecraft:blue_dye"), 0.75)
@@ -82,8 +82,9 @@ EntityEvents.drops("minecraft:player", event => {
 		} break;
 		case "LuckyAquapura": {
 			add_drop(player, Item.of("minecraft:white_dye"), 0.75)
-			add_drop(player, Item.of("minecraft:white_dye"), 0.5)
+			add_drop(player, Item.of("minecraft:white_wool"), 0.5)
 			add_drop(player, get_funny_salmon(), 0.5)
+			add_drop(player, Item.of("artifacts:cloud_in_a_bottle"), 0.125)
 		} break;
 		case "luigiman0640": {
 			add_drop(player, Item.of("minecraft:lime_dye"), 0.75)
@@ -149,19 +150,19 @@ EntityEvents.drops("minecraft:player", event => {
 			add_drop(player, Item.of("cobblemon:dawn_stone"), 0.75)
 		} break;
 		case "SniperZee": {
-			add_drop(player, Item.of("minecraft:cod"), 0.75)
+			add_drop(player, get_funny_salmon(), 0.75)
 			add_drop(player, Item.of("create:sand_paper").withLore("Have you ever tried to pet a shark?"), 0.5)
 			add_drop(player, Item.of("minersdelight:fish_stew_cup"), 0.25)
 			add_drop(player, Item.of("create_deepfried:fish_and_chips"), 0.1)
 		} break;
 		case "SueTheMimiga": {
-			add_drop(player, Item.of("splash_potion", {"minecraft:potion_contents": {potion: "kubejs:recall"}}).withLore(Text.red("Get out, get out!")), 0.1)
-			add_drop(player, Item.of("minecraft:rabbit").withCustomName("I think this is still funny."), 0.75)
+			add_drop(player, Item.of("minecraft:rabbit").withCustomName("Maybe this could be something else next season"), 0.75)
 			add_drop(player, Item.of("farmersdelight:beef_patty"), 0.5)
 			add_drop(player, Item.of("farmersdelight:cabbage_leaf"), 0.5)
 			add_drop(player, Item.of("farmersdelight:tomato"), 0.5)
 			add_drop(player, Item.of("farmersdelight:onion"), 0.5)
 			add_drop(player, Item.of("minersdelight:rabbit_stew_cup"), 0.1)
+			add_drop(player, Item.of("splash_potion", {"minecraft:potion_contents": {potion: "kubejs:recall"}}).withLore(Text.red("Get out, get out!")), 0.1)
 			const killer_player = event.source.player
 			if (killer_player) {
 				add_drop(player, Item.of("minecraft:paper").withCustomName("Ow.").withLore("What better way to send Sue home, than to kill them?"), 1.0)
@@ -180,13 +181,15 @@ EntityEvents.drops("minecraft:player", event => {
 			add_drop(player, Item.of("minecraft:bread"), 0.75)
 			add_drop(player, Item.of("minecraft:moss_block").withCustomName("Kept Moss"), 0.5)
 			add_drop(player, Item.of("mynethersdelight:boiled_egg"), 0.5)
+			add_drop(player, Item.of("cnc:giant_boar_head"), 0.25)
+			add_drop(player, Item.of("cnc:giant_boar_spawn_egg"), 0.1)
 		} break;
 		case "WaiGee": {
 			add_drop(player, Item.of("create:cut_calcite_bricks"), 0.75)
 			add_drop(player, Item.of("minecraft:prismarine_shard"), 0.5)
 			add_drop(player, Item.of("minecraft:white_dye"), 0.5)
 			add_drop(player, Item.of("minecraft:purple_dye"), 0.5)
-			add_drop(player, Item.of("supplementaries:flute").withCustomName(Text.of(`Cara Mia Addio`).italic(false).color("black").obfuscated()), 0.25)
+			add_drop(get_funny_flute("Cara Mia Addio"), 0.25)
 		} break;
 		case "wyanido": {
 			add_drop(player, get_funny_salmon(), 0.5)
@@ -205,24 +208,32 @@ EntityEvents.drops("minecraft:player", event => {
 
 /**
  * @param {$Player} player
- * @param {$ItemStack} stack */
+ * @param {$ItemStack} stack
+ * @param {number} chance */
 function add_drop(player, stack, chance) {
-	if (Utils.getRandom().nextDouble() > chance) {
+	if (player.random.nextDouble() > chance) {
 		return
 	}
+	// Doing it this way to explicitly avoid the loot table (and Gravestone) logic.
 	player.block.popItemFromFace(stack, Direction.UP)
 }
 
 function get_funny_salmon() {
-	return Item.of("minecraft:salmon")
+	const salmon = Item.of("minecraft:salmon")
 			.withLore("You may feel a bit lighter after eating this.")
 			.enchant("minecraft:feather_falling", 1)
+	salmon.setFood(new $FoodBuilder(salmon.food).effect("minecraft:levitation", 5, 0, 1.0).build())
+	return salmon
+}
+
+function get_funny_flute(flute_name) {
+	return Item.of("supplementaries:flute").withCustomName(Text.of(flute_name).italic(false).color("black").obfuscated())
 }
 
 /** @param {$Player} player */
 function handle_head_drop(player) {
 	const head = Item.playerHead(player.username)
-	if (DASH_STARTERS.includes(player.username)) {
+	if (has_bonus_dash(player)) {
 		head.addAttributeModifier(
 			"kubejs:dash_jump_count",
 			{id: "kubejs:dash_head_bonus", amount: 1, operation: "add_value"},

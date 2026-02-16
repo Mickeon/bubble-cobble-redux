@@ -7,8 +7,8 @@ const MASCOT_COLOR = "#83BED9"
 const MASCOT_COLOR_DARK = "#537B8D"
 const SHIFT_INFO_COLOR = "#7CB3D6"
 
-const PLACEABLE_TOOLTIP = Text.of("Placeable").color(MASCOT_COLOR_DARK).italic()
-const HAMMER_TOOLTIP = Text.of("Can be changed with the Handcrafter's Hammer").color(MASCOT_COLOR_DARK).italic()
+const PLACEABLE_TOOLTIP = Text.of(`Placeable`).color(MASCOT_COLOR_DARK).italic()
+const HAMMER_TOOLTIP = Text.of(`Can be changed with the Handcrafter's Hammer`).color(MASCOT_COLOR_DARK).italic()
 const HANDCRAFTED_ITEMS_WITH_SHIFT_INFO = [
 	"#handcrafted:cushions",
 	"#handcrafted:sheets",
@@ -30,7 +30,7 @@ const HANDCRAFTED_ITEMS_WITH_SHIFT_INFO = [
 ]
 
 ItemEvents.modifyTooltips(event => {
-	event.add(["cobblemon:ice_stone"], Text.of("Emanates a blue mascot cat scent...").color(MASCOT_COLOR))
+	event.add(["cobblemon:ice_stone"], Text.of(`Emanates a blue mascot cat scent...`).color(MASCOT_COLOR))
 
 	if (Platform.isLoaded("handcrafted")) {
 		// Remove their SHIFT info in favour of ours.
@@ -293,13 +293,13 @@ ItemEvents.modifyTooltips(event => {
 })
 
 ItemEvents.dynamicTooltips("sue_banana_mayo_sandwich", event => {
-	if (Client.player.username == "SueTheMimiga") {
-		event.lines[0] = Text.of("Banana Mayo Delicacy 😳") // Funny :)
+	if (is_eligible_for_easter_egg(Client.player, "SueTheMimiga")) {
+		event.lines[0] = Text.of(`Banana Mayo Delicacy 😳`) // Funny :)
 	}
 })
 
 ItemEvents.dynamicTooltips("add_pelad", event => {
-	if (Client.player.username == "AceNil_" || Client.player.username == "SniperZee") {
+	if (is_eligible_for_easter_egg(Client.player, ["AceNil_", "SniperZee"])) {
 		event.lines[0] = Text.of(event.lines[0]).append(" 😳")
 	}
 })
@@ -436,4 +436,19 @@ function add_sequence_info(event, sequenced_assembly) {
 			text.add(i, Text.gray("Repeat ").append(Text.white(loop_count.toFixed())).append(" times."))
 		}
 	})
+}
+
+/** @import {$Player} from "net.minecraft.world.entity.player.Player" */
+/**
+ * @description Returns `true` if the given player matches one or more usernames. Always returns `true` in singleplayer. Intended for funny consequences.
+ * @param {$Player} player @param {string | Array<string>} usernames
+ */
+function is_eligible_for_easter_egg(player, usernames) {
+	if (Client.isSingleplayer()) {
+		return true
+	}
+	if (typeof usernames === "string") {
+		return player.username == usernames
+	}
+	return usernames.includes(player.username)
 }

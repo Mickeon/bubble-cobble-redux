@@ -73,7 +73,7 @@ ItemEvents.foodEaten("kubejs:banana_mayo_sandwich", event => {
 		return
 	}
 	const entity = event.entity
-	if (entity.username == "SueTheMimiga") {
+	if (is_eligible_for_easter_egg(entity, "SueTheMimiga")) {
 		entity.potionEffects.add("farmersdelight:comfort", 600, 1)
 	} else {
 		entity.potionEffects.add("minecraft:nausea", 200, 1)
@@ -107,7 +107,7 @@ ItemEvents.foodEaten("kubejs:super_ghostbusters", event => {
 ItemEvents.entityInteracted("create:wrench",  event => {
 	const target = event.target
 	const player = event.entity
-	if (target.type != "minecraft:player" || target.username != "Mickeon" || !player.shiftKeyDown) {
+	if (target.type != "minecraft:player" || !player.shiftKeyDown || !is_eligible_for_easter_egg(target, "Mickeon")) {
 		return
 	}
 	player.addItemCooldown(event.item.getItem(), 120 * SEC)
@@ -118,10 +118,7 @@ ItemEvents.entityInteracted("create:wrench",  event => {
 
 ItemEvents.firstRightClicked(["minecraft:raw_copper"], event => {
 	const player = event.player
-	if (player
-	&& player.username == "CantieLabs"
-	&& !player.crouching
-	) { // CantieLabs
+	if (is_eligible_for_easter_egg(player, "CantieLabs") && !player.crouching) {
 		const item_stack = event.item
 		item_stack.food = new $FoodBuilder().nutrition(3).alwaysEdible().build()
 		item_stack.lore = Text.of(`Yummy!`)
@@ -249,7 +246,7 @@ ServerEvents.basicPublicCommand("suebegone", event => {
 	const invoker = event.entity
 	const invoker_pos = invoker.position()
 	const bounds = AABB.CUBE.move(invoker_pos.x(), invoker_pos.y(), invoker_pos.z()).inflate(5)
-	const nearby_entities = event.level.getEntitiesWithin(bounds).oneFilter(e => e.username == "SueTheMimiga")
+	const nearby_entities = event.level.getEntitiesWithin(bounds).oneFilter(e => is_eligible_for_easter_egg(e, "SueTheMimiga"))
 	nearby_entities.forEach(player => {
 		const push_center = invoker.position()
 		if (invoker == player) {
@@ -282,7 +279,7 @@ ServerEvents.basicPublicCommand("suebegone", event => {
 // #region Dashing power.
 PlayerEvents.loggedIn(event => {
 	const player = /** @type {$ServerPlayer} */ (event.player)
-	if (DASH_STARTERS.includes(player.username)) {
+	if (has_bonus_dash(player)) {
 		player.setAttributeBaseValue("kubejs:dash_jump_count", 1)
 	}
 	// I know the consequences of this. If the server restarts, you will lose the leniency.
