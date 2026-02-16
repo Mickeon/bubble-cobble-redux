@@ -49,6 +49,7 @@
     "sophisticatedstorage:limited_netherite_barrel_1",
     "sophisticatedstorage:limited_netherite_barrel_2",
     "sophisticatedstorage:limited_netherite_barrel_3",
-    "sophisticatedstorage:limited_netherite_barrel_4"
+    "sophisticatedstorage:limited_netherite_barrel_4",
+    "#create:postboxes"
   ]
 }

@@ -1,0 +1,34 @@
+{
+  "enabled": true,
+  "group": {
+    "break": {
+      "sound_id": "sounds:block.birch_leaves.break"
+    },
+    "fall": {
+      "sound_id": "sounds:block.birch_leaves.fall"
+    },
+    "hit": {
+      "sound_id": "sounds:block.birch_leaves.hit"
+    },
+    "pitch": 1.0,
+    "place": {
+      "sound_id": "sounds:block.birch_leaves.place"
+    },
+    "step": {
+      "sound_id": "sounds:block.birch_leaves.step"
+    },
+    "volume": 1.0
+  },
+  "keys": [
+    "biomesoplenty:rainbow_birch_leaves",
+    "biomesoplenty:rainbow_birch_sapling",
+    "biomeswevegone:brown_birch_leaves",
+    "biomeswevegone:brown_birch_sapling",
+    "biomeswevegone:orange_birch_leaves",
+    "biomeswevegone:orange_birch_sapling",
+    "biomeswevegone:red_birch_leaves",
+    "biomeswevegone:red_birch_sapling",
+    "biomeswevegone:yellow_birch_leaves",
+    "biomeswevegone:yellow_birch_sapling"
+  ]
+}

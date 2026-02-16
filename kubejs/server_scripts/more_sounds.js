@@ -9,6 +9,7 @@ ServerEvents.tags("block", event => {
 		event.add(`bubble_cobble:${wood_type}_planks_sounds`,
 			`farmersdelight:${wood_type}_cabinet`,
 			`sophisticatedstorage:${wood_type}_storage_connector`,
+			`supplementaries:way_sign_${wood_type}`,
 		)
 		event.add(`bubble_cobble:${wood_type}_object_sounds`,
 			`handcrafted:${wood_type}_bench`,
@@ -33,7 +34,7 @@ ServerEvents.tags("block", event => {
 	event.add("bubble_cobble:clay_bricks_sounds", /^createdeco:.*brick/, "supplementaries:gravel_bricks", "supplementaries:suspicious_gravel_bricks")
 	event.add("bubble_cobble:end_stone_bricks_sounds", /^create:.*brick/, "supplementaries:ash_bricks", "supplementaries:ash_bricks_stairs", "supplementaries:ash_bricks_slab", "supplementaries:ash_bricks_wall")
 
-	event.add("minecraft:combination_step_sound_blocks", "yungscavebiomes:ice_sheet")
+	event.add("minecraft:combination_step_sound_blocks", "yungscavebiomes:ice_sheet", "#snowyspirit:gumdrops")
 	// event.add("minecraft:inside_step_sound_blocks", "")
 
 	// All of the ones below are defined in `sounds/blocks` instead.

@@ -1,0 +1,33 @@
+{
+  "enabled": true,
+  "group": {
+    "break": {
+      "sound_id": "sounds:block.spruce_planks.break"
+    },
+    "fall": {
+      "sound_id": "sounds:block.spruce_planks.fall"
+    },
+    "hit": {
+      "sound_id": "sounds:block.spruce_planks.hit"
+    },
+    "pitch": 1.0,
+    "place": {
+      "sound_id": "sounds:block.spruce_planks.place"
+    },
+    "step": {
+      "sound_id": "sounds:block.spruce_planks.step"
+    },
+    "volume": 1.0
+  },
+  "keys": [
+    "#snowyspirit:glow_lights",
+    "biomeswevegone:blue_spruce_leaves",
+    "biomeswevegone:orange_spruce_leaves",
+    "biomeswevegone:red_spruce_leaves",
+    "biomeswevegone:yellow_spruce_leaves",
+    "biomeswevegone:blue_spruce_sapling",
+    "biomeswevegone:orange_spruce_sapling",
+    "biomeswevegone:red_spruce_sapling",
+    "biomeswevegone:yellow_spruce_sapling"
+  ]
+}
