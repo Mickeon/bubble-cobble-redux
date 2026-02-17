@@ -3,5 +3,16 @@
 	"cobblemon.move.doubleslap.desc": "The user attacks its target by slapping them silly. The target is hit twice in a row.",
 	"cobblemon.move.beatup.desc": "The user attacks with a flurry of underhanded strikes. This move hits two to five times in a row.",
 	"cobblemon.move.gearup.desc": "The user engages its gears to raise the Attack and Sp. Atk stats of an ally Pokémon.",
-	"cobblemon.move.magneticflux.desc": "The user manipulates magnetic fields, which boosts the Defense and Sp. Def stats of ally Pokémon."
+	"cobblemon.move.magneticflux.desc": "The user manipulates magnetic fields, which boosts the Defense and Sp. Def stats of ally Pokémon.",
+	"cobblemon.ability.primalarmor": "Primal Armor",
+	"cobblemon.ability.primalarmor.desc": "This Pokémon's ancient, rock-solid body greatly reduces the power of supereffective attacks that hit it.",
+	"cobblemon.ability.aerodynamics": "Aerodynamics",
+	"cobblemon.ability.aerodynamics.desc": "The Pokémon takes no damage when hit by Flying-type moves. Instead, its Speed stat is boosted.",
+	"cobblemon.move.barrage.desc": "Several objects are hurled at the target using telepathy to strike two to five times in a row.",
+	"cobblemon.move.wildcharge.desc": "The user shrouds itself in electricity and smashes into its target. This also damages the user quite a lot and may leave the target with paralysis.",
+	"cobblemon.move.volttackle.desc": "The user electrifies itself and charges the target to inflict damage. This also damages the user a bit and may leave the target with paralysis.",
+	"cobblemon.move.submission.desc": "The user grabs the target and recklessly dives for the ground. This also damages the user.",
+	"cobblemon.ability.sandveil.desc": "Boosts the Pokémon's Defense and Sp.Defense in a sandstorm.",
+	"cobblemon.ability.metallicize": "Metallicize",
+	"cobblemon.ability.metallicize.desc": "Normal-type moves become Steel-type moves."
 }
