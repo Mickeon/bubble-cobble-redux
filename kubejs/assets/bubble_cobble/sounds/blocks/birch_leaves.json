@@ -20,6 +20,7 @@
     "volume": 1.0
   },
   "keys": [
+    "#bubble_cobble:sounds/birch_leaves",
     "biomesoplenty:rainbow_birch_leaves",
     "biomesoplenty:rainbow_birch_sapling",
     "biomeswevegone:brown_birch_leaves",
@@ -29,6 +30,15 @@
     "biomeswevegone:red_birch_leaves",
     "biomeswevegone:red_birch_sapling",
     "biomeswevegone:yellow_birch_leaves",
-    "biomeswevegone:yellow_birch_sapling"
+    "biomeswevegone:yellow_birch_sapling",
+    "biomeswevegone:palo_verde_leaves",
+    "biomeswevegone:flowering_palo_verde_leaves",
+    "biomeswevegone:palo_verde_sapling",
+    "biomeswevegone:jacaranda_sapling",
+    "biomeswevegone:jacaranda_leaves",
+    "biomeswevegone:flowering_jacaranda_leaves",
+    "biomeswevegone:indigo_jacaranda_sapling",
+    "biomeswevegone:indigo_jacaranda_leaves",
+    "biomeswevegone:flowering_indigo_jacaranda_leaves"
   ]
 }

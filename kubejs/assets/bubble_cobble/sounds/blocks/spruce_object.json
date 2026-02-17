@@ -20,7 +20,7 @@
     "volume": 1.0
   },
   "keys": [
-    "#bubble_cobble:spruce_object_sounds",
+    "#bubble_cobble:sounds/spruce_object",
     "farmersdelight:carrot_crate",
     "farmersdelight:potato_crate",
     "farmersdelight:beetroot_crate",

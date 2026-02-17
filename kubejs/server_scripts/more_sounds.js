@@ -1,17 +1,80 @@
 // NOTE: Sounds's block definitions refresh after a full restart.
 
 ServerEvents.tags("block", event => {
+	/**
+	 * @param {Special.Mod} namespace
+	 * @param {string} wood_type
+	 * @param {"birch" | "spruce" | "jungle" | "acacia" | "mangrove"} sound_type
+	 */
+	function associate_wood_type_with_sound(namespace, wood_type, sound_type) {
+		const combined_prefix = `${namespace}:${wood_type}`
+		const combined_stripped_prefix = `${namespace}:stripped_${wood_type}`
+
+		event.add(`bubble_cobble:sounds/${sound_type}_leaves`,
+			`${combined_prefix}_leaves`,
+			`${combined_prefix}_sapling`,
+		)
+		event.add(`bubble_cobble:sounds/${sound_type}_log`,
+			`${combined_prefix}_log`,
+			`${combined_prefix}_wood`,
+		)
+		event.add(`bubble_cobble:sounds/${sound_type}_planks`,
+			`${combined_stripped_prefix}_log`,
+			`${combined_stripped_prefix}_wood`,
+			`${combined_prefix}_planks`,
+			`${combined_prefix}_slab`,
+			`${combined_prefix}_stairs`,
+		)
+		event.add(`bubble_cobble:sounds/${sound_type}_object`,
+			`${combined_prefix}_button`,
+			`${combined_prefix}_door`,
+			`${combined_prefix}_fence`,
+			`${combined_prefix}_fence_gate`,
+			`${combined_prefix}_pressure_plate`,
+			`${combined_prefix}_sign`,
+			`${combined_prefix}_wall_sign`,
+			`${combined_prefix}_trapdoor`,
+		)
+
+		const wood_crafting_table_id = `${combined_prefix}_crafting_table`
+		if (Block.getBlock(wood_crafting_table_id)) {
+			event.add(`bubble_cobble:sounds/${sound_type}_planks`, wood_crafting_table_id)
+		}
+	}
+
+	// TODO: Cherry sound for Sakura wood type.
+	associate_wood_type_with_sound("biomeswevegone", "aspen", "birch")
+	associate_wood_type_with_sound("biomeswevegone", "baobab", "birch")
+	associate_wood_type_with_sound("biomeswevegone", "cika", "jungle")
+	associate_wood_type_with_sound("biomeswevegone", "cypress", "mangrove")
+	associate_wood_type_with_sound("biomeswevegone", "ebony", "spruce")
+	associate_wood_type_with_sound("biomeswevegone", "fir", "jungle")
+	associate_wood_type_with_sound("biomeswevegone", "holly", "birch")
+	associate_wood_type_with_sound("biomeswevegone", "ironwood", "birch")
+	associate_wood_type_with_sound("biomeswevegone", "jacaranda", "birch")
+	associate_wood_type_with_sound("biomeswevegone", "mahogany", "jungle")
+	associate_wood_type_with_sound("biomeswevegone", "maple", "jungle")
+	associate_wood_type_with_sound("biomeswevegone", "palm", "birch")
+	associate_wood_type_with_sound("biomeswevegone", "pine", "spruce")
+	associate_wood_type_with_sound("biomeswevegone", "redwood", "spruce")
+	associate_wood_type_with_sound("biomeswevegone", "skyris", "acacia")
+	associate_wood_type_with_sound("biomeswevegone", "spirit", "mangrove")
+	associate_wood_type_with_sound("biomeswevegone", "white_mangrove", "mangrove")
+	associate_wood_type_with_sound("biomeswevegone", "willow", "spruce")
+	associate_wood_type_with_sound("biomeswevegone", "witch_hazel", "jungle")
+	associate_wood_type_with_sound("biomeswevegone", "zelkova", "acacia")
+
+	// Many sounds are also defined in their respective sounds/blocks files. This script is for the more programmatic ones.
 	// These sound like coins shattering.
-	event.add("bubble_cobble:raw_gold_block_sounds", /^createdeco:.*coinstack$/)
-	event.add("bubble_cobble:sandstone_sounds", "#c:sandstone/blocks") // Mutes Presence Footsteps for some reason.
+	event.add("bubble_cobble:sounds/raw_gold_block", /^createdeco:.*coinstack$/)
+	event.add("bubble_cobble:sounds/sandstone", "#c:sandstone/blocks") // Mutes Presence Footsteps for some reason.
 
 	for (const wood_type of ["birch", "spruce", "jungle", "acacia", "mangrove"]) {
-		event.add(`bubble_cobble:${wood_type}_planks_sounds`,
+		event.add(`bubble_cobble:sounds/${wood_type}_planks`,
 			`farmersdelight:${wood_type}_cabinet`,
 			`sophisticatedstorage:${wood_type}_storage_connector`,
-			`supplementaries:way_sign_${wood_type}`,
 		)
-		event.add(`bubble_cobble:${wood_type}_object_sounds`,
+		event.add(`bubble_cobble:sounds/${wood_type}_object`,
 			`handcrafted:${wood_type}_bench`,
 			`handcrafted:${wood_type}_chair`,
 			`handcrafted:${wood_type}_corner_trim`,
@@ -31,22 +94,11 @@ ServerEvents.tags("block", event => {
 		)
 	}
 	// A bit arbitrary.
-	event.add("bubble_cobble:clay_bricks_sounds", /^createdeco:.*brick/, "supplementaries:gravel_bricks", "supplementaries:suspicious_gravel_bricks")
-	event.add("bubble_cobble:end_stone_bricks_sounds", /^create:.*brick/, "supplementaries:ash_bricks", "supplementaries:ash_bricks_stairs", "supplementaries:ash_bricks_slab", "supplementaries:ash_bricks_wall")
+	event.add("bubble_cobble:sounds/clay_bricks", /^createdeco:.*brick/, "supplementaries:gravel_bricks", "supplementaries:suspicious_gravel_bricks")
+	event.add("bubble_cobble:sounds/end_stone_bricks", /^create:.*brick/, "supplementaries:ash_bricks", "supplementaries:ash_bricks_stairs", "supplementaries:ash_bricks_slab", "supplementaries:ash_bricks_wall")
 
 	event.add("minecraft:combination_step_sound_blocks", "yungscavebiomes:ice_sheet", "#snowyspirit:gumdrops")
 	// event.add("minecraft:inside_step_sound_blocks", "")
-
-	// All of the ones below are defined in `sounds/blocks` instead.
-	// event.add("bubble_cobble:bookshelf_sounds", "#c:bookshelves")
-	// event.add("bubble_cobble:glass_sounds", "")
-	// This sounds like a very sturdy metal, with a bit of a high-pitched "pling".
-	// event.add("bubble_cobble:gold_sounds", "")
-	// event.add("bubble_cobble:sand_sounds", "#minecraft:sand")
-	// event.add("bubble_cobble:barrel_sounds", "#c:barrels/wooden", /^sophisticatedstorage:.*barrel/)
-	// event.add("bubble_cobble:chest_sounds", /^sophisticatedstorage:.*chest/)
-	// These sound like sturdy stone with a pitch of coin shattering.
-	// event.add("bubble_cobble:gold_ore_sounds", "#minecraft:gold_ores") // No point.
 })
 
 ServerEvents.tags("item", event => {

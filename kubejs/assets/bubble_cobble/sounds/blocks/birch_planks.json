@@ -20,6 +20,7 @@
     "volume": 1.0
   },
   "keys": [
-    "#bubble_cobble:birch_planks_sounds"
+    "#bubble_cobble:sounds/birch_planks",
+    "biomeswevegone:stripped_palo_verde_log"
   ]
 }

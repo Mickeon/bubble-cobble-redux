@@ -1,0 +1,27 @@
+{
+  "enabled": true,
+  "group": {
+    "break": {
+      "sound_id": "sounds:block.acacia_leaves.break"
+    },
+    "fall": {
+      "sound_id": "sounds:block.acacia_leaves.fall"
+    },
+    "hit": {
+      "sound_id": "sounds:block.acacia_leaves.hit"
+    },
+    "pitch": 1.0,
+    "place": {
+      "sound_id": "sounds:block.acacia_leaves.place"
+    },
+    "step": {
+      "sound_id": "sounds:block.acacia_leaves.step"
+    },
+    "volume": 1.0
+  },
+  "keys": [
+    "#bubble_cobble:sounds/acacia_leaves",
+    "biomeswevegone:zelkova_leaves",
+    "biomeswevegone:brown_zelkova_leaves"
+  ]
+}

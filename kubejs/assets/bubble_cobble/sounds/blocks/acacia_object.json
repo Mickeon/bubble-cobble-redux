@@ -20,6 +20,6 @@
     "volume": 1.0
   },
   "keys": [
-    "#bubble_cobble:acacia_object_sounds"
+    "#bubble_cobble:sounds/acacia_object"
   ]
 }

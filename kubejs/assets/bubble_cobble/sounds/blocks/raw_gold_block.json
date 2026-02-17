@@ -20,6 +20,6 @@
     "volume": 1.0
   },
   "keys": [
-    "#bubble_cobble:raw_gold_block_sounds"
+    "#bubble_cobble:sounds/raw_gold_block"
   ]
 }
