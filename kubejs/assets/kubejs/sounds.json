@@ -1,34 +1,4 @@
 {
-    "music.grapes" : {
-		"sounds": [{
-			"name": "kubejs:music/grapes",
-			"stream": true
-		}]
-	},
-	"music.void" : {
-		"sounds": [{
-			"name": "kubejs:music/void",
-			"stream": true
-		}]
-	},
-	"music.fool" : {
-		"sounds": [{
-			"name": "kubejs:music/fool",
-			"stream": true
-		}]
-	},
-	"music.mint" : {
-		"sounds": [{
-			"name": "kubejs:music/mint",
-			"stream": true
-		}]
-	},
-	"music.ghostbusters": {
-		"sounds": [{
-			"name": "kubejs:music/ghostbusters",
-			"stream": true
-		}]
-	},
 	"item.bearded_dragon_chirp": {
 		"sounds": [
 			"kubejs:item/bearded_dragon_chirp"
