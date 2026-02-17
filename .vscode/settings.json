@@ -1,5 +1,4 @@
 {
-    "editor.defaultFormatter": "Prunoideae.probejs",
     "typescript.disableAutomaticTypeAcquisition": true,
     "typescript.validate.enable": false,
     "json.schemas": [

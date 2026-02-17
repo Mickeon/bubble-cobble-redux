@@ -249,6 +249,25 @@
 			"text": [
 				"Mailbox"
 			]
+		},
+		{
+			"stacks": [
+				"item:create:empty_schematic",
+				"item:create:schematic_and_quill",
+				"item:create:schematicannon",
+				"item:create:schematic_table"
+			],
+			"text": [
+				"Blueprint"
+			]
+		},
+		{
+			"stacks": [
+				"#item:arts_and_crafts:paintable/plaster"
+			],
+			"text": [
+				"Stucco"
+			]
 		}
 	]
 }

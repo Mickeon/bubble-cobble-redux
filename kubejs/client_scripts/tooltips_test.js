@@ -3,7 +3,6 @@ ItemEvents.modifyTooltips(event => {
 	event.modify("minecraft:skeleton_skull", text => {
 		text.dynamic("skeleton_skull")
 	})
-	// Show the name of the player who owns the skull in a skulls tooltip.
 	event.modify("minecraft:player_head", text => {
 		text.dynamic("show_player_head_owner")
 	})
@@ -26,8 +25,8 @@ ItemEvents.modifyTooltips(event => {
 		)
 	})
 
-	event.modifyAll({ alt: true, advanced: true }, text => {
-		text.dynamic("show_localization_string")
+	event.modifyAll({ alt: true, ctrl: true, advanced: true }, text => {
+		text.dynamic("show_modpack_debug_stuff")
 	})
 })
 
@@ -35,14 +34,23 @@ ItemEvents.dynamicTooltips("skeleton_skull", event => {
 	event.add(Text.gray("Could this have been ").append(Client.player.name).append("'s head?"))
 })
 
+
 ItemEvents.dynamicTooltips("show_player_head_owner", event => {
-	// let profile = event.item.components.get("minecraft:profile")
-	// let player_name = profile && profile.name().get()
-	// if (player_name) {
-	// 	event.add(Text.darkGray("Looks like ").append(Text.aqua(player_name)).append(Text.darkGray("'s head...")))
-	// }
+	/** @import {$ResolvableProfile} from "net.minecraft.world.item.component.ResolvableProfile"*/
+	const profile = /** @type {$ResolvableProfile?} */ (event.item.components.get("minecraft:profile"))
+	const player_name = profile && profile.isResolved() && profile.name().get()
+	if (player_name) {
+		event.lines.add(1, Text.translateWithFallback("", "Looks like %s's head...", [Text.aqua(player_name)]).darkGray())
+	}
 })
 
-ItemEvents.dynamicTooltips("show_localization_string", event => {
-	event.add(Text.gray("Translation ID: ").append(Text.darkGray(event.item.getDescriptionId() ?? "none")))
+ItemEvents.dynamicTooltips("show_modpack_debug_stuff", event => {
+	event.add(Text.gray(["🏴 ", Text.darkGray(event.item.getDescriptionId() ?? "none")]))
+
+	const block = event.item.block
+	if (block) {
+		let sound_type = block.invokeGetSoundType(block.defaultBlockState())
+		event.add(Text.gray("🔊 ").append(Text.darkGray(sound_type.placeSound.location)))
+	}
+
 })
