@@ -217,6 +217,7 @@ ServerEvents.tags("entity_type", event => {
 	event.add("supplementaries:cage_catchable", "minecraft:copper_golem")
 	event.add("supplementaries:flute_pet", "minecraft:copper_golem", "minecraft:iron_golem", "minecraft:snow_golem", "minecraft:player", "minecraft:turtle")
 	event.add("artifacts:creepers", "undergroundworlds:icy_creeper")
+	event.add("create:ignore_seat", "minecraft:bee")
 })
 
 ServerEvents.tags("damage_type", event => {

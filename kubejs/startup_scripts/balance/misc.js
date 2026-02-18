@@ -39,7 +39,7 @@ ItemEvents.modification(event => {
 
 		food_properties.effects().forEach(e => {
 			food_builder.effect(
-				e.effect().effect.getKey(),
+				e.effect().getEffect().getKey(),
 				e.effect().duration,
 				e.effect().amplifier,
 				e.probability()
