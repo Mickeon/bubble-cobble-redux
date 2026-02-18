@@ -10,8 +10,8 @@
   "name": "gui.xaero_entity_category_root",
   "protection": true,
   "settingOverrides": {
-    "displayed": true,
     "displayHeight": 0.0,
+    "displayed": true,
     "heightBasedFade": true,
     "renderOrder": 0.0,
     "color": 13.0,
@@ -22,8 +22,8 @@
     "dotSize": 1.0,
     "renderOverMinimapFrame": 0.0,
     "icons": 1.0,
-    "names": 0.0,
     "heightLimit": 20.0,
+    "names": 0.0,
     "iconScale": 1.0
   },
   "subCategories": [
@@ -32,6 +32,8 @@
       "includeList": [
         "cobblemon:empty_pokeball",
         "cobblemon:poke_bobber",
+        "connectiblechains:chain_collision",
+        "connectiblechains:chain_knot",
         "create:carriage_contraption",
         "create:contraption",
         "create:crafting_blueprint",
@@ -88,15 +90,15 @@
           "name": "gui.xaero_entity_category_players",
           "protection": true,
           "settingOverrides": {
-            "displayed": true,
             "displayHeight": 2.0,
+            "displayed": true,
             "heightBasedFade": false,
             "renderOrder": 925.0,
-            "heightLimit": 200.0,
-            "names": 1.0,
             "color": -1.0,
             "renderOverMinimapFrame": 2.0,
             "icons": 2.0,
+            "heightLimit": 200.0,
+            "names": 1.0,
             "iconScale": 1.0
           },
           "subCategories": [
@@ -198,8 +200,8 @@
                   "name": "Hidden Bosses",
                   "protection": true,
                   "settingOverrides": {
-                    "heightLimit": 15.0,
-                    "displayNameWhenIconFails": false
+                    "displayNameWhenIconFails": false,
+                    "heightLimit": 15.0
                   },
                   "subCategories": []
                 }
@@ -246,8 +248,8 @@
               "name": "Villagers",
               "protection": false,
               "settingOverrides": {
-                "heightLimit": 40.0,
                 "icons": 2.0,
+                "heightLimit": 40.0,
                 "iconScale": 0.75
               },
               "subCategories": []
@@ -263,10 +265,10 @@
               "name": "Pokemon",
               "protection": false,
               "settingOverrides": {
-                "heightLimit": 40.0,
                 "color": 15.0,
                 "renderOverMinimapFrame": 1.0,
                 "icons": 2.0,
+                "heightLimit": 40.0,
                 "iconScale": 1.5
               },
               "subCategories": []
@@ -281,12 +283,12 @@
               "protection": true,
               "settingOverrides": {
                 "renderOrder": 4.0,
-                "heightLimit": 40.0,
-                "names": 1.0,
                 "color": 11.0,
                 "displayNameWhenIconFails": true,
                 "renderOverMinimapFrame": 1.0,
                 "icons": 2.0,
+                "heightLimit": 40.0,
+                "names": 1.0,
                 "iconScale": 1.0
               },
               "subCategories": []
@@ -305,10 +307,10 @@
       "protection": true,
       "settingOverrides": {
         "renderOrder": 1.0,
-        "names": 1.0,
         "color": 8.0,
         "entityNumber": 100.0,
-        "dotSize": 1.0
+        "dotSize": 1.0,
+        "names": 1.0
       },
       "subCategories": []
     },
@@ -321,8 +323,8 @@
       "name": "gui.xaero_entity_category_other_entities",
       "protection": true,
       "settingOverrides": {
-        "names": 1.0,
-        "color": 5.0
+        "color": 5.0,
+        "names": 1.0
       },
       "subCategories": []
     }
