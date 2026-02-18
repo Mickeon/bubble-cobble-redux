@@ -1,0 +1,21 @@
+{
+    "replace": false,
+    "values": [
+        {
+            "id": "#cobblemonraiddens:oricorio_baile",
+            "required": false
+        },
+        {
+            "id": "#cobblemonraiddens:oricorio_pau",
+            "required": false
+        },
+        {
+            "id": "#cobblemonraiddens:oricorio_pompom",
+            "required": false
+        },
+        {
+            "id": "#cobblemonraiddens:oricorio_sensu",
+            "required": false
+        }
+    ]
+}

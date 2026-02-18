@@ -4,8 +4,8 @@
     {
       "conditions": [
         {
-          "condition": "minecraft:reference",
-          "name": "bubble_cobble:is_raid/tier/1"
+          "condition": "cobblemonraiddens:raid_pouch_condition",
+          "tier": "TIER_ONE"
         }
       ],
       "rolls": 1,
@@ -20,8 +20,8 @@
     {
       "conditions": [
         {
-          "condition": "minecraft:reference",
-          "name": "bubble_cobble:is_raid/tier/2"
+          "condition": "cobblemonraiddens:raid_pouch_condition",
+          "tier": "TIER_TWO"
         }
       ],
       "rolls": 1,

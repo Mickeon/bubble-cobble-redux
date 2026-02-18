@@ -4,8 +4,8 @@
     {
       "conditions": [
         {
-          "condition": "minecraft:reference",
-          "name": "bubble_cobble:is_raid/type/normal"
+          "condition": "cobblemonraiddens:raid_pouch_condition",
+          "type": "NORMAL"
         }
       ],
       "entries": [
@@ -20,8 +20,8 @@
     {
       "conditions": [
         {
-          "condition": "minecraft:reference",
-          "name": "bubble_cobble:is_raid/type/fire"
+          "condition": "cobblemonraiddens:raid_pouch_condition",
+          "type": "FIRE"
         }
       ],
       "entries": [
@@ -36,8 +36,8 @@
     {
       "conditions": [
         {
-          "condition": "minecraft:reference",
-          "name": "bubble_cobble:is_raid/type/fighting"
+          "condition": "cobblemonraiddens:raid_pouch_condition",
+          "type": "FIGHTING"
         }
       ],
       "entries": [
@@ -52,8 +52,8 @@
     {
       "conditions": [
         {
-          "condition": "minecraft:reference",
-          "name": "bubble_cobble:is_raid/type/water"
+          "condition": "cobblemonraiddens:raid_pouch_condition",
+          "type": "WATER"
         }
       ],
       "entries": [
@@ -68,8 +68,8 @@
     {
       "conditions": [
         {
-          "condition": "minecraft:reference",
-          "name": "bubble_cobble:is_raid/type/flying"
+          "condition": "cobblemonraiddens:raid_pouch_condition",
+          "type": "FLYING"
         }
       ],
       "entries": [
@@ -84,8 +84,8 @@
     {
       "conditions": [
         {
-          "condition": "minecraft:reference",
-          "name": "bubble_cobble:is_raid/type/grass"
+          "condition": "cobblemonraiddens:raid_pouch_condition",
+          "type": "GRASS"
         }
       ],
       "entries": [
@@ -100,8 +100,8 @@
     {
       "conditions": [
         {
-          "condition": "minecraft:reference",
-          "name": "bubble_cobble:is_raid/type/poison"
+          "condition": "cobblemonraiddens:raid_pouch_condition",
+          "type": "POISON"
         }
       ],
       "entries": [
@@ -116,8 +116,8 @@
     {
       "conditions": [
         {
-          "condition": "minecraft:reference",
-          "name": "bubble_cobble:is_raid/type/electric"
+          "condition": "cobblemonraiddens:raid_pouch_condition",
+          "type": "ELECTRIC"
         }
       ],
       "entries": [
@@ -132,8 +132,8 @@
     {
       "conditions": [
         {
-          "condition": "minecraft:reference",
-          "name": "bubble_cobble:is_raid/type/ground"
+          "condition": "cobblemonraiddens:raid_pouch_condition",
+          "type": "GROUND"
         }
       ],
       "entries": [
@@ -148,8 +148,8 @@
     {
       "conditions": [
         {
-          "condition": "minecraft:reference",
-          "name": "bubble_cobble:is_raid/type/psychic"
+          "condition": "cobblemonraiddens:raid_pouch_condition",
+          "type": "PSYCHIC"
         }
       ],
       "entries": [
@@ -164,8 +164,8 @@
     {
       "conditions": [
         {
-          "condition": "minecraft:reference",
-          "name": "bubble_cobble:is_raid/type/rock"
+          "condition": "cobblemonraiddens:raid_pouch_condition",
+          "type": "ROCK"
         }
       ],
       "entries": [
@@ -180,8 +180,8 @@
     {
       "conditions": [
         {
-          "condition": "minecraft:reference",
-          "name": "bubble_cobble:is_raid/type/ice"
+          "condition": "cobblemonraiddens:raid_pouch_condition",
+          "type": "ICE"
         }
       ],
       "entries": [
@@ -196,8 +196,8 @@
     {
       "conditions": [
         {
-          "condition": "minecraft:reference",
-          "name": "bubble_cobble:is_raid/type/bug"
+          "condition": "cobblemonraiddens:raid_pouch_condition",
+          "type": "BUG"
         }
       ],
       "entries": [
@@ -212,8 +212,8 @@
     {
       "conditions": [
         {
-          "condition": "minecraft:reference",
-          "name": "bubble_cobble:is_raid/type/dragon"
+          "condition": "cobblemonraiddens:raid_pouch_condition",
+          "type": "DRAGON"
         }
       ],
       "entries": [
@@ -228,8 +228,8 @@
     {
       "conditions": [
         {
-          "condition": "minecraft:reference",
-          "name": "bubble_cobble:is_raid/type/ghost"
+          "condition": "cobblemonraiddens:raid_pouch_condition",
+          "type": "GHOST"
         }
       ],
       "entries": [
@@ -244,8 +244,8 @@
     {
       "conditions": [
         {
-          "condition": "minecraft:reference",
-          "name": "bubble_cobble:is_raid/type/dark"
+          "condition": "cobblemonraiddens:raid_pouch_condition",
+          "type": "DARK"
         }
       ],
       "entries": [
@@ -260,8 +260,8 @@
     {
       "conditions": [
         {
-          "condition": "minecraft:reference",
-          "name": "bubble_cobble:is_raid/type/steel"
+          "condition": "cobblemonraiddens:raid_pouch_condition",
+          "type": "STEEL"
         }
       ],
       "entries": [
@@ -276,8 +276,8 @@
         {
       "conditions": [
         {
-          "condition": "minecraft:reference",
-          "name": "bubble_cobble:is_raid/type/fairy"
+          "condition": "cobblemonraiddens:raid_pouch_condition",
+          "type": "FAIRY"
         }
       ],
       "entries": [

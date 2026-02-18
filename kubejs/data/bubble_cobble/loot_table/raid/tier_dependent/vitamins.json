@@ -4,8 +4,8 @@
     {
       "conditions": [
         {
-          "condition": "minecraft:reference",
-          "name": "bubble_cobble:is_raid/tier/1"
+          "condition": "cobblemonraiddens:raid_pouch_condition",
+          "tier": "TIER_ONE"
         }
       ],
       "rolls": 1,
@@ -26,8 +26,8 @@
     {
       "conditions": [
         {
-          "condition": "minecraft:reference",
-          "name": "bubble_cobble:is_raid/tier/2"
+          "condition": "cobblemonraiddens:raid_pouch_condition",
+          "tier": "TIER_TWO"
         }
       ],
       "rolls": 1,
@@ -48,8 +48,8 @@
     {
       "conditions": [
         {
-          "condition": "minecraft:reference",
-          "name": "bubble_cobble:is_raid/tier/3"
+          "condition": "cobblemonraiddens:raid_pouch_condition",
+          "tier": "TIER_THREE"
         }
       ],
       "rolls": 1,
@@ -70,8 +70,8 @@
     {
       "conditions": [
         {
-          "condition": "minecraft:reference",
-          "name": "bubble_cobble:is_raid/tier/4"
+          "condition": "cobblemonraiddens:raid_pouch_condition",
+          "tier": "TIER_FOUR"
         }
       ],
       "rolls": 1,
@@ -92,8 +92,8 @@
     {
       "conditions": [
         {
-          "condition": "minecraft:reference",
-          "name": "bubble_cobble:is_raid/tier/5"
+          "condition": "cobblemonraiddens:raid_pouch_condition",
+          "tier": "TIER_FIVE"
         }
       ],
       "rolls": 1,
@@ -114,8 +114,8 @@
     {
       "conditions": [
         {
-          "condition": "minecraft:reference",
-          "name": "bubble_cobble:is_raid/tier/6"
+          "condition": "cobblemonraiddens:raid_pouch_condition",
+          "tier": "TIER_SIX"
         }
       ],
       "rolls": 1,
@@ -136,8 +136,8 @@
     {
       "conditions": [
         {
-          "condition": "minecraft:reference",
-          "name": "bubble_cobble:is_raid/tier/7"
+          "condition": "cobblemonraiddens:raid_pouch_condition",
+          "tier": "TIER_SEVEN"
         }
       ],
       "rolls": 1,
