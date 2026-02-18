@@ -151,7 +151,9 @@
 				"item:supplementaries:blackstone_lamp",
 				"item:supplementaries:deepslate_lamp",
 				"item:supplementaries:end_stone_lamp",
-				"item:supplementaries:stone_lamp"
+				"item:supplementaries:stone_lamp",
+				"item:bits_n_bobs:lightbulb",
+				"item:bits_n_bobs:headlamp"
 			],
 			"text": [
 				"Lamp",

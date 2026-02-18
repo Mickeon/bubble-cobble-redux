@@ -301,7 +301,7 @@ ItemEvents.dynamicTooltips("sue_banana_mayo_sandwich", event => {
 const GOURMANDS = ["AceNil_", "SniperZee", "CantieLabs", "SueTheMimiga", "ButteryInkling"]
 ItemEvents.dynamicTooltips("add_pelad", event => {
 	if (is_eligible_for_easter_egg(Client.player, GOURMANDS)) {
-		event.lines[0] = Text.of(event.lines[0]).append(Math.random() > 0.5 ? " 😳" : " ❤")
+		event.lines[0] = Text.of(event.lines[0]).append(Utils.getSystemTime() % 3000 > 1000 ? " 😳" : " 🥺")
 	}
 })
 
