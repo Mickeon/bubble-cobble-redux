@@ -322,6 +322,37 @@ StartupEvents.modifyCreativeTab("relics:relics", event => {
 	event.add("artifacts:mimic_spawn_egg")
 })
 
+if (Platform.isLoaded("displaydelight")) {
+	// https://github.com/jkvin114/display-delight-neoforge/blob/main/src/main/java/com/jkvin114/displaydelight/init/BlockAssociations.java
+	/** @type {typeof import("com.jkvin114.displaydelight.init.BlockAssociations").$BlockAssociations } */
+	let $BlockAssociations  = Java.loadClass("com.jkvin114.displaydelight.init.BlockAssociations")
+	let $AbstractItemBlock  = Java.loadClass("com.jkvin114.displaydelight.block.AbstractItemBlock")
+
+	StartupEvents.modifyCreativeTab("displaydelight:displaydelight", event => {
+		event.remove(item => {
+			if (item.block instanceof $AbstractItemBlock) {
+				if (item.block.getStackFor().isEmpty()) {
+					// The display item's original food item does not exist in the modpack.
+					return true
+				}
+
+				if ($BlockAssociations.getItemFor(item.block) != Items.AIR) {
+					// The display item has an exact food item corresponding to it.
+					// Showing it is redundant because the item can easily be placed and is properly documented.
+					return true
+				}
+			}
+			return false
+		})
+
+		// Show the original food items that can be placed down, for consistency.
+		let plated_cookie = Item.of("displaydelight:plated_cookie")
+		Ingredient.of("#displaydelight:displayable").stackArray.sort().forEach(item => {
+			event.addBefore(plated_cookie, item, "parent_tab_only")
+		})
+	})
+}
+
 // Remove all non-max level Enchanted Books from searches, which is more than whatever mod is doing this already.
 // Commenting out for now, as it fails on startup for some reason.
 // StartupEvents.modifyCreativeTab("minecraft:ingredients", event => {
