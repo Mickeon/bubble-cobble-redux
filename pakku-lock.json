@@ -1728,7 +1728,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "cobblemonraiddens-neoforge-0.7.3+1.21.1.jar",
+                    "file_name": "cobblemonraiddens-neoforge-0.7.5+1.21.1.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -1736,19 +1736,19 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/GebWh45l/versions/JFIy8f41/cobblemonraiddens-neoforge-0.7.3+1.21.1.jar",
-                    "id": "JFIy8f41",
+                    "url": "https://cdn.modrinth.com/data/GebWh45l/versions/MiqPmjLr/cobblemonraiddens-neoforge-0.7.5+1.21.1.jar",
+                    "id": "MiqPmjLr",
                     "parent_id": "GebWh45l",
                     "hashes": {
-                        "sha512": "6b82b57b178cd86a8c442557164bdeb3839b7e078946dbc8858ba4dc1b9dd3535ac212eb22e0a28e2962057f9214b278219337625f0aa685c164673de0b62c8a",
-                        "sha1": "94ee0e5fd2f45f117d9997c89e8a90aa93ab05b3"
+                        "sha512": "6da1a0ed0db6822e3c41deff543afae7d75b8afff8a78e86d8b784578cccb7f0f11ba1ae103ff7a017af6fde075ba9754e7d8f0c2ca33b829790d1131e198a9a",
+                        "sha1": "f4d2bfc2e4d6e0b929d05c8510b0f1528ee3a96e"
                     },
                     "required_dependencies": [
                         "8BmcQJ2H",
                         "MdwFAVRL"
                     ],
-                    "size": 2522040,
-                    "date_published": "2026-02-08T10:52:21.436354Z"
+                    "size": 2534656,
+                    "date_published": "2026-02-16T02:31:54.528949Z"
                 }
             ]
         },
@@ -1932,7 +1932,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "mega_showdown-neoforge-1.6.9+1.7.3+1.21.1.jar",
+                    "file_name": "mega_showdown-neoforge-1.6.12+1.7.3+1.21.1.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -1940,21 +1940,21 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/SszvX85I/versions/yPEfYlfE/mega_showdown-neoforge-1.6.9+1.7.3+1.21.1.jar",
-                    "id": "yPEfYlfE",
+                    "url": "https://cdn.modrinth.com/data/SszvX85I/versions/5v61EnBg/mega_showdown-neoforge-1.6.12+1.7.3+1.21.1.jar",
+                    "id": "5v61EnBg",
                     "parent_id": "SszvX85I",
                     "hashes": {
-                        "sha512": "6b5b02edd622f0da9784e2912122397196419fcc8436008526e8e0fefbe0808549bbdb20bf93d2ddd681dda73bf0ea46a302b9195ab02241815b39622310bf21",
-                        "sha1": "5184bcf9fca8aefb4609ba259565f2e6bdac5a14"
+                        "sha512": "672ace2b829f5e5a0b6da8fa694192539e9d147f425360cbe37e4738f3262560e810e0ef5a436c9d3d2f17e1cfd62d93213e8a8022401eea3faff683157839a2",
+                        "sha1": "158a407a72a2d8c905eeccc531416b89147a3893"
                     },
                     "required_dependencies": [
-                        "ccKDOlHs",
                         "lhGA9TYQ",
-                        "jtmvUHXj",
-                        "MdwFAVRL"
+                        "MdwFAVRL",
+                        "ccKDOlHs",
+                        "jtmvUHXj"
                     ],
-                    "size": 16374105,
-                    "date_published": "2026-02-06T07:14:02.379565Z"
+                    "size": 16374924,
+                    "date_published": "2026-02-18T13:56:28.179347Z"
                 }
             ]
         },
@@ -7849,7 +7849,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "rctapi-neoforge-1.21.1-0.14.6-beta.jar",
+                    "file_name": "rctapi-neoforge-1.21.1-0.14.8-beta.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -7857,19 +7857,19 @@
                         "neoforge"
                     ],
                     "release_type": "beta",
-                    "url": "https://cdn.modrinth.com/data/CBfM2yw7/versions/lLY9Henp/rctapi-neoforge-1.21.1-0.14.6-beta.jar",
-                    "id": "lLY9Henp",
+                    "url": "https://cdn.modrinth.com/data/CBfM2yw7/versions/7SdU6Tqp/rctapi-neoforge-1.21.1-0.14.8-beta.jar",
+                    "id": "7SdU6Tqp",
                     "parent_id": "CBfM2yw7",
                     "hashes": {
-                        "sha512": "94f2f76b91c1753a78fe9f991f8bd9e552714af663809b71320d6e329520f9ef9187a5619975479dacdb79185bdc32a77893f9f4949d2d33d1522e6cc070883c",
-                        "sha1": "5d5bbff1d8e8c544f1bb93e7cf33a684ae9ee5bc"
+                        "sha512": "99679c16432ba3aa7258764f83c940b7633821387aa968cb65b46d3a684147eef2ab670594ab50d770d07a2275e1180f72cbf9f3495db7acddd1da50fa5d635d",
+                        "sha1": "5f7bce1dd9a8b7c983e97d4cb50a8d071eecb673"
                     },
                     "required_dependencies": [
                         "MdwFAVRL",
                         "lhGA9TYQ"
                     ],
-                    "size": 222461,
-                    "date_published": "2026-01-18T18:03:30.088877Z"
+                    "size": 230274,
+                    "date_published": "2026-02-14T02:21:49.120411Z"
                 }
             ]
         },

@@ -23,7 +23,7 @@
 	"sync_rewards": false,
 	// Whether raid crystals can be broken. Default: true
 	"can_break": true,
-	// The reward distribution algorithm (RANDOM/DAMAGE/SURVIVOR). Default: RANDOM
+	// The reward distribution algorithm (Options: RANDOM, DAMAGE, SURVIVOR). Default: RANDOM
 	"reward_distribution": "RANDOM",
 	// The maximum number of players in a raid before shared supporting moves are disabled. Default: 4
 	"max_players_for_support": 4,
