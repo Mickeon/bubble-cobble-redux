@@ -87,7 +87,7 @@ BlockEvents.broken(event => {
 		if (held_block) {
 			if (interaction_result.indicateItemUse()) {
 				let sound_type = held_block.getSoundType(held_block.defaultBlockState(), level, broken_pos, player)
-				play_sound_globally(level, broken_pos, sound_type.placeSound, "blocks")
+				play_sound_globally(level, broken_pos.getCenter(), sound_type.placeSound, "blocks")
 			}
 		}
 		if (interaction_result.shouldSwing()) {

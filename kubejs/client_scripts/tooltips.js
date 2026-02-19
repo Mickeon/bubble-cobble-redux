@@ -1,5 +1,7 @@
 // priority: 100
 // Run before solonion_tooltip.
+/** @type {typeof import("com.cobblemon.mod.common.api.moves.Move").$Move } */
+let $Move  = Java.loadClass("com.cobblemon.mod.common.api.moves.Move")
 
 /** @import {$MutableComponent} from "net.minecraft.network.chat.MutableComponent" */
 
@@ -7,8 +9,8 @@ const MASCOT_COLOR = "#83BED9"
 const MASCOT_COLOR_DARK = "#537B8D"
 const SHIFT_INFO_COLOR = "#7CB3D6"
 
-const PLACEABLE_TOOLTIP = Text.of(`Placeable`).color(MASCOT_COLOR_DARK).italic()
-const HAMMER_TOOLTIP = Text.of(`Can be changed with the Handcrafter's Hammer`).color(MASCOT_COLOR_DARK).italic()
+const PLACEABLE_TOOLTIP = Text.of(`Placeable`).color(MASCOT_COLOR_DARK)
+const HAMMER_TOOLTIP = Text.of(`Can be changed with the Handcrafter's Hammer`).color(MASCOT_COLOR_DARK)
 const HANDCRAFTED_ITEMS_WITH_SHIFT_INFO = [
 	"#handcrafted:cushions",
 	"#handcrafted:sheets",
@@ -103,7 +105,7 @@ ItemEvents.modifyTooltips(event => {
 	}
 
 	add_shift_info(event, "minecraft:big_dripleaf", [
-			[Text.of("It's a bit "), Text.aqua("tipsy"), Text.of("...")],
+			[Text.of(`It's a bit `), Text.aqua("tipsy"), Text.of(`...`)],
 			"Woooaaah §2 it's going down §9 holy cow"])
 
 
@@ -230,18 +232,11 @@ ItemEvents.modifyTooltips(event => {
 	event.add(["supplementaries:bunting"], [subtle("Can be placed on ").append(Text.gold("Ropes"))])
 	event.add(["supplementaries:gravel_bricks"], [subtle("It's frail under your feet")])
 	event.add(["supplementaries:lumisene_bucket"], [subtle("Bewildering, perhaps ").append(Text.gold("flammable")).append("?")])
+	event.add(["supplementaries:sack"], [subtle("This can store stuff, by the way")])
 
-
-	// Lmao even.
-	// event.addAdvanced("minecraft:splash_potion", (itemstack, advanced, text) => {
-	// 	if (itemstack.getNbt().getString("Potion") == "gohome:recall_potion") {
-	// 		// text.add(2, Text.gray("Sue-be-gone!"))
-	// 		text.remove(0)
-	// 		text.add(0, Text.lightPurple("Sue-be-gone Potion"))
-	// 	}
-	// })
-
-	event.add("#c:foods/edible_when_placed", PLACEABLE_TOOLTIP)
+	event.modify("#c:foods/edible_when_placed", text => {
+		text.insert(1, PLACEABLE_TOOLTIP)
+	})
 
 	event.modify("kubejs:banana_mayo_sandwich", text => {
 		text.dynamic("sue_banana_mayo_sandwich")
@@ -284,10 +279,6 @@ ItemEvents.modifyTooltips(event => {
 		"cobblemon:weakness_policy",
 		"cobblemon:blunder_policy",
 	], PLACEABLE_TOOLTIP)
-	// let recipe_manager = Client.player.level.recipeManager
-	// recipe_manager.byType("create:sequenced_assembly").forEach((id, sequenced_assembly) => {
-	// 	add_sequence_info(event, sequenced_assembly)
-	// })
 
 	event.add(["farmersdelight:tree_bark"], [subtle("Use on stripped wood to defy logic")])
 
@@ -357,23 +348,81 @@ ItemEvents.dynamicTooltips("show_tool_durability", event => {
 /** @type {typeof import("net.neoforged.neoforge.client.event.RenderTooltipEvent$Color").$RenderTooltipEvent$Color } */
 let $RenderTooltipEvent$Color  = Java.loadClass("net.neoforged.neoforge.client.event.RenderTooltipEvent$Color")
 NativeEvents.onEvent("highest", $RenderTooltipEvent$Color, event => {
-	if (event.itemStack.mod == "kubejs") {
-		event.getGraphics().renderFakeItem("kubejs:blue_mascot_cat", event.x, event.y - 8)
-	} else if (event.itemStack.mod == "cobblemon") {
-		event.getGraphics().renderFakeItem("cobblemon:poke_ball", event.x, event.y - 10)
-	} else if (event.itemStack.mod == "mega_showdown") {
-		event.getGraphics().renderFakeItem("mega_showdown:swampertite", event.x, event.y - 10)
+	event.setBorderStart(Color.rgba(26, 108, 184, 1).getArgb())
+
+	const item_stack = event.getItemStack()
+	if (item_stack.isEmpty()) {
+		return
+	}
+
+	switch (item_stack.mod) {
+		case "kubejs": {
+			event.getGraphics().renderFakeItem("kubejs:blue_mascot_cat", event.x, event.y - 8)
+			if (item_stack.id == "kubejs:chiseled_mud_bricks") {
+				let tooltip_stretch = 1 + Math.abs(Math.sin(Utils.getSystemTime() * 0.005)) * 0.01
+				let limit = Math.min(item_stack.count, 10)
+				event.getGraphics().scale(1.0, tooltip_stretch, 1.0).push()
+				for (let i = 0; i < limit; i++) {
+					let fake_item_offset = Math.abs(Math.sin(Utils.getSystemTime() * 0.005 + i * 1.2)) * -20
+					event.getGraphics().renderFakeItem(item_stack,
+						event.x + i * 10,
+						event.y - 10 + fake_item_offset
+					)
+				}
+				event.getGraphics().pop()
+			}
+		} break;
+		case "cobblemon": {
+			event.getGraphics().renderFakeItem("cobblemon:poke_ball", event.x, event.y - 10)
+		} break;
+		case "mega_showdown": {
+			event.getGraphics().renderFakeItem("mega_showdown:swampertite", event.x, event.y - 10)
+		} break;
+		case "create":
+		case "createdeco":
+		case "create_deepfried":
+		case "create_bic_bit":
+		case "bits_n_bobs": {
+			event.setBorderStart(item_stack.getRarity() == "epic"
+				? Color.rgba(184, 26, 176, 1).getArgb()
+				: Color.rgba(138, 90, 19, 1).getArgb()
+				// : Color.rgba(184, 121, 26, 1).getArgb()
+			)
+		} break;
+		case "copycats": {
+			let progress = Math.abs(Math.sin(Utils.getSystemTime() * 0.001))
+			let r = progress * 100
+			let g = progress * 20
+			let b = progress * -80
+			event.setBorderStart(Color.rgba(85 + r, 101 + g, 114 + b, 1).getArgb())
+			event.setBorderEnd(Color.rgba(32, 38, 44, 1).getArgb())
+			// event.setBackgroundStart(Color.rgba(18, 21, 27, 1).getArgb())
+		} break;
+		case "simpletms": {
+			// All of this because moveName is a private property.
+			let move_name = item_stack.id.substring(item_stack.id.search("_") + 1)
+			if (move_name) {
+				let move = $Moves.getByNameOrDummy(move_name)
+				if (item_stack.hasTag("simpletms:tr_items")) {
+					event.setBorderStart(Color.wrap(move.elementalType.hue).getArgb())
+				} else {
+					let type_hue = move.elementalType.hue
+					let vec = new Vec3f(
+						type_hue % 0x1000000 / 0x10000,
+						type_hue % 0x10000 / 0x100,
+						type_hue % 0x100
+					)
+					let progress = Math.abs(Math.sin(Utils.getSystemTime() * 0.001))
+					vec = vec.lerp(new Vec3f(255, 255, 255), progress)
+
+					event.setBorderStart(Color.rgba(vec.x(), vec.y(), vec.z(), 1).getArgb())
+				}
+			}
+		} break;
 	}
 	// event.setBackground(Color.rgba(8, 21, 95, 1).getArgb())
 	// event.setBackgroundStart(Color.rgba(26, 50, 184, 1).getArgb())
-	event.setBorderStart(Color.rgba(26, 108, 184, 1).getArgb())
 })
-
-// /** @type {typeof import("squeek.appleskin.api.event.TooltipOverlayEvent$Render").$TooltipOverlayEvent$Render } */
-// let $TooltipOverlayEvent$Render  = Java.loadClass("squeek.appleskin.api.event.TooltipOverlayEvent$Render")
-// NativeEvents.onEvent($TooltipOverlayEvent$Render, event => {
-// 	event.guiGraphics.renderFakeItem("kubejs:blue_mascot_cat", 0, 0 - 8)
-// })
 
 /**
  * @import {$TextActionBuilder} from "dev.latvian.mods.kubejs.text.action.TextActionBuilder"
@@ -384,7 +433,7 @@ NativeEvents.onEvent("highest", $RenderTooltipEvent$Color, event => {
 /**
  * @param {$ModifyItemTooltipsKubeEvent} event
  * @param {$Ingredient} item
- * @param {String[] | String} info
+ * @param {string[] | string} info
  */
 function add_shift_info(event, item, info) {
 	event.modify(item, { shift: false }, /** @param {$TextActionBuilder} text */ text => {
@@ -403,60 +452,6 @@ function add_shift_info(event, item, info) {
 		})
 
 		text.insert(3, info)
-	})
-}
-
-/**
- * @param {Internal.ItemTooltipEventJS} event
- * @param {Internal.SequencedAssemblyRecipe} sequenced_assembly
- */
-function add_sequence_info(event, sequenced_assembly) {
-	event.addAdvanced(sequenced_assembly.resultPool[0].stack, (itemstack, advanced, text) => {
-		if (!event.shift) {
-			text.add([Text.darkGray("Hold ["), Text.gray("Shift"), Text.darkGray("] for Assembly")])
-			return
-		}
-
-		const input_name = sequenced_assembly.ingredient.first.hoverName.aqua()
-
-		// All of this jank is because the "Pokeball Catch rate" tooltip is hardcoded in a specific spot.
-		let i = 1
-		text.add(i, Text.empty())
-		text.add(i, Text.gray("Starting from ").append(input_name).append(":"))
-		i += 1;
-
-		for (const sequenced_recipe of sequenced_assembly.getSequence()) {
-			/** @type {Internal.ProcessingRecipe} */
-			let recipe = sequenced_recipe.recipe
-
-			let ingredient_names = Text.gold("")
-			recipe.ingredients.forEach(ingredient => {
-				if (ingredient.test(sequenced_assembly.transitionalItem)) {
-					return
-				}
-				ingredient_names.append(ingredient.first.hoverName.gold())
-			})
-
-			let line = Text.darkGray("- ")
-			switch (recipe.type) {
-				case "create:deploying": {
-					line.append(Text.translate(`create.recipe.assembly.deploying_item`, [ingredient_names]).white())
-				} break;
-				case "create:filling": {
-					line.append(Text.translate(`create.recipe.assembly.spout_filling_fluid`, [recipe.fluidIngredients.get(0).getMatchingFluidStacks().get(0).displayName.gold()]).white())
-				} break;
-				default: {
-					line.append(Text.translate(`create.recipe.assembly.${recipe.type.path}`, [ingredient_names]).white())
-				} break;
-			}
-			text.add(i, line)
-			i += 1;
-		}
-
-		const loop_count = sequenced_assembly.getLoops()
-		if (loop_count > 1) {
-			text.add(i, Text.gray("Repeat ").append(Text.white(loop_count.toFixed())).append(" times."))
-		}
 	})
 }
 

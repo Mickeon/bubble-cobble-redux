@@ -114,6 +114,7 @@ remove_and_merge_into_tab("cobblemonraiddens:raid_den_tab", "cobblemon:utility_i
 	"cobblemonraiddens:cheer_attack",
 	"cobblemonraiddens:cheer_defense",
 	"cobblemonraiddens:cheer_heal",
+	"cobblemonraiddens:raid_shard",
 ])
 
 remove_and_merge_into_tab("rctmod:creative_tab", "cobblemon:utility_item", [
@@ -303,6 +304,23 @@ remove_and_merge_into_tab("immersive_paintings:paintings", "minecraft:functional
 	"immersive_paintings:glow_graffiti",
 ])
 
+remove_and_merge_into_tab("bits_n_bobs:bnb_deco", "bits_n_bobs:bnb_based", [
+	"bits_n_bobs:granite_tiles",
+	"bits_n_bobs:diorite_tiles",
+	"bits_n_bobs:andesite_tiles",
+	"bits_n_bobs:calcite_tiles",
+	"bits_n_bobs:dripstone_tiles",
+	"bits_n_bobs:deepslate_tiles",
+	"bits_n_bobs:tuff_tiles",
+	"bits_n_bobs:asurine_tiles",
+	"bits_n_bobs:crimsite_tiles",
+	"bits_n_bobs:limestone_tiles",
+	"bits_n_bobs:ochrum_tiles",
+	"bits_n_bobs:scoria_tiles",
+	"bits_n_bobs:scorchia_tiles",
+	"bits_n_bobs:veridium_tiles",
+])
+
 StartupEvents.modifyCreativeTab("ribbits:general", event => {
 	event.add("wanderer_ribbit:wanderer_ribbit_spawn_egg")
 	event.addAfter("ribbits:maraca", ["wanderer_ribbit:umbrellaleaf", "wanderer_ribbit:ribbit_map"])
@@ -326,10 +344,11 @@ if (Platform.isLoaded("displaydelight")) {
 	// https://github.com/jkvin114/display-delight-neoforge/blob/main/src/main/java/com/jkvin114/displaydelight/init/BlockAssociations.java
 	/** @type {typeof import("com.jkvin114.displaydelight.init.BlockAssociations").$BlockAssociations } */
 	let $BlockAssociations  = Java.loadClass("com.jkvin114.displaydelight.init.BlockAssociations")
+	/** @type {typeof import("com.jkvin114.displaydelight.block.AbstractItemBlock").$AbstractItemBlock } */
 	let $AbstractItemBlock  = Java.loadClass("com.jkvin114.displaydelight.block.AbstractItemBlock")
 
 	StartupEvents.modifyCreativeTab("displaydelight:displaydelight", event => {
-		event.remove(item => {
+		event.removeFromParent(item => {
 			if (item.block instanceof $AbstractItemBlock) {
 				if (item.block.getStackFor().isEmpty()) {
 					// The display item's original food item does not exist in the modpack.

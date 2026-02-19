@@ -1,9 +1,4 @@
 {
-	"copycats:copycat_block": [
-		"copycats:copycat_slab",
-		"copycats:copycat_stairs",
-		"copycats:copycat_wall"
-	],
 	"copycats:copycat_pane": [
 		"copycats:copycat_flat_pane"
 	],

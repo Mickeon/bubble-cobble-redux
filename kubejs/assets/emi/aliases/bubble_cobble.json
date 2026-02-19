@@ -270,6 +270,17 @@
 			"text": [
 				"Stucco"
 			]
+		},
+		{
+			"stacks": [
+				"#item:handcrafted:couches",
+				"#item:bits_n_bobs:chairs"
+			],
+			"text": [
+				"Sofa",
+				"Couch",
+				"Armchair"
+			]
 		}
 	]
 }

@@ -41,4 +41,7 @@ ServerEvents.recipes(event => {
 
 	// Recipe conflict between Minecraft's Crafting Table and Biomes We've Gone's Crafting Table variations.
 	event.replaceInput({id: "minecraft:crafting_table"}, "*", Ingredient.of("#minecraft:planks").except("@biomeswevegone"))
+
+	// Recipe conflict between Display Delight's Food Plate and Handcrafted's Wood Cup.
+	event.shaped(Item.of("handcrafted:wood_cup", 5), ["S S", "SSS"], {S: "#minecraft:wooden_slabs"}).id("handcrafted:wood_cup")
 })
