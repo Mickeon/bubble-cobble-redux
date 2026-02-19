@@ -3155,7 +3155,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "create_ltab-3.7.0.jar",
+                    "file_name": "create_ltab-3.7.3.jar",
                     "mc_versions": [
                         "1.20.1",
                         "1.21.1"
@@ -3167,16 +3167,16 @@
                         "quilt"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/fUa6OtBG/versions/6kDCA6vG/create_ltab-3.7.0.jar",
-                    "id": "6kDCA6vG",
+                    "url": "https://cdn.modrinth.com/data/fUa6OtBG/versions/Nfv2VFmo/create_ltab-3.7.3.jar",
+                    "id": "Nfv2VFmo",
                     "parent_id": "fUa6OtBG",
                     "hashes": {
-                        "sha512": "6c054f04f5b01d59fac45f5f72d224e2a7e0313b34c69ddbf00621a2117e5e0b28374181f7ee2a33bb7ef402fb36c58c569c5d13aa44afc2c03099ca56da3422",
-                        "sha1": "c2439c3ad1b68e5b3d639cfe6c57b96a53ac9a94"
+                        "sha512": "c4e64c3c36c1d5e1ad2865abf8c3d0373e08517af873f157e3d9608eb2d2ec76c15fe90d2b48913a9476ba8df0e90fbc703bb0fe2a933010093f9aa235cc021e",
+                        "sha1": "8a9cfc48d50c17b67493fb2b44ebd1ee42a01e75"
                     },
                     "required_dependencies": [],
-                    "size": 2246580,
-                    "date_published": "2026-01-25T17:59:55.350968Z"
+                    "size": 2309554,
+                    "date_published": "2026-02-16T18:53:39.972005Z"
                 }
             ]
         },
@@ -7929,7 +7929,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "connectiblechains-neoforge-1.21.1-1.1.1.jar",
+                    "file_name": "connectiblechains-neoforge-1.21.1-1.1.3h.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -7937,18 +7937,18 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/5pzBXDS3/versions/welhJZMr/connectiblechains-neoforge-1.21.1-1.1.1.jar",
-                    "id": "welhJZMr",
+                    "url": "https://cdn.modrinth.com/data/5pzBXDS3/versions/TARD1GqV/connectiblechains-neoforge-1.21.1-1.1.3h.jar",
+                    "id": "TARD1GqV",
                     "parent_id": "5pzBXDS3",
                     "hashes": {
-                        "sha512": "72d85425d1f78cf1ae9249f31ac524943c673d5d564717136c6e3ed76090759e136baa5e2760b47af37ae8fade27d07617e5d6becbeb4d8b193f098fccec42a3",
-                        "sha1": "cba40175ba123df750a2476af1159446b9d464cd"
+                        "sha512": "2d0cc8bcefccb65be3121070553ccfbc50dddce49b7ab3cc9696898daca02dc78904b8ae1049bb6c33ffd9354a17ee7a3cd520ecfe16a3bec8baf124746eae36",
+                        "sha1": "04c284a6cbdad5099d745c4dcdad3aa507f50082"
                     },
                     "required_dependencies": [
                         "9s6osm5g"
                     ],
-                    "size": 151955,
-                    "date_published": "2026-02-17T22:54:58.373006Z"
+                    "size": 152962,
+                    "date_published": "2026-02-18T19:31:44.793527Z"
                 }
             ]
         },
@@ -8981,7 +8981,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "sophisticatedbackpacks-1.21.1-3.25.27.1528.jar",
+                    "file_name": "sophisticatedbackpacks-1.21.1-3.25.28.1537.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -8989,18 +8989,18 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/TyCTlI4b/versions/8pCpGzfq/sophisticatedbackpacks-1.21.1-3.25.27.1528.jar",
-                    "id": "8pCpGzfq",
+                    "url": "https://cdn.modrinth.com/data/TyCTlI4b/versions/CYOnGzwN/sophisticatedbackpacks-1.21.1-3.25.28.1537.jar",
+                    "id": "CYOnGzwN",
                     "parent_id": "TyCTlI4b",
                     "hashes": {
-                        "sha512": "16f5903016e7ffe224a763993909d0432d1fe745b8dd45a49e79ffe047a8d3a8f1fc007c28de904e9a8889e01407b3167b5e8792972ed9a91cc0738104d00585",
-                        "sha1": "912b54f2587a7a6bb75747765fac0f552037fee3"
+                        "sha512": "4c34a25ed054e7a931ac7945a9c7f8830e4b8b9e9402011cd389ba785b9e560d4a0e928733e2d0ebef8fb6207dd828cb27fc760ddecc543b3afbe5147b695855",
+                        "sha1": "0171d79ea3ff01ab16c32494fc72514518bc4854"
                     },
                     "required_dependencies": [
                         "nmoqTijg"
                     ],
-                    "size": 986494,
-                    "date_published": "2026-02-11T08:14:30.228344Z"
+                    "size": 986514,
+                    "date_published": "2026-02-18T20:31:12.700834Z"
                 }
             ]
         },
