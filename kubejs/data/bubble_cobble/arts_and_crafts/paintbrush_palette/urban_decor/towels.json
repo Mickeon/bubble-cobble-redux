@@ -1,0 +1,38 @@
+{
+	"blocks": [
+		"urban_decor:black_towel",
+		"urban_decor:blue_towel",
+		"urban_decor:brown_towel",
+		"urban_decor:cyan_towel",
+		"urban_decor:gray_towel",
+		"urban_decor:green_towel",
+		"urban_decor:light_blue_towel",
+		"urban_decor:light_gray_towel",
+		"urban_decor:lime_towel",
+		"urban_decor:magenta_towel",
+		"urban_decor:orange_towel",
+		"urban_decor:pink_towel",
+		"urban_decor:purple_towel",
+		"urban_decor:red_towel",
+		"urban_decor:white_towel",
+		"urban_decor:yellow_towel"
+	],
+	"mappings": {
+		"arts_and_crafts:white_paintbrush": "urban_decor:white_towel",
+		"arts_and_crafts:light_gray_paintbrush": "urban_decor:light_gray_towel",
+		"arts_and_crafts:gray_paintbrush": "urban_decor:gray_towel",
+		"arts_and_crafts:black_paintbrush": "urban_decor:black_towel",
+		"arts_and_crafts:brown_paintbrush": "urban_decor:brown_towel",
+		"arts_and_crafts:red_paintbrush": "urban_decor:red_towel",
+		"arts_and_crafts:orange_paintbrush": "urban_decor:orange_towel",
+		"arts_and_crafts:yellow_paintbrush": "urban_decor:yellow_towel",
+		"arts_and_crafts:lime_paintbrush": "urban_decor:lime_towel",
+		"arts_and_crafts:green_paintbrush": "urban_decor:green_towel",
+		"arts_and_crafts:cyan_paintbrush": "urban_decor:cyan_towel",
+		"arts_and_crafts:light_blue_paintbrush": "urban_decor:light_blue_towel",
+		"arts_and_crafts:blue_paintbrush": "urban_decor:blue_towel",
+		"arts_and_crafts:purple_paintbrush": "urban_decor:purple_towel",
+		"arts_and_crafts:magenta_paintbrush": "urban_decor:magenta_towel",
+		"arts_and_crafts:pink_paintbrush": "urban_decor:pink_towel"
+	}
+}

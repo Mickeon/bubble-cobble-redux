@@ -1,0 +1,40 @@
+{
+	"blocks": [
+		"urban_decor:black_plastic_lights",
+		"urban_decor:blue_plastic_lights",
+		"urban_decor:brown_plastic_lights",
+		"urban_decor:cyan_plastic_lights",
+		"urban_decor:gray_plastic_lights",
+		"urban_decor:green_plastic_lights",
+		"urban_decor:light_blue_plastic_lights",
+		"urban_decor:light_gray_plastic_lights",
+		"urban_decor:lime_plastic_lights",
+		"urban_decor:magenta_plastic_lights",
+		"urban_decor:orange_plastic_lights",
+		"urban_decor:pink_plastic_lights",
+		"urban_decor:plastic_lights",
+		"urban_decor:purple_plastic_lights",
+		"urban_decor:red_plastic_lights",
+		"urban_decor:white_plastic_lights",
+		"urban_decor:yellow_plastic_lights"
+	],
+	"mappings": {
+		"arts_and_crafts:white_paintbrush": "urban_decor:white_plastic_lights",
+		"arts_and_crafts:light_gray_paintbrush": "urban_decor:light_gray_plastic_lights",
+		"arts_and_crafts:gray_paintbrush": "urban_decor:gray_plastic_lights",
+		"arts_and_crafts:black_paintbrush": "urban_decor:black_plastic_lights",
+		"arts_and_crafts:brown_paintbrush": "urban_decor:brown_plastic_lights",
+		"arts_and_crafts:red_paintbrush": "urban_decor:red_plastic_lights",
+		"arts_and_crafts:orange_paintbrush": "urban_decor:orange_plastic_lights",
+		"arts_and_crafts:yellow_paintbrush": "urban_decor:yellow_plastic_lights",
+		"arts_and_crafts:lime_paintbrush": "urban_decor:lime_plastic_lights",
+		"arts_and_crafts:green_paintbrush": "urban_decor:green_plastic_lights",
+		"arts_and_crafts:cyan_paintbrush": "urban_decor:cyan_plastic_lights",
+		"arts_and_crafts:light_blue_paintbrush": "urban_decor:light_blue_plastic_lights",
+		"arts_and_crafts:blue_paintbrush": "urban_decor:blue_plastic_lights",
+		"arts_and_crafts:purple_paintbrush": "urban_decor:purple_plastic_lights",
+		"arts_and_crafts:magenta_paintbrush": "urban_decor:magenta_plastic_lights",
+		"arts_and_crafts:pink_paintbrush": "urban_decor:pink_plastic_lights",
+		"arts_and_crafts:bleachdew_paintbrush": "urban_decor:plastic_lights"
+	}
+}

@@ -271,4 +271,13 @@ ClientEvents.lang("en_us", event => {
 		"tag.item.supplementaries.globes": "Globes",
 		"tag.item.supplementaries.jar_cookies": "Jar Cookies",
 	})
+
+	if (Platform.isLoaded("urban_decor")) {
+		event.addAll("urban_decor", {
+			"tag.item.urban_decor.towels": "Any Towel",
+			"tag.item.urban_decor.porcelain": "Any Porcelain",
+			"tag.item.urban_decor.polyanthous": "Any Polyanthous Flower",
+			"tag.item.urban_decor.wraps": "Wraps",
+		})
+	}
 })

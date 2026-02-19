@@ -293,6 +293,15 @@ ServerEvents.tags("worldgen/biome", event => {
 	// 	event.add("idas:collections/idasflower_forests", "#forge:floral", "biomesoplenty:lavender_forest", "biomesoplenty:mystic_grove")
 	// 	event.add("idas:collections/idasplains", "#forge:is_plains")
 	// 	event.add("idas:collections/snowy_plains", "#kubejs:is_snowy_forest")
+
+	if (Platform.isLoaded("urban_decor")) {
+		event.add("urban_decor:azure_polyanthous_generates_in", "#minecraft:is_jungle", "#c:is_snowy", "#c:is_flower_forest")
+		event.add("urban_decor:cherry_polyanthous_generates_in", "#minecraft:is_jungle", "#minecraft:is_forest", "#c:is_flower_forest")
+		event.add("urban_decor:daffodil_polyanthous_generates_in", "#c:is_plains", "#c:is_birch_forest", "#c:is_flower_forest")
+		event.add("urban_decor:mint_polyanthous_generates_in", "#minecraft:is_taiga", "#c:is_old_growth", "#c:is_mountain/peak", "#c:is_flower_forest")
+		event.add("urban_decor:ruby_polyanthous_generates_in", "biomesoplenty:snowblossom_grove", "#c:is_flower_forest")
+		event.add("urban_decor:spring_polyanthous_generates_in", "#c:is_dark_forest", "#c:is_flower_forest")
+	}
 })
 
 ServerEvents.tags("worldgen/structure", event => {

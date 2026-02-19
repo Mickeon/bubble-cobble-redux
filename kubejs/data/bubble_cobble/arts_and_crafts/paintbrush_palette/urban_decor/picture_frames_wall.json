@@ -1,0 +1,40 @@
+{
+	"blocks": [
+		"urban_decor:black_wall_picture_frame",
+		"urban_decor:blue_wall_picture_frame",
+		"urban_decor:brown_wall_picture_frame",
+		"urban_decor:cyan_wall_picture_frame",
+		"urban_decor:gray_wall_picture_frame",
+		"urban_decor:green_wall_picture_frame",
+		"urban_decor:light_blue_wall_picture_frame",
+		"urban_decor:light_gray_wall_picture_frame",
+		"urban_decor:lime_wall_picture_frame",
+		"urban_decor:magenta_wall_picture_frame",
+		"urban_decor:orange_wall_picture_frame",
+		"urban_decor:pink_wall_picture_frame",
+		"urban_decor:purple_wall_picture_frame",
+		"urban_decor:red_wall_picture_frame",
+		"urban_decor:wall_picture_frame",
+		"urban_decor:white_wall_picture_frame",
+		"urban_decor:yellow_wall_picture_frame"
+	],
+	"mappings": {
+		"arts_and_crafts:white_paintbrush": "urban_decor:white_wall_picture_frame",
+		"arts_and_crafts:light_gray_paintbrush": "urban_decor:light_gray_wall_picture_frame",
+		"arts_and_crafts:gray_paintbrush": "urban_decor:gray_wall_picture_frame",
+		"arts_and_crafts:black_paintbrush": "urban_decor:black_wall_picture_frame",
+		"arts_and_crafts:brown_paintbrush": "urban_decor:brown_wall_picture_frame",
+		"arts_and_crafts:red_paintbrush": "urban_decor:red_wall_picture_frame",
+		"arts_and_crafts:orange_paintbrush": "urban_decor:orange_wall_picture_frame",
+		"arts_and_crafts:yellow_paintbrush": "urban_decor:yellow_wall_picture_frame",
+		"arts_and_crafts:lime_paintbrush": "urban_decor:lime_wall_picture_frame",
+		"arts_and_crafts:green_paintbrush": "urban_decor:green_wall_picture_frame",
+		"arts_and_crafts:cyan_paintbrush": "urban_decor:cyan_wall_picture_frame",
+		"arts_and_crafts:light_blue_paintbrush": "urban_decor:light_blue_wall_picture_frame",
+		"arts_and_crafts:blue_paintbrush": "urban_decor:blue_wall_picture_frame",
+		"arts_and_crafts:purple_paintbrush": "urban_decor:purple_wall_picture_frame",
+		"arts_and_crafts:magenta_paintbrush": "urban_decor:magenta_wall_picture_frame",
+		"arts_and_crafts:pink_paintbrush": "urban_decor:pink_wall_picture_frame",
+		"arts_and_crafts:bleachdew_paintbrush": "urban_decor:wall_picture_frame"
+	}
+}
