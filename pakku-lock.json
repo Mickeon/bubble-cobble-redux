@@ -5458,6 +5458,43 @@
             ]
         },
         {
+            "pakku_id": "hYihIjRF5Sndl85s",
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "modrinth": "kiwi"
+            },
+            "name": {
+                "modrinth": "Kiwi 🥝"
+            },
+            "id": {
+                "modrinth": "ufdDoWPd"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "Kiwi-1.21.1-NeoForge-15.8.2.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "beta",
+                    "url": "https://cdn.modrinth.com/data/ufdDoWPd/versions/eCzvKS7q/Kiwi-1.21.1-NeoForge-15.8.2.jar",
+                    "id": "eCzvKS7q",
+                    "parent_id": "ufdDoWPd",
+                    "hashes": {
+                        "sha512": "25a745c24d3baa3c24e7840ff85cdbd0b10cdbee194f5d41e28d419595b67b7175a4a648a6b141acf11c6c8137e0f73e0fd903d7d51d8d29e675eb9734314f14",
+                        "sha1": "1128b93633b6d39b2a7924343641aec8b49f50ea"
+                    },
+                    "required_dependencies": [],
+                    "size": 1530397,
+                    "date_published": "2025-11-11T07:38:56.030995Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "tbL8tCkeGeSia2W2",
             "type": "MOD",
             "side": "BOTH",
@@ -7311,6 +7348,97 @@
                     "required_dependencies": [],
                     "size": 507568,
                     "date_published": "2024-06-19T18:12:21.239809Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "QkETQJLviCPiY4wf",
+            "pakku_links": [
+                "hYihIjRF5Sndl85s"
+            ],
+            "type": "MOD",
+            "side": "CLIENT",
+            "slug": {
+                "modrinth": "persistent-creative-inventory"
+            },
+            "name": {
+                "modrinth": "Persistent Creative Inventory"
+            },
+            "id": {
+                "modrinth": "b6Drmxwj"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "PersistentCreativeInventory-1.0.1.jar",
+                    "mc_versions": [
+                        "1.21",
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "fabric",
+                        "neoforge",
+                        "quilt"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/b6Drmxwj/versions/RM2Z7TIm/PersistentCreativeInventory-1.0.1.jar",
+                    "id": "RM2Z7TIm",
+                    "parent_id": "b6Drmxwj",
+                    "hashes": {
+                        "sha512": "4989372250a507b5148894a4c098af25a63294f83a2c6fa7a3bd5f76b9425f10acc142a0b2fb1d1f620acd802c10a2ca9b8f908eea14995e70de438da20f25b6",
+                        "sha1": "7c42649d95c46e94a47c480a1810cff1f4cba28c"
+                    },
+                    "required_dependencies": [
+                        "ufdDoWPd"
+                    ],
+                    "size": 1451,
+                    "date_published": "2025-04-26T04:39:04.242579Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "vNyZjVN4sNIEAVBC",
+            "pakku_links": [
+                "vuzuhSE4tbW4wqet"
+            ],
+            "type": "MOD",
+            "side": "CLIENT",
+            "slug": {
+                "modrinth": "persistent-inventory-search"
+            },
+            "name": {
+                "modrinth": "Persistent Inventory Search"
+            },
+            "id": {
+                "modrinth": "KYSUUp57"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "persistentinventorysearch-1.21.1-1.5.jar",
+                    "mc_versions": [
+                        "1.21",
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "fabric",
+                        "forge",
+                        "neoforge",
+                        "quilt"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/KYSUUp57/versions/ey8EuwwW/persistentinventorysearch-1.21.1-1.5.jar",
+                    "id": "ey8EuwwW",
+                    "parent_id": "KYSUUp57",
+                    "hashes": {
+                        "sha512": "491e2db90ce981e9cb6dc2a3bda8e050a1d674151c83984cb0e48e38d623d055888cd686e1f298b77f47cf3c8dc190590036bf710cbfaf63a579b3fc6ee623cc",
+                        "sha1": "1a0e349017f8614a648945bfd6cd9ae545d6d566"
+                    },
+                    "required_dependencies": [
+                        "e0M1UDsY"
+                    ],
+                    "size": 20349,
+                    "date_published": "2024-08-08T23:13:24.964897Z"
                 }
             ]
         },

@@ -52,6 +52,7 @@
 /servers.dat*
 /nicknames.json
 /player_models
+/immersive_furniture
 
 # Cache.
 /cache
@@ -90,6 +91,5 @@
 /config/chatnotify.json
 /config/open_in_inventory.json
 /config/undertale_death_screen.json
-*immersive_furniture*
 *locomotionmap.json
 *create_dragons_plus*
