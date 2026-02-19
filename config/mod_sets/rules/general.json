@@ -1,5 +1,5 @@
 {
-  "$schema": "https://github.com/SettingDust/ModSets/raw/main/rules.schema.json",
+  "$schema": "https://raw.githubusercontent.com/SettingDust/ModSets/main/rules.schema.json",
   "text": {"text":"Common","bold":true,"color":"#76deea"},
   "description": "The sets you may want to toggle.\n\nRemember, they all require the game to restart.",
   "rules": [
@@ -144,7 +144,11 @@
                 "sparsestructures",
                 "temperaturebands",
                 "mendingrework",
-                "neruina"
+                "neruina",
+                "spark",
+                "smart_item_deleter_v2",
+                "immersive_optimization",
+                "chunkyborder"
               ]
             }
           }

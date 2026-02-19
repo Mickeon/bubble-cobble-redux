@@ -1,5 +1,5 @@
 {
-  "$schema": "https://github.com/SettingDust/ModSets/raw/main/rules.schema.json",
+  "$schema": "https://raw.githubusercontent.com/SettingDust/ModSets/main/rules.schema.json",
   "text": {"text": "My Ding-A-Ling","bold": true,"color": "dark_green"},
   "rules": [
     {
@@ -24,8 +24,16 @@
           "emojiful",
           "creativetabplus",
           "advancementplaques",
-          "hideexperimentalwarning",
-          "one_click_join"
+          "one_click_join",
+          "logbegone",
+          "appleskin",
+          "craftingtweaks",
+          "aiutd",
+          "resourcetrimmer",
+          "shouldersurfing",
+          "persistentinventorysearch",
+          "persistentcreativeinventory",
+          "bridgingmod"
         ]
       }
     },
@@ -72,7 +80,9 @@
                 "sophisticatedbackpacks",
                 "sophisticatedcore",
                 "sophisticatedfix",
-                "sophisticatedstorage"
+                "sophisticatedstorage",
+                "sophisticateditemactions",
+                "sophisticatedsorter"
               ]
             }
           },
@@ -89,7 +99,8 @@
                 "create_ltab",
                 "cobblemoncreatified",
                 "copycats",
-                "kubejs_create"
+                "kubejs_create",
+                "extendedwrenches"
               ]
             }
           },
@@ -101,7 +112,17 @@
               "ids": [
                 "cobblemon",
                 "cobblemon_move_inspector",
-                "cobblemonraiddens"
+                "cobblemonraiddens",
+                "cobblemonintegrations",
+                "capture_xp",
+                "tim_core",
+                "rctmod",
+                "rctapi",
+                "cobbreeding",
+                "zamega",
+                "mega_showdown",
+                "cobblestats",
+                "mr_cobblemon_journeymounts"
               ]
             }
           },
@@ -116,6 +137,7 @@
                 "queivan",
                 "cobblemonintegrations",
                 "tmtcd",
+                "tmtcobfarm",
                 "createmonballsoverhaul",
                 "sliceanddice"
               ]

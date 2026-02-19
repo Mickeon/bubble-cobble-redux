@@ -50,19 +50,22 @@
       "item_interactions_mod",
       "particlerain",
       "particular",
-      "arrowtrails"
+      "arrowtrails",
+      "guitween"
     ]
   },
   "animation_set": {
     "mods": [
       "notenoughanimations",
-      "watut"
+      "watut",
+      "coroutil"
     ]
   },
   "shader_set": {
     "mods": [
       "iris",
-      "irisflw"
+      "colorwheel",
+      "colorwheel_patcher"
     ]
   },
   "enchanted_retexture_set": {

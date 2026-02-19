@@ -91,5 +91,6 @@
 /config/chatnotify.json
 /config/open_in_inventory.json
 /config/undertale_death_screen.json
+/config/blockbox-common.toml
 *locomotionmap.json
 *create_dragons_plus*

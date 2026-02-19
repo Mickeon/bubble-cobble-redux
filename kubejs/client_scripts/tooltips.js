@@ -302,6 +302,10 @@ ItemEvents.modifyTooltips(event => {
 			text.insert(2, Text.of(["• ", Text.translate("block.displaydelight.food_plate").color(MASCOT_COLOR)]).color(MASCOT_COLOR_DARK))
 		})
 	}
+
+	event.add(Ingredient.of("@urban_decor").or("@immersive_furniture"), [
+		Text.yellow("Experimental").append(Text.of(` 🧊`).white()),
+	])
 })
 
 ItemEvents.dynamicTooltips("sue_banana_mayo_sandwich", event => {
@@ -354,29 +358,30 @@ NativeEvents.onEvent("highest", $RenderTooltipEvent$Color, event => {
 	if (item_stack.isEmpty()) {
 		return
 	}
+	const graphics = event.getGraphics()
 
 	switch (item_stack.mod) {
 		case "kubejs": {
-			event.getGraphics().renderFakeItem("kubejs:blue_mascot_cat", event.x, event.y - 8)
+			graphics.renderFakeItem("kubejs:blue_mascot_cat", event.x, event.y - 8)
 			if (item_stack.id == "kubejs:chiseled_mud_bricks") {
 				let tooltip_stretch = 1 + Math.abs(Math.sin(Utils.getSystemTime() * 0.005)) * 0.01
 				let limit = Math.min(item_stack.count, 10)
-				event.getGraphics().scale(1.0, tooltip_stretch, 1.0).push()
+				graphics.scale(1.0, tooltip_stretch, 1.0).push()
 				for (let i = 0; i < limit; i++) {
 					let fake_item_offset = Math.abs(Math.sin(Utils.getSystemTime() * 0.005 + i * 1.2)) * -20
-					event.getGraphics().renderFakeItem(item_stack,
+					graphics.renderFakeItem(item_stack,
 						event.x + i * 10,
 						event.y - 10 + fake_item_offset
 					)
 				}
-				event.getGraphics().pop()
+				graphics.pop()
 			}
 		} break;
 		case "cobblemon": {
-			event.getGraphics().renderFakeItem("cobblemon:poke_ball", event.x, event.y - 10)
+			graphics.renderFakeItem("cobblemon:poke_ball", event.x, event.y - 10)
 		} break;
 		case "mega_showdown": {
-			event.getGraphics().renderFakeItem("mega_showdown:swampertite", event.x, event.y - 10)
+			graphics.renderFakeItem("mega_showdown:swampertite", event.x, event.y - 10)
 		} break;
 		case "create":
 		case "createdeco":
@@ -419,6 +424,18 @@ NativeEvents.onEvent("highest", $RenderTooltipEvent$Color, event => {
 				}
 			}
 		} break;
+		case "farmersdelight": {
+			if (item_stack.id == "farmersdelight:hamburger") {
+				graphics.translate(event.getX() * -1.5, 0, 0).scale(2.5, 1, 1)
+			}
+		}
+		case "arts_and_crafts": {
+			if (item_stack.hasTag("arts_and_crafts:paintbrushes")) {
+				// Jank jank jank.
+				let color_name = item_stack.idLocation.getPath().split("_paintbrush")[0] + "_dye"
+				event.setBorderStart(Color.wrap(color_name).getArgb())
+			}
+		}
 	}
 	// event.setBackground(Color.rgba(8, 21, 95, 1).getArgb())
 	// event.setBackgroundStart(Color.rgba(26, 50, 184, 1).getArgb())

@@ -50,6 +50,7 @@ global.DISABLED_ITEMS = [
 	"artifacts:scarf_of_invisibility", // In favour of Relics's Midnight Robe.
 	// "artifacts:crystal_heart", // Needs balancing. Too many hearts at max.
 	// "artifacts:helium_flamingo", // Needs balancing. Ridiculous air time at max.
+	"relics:phantom_block",
 ]
 
 /** @type {Special.Item[]} */

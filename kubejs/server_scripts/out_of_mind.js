@@ -101,7 +101,7 @@ if (Platform.isLoaded("displaydelight")) {
 	ServerEvents.tags("item", event => {
 		Ingredient.of("@displaydelight").getItemStream().forEach(item => {
 			if (item.block instanceof $AbstractItemBlock
-			&& (item.block.getStackFor().isEmpty() || $BlockAssociations.getItemFor(item.block) != Items.AIR)) {
+			&& (item.block.getStackFor().isEmpty() || $BlockAssociations.getItemFor(item.block) == Items.AIR)) {
 				event.add("c:hidden_from_recipe_viewers", item)
 			}
 		})
