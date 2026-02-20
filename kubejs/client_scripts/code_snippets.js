@@ -4,8 +4,6 @@
 let $PokemonSpecies  = Java.loadClass("com.cobblemon.mod.common.api.pokemon.PokemonSpecies")
 /** @type {typeof import("com.cobblemon.mod.common.pokemon.properties.PropertiesCompletionProvider").$PropertiesCompletionProvider } */
 let $PropertiesCompletionProvider  = Java.loadClass("com.cobblemon.mod.common.pokemon.properties.PropertiesCompletionProvider")
-/** @type {typeof import("com.cobblemon.mod.common.api.moves.Moves").$Moves } */
-let $Moves  = Java.loadClass("com.cobblemon.mod.common.api.moves.Moves")
 /** @type {typeof import("com.cobblemon.mod.common.api.abilities.Abilities").$Abilities } */
 let $Abilities  = Java.loadClass("com.cobblemon.mod.common.api.abilities.Abilities")
 

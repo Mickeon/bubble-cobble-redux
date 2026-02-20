@@ -2,6 +2,8 @@
 // Run before solonion_tooltip.
 /** @type {typeof import("com.cobblemon.mod.common.api.moves.Move").$Move } */
 let $Move  = Java.loadClass("com.cobblemon.mod.common.api.moves.Move")
+/** @type {typeof import("com.cobblemon.mod.common.api.moves.Moves").$Moves } */
+let $Moves  = Java.loadClass("com.cobblemon.mod.common.api.moves.Moves")
 
 /** @import {$MutableComponent} from "net.minecraft.network.chat.MutableComponent" */
 
