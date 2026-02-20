@@ -512,7 +512,7 @@ ServerEvents.loaded(event => {
 		Block.getBlock("kubejs:chiseled_mud_bricks").defaultBlockState()
 	))
 
-	$FluidInteractionRegistry.addInteraction(Fluid.lava().getFluidType(), new $InteractionInformation["(net.neoforged.neoforge.fluids.FluidType,java.util.function.Function)"](
+	$FluidInteractionRegistry.addInteraction(LAVA, new $InteractionInformation["(net.neoforged.neoforge.fluids.FluidType,java.util.function.Function)"](
 		Fluid.getType("createmonballsoverhaul:source_standard_tumblestone_coating").getFluidType(),
 		new $JavaFunction({
 			apply: (fluid_state) => {
@@ -527,7 +527,7 @@ ServerEvents.loaded(event => {
 		})
 	))
 
-	$FluidInteractionRegistry.addInteraction(Fluid.lava().getFluidType(), new $InteractionInformation["(net.neoforged.neoforge.fluids.FluidType,java.util.function.Function)"](
+	$FluidInteractionRegistry.addInteraction(LAVA, new $InteractionInformation["(net.neoforged.neoforge.fluids.FluidType,java.util.function.Function)"](
 		Fluid.getType("createmonballsoverhaul:source_light_tumblestone_coating").getFluidType(),
 		/** @param {import("net.minecraft.world.level.material.FluidState").$FluidState$$Type} fluid_state */ fluid_state => {
 			let chance = Utils.getRandom().nextDouble()
@@ -540,7 +540,7 @@ ServerEvents.loaded(event => {
 		}
 	))
 
-	$FluidInteractionRegistry.addInteraction(Fluid.lava().getFluidType(), new $InteractionInformation["(net.neoforged.neoforge.fluids.FluidType,java.util.function.Function)"](
+	$FluidInteractionRegistry.addInteraction(LAVA, new $InteractionInformation["(net.neoforged.neoforge.fluids.FluidType,java.util.function.Function)"](
 		Fluid.getType("createmonballsoverhaul:source_dense_tumblestone_coating").getFluidType(),
 		/** @param {import("net.minecraft.world.level.material.FluidState").$FluidState$$Type} fluid_state */ fluid_state => {
 			let chance = Utils.getRandom().nextDouble()

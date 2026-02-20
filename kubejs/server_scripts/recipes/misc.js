@@ -336,6 +336,12 @@ ServerEvents.recipes(event => {
 		event.replaceInput({id: "immersive_furniture:crafting_material"}, "minecraft:iron_ingot", "create:zinc_ingot")
 	}
 
+	if (Platform.isLoaded("urban_decor")) {
+		event.replaceInput({id: "urban_decor:chromite"}, "urban_decor:stainless_steel_nugget", "minecraft:iron_nugget")
+		event.replaceInput({id: "urban_decor:chromite"}, "minecraft:andesite", Ingredient.of("minecraft:prismarine").or("create:veridium").or("create:asurine"))
+	}
+
+
 	// TODO: Add recipes for (this modpack's) Pale Jacaranda and Redder Wood.
 	// event.shaped("biomesoplenty:stripped_jacaranda_log", ["DAD", "ADA", "DAD"], {D: "minecraft:white_dye", A: "biomeswevegone:stripped_jacaranda_log"})
 	// event.shaped("biomesoplenty:stripped_redwood_log", ["DAD", "ADA", "DAD"], {D: "minecraft:red_dye", A: "biomeswevegone:stripped_redwood_log"})

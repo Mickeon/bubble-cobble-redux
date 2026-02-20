@@ -1,7 +1,8 @@
 // requires: lootjs
-// Note: This script should wait for custom biome tags.
 
-const GENERAL_FURNITURE = Ingredient.of("@handcrafted").except(/trim/).or("#farmersdelight:cabinets")
+const GENERAL_FURNITURE = Ingredient.of("@handcrafted").except(/trim/)
+		.or("#farmersdelight:cabinets")
+		.or(/urban_decor:.*(box|calendar|piano|grandfather_clock)/)
 
 ServerEvents.tags("item", event => {
 	for (const wood_type of ["oak", "birch", "spruce", "jungle", "bamboo", "acacia", "cherry", "mangrove", "warped", "crimson"]) {
@@ -65,7 +66,7 @@ LootJS.lootTables(event => {
 			.addEntry(LootEntry.of("cobblemon:ability_patch").withWeight(2))
 	}
 
-	//	Make Sniffers more accessible in a multiplayer setting.
+	// Make Sniffers more accessible in a multiplayer setting.
 	for (let table_id of ["minecraft:chests/underwater_ruin_small", "minecraft:chests/underwater_ruin_big"]) {
 		event.getLootTable(table_id).firstPool()
 			.addEntry("minecraft:sniffer_egg")
@@ -110,44 +111,44 @@ LootJS.lootTables(event => {
 		)
 
 		furniture_pool.addEntry(
-			LootEntry.tag("bubble_cobble:mangrove_furniture", true).withWeight("10")
+			LootEntry.tag("bubble_cobble:mangrove_furniture", true).withWeight(10)
 			.matchBiome("#c:is_swamp"))
 
 		furniture_pool.addEntry(
-			LootEntry.tag("bubble_cobble:oak_furniture", true).withWeight("10")
+			LootEntry.tag("bubble_cobble:oak_furniture", true).withWeight(10)
 			.matchBiome("#c:is_plains"))
 
 		furniture_pool.addEntry(
-			LootEntry.tag("bubble_cobble:birch_furniture", true).withWeight("10")
+			LootEntry.tag("bubble_cobble:birch_furniture", true).withWeight(10)
 			.matchBiome("#c:is_plains"))
 
 		furniture_pool.addEntry(
-			LootEntry.tag("bubble_cobble:warped_furniture", true).withWeight("5")
+			LootEntry.tag("bubble_cobble:warped_furniture", true).withWeight(5)
 			.matchBiome("#c:in_nether"))
 
 		furniture_pool.addEntry(
-			LootEntry.tag("bubble_cobble:crimson_furniture", true).withWeight("5")
+			LootEntry.tag("bubble_cobble:crimson_furniture", true).withWeight(5)
 			.matchBiome("#c:in_nether"))
 
 		furniture_pool.addEntry(
-			LootEntry.tag("handcrafted:crockery", true).withWeight("5")
+			LootEntry.tag("handcrafted:crockery", true).withWeight(5)
 			.matchDimension("minecraft:overworld")
 			.matchStructure("#minecraft:village")
 		)
 
 		furniture_pool.addEntry(
-			LootEntry.tag("handcrafted:cushions", true).withWeight("2")
+			LootEntry.tag("handcrafted:cushions", true).withWeight(2)
 			.matchDimension("minecraft:overworld")
 			.matchStructure("#minecraft:village")
 		)
 
 		furniture_pool.addEntry(
-			LootEntry.tag("handcrafted:pots", true).withWeight("2")
+			LootEntry.tag("handcrafted:pots", true).withWeight(2)
 			.matchDimension("minecraft:overworld")
 		)
 
 		furniture_pool.addEntry(
-			LootEntry.tag("handcrafted:trophies", true).withWeight("1")
+			LootEntry.tag("handcrafted:trophies", true).withWeight(1)
 			.matchDimension("minecraft:overworld")
 		)
 
@@ -174,9 +175,13 @@ LootJS.lootTables(event => {
 			.addEntry("minecraft:wither_skeleton_skull")
 	}
 
-	// // This block normally requires Vanilla Backport to be dropped.
+	// This block normally requires Vanilla Backport to be dropped.
 	if (Item.exists("minecraft:pale_oak_shelf")) {
-		// event.getBlockTable("minecraft:pale_oak_shelf").firstPool().when(c => c.survivesExplosion()).addEntry("minecraft:pale_oak_shelf")
 		event.create("minecraft:blocks/pale_oak_shelf", "block").createPool().when(c => c.survivesExplosion()).addEntry("minecraft:pale_oak_shelf")
+	}
+
+	// Make these flowers accessible in existing worlds (although right now this is merely a workaround).
+	if (Platform.isLoaded("urban_decor")) {
+		event.getLootTable("minecraft:gameplay/sniffer_digging").firstPool().addEntry(LootEntry.tag("urban_decor:polyanthous", true))
 	}
 })
