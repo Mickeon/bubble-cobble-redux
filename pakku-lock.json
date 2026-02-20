@@ -6037,7 +6037,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "lootr-neoforge-1.21.1-1.11.36.114.jar",
+                    "file_name": "lootr-neoforge-1.21.1-1.11.36.115.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -6045,16 +6045,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/EltpO5cN/versions/4dt0SxY0/lootr-neoforge-1.21.1-1.11.36.114.jar",
-                    "id": "4dt0SxY0",
+                    "url": "https://cdn.modrinth.com/data/EltpO5cN/versions/qUVCMbAu/lootr-neoforge-1.21.1-1.11.36.115.jar",
+                    "id": "qUVCMbAu",
                     "parent_id": "EltpO5cN",
                     "hashes": {
-                        "sha512": "25294239c1c5efa93c9f5502c53082fd17da29dc234fb95182d5c94c721b3f2dc583efd93c576edcf624e31ab798a8363864ce1b4ad288bebac76367dc80261d",
-                        "sha1": "931d703192a2de5052d5836bfda066ef7061b55f"
+                        "sha512": "642fb162de264431ee8875ddabd183b6ac5eefa30642270620b7c647c8cc59c1ec218ce29b7ad2caba42c5e76cb997e6e7ca8d429d14aab7815520a2d4517adf",
+                        "sha1": "6361be04083cfa5fc49dad03caf5cdb7aeabe6d9"
                     },
                     "required_dependencies": [],
-                    "size": 958026,
-                    "date_published": "2026-01-26T02:45:30.507643Z"
+                    "size": 970018,
+                    "date_published": "2026-02-20T08:16:21.203241Z"
                 }
             ]
         },
@@ -6078,7 +6078,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "lootrmon-neoforge-1.21.1-0.0.0.1.jar",
+                    "file_name": "lootrmon-neoforge-1.21.1-0.0.0.3.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -6086,19 +6086,19 @@
                         "neoforge"
                     ],
                     "release_type": "alpha",
-                    "url": "https://cdn.modrinth.com/data/ywwXJDli/versions/yAwEi5ew/lootrmon-neoforge-1.21.1-0.0.0.1.jar",
-                    "id": "yAwEi5ew",
+                    "url": "https://cdn.modrinth.com/data/ywwXJDli/versions/mWCP4NVW/lootrmon-neoforge-1.21.1-0.0.0.3.jar",
+                    "id": "mWCP4NVW",
                     "parent_id": "ywwXJDli",
                     "hashes": {
-                        "sha512": "1b632999fed115623629bed41b0c736e06c8b1ba2878f8da6e6d91dc048ef045bfc19c6402fb6432cdbe5203b8072bb39f4f02945d07c451fdf74e4aff81b3cb",
-                        "sha1": "d5b06c65bbba9fd2d4f62768a413965a51bb6f42"
+                        "sha512": "3993ea70f6dac1db8b9954f6055101dfcd869106d3ad86db80e27711f7e93fa0eb1ca8ffb92ecf63c4f1800f318be02899170511274003cec534d796db55004f",
+                        "sha1": "6aaea2de5eedb7cb1a3aab39136fed78265b8c6b"
                     },
                     "required_dependencies": [
-                        "MdwFAVRL",
-                        "EltpO5cN"
+                        "EltpO5cN",
+                        "MdwFAVRL"
                     ],
-                    "size": 46718,
-                    "date_published": "2025-12-16T07:13:35.315954Z"
+                    "size": 43426,
+                    "date_published": "2026-02-20T08:19:21.413379Z"
                 }
             ]
         },
@@ -7047,7 +7047,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "notenoughanimations-neoforge-1.11.1-mc1.21.1.jar",
+                    "file_name": "notenoughanimations-neoforge-1.11.3-mc1.21.1.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -7055,16 +7055,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/MPCX6s5C/versions/PJ0Q8Tw8/notenoughanimations-neoforge-1.11.1-mc1.21.1.jar",
-                    "id": "PJ0Q8Tw8",
+                    "url": "https://cdn.modrinth.com/data/MPCX6s5C/versions/thf4cN71/notenoughanimations-neoforge-1.11.3-mc1.21.1.jar",
+                    "id": "thf4cN71",
                     "parent_id": "MPCX6s5C",
                     "hashes": {
-                        "sha512": "edd7092e12c97909c9615dec59eb8d21a2e4d7a71105bc90c646db0868d386a4a95dc0c283ddb2524541021fad8f9cbd29a6086560b5e668452bacc7b401cfab",
-                        "sha1": "77bc4502a329cf664c28ea21d3abccad26dfca50"
+                        "sha512": "dbc140c7d05046e79edf8a5bc860f0fcdcbe1fba1058ad4f03979256cf58550b75ad07c0ea152e97523a8459f4764914b4e54883001c5ea73d89ae9ee47051ba",
+                        "sha1": "3dd52f95293595ffdabbcfad842e7a191236f223"
                     },
                     "required_dependencies": [],
-                    "size": 1928789,
-                    "date_published": "2025-12-12T19:12:03.910003Z"
+                    "size": 1926047,
+                    "date_published": "2026-02-19T20:11:35.266076Z"
                 }
             ]
         },
