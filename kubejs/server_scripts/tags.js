@@ -199,7 +199,6 @@ ServerEvents.tags("block", event => {
 	event.add("gravestone:grave_replaceable", "#minecraft:replaceable", "#minecraft:replaceable_by_trees", "#c:ropes")
 
 	if (Platform.isLoaded("connectiblechains")) {
-		event.removeAll("c:bars") // See https://github.com/evanbones/Reconnectible-Chains/issues/10.
 		event.add("connectiblechains:chain_connectible", /_bars$/, "#minecraft:lightning_rods")
 	}
 })
