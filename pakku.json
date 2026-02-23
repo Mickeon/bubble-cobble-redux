@@ -36,6 +36,7 @@
         "!config/voicechat/voicechat-client.properties",
         "!config/voicechat/username-cache.json",
         "!config/chunkyborder/borders.json",
+        "!config/chunky/tasks",
         "!config/waterframes-client.toml",
         "!config/aiutd-enduser.json5",
 
