@@ -4660,7 +4660,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "guitween-2.0.1.jar",
+                    "file_name": "guitween-3.0.2.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -4668,16 +4668,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/6aRXFBGk/versions/mIWgbhUA/guitween-2.0.1.jar",
-                    "id": "mIWgbhUA",
+                    "url": "https://cdn.modrinth.com/data/6aRXFBGk/versions/ftMwzTty/guitween-3.0.2.jar",
+                    "id": "ftMwzTty",
                     "parent_id": "6aRXFBGk",
                     "hashes": {
-                        "sha512": "e935f0693958822a3de5f6fd1ccbc211200714b8b88fd4e87d90530ee6d5030e947b76a041a0fffe110eb87853d6b3faa3152d1d124087b612ab14fbe257b665",
-                        "sha1": "f96fb925632da6a982de2384488396f0040006f0"
+                        "sha512": "53e70d1168a70b0e3589d3748cadda5555715e85d8ed24288db43691b918543e0517a84e805d570e1012b223176985459c5b936800b984cb8b7d0f9c0c2f49f6",
+                        "sha1": "dbeeebf4c625db30f631182525e7cdeee216efa4"
                     },
                     "required_dependencies": [],
-                    "size": 59803,
-                    "date_published": "2026-01-18T15:22:09.228992Z"
+                    "size": 79470,
+                    "date_published": "2026-02-22T04:33:53.304464Z"
                 }
             ]
         },
@@ -8131,7 +8131,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "connectiblechains-neoforge-1.21.1-1.1.3h.jar",
+                    "file_name": "connectiblechains-neoforge-1.21.1-1.2.0.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -8139,18 +8139,18 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/5pzBXDS3/versions/TARD1GqV/connectiblechains-neoforge-1.21.1-1.1.3h.jar",
-                    "id": "TARD1GqV",
+                    "url": "https://cdn.modrinth.com/data/5pzBXDS3/versions/mtlKi9L4/connectiblechains-neoforge-1.21.1-1.2.0.jar",
+                    "id": "mtlKi9L4",
                     "parent_id": "5pzBXDS3",
                     "hashes": {
-                        "sha512": "2d0cc8bcefccb65be3121070553ccfbc50dddce49b7ab3cc9696898daca02dc78904b8ae1049bb6c33ffd9354a17ee7a3cd520ecfe16a3bec8baf124746eae36",
-                        "sha1": "04c284a6cbdad5099d745c4dcdad3aa507f50082"
+                        "sha512": "0c7279e7ba919a7c37d8f88bbc55b30070ed7db023d37eb78c28ea029d0db62424ff55e84b4aa22ea7beb2e9f886ad0fa9acb4e9e7ff48d96548925129664bcc",
+                        "sha1": "c7f874874e0317ec29e479f71c7f60040b15c6a5"
                     },
                     "required_dependencies": [
                         "9s6osm5g"
                     ],
-                    "size": 152962,
-                    "date_published": "2026-02-18T19:31:44.793527Z"
+                    "size": 156744,
+                    "date_published": "2026-02-23T07:18:06.646297Z"
                 }
             ]
         },
@@ -8332,7 +8332,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "repurposed_structures-7.5.17+1.21.1-neoforge.jar",
+                    "file_name": "repurposed_structures-7.5.18+1.21.1-neoforge.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -8340,16 +8340,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/QDNS5oAT/versions/JZcQ5o4Z/repurposed_structures-7.5.17+1.21.1-neoforge.jar",
-                    "id": "JZcQ5o4Z",
+                    "url": "https://cdn.modrinth.com/data/QDNS5oAT/versions/fuRQkVgT/repurposed_structures-7.5.18+1.21.1-neoforge.jar",
+                    "id": "fuRQkVgT",
                     "parent_id": "QDNS5oAT",
                     "hashes": {
-                        "sha512": "a984aee3690f4e3d5e1e56549aac87c5b132eafe811f2144df9361e7fee32b458fed13af14e3db88652cbfecf913d6bee845eefa3d569576e2188267157dfce3",
-                        "sha1": "2079a66cda18db8095c27808f95194b752ca704a"
+                        "sha512": "5971435442c1c8aa0c252caf0dc4ccb3959fad5e6e67d09ff7c2a66d76d94c76168448b981985b1d6f876cd012fbc2015c44e5deb08e79191301c15ef254f1b0",
+                        "sha1": "545fafd13197186038191d99c378ac4c04a6504c"
                     },
                     "required_dependencies": [],
-                    "size": 8238540,
-                    "date_published": "2025-07-22T01:57:05.397521Z"
+                    "size": 8238563,
+                    "date_published": "2026-02-22T14:38:37.227432Z"
                 }
             ]
         },
@@ -8616,7 +8616,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "neoforge-runiclib-1.21.1-5.0.3.jar",
+                    "file_name": "neoforge-runiclib-1.21.1-5.0.5.1.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -8624,16 +8624,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/mk0Htq87/versions/GyuCX714/neoforge-runiclib-1.21.1-5.0.3.jar",
-                    "id": "GyuCX714",
+                    "url": "https://cdn.modrinth.com/data/mk0Htq87/versions/exgO1yv5/neoforge-runiclib-1.21.1-5.0.5.1.jar",
+                    "id": "exgO1yv5",
                     "parent_id": "mk0Htq87",
                     "hashes": {
-                        "sha512": "7337260b44308fe5f662034e69910fc80347b3310ec0260666c51e894817d2f11650d0a2f69709ebc9f9dd529b2f73c62bed22bf7564e9a4fa7545397e1e2b87",
-                        "sha1": "e943bcfcfee210cb649455aded9044efc01f7638"
+                        "sha512": "cd529520f8be51fa4271745e1793b0b08a5eaea0b6e4d0c8e18314d9c4c1f51412ac090ea31d13e0cf79395268266a37b393e1dd788575162adab94b2c28870b",
+                        "sha1": "34134adeaa1e56014c66269714548e6bcf353f24"
                     },
                     "required_dependencies": [],
-                    "size": 169481,
-                    "date_published": "2026-01-12T11:45:50.692035Z"
+                    "size": 171882,
+                    "date_published": "2026-02-22T18:22:28.862504Z"
                 }
             ]
         },
@@ -9746,7 +9746,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "supplementaries-1.21-3.5.19-neoforge.jar",
+                    "file_name": "supplementaries-1.21-3.5.24-neoforge.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -9754,18 +9754,18 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/fFEIiSDQ/versions/GCthWMfx/supplementaries-1.21-3.5.19-neoforge.jar",
-                    "id": "GCthWMfx",
+                    "url": "https://cdn.modrinth.com/data/fFEIiSDQ/versions/5B2mN7yR/supplementaries-1.21-3.5.24-neoforge.jar",
+                    "id": "5B2mN7yR",
                     "parent_id": "fFEIiSDQ",
                     "hashes": {
-                        "sha512": "1c5bef31049b897d945abd456487a2ba465319fc6218011b597720afc89ce9b676ddb1d01b4498762da8af621e66680ab5a6e7a8e95513580e604e7094fdf353",
-                        "sha1": "f8e9ef89e00e22de80e92c505d8bad18651385dd"
+                        "sha512": "584503a1f190f442a2d9bf25c43a62c2ce1f6d8615bc1a0b37ddee9deb2673c7f36561c24568023d2ea29e24c4bf083365eebce3ef0c95ec429904a5d17b2357",
+                        "sha1": "06a5eee858a0a3346107710cf6ca51e1bece7c2a"
                     },
                     "required_dependencies": [
                         "twkfQtEc"
                     ],
-                    "size": 13350254,
-                    "date_published": "2026-01-29T15:19:53.119241Z"
+                    "size": 13355415,
+                    "date_published": "2026-02-22T15:13:11.118141Z"
                 }
             ]
         },
@@ -10962,7 +10962,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "letsdo-herbalbrews-neoforge-1.1.2.jar",
+                    "file_name": "letsdo-herbalbrews-neoforge-1.1.3.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -10970,18 +10970,18 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/Eh11TaTm/versions/7hgH3Nm5/letsdo-herbalbrews-neoforge-1.1.2.jar",
-                    "id": "7hgH3Nm5",
+                    "url": "https://cdn.modrinth.com/data/Eh11TaTm/versions/gtG21Zrn/letsdo-herbalbrews-neoforge-1.1.3.jar",
+                    "id": "gtG21Zrn",
                     "parent_id": "Eh11TaTm",
                     "hashes": {
-                        "sha512": "d253d68ef79d8c249b9deafa6800ea508bd81c39c7c0d71f367611a5c2ae79e0d5c0d21656e844df4278af50629cffdf73319393f6a9502621c0cbf801e0e4f5",
-                        "sha1": "b600f33b42a2fd3849b727c2060297fd8874f638"
+                        "sha512": "cfcfc47c24daff1b82849d36cbe5aa1d731a8bfcd814bc6afda2909ae18c4ff29e928122a3c37bb622c14738825f0a0db00547b30b54cd06cdaafb4af155e201",
+                        "sha1": "7e91a29bdbc696dfae7af7bc47bce7a7f773a7b1"
                     },
                     "required_dependencies": [
                         "lhGA9TYQ"
                     ],
-                    "size": 736515,
-                    "date_published": "2025-09-16T06:16:21.268081Z"
+                    "size": 757160,
+                    "date_published": "2026-02-21T06:59:47.250103Z"
                 }
             ]
         },

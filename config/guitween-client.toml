@@ -20,6 +20,30 @@ enableDebugWindow = false
 	windowGradientDuration = 8.0
 	#Allowed Values: LINEAR, IN_QUAD, OUT_QUAD, IN_OUT_QUAD, IN_CUBIC, OUT_CUBIC, IN_OUT_CUBIC, IN_QUART, OUT_QUART, IN_OUT_QUART, IN_QUINT, OUT_QUINT, IN_OUT_QUINT, IN_SINE, OUT_SINE, IN_OUT_SINE, IN_EXPO, OUT_EXPO, IN_OUT_EXPO, IN_CIRC, OUT_CIRC, IN_OUT_CIRC, IN_BACK, OUT_BACK, IN_OUT_BACK, IN_ELASTIC, OUT_ELASTIC, IN_OUT_ELASTIC, IN_BOUNCE, OUT_BOUNCE, IN_OUT_BOUNCE
 	windowGradientEase = "IN_OUT_SINE"
+	enableJeiLeft = false
+	# Default: 6.0
+	# Range: 0.0 ~ 1000.0
+	jeiLeftMoveDuration = 6.0
+	#Allowed Values: LINEAR, IN_QUAD, OUT_QUAD, IN_OUT_QUAD, IN_CUBIC, OUT_CUBIC, IN_OUT_CUBIC, IN_QUART, OUT_QUART, IN_OUT_QUART, IN_QUINT, OUT_QUINT, IN_OUT_QUINT, IN_SINE, OUT_SINE, IN_OUT_SINE, IN_EXPO, OUT_EXPO, IN_OUT_EXPO, IN_CIRC, OUT_CIRC, IN_OUT_CIRC, IN_BACK, OUT_BACK, IN_OUT_BACK, IN_ELASTIC, OUT_ELASTIC, IN_OUT_ELASTIC, IN_BOUNCE, OUT_BOUNCE, IN_OUT_BOUNCE
+	jeiLeftMoveEase = "OUT_BACK"
+	# Default: -50.0
+	# Range: -10000.0 ~ 10000.0
+	jeiLeftMoveX = -50.0
+	# Default: 0.0
+	# Range: -10000.0 ~ 10000.0
+	jeiLeftMoveY = 0.0
+	enableJeiRight = false
+	# Default: 6.0
+	# Range: 0.0 ~ 1000.0
+	jeiRightMoveDuration = 6.0
+	#Allowed Values: LINEAR, IN_QUAD, OUT_QUAD, IN_OUT_QUAD, IN_CUBIC, OUT_CUBIC, IN_OUT_CUBIC, IN_QUART, OUT_QUART, IN_OUT_QUART, IN_QUINT, OUT_QUINT, IN_OUT_QUINT, IN_SINE, OUT_SINE, IN_OUT_SINE, IN_EXPO, OUT_EXPO, IN_OUT_EXPO, IN_CIRC, OUT_CIRC, IN_OUT_CIRC, IN_BACK, OUT_BACK, IN_OUT_BACK, IN_ELASTIC, OUT_ELASTIC, IN_OUT_ELASTIC, IN_BOUNCE, OUT_BOUNCE, IN_OUT_BOUNCE
+	jeiRightMoveEase = "OUT_BACK"
+	# Default: 50.0
+	# Range: -10000.0 ~ 10000.0
+	jeiRightMoveX = 50.0
+	# Default: 0.0
+	# Range: -10000.0 ~ 10000.0
+	jeiRightMoveY = 0.0
 
 [screenItemGroup]
 	enableHover = true
@@ -50,9 +74,17 @@ enableDebugWindow = false
 	enableOutput = true
 	# Default: 5.0
 	# Range: 0.0 ~ 1000.0
-	outputDuration = 5.0
+	outputDuration = 3.0
 	#Allowed Values: LINEAR, IN_QUAD, OUT_QUAD, IN_OUT_QUAD, IN_CUBIC, OUT_CUBIC, IN_OUT_CUBIC, IN_QUART, OUT_QUART, IN_OUT_QUART, IN_QUINT, OUT_QUINT, IN_OUT_QUINT, IN_SINE, OUT_SINE, IN_OUT_SINE, IN_EXPO, OUT_EXPO, IN_OUT_EXPO, IN_CIRC, OUT_CIRC, IN_OUT_CIRC, IN_BACK, OUT_BACK, IN_OUT_BACK, IN_ELASTIC, OUT_ELASTIC, IN_OUT_ELASTIC, IN_BOUNCE, OUT_BOUNCE, IN_OUT_BOUNCE
 	outputEase = "OUT_BACK"
+	enableDrag = false
+	# Default: 15.0
+	# Range: 0.0 ~ 90.0
+	dragMaxAngle = 15.0
+	# Default: 8.0
+	# Range: 0.0 ~ 1000.0
+	dragSensitivity = 8.0
+	enableQuick = true
 
 [hotbarGroup]
 	enableHoldItem = false
@@ -86,6 +118,46 @@ enableDebugWindow = false
 	# Default: 4.0
 	# Range: 1.0 ~ 1000.0
 	expScale = 2.0
+	enableSelectedItemName = false
+	# Default: 4.0
+	# Range: 0.0 ~ 1000.0
+	selectedItemNameMoveDuration = 4.0
+	# Default: 5.0
+	# Range: 0.0 ~ 1000.0
+	selectedItemNameMoveY = 5.0
+	#Allowed Values: LINEAR, IN_QUAD, OUT_QUAD, IN_OUT_QUAD, IN_CUBIC, OUT_CUBIC, IN_OUT_CUBIC, IN_QUART, OUT_QUART, IN_OUT_QUART, IN_QUINT, OUT_QUINT, IN_OUT_QUINT, IN_SINE, OUT_SINE, IN_OUT_SINE, IN_EXPO, OUT_EXPO, IN_OUT_EXPO, IN_CIRC, OUT_CIRC, IN_OUT_CIRC, IN_BACK, OUT_BACK, IN_OUT_BACK, IN_ELASTIC, OUT_ELASTIC, IN_OUT_ELASTIC, IN_BOUNCE, OUT_BOUNCE, IN_OUT_BOUNCE
+	selectedItemNameMoveEase = "IN_OUT_SINE"
+	# Default: 6.0
+	# Range: 0.0 ~ 1000.0
+	selectedItemNameAlphaDuration = 6.0
+	#Allowed Values: LINEAR, IN_QUAD, OUT_QUAD, IN_OUT_QUAD, IN_CUBIC, OUT_CUBIC, IN_OUT_CUBIC, IN_QUART, OUT_QUART, IN_OUT_QUART, IN_QUINT, OUT_QUINT, IN_OUT_QUINT, IN_SINE, OUT_SINE, IN_OUT_SINE, IN_EXPO, OUT_EXPO, IN_OUT_EXPO, IN_CIRC, OUT_CIRC, IN_OUT_CIRC, IN_BACK, OUT_BACK, IN_OUT_BACK, IN_ELASTIC, OUT_ELASTIC, IN_OUT_ELASTIC, IN_BOUNCE, OUT_BOUNCE, IN_OUT_BOUNCE
+	selectedItemNameAlphaEase = "IN_OUT_SINE"
+	enableAttack = true
+	# Default: 15.0
+	# Range: 0.0 ~ 90.0
+	attackMaxAngle = 5.0
+	enableUse = false
+	# Default: 0.20000000298023224
+	# Range: 0.0 ~ 1000.0
+	useStrength = 0.1
+	enableSelectMove = true
+	# Default: 2.0
+	# Range: 0.0 ~ 1000.0
+	selectMoveDuration = 1.0
+	#Allowed Values: LINEAR, IN_QUAD, OUT_QUAD, IN_OUT_QUAD, IN_CUBIC, OUT_CUBIC, IN_OUT_CUBIC, IN_QUART, OUT_QUART, IN_OUT_QUART, IN_QUINT, OUT_QUINT, IN_OUT_QUINT, IN_SINE, OUT_SINE, IN_OUT_SINE, IN_EXPO, OUT_EXPO, IN_OUT_EXPO, IN_CIRC, OUT_CIRC, IN_OUT_CIRC, IN_BACK, OUT_BACK, IN_OUT_BACK, IN_ELASTIC, OUT_ELASTIC, IN_OUT_ELASTIC, IN_BOUNCE, OUT_BOUNCE, IN_OUT_BOUNCE
+	selectMoveEase = "OUT_CUBIC"
+	enableArmor = true
+	# Default: 4.0
+	# Range: 0.0 ~ 1000.0
+	armorDuration = 4.0
+	# Default: 1.5
+	# Range: 0.0 ~ 1000.0
+	upArmorScale = 1.5
+	#Allowed Values: LINEAR, IN_QUAD, OUT_QUAD, IN_OUT_QUAD, IN_CUBIC, OUT_CUBIC, IN_OUT_CUBIC, IN_QUART, OUT_QUART, IN_OUT_QUART, IN_QUINT, OUT_QUINT, IN_OUT_QUINT, IN_SINE, OUT_SINE, IN_OUT_SINE, IN_EXPO, OUT_EXPO, IN_OUT_EXPO, IN_CIRC, OUT_CIRC, IN_OUT_CIRC, IN_BACK, OUT_BACK, IN_OUT_BACK, IN_ELASTIC, OUT_ELASTIC, IN_OUT_ELASTIC, IN_BOUNCE, OUT_BOUNCE, IN_OUT_BOUNCE
+	upArmorEase = "IN_OUT_SINE"
+	# Default: 3.0
+	# Range: 0.0 ~ 1000.0
+	downArmorShakeStrength = 3.0
 
 [chatGroup]
 	enableChat = true
@@ -94,12 +166,6 @@ enableDebugWindow = false
 	chatOpenMoveDuration = 3.0
 	#Allowed Values: LINEAR, IN_QUAD, OUT_QUAD, IN_OUT_QUAD, IN_CUBIC, OUT_CUBIC, IN_OUT_CUBIC, IN_QUART, OUT_QUART, IN_OUT_QUART, IN_QUINT, OUT_QUINT, IN_OUT_QUINT, IN_SINE, OUT_SINE, IN_OUT_SINE, IN_EXPO, OUT_EXPO, IN_OUT_EXPO, IN_CIRC, OUT_CIRC, IN_OUT_CIRC, IN_BACK, OUT_BACK, IN_OUT_BACK, IN_ELASTIC, OUT_ELASTIC, IN_OUT_ELASTIC, IN_BOUNCE, OUT_BOUNCE, IN_OUT_BOUNCE
 	chatOpenMoveEase = "OUT_QUAD"
-	# Default: 0.0
-	# Range: -10000.0 ~ 10000.0
-	chatOpenMoveX = -50.0
-	# Default: 50.0
-	# Range: -10000.0 ~ 10000.0
-	chatOpenMoveY = 0.0
 	# Default: 6.0
 	# Range: 0.0 ~ 1000.0
 	chatOpenGradientDuration = 3.0
@@ -111,12 +177,6 @@ enableDebugWindow = false
 	chatCompMoveDuration = 4.0
 	#Allowed Values: LINEAR, IN_QUAD, OUT_QUAD, IN_OUT_QUAD, IN_CUBIC, OUT_CUBIC, IN_OUT_CUBIC, IN_QUART, OUT_QUART, IN_OUT_QUART, IN_QUINT, OUT_QUINT, IN_OUT_QUINT, IN_SINE, OUT_SINE, IN_OUT_SINE, IN_EXPO, OUT_EXPO, IN_OUT_EXPO, IN_CIRC, OUT_CIRC, IN_OUT_CIRC, IN_BACK, OUT_BACK, IN_OUT_BACK, IN_ELASTIC, OUT_ELASTIC, IN_OUT_ELASTIC, IN_BOUNCE, OUT_BOUNCE, IN_OUT_BOUNCE
 	chatCompMoveEase = "OUT_QUAD"
-	# Default: -500.0
-	# Range: -10000.0 ~ 10000.0
-	chatCompMoveX = -500.0
-	# Default: 0.0
-	# Range: -10000.0 ~ 10000.0
-	chatCompMoveY = 0.0
 	# Default: 6.0
 	# Range: 0.0 ~ 1000.0
 	chatCompGradientDuration = 6.0

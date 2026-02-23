@@ -125,7 +125,8 @@ ServerEvents.tags("item", event => {
 	)
 	event.add("supplementaries:pancake_syrup", "create:chocolate_bucket")
 	event.add("supplementaries:causes_lightning_when_held", "constructionstick:copper_stick", "minecraft:copper_sword", "minecraft:copper_axe") // Funny.
-	// event.add("supplementaries:overencumbering", "sophisticatedbackpacks:backpack") // Handled in Sophisticated Backpacks config. Also doesn't work anyway.
+	// event.add("supplementaries:overencumbering", "sophisticatedbackpacks:backpack") // Handled in Sophisticated Backpacks config.
+	event.add("supplementaries:overencumbering", "#create:toolboxes", "#create:packages", /sophisticatedstorage:.*shulker_box/)
 
 	// Make Construction sticks enchantable with Mending and Unbreaking.
 	event.add("minecraft:enchantable/durability", "#constructionstick:construction_sticks")
@@ -170,7 +171,7 @@ ServerEvents.tags("block", event => {
 	event.add("create:windmill_sails", "#supplementaries:flags")
 	event.add("create:fan_transparent",	"farmersdelight:safety_net", /^minecraft:.*copper_(bars|trapdoor)$/, /ladder$/, "cobblemon:water_stone_block", "cobblemon:fire_stone_block") // Fun.
 	event.add("create:fan_processing_catalysts/splashing", "cobblemon:water_stone_block")
-	event.add("create:fan_processing_catalysts/smoking", "supplementaries:fire_pit", "cobblemon:campfire") // Reported. https://github.com/MehVahdJukaar/Supplementaries/pull/1884.
+	event.add("create:fan_processing_catalysts/smoking", "cobblemon:campfire")
 	event.add("create:fan_processing_catalysts/blasting", "mynethersdelight:magma_cake_block", "cobblemon:fire_stone_block")
 	event.add("supplementaries:water_holder", "minersdelight:sticky_basket") // TODO: Report this? Supplementaries can't account for everyone, can it?
 	event.add("minecraft:mineable/shear", "farmersdelight:rope")

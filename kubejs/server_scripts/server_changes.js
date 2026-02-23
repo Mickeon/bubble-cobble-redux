@@ -227,24 +227,27 @@ if (Item.exists("herbalbrews:flask")) {
 	// Fix HerbalBrews Flask's potion effects duration being wrong. It should be 20 times the duration.
 	// Does not fix the tooltip, which will show an absurd duration. Rectify that with a stupid hack.
 	ItemEvents.rightClicked("herbalbrews:flask", event => {
-		if (!event.item.customData.getBoolean("kubejs:fixed")) {
-			event.item.customData.putBoolean("kubejs:fixed", true)
-			event.item.setLore([
-				Text.of(`You probably tried drinking this.`).darkGray(),
-				Text.of(`It doesn't last as long as it says,`).darkGray(),
-				Text.of(`but it still is a lot. Forgive me`).darkGray()
-			])
-
-			/** @type {$PotionContents} */
-			let current_contents = event.item.getComponentMap().get("minecraft:potion_contents")
-			let modified_effects = Utils.newList()
-			current_contents.customEffects().forEach(effect => {
-				modified_effects.add(MobEffectUtil.of(effect.effect, effect.duration * SEC))
-			})
-
-			let new_contents = new $PotionContents(current_contents.potion(), current_contents.customColor(), modified_effects)
-			event.item.setPotionContents(new_contents)
+		const item = event.item
+		if (item.customData.getBoolean("kubejs:fixed")) {
+			return
 		}
+
+		let current_contents = /** @type {$PotionContents} */ (item.get("minecraft:potion_contents"))
+		let modified_effects = Utils.newList()
+		current_contents.customEffects().forEach(effect => {
+			modified_effects.add(MobEffectUtil.of(effect.getEffect(), effect.duration * SEC))
+		})
+
+		let new_contents = new $PotionContents(current_contents.potion(), current_contents.customColor(), modified_effects)
+		item.setPotionContents(new_contents)
+
+		// item.getCustomData().putBoolean("kubejs:fixed", true) // For some reason this doesn't work anymore.
+		item.setCustomData({"kubejs:fixed": true})
+		item.setLore([
+			Text.of(`You probably tried drinking this.`).darkGray(),
+			Text.of(`It doesn't last as long as it says,`).darkGray(),
+			Text.of(`but it still is a lot. Forgive me`).darkGray()
+		])
 	})
 }
 
