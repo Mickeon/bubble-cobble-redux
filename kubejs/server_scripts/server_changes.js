@@ -331,12 +331,12 @@ NO_SKY_LIGHT_MOBS.forEach(entity_type => {
 // 	})
 // })
 
-EntityEvents.checkSpawn("minecraft:enderman", event => {
-	if (event.block.getSkyLight() >= 1 && event.type == "NATURAL" && Utils.getRandom().nextFloat() > 0.3) {
-		// console.log(`Trying to spawn ${event.entity.type}, but chance said no!`)
-		event.cancel()
-	}
-})
+// EntityEvents.checkSpawn("minecraft:enderman", event => {
+// 	if (event.block.getSkyLight() >= 1 && event.type == "NATURAL" && Utils.getRandom().nextFloat() > 0.3) {
+// 		// console.log(`Trying to spawn ${event.entity.type}, but chance said no!`)
+// 		event.cancel()
+// 	}
+// })
 
 EntityEvents.checkSpawn("minecraft:spider", event => {
 	if (event.block.getSkyLight() >= 1 && event.type == "NATURAL" && Utils.getRandom().nextFloat() > 0.1) {
