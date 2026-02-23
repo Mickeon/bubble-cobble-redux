@@ -53,7 +53,7 @@ ItemEvents.dynamicTooltips("show_available_shapes", event => {
 			new_lines.add(Text.of(`• `).append(shape.description).color("dark_gray"))
 		})
 
-		let hovered_slot = /** @type {import("net.minecraft.world.inventory.Slot").$Slot$$Type} */ (Client.getCurrentScreen().hoveredSlot)
+		let hovered_slot = /** @type {import("net.minecraft.world.inventory.Slot").$Slot$$Type} */ (Client.getCurrentScreen()?.hoveredSlot)
 		if (hovered_slot && hovered_slot.item == stack && !hovered_slot.isFake()) {
 			new_lines.add(Text.translate("Hold %s to change shape", [Text.keybind("key.clutternomore.change_block_shape").color(MASCOT_COLOR)]).color(MASCOT_COLOR_DARK))
 		}
