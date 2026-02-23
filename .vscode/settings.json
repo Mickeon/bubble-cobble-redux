@@ -57,6 +57,36 @@
     "errorLens.excludeByMessage": [
         "Use of hardcoded text function. Consider using language keys instead."
     ],
+    "editor.tokenColorCustomizations": {
+        "[Default Dark Modern]": {
+            "textMateRules": [
+                {
+                    "scope": "comment.block.documentation.js",
+                    "settings": {
+                        "foreground": "#FFFFFF23"
+                    }
+                },
+                {
+                    "scope": "storage.type.class.jsdoc",
+                    "settings": {
+                        "foreground": "#e9e9f123"
+                    }
+                },
+                {
+                    "scope": "entity.name.type.instance.jsdoc",
+                    "settings": {
+                        "foreground": "#ffffff40"
+                    }
+                },
+                {
+                    "scope": "variable.other.jsdoc",
+                    "settings": {
+                        "foreground": "#FFFFFF23"
+                    }
+                }
+            ]
+        }
+    },
     "[yaml]": {
         "files.trimTrailingWhitespace": false
     },
