@@ -1,39 +1,35 @@
 // priority: 10
 // requires: solonion
-// requires: pehkui
 
 /** @type {typeof import("team.creative.solonion.api.SOLOnionAPI").$SOLOnionAPI } */
 const SOLOnionAPI = Java.loadClass("team.creative.solonion.api.SOLOnionAPI")
-// /** @type {typeof import("virtuoel.pehkui.api.ScaleTypes").$ScaleTypes } */
-// const ScaleTypes = Java.loadClass("virtuoel.pehkui.api.ScaleTypes")
+
 const MAX_DIVERSITY = 32.0
 const LOSS_LIMIT = 0.2
-// const MINING_SPEED_THRESHOLD = 18
 const REGENERATION_THRESHOLD = 7
 
 // Tweaks to hunger system, featuring Spice of Life: Onion:
 // - At high food diversity, exhaustion increases slower, as such saturation drains slower.
 // - Starving is very funny.
-EntityEvents.spawned("minecraft:player", event => {
+PlayerEvents.loggedIn(event => {
 	const player = event.player
 	const server = event.server
-	/** @type {$ScheduledEvents$ScheduledEvent} */
-	let starve_event = null
+	let starve_event = /** @type {$ScheduledEvents$ScheduledEvent} */ (null)
 
 	let prior_exhaustion = player.getFoodData().getExhaustionLevel()
 
-	// const mining_speed_scale = player.pehkui_getScaleData(ScaleTypes.MINING_SPEED)
+	console.log(`Beginning SoLOnion scheduled event for ${player.username}`)
 
 	const is_candle = is_eligible_for_easter_egg(player, "CandleClockwork")
 	const super_starve_starting_tick_rate = 60
 	const super_starve_lowest_tick_rate = is_candle ? 2 : 40
 
-	server.scheduleRepeatingInTicks(20, callback => {
+	server.scheduleRepeatingInTicks(20, main_event => {
 		// if (player.isRemoved() || !SOLOnionAPI.isPresent(player) || !player.isAlive()) {
 		// if (player.isRemoved() || !player.isAlive()) {
 		if (!player.isAlive()) {
-			callback.clear()
-			console.log(`Clearing SoL callback for ${player.username}`)
+			main_event.clear()
+			console.log(`Clearing SoLOnion scheduled event for ${player.username}`)
 			return
 		}
 
@@ -46,11 +42,11 @@ EntityEvents.spawned("minecraft:player", event => {
 		// Super starvation.
 		if (player.foodLevel <= 1.0 && starve_event == null) {
 			console.log(`Beginning to starve for ${player.username}`)
-			starve_event = server.scheduleRepeatingInTicks(super_starve_starting_tick_rate, _callback => {
+			starve_event = server.scheduleRepeatingInTicks(super_starve_starting_tick_rate, () => {
 				if (player.isRemoved() || player.foodLevel > 1.0 || !player.isAlive()) {
 					starve_event.clear()
 					starve_event = null
-					console.log(`Clearing SoL Super Starvation callback for ${player.username}`)
+					console.log(`Clearing SoLOnion Super Starvation scheduled event for ${player.username}`)
 					return
 				}
 				// As more time passes, damage happens more frequently, within reason...
@@ -97,15 +93,11 @@ EntityEvents.spawned("minecraft:player", event => {
 		// console.log(`Multiplied loss by ${loss / usual_loss} for ${player.name}`)
 		player.addExhaustion(loss)
 
-
 		prior_exhaustion = current_exhaustion
 
 		// if (player.hasEffect("brewinandchewin:tipsy") && player.random.nextInt(4) == 0) {
 		// 	player.giveExperiencePoints(Math.min(player.getEffect("brewinandchewin:tipsy").amplifier + 1, 3))
 		// }
-
-		// mining_speed_scale.setScale(clamp(remap(food_diversity, MINING_SPEED_THRESHOLD, MAX_DIVERSITY, 1.0, 2.0), 1.0, 2.0))
-		// mining_speed_scale.setScale(food_diversity >= MINING_SPEED_THRESHOLD ? 1.2 : 1.0)
 
 		// Utils.server.tell(`${String(usual_loss).substring(0, 4) } => ${String(loss).substring(0, 4)}`)
 	})
