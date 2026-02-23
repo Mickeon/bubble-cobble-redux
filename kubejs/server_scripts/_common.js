@@ -60,7 +60,7 @@ function play_sound_at_entity(entity, sound_event, source, volume, pitch) {
  * @param {$Player} player @param {string | Array<string>} usernames
  */
 function is_eligible_for_easter_egg(player, usernames) {
-	if (Client.isSingleplayer()) {
+	if (player.server.isSingleplayer()) {
 		return true
 	}
 	if (typeof usernames === "string") {
