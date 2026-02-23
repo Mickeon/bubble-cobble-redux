@@ -3270,7 +3270,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "CreativeCore_NEOFORGE_v2.13.28_mc1.21.1.jar",
+                    "file_name": "CreativeCore_NEOFORGE_v2.13.31_mc1.21.1.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -3278,16 +3278,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/OsZiaDHq/versions/NGq1IzwC/CreativeCore_NEOFORGE_v2.13.28_mc1.21.1.jar",
-                    "id": "NGq1IzwC",
+                    "url": "https://cdn.modrinth.com/data/OsZiaDHq/versions/1vGOcdnx/CreativeCore_NEOFORGE_v2.13.31_mc1.21.1.jar",
+                    "id": "1vGOcdnx",
                     "parent_id": "OsZiaDHq",
                     "hashes": {
-                        "sha512": "c864c71ce65dd5cb503c99f2879623deec28734336584a401c815e7e31fe014e8c1914335e511f5211e500db4341c2d3e002eee5b06d67da709315050b4db7b8",
-                        "sha1": "ccf8fc68b292ee81914dfbdcbe0dade095e544ab"
+                        "sha512": "44e20caa10e519f87ce60d960290a2801c1845b2e5b923ced846c7b02ac49834a7ba0fa799ed87c009f3693ee3938dfcce74c8c839ec8f5278066cf9ddac803f",
+                        "sha1": "8a62f35b3eece60e58a600fbec9a928b2784fc7f"
                     },
                     "required_dependencies": [],
-                    "size": 1208985,
-                    "date_published": "2026-02-07T16:29:09.673392Z"
+                    "size": 1203996,
+                    "date_published": "2026-02-19T17:27:11.183275Z"
                 }
             ]
         },
@@ -5547,7 +5547,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "Kiwi-1.21.1-NeoForge-15.8.2.jar",
+                    "file_name": "Kiwi-1.21.1-NeoForge-15.8.3.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -5555,16 +5555,16 @@
                         "neoforge"
                     ],
                     "release_type": "beta",
-                    "url": "https://cdn.modrinth.com/data/ufdDoWPd/versions/eCzvKS7q/Kiwi-1.21.1-NeoForge-15.8.2.jar",
-                    "id": "eCzvKS7q",
+                    "url": "https://cdn.modrinth.com/data/ufdDoWPd/versions/2flHQIzv/Kiwi-1.21.1-NeoForge-15.8.3.jar",
+                    "id": "2flHQIzv",
                     "parent_id": "ufdDoWPd",
                     "hashes": {
-                        "sha512": "25a745c24d3baa3c24e7840ff85cdbd0b10cdbee194f5d41e28d419595b67b7175a4a648a6b141acf11c6c8137e0f73e0fd903d7d51d8d29e675eb9734314f14",
-                        "sha1": "1128b93633b6d39b2a7924343641aec8b49f50ea"
+                        "sha512": "3d0168a9189adf81002533421d183d83f75c30523be5499416ee430288e10175df0d43027435600f4c49d5fffffd0f78b86b2bef5bd67f82b1c494ba2f8b5536",
+                        "sha1": "042592fb37494fb566ae43881fc3aeecd4880f50"
                     },
                     "required_dependencies": [],
-                    "size": 1530397,
-                    "date_published": "2025-11-11T07:38:56.030995Z"
+                    "size": 1538356,
+                    "date_published": "2026-02-23T04:55:01.450618Z"
                 }
             ]
         },
@@ -6037,7 +6037,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "lootr-neoforge-1.21.1-1.11.36.115.jar",
+                    "file_name": "lootr-neoforge-1.21.1-1.11.36.116.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -6045,16 +6045,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/EltpO5cN/versions/qUVCMbAu/lootr-neoforge-1.21.1-1.11.36.115.jar",
-                    "id": "qUVCMbAu",
+                    "url": "https://cdn.modrinth.com/data/EltpO5cN/versions/F6ikROKG/lootr-neoforge-1.21.1-1.11.36.116.jar",
+                    "id": "F6ikROKG",
                     "parent_id": "EltpO5cN",
                     "hashes": {
-                        "sha512": "642fb162de264431ee8875ddabd183b6ac5eefa30642270620b7c647c8cc59c1ec218ce29b7ad2caba42c5e76cb997e6e7ca8d429d14aab7815520a2d4517adf",
-                        "sha1": "6361be04083cfa5fc49dad03caf5cdb7aeabe6d9"
+                        "sha512": "7ce36d2bce725d10921fc5788cee9b0a7d28bc960644243f080954541570ce414959adf974a073e75eefeded8b19743b8853f6e92b5f1d6637310d25f065d884",
+                        "sha1": "476c757c3859fe9acd95130bd44f4443586c46ec"
                     },
                     "required_dependencies": [],
-                    "size": 970018,
-                    "date_published": "2026-02-20T08:16:21.203241Z"
+                    "size": 970239,
+                    "date_published": "2026-02-23T02:33:49.334084Z"
                 }
             ]
         },
@@ -6684,7 +6684,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "moonlight-1.21-2.29.16-neoforge.jar",
+                    "file_name": "moonlight-1.21-2.29.18-neoforge.jar",
                     "mc_versions": [
                         "1.21",
                         "1.21.1"
@@ -6693,16 +6693,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/twkfQtEc/versions/xnc12XKg/moonlight-1.21-2.29.16-neoforge.jar",
-                    "id": "xnc12XKg",
+                    "url": "https://cdn.modrinth.com/data/twkfQtEc/versions/XhoYMFiP/moonlight-1.21-2.29.18-neoforge.jar",
+                    "id": "XhoYMFiP",
                     "parent_id": "twkfQtEc",
                     "hashes": {
-                        "sha512": "563f277c5876cc9e0e4ddf04658c130efe257dba2ac827c37f530d746c9033b9e75a799ebf1b65076c65dbc2d33eab225fd54fd123c9fa84a8a7fffa9ea4569c",
-                        "sha1": "1d183ee2695e19a461b50ac7801dd17230e66094"
+                        "sha512": "e3272203326dd0d374209232daa985441813de33a231fcecd217b8bad3654cef905fb2793a8f9092c92e36a77a9357ea9b63a7c09a9fc95f7f2a9f4940246e86",
+                        "sha1": "514e6fa03a4c0c6fc9aa622001a114ab9d289066"
                     },
                     "required_dependencies": [],
-                    "size": 1575809,
-                    "date_published": "2026-01-25T04:21:19.841856Z"
+                    "size": 1588577,
+                    "date_published": "2026-02-23T19:50:28.406942Z"
                 }
             ]
         },
