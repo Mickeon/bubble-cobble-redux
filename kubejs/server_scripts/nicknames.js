@@ -153,7 +153,7 @@ function nickname_clear_command(source) {
 
 /** @param {$Player} player */
 function has_nickname(player) {
-	return !!nicknames[player.uuid]
+	return Boolean(nicknames[player.uuid])
 }
 
 /** @param {$Player} player */

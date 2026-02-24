@@ -5,10 +5,10 @@ ItemEvents.modification(event => {
 	})
 
 	// Lower how much time it takes to eat food in general.
-	event.modify(i => !!i.getFoodProperties(null), /** @param {$ItemModifications} modified */ modified => {
+	event.modify(i => Boolean(i.getFoodProperties(null)), /** @param {$ItemModifications} modified */ modified => {
 		const item = modified.item()
 		const food_properties = item.getFoodProperties(Item.of(item), null)
-		if (!food_properties || food_properties.eatSeconds() <= 0.0) {
+		if (food_properties.eatSeconds() <= 0.0) {
 			return
 		}
 

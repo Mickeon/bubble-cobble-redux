@@ -277,14 +277,9 @@ let $EnhancedCelestials = Java.loadClass("dev.corgitaco.enhancedcelestials.Enhan
 /** @type {typeof import("net.minecraft.core.Holder").$Holder } */
 let $Holder  = Java.loadClass("net.minecraft.core.Holder")
 
-// This logic is very flawed for any non-Overworld dimension, but I just want to get it done for now.
-function get_current_lunar_event_holder(level) {
-	let lunar_forecast = $EnhancedCelestials.lunarForecastWorldData(level).orElse(null)
-	return (lunar_forecast ? lunar_forecast.currentLunarEventHolder() : $Holder.direct(null))
-}
-
 function is_lunar_event_happening(level) {
-	return !get_current_lunar_event_holder(level).is("enhancedcelestials:default")
+	const forecast = $EnhancedCelestials.lunarForecastWorldData(level).orElse(null)
+	return forecast && forecast.currentLunarEventHolder().is(forecast.getDimensionSettings().defaultEvent())
 }
 
 /** @type {Special.EntityType[]} */
@@ -342,7 +337,7 @@ NO_SKY_LIGHT_MOBS.forEach(entity_type => {
 // })
 
 EntityEvents.checkSpawn("minecraft:spider", event => {
-	if (event.block.getSkyLight() >= 1 && event.type == "NATURAL" && Utils.getRandom().nextFloat() > 0.1) {
+	if (event.block.getSkyLight() >= 1 && event.type == "NATURAL" && event.level.getRandom().nextFloat() > 0.1) {
 		// console.log(`Trying to spawn ${event.entity.type}, but chance said no!`)
 		event.cancel()
 	}
@@ -423,8 +418,7 @@ NativeEvents.onEvent($AnvilUpdateEvent, event => {
 let $DimensionTransition  = Java.loadClass("net.minecraft.world.level.portal.DimensionTransition")
 EntityEvents.beforeHurt("minecraft:player", event => {
 	if (event.source.getActual()?.type == "minecraft:warden") {
-		/** @type {import("net.minecraft.server.level.ServerPlayer").$ServerPlayer$$Type} */
-		const player = event.player
+		const player = /** @type {$ServerPlayer} */ (event.player)
 		const spawn_angle = event.level.sharedSpawnAngle
 
 		const dimension_transition = player.findRespawnPositionAndUseSpawnBlock(false, $DimensionTransition.DO_NOTHING)
@@ -461,7 +455,7 @@ ServerEvents.basicCommand("currentstructure", event => {
 
 	const structure_registry = event.registries.registry("worldgen/structure").get()
 
-	let response = Text.of("At the current position, the following structures were found:").gray()
+	let response = Text.of(`At the current position, the following structures were found:`).gray()
 	structure_manager.getAllStructuresAt(block_pos).forEach((structure, set) => {
 		const string_id = structure_registry.getKey(structure).toString()
 		response = response.append("\n- ")
@@ -473,8 +467,6 @@ ServerEvents.basicCommand("currentstructure", event => {
 // HACK: I have code below to mitigate this, but it's nasty, on server loaded. FluidInteractionRegistry persists
 // when the server is closed. This is fine for dedicated servers, but you will eventually run out of memory in singleplayer.
 // At the same time, interactions can't be added properly on startup as some registries are not ready yet(?)
-/** @type {typeof import("java.util.function.Function").$Function } */
-let $JavaFunction  = Java.loadClass("java.util.function.Function")
 // https://lexxie.dev/neoforge/1.21.1/net/neoforged/neoforge/fluids/FluidInteractionRegistry.FluidInteraction.html
 /** @type {typeof import("net.neoforged.neoforge.fluids.FluidInteractionRegistry").$FluidInteractionRegistry } */
 let $FluidInteractionRegistry  = Java.loadClass("net.neoforged.neoforge.fluids.FluidInteractionRegistry")
@@ -515,28 +507,32 @@ ServerEvents.loaded(event => {
 		Block.getBlock("kubejs:chiseled_mud_bricks").defaultBlockState()
 	))
 
+	/** @import {$FluidState} from "net.minecraft.world.level.material.FluidState" */
+
+	const fluid_rand = Utils.getRandom().fork()
+
 	$FluidInteractionRegistry.addInteraction(LAVA, new $InteractionInformation["(net.neoforged.neoforge.fluids.FluidType,java.util.function.Function)"](
 		Fluid.getType("createmonballsoverhaul:source_standard_tumblestone_coating").getFluidType(),
-		new $JavaFunction({
-			apply: (fluid_state) => {
-				let chance = Math.random()
-				if (chance > 0.666) {
-					return Blocks.GRANITE.defaultBlockState()
-				} else if (chance > 0.333) {
-					return Blocks.DIORITE.defaultBlockState()
-				}
-				return Blocks.ANDESITE.defaultBlockState()
+		/** @param {$FluidState} fluid_state */ fluid_state => {
+			const chance = fluid_rand.nextDouble()
+			if (chance > 0.666) {
+				return Blocks.GRANITE.defaultBlockState()
 			}
-		})
+			if (chance > 0.333) {
+				return Blocks.DIORITE.defaultBlockState()
+			}
+			return Blocks.ANDESITE.defaultBlockState()
+		}
 	))
 
 	$FluidInteractionRegistry.addInteraction(LAVA, new $InteractionInformation["(net.neoforged.neoforge.fluids.FluidType,java.util.function.Function)"](
 		Fluid.getType("createmonballsoverhaul:source_light_tumblestone_coating").getFluidType(),
-		/** @param {import("net.minecraft.world.level.material.FluidState").$FluidState$$Type} fluid_state */ fluid_state => {
-			let chance = Utils.getRandom().nextDouble()
+		/** @param {$FluidState} fluid_state */ fluid_state => {
+			const chance = fluid_rand.nextDouble()
 			if (chance > 0.666) {
 				return Blocks.CALCITE.defaultBlockState()
-			} else if (chance > 0.333) {
+			}
+			if (chance > 0.333) {
 				return Blocks.TUFF.defaultBlockState()
 			}
 			return Block.getBlock("biomeswevegone:dacite").defaultBlockState()
@@ -545,11 +541,12 @@ ServerEvents.loaded(event => {
 
 	$FluidInteractionRegistry.addInteraction(LAVA, new $InteractionInformation["(net.neoforged.neoforge.fluids.FluidType,java.util.function.Function)"](
 		Fluid.getType("createmonballsoverhaul:source_dense_tumblestone_coating").getFluidType(),
-		/** @param {import("net.minecraft.world.level.material.FluidState").$FluidState$$Type} fluid_state */ fluid_state => {
-			let chance = Utils.getRandom().nextDouble()
+		/** @param {$FluidState} fluid_state */ fluid_state => {
+			const chance = fluid_rand.nextDouble()
 			if (chance > 0.666) {
 				return Block.getBlock("arts_and_crafts:soapstone").defaultBlockState()
-			} else if (chance > 0.333) {
+			}
+			if (chance > 0.333) {
 				return Block.getBlock("arts_and_crafts:beige_pietraforte").defaultBlockState()
 			}
 			return Block.getBlock("arts_and_crafts:gypsum").defaultBlockState()

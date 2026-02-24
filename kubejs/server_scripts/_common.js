@@ -2,7 +2,7 @@
 
 /**
  * @import {$Player} from "net.minecraft.world.entity.player.Player"
- * @import {$ServerPlayer} from "net.minecraft.server.level.ServerPlayer")
+ * @import {$ServerPlayer} from "net.minecraft.server.level.ServerPlayer"
  * @import {$ItemStack} from "net.minecraft.world.item.ItemStack"
  * @import {$ScheduledEvents$ScheduledEvent} from "dev.latvian.mods.kubejs.util.ScheduledEvents$ScheduledEvent"
  * @import {$PotionContents} from "net.minecraft.world.item.alchemy.PotionContents"
@@ -41,8 +41,8 @@ function pick_random(array) {
  * @param {$Level} level @param {$Vec3} pos @param {Special.SoundEvent} sound_event @param {$SoundSource$$Type} source @param {number?} pitch @param {number?} volume
  */
 function play_sound_globally(level, pos, sound_event, source, volume, pitch) {
-	volume = volume || 1.0
-	pitch = pitch || 1.0
+	volume = volume ?? 1.0
+	pitch = pitch ?? 1.0
 
 	level["playSound(net.minecraft.world.entity.player.Player,double,double,double,net.minecraft.sounds.SoundEvent,net.minecraft.sounds.SoundSource,float,float)"]
 			(null, pos.x(), pos.y(), pos.z(), sound_event, source, volume, pitch)

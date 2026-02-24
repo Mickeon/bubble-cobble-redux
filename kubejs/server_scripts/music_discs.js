@@ -2,12 +2,6 @@
 const MUSIC_LIST = global.MUSIC_LIST
 
 ServerEvents.registry("jukebox_song", event => {
-	// const map = Utils.newMap()
-	// map.putAll({
-	// 	"key1": "value1",
-	// 	"key2": "value2",
-	// })
-	// console.log(map)
 	Object.keys(MUSIC_LIST).forEach((key, index) => {
 		const duration = MUSIC_LIST[key].duration
 		const description = MUSIC_LIST[key].description

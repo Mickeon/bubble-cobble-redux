@@ -19,7 +19,7 @@ const DreamDimension = {
 	NAMESPACE: "resource_world",
 	ID: "resource_world:dream_dimension",
 	SLEEP_WAIT_TIME: 2 * SEC,
-	EXPIRATION_WARNING_OFFSET: 4 * MIN,
+	EXPIRATION_WARNING_OFFSET: 10 * MIN,
 	IDEAL_TO_PREPARE_AVERAGE_TICK_TIME_NANOS: 5000000,
 	A_MIMIR_URL: "https://tenor.com/view/a-mimir-gif-26093646",
 	A_MIMIR_MP4_URL: "https://media.tenor.com/8UWUBWR-ww0AAAPo/a-mimir-meme.mp4",
@@ -37,8 +37,13 @@ const DreamDimension = {
 			]
 		}
 	}),
+	/** @param {import("net.minecraft.world.item.Item").$Item$$Original} item */
+	is_dream_journal(item) {
+		const written_book_content = item.getComponents().get("minecraft:written_book_content")
+		return Boolean(written_book_content) && written_book_content.author() == "Micky"
+	},
 
-	is_attempting_reset: false,
+	attempting_reset: false,
 
 	/** @param {$Player} player */
 	try_to_enter(player) {
@@ -65,6 +70,7 @@ const DreamDimension = {
 		player.tell(Text.of(`A mimir 🛏💤`).clickOpenUrl(this.A_MIMIR_URL).blue().underlined())
 		// }
 		player.giveInHand(DreamDimension.DREAM_JOURNAL)
+		player.removeEffect("brewinandchewin:tipsy")
 
 		// Should not be necessary, but just in case.
 		if (this.get_expiration_time(server) == $Long.MAX_VALUE) {
@@ -82,7 +88,7 @@ const DreamDimension = {
 			(player.isCreative() && player.isHolding("minecraft:stick"))
 			|| (player.hasEffect("brewinandchewin:tipsy") && !player.hasEffect("via_romana:travellers_fatigue"))
 		)
-		&& !this.is_attempting_reset
+		&& !this.attempting_reset
 	},
 
 	/** @param {$Player} player */
@@ -108,6 +114,7 @@ const DreamDimension = {
 
 		global.begone_effect(player)
 
+		player.getInventory().clear(DreamDimension.is_dream_journal)
 		player.server.scheduleInTicks(1, () => {
 			nearby_item_entities.forEach(e => {
 				e.teleportTo(player.level.dimension, player.x, player.y, player.z, e.yaw, e.pitch)
@@ -136,10 +143,10 @@ const DreamDimension = {
 
 	/** @param {$MinecraftServer} server */
 	delete(server) {
-		if (this.is_attempting_reset) {
+		if (this.attempting_reset) {
 			return
 		}
-		this.is_attempting_reset = true
+		this.attempting_reset = true
 
 		const dream_dimension = server.getLevel(this.ID)
 		if (!dream_dimension) {
@@ -162,7 +169,7 @@ const DreamDimension = {
 				server.runCommandSilent(`chunky cancel ${this.ID}`)
 				server.runCommandSilent(`chunky confirm`)
 			}
-			this.is_attempting_reset = false
+			this.attempting_reset = false
 		})
 		// Let's also already create another dream dimension for later.
 		server.scheduleInTicks(15 * SEC, () => {
@@ -213,7 +220,7 @@ const DreamDimension = {
 		if (time_left < 0) {
 			return Text.of(`OVERTIME`).darkRed().bold()
 		}
-		if (time_left < 9 * SEC) {
+		if (time_left < 59 * SEC) {
 			return Text.of(`${seconds.toFixed()}.${(time_left % SEC / 0.2).toFixed().padEnd(2, "0")}`).red()
 		}
 
@@ -234,16 +241,18 @@ const DreamDimension = {
 		if (time_left < 0) {
 			return 4 * SEC
 		}
-		if (time_left < 10 * SEC) {
+		if (time_left < 59 * SEC) {
 			return 2
 		}
 		if (time_left > DreamDimension.EXPIRATION_WARNING_OFFSET) {
-			return 5 * MIN
+			return 2.5 * MIN
 		}
 
 		return SEC
 	},
 
+	TIME_WITHER_BEGINS: 21 * SEC,
+	TIME_WITHER_TRULY_BEGINS: 0 * SEC,
 	/** @param {$MinecraftServer} server @param {$Level} level */
 	wither_players_try_starting(server, level) {
 		if (DreamDimension.wither_players_scheduled) {
@@ -258,17 +267,20 @@ const DreamDimension = {
 				return
 			}
 
-			const time_left_sec = DreamDimension.get_time_left(server) / 20
+			const time_left_sec = DreamDimension.get_time_left(server) / SEC
 			const damage_amount = Math.abs(time_left_sec * 0.01)
 			const effect_strength = Math.abs(time_left_sec * 0.05)
+			const effect_duration = 5 * SEC
 
 			level.getPlayers().forEach(/** @param {$ServerPlayer} player */ player => {
 				player.attack(new DamageSource("kubejs:dream_wither"), damage_amount)
-				player.addEffect(MobEffectUtil.of("brewinandchewin:intoxication", 5 * SEC))
-				player.addEffect(MobEffectUtil.of("minecraft:haste", 5 * SEC, effect_strength, true, false, false))
-				player.addEffect(MobEffectUtil.of("minecraft:speed", 5 * SEC, effect_strength, false, false, false))
-				player.addEffect(MobEffectUtil.of("minecraft:luck", 5 * SEC, effect_strength, true, false, false))
-				player.addEffect(MobEffectUtil.of("brewinandchewin:raging", 5 * SEC, effect_strength, true, false, false))
+				player.addEffect(MobEffectUtil.of("brewinandchewin:intoxication", effect_duration))
+				player.addEffect(MobEffectUtil.of("minecraft:haste", effect_duration, effect_strength))
+				player.addEffect(MobEffectUtil.of("minecraft:speed", effect_duration, effect_strength, false, false, false))
+				player.addEffect(MobEffectUtil.of("minecraft:luck", effect_duration, effect_strength, true, false, false))
+				player.addEffect(MobEffectUtil.of("brewinandchewin:raging", effect_duration, effect_strength, true, false, false))
+				player.addEffect(MobEffectUtil.of("xaerominimap:no_minimap_harmful", effect_duration, 0, false, false, false))
+				player.addEffect(MobEffectUtil.of("xaeroworldmap:no_world_map_harmful", effect_duration, 0, false, false, false))
 
 				if (player.onGround()) {
 					let block_state_on = player.getBlockStateOn()
@@ -289,12 +301,17 @@ const DreamDimension = {
 		this.wither_players_scheduled.clear()
 		delete this.wither_players_scheduled
 	},
-		/** @param {$MinecraftServer} server @param {import("net.minecraft.world.level.Level").$Level$$Original} level */
+	/** @param {$MinecraftServer} server @param {import("net.minecraft.world.level.Level").$Level$$Original} level */
 	explode_around_try_starting(server, level) {
 		if (DreamDimension.explode_around_scheduled) {
 			return
 		}
 		console.log(`Trying to cause explosions around in ${this.ID}`)
+
+		const min_height = level.getMinBuildHeight()
+		const max_height = level.getMaxBuildHeight()
+		const range_inner = 16
+		const range_outer = 96
 
 		// The music should be in beat. Using specific numbers for pitch and frequency here.
 		level.getMcPlayers().forEach(player => {
@@ -307,15 +324,11 @@ const DreamDimension = {
 			}
 
 			const time_left = DreamDimension.get_time_left(server)
-			if (time_left < -22 * SEC) {
+			if (time_left <= DreamDimension.TIME_WITHER_TRULY_BEGINS) {
 				DreamDimension.explode_around_scheduled.timer = 9
 			}
 
 			const explosion_strength = Math.min(Math.abs(time_left / SEC * 0.2), 12)
-			const range_inner = 16
-			const range_outer = 96
-			const min_height = level.getMinBuildHeight()
-			const max_height = level.getMaxBuildHeight()
 
 			level.getPlayers().forEach(/** @param {$ServerPlayer} player */ player => {
 				let level_block = player.level.getBlock(
@@ -411,7 +424,7 @@ const DreamDimension = {
 		if (!dream_dimension) {
 			return
 		}
-		if (this.get_time_left(server) <= 5 * MIN || this.is_attempting_reset) {
+		if (this.get_time_left(server) <= 5 * MIN || this.attempting_reset) {
 			return
 		}
 
@@ -478,9 +491,18 @@ EntityEvents.death("minecraft:player", event => {
 		player.setHealth(1)
 		player.setFoodLevel(6)
 		player.experienceLevel *= 0.75
-		player.addEffect(MobEffectUtil.of("brewinandchewin:tipsy", 30 * SEC, 5, true, true))
-		player.addEffect(MobEffectUtil.of("brewinandchewin:intoxication", 1 * MIN, 0, true, true))
-		player.addEffect(MobEffectUtil.of("via_romana:travellers_fatigue", 3 * MIN, 0, true, true))
+
+		// I am not sure this actually works.
+		/** @param {import("net.minecraft.world.effect.MobEffectInstance").$MobEffectInstance$$Type} effect_instance */
+		let incurable = function(effect_instance) {
+			effect_instance.getCures().clear()
+			return effect_instance
+		}
+		player.addEffect(incurable(MobEffectUtil.of("via_romana:travellers_fatigue", 3 * MIN)))
+		player.addEffect(incurable(MobEffectUtil.of("brewinandchewin:intoxication", 1 * MIN)))
+		player.addEffect(incurable(MobEffectUtil.of("brewinandchewin:tipsy", 30 * SEC, 4)))
+		player.addEffect(incurable(MobEffectUtil.of("xaerominimap:no_minimap_harmful", 30 * SEC)))
+		player.addEffect(incurable(MobEffectUtil.of("xaeroworldmap:no_world_map_harmful", 30 * SEC)))
 	}
 	player.level.tell(Text.of(["In a bad dream, ", event.getSource().getLocalizedDeathMessage(player)]).gray())
 	DreamDimension.exit(player)
@@ -493,10 +515,8 @@ PlayerEvents.cloned(event => {
 			DreamDimension.refresh_expiration_time(server)
 		}
 	} else {
-		event.player.getInventory().clear(i => {
-			const written_book_content = i.getComponents().get("minecraft:written_book_content")
-			return !!written_book_content && written_book_content.author() == "Micky"
-		})
+		// FIXME: Doesn't seem to do anything when moving out from the Dream Dimension.
+		event.player.getInventory().clear(DreamDimension.is_dream_journal)
 	}
 })
 
@@ -508,21 +528,20 @@ LevelEvents.tick(DreamDimension.ID, event => {
 		let formatted_time = DreamDimension.format_time(time_left)
 		level.getPlayers().forEach(p => p.setStatusMessage(formatted_time))
 	}
-	if (time_left <= 0) {
+	if (time_left <= DreamDimension.TIME_WITHER_BEGINS) {
+		DreamDimension.explode_around_try_starting(server, level)
+	}
+	if (time_left <= DreamDimension.TIME_WITHER_TRULY_BEGINS) {
+		DreamDimension.wither_players_try_starting(server, level)
 		if (level.getPlayers().isEmpty()) {
 			DreamDimension.delete(server)
 			return
 		}
-
-		if (time_left < -22 * SEC) {
-			DreamDimension.wither_players_try_starting(server, level)
-		}
-		DreamDimension.explode_around_try_starting(server, level)
 	}
 
 	// server.getPlayers().forEach(p => {
 	// 	p.setStatusMessage(
-	// 		`time left: ${DreamDimension.get_time_left(server)} | attempting reset: ${DreamDimension.is_attempting_reset}`
+	// 		`time left: ${DreamDimension.get_time_left(server)} | attempting reset: ${DreamDimension.attempting_reset}`
 	// 	)
 	// })
 	// console.log(`Ticking dream dimension ${event.level.time}`)
@@ -554,6 +573,17 @@ BlockEvents.rightClicked("cobblemonraiddens:raid_crystal_block", event => {
 	}
 })
 
+
+// if (Platform.isLoaded("via_romana")) {
+// 	/** @type {typeof import("net.neoforged.neoforge.event.entity.living.MobEffectEvent$Remove").$MobEffectEvent$Remove } */
+// 	let $MobEffectEvent$Remove  = Java.loadClass("net.neoforged.neoforge.event.entity.living.MobEffectEvent$Remove")
+// 	NativeEvents.onEvent($MobEffectEvent$Remove, event => {
+// 		if (event.getCure().name() == "milk" && event.effect.is("via_romana:travellers_fatigue")) {
+// 			event.setCanceled(true)
+// 		}
+// 	})
+// }
+
 // Debugging.
 // ServerEvents.tick(event => {
 // 	const server = event.server
@@ -567,7 +597,7 @@ BlockEvents.rightClicked("cobblemonraiddens:raid_crystal_block", event => {
 // // 		// })
 // 		p.setStatusMessage(
 // // 			// `Game time: ${server.overworld().time} | tick count: ${server.getTickCount()}`
-// // 			// `time left: ${DreamDimension.get_time_left(server)} | attempting reset: ${DreamDimension.is_attempting_reset}`
+// // 			// `time left: ${DreamDimension.get_time_left(server)} | attempting reset: ${DreamDimension.attempting_reset}`
 // // 			// `Nearby item entities: ${nearby_item_entities.size()}`
 // 			// (server.getAverageTickTimeNanos() / 1000000).toFixed(3)
 // 			// server.getAverageTickTimeNanos()
@@ -583,10 +613,7 @@ BlockEvents.rightClicked("minecraft:crying_obsidian", event => {
 		// DreamDimension.try_preparing(event.server, null)
 		if (event.getItem().id == "minecraft:stick") {
 			if (player.isCrouching()) {
-				player.getInventory().clear(i => {
-					const written_book_content = i.getComponents().get("minecraft:written_book_content")
-					return !!written_book_content && written_book_content.author() == "Micky"
-				})
+				player.getInventory().clear(DreamDimension.is_dream_journal)
 			} else {
 				player.giveInHand(DreamDimension.DREAM_JOURNAL)
 			}
