@@ -441,7 +441,7 @@ const DreamDimension = {
 		if (chunky_size >= 1024) {
 			return
 		}
-		let chunky_size = JavaMath.clamp(chunky_size + 64, 64, 1024)
+		chunky_size = JavaMath.clamp(chunky_size + 64, 64, 1024)
 		data.putInt("chunky_size", chunky_size)
 		this.server.runCommandSilent(`chunky cancel ${this.ID}`)
 		this.server.runCommandSilent(`chunky confirm`)
@@ -522,15 +522,15 @@ LevelEvents.tick(DreamDimension.ID, event => {
 		let formatted_time = DreamDimension.format_time(time_left)
 		level.getPlayers().forEach(p => p.setStatusMessage(formatted_time))
 	}
-	if (time_left <= DreamDimension.TIME_WITHER_BEGINS) {
-		DreamDimension.explode_around_try_starting(level)
-	}
 	if (time_left <= DreamDimension.TIME_WITHER_TRULY_BEGINS) {
 		DreamDimension.wither_players_try_starting(level)
 		if (level.getPlayers().isEmpty()) {
 			DreamDimension.delete()
 			return
 		}
+	}
+	if (time_left <= DreamDimension.TIME_WITHER_BEGINS) {
+		DreamDimension.explode_around_try_starting(level)
 	}
 
 	// server.getPlayers().forEach(p => {
