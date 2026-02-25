@@ -12,6 +12,7 @@ let $PlayerSetSpawnEvent  = Java.loadClass("net.neoforged.neoforge.event.entity.
 
 /**
  * @import {$MinecraftServer} from "net.minecraft.server.MinecraftServer"
+ * @import {$ServerLevel} from "net.minecraft.server.level.ServerLevel"
  */
 
 const DreamDimension = {
@@ -37,9 +38,9 @@ const DreamDimension = {
 			]
 		}
 	}),
-	/** @param {import("net.minecraft.world.item.Item").$Item$$Original} item */
+	/** @param {$ItemStack} item */
 	is_dream_journal(item) {
-		const written_book_content = item.getComponents().get("minecraft:written_book_content")
+		const written_book_content = item.get("minecraft:written_book_content")
 		return Boolean(written_book_content) && written_book_content.author() == "Micky"
 	},
 
@@ -48,14 +49,15 @@ const DreamDimension = {
 	server: /** @type {$MinecraftServer} */ (null),
 
 	/** @param {$Player} player */
-	try_to_enter(player) {
-		const dream_dimension = this.get_or_create()
-		if (!dream_dimension) {
+	let_in(player) {
+		const level = this.get_or_create()
+		if (!level) {
 			player.setStatusMessage(`Cannot get into ${this.ID} for some reason`)
 			return
 		}
-		const spawn_point = dream_dimension.getSharedSpawnPos()
-		const spawn_angle = dream_dimension.getSharedSpawnAngle()
+		const spawn_point = level.getSharedSpawnPos()
+		const spawn_angle = level.getSharedSpawnAngle()
+		// const spawn_height = this.server.worldData.isFlatWorld() ? spawn_point.y : level.getMaxBuildHeight()
 
 		player.level.spawnParticles("minecraft:dust_color_transition{from_color:[1.0, 0.2, 0.5], to_color:[0.2, 0.9, 1.0], scale: 3.0}", false,
 			player.x, player.y, player.z,
@@ -63,7 +65,7 @@ const DreamDimension = {
 		)
 		player.addEffect(MobEffectUtil.of("minecraft:slow_falling", 30 * SEC))
 		player.addEffect(MobEffectUtil.of("minecraft:speed", 30 * SEC, 3))
-		player.teleportTo(this.ID, spawn_point.x, dream_dimension.getMaxBuildHeight(), spawn_point.z, spawn_angle, 0)
+		player.teleportTo(this.ID, spawn_point.x, spawn_point.y, spawn_point.z, spawn_angle, 0)
 		// if (Platform.isLoaded("watervision"))
 		// 	server.runCommandSilent(`playoverlay "${this.A_MIMIR_MP4_URL}" ${player.uuid}`)
 		// else {
@@ -73,13 +75,15 @@ const DreamDimension = {
 		player.removeEffect("brewinandchewin:tipsy")
 
 		// Should not be necessary, but just in case.
-		if (this.get_expiration_time() == $Long.MAX_VALUE) {
+		if (!this.is_expiring()) {
 			this.refresh_expiration_time()
 		}
+
+		// DreamDimension.show_clock_to_players()
 	},
 
 	/** @param {$Player} player */
-	can_enter(player) {
+	can_let_in(player) {
 		return player.level.isOverworld()
 		&& !player.isFakePlayer()
 		&& player.getSleepTimer() >= this.SLEEP_WAIT_TIME
@@ -92,7 +96,7 @@ const DreamDimension = {
 	},
 
 	/** @param {$Player} player */
-	exit(player) {
+	let_out(player) {
 		if (Platform.isLoaded("carryon")) {
 			// I do not want people to be able to carry across.
 			// FIXME: This does not work.
@@ -122,45 +126,48 @@ const DreamDimension = {
 		})
 	},
 
-	get_or_create() {
-		let dream_dimension = this.server.getLevel(this.ID)
-		if (dream_dimension) {
-			return dream_dimension
-		}
-
-		console.log(`Creating new dream dimension`)
-		this.server.runCommand(`resourceworld create ${this.PATH} minecraft:overworld`)
-		dream_dimension = this.server.getLevel(this.ID)
-		if (!dream_dimension) {
-			console.error(`${this.ID} is not ready yet, cannot proceed with setup. This shouldn't happen, and I should wait for it, but I can't be bothered right now.`)
-			return null
-		}
-
-		this.setup(dream_dimension)
-		return dream_dimension
+	get() {
+		return this.server.getLevel(this.ID)
 	},
 
-	delete() {
+	get_or_create() {
+		let level = this.get()
+		if (!level) {
+			console.log(`Creating new dream dimension`)
+			this.server.runCommand(`resourceworld create ${this.PATH} minecraft:overworld`)
+			level = this.get()
+			if (!level) {
+				console.error(`${this.ID} is not ready yet, cannot proceed with setup. This shouldn't happen, and I should wait for it, but I can't be bothered right now.`)
+				return null
+			}
+
+			this.setup(level)
+		}
+
+		return level
+	},
+
+	reset() {
 		if (this.attempting_reset) {
 			return
 		}
 		this.attempting_reset = true
 
-		const dream_dimension = this.server.getLevel(this.ID)
-		if (!dream_dimension) {
+		const level = this.get()
+		if (!level) {
 			console.error(`Cannot delete ${this.ID}, as it doesn't exist!`)
 			return
 		}
 
 		// There should never be any players while this is happening, but just in case.
-		dream_dimension.players.forEach(player => {
-			this.exit(player)
+		level.players.forEach(player => {
+			this.let_out(player)
 		})
 
 		// Bit of a buffer just to be sure.
 		this.server.scheduleInTicks(5 * SEC, () => {
 			console.log(`Deleting ${this.ID}`)
-			this.setup(dream_dimension) // HACK: Nasty way to reset persistent values, as it's not always guaranteed setup is called.
+			this.setup(level) // HACK: Nasty way to reset persistent values, as it's not always guaranteed setup is called.
 			this.server.runCommand(`resourceworld delete ${this.PATH}`)
 			this.server.runCommand(`resourceworld delete ${this.PATH}`) // It's needed for confirmation.
 			if (Platform.isLoaded("chunky")) {
@@ -170,43 +177,59 @@ const DreamDimension = {
 			this.attempting_reset = false
 		})
 		// Let's also already create another dream dimension for later.
-		this.server.scheduleInTicks(15 * SEC, () => {
+		this.server.scheduleInTicks(10 * SEC, () => {
 			this.get_or_create()
 		})
 	},
 
-	/** @param {$Level} level */
 	setup(level) {
 		level.runCommandSilent(`resourceworld enable ${this.PATH}`)
 		level.runCommandSilent(`resourceworld settings ${this.PATH} cooldown set 2`)
 		level.runCommandSilent(`resourceworld settings ${this.PATH} allowHomeCommand set false`)
 		level.runCommandSilent(`gamerule spawnChunkRadius 0`)
 		level.runCommandSilent(`gamerule playersSleepingPercentage 0`)
-		level.getPersistentData().put("expiration_time", $Long.MAX_VALUE)
-		level.getPersistentData().put("chunky_size", 32)
-		if (Platform.isLoaded("enhancedcelestials")) {
-			level.runCommandSilent("enhancedcelestials lunarForecast recompute")
-		}
+		level.getPersistentData().putLong("expiration_time", $Long.MAX_VALUE)
+		level.getPersistentData().putInt("chunky_size", 32)
 	},
 
 	refresh_expiration_time() {
+		const level = this.get()
+		if (!level) {
+			console.error(`Tried to refresh expiration time but there's no dream dimension yet`).
+			return
+		}
 		const new_expiration_time = this.server.getOverworld().time + this.server.getGameRules().getInt(global.GAME_RULES.DREAM_DURATION)
-		const dream_dimension = this.server.getLevel(this.ID)
-		dream_dimension.getPersistentData().put("expiration_time", new_expiration_time)
+		level.getPersistentData().putLong("expiration_time", new_expiration_time)
 		console.log(`Refreshed expiration time of ${this.ID} to ${new_expiration_time}`)
 	},
 
 	get_expiration_time() {
-		const dream_dimension = this.server.getLevel(this.ID)
-		const expiration_time = dream_dimension.getPersistentData().getLong("expiration_time")
-		if (expiration_time == 0) {
-			return $Long.MAX_VALUE
+		const level = this.get()
+		return (level && level.getPersistentData().getLong("expiration_time")) || $Long.MAX_VALUE
+	},
+
+	is_expiring() {
+		return this.get_expiration_time() != $Long.MAX_VALUE
+	},
+
+	// Mostly for testing.
+	/** @param {number} amount */
+	increase_expiration_time(amount) {
+		const level = this.get()
+		if (!level) {
+			console.error(`Tried to change expiration time but there's no dream dimension yet`).
+			return
 		}
-		return expiration_time
+		level.getPersistentData().putLong("expiration_time", level.getPersistentData().getLong("expiration_time") + amount)
 	},
 
 	get_time_left() {
-		return this.get_expiration_time(this.server) - this.server.getOverworld().time
+		return this.get_expiration_time() - this.server.getOverworld().time
+	},
+
+	show_clock_to_players() {
+		const formatted_time = this.format_time(this.get_time_left())
+		this.get().getPlayers().forEach(p => p.setStatusMessage(formatted_time))
 	},
 
 	/** @param {number} time_left */
@@ -223,37 +246,45 @@ const DreamDimension = {
 		const formatted_seconds = seconds.toFixed().padStart(2, "0")
 		const formatted_minutes = minutes.toFixed().padStart(2, "0")
 
-		const formatted_clock = Text.of(`${formatted_minutes}:${formatted_seconds}`)
-		if (time_left < 1 * MIN) {
-			return Text.of(formatted_clock).yellow()
+		if (time_left < 59 * MIN) {
+			return Text.of(`${formatted_minutes}:${formatted_seconds}`)
+		}
+		if (time_left < 24 * 60 * MIN) {
+			const hours = Math.floor(time_left / 60 * MIN) % 24
+			const formatted_hours = hours.toFixed().padStart(2, "0")
+			return Text.of(`${formatted_hours}:${formatted_minutes}:${formatted_seconds}`)
 		}
 
-		return formatted_clock
+		return Text.of(`You feel like this dream will last for quite a while`)
 	},
 
-	/** @param {number} time_left */
-	get_update_frequency(time_left) {
+	get_clock_frequency() {
+		const time_left = this.get_time_left()
 		if (time_left < 0) {
 			return 4 * SEC
 		}
 		if (time_left < 59 * SEC) {
 			return 2
 		}
-		if (time_left > DreamDimension.EXPIRATION_WARNING_OFFSET) {
-			return 2.5 * MIN
+		if (time_left < DreamDimension.EXPIRATION_WARNING_OFFSET) {
+			return SEC
+		}
+		if (time_left < 59 * MIN) {
+			return 1 * MIN
 		}
 
-		return SEC
+		return 5 * MIN
 	},
 
 	TIME_WITHER_BEGINS: 21 * SEC,
 	TIME_WITHER_TRULY_BEGINS: 0 * SEC,
-	/** @param {$Level} level */
-	wither_players_try_starting(level) {
+	wither_players_try_starting() {
 		if (DreamDimension.wither_players_scheduled) {
 			return
 		}
 		console.log(`Trying to wither players out of ${this.ID}`)
+
+		const level = this.get()
 
 		let is_other_beat = false
 		DreamDimension.wither_players_scheduled = this.server.scheduleRepeatingInTicks(36, () => {
@@ -285,7 +316,7 @@ const DreamDimension = {
 				}
 				// let a = player.getBoundingBox().inflate(8, 4, 8)
 				// level.runCommand(`fillbiome ${a.minX} ${a.minY} ${a.minZ} ${a.maxX} ${a.maxY} ${a.maxZ} biomeswevegone:pale_bog`)
-				let biome_to_fill = is_other_beat ? "biomeswevegone:pale_bog" : "minecraft:end_barrens"
+				const biome_to_fill = is_other_beat ? "biomeswevegone:pale_bog" : "minecraft:end_barrens"
 				this.server.runCommandSilent(`execute at ${player.uuid} in ${this.ID} run fillbiome ~-8 ~-4 ~-8 ~8 ~4 ~8 ${biome_to_fill}`)
 			})
 			is_other_beat = !is_other_beat
@@ -296,22 +327,23 @@ const DreamDimension = {
 		this.wither_players_scheduled.clear()
 		delete this.wither_players_scheduled
 	},
-	/** @param {$Level} level */
-	explode_around_try_starting(level) {
+	explode_around_try_starting() {
 		if (DreamDimension.explode_around_scheduled) {
 			return
 		}
 		console.log(`Trying to cause explosions around in ${this.ID}`)
 
+		const level = this.get()
 		const min_height = level.getMinBuildHeight()
 		const max_height = level.getMaxBuildHeight()
 		const range_inner = 16
 		const range_outer = 96
+		let pokemon_spawned = false
+
+		level.tell(Text.gray("It chases people and Pokémon from its territory...").italic())
 
 		// The music should be in beat. Using specific numbers for pitch and frequency here.
-		// level.getMcPlayers().forEach(player => {
-		play_sound_globally(level, Vec3d(0, 1000, 0), "minecraft:music_disc.precipice", "music", level.worldBorder.absoluteMaxSize, 0.9866)
-		// })
+		play_sound_globally(level, new Vec3d(0, 1000, 0), "minecraft:music_disc.precipice", "music", level.worldBorder.absoluteMaxSize, 0.9866)
 		DreamDimension.explode_around_scheduled = this.server.scheduleRepeatingInTicks(18, callback => {
 			if (level.getPlayers().isEmpty() || DreamDimension.explode_around_scheduled != callback) {
 				this.explode_around_stop()
@@ -348,8 +380,7 @@ const DreamDimension = {
 						strength: explosion_strength,
 					})
 
-					let afflicted_aabb = AABB.CUBE.move(block_center.x(), block_center.y(), block_center.z()).inflate(explosion_strength)
-					let nearby_entites = level.getEntitiesWithin(afflicted_aabb)
+					let nearby_entites = level.getEntitiesWithin(AABB.CUBE.move(block_center.x(), block_center.y(), block_center.z()).inflate(explosion_strength))
 					nearby_entites.forEach(e => {
 						if (e.type == "minecraft:item") {
 							e.kill()
@@ -364,19 +395,13 @@ const DreamDimension = {
 					})
 				}
 
-				// level.spawnParticles("create:cube{r:1,g:0.5,b:1,scale:1,avg_age:10,hot:false}", true,
-				// 	block_center.x(), block_center.y(), block_center.z(),
-				// 	0, 0, 0, 4, 1
-				// )
-				// level.spawnParticles(`create:cube{r:1,g:0.75,b:1,scale:1,avg_age:20,hot:false}`, true,
-
 				BlockPos.randomInCube(level.getRandom(), explosion_strength * 2, level_block, explosion_strength).forEach(pos => {
 					let block = level.getBlock(pos)
-					let chosen_block = level.getBlock(block.getBlockState().isAir() ? level.getHeightmapPos("motion_blocking", pos).below() : block)
-					if (chosen_block.getBlockState().getFluidState().isEmpty()) {
-						chosen_block.set("biomesoplenty:anomaly", {type: "stable"})
+					let corrupted_block = level.getBlock(block.getBlockState().isAir() ? level.getHeightmapPos("motion_blocking", pos).below() : block)
+					if (corrupted_block.getBlockState().getFluidState().isEmpty()) {
+						corrupted_block.set("biomesoplenty:anomaly", {type: "stable"})
 					} else {
-						chosen_block.set("biomesoplenty:liquid_null")
+						corrupted_block.set("biomesoplenty:liquid_null")
 					}
 
 					let r = 0.4 + 0.6 * Math.random()
@@ -391,17 +416,22 @@ const DreamDimension = {
 					let z_speed = 4 - 8 * Math.random()
 					const cube_particle = `create:cube{r:${r},g:${g},b:${b},scale:1,avg_age:40,hot:false}`
 					level.spawnParticles(cube_particle, true,
-						chosen_block.getCenterX(), chosen_block.getCenterY(), chosen_block.getCenterZ(),
+						corrupted_block.getCenterX(), corrupted_block.getCenterY(), corrupted_block.getCenterZ(),
 						x_speed, 10, z_speed, 0, 0.02 + 0.05 * Math.random()
 					)
 				})
 
-				// play_sound_globally(level, block_center.add(0, 10, 0), "relics:ability_locked", "blocks", 100, 0.85 + 0.1 * Math.random())
-				// play_sound_globally(level, block_center, "create:schematicannon_finish", "blocks", 96, 2 + 0.5 * Math.random())
 				play_sound_globally(level, block_center, "create:packager", "blocks", 128, 1.75 + 0.25 * Math.random())
 				play_sound_globally(level, block_center, "create:crushing_1", "blocks", 96, 0.65 + 0.1 * Math.random())
 
 				player.addEffect(MobEffectUtil.of("minecraft:slowness", 2, 0, true, false, false))
+
+				if (!pokemon_spawned && time_left <= DreamDimension.TIME_WITHER_TRULY_BEGINS && block_center.distanceTo(player.position()) <= 40) {
+					pokemon_spawned = true
+
+					this.spawn_darkrai(level, block_center.add(0, 2, 0))
+					level.tell(Text.gray("...by causing them to experience deep, nightmarish slumbers.").italic())
+				}
 			})
 		})
 	},
@@ -411,12 +441,57 @@ const DreamDimension = {
 		delete this.explode_around_scheduled
 	},
 
+	/** @param {$ServerLevel} level @param {$Vec3} position  */
+	spawn_darkrai(level, position) {
+		/** @type {typeof import("com.cobblemon.mod.common.entity.pokemon.PokemonEntity").$PokemonEntity } */
+		let $PokemonEntity  = Java.loadClass("com.cobblemon.mod.common.entity.pokemon.PokemonEntity")
+		/** @type {typeof import("com.cobblemon.mod.common.api.pokemon.PokemonSpecies").$PokemonSpecies } */
+		let $PokemonSpecies  = Java.loadClass("com.cobblemon.mod.common.api.pokemon.PokemonSpecies")
+		/** @type {typeof import("com.cobblemon.mod.common.api.moves.Moves").$Moves } */
+		let $Moves  = Java.loadClass("com.cobblemon.mod.common.api.moves.Moves")
+		/** @type {typeof import("com.cobblemon.mod.common.api.pokemon.stats.Stats").$Stats } */
+		let $Stats  = Java.loadClass("com.cobblemon.mod.common.api.pokemon.stats.Stats")
+
+		level.spawnEntity("cobblemon:pokemon", entity => {
+			const pokemon_entity = /** @type {$PokemonEntity} */ (entity)
+			const pokemon = pokemon_entity.pokemon
+			pokemon.species = $PokemonSpecies.getByName("darkrai")
+			pokemon.level = 75
+			pokemon.scaleModifier = 2.0
+			pokemon.setEV($Stats.HP, 4)
+			pokemon.setEV($Stats.SPECIAL_ATTACK, 252)
+			pokemon.setEV($Stats.SPEED, 252)
+			const moveset = pokemon.getMoveSet()
+			moveset.setMove(0, $Moves.getByName("hypnosis").create())
+			moveset.setMove(1, $Moves.getByName("nightmare").create())
+			moveset.setMove(2, $Moves.getByName("nastyplot").create())
+			moveset.setMove(3, $Moves.getByName("thunder").create())
+
+			pokemon_entity.cry()
+			pokemon_entity.addEffect(MobEffectUtil.of("minecraft:glowing", 2 * MIN))
+			pokemon_entity.setPos(position)
+			pokemon_entity.setInvulnerable(true)
+			level.server.scheduleRepeatingInTicks(1, callback => {
+				if (pokemon_entity.getAttributeBaseValue("minecraft:generic.scale") >= 5) {
+					callback.clear()
+					return
+				}
+				pokemon_entity.setAttributeBaseValue("minecraft:generic.scale", Math.min(pokemon_entity.getAttributeBaseValue("minecraft:generic.scale") + 0.05, 5))
+			})
+		})
+		console.log("Spawning Pokemon in Dream Dimension")
+		// this.server.runCommand(`execute in ${this.ID} run spawnpokemonat ${block_center.x()} ${block_center.y()} ${block_center.z()} darkrai hp_ev=4 special_attack_ev=252 speed_ev=252 moves=hypnosis,nightmare,nastyplot,thunder level=75 scale_modifier=5.0`)
+		// Its cry doesn't exist anyway, don't bother.
+		play_sound_globally(level, position, "cobblemon:impact.ghost", "hostile", 10000, 0.5)
+		play_sound_globally(level, position, "cobblemon:impact.dark", "hostile", 10000, 0.5)
+	},
+
 	// The callback may be useful later.
 	/**  @param {$ScheduledEvents$ScheduledEvent?} _callback */
 	try_preparing(_callback) {
 		// console.log(`Checking if it's reasonable to prepare ${this.ID}`)
-		const dream_dimension = this.get_or_create()
-		if (!dream_dimension) {
+		const level = this.get_or_create()
+		if (!level) {
 			return
 		}
 		if (this.get_time_left() <= 5 * MIN || this.attempting_reset) {
@@ -434,8 +509,12 @@ const DreamDimension = {
 		if (!Platform.isLoaded("chunky")) {
 			return
 		}
-		const dream_dimension = this.get_or_create()
-		let data = dream_dimension.getPersistentData()
+
+		const level = this.get_or_create()
+		if (!level) {
+			return
+		}
+		let data = level.getPersistentData()
 
 		let chunky_size = data.getInt("chunky_size")
 		if (chunky_size >= 1024) {
@@ -448,16 +527,16 @@ const DreamDimension = {
 		this.server.runCommandSilent(`chunky start ${this.ID} square 0 0 ${chunky_size} ${chunky_size}`)
 		this.server.runCommandSilent(`chunky confirm`)
 		console.log(`Preparing ${chunky_size}x${chunky_size} area in ${this.ID}`)
-	}
+	},
 }
 
 NativeEvents.onEvent($CanContinueSleepingEvent, event => {
 	const entity = event.getEntity()
-	if (!entity.isPlayer() || !event.mayContinueSleeping() || !DreamDimension.can_enter(entity)) {
+	if (!entity.isPlayer() || !event.mayContinueSleeping() || !DreamDimension.can_let_in(entity)) {
 		return
 	}
 
-	DreamDimension.try_to_enter(entity)
+	DreamDimension.let_in(entity)
 })
 
 NativeEvents.onEvent($PlayerSetSpawnEvent, event => {
@@ -469,7 +548,7 @@ NativeEvents.onEvent($PlayerSetSpawnEvent, event => {
 	entity.server.scheduleInTicks(1, () => {
 		// For some reason, the scheduling is required here. Otherwise,
 		// the dimension changes correctly, but the player's coordinates remain the same.
-		DreamDimension.exit(entity)
+		DreamDimension.let_out(entity)
 	})
 })
 
@@ -498,39 +577,39 @@ EntityEvents.death("minecraft:player", event => {
 		player.addEffect(incurable(MobEffectUtil.of("xaeroworldmap:no_world_map_harmful", 30 * SEC)))
 	}
 	player.level.tell(Text.of(["In a bad dream, ", event.getSource().getLocalizedDeathMessage(player)]).gray())
-	DreamDimension.exit(player)
+	DreamDimension.let_out(player)
 	event.cancel()
 })
 
 PlayerEvents.cloned(event => {
 	if (event.level.dimension == DreamDimension.ID) {
-		if (DreamDimension.get_expiration_time() == $Long.MAX_VALUE) {
+		if (!DreamDimension.is_expiring()) {
 			DreamDimension.refresh_expiration_time()
 		}
 	} else {
-		// FIXME: Doesn't seem to do anything when moving out from the Dream Dimension.
+		// FIXME: The whole event isn't called when moving out from the Dream Dimension.
 		event.player.getInventory().clear(DreamDimension.is_dream_journal)
 	}
 })
 
 LevelEvents.tick(DreamDimension.ID, event => {
 	DreamDimension.server = event.server
-	const server = event.server
-	const level = event.level
 	const time_left = DreamDimension.get_time_left()
-	if (time_left % DreamDimension.get_update_frequency(time_left) == 0) {
-		let formatted_time = DreamDimension.format_time(time_left)
-		level.getPlayers().forEach(p => p.setStatusMessage(formatted_time))
+	if (time_left % DreamDimension.get_clock_frequency(time_left) == 0) {
+		DreamDimension.show_clock_to_players()
+	}
+	if (DreamDimension.attempting_reset) {
+		return
 	}
 	if (time_left <= DreamDimension.TIME_WITHER_TRULY_BEGINS) {
-		DreamDimension.wither_players_try_starting(level)
-		if (level.getPlayers().isEmpty()) {
-			DreamDimension.delete()
+		DreamDimension.wither_players_try_starting()
+		if (event.level.getPlayers().isEmpty()) {
+			DreamDimension.reset()
 			return
 		}
 	}
 	if (time_left <= DreamDimension.TIME_WITHER_BEGINS) {
-		DreamDimension.explode_around_try_starting(level)
+		DreamDimension.explode_around_try_starting()
 	}
 
 	// server.getPlayers().forEach(p => {
@@ -543,6 +622,11 @@ LevelEvents.tick(DreamDimension.ID, event => {
 ServerEvents.loaded(event => {
 	DreamDimension.server = event.server
 	event.server.scheduleRepeatingInTicks(10 * MIN, callback => DreamDimension.try_preparing(event.server, callback))
+})
+
+ServerEvents.tick(event => {
+	DreamDimension.server = event.server // This really exists just to be safe while debugging and reloading scripts.
+	// event.server.getPlayers().forEach(p => p.setStatusMessage(`${DreamDimension.is_expiring()} ${DreamDimension.get_expiration_time()}`))
 })
 
 ServerEvents.registry("damage_type", event => {
@@ -562,7 +646,7 @@ ServerEvents.tags("damage_type", event => {
 
 BlockEvents.rightClicked("cobblemonraiddens:raid_crystal_block", event => {
 	if (event.level.dimension == DreamDimension.ID) {
-		DreamDimension.exit(event.player)
+		DreamDimension.let_out(event.player)
 		event.cancel()
 	}
 })
@@ -606,12 +690,25 @@ BlockEvents.rightClicked("minecraft:crying_obsidian", event => {
 	const player = /** @type {$ServerPlayer} */ (event.player)
 	if (player.isOp() && !player.swinging) {
 		// DreamDimension.try_preparing(event.server, null)
-		if (event.getItem().id == "minecraft:stick") {
+		const item = event.item
+		if (item.id == "minecraft:stick") {
 			if (player.isCrouching()) {
 				player.getInventory().clear(DreamDimension.is_dream_journal)
 			} else {
 				player.giveInHand(DreamDimension.DREAM_JOURNAL)
 			}
+			player.swing(event.getHand(), true)
+		} else if (item.id == "minecraft:blaze_powder") {
+			if (!DreamDimension.is_expiring()) {
+				return
+			}
+
+			if (player.isCrouching()) {
+				DreamDimension.increase_expiration_time(-1 * MIN)
+			} else {
+				DreamDimension.increase_expiration_time(1 * MIN)
+			}
+			player.setStatusMessage(DreamDimension.format_time(DreamDimension.get_time_left()))
 			player.swing(event.getHand(), true)
 		}
 		// console.log(`DreamDimension.server is ${DreamDimension.server} | Global server reference is ${global.server}`)

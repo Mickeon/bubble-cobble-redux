@@ -262,7 +262,7 @@ PlayerEvents.chestOpened("minecraft:generic_9x3", event => {
 
 
 // Do not ever spawn Slimes or Bats naturally in Flat World.
-const NO_FLAT_WORLD_MOBS = ["minecraft:slime", "minecraft:bat"]
+const NO_FLAT_WORLD_MOBS = ["minecraft:slime", "minecraft:bat", "cnc:giant_boar", "cnc:white_tailed_deer"]
 NO_FLAT_WORLD_MOBS.forEach(entity_type => {
 	EntityEvents.checkSpawn(entity_type, event => {
 		if (event.server.worldData.isFlatWorld() && event.type != "SPAWN_EGG") {
@@ -307,7 +307,7 @@ const NO_SKY_LIGHT_MOBS = [
 ]
 NO_SKY_LIGHT_MOBS.forEach(entity_type => {
 	EntityEvents.checkSpawn(entity_type, event => {
-		if (event.block.getSkyLight() >= 1 && event.type == "NATURAL") {
+		if (event.level.isOverworld() && event.block.getSkyLight() >= 1 && event.type == "NATURAL") {
 			if (event.block.getSkyLight() <= 7 && is_lunar_event_happening(event.level)) {
 				// console.log("Ignoring most sky light spawn rules, there's a Lunar Event happening")
 				return
