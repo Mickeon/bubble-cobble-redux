@@ -632,10 +632,6 @@
 #Vanilla tweaks
 [tweaks]
 
-	[tweaks.shulker_helmet]
-		#Allows wearing shulker shells
-		enabled = true
-
 	[tweaks.golden_apple_disenchant]
 		enabled = true
 
@@ -693,14 +689,6 @@
 		#Shows a death marker on your map when you die. Requires a recovery compass in player inventory or similar
 		#Allowed Values: OFF, WITH_COMPASS, ALWAYS
 		death_marker = "WITH_COMPASS"
-		#If Quark is installed adventurer maps will be replaced by adventurer quills. These will not lag the server when generating
-		quill_adventurer_maps = true
-		#If Quark is installed replaces buried treasure and mansion maps with their equivalent quill form. This removes the lag spike they create when generating
-		quill_vanilla_maps = true
-		#Miminum search radius for quill. Used to incrase the radius of vanilla searches. For reference buried treasures are at 50 and locate is at 100 chunks
-		# Default: 75
-		# Range: 10 ~ 600
-		min_search_radius = 75
 		#Makes blocks tagged as 'tinted_on_map' use their tint color. This allows for accurate biome colors for water and grass as well as other custom block that use any tint
 		tinted_blocks_on_maps = true
 
