@@ -1790,8 +1790,8 @@
             ]
         },
         {
-            "pakku_id": "ccQyEFEh00gEyhxk",
-            "type": "DATA_PACK",
+            "pakku_id": "8ERsKc46RxEjRIpy",
+            "type": "MOD",
             "side": "SERVER",
             "slug": {
                 "modrinth": "cobblemonraiddens-typedesigns"
@@ -1805,7 +1805,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "CobblemonRaidDenDesigns-0.3_RELEASE.zip",
+                    "file_name": "CobblemonRaidDenDesigns-0.4.1_PATCHRELEASE.zip",
                     "mc_versions": [
                         "1.21",
                         "1.21.1"
@@ -1814,16 +1814,16 @@
                         "datapack"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/ulsDecfN/versions/i3CzJDnS/CobblemonRaidDenDesigns-0.3_RELEASE.zip",
-                    "id": "i3CzJDnS",
+                    "url": "https://cdn.modrinth.com/data/ulsDecfN/versions/X8t9NrVS/CobblemonRaidDenDesigns-0.4.1_PATCHRELEASE.zip",
+                    "id": "X8t9NrVS",
                     "parent_id": "ulsDecfN",
                     "hashes": {
-                        "sha512": "7cb9a49f3ad09bf1e6e3c378f6c4e7c9d00a822346e1973f7aebdcfb5cf704e8b766e8449355d9087ab6feee5392c47f34bbb55515471e6393e0a9da056b2c57",
-                        "sha1": "fff895aabbd7eb76c355ae792bec56c8e59b0014"
+                        "sha512": "0c8266303b30a0c47bd39c6bb3fb61cd2863950f88ca6d6f0ca73d93239e925c45596343b286e933ca56970f256b120eb6e35574a16f59ac95a2ab6368a7341b",
+                        "sha1": "c0c1010c5852f72a83abe13ce9dec580f33b288e"
                     },
                     "required_dependencies": [],
-                    "size": 1508459,
-                    "date_published": "2026-01-25T03:57:07.978561Z"
+                    "size": 1667935,
+                    "date_published": "2026-02-16T01:34:49.346843Z"
                 }
             ]
         },
@@ -1870,8 +1870,8 @@
             ]
         },
         {
-            "pakku_id": "ocEyTc7kNV1MK4hc",
-            "type": "DATA_PACK",
+            "pakku_id": "iLaIzRQ8FymnqiK7",
+            "type": "MOD",
             "side": "SERVER",
             "slug": {
                 "modrinth": "cobble-caf-forms"
@@ -1887,22 +1887,46 @@
                     "type": "modrinth",
                     "file_name": "CobbleCafe [1.7].zip",
                     "mc_versions": [
+                        "24w12a",
+                        "24w13a",
+                        "24w14a",
+                        "1.20.5-pre1",
+                        "1.20.5-pre2",
+                        "1.20.5-pre3",
+                        "1.20.5-pre4",
+                        "1.20.5-rc1",
+                        "1.20.5-rc2",
+                        "1.20.5-rc3",
+                        "1.20.5",
+                        "1.20.6",
+                        "24w18a",
+                        "24w19a",
+                        "24w19b",
+                        "24w20a",
+                        "24w21a",
+                        "24w21b",
+                        "1.21-pre1",
+                        "1.21-pre2",
+                        "1.21-pre3",
+                        "1.21-pre4",
+                        "1.21-rc1",
+                        "1.21",
                         "1.21.1"
                     ],
                     "loaders": [
                         "datapack"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/469QXqgC/versions/JFs7irbp/CobbleCafe [1.7].zip",
-                    "id": "JFs7irbp",
+                    "url": "https://cdn.modrinth.com/data/469QXqgC/versions/SM2gUSAQ/CobbleCafe [1.7].zip",
+                    "id": "SM2gUSAQ",
                     "parent_id": "469QXqgC",
                     "hashes": {
-                        "sha512": "b907590861d4eb7408d8d3b89fac02ad11e117d88705ab2ce3a2f38f8872dd2e09347ca1790e8927ffd76604d3f528b42452ed3b713f91e2a0aa09823394bcf0",
-                        "sha1": "fa8a3c6edab8ccb6889b7043eda1c7e6c144aa48"
+                        "sha512": "c4195cc8e6fbb786838319934f0beaed451069ee194863a80c2fc29fed8487e532573db2c2a3ca0b3e9fda1a842f5167f7a2a4625fed45ca9352189719197a79",
+                        "sha1": "cc2b95212e57abfddfcdb94bc9adf2b470fc6325"
                     },
                     "required_dependencies": [],
-                    "size": 1013127,
-                    "date_published": "2025-12-28T17:40:21.938026Z"
+                    "size": 1202010,
+                    "date_published": "2026-02-27T06:22:34.076944Z"
                 }
             ]
         },
@@ -2123,10 +2147,7 @@
             ]
         },
         {
-            "pakku_id": "mU7FDr585r79xhht",
-            "pakku_links": [
-                "V7GFstZuW7oFfpJt"
-            ],
+            "pakku_id": "Y00ofBDXbMeopU9R",
             "type": "MOD",
             "side": "CLIENT",
             "slug": {
@@ -2141,7 +2162,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "colorwheel-neoforge-1.2.0+mc1.21.1.jar",
+                    "file_name": "colorwheel-neoforge-1.2.1+mc1.21.1.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -2149,18 +2170,18 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/BzHgFoGz/versions/ddDj2cfQ/colorwheel-neoforge-1.2.0+mc1.21.1.jar",
-                    "id": "ddDj2cfQ",
+                    "url": "https://cdn.modrinth.com/data/BzHgFoGz/versions/S1XGSWwF/colorwheel-neoforge-1.2.1+mc1.21.1.jar",
+                    "id": "S1XGSWwF",
                     "parent_id": "BzHgFoGz",
                     "hashes": {
-                        "sha512": "51343c53faeab0248c58cbd7a1547f26f8d83f50e7ce93a656ed60e21de960ab31ff6ec7589377b01f645edd97fba47591dc448ab5f75a65a588ff9e28621e2c",
-                        "sha1": "e7c43a0418ddd3f9b422696a3435c250f88ac318"
+                        "sha512": "880158000059cfc686635945c84457807169ba1e25dde0afe8a11e63ee4f1a25a376b53af912efbe8b241e05569ecacc7f0fd5a442f673241f75ad89707499f0",
+                        "sha1": "395962772bd24b0b7e07c2d39dbf498599a8b901"
                     },
                     "required_dependencies": [
                         "YL57xq9U"
                     ],
-                    "size": 372673,
-                    "date_published": "2026-01-03T13:15:57.229930Z"
+                    "size": 372917,
+                    "date_published": "2026-01-19T20:11:38.415326Z"
                 }
             ]
         },
@@ -3255,7 +3276,7 @@
             ]
         },
         {
-            "pakku_id": "ibDWVjSSLQvHP4LQ",
+            "pakku_id": "CiLn2M14WKvHXVXA",
             "type": "MOD",
             "side": "BOTH",
             "slug": {
@@ -3270,7 +3291,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "CreativeCore_NEOFORGE_v2.13.31_mc1.21.1.jar",
+                    "file_name": "CreativeCore_NEOFORGE_v2.13.34_mc1.21.1.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -3278,16 +3299,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/OsZiaDHq/versions/1vGOcdnx/CreativeCore_NEOFORGE_v2.13.31_mc1.21.1.jar",
-                    "id": "1vGOcdnx",
+                    "url": "https://cdn.modrinth.com/data/OsZiaDHq/versions/fEMKr02l/CreativeCore_NEOFORGE_v2.13.34_mc1.21.1.jar",
+                    "id": "fEMKr02l",
                     "parent_id": "OsZiaDHq",
                     "hashes": {
-                        "sha512": "44e20caa10e519f87ce60d960290a2801c1845b2e5b923ced846c7b02ac49834a7ba0fa799ed87c009f3693ee3938dfcce74c8c839ec8f5278066cf9ddac803f",
-                        "sha1": "8a62f35b3eece60e58a600fbec9a928b2784fc7f"
+                        "sha512": "9ae623dda0e0aacc4fb6beef78794e7312da1675fff464b8ea77fb84e4ed39f272c0a18150f7b4243cd80752214254d9b6c130b45c419a1e8a50621939f86a08",
+                        "sha1": "60d7a74976b99dab4639c0c511fb4d132c812b2e"
                     },
                     "required_dependencies": [],
-                    "size": 1203996,
-                    "date_published": "2026-02-19T17:27:11.183275Z"
+                    "size": 1210882,
+                    "date_published": "2026-02-27T16:23:41.746278Z"
                 }
             ]
         },
@@ -3785,7 +3806,7 @@
             ]
         },
         {
-            "pakku_id": "QQZocPS7vE23pCqt",
+            "pakku_id": "g9ZumLTDtBPY05Ys",
             "type": "RESOURCE_PACK",
             "side": "CLIENT",
             "slug": {
@@ -3808,7 +3829,7 @@
                     "loaders": [
                         "minecraft"
                     ],
-                    "release_type": "release",
+                    "release_type": "beta",
                     "url": "https://cdn.modrinth.com/data/Va3BanZa/versions/HbtFieA6/E19 Cobblemon Minimap Icons.zip",
                     "id": "HbtFieA6",
                     "parent_id": "Va3BanZa",
@@ -5060,7 +5081,7 @@
             ]
         },
         {
-            "pakku_id": "h2NCAlwI7OBVLmcq",
+            "pakku_id": "T183Y3ulqPoo3zRr",
             "type": "MOD",
             "side": "SERVER",
             "slug": {
@@ -5075,7 +5096,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "immersive_optimization-neoforge-1.21-0.1.0.jar",
+                    "file_name": "immersive_optimization-neoforge-1.21-0.1.1.jar",
                     "mc_versions": [
                         "1.21",
                         "1.21.1"
@@ -5084,16 +5105,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/vNZgQmjg/versions/1xYKtazd/immersive_optimization-neoforge-1.21-0.1.0.jar",
-                    "id": "1xYKtazd",
+                    "url": "https://cdn.modrinth.com/data/vNZgQmjg/versions/KFazbdWI/immersive_optimization-neoforge-1.21-0.1.1.jar",
+                    "id": "KFazbdWI",
                     "parent_id": "vNZgQmjg",
                     "hashes": {
-                        "sha512": "78b515e91e62694185ed0e6ed35e11d8b4ab724e354dd12ae4984fdeac221948215a33aafe56b8d981e244d32e900f6876399f7eff3a74c0a50176d1860d3b5b",
-                        "sha1": "610f59a189ac0fa4646f26fd6d795980649f2732"
+                        "sha512": "1b001922068fa6943719380d83e872e48a48b9ee5a24a19b84916f1fc304a94c6c9f02d75774835f1115dab7eae31ea94bcb12ed12616d6b07e7ca4bf7b9df19",
+                        "sha1": "c727915cc6c6a4caf5a44f1308b7b795dfd37a9b"
                     },
                     "required_dependencies": [],
-                    "size": 50597,
-                    "date_published": "2025-09-06T17:35:07.798528Z"
+                    "size": 50671,
+                    "date_published": "2026-02-05T16:58:15.329944Z"
                 }
             ]
         },
@@ -5872,7 +5893,7 @@
             ]
         },
         {
-            "pakku_id": "V8azzUUrl4vzNFgK",
+            "pakku_id": "AGjoUBDNVRRJox83",
             "type": "MOD",
             "side": "BOTH",
             "slug": {
@@ -5887,24 +5908,25 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "lithium-neoforge-0.15.1+mc1.21.1.jar",
+                    "file_name": "lithium-neoforge-0.15.2+mc1.21.1.jar",
                     "mc_versions": [
+                        "1.21",
                         "1.21.1"
                     ],
                     "loaders": [
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/gvQqBUqZ/versions/G5SDYehn/lithium-neoforge-0.15.1+mc1.21.1.jar",
-                    "id": "G5SDYehn",
+                    "url": "https://cdn.modrinth.com/data/gvQqBUqZ/versions/OLpCvF3o/lithium-neoforge-0.15.2+mc1.21.1.jar",
+                    "id": "OLpCvF3o",
                     "parent_id": "gvQqBUqZ",
                     "hashes": {
-                        "sha512": "1975e74294798fe173d944d3e0b174b39dc8b7fa177340acb71c8a85772932b82c9406099c854d45fa4f71b80dbbb73602fd7cc36d1374dfc8402e4a30ccfe3b",
-                        "sha1": "38295e15a600899697a5dbd29b1e9c15060e5760"
+                        "sha512": "86ed9b0d2d267f6dab87e49e0757341fccc8c3efe3b734a496d2b72eee06e903c0f4a6852ec14e30b69bf65885975d2d838f1add73d222c60a22c93f25a0cfb0",
+                        "sha1": "54457ba68b0066a5b6034655f8d31a29a3e5e6b1"
                     },
                     "required_dependencies": [],
-                    "size": 749987,
-                    "date_published": "2025-11-21T17:10:36.386905Z"
+                    "size": 773944,
+                    "date_published": "2026-02-05T21:34:09.734768Z"
                 }
             ]
         },
@@ -9406,10 +9428,7 @@
             ]
         },
         {
-            "pakku_id": "2Kzt1Nn8UtHfZSaf",
-            "pakku_links": [
-                "HJlkk4KXBx6FYyJR"
-            ],
+            "pakku_id": "YvNTomlex475TMxj",
             "type": "MOD",
             "side": "BOTH",
             "slug": {
@@ -9424,7 +9443,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "sophisticatedstorage-1.21.1-1.5.27.1487.jar",
+                    "file_name": "sophisticatedstorage-1.21.1-1.5.28.1494.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -9432,18 +9451,18 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/hMlaZH8f/versions/tvafXIOY/sophisticatedstorage-1.21.1-1.5.27.1487.jar",
-                    "id": "tvafXIOY",
+                    "url": "https://cdn.modrinth.com/data/hMlaZH8f/versions/BLT4pvsT/sophisticatedstorage-1.21.1-1.5.28.1494.jar",
+                    "id": "BLT4pvsT",
                     "parent_id": "hMlaZH8f",
                     "hashes": {
-                        "sha512": "48f65d9ec3858584a598f5315e7f83a544fc0a078c8140c7a0cf25d287be2a352149cdc85c21d5e38810eee234e8eb10105d1316237a4d53073cdf2eef0f8fe4",
-                        "sha1": "fd4a82f1f70a45dadfe621dc60e713cd882ace9b"
+                        "sha512": "04b7d13b149d1428dd5f369ce2c0fb48ed0bcf23ac42b89422130caca86ade425059bc7fc6b8ef655517b469af35a3a03ae8da1eafbc05e60f63c0a71882757e",
+                        "sha1": "a5eb8e4a41daa54e231ffd3d637d26ad99f73fa0"
                     },
                     "required_dependencies": [
                         "nmoqTijg"
                     ],
-                    "size": 1657329,
-                    "date_published": "2026-02-10T07:26:47.268420Z"
+                    "size": 1657236,
+                    "date_published": "2026-02-18T18:56:01.607654Z"
                 }
             ]
         },
@@ -9689,10 +9708,7 @@
             ]
         },
         {
-            "pakku_id": "84wAxl5MFmBSX1D5",
-            "pakku_links": [
-                "ibDWVjSSLQvHP4LQ"
-            ],
+            "pakku_id": "U35ZwAVmYTnsLR0c",
             "type": "MOD",
             "side": "BOTH",
             "slug": {
@@ -9707,7 +9723,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "Spice of Life Onion_NEOFORGE_v1.5.4_mc1.21.1.jar",
+                    "file_name": "Spice of Life Onion_NEOFORGE_v1.5.6_mc1.21.1.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -9715,18 +9731,18 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/eHGYGKJz/versions/RfDQ8ILM/Spice of Life Onion_NEOFORGE_v1.5.4_mc1.21.1.jar",
-                    "id": "RfDQ8ILM",
+                    "url": "https://cdn.modrinth.com/data/eHGYGKJz/versions/4YRKCovn/Spice of Life Onion_NEOFORGE_v1.5.6_mc1.21.1.jar",
+                    "id": "4YRKCovn",
                     "parent_id": "eHGYGKJz",
                     "hashes": {
-                        "sha512": "5a32b1ab1a210c1e13ce28c400bf134cdf66c70f2b7a6697f4d5e214780d464dffb170c519d2b21a950f6520996bb28fff28a175505d9a389b7ca6f02db8028c",
-                        "sha1": "6d440296ae7b09a2147244423c19a92c22704f9f"
+                        "sha512": "15a08552a68e75e692a13e7ac82586f877991eb1fad2f40b06e1304c5f5d7aa67fa00f704448a80a4113ecba79b262bda131f3c2043851228befeaa0025f8c2f",
+                        "sha1": "93f9d02022ef2804cc24c23fe27fa392c467e99c"
                     },
                     "required_dependencies": [
                         "OsZiaDHq"
                     ],
-                    "size": 290295,
-                    "date_published": "2026-01-30T12:16:45.383755Z"
+                    "size": 292176,
+                    "date_published": "2026-02-25T07:40:41.140651Z"
                 }
             ]
         },
