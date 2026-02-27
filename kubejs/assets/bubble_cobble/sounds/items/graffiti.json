@@ -4,6 +4,6 @@
     "immersive_paintings:glow_graffiti"
   ],
   "pitch": 1.25,
-  "soundEvent": "cobblemon:item.medicine.spray.use",
+  "soundEvent": "bubble_cobble:spray_can",
   "volume": 0.25
 }

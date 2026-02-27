@@ -1,0 +1,887 @@
+{
+	"entity.wolverine.hurt": {
+		"replace": true,
+		"subtitle": "subtitles.entity.wolverine.hurt",
+		"sounds": [
+			{
+				"name": "cnc:wolverine_hurt",
+				"stream": false,
+				"volume": 0.2
+			}
+		]
+	},
+	"entity.coyote.idle": {
+		"replace": true,
+		"subtitle": "subtitles.entity.coyote.idle",
+		"sounds": [
+			{
+				"name": "cnc:coyote_idle1",
+				"stream": false,
+				"volume": 0.2
+			},
+			{
+				"name": "cnc:coyote_idle2",
+				"stream": false,
+				"volume": 0.2
+			},
+			{
+				"name": "cnc:coyote_idle3",
+				"stream": false,
+				"volume": 0.2
+			}
+		]
+	},
+	"entity.wolverine.idle": {
+		"replace": true,
+		"subtitle": "subtitles.entity.wolverine.idle",
+		"sounds": [
+			{
+				"name": "cnc:wolverine_idle1",
+				"stream": false,
+				"volume": 0.2
+			},
+			{
+				"name": "cnc:wolverine_idle2",
+				"stream": false,
+				"volume": 0.2
+			}
+		]
+	},
+	"entity.skinwalker.hurt": {
+		"replace": true,
+		"subtitle": "subtitles.entity.skinwalker.hurt",
+		"sounds": [
+			{
+				"name": "cnc:skinwalker_hurt",
+				"stream": false,
+				"volume": 0.2
+			}
+		]
+	},
+	"entity.giant_boar.hurt": {
+		"replace": true,
+		"subtitle": "subtitles.entity.giant_boar.hurt",
+		"sounds": [
+			{
+				"name": "cnc:giant_boar_hurt",
+				"stream": false,
+				"volume": 0.2
+			}
+		]
+	},
+	"entity.cougar.idle": {
+		"replace": true,
+		"subtitle": "subtitles.entity.cougar.idle",
+		"sounds": [
+			{
+				"name": "cnc:cougar_idle1",
+				"stream": false,
+				"volume": 0.2
+			},
+			{
+				"name": "cnc:cougar_idle2.",
+				"stream": false,
+				"volume": 0.2
+			},
+			{
+				"name": "cnc:cougar_idle3",
+				"stream": false,
+				"volume": 0.2
+			},
+			{
+				"name": "cnc:cougar_idle4",
+				"stream": false,
+				"volume": 0.2
+			}
+		]
+	},
+	"entity.elk.idle": {
+		"replace": true,
+		"subtitle": "subtitles.entity.elk.idle",
+		"sounds": [
+			{
+				"name": "cnc:elk_idle1",
+				"stream": false,
+				"volume": 0.2
+			},
+			{
+				"name": "cnc:elk_idle2",
+				"stream": false,
+				"volume": 0.2
+			}
+		]
+	},
+	"entity.player.whistle": {
+		"replace": true,
+		"subtitle": "subtitles.entity.player.whistle",
+		"sounds": [
+			{
+				"name": "cnc:whistle1",
+				"stream": false,
+				"volume": 0.2
+			},
+			{
+				"name": "cnc:whistle2",
+				"stream": false,
+				"volume": 0.2
+			},
+			{
+				"name": "cnc:whistle3",
+				"stream": false,
+				"volume": 0.2
+			},
+			{
+				"name": "cnc:whistle4",
+				"stream": false,
+				"volume": 0.2
+			},
+			{
+				"name": "cnc:whistle5",
+				"stream": false,
+				"volume": 0.2
+			},
+			{
+				"name": "cnc:whistle6",
+				"stream": false,
+				"volume": 0.2
+			},
+			{
+				"name": "cnc:whistle7",
+				"stream": false,
+				"volume": 0.2
+			}
+		]
+	},
+	"entity.giant_boar.death": {
+		"replace": true,
+		"subtitle": "subtitles.entity.giant_boar.death",
+		"sounds": [
+			{
+				"name": "cnc:giant_boar_death",
+				"stream": false,
+				"volume": 0.2
+			}
+		]
+	},
+	"entity.skinwalker.idle": {
+		"replace": true,
+		"subtitle": "subtitles.entity.skinwalker.idle",
+		"sounds": [
+			{
+				"name": "cnc:skinwalker_idle1",
+				"stream": false,
+				"volume": 0.2
+			},
+			{
+				"name": "cnc:skinwalker_idle2",
+				"stream": false,
+				"volume": 0.2
+			}
+		]
+	},
+	"entity.cougar.purr": {
+		"replace": true,
+		"subtitle": "subtitles.entity.cougar.purr",
+		"sounds": [
+			{
+				"name": "cnc:cougar_purr",
+				"stream": false,
+				"volume": 0.2
+			}
+		]
+	},
+	"entity.beaver.death": {
+		"replace": true,
+		"subtitle": "subtitles.entity.beaver.death",
+		"sounds": [
+			{
+				"name": "cnc:beaver_death",
+				"stream": false,
+				"volume": 0.2
+			}
+		]
+	},
+	"entity.beaver.hurt": {
+		"replace": true,
+		"subtitle": "subtitles.entity.beaver.hurt",
+		"sounds": [
+			{
+				"name": "cnc:beaver_hurt",
+				"stream": false,
+				"volume": 0.2
+			}
+		]
+	},
+	"entity.beaver.idle": {
+		"replace": true,
+		"subtitle": "subtitles.entity.beaver.idle",
+		"sounds": [
+			{
+				"name": "cnc:beaver_idle1",
+				"stream": false,
+				"volume": 0.2
+			},
+			{
+				"name": "cnc:beaver_idle2",
+				"stream": false,
+				"volume": 0.2
+			},
+			{
+				"name": "cnc:beaver_idle3",
+				"stream": false,
+				"volume": 0.2
+			}
+		]
+	},
+	"entity.player.cry": {
+		"replace": true,
+		"subtitle": "subtitles.entity.player.cry",
+		"sounds": [
+			{
+				"name": "cnc:cry1",
+				"stream": false,
+				"volume": 0.2
+			},
+			{
+				"name": "cnc:cry2",
+				"stream": false,
+				"volume": 0.2
+			},
+			{
+				"name": "cnc:cry3",
+				"stream": false,
+				"volume": 0.2
+			},
+			{
+				"name": "cnc:cry4",
+				"stream": false,
+				"volume": 0.2
+			}
+		]
+	},
+	"entity.goose.hurt": {
+		"replace": true,
+		"subtitle": "subtitles.entity.goose.hurt",
+		"sounds": [
+			{
+				"name": "cnc:goose_hurt",
+				"stream": false,
+				"volume": 0.2
+			}
+		]
+	},
+	"entity.goose.idle": {
+		"replace": true,
+		"subtitle": "subtitles.entity.goose.idle",
+		"sounds": [
+			{
+				"name": "cnc:goose_idle1",
+				"stream": false,
+				"volume": 0.2
+			},
+			{
+				"name": "cnc:goose_idle2",
+				"stream": false,
+				"volume": 0.2
+			}
+		]
+	},
+	"entity.howler.hurt": {
+		"replace": true,
+		"subtitle": "subtitles.entity.howler.hurt",
+		"sounds": [
+			{
+				"name": "cnc:howler_hurt",
+				"stream": false,
+				"volume": 0.2
+			}
+		]
+	},
+	"entity.howler.idle": {
+		"replace": true,
+		"subtitle": "subtitles.entity.howler.idle",
+		"sounds": [
+			{
+				"name": "cnc:howler_idle1",
+				"stream": false,
+				"volume": 0.2
+			},
+			{
+				"name": "cnc:howler_idle2",
+				"stream": false,
+				"volume": 0.2
+			}
+		]
+	},
+	"entity.sasquatch.death": {
+		"replace": true,
+		"subtitle": "subtitles.entity.sasquatch.death",
+		"sounds": [
+			{
+				"name": "cnc:sasquatch_death",
+				"stream": false,
+				"volume": 0.2
+			}
+		]
+	},
+	"entity.sasquatch.hurt": {
+		"replace": true,
+		"subtitle": "subtitles.entity.sasquatch.hurt",
+		"sounds": [
+			{
+				"name": "cnc:sasquatch_hurt1",
+				"stream": false,
+				"volume": 0.2
+			},
+			{
+				"name": "cnc:sasquatch_hurt2",
+				"stream": false,
+				"volume": 0.2
+			},
+			{
+				"name": "cnc:sasquatch_hurt3",
+				"stream": false,
+				"volume": 0.2
+			}
+		]
+	},
+	"entity.snake.death": {
+		"replace": true,
+		"subtitle": "subtitles.entity.snake.death",
+		"sounds": [
+			{
+				"name": "cnc:snake_death",
+				"stream": false,
+				"volume": 0.2
+			}
+		]
+	},
+	"entity.snake.hurt": {
+		"replace": true,
+		"subtitle": "subtitles.entity.snake.hurt",
+		"sounds": [
+			{
+				"name": "cnc:snake_hurt",
+				"stream": false,
+				"volume": 0.2
+			}
+		]
+	},
+	"entity.squonk.death": {
+		"replace": true,
+		"subtitle": "subtitles.entity.squonk.death",
+		"sounds": [
+			{
+				"name": "cnc:squonk_death",
+				"stream": false,
+				"volume": 0.2
+			}
+		]
+	},
+	"entity.squonk.hurt": {
+		"replace": true,
+		"subtitle": "subtitles.entity.squonk.hurt",
+		"sounds": [
+			{
+				"name": "cnc:squonk_hurt",
+				"stream": false,
+				"volume": 0.2
+			}
+		]
+	},
+	"entity.squonk.idle": {
+		"replace": true,
+		"subtitle": "subtitles.entity.squonk.idle",
+		"sounds": [
+			{
+				"name": "cnc:squonk_idle1",
+				"stream": false,
+				"volume": 0.2
+			},
+			{
+				"name": "cnc:squonk_idle2",
+				"stream": false,
+				"volume": 0.2
+			},
+			{
+				"name": "cnc:squonk_idle3",
+				"stream": false,
+				"volume": 0.2
+			}
+		]
+	},
+	"entity.black_bear.psa": {
+		"replace": true,
+		"subtitle": "subtitles.entity.black_bear.psa",
+		"sounds": [
+			{
+				"name": "cnc:psa",
+				"stream": false,
+				"volume": 0.2
+			}
+		]
+	},
+	"entity.sasquatch.knock": {
+		"replace": true,
+		"subtitle": "subtitles.entity.sasquatch.knock",
+		"sounds": [
+			{
+				"name": "cnc:sasquatch_knock",
+				"stream": false,
+				"volume": 0.2
+			}
+		]
+	},
+	"entity.deer.idle": {
+		"replace": true,
+		"subtitle": "subtitles.entity.deer.idle",
+		"sounds": [
+			{
+				"name": "cnc:deer_idle1",
+				"stream": false,
+				"volume": 0.2
+			},
+			{
+				"name": "cnc:deer_idle2",
+				"stream": false,
+				"volume": 0.2
+			}
+		]
+	},
+	"entity.deer.hurt": {
+		"replace": true,
+		"subtitle": "subtitles.entity.deer.hurt",
+		"sounds": [
+			{
+				"name": "cnc:deer_hurt1",
+				"stream": false,
+				"volume": 0.2
+			},
+			{
+				"name": "cnc:deer_hurt2",
+				"stream": false,
+				"volume": 0.2
+			}
+		]
+	},
+	"entity.deer.death": {
+		"replace": true,
+		"subtitle": "subtitles.entity.deer.death",
+		"sounds": [
+			{
+				"name": "cnc:deer_death",
+				"stream": false,
+				"volume": 0.2
+			}
+		]
+	},
+	"entity.giant_boar.idle": {
+		"replace": true,
+		"subtitle": "subtitles.entity.giant_boar.idle",
+		"sounds": [
+			{
+				"name": "cnc:giant_boar_idle1",
+				"stream": false,
+				"volume": 0.2
+			},
+			{
+				"name": "cnc:giant_boar_idle2",
+				"stream": false,
+				"volume": 0.2
+			},
+			{
+				"name": "cnc:giant_boar_idle3",
+				"stream": false,
+				"volume": 0.2
+			},
+			{
+				"name": "cnc:giant_boar_idle4",
+				"stream": false,
+				"volume": 0.2
+			}
+		]
+	},
+	"entity.cougar.death": {
+		"replace": true,
+		"subtitle": "subtitles.entity.cougar.death",
+		"sounds": [
+			{
+				"name": "cnc:cougar_death",
+				"stream": false,
+				"volume": 0.2
+			}
+		]
+	},
+	"entity.cougar.bite": {
+		"replace": true,
+		"subtitle": "subtitles.entity.cougar.bite",
+		"sounds": [
+			{
+				"name": "cnc:cougar_bite",
+				"stream": false,
+				"volume": 0.2
+			}
+		]
+	},
+	"entity.cougar.hurt": {
+		"replace": true,
+		"subtitle": "subtitles.entity.cougar.hurt",
+		"sounds": [
+			{
+				"name": "cnc:cougar_hurt1",
+				"stream": false,
+				"volume": 0.2
+			},
+			{
+				"name": "cnc:cougar_hurt2",
+				"stream": false,
+				"volume": 0.2
+			},
+			{
+				"name": "cnc:cougar_hurt3",
+				"stream": false,
+				"volume": 0.2
+			}
+		]
+	},
+	"entity.wendigo.idle": {
+		"replace": true,
+		"subtitle": "subtitles.entity.wendigo.idle",
+		"sounds": [
+			{
+				"name": "cnc:wendigo_idle1",
+				"stream": false,
+				"volume": 0.2
+			},
+			{
+				"name": "cnc:wendigo_idle2",
+				"stream": false,
+				"volume": 0.2
+			},
+			{
+				"name": "cnc:wendigo_idle3",
+				"stream": false,
+				"volume": 0.2
+			}
+		]
+	},
+	"entity.wendigo.step": {
+		"replace": true,
+		"subtitle": "subtitles.entity.wendigo.step",
+		"sounds": [
+			{
+				"name": "cnc:wendigo_step",
+				"stream": false,
+				"volume": 0.2
+			}
+		]
+	},
+	"entity.wendigo.eat": {
+		"replace": true,
+		"subtitle": "subtitles.entity.wendigo.eat",
+		"sounds": [
+			{
+				"name": "cnc:wendigo_eat",
+				"stream": false,
+				"volume": 0.2
+			}
+		]
+	},
+	"entity.wendigo.death": {
+		"replace": true,
+		"subtitle": "subtitles.entity.wendigo.death",
+		"sounds": [
+			{
+				"name": "cnc:wendigo_death",
+				"stream": false,
+				"volume": 0.2
+			}
+		]
+	},
+	"entity.wendigo.hurt": {
+		"replace": true,
+		"subtitle": "subtitles.entity.wendigo.hurt",
+		"sounds": [
+			{
+				"name": "cnc:wendigo_hurt",
+				"stream": false,
+				"volume": 0.2
+			}
+		]
+	},
+	"entity.wechuge.step": {
+		"replace": true,
+		"subtitle": "subtitles.entity.wechuge.step",
+		"sounds": [
+			{
+				"name": "cnc:wechuge_step",
+				"stream": false,
+				"volume": 0.2
+			}
+		]
+	},
+	"entity.wechuge.death": {
+		"replace": true,
+		"subtitle": "subtitles.entity.wechuge.death",
+		"sounds": [
+			{
+				"name": "cnc:wechuge_death",
+				"stream": false,
+				"volume": 0.2
+			}
+		]
+	},
+	"music_disc.hills": {
+		"sounds": [
+			{
+				"name": "cnc:hills",
+				"stream": true
+			}
+		]
+	},
+	"music_disc.wreck_of_the_old_97": {
+		"sounds": [
+			{
+				"name": "cnc:wreck_of_the_old_97",
+				"stream": true
+			}
+		]
+	},
+	"block.fire.light": {
+		"replace": true,
+		"subtitle": "subtitles.block.fire.light",
+		"sounds": [
+			{
+				"name": "cnc:lighting_fire",
+				"stream": false,
+				"volume": 0.2
+			}
+		]
+	},
+	"entity.wechuge.growl": {
+		"replace": true,
+		"subtitle": "subtitles.entity.wechuge.growl",
+		"sounds": [
+			{
+				"name": "cnc:wechuge_growl",
+				"stream": false,
+				"volume": 0.2
+			}
+		]
+	},
+	"entity.wechuge.bite": {
+		"replace": true,
+		"subtitle": "subtitles.entity.wechuge.bite",
+		"sounds": [
+			{
+				"name": "cnc:wechuge_bite",
+				"stream": false,
+				"volume": 0.2
+			}
+		]
+	},
+	"entity.wechuge.stun": {
+		"replace": true,
+		"subtitle": "subtitles.entity.wechuge.stun",
+		"sounds": [
+			{
+				"name": "cnc:wechuge_stun",
+				"stream": false,
+				"volume": 0.2
+			}
+		]
+	},
+	"entity.wechuge.idle": {
+		"replace": true,
+		"subtitle": "subtitles.entity.wechuge.idle",
+		"sounds": [
+			{
+				"name": "cnc:wechuge_idle1",
+				"stream": false,
+				"volume": 0.2
+			},
+			{
+				"name": "cnc:wechuge_idle2",
+				"stream": false,
+				"volume": 0.2
+			},
+			{
+				"name": "cnc:wechuge_idle3",
+				"stream": false,
+				"volume": 0.2
+			}
+		]
+	},
+	"entity.turkey.idle": {
+		"replace": true,
+		"subtitle": "subtitles.entity.turkey.idle",
+		"sounds": [
+			{
+				"name": "cnc:turkey_idle1",
+				"stream": false,
+				"volume": 0.2
+			},
+			{
+				"name": "cnc:turkey_idle2",
+				"stream": false,
+				"volume": 0.2
+			},
+			{
+				"name": "cnc:turkey_idle3",
+				"stream": false,
+				"volume": 0.2
+			},
+			{
+				"name": "cnc:turkey_idle4",
+				"stream": false,
+				"volume": 0.2
+			}
+		]
+	},
+	"entity.turkey.death": {
+		"replace": true,
+		"subtitle": "subtitles.entity.turkey.death",
+		"sounds": [
+			{
+				"name": "cnc:turkey_death",
+				"stream": false,
+				"volume": 0.2
+			}
+		]
+	},
+	"entity.turkey.hurt": {
+		"replace": true,
+		"subtitle": "subtitles.entity.turkey.hurt",
+		"sounds": [
+			{
+				"name": "cnc:turkey_hurt1",
+				"stream": false,
+				"volume": 0.2
+			},
+			{
+				"name": "cnc:turkey_hurt2",
+				"stream": false,
+				"volume": 0.2
+			}
+		]
+	},
+	"entity.timber_wolf.idle": {
+		"replace": true,
+		"subtitle": "subtitles.entity.timber_wolf.idle",
+		"sounds": [
+			{
+				"name": "cnc:timber_wolf_idle1",
+				"stream": false,
+				"volume": 0.2
+			},
+			{
+				"name": "cnc:timber_wolf_idle2",
+				"stream": false,
+				"volume": 0.2
+			},
+			{
+				"name": "cnc:timber_wolf_idle3",
+				"stream": false,
+				"volume": 0.2
+			}
+		]
+	},
+	"entity.poison_spit.hit": {
+		"replace": true,
+		"subtitle": "subtitles.entity.poison_spit.hit",
+		"sounds": [
+			{
+				"name": "cnc:poison_sizzle3",
+				"stream": false,
+				"volume": 0.2
+			},
+			{
+				"name": "cnc:poison_sizzle2",
+				"stream": false,
+				"volume": 0.2
+			},
+			{
+				"name": "cnc:poison_sizzle1",
+				"stream": false,
+				"volume": 0.2
+			}
+		]
+	},
+	"entity.skunk.idle": {
+		"sounds": [
+			{
+				"name": "cnc:skunk_idle1",
+				"stream": false,
+				"volume": 0.2
+			},
+			{
+				"name": "cnc:skunk_idle2",
+				"stream": false,
+				"volume": 0.2
+			},
+			{
+				"name": "cnc:skunk_idle3",
+				"stream": false,
+				"volume": 0.2
+			}
+		]
+	},
+	"entity.marmot.idle": {
+		"sounds": [
+			{
+				"name": "cnc:marmot_idle1",
+				"stream": false,
+				"volume": 0.2
+			},
+			{
+				"name": "cnc:marmot_idle2",
+				"stream": false,
+				"volume": 0.2
+			}
+		]
+	},
+	"entity.marmot.hurt": {
+		"sounds": [
+			{
+				"name": "cnc:marmot_hurt",
+				"stream": false,
+				"volume": 0.2
+			}
+		]
+	},
+	"entity.marmot.whistle": {
+		"sounds": [
+			{
+				"name": "cnc:marmot_whistle",
+				"stream": false,
+				"volume": 0.2
+			}
+		]
+	},
+	"entity.skunk.death": {
+		"sounds": [
+			{
+				"name": "cnc:skunk_death",
+				"stream": false,
+				"volume": 0.2
+			}
+		]
+	},
+	"entity.skunk.hurt": {
+		"sounds": [
+			{
+				"name": "cnc:skunk_hurt",
+				"stream": false,
+				"volume": 0.2
+			}
+		]
+	},
+	"music_disc.slough_choir": {
+		"sounds": [
+			{
+				"name": "cnc:slough_choir",
+				"stream": true
+			}
+		]
+	}
+}

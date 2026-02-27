@@ -1,0 +1,17 @@
+{
+	"type": "emi:world_interaction",
+	"left": {
+		"type": "mob_effect",
+		"id": "brewinandchewin:tipsy"
+	},
+	"right": [
+		"#minecraft:beds",
+		"#comforts:hammocks",
+		"#item:comforts:sleeping_bags"
+	],
+	"output": {
+		"type": "item",
+		"id": "minecraft:white_bed",
+		"nbt": "{item_name: '{text:\"Enter the Dream Dimension\", color: \"green\"}'}"
+	}
+}

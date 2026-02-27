@@ -25,6 +25,10 @@ ServerEvents.tags("item", event => {
 	event.add("c:hidden_from_recipe_viewers", global.get_disabled_ingredient().itemIds)
 })
 
+ServerEvents.tags("mob_effect", event => {
+	event.add("c:hidden_from_recipe_viewers", global.HIDDEN_MOB_EFFECTS)
+})
+
 // Hide advancements.
 ServerEvents.generateData("after_mods", event => {
 	for (const advancement_id of [

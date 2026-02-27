@@ -1,0 +1,13 @@
+{
+	"type": "emi:info",
+	"stacks": [
+		{
+			"type": "mob_effect",
+			"id": "brewinandchewin:tipsy"
+		},
+		"#minecraft:beds",
+		"#comforts:hammocks",
+		"#item:comforts:sleeping_bags"
+	],
+	"text": "When you're Tipsy, you may try sleeping it off and find yourself in the Dream Dimension.\nThis is a temporary \"resource world\". Items you find are yours to keep."
+}

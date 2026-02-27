@@ -1,0 +1,31 @@
+{
+	"type": "emi:world_interaction",
+	"left": {
+		"type": "item",
+		"id": "minecraft:sea_pickle",
+		"remainder": {
+			"type": "item",
+			"id": "minecraft:sea_pickle"
+		}
+	},
+	"right": [
+		{
+			"type": "item",
+			"id": "minecraft:bone_meal"
+		},
+		{
+			"type": "item",
+			"id": "minecraft:horn_coral_block",
+			"nbt": "{item_name: '{text:\"Any Coral Block\", color: \"green\"}'}",
+			"remainder": {
+				"type": "item",
+				"id": "minecraft:horn_coral_block",
+				"nbt": "{item_name: '{text:\"Any Coral Block\", color: \"green\"}'}"
+			}
+		}
+	],
+	"output": {
+		"type": "item",
+		"id": "minecraft:sea_pickle"
+	}
+}

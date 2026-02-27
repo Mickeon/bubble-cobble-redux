@@ -66,10 +66,6 @@ NativeEvents.onEvent($ScreenEvent$Init$Post, event => {
 })
 }
 
-// KeyBindEvents.pressed("key.use", event => {
-// 	event.client.statusMessage = "Potato"
-// })
-
 
 // Move EMI buttons away from the bottom-right.
 // Currently disabled as there's no reason to be doing this.

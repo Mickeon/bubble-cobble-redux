@@ -167,7 +167,7 @@
 	/**
 	 * The pages in the left sidebar
 	 */
-	left-sidebar-pages: favorites;
+	left-sidebar-pages: chess, favorites;
 
 	/**
 	 * The subpanels in the left sidebar

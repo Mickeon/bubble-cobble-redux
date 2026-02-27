@@ -73,6 +73,21 @@ global.DISABLED_FLUIDS = [
 	"create_bic_bit:curdled_milk"
 ]
 
+/** @type {Special.MobEffect[]} */
+global.HIDDEN_MOB_EFFECTS = [
+	// Unused.
+	/runiclib/, // Many neat effects are a byproduct of this library.
+	"gag:repelling",
+
+	// Only keeping the "Harmful" version of these effects on display.
+	"xaerominimap:no_cave_maps",
+	"xaerominimap:no_entity_radar",
+	"xaerominimap:no_minimap",
+	"xaerominimap:no_waypoints",
+	"xaeroworldmap:no_cave_maps",
+	"xaeroworldmap:no_world_map",
+]
+
 NativeEvents.onEvent("lowest", $BuildCreativeModeTabContentsEvent, event => {
 	let evaluated_items = global.get_disabled_ingredient().stackArray
 	// console.log("Hiding the following items: " + evaluated_items)

@@ -89,6 +89,15 @@ ServerEvents.tags("item", event => {
 	event.add("create:pulpifiable", "biomeswevegone:shrub", "biomeswevegone:firecracker_flower_bush", "cobblemon:medicinal_leek")
 	event.add("create_bic_bit:tulip", "#biomeswevegone:flowers/tulips")
 	event.add("soulbound:enchantable", "#c:tools")
+	event.add("create:blaze_burner_fuel/regular", "#simpletms:type_fire_tr", "cobblemon:charcoal_stick", "cobblemon:fire_stone", "mynethersdelight:bullet_pepper", "mynethersdelight:pepper_powder" )
+	event.add("create:blaze_burner_fuel/special", "#simpletms:type_fire_tm", "cobblemon:fire_gem", "cobblemon:fire_stone_block", "mega_showdown:firium_z", "kubejs:firebomb_whiskey",
+		 "mynethersdelight:chilidog", "mynethersdelight:hot_cream", "mynethersdelight:hot_cream_cone",
+		 "mynethersdelight:spicy_hoglin_stew", "mynethersdelight:hot_wings", "mynethersdelight:hot_wings_bucket",
+		 "mynethersdelight:spicy_curry", "mynethersdelight:rock_soup", "minersdelight:rock_soup_cup",
+		 "minersdelight:spicy_hoglin_stew_cup", "minersdelight:spicy_noodle_soup_cup", "mynethersdelight:fried_hoglin_chop",
+		 "mynethersdelight:spicy_noodle_soup", "mynethersdelight:plate_of_ghasta_with_cream",
+		 "mynethersdelight:magma_cake_slice", "mynethersdelight:magma_cake_block",
+	)
 
 	// Why not? It's fun.
 	event.add("supplementaries:blackboard_white",      "minecraft:sugar", "cobblemon:white_apricorn", "cobblemon:white_mint_leaf", "arts_and_crafts:white_paintbrush", "arts_and_crafts:white_chalk_stick")
@@ -125,7 +134,6 @@ ServerEvents.tags("item", event => {
 	)
 	event.add("supplementaries:pancake_syrup", "create:chocolate_bucket")
 	event.add("supplementaries:causes_lightning_when_held", "constructionstick:copper_stick", "minecraft:copper_sword", "minecraft:copper_axe") // Funny.
-	// event.add("supplementaries:overencumbering", "sophisticatedbackpacks:backpack") // Handled in Sophisticated Backpacks config.
 	event.add("supplementaries:overencumbering", "#create:toolboxes", "#create:packages", /sophisticatedstorage:.*shulker_box/)
 
 	// Make Construction sticks enchantable with Mending and Unbreaking.
