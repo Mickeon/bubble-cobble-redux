@@ -1,0 +1,9 @@
+{
+	"id": "mowziesmobs:frozen",
+	"stacks": [
+		{
+			"type": "item",
+			"id": "mowziesmobs:frostmaw_spawn_egg"
+		}
+	]
+}

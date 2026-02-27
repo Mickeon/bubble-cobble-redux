@@ -1,0 +1,10 @@
+{
+	"id": "minecraft:glowing",
+	"stacks": [
+		{
+			"type": "item",
+			"id": "minecraft:spyglass",
+			"nbt": "{enchantments: {levels: {'usefulspyglass:marking': 1}}}"
+		}
+	]
+}

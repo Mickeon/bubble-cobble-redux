@@ -1,0 +1,7 @@
+{
+	"type": "emi:info",
+	"stacks": [
+		"#item:minecraft:fences"
+	],
+	"text": "Right-click empty-handed to disconnect a fence from nearby blocks."
+}

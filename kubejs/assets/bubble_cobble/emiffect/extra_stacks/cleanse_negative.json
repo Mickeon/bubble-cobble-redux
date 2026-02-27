@@ -1,0 +1,25 @@
+{
+	"id": "cobblemon:cleanse_negative",
+	"stacks": [
+		{
+			"type": "item",
+			"id": "cobblemon:sinister_tea",
+			"nbt": "{'cobblemon:ingredient': ['cobblemon:white_herb'], 'cobblemon:food_colour': ['white'], 'cobblemon:mob_effects': {mob_effects: [{ show_icon: 1b, id: 'cobblemon:cleanse_negative', 'neoforge:cures': ['milk', 'protected_by_totem'], duration: 1 }]}}"
+		},
+		{
+			"type": "item",
+			"id": "cobblemon:sinister_tea",
+			"nbt": "{'cobblemon:ingredient': ['cobblemon:white_herb'], 'cobblemon:food_colour': ['white'], 'cobblemon:mob_effects': {mob_effects: [{ show_icon: 1b, id: 'cobblemon:cleanse_negative', 'neoforge:cures': ['milk', 'protected_by_totem'], duration: 1 }]}, custom_model_data: 2}"
+		},
+		{
+			"type": "item",
+			"id": "cobblemon:sinister_tea",
+			"nbt": "{'cobblemon:ingredient': ['cobblemon:white_herb'], 'cobblemon:food_colour': ['white'], 'cobblemon:mob_effects': {mob_effects: [{ show_icon: 1b, id: 'cobblemon:cleanse_negative', 'neoforge:cures': ['milk', 'protected_by_totem'], duration: 1 }]}, custom_model_data: 3}"
+		},
+		{
+			"type": "item",
+			"id": "cobblemon:white_herb",
+			"nbt": "{lore: ['{text:\"Infused in Sinister Tea\", color: \"green\", italic: false}']}"
+		}
+	]
+}

@@ -1,0 +1,10 @@
+{
+	"id": "mowziesmobs:geomancy",
+	"stacks": [
+		{
+			"type": "item",
+			"id": "mowziesmobs:earthrend_gauntlet",
+			"nbt": "{lore: ['{text:\"Held in hand\", color: \"green\", italic: false}']}"
+		}
+	]
+}

@@ -1,0 +1,14 @@
+{
+	"id": "kubejs:begone",
+	"stacks": [
+		{
+			"type": "item",
+			"id": "minecraft:warden_spawn_egg"
+		},
+		{
+			"type": "item",
+			"id": "minecraft:white_bed",
+			"nbt": "{item_name: '{text:\"Death in the Dream Dimension\", color: \"green\"}'}"
+		}
+	]
+}

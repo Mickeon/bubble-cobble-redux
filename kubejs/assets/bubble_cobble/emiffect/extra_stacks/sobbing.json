@@ -1,0 +1,9 @@
+{
+	"id": "cnc:sobbing",
+	"stacks": [
+		{
+			"type": "item",
+			"id": "cnc:squonk_spawn_egg"
+		}
+	]
+}

@@ -1,0 +1,14 @@
+{
+	"__comment": "Not sophisticated at all. Should probably generate automatically from the respective tag.",
+	"id": "supplementaries:flammable",
+	"stacks": [
+		{
+			"type": "item",
+			"id": "supplementaries:lumisene_bucket"
+		},
+		{
+			"type": "fluid",
+			"id": "supplementaries:lumisene"
+		}
+	]
+}

@@ -1,0 +1,30 @@
+{
+	"id": "supplementaries:overencumbered",
+	"stacks": [
+		"#item:supplementaries:overencumbering",
+		{
+			"type": "item",
+			"id": "sophisticatedbackpacks:backpack"
+		},
+		{
+			"type": "item",
+			"id": "sophisticatedbackpacks:copper_backpack"
+		},
+		{
+			"type": "item",
+			"id": "sophisticatedbackpacks:iron_backpack"
+		},
+		{
+			"type": "item",
+			"id": "sophisticatedbackpacks:gold_backpack"
+		},
+		{
+			"type": "item",
+			"id": "sophisticatedbackpacks:diamond_backpack"
+		},
+		{
+			"type": "item",
+			"id": "sophisticatedbackpacks:netherite_backpack"
+		}
+	]
+}

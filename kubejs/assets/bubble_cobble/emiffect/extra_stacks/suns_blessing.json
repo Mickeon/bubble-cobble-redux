@@ -1,0 +1,10 @@
+{
+	"id": "mowziesmobs:suns_blessing",
+	"stacks": [
+		{
+			"type": "item",
+			"id": "mowziesmobs:umvuthi_spawn_egg",
+			"nbt": "{lore: ['{text:\"Trade with Umvuthi\", color: \"green\", italic: false}']}"
+		}
+	]
+}
