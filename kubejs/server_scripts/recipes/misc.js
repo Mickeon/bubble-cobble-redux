@@ -200,14 +200,16 @@ ServerEvents.recipes(event => {
 		W: "#minecraft:wool",
 	})
 
-	// Remove common Sack recipe with Flax, in favour of always needing Canvas.
+	// Remove common Sack recipe with Flax, in favour of always needing Canvas. Also make that recipe slightly cheaper.
 	event.remove({id: "supplementaries:sack"})
+	event.shaped({id: "supplementaries:sack"}, [" S ", "C C", "CCC",], {S: "minecraft:string", C: "farmersdelight:canvas"}).id("supplementaries:sack_3")
 
 	// Use Canvas for more.
 	event.replaceInput({id: "create:crafting/appliances/clipboard"}, "minecraft:paper", "farmersdelight:canvas")
 	event.replaceInput({id: "solonion:lunchbag"}, "minecraft:paper", "farmersdelight:canvas")
 	event.replaceInput({id: "supplementaries:lunch_basket"}, "minecraft:bamboo", "farmersdelight:canvas")
 	event.replaceInput({id: /^create:crafting.*filter$/}, "minecraft:white_wool", "farmersdelight:canvas")
+	event.replaceInput({id: /^mega_showdown:tera_pouch/}, "minecraft:leather", "farmersdelight:canvas")
 	// event.replaceInput({id: "minecraft:item_frame"}, "minecraft:leather", "farmersdelight:canvas") // Conflicts with alternative Painting recipe.
 	event.remove({id: "minecraft:painting"}) // In favour of Farmer's Delight's which requires Canvas.
 	event.remove({id: "immersive_paintings:painting"})
@@ -355,6 +357,15 @@ ServerEvents.recipes(event => {
 
 	// Luminous Jelly from Glowberries and and berries.
 	event.recipes.create.mixing(CreateItem.of(Item.of("mowziesmobs:glowing_jelly")), [Ingredient.of("minecraft:glow_berries"), Ingredient.of("#c:foods/berry").except("minecraft:glow_berries"), Ingredient.of("minecraft:sugar")]).heated()
+
+	// Soap also craftable from Bleachdew, which is more convenient.
+	event.shapeless(Item.of("supplementaries:soap", 6), [Ingredient.of("minecraft:water_bucket"), Ingredient.of("arts_and_crafts:bleachdew", 3)])
+	event.recipes.create.mixing(CreateItem.of(Item.of("supplementaries:soap", 6)), [Fluid.sizedIngredientOf("#c:water", 500), Ingredient.of("arts_and_crafts:bleachdew", 3)])
+
+	// Just kinda makes sense.
+	event.remove({id: "handcrafted:berry_jam_jar"})
+	event.shapeless(Item.of("handcrafted:berry_jam_jar"), Ingredient.of("brewinandchewin:sweet_berry_jam"))
+	event.shapeless(Item.of("brewinandchewin:sweet_berry_jam"), Ingredient.of("handcrafted:berry_jam_jar"))
 
 	// TODO: Add recipes for (this modpack's) Pale Jacaranda and Redder Wood.
 	// event.shaped("biomesoplenty:stripped_jacaranda_log", ["DAD", "ADA", "DAD"], {D: "minecraft:white_dye", A: "biomeswevegone:stripped_jacaranda_log"})

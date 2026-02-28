@@ -205,6 +205,8 @@
 			"quark:dirty_glass_pane" = "minecraft:glass_pane"
 			"quark:dirty_glass" = "minecraft:glass"
 			"#alexscaves:cave_paintings" = "alexscaves:smooth_limestone"
+			"mowziesmobs:painted_acacia" = "minecraft:acacia_planks"
+			"mowziesmobs:painted_acacia_slab" = "minecraft:acacia_slab"
 
 	[functional.present]
 		enabled = true

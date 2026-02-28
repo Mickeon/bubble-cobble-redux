@@ -89,7 +89,7 @@ ServerEvents.tags("item", event => {
 
 	// Makes sense.
 	event.add("c:tools", "#constructionstick:construction_sticks", "#yo_hooks:enchantable/hooks")
-	event.add("c:bones", "cnc:wishbone", "cnc:lucky_wishbone", "cnc:unlucky_wishbone")
+	event.add("c:bones", "cnc:wishbone", "cnc:lucky_wishbone", "cnc:unlucky_wishbone", "#cnc:antlers")
 	event.add("c:eggs", "undergroundworlds:spider_egg")
 	event.add("c:mushrooms", "ribbits:toadstool") // No, it doesn't make sense?
 	event.add("create:pulpifiable", "biomeswevegone:shrub", "biomeswevegone:firecracker_flower_bush", "cobblemon:medicinal_leek")
