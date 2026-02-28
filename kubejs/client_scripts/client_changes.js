@@ -277,3 +277,173 @@ ClientEvents.lang("en_us", event => {
 		})
 	}
 })
+
+
+RecipeViewerEvents.addEntries("item", event => {
+	event.add(Item.of("cobblemon:pokemon_model", {
+		"minecraft:item_name": Text.of(`Pokémon`),
+		"minecraft:rarity": "epic",
+		"cobblemon:pokemon_item": {
+			species: "cobblemon:glaceon",
+			aspects: [""]
+		}
+	}))
+})
+
+// Add Cobblemon cosmetic items to EMI.
+ClientEvents.generateAssets("after_mods", event => {
+	// This, unfortunately, can only be partially automated as the features are server-side.
+	const COSMETIC_SETS = {
+		white_wool: {
+			item: "minecraft:white_wool",
+			aspect: "cosmetic_item-white_wool",
+			pokemon: [
+				"arctozolt",
+				"gogoat",
+				"dedenne",
+				"vulpix",
+				"ninetales",
+				"raichu",
+				"dracozolt",
+				"trapinch",
+				"cyndaquil",
+				"quilava",
+				"typhlosion",
+				"vibrava",
+				"flygon",
+				"fennekin",
+				"braixen",
+				"delphox",
+				"litten",
+				"fuecoco",
+				"tinkaton",
+				"chikorita",
+				"liligant",
+				"chansey",
+				"cutiefly",
+				"chandelure",
+				"noibat",
+				"gardevoir",
+				"goodra",
+				"rowlet",
+				"tropius",
+				"salamence",
+				"mew",
+				"arbok",
+				"meowscrada",
+				"floragato",
+				"sprigatito",
+				"milotic",
+				"minccino",
+				"whimsicott",
+				"swablu",
+				"altaria",
+				"sylveon",
+				"snivy",
+				"kirlia",
+				"inteleon",
+				"mawile"
+			],
+		},
+		black_wool: {
+			item: "minecraft:black_wool",
+			aspect: "cosmetic_item-black_wool",
+			pokemon: [
+				"vulpix",
+				"raichu",
+				"typhlosion",
+				"ninetales"
+			],
+		},
+		gold_nugget: {
+			item: "minecraft:gold_nugget",
+			aspect: "cosmetic_item-gold_nugget",
+			pokemon: [
+				"latios",
+				"latias",
+				"spheal",
+				"deino",
+				"eevee",
+				"zweilous",
+				"marill",
+				"rayquaza",
+				"rapidash",
+				"zebstrika",
+				"ponyta",
+				"espeon",
+				"scolipede"
+			],
+		},
+		jukebox: {
+			item: "minecraft:jukebox",
+			aspect: "cosmetic_item-jukebox",
+			pokemon: [
+				"eevee",
+				"sylveon",
+				"espeon",
+				"flareon",
+				"jolteon",
+				"umbreon",
+				"glaceon",
+				"leafeon",
+				"vaporeon"
+			],
+		},
+		aniversary: {
+			item: "cobblemon:star_sweet",
+			aspect: "aniversary",
+			pokemon: [
+				"ogerpon",
+			],
+		},
+		art: {
+			item: "minecraft:paper",
+			aspect: "art",
+			pokemon: [
+				"hooh",
+			],
+		},
+		mega_pin: {
+			item: "mega_showdown:gardevoirite",
+			aspect: "pin",
+			pokemon: [
+				"gardevoir",
+			],
+		},
+		ot: {
+			item: "cobblemon:relic_coin",
+			aspect: "ot",
+			pokemon: [
+				"gengar",
+			],
+		},
+		summer: {
+			item: "minecraft:white_dye",
+			aspect: "summer",
+			pokemon: [
+				"glaceon",
+			],
+		},
+		world: {
+			item: "cobblemon:star_sweet",
+			aspect: "world",
+			pokemon: [
+				"pikachu",
+			],
+		},
+	}
+
+	Object.keys(COSMETIC_SETS).forEach(key => {
+		const cosmetic_set = COSMETIC_SETS[key]
+		const consumed_item = `item:${cosmetic_set.item}{lore: ['{text:\"Change cosmetic item\", color: \"green\", italic: false}']}`
+		const aspect = cosmetic_set.aspect
+		for (let pokemon of cosmetic_set.pokemon) {
+			event.json(`emi:recipe/additions/pokemon_cosmetics/${aspect}/${pokemon}`, {
+				type: "emi:world_interaction",
+				left: `item:cobblemon:pokemon_model{'cobblemon:pokemon_item': {species: 'cobblemon:${pokemon}', aspects: ['']}}`,
+				right: consumed_item,
+				output: `item:cobblemon:pokemon_model{'cobblemon:pokemon_item': {species: 'cobblemon:${pokemon}', aspects: ['${aspect}']}}`
+			})
+		}
+	})
+})
