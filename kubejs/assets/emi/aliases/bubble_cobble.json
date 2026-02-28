@@ -281,6 +281,22 @@
 				"Couch",
 				"Armchair"
 			]
+		},
+		{
+			"stacks": [
+				{"type": "item", "id": "cobblemon:relic_coin_pouch"},
+				{"type": "item", "id": "cobblemon:relic_coin_sack"},
+				{"type": "item", "id": "cobblemonraiddens:raid_pouch"},
+				{"type": "item", "id": "gag:time_sand_pouch"},
+				{"type": "item", "id": "minecraft:bundle"},
+				{"type": "item", "id": "farmersdelight:rice_bag"},
+				{"type": "item", "id": "herbalbrews:tea_leaf_crate"}
+			],
+			"text": [
+				"Sack",
+				"Pouch",
+				"Bag"
+			]
 		}
 	]
 }

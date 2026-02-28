@@ -3,6 +3,10 @@
 	"stacks": [
 		{
 			"type": "item",
+			"id": "biomeswevegone:fluorescent_cattail_sprout"
+		},
+		{
+			"type": "item",
 			"id": "minecraft:spyglass",
 			"nbt": "{enchantments: {levels: {'usefulspyglass:marking': 1}}}"
 		}

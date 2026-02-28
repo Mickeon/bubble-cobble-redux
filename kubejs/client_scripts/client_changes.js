@@ -282,11 +282,15 @@ ClientEvents.lang("en_us", event => {
 RecipeViewerEvents.addEntries("item", event => {
 	event.add(Item.of("cobblemon:pokemon_model", {
 		"minecraft:item_name": Text.of(`Pokémon`),
+		"minecraft:lore": [
+			Text.of(`A stand-in you can right-click on`),
+			Text.of(`to view interactions in the recipe viewer`)
+		],
 		"minecraft:rarity": "epic",
 		"cobblemon:pokemon_item": {
 			species: "cobblemon:glaceon",
 			aspects: [""]
-		}
+		},
 	}))
 })
 

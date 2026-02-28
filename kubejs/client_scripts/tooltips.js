@@ -206,7 +206,6 @@ ItemEvents.modifyTooltips(event => {
 		"When the Basket is open:",
 		"    Right-click to eat the chosen food.",
 	])
-	event.add("supplementaries:lunch_basket", PLACEABLE_TOOLTIP)
 
 	event.modify(["solonion:lunchbag", "solonion:lunchbox", "solonion:golden_lunchbox"], text => text.removeText(Text.translate("item.solonion.container.open", Text.keybind("key.sneak"), Text.keybind("key.use"))))
 	add_shift_info(event, ["solonion:lunchbag", "solonion:lunchbox", "solonion:golden_lunchbox"], [
@@ -236,7 +235,7 @@ ItemEvents.modifyTooltips(event => {
 	event.add(["supplementaries:lumisene_bucket"], [subtle("Bewildering, perhaps ").append(Text.gold("flammable")).append("?")])
 	event.add(["supplementaries:sack"], [subtle("This can store stuff, by the way")])
 
-	event.modify("#c:foods/edible_when_placed", text => {
+	event.modify(["#c:foods/edible_when_placed", "supplementaries:lunch_basket", "supplementaries:cannonball"], text => {
 		text.insert(1, PLACEABLE_TOOLTIP)
 	})
 

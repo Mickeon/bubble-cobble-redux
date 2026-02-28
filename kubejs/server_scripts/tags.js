@@ -9,6 +9,11 @@ const COPPER_CHAINS = [
 	"minecraft:copper_chain", "minecraft:exposed_copper_chain", "minecraft:weathered_copper_chain", "minecraft:oxidized_copper_chain",
 	"minecraft:waxed_copper_chain", "minecraft:waxed_exposed_copper_chain", "minecraft:waxed_weathered_copper_chain", "minecraft:waxed_oxidized_copper_chain"
 ]
+const COPPER_CHESTS = [
+	"minecraft:copper_chest", "minecraft:exposed_copper_chest", "minecraft:weathered_copper_chest", "minecraft:oxidized_copper_chest",
+	"minecraft:waxed_copper_chest", "minecraft:waxed_exposed_copper_chest", "minecraft:waxed_oxidized_copper_chest", "minecraft:waxed_weathered_copper_chest",
+]
+
 const PLACARDS = [
 	"create:placard",
 	"createdeco:black_placard",
@@ -72,7 +77,7 @@ ServerEvents.tags("item", event => {
 	event.add("minecraft:swords", "undergroundworlds:temple_sword", "undergroundworlds:freezing_sword", "undergroundworlds:blade_of_the_jungle")
 	event.add("minecraft:buttons", COPPER_BUTTONS)
 	event.remove("create:chain_rideable", COPPER_CHAINS) // They didn't realise this was plainly wrong.
-	// TODO: Copper Chests missing from c:chests item tag.
+	event.add("c:chests", COPPER_CHESTS) // TODO: Report this. They have the block tag, but not the item tag.
 
 	// More compatibility.
 	event.add("cobblemon:held/leaves_leftover", "create:honeyed_apple", "biomeswevegone:green_apple")
@@ -80,6 +85,7 @@ ServerEvents.tags("item", event => {
 	event.add("c:cheese", "#brewinandchewin:foods/cheese_wedge") // Required because we disabled Bitterballen's cheese.
 	event.add("c:drinks/milk", "minersdelight:milk_cup")
 	event.add("c:foods/milk", "minersdelight:milk_cup", "cobblemon:moomoo_milk") // Deprecated tag.
+	event.add("cobblemon:pokedex_screen", "mowziesmobs:glowing_jelly")
 
 	// Makes sense.
 	event.add("c:tools", "#constructionstick:construction_sticks", "#yo_hooks:enchantable/hooks")

@@ -1,6 +1,7 @@
 // requires: create
 // requires: biomesoplenty
 // requires: farmersdelight
+// requires: supplementaries
 
 // DO NOT USE the { output: } filter unless Brewin' and Chewin' recipes are filtered out, because on a dedicated server the script fails with this:
 // UnknownKubeRecipe.java#64: Error in 'ServerEvents.recipes': java.lang.NullPointerException:
@@ -251,6 +252,7 @@ ServerEvents.recipes(event => {
 
 	// Make held item recipes more integrated.
 	event.replaceInput({id: "cobblemon:binding_band"}, "minecraft:string", "#c:ropes")
+	event.replaceInput({id: "cobblemon:luminous_moss"}, "minecraft:glow_berries", "mowziesmobs:glowing_jelly")
 
 	// Waigee's request. Pale Oak Shelf from Jacaranda wood.
 	event.shaped(Item.of("minecraft:pale_oak_shelf", 6), ["SSS", "   ", "SSS"], {S: "biomesoplenty:stripped_jacaranda_log"})
@@ -341,6 +343,18 @@ ServerEvents.recipes(event => {
 		event.replaceInput({id: "urban_decor:chromite"}, "minecraft:andesite", Ingredient.of("minecraft:prismarine").or("create:veridium").or("create:asurine"))
 	}
 
+	// Require a Slingshot for Cannon, and require Cannon for Schematicannon.
+	event.remove({id: "supplementaries:cannon"})
+	event.shaped("create:schematicannon", [" I ", "LCL", "SSS"], {I: "minecraft:iron_block", L: "#minecraft:logs", S: "minecraft:smooth_stone", C: "supplementaries:cannon"}).id("create:crafting/schematics/schematicannon")
+
+	// Require Iron Ingots and Iron Ball for Cannon Balls? Makes them notably cheaper, too.
+	event.shaped(Item.of("supplementaries:cannonball", 4), [" I ", "IBI", " I "], {I: "minecraft:iron_ingot", B: "cobblemon:iron_ball"}).id("supplementaries:cannonball")
+
+	// Flourescent Cattail into Glowstone.
+	event.recipes.create.milling(CreateItem.of(Item.of("minecraft:glowstone_dust"), 0.75), Ingredient.of("biomeswevegone:fluorescent_cattail_sprout"), 10 * SEC)
+
+	// Luminous Jelly from Glowberries and and berries.
+	event.recipes.create.mixing(CreateItem.of(Item.of("mowziesmobs:glowing_jelly")), [Ingredient.of("minecraft:glow_berries"), Ingredient.of("#c:foods/berry").except("minecraft:glow_berries"), Ingredient.of("minecraft:sugar")]).heated()
 
 	// TODO: Add recipes for (this modpack's) Pale Jacaranda and Redder Wood.
 	// event.shaped("biomesoplenty:stripped_jacaranda_log", ["DAD", "ADA", "DAD"], {D: "minecraft:white_dye", A: "biomeswevegone:stripped_jacaranda_log"})
