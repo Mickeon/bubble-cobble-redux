@@ -9,6 +9,7 @@
       "{id:\"item\",item:\"biomeswevegone:fluorescent_cattail_sprout\"}",
       "{id:\"item\",item:\"kubejs:doublemint_gum\"}",
       "{id:\"item\",item:\"kubejs:horse_urine_bottle\"}",
+      "{id:\"item\",item:\"kubejs:super_ghostbusters\"}",
       "{id:\"itemtag\",tag:\"origins:ignore_diet\"}",
       "{id:\"itemtag\",tag:\"c:drinks/tea\"}"
     ],
@@ -88,7 +89,23 @@
       "diversity": 1
     },
     {
+      "ingredient": "{id:\"item\",item:\"biomeswevegone:cooked_yucca_fruit\"}",
+      "diversity": 1.5
+    },
+    {
       "ingredient": "{id:\"item\",item:\"biomeswevegone:green_apple_pie\"}",
+      "diversity": 2
+    },
+    {
+      "ingredient": "{id:\"item\",item:\"cobblemon:ponigiri\"}",
+      "diversity": 1
+    },
+    {
+      "ingredient": "{id:\"itemtag\",tag:\"c:foods/candy\"}",
+      "diversity": 1
+    },
+    {
+      "ingredient": "{id:\"itemtag\",tag:\"cobblemon:regional_delicacies\"}",
       "diversity": 2
     }
   ]

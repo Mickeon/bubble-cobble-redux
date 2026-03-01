@@ -1,0 +1,20 @@
+{
+  "target": "cobblemon:noibat",
+  "drops": {
+    "amount": 3,
+    "entries": [
+      {
+        "item": "minecraft:phantom_membrane",
+        "percentage": 2.5
+      },
+      {
+        "item": "cobblemon:yache_berry",
+        "percentage": 2.5
+      },
+      {
+        "item": "minersdelight:bat_wing",
+        "percentage": 50.0
+      }
+    ]
+  }
+}
