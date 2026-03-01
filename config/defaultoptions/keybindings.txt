@@ -132,8 +132,8 @@ key_key.constructionstick.change_restriction:key.keyboard.unknown:
 key_key.constructionstick.change_upgrade:key.keyboard.unknown:
 key_key.constructionstick.change_direction:key.keyboard.unknown:
 key_key.constructionstick.open_gui:key.keyboard.r:
-key_key.constructionstick.undo:key.keyboard.unknown:
-key_key.constructionstick.show_previous:key.keyboard.unknown:
+key_key.constructionstick.undo:key.keyboard.tab:
+key_key.constructionstick.show_previous:key.keyboard.tab:
 key_treechop.key.toggle_chopping:key.keyboard.unknown:
 key_treechop.key.cycle_sneak_behavior:key.keyboard.unknown:
 key_treechop.key.open_settings_overlay:key.keyboard.unknown:
