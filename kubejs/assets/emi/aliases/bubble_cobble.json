@@ -65,14 +65,6 @@
 		},
 		{
 			"stacks": [
-				"#item:constructionstick:construction_sticks"
-			],
-			"text": [
-				"Wand"
-			]
-		},
-		{
-			"stacks": [
 				"#item:c:tools/knife"
 			],
 			"text": [
@@ -306,6 +298,17 @@
 			"text": [
 				"Bleach",
 				"Clear"
+			]
+		},
+		{
+			"stacks": [
+				"#item:c:dusts",
+				"#item:supplementaries:hourglass_dusts"
+			],
+			"text": [
+				"Dust",
+				"Powder",
+				"Flour"
 			]
 		}
 	]

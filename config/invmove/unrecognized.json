@@ -177,7 +177,12 @@
     "com.simibubi.create.content.trains.station.StationScreen": true,
     "com.simibubi.create.content.trains.station.AssemblyScreen": true,
     "com.simibubi.create.content.trains.schedule.ScheduleScreen": true,
-    "org.z2six.ezactions.gui.editor.config.RadialPreviewScreen": true
+    "org.z2six.ezactions.gui.editor.config.RadialPreviewScreen": true,
+    "org.z2six.ezactions.gui.editor.config.ColorPickerScreen": true,
+    "org.z2six.ezactions.gui.editor.ItemEquipActionEditScreen": true,
+    "snownee.jade.gui.HomeConfigScreen": true,
+    "net.createmod.catnip.config.ui.SubMenuConfigScreen": true,
+    "it.hurts.octostudios.octolib.client.screen.TestGearScreen": true
   },
   "hideBackground": {
     "dev.emi.emi.screen.RecipeScreen": false,

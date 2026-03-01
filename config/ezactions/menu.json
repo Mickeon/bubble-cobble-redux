@@ -87,7 +87,8 @@
         "action": {
           "type": "COMMAND",
           "command": "/cpmclient safety",
-          "delayTicks": 0
+          "delayTicks": 0,
+          "cycleCommands": false
         }
       },
       {
@@ -109,7 +110,8 @@
         "action": {
           "type": "COMMAND",
           "command": "/jadec config",
-          "delayTicks": 0
+          "delayTicks": 0,
+          "cycleCommands": false
         }
       },
       {
@@ -119,7 +121,8 @@
         "action": {
           "type": "COMMAND",
           "command": "/owo-config accessories",
-          "delayTicks": 0
+          "delayTicks": 0,
+          "cycleCommands": false
         }
       },
       {
@@ -129,7 +132,8 @@
         "action": {
           "type": "COMMAND",
           "command": "/particlerain",
-          "delayTicks": 0
+          "delayTicks": 0,
+          "cycleCommands": false
         }
       },
       {
@@ -139,7 +143,8 @@
         "action": {
           "type": "COMMAND",
           "command": "/configure immersive_paintings client_config",
-          "delayTicks": 0
+          "delayTicks": 0,
+          "cycleCommands": false
         }
       },
       {
@@ -166,7 +171,8 @@
             "action": {
               "type": "COMMAND",
               "command": "/configure immersive_paintings common_config",
-              "delayTicks": 0
+              "delayTicks": 0,
+              "cycleCommands": false
             }
           },
           {
@@ -187,7 +193,8 @@
             "action": {
               "type": "COMMAND",
               "command": "/configure emi_loot emi_loot_config",
-              "delayTicks": 0
+              "delayTicks": 0,
+              "cycleCommands": false
             }
           },
           {
@@ -198,7 +205,8 @@
             "action": {
               "type": "COMMAND",
               "command": "/catnip config",
-              "delayTicks": 0
+              "delayTicks": 0,
+              "cycleCommands": false
             }
           },
           {
@@ -208,7 +216,8 @@
             "action": {
               "type": "COMMAND",
               "command": "/cobblemonconfig",
-              "delayTicks": 0
+              "delayTicks": 0,
+              "cycleCommands": false
             }
           },
           {
@@ -218,7 +227,8 @@
             "action": {
               "type": "COMMAND",
               "command": "/cmdclientconfig",
-              "delayTicks": 0
+              "delayTicks": 0,
+              "cycleCommands": false
             }
           },
           {
@@ -228,7 +238,8 @@
             "action": {
               "type": "COMMAND",
               "command": "/cmdconfig",
-              "delayTicks": 0
+              "delayTicks": 0,
+              "cycleCommands": false
             }
           },
           {
@@ -250,7 +261,8 @@
             "action": {
               "type": "COMMAND",
               "command": "/configure particle_core particle_core_config",
-              "delayTicks": 0
+              "delayTicks": 0,
+              "cycleCommands": false
             }
           }
         ]
@@ -270,7 +282,8 @@
         "action": {
           "type": "COMMAND",
           "command": "/kubejs reload client-scripts",
-          "delayTicks": 0
+          "delayTicks": 0,
+          "cycleCommands": false
         }
       },
       {
@@ -280,7 +293,8 @@
         "action": {
           "type": "COMMAND",
           "command": "/kubejs reload server-scripts",
-          "delayTicks": 0
+          "delayTicks": 0,
+          "cycleCommands": false
         }
       },
       {
@@ -290,7 +304,8 @@
         "action": {
           "type": "COMMAND",
           "command": "/kubejs reload startup-scripts",
-          "delayTicks": 0
+          "delayTicks": 0,
+          "cycleCommands": false
         }
       },
       {
@@ -301,7 +316,8 @@
         "action": {
           "type": "COMMAND",
           "command": "/reload",
-          "delayTicks": 0
+          "delayTicks": 0,
+          "cycleCommands": false
         }
       }
     ]

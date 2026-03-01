@@ -472,3 +472,30 @@ ClientEvents.generateAssets("after_mods", event => {
 		}
 	})
 })
+
+
+if (Platform.isLoaded("constructionstick")) {
+	// Imitate what it does here on the JEI side, but not EMI's for some reaosn.
+	// https://github.com/Mrbysco/ConstructionSticks/blob/main/src/main/java/mrbysco/constructionstick/integrations/jei/ConstructionStickJeiPlugin.java
+	RecipeViewerEvents.addInformation("item", event => {
+		const COMMON_DESCRIPTION =
+`Open the configuration screen with the bound %s key.
+Press the %s key to limit what axis the blocks are going to be placed into (Horizontal, Vertical, North/South, East/West, No lock).
+
+§5§nUNDO§0§r
+Holding down the %s key while looking at a blocks will show you the last blocks you placed with a green border around them. Pressing the %s key while looking at any of them will undo the operation, giving you all the items back.
+
+§5§nCONTAINERS§0§r
+Shulker boxes, bundles, and many containers from other mods can provide building blocks for the stick.
+
+§5§nOFFHAND PRIORITY§0§r
+Having blocks in your offhand will place those, instead of the block you're looking at.`
+
+		event.add("#constructionstick:construction_sticks", Text.translatable(COMMON_DESCRIPTION, [
+			Text.translatable("key.constructionstick.change_upgrade").color("blue"),
+			Text.translatable("key.constructionstick.open_gui").color("blue"),
+			Text.translatable("key.constructionstick.show_previous").color("blue"),
+			Text.translatable("key.constructionstick.undo").color("blue"),
+		]))
+	})
+}

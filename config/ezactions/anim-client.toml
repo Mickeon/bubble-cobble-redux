@@ -12,7 +12,7 @@
 	#Menu open/close animation duration in milliseconds (0..2000).
 	# Default: 125
 	# Range: 0 ~ 2000
-	openCloseMs = 200
+	openCloseMs = 250
 	#Open/close style: WIPE, FADE, NONE
 	openStyle = "WIPE"
 	#Wipe direction: CW or CCW

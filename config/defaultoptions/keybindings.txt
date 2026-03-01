@@ -81,6 +81,10 @@ key_key.shouldersurfing.toggle_camera_coupling:key.keyboard.unknown:
 key_key.shouldersurfing.toggle_x_offset_presets:key.keyboard.unknown:
 key_key.shouldersurfing.toggle_y_offset_presets:key.keyboard.unknown:
 key_key.shouldersurfing.toggle_z_offset_presets:key.keyboard.unknown:
+key_key.shouldersurfing.enter_first_person:key.keyboard.unknown:
+key_key.shouldersurfing.enter_third_person_front:key.keyboard.unknown:
+key_key.shouldersurfing.enter_third_person_back:key.keyboard.unknown:
+key_key.shouldersurfing.enter_shoulder_surfing:key.keyboard.unknown:
 key_gui.xaero_minimap_settings:key.keyboard.unknown:
 key_gui.xaero_zoom_in:key.keyboard.keypad.add:
 key_gui.xaero_zoom_out:key.keyboard.keypad.subtract:
@@ -196,10 +200,10 @@ key_key.cpm.qa_3:key.keyboard.unknown:
 key_key.cpm.qa_4:key.keyboard.unknown:
 key_key.ezactions.open:key.keyboard.grave.accent:
 key_key.ezactions.open_editor:key.keyboard.keypad.7:
-key_key.ezactions.bundle.map...:key.keyboard.j:
+key_key.ezactions.bundle.map...:key.keyboard.m:SHIFT
 key_key.ezactions.bundle.configs...:key.keyboard.f4:
 key_key.ezactions.bundle.advanced...:key.keyboard.unknown:
-key_key.ezactions.bundle.storage...:key.keyboard.g:
+key_key.ezactions.bundle.storage...:key.keyboard.b:SHIFT
 key_key.ezactions.bundle.toggles...:key.keyboard.f2:
 key_key.jade.show_overlay:key.keyboard.unknown:
 key_key.jade.toggle_liquid:key.keyboard.unknown:
