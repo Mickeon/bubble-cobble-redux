@@ -176,7 +176,8 @@
     "com.simibubi.create.content.logistics.stockTicker.StockKeeperRequestScreen": true,
     "com.simibubi.create.content.trains.station.StationScreen": true,
     "com.simibubi.create.content.trains.station.AssemblyScreen": true,
-    "com.simibubi.create.content.trains.schedule.ScheduleScreen": true
+    "com.simibubi.create.content.trains.schedule.ScheduleScreen": true,
+    "org.z2six.ezactions.gui.editor.config.RadialPreviewScreen": true
   },
   "hideBackground": {
     "dev.emi.emi.screen.RecipeScreen": false,

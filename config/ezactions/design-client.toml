@@ -23,6 +23,20 @@ scalePerItem = 6
 # Range: > -2147483648
 ringColor = -1442840544
 #Hover ARGB color as int (0xAARRGGBB).
-# Default: -917436
+# Default: -260781
 # Range: > -2147483648
 hoverColor = -9584396
+#Design style: SOLID, SEGMENTED, OUTLINE, GLASS.
+designStyle = "SOLID"
+#Gap between slices in degrees (0..12).
+# Default: 0
+# Range: 0 ~ 12
+sliceGapDeg = 0
+#Border ARGB color as int (0xAARRGGBB).
+# Default: 1728053247
+# Range: > -2147483648
+borderColor = 1728053247
+#Center text ARGB color as int (0xAARRGGBB).
+# Default: -1
+# Range: > -2147483648
+textColor = -1

@@ -7,3 +7,5 @@
 	# Default: 5
 	# Range: 1 ~ 20
 	commandEditorVisibleLines = 5
+	#Show the center text label for the currently hovered radial item.
+	showRadialHoverLabel = true

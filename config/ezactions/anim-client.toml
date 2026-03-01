@@ -13,3 +13,9 @@
 	# Default: 125
 	# Range: 0 ~ 2000
 	openCloseMs = 200
+	#Open/close style: WIPE, FADE, NONE
+	openStyle = "WIPE"
+	#Wipe direction: CW or CCW
+	openDirection = "CW"
+	#Hover style: FILL_SCALE, FILL_ONLY, SCALE_ONLY, NONE
+	hoverStyle = "FILL_SCALE"
