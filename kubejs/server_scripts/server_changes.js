@@ -200,6 +200,52 @@ ServerEvents.tick(event => {
 	})
 })
 
+// Allow carrying Noteblocks.
+BlockEvents.rightClicked(["minecraft:note_block"], event => {
+	if (!event.item.isEmpty()) {
+		return
+	}
+
+	const player = event.player
+	const carry_on_data = player.getCarryOnData()
+	if (!carry_on_data.isKeyPressed() || event.hitResult.distanceTo(player) > 2.5) {
+		return
+	}
+
+	const level_block = event.block
+	carry_on_data.setBlock(level_block.getBlockState(), null)
+	player.setCarryOnData(carry_on_data)
+
+	play_sound_globally(event.level, level_block.getPos().getCenter(), level_block.getBlock().getSoundType().getBreakSound(), "blocks", 1, 0.5)
+	level_block.setBlockState(Blocks.AIR)
+
+	event.cancel()
+})
+
+// Allow tuning down Noteblocks.
+BlockEvents.rightClicked("minecraft:note_block", event => {
+	const player = event.player
+	if (!player.isShiftKeyDown()) {
+		return
+	}
+
+	const level = event.level
+	const level_block = event.block
+	const block_pos = level_block.getPos()
+	const block_state = level_block.getBlockState()
+	const properties = level_block.getProperties()
+	const block = /** @type {import("net.minecraft.world.level.block.NoteBlock").$NoteBlock$$Type} */ (level_block.getBlock())
+
+	const current_note = Number.parseInt(properties.get("note"))
+	const new_note = (current_note - 1.0 + 24) % 24
+	properties.put("note",  new_note.toString())
+
+	level_block.setBlockState(Block.withProperties(block_state, properties))
+	level.blockEvent(block_pos, block, 0, 0)
+
+	event.cancel()
+})
+
 // As food takes less time to eat on average, add a cooldown to prevent misclicks.
 const MINECRAFT_EAT_TIME_TICKS = 32
 ItemEvents.foodEaten(event => {
