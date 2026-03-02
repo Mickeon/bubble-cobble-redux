@@ -49,8 +49,7 @@
         "!config/moveslikemafuyu_config.toml",
         "!config/smartkeyprompts_config.toml",
         "!config/sourcecubed-common.toml",
-        "!config/waves-common.toml",
-        "!config/waves",
+        "!config/waves*",
         "!config/parcool*",
         "!config/presencefootsteps/userconfig.json",
         "!config/better-damage-indicator.json",
@@ -59,8 +58,12 @@
         "!config/chatnotify.json",
         "!config/open_in_inventory.json",
         "!config/undertale_death_screen.json",
-        "!*locomotionmap.json",
-        "!*create_dragons_plus*"
+        "!config/blockbox-common.toml",
+        "!config/ponderer*",
+        "!config/measurements-client.toml",
+        "!config/ixeris.toml",
+        "!config/item_descriptions.toml",
+        "!*locomotionmap.json"
     ],
     "paths": {
         "resource_packs": "global_packs/resourcepacks/",

@@ -11,6 +11,10 @@
 		},
 		{
 			"id": "toomanyrecipeviewers:/create/potion_of_luck1"
+		},
+		{
+			"id": "/sophisticatedstorage:.*maincolor/",
+			"category": "minecraft:crafting"
 		}
 	]
 }

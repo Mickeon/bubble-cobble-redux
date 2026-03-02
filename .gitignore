@@ -93,5 +93,8 @@
 /config/open_in_inventory.json
 /config/undertale_death_screen.json
 /config/blockbox-common.toml
+/config/ponderer*
+/config/measurements-client.toml
+/config/ixeris.toml
+/config/item_descriptions.toml
 *locomotionmap.json
-*create_dragons_plus*

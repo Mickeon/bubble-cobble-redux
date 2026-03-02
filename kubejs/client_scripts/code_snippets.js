@@ -1,22 +1,23 @@
 // requires: probejs
 // requires: cobblemon
-/** @type {typeof import("com.cobblemon.mod.common.api.pokemon.PokemonSpecies").$PokemonSpecies } */
-let $PokemonSpecies  = Java.loadClass("com.cobblemon.mod.common.api.pokemon.PokemonSpecies")
-/** @type {typeof import("com.cobblemon.mod.common.pokemon.properties.PropertiesCompletionProvider").$PropertiesCompletionProvider } */
-let $PropertiesCompletionProvider  = Java.loadClass("com.cobblemon.mod.common.pokemon.properties.PropertiesCompletionProvider")
-/** @type {typeof import("com.cobblemon.mod.common.api.abilities.Abilities").$Abilities } */
-let $Abilities  = Java.loadClass("com.cobblemon.mod.common.api.abilities.Abilities")
-
-/**
- * @import {$Stream} from "java.util.stream.Stream"
- * @import {$Snippet} from "moe.wolfgirl.probejs.lang.snippet.Snippet"
- */
 
 // If ProbeJS is installed and `/probejs dump` is executed,
 // these additional snippets become available in Visual Studio Code.
 // Useful when I don't remember how to spell Fezandipiti.
 
 ProbeEvents.snippets(event => {
+	/** @type {typeof import("com.cobblemon.mod.common.api.pokemon.PokemonSpecies").$PokemonSpecies } */
+	let $PokemonSpecies  = Java.loadClass("com.cobblemon.mod.common.api.pokemon.PokemonSpecies")
+	/** @type {typeof import("com.cobblemon.mod.common.pokemon.properties.PropertiesCompletionProvider").$PropertiesCompletionProvider } */
+	let $PropertiesCompletionProvider  = Java.loadClass("com.cobblemon.mod.common.pokemon.properties.PropertiesCompletionProvider")
+	/** @type {typeof import("com.cobblemon.mod.common.api.abilities.Abilities").$Abilities } */
+	let $Abilities  = Java.loadClass("com.cobblemon.mod.common.api.abilities.Abilities")
+
+	/**
+	 * @import {$Stream} from "java.util.stream.Stream"
+	 * @import {$Snippet} from "moe.wolfgirl.probejs.lang.snippet.Snippet"
+	 */
+
 	/** @param {string} name @param {string} prefix @param {$Stream} stream @param {string} description */
 	function snippet_from_string_stream(name, prefix, stream, description) {
 		event.create(name, snippet => {
@@ -37,6 +38,8 @@ ProbeEvents.snippets(event => {
 		let all_advancements = Client.getSingleplayerServer().getAdvancements().getAllAdvancements()
 		snippet_from_string_stream("minecraft$$advancement", "@advancement", all_advancements.stream().map(advancement => advancement.toString()))
 	}
+
+	ProbeJS.captureType("com.cobblemon.mod.common.api.events.CobblemonEvents")
 })
 
 // ProbeEvents.assignType(event => {
