@@ -4820,7 +4820,7 @@
             ]
         },
         {
-            "pakku_id": "VdaMvMbtfhQQ5wmg",
+            "pakku_id": "Gp8OqbxWEf8EGWUz",
             "type": "MOD",
             "side": "BOTH",
             "slug": {
@@ -4835,7 +4835,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "geckolib-neoforge-1.21.1-4.8.3.jar",
+                    "file_name": "geckolib-neoforge-1.21.1-4.8.4.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -4843,16 +4843,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/8BmcQJ2H/versions/lWsXauBN/geckolib-neoforge-1.21.1-4.8.3.jar",
-                    "id": "lWsXauBN",
+                    "url": "https://cdn.modrinth.com/data/8BmcQJ2H/versions/gFmrC8Ru/geckolib-neoforge-1.21.1-4.8.4.jar",
+                    "id": "gFmrC8Ru",
                     "parent_id": "8BmcQJ2H",
                     "hashes": {
-                        "sha512": "4b8f3bcdc04450aa97af136353341f136921259f16f2363f3cfe77956860455f27c38f9701b3f0e8a78ea86067411ecd35d391803b753276934057481e770556",
-                        "sha1": "fb0ac6ad63dc5f401c15c66a037c08e9709d1c42"
+                        "sha512": "340d96149a04c57c09485f5b1c69e7f8ec3b68223c618e38b7d84c58f4280dcba3d0e9480b8fc79735d9ef5fd7da5fc8f3081d575bf4bbcd2c44b6dcf21d98c0",
+                        "sha1": "eb854c8ec53ef922a5f3877a1aa4c1ce1352e0ce"
                     },
                     "required_dependencies": [],
-                    "size": 622121,
-                    "date_published": "2026-01-04T07:23:41.319169Z"
+                    "size": 622582,
+                    "date_published": "2026-03-03T20:06:25.035771Z"
                 }
             ]
         },
