@@ -1,3 +1,5 @@
+/** @type {typeof import("com.cobblemon.mod.common.api.events.CobblemonEvents").$CobblemonEvents } */
+let $CobblemonEvents  = Java.loadClass("com.cobblemon.mod.common.api.events.CobblemonEvents")
 /** @type {typeof import("net.neoforged.neoforge.event.brewing.RegisterBrewingRecipesEvent").$RegisterBrewingRecipesEvent } */
 let $RegisterBrewingRecipesEvent  = Java.loadClass("net.neoforged.neoforge.event.brewing.RegisterBrewingRecipesEvent")
 /** @type {typeof import("net.minecraft.world.entity.animal.CatVariant").$CatVariant } */
@@ -299,29 +301,23 @@ NativeEvents.onEvent($ItemStackedOnOtherEvent, event => {
 	}
 })
 
-// Dead code.
-// const ForgeRegistries = Java.loadClass("net.minecraftforge.registries.ForgeRegistries")
-// ForgeEvents.onEvent("net.minecraftforge.event.entity.living.MobEffectEvent$Added", event => {
-// 	// event.effectInstance.effect gives you the actual MobEffect you can check against.
+// Pokemon Egg hatching effect.
+if (global.on_hatch_egg_pre) {
+	global.on_hatch_egg_pre.unsubscribe()
+}
+global.on_hatch_egg_pre = $CobblemonEvents.HATCH_EGG_PRE.subscribe(event => {
+	const player = event.player
+	if (!player) {
+		return
+	}
 
-// 	const effect_id = ForgeRegistries.MOB_EFFECTS.getKey(event.effectInstance.effect)
-// 	const effect_source_username = event?.effectSource?.username
+	player.playNotifySound("minecraft:block.sniffer_egg.hatch", "neutral", 1.0, player.getRandom().triangle(1.0, 0.2))
+	player.level.spawnParticles(`minecraft:item{item:{id: "cobbreeding:pokemon_egg"}}`, false, player.x, player.eyeY, player.z, 0.1, 0.1, 0.1, 20, 0.2)
 
-// 	Utils.server.tell(effect_id)
+	const pokemon = event.egg
+	if (pokemon && pokemon.getShiny()) {
+		player.playNotifySound("minecraft:entity.firework_rocket.twinkle", "neutral", 1.0, player.getRandom().triangle(1.5, 0.2))
+		player.level.spawnParticles("biomeswevegone:borealis_glint", false, player.x, player.eyeY, player.z, 0.1, 0.1, 0.1, 60, 1)
+	}
+})
 
-// 	// if (effectId == "alexsmobs:lava_vision") {
-// 		// 	event.entity.potionEffects.add("minecraft:haste", effectDuration)
-// 	// }
-// 	if (effect_id == "alexsmobs:lava_vision" && effect_source_username == "Mickeon") {
-// 		event.effectSource.potionEffects.add("gohome:recall_potion")
-// 	}
-
-// })
-// ForgeEvents.onEvent("net.minecraftforge.event.entity.living.MobEffectEvent$Applicable", event => {
-// 	const effect_id = ForgeRegistries.MOB_EFFECTS.getKey(event.effectInstance.effect)
-// 	Utils.server.tell(effect_id)
-// });
-
-// StartupEvents.postInit(event => {
-// 	// Java.loadClass("cloud.viniciusith.gohome.effect.RecallEffect")
-// })
