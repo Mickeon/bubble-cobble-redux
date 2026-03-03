@@ -29,6 +29,10 @@
   "dimensionSettings": {
     "fallbackDimensionIcon": "unknown",
     "dimensionData": {
+      "raid_dimension": {
+        "textOverride": "in the {dimension.name}",
+        "iconOverride": "https://media1.tenor.com/m/ENxJCSByKz8AAAAC/face-grab-furry.gif"
+      },
       "default": {
         "textOverride": "in the {dimension.name}"
       }
@@ -130,13 +134,19 @@
       "useAsMain": false,
       "isInstance": false,
       "activityType": 0,
+      "statusDisplayType": 0,
       "partyPrivacy": 0,
       "details": "{getFirst(menu.message, custom.ingame_status)}",
+      "detailsUrl": "",
       "gameState": "{getOrDefault(server.message)}",
+      "gameStateUrl": "",
+      "appName": "",
       "largeImageKey": "{getFirst(menu.icon, dimension.icon, server.default.icon, pack.icon, general.icon)}",
       "largeImageText": "{getFirst(menu.message, custom.forecast_base)}",
+      "largeImageUrl": "",
       "smallImageKey": "{getOrDefault(player.icon)}",
       "smallImageText": "{entity.riding.message ? entity.riding.message + ', ' : ''}{item.main_hand.message}",
+      "smallImageUrl": "",
       "startTimestamp": "{data.general.time}",
       "endTimestamp": "",
       "buttons": {
