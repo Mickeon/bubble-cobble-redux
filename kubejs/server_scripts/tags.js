@@ -164,6 +164,24 @@ ServerEvents.tags("item", event => {
 
 	// Bugged.
 	event.add("supplementaries:cannon_blacklist", "#comforts:sleeping_bags")
+
+	// Note that these also require specific definitions in the `seasonings` data folder.
+	event.add("cobblemon:recipe_filters/tea_seasoning",
+		"arts_and_crafts:bleachdew",
+		"create:builders_tea",
+		"farmersdelight:hot_cocoa",
+		"farmersdelight:milk_bottle",
+		"kubejs:blue_mascot_cat",
+		"minersdelight:milk_cup",
+		"supplementaries:soap",
+	)
+	event.add("cobblemon:recipe_filters/nutrition_seasoning",
+		"arts_and_crafts:bleachdew",
+		"supplementaries:soap",
+		"brewinandchewin:apple_jelly",
+		"brewinandchewin:glow_berry_marmalade",
+		"brewinandchewin:sweet_berry_jam",
+	)
 })
 
 ServerEvents.tags("block", event => {

@@ -1,0 +1,18 @@
+{
+	"ingredient": "create:builders_tea",
+	"colour": "orange",
+	"food": {
+		"hunger": 1,
+		"saturation": 1.2
+	},
+	"mobEffects": [
+		{
+			"effect": "minecraft:haste",
+			"duration": 3600,
+			"amplifier": 0,
+			"ambient": false,
+			"visible": true,
+			"showIcon": true
+		}
+	]
+}

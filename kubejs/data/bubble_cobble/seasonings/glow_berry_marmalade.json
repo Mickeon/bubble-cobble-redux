@@ -1,0 +1,8 @@
+{
+	"ingredient": "brewinandchewin:glow_berry_marmalade",
+	"colour": "orange",
+	"food": {
+		"hunger": 2,
+		"saturation": 2.4
+	}
+}

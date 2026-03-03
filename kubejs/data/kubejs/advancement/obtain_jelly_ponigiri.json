@@ -1,0 +1,71 @@
+{
+  "$schema": "https://www.schemastore.org/minecraft-advancement.json",
+  "parent": "cobblemon:place_campfire_pot",
+  "display": {
+    "icon": {
+      "id": "cobblemon:ponigiri",
+      "components": {
+        "cobblemon:food_color": [
+          "red"
+        ]
+      }
+    },
+    "title": {
+			"text": "Nothing Beats a Jelly-Filled Doughnut!",
+			"underlined": true,
+			"clickEvent": {
+				"action": "open_url",
+				"value": "https://www.youtube.com/watch?v=2K31Hj1Oz1g"
+			}
+		},
+    "description": "Eat a Ponigiri with just a PINCH of jam, jelly, marmalade, what have you"
+  },
+  "criteria": {
+    "apple_jelly": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "cobblemon:ponigiri",
+          "components": {
+            "cobblemon:ingredient": [
+              "brewinandchewin:apple_jelly"
+            ]
+          }
+        }
+      }
+    },
+    "glow_berry_marmalade": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "cobblemon:ponigiri",
+          "components": {
+            "cobblemon:ingredient": [
+              "brewinandchewin:glow_berry_marmalade"
+            ]
+          }
+        }
+      }
+    },
+    "sweet_berry_jam": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "cobblemon:ponigiri",
+          "components": {
+            "cobblemon:ingredient": [
+              "brewinandchewin:sweet_berry_jam"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "apple_jelly",
+      "glow_berry_marmalade",
+      "sweet_berry_jam"
+    ]
+  ]
+}

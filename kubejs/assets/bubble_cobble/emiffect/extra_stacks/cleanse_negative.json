@@ -20,6 +20,11 @@
 			"type": "item",
 			"id": "cobblemon:white_herb",
 			"nbt": "{lore: ['{text:\"Infused in Sinister Tea\", color: \"green\", italic: false}']}"
+		},
+		{
+			"type": "item",
+			"id": "farmersdelight:hot_cocoa",
+			"nbt": "{lore: ['{text:\"Infused in Sinister Tea\", color: \"green\", italic: false}']}"
 		}
 	]
 }

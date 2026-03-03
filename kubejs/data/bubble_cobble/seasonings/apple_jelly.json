@@ -1,0 +1,8 @@
+{
+	"ingredient": "brewinandchewin:apple_jelly",
+	"colour": "yellow",
+	"food": {
+		"hunger": 6,
+		"saturation": 5.0
+	}
+}

@@ -1,0 +1,8 @@
+{
+	"ingredient": "brewinandchewin:sweet_berry_jam",
+	"colour": "red",
+	"food": {
+		"hunger": 2,
+		"saturation": 2.4
+	}
+}

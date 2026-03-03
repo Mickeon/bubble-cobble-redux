@@ -20,6 +20,21 @@
 			"type": "item",
 			"id": "cobblemon:moomoo_milk",
 			"nbt": "{lore: ['{text:\"Infused in Sinister Tea\", color: \"green\", italic: false}']}"
+		},
+		{
+			"type": "item",
+			"id": "minecraft:milk_bucket",
+			"nbt": "{lore: ['{text:\"Infused in Sinister Tea\", color: \"green\", italic: false}']}"
+		},
+		{
+			"type": "item",
+			"id": "farmersdelight:milk_bottle",
+			"nbt": "{lore: ['{text:\"Infused in Sinister Tea\", color: \"green\", italic: false}']}"
+		},
+		{
+			"type": "item",
+			"id": "minersdelight:milk_cup",
+			"nbt": "{lore: ['{text:\"Infused in Sinister Tea\", color: \"green\", italic: false}']}"
 		}
 	]
 }

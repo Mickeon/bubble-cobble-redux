@@ -1,0 +1,22 @@
+{
+	"ingredient": "kubejs:blue_mascot_cat",
+	"colour": "light_blue",
+	"mobEffects": [
+		{
+			"effect": "farmersdelight:comfort",
+			"duration": 1200,
+			"amplifier": 0,
+			"ambient": false,
+			"visible": true,
+			"showIcon": true
+		},
+		{
+			"effect": "mowziesmobs:frozen",
+			"duration": 60,
+			"amplifier": 0,
+			"ambient": false,
+			"visible": true,
+			"showIcon": true
+		}
+	]
+}
