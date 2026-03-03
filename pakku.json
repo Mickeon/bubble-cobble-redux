@@ -39,6 +39,7 @@
         "!config/chunky/tasks",
         "!config/waterframes-client.toml",
         "!config/aiutd-enduser.json5",
+        "!config/cobbreeding/encryption",
 
         "!*/jsconfig.json",
         "!kubejs/config/probe-settings.json",
