@@ -2,6 +2,7 @@
   "foodItems": {
     "entries": [
       "{id:\"item\",item:\"cobblemon:ice_stone\"}",
+      "{id:\"item\",item:\"cobblemon:sinister_tea\"}",
       "{id:\"item\",item:\"create:polished_rose_quartz\"}",
       "{id:\"item\",item:\"create:rose_quartz\"}",
       "{id:\"item\",item:\"biomesoplenty:cattail\"}",
@@ -10,6 +11,7 @@
       "{id:\"item\",item:\"kubejs:doublemint_gum\"}",
       "{id:\"item\",item:\"kubejs:horse_urine_bottle\"}",
       "{id:\"item\",item:\"kubejs:super_ghostbusters\"}",
+      "{id:\"item\",item:\"supplementaries:soap\"}",
       "{id:\"itemtag\",tag:\"origins:ignore_diet\"}",
       "{id:\"itemtag\",tag:\"c:drinks/tea\"}"
     ],

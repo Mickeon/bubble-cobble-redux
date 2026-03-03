@@ -64,6 +64,7 @@ ServerEvents.tags("item", event => {
 	event.add("c:nuggets", "minecraft:copper_nugget", "#c:nuggets/industrial_iron", "#c:nuggets/netherite") // Reported: https://github.com/talrey/CreateDeco/issues/234 , but not the copper nuggets.
 	event.add("c:plates", "#c:plates/industrial_iron")
 	event.add("c:ingots", "#c:ingots/industrial_iron")
+	event.add("c:tools/spear", "#minecraft:spears")
 	event.add("c:storage_blocks", "#c:storage_blocks/industrial_iron")
 	event.add("c:storage_blocks/industrial_iron", "create:industrial_iron_block")
 	event.add("minecraft:piglin_loved", "solonion:golden_lunchbox", "handcrafted:golden_thin_pot", "handcrafted:golden_thick_pot", "handcrafted:golden_wide_pot", "handcrafted:golden_medium_pot") //Reported: https://github.com/terrarium-earth/Handcrafted/issues/152
@@ -164,6 +165,13 @@ ServerEvents.tags("item", event => {
 
 	// Bugged.
 	event.add("supplementaries:cannon_blacklist", "#comforts:sleeping_bags")
+
+	// Entirely redundant and confusing.
+	event.removeAll("c:foods/cooked_meats") // Deprecated version of `c:foods/cooked_meat`
+	event.removeAll("c:foods/fruits") // Deprecated version of `c:foods/fruit`
+	event.removeAll("c:foods/soups") // Deprecated version of `c:foods/soup`
+	event.removeAll("c:foods/cooked_fishes") // Deprecated version of `c:foods/cooked_fish`
+	event.removeAll("c:tools/spears") // Deprecated version of `c:tools/spear`
 
 	// Note that these also require specific definitions in the `seasonings` data folder.
 	event.add("cobblemon:recipe_filters/tea_seasoning",
