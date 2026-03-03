@@ -1345,6 +1345,49 @@
             ]
         },
         {
+            "pakku_id": "IH2m3VQIpKKIyNSh",
+            "pakku_links": [
+                "QYs6nSzVrLPKS2FG"
+            ],
+            "type": "MOD",
+            "side": "CLIENT",
+            "slug": {
+                "modrinth": "cleaner-tooltips"
+            },
+            "name": {
+                "modrinth": "Cleaner Tooltips"
+            },
+            "id": {
+                "modrinth": "OhlfsTuE"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "cleanertooltips-neoforge-1.21.1-1.1.3.jar",
+                    "mc_versions": [
+                        "1.21",
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/OhlfsTuE/versions/dSTq00tx/cleanertooltips-neoforge-1.21.1-1.1.3.jar",
+                    "id": "dSTq00tx",
+                    "parent_id": "OhlfsTuE",
+                    "hashes": {
+                        "sha512": "af074793f1395c9d1328d8946bbee51b1c9c5ff8e1417ebf133a01bd153029ec2c21a26288e1f607cec172ed991ee91db5b340c3624be849958de2257d3a4fef",
+                        "sha1": "aa5d70638616830671d6243ae02387c24261b605"
+                    },
+                    "required_dependencies": [
+                        "9s6osm5g"
+                    ],
+                    "size": 44886,
+                    "date_published": "2026-02-13T06:42:40.635841Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "5sT7u1Oz8N36DsKq",
             "type": "MOD",
             "side": "CLIENT",

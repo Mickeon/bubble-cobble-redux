@@ -198,6 +198,11 @@ StartupEvents.registry("attribute", event => {
 		.sentiment("positive")
 		.displayName(Text.of(`Air Dash`)
 	)
+	if (Platform.isLoaded("cleanertooltips")) {
+		let $CleanerTooltipsUtil = Java.loadClass("net.twentyytwo.cleanertooltips.util.CleanerTooltipsUtil")
+		let $AttributeDisplayType = Java.loadClass("net.twentyytwo.cleanertooltips.util.AttributeDisplayType")
+		$CleanerTooltipsUtil.ATTRIBUTE_DISPLAY_MAP.put(ID.of("dash_jump_count", true), $AttributeDisplayType.DIFFERENCE)
+	}
 })
 
 // Funniest thing imaginable.

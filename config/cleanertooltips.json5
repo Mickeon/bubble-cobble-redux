@@ -1,0 +1,10 @@
+{
+	"enabled": true,
+	"sharpness": true,
+	"hiddenAttributesHint": true,
+	"miningSpeed": true,
+	"durability": false,
+	"durabilityPos": "INLINE",
+	"showMaximumDurability": true,
+	"durabilityColor": true
+}
