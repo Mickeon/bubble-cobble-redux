@@ -27,7 +27,11 @@
     "valkyrienskies": false,
     "minecraft:arrow": false,
     "create": false,
-    "minecraft:ender_dragon": false
+    "minecraft:ender_dragon": false,
+    "bits_n_bobs:inert_stationary_contraption": false,
+    "yo_hooks:hook_entity": false,
+    "cobblemon:poke_bobber": false,
+    "cobblemon:empty_pokeball": false
   },
   "cullProjectiles": false,
   "version": 2,

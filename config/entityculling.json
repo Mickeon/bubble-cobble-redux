@@ -63,7 +63,16 @@
     "cobblemon:empty_pokeball",
     "cobblemon:boat",
     "cobblemon:chest_boat",
-    "cobblemon:poke_bobber"
+    "cobblemon:poke_bobber",
+    "bits_n_bobs:inert_stationary_contraption",
+    "yo_hooks:hook_entity",
+    "biomeswevegone:boat",
+    "biomeswevegone:chest_boat",
+    "biomesoplenty:boat",
+    "biomesoplenty:chest_boat",
+    "arts_and_crafts:boat",
+    "arts_and_crafts:chest_boat",
+    "supplementaries:cannon_boat"
   ],
   "disableF3": false,
   "skipEntityCulling": false,
