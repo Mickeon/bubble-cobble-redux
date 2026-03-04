@@ -49,7 +49,7 @@ ServerEvents.tags("item", event => {
 	event.add("c:drinks", "#c:drinks/tea", "create_bic_bit:ketchup_bottle", "create_bic_bit:mayonnaise_bottle", "create_bic_bit:frying_oil_bottle") // Reported: https://discord.com/channels/1141667941935501442/1448294211542716550/1448294211542716550
 	event.add("c:drinks/tea", "herbalbrews:green_tea", "herbalbrews:black_tea", "herbalbrews:hibiscus_tea", "herbalbrews:lavender_tea", "herbalbrews:rooibos_tea", "herbalbrews:oolong_tea", "herbalbrews:yerba_mate_tea") // TODO: Report this.
 	event.add("c:drinks/juice", "kubejs:berry_juice_soda", "biomeswevegone:aloe_vera_juice")
-	event.add("supplementaries:statue_swords", "#minecraft:swords")
+	event.add("supplementaries:statue_swords", "#minecraft:swords", "#minecraft:spears")
 	event.add("cobblemon:water_stone_ores", "mega_showdown:mega_meteorid_water_ore") // Reported: https://github.com/yajatkaul/CobblemonMegaShowdown/issues/144
 	event.add("cobblemon:dawn_stone_ores", "mega_showdown:mega_meteorid_dawn_ore")
 	event.add("cobblemon:dusk_stone_ores", "mega_showdown:mega_meteorid_dusk_ore")
@@ -87,6 +87,9 @@ ServerEvents.tags("item", event => {
 	event.add("c:drinks/milk", "minersdelight:milk_cup")
 	event.add("c:foods/milk", "minersdelight:milk_cup", "cobblemon:moomoo_milk") // Deprecated tag.
 	event.add("cobblemon:pokedex_screen", "mowziesmobs:glowing_jelly")
+	event.add("supplementaries:pedestal_downright", "#c:tools/spear")
+	event.add("supplementaries:pedestal_upright", "#c:tools/knives", "mega_showdown:rusted_sword")
+	event.add("supplementaries:statue_tools", "#yo_hooks:enchantable/hooks", "#constructionstick:construction_sticks", "minecraft:mace", "kubejs:trowel", "kubejs:ruler")
 
 	// Makes sense.
 	event.add("c:tools", "#constructionstick:construction_sticks", "#yo_hooks:enchantable/hooks")
