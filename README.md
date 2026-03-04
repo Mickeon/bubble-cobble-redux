@@ -36,11 +36,13 @@ As it stands, the modpack includes exclusive features, such as:
 - [Advancement Plaques](https://modrinth.com/mod/9NM0dXub) by Grend
 - [Advancements Reloaded](https://modrinth.com/mod/tLuRLqpa) by @42atomys
 - [Almanac](https://modrinth.com/mod/Gi02250Z) by frikinjay
+- [Am I Up To Date?](https://modrinth.com/mod/tgacmJEn) by VesMaybeVesper
 - [Amendments](https://modrinth.com/mod/6iTJugQR) by MehVahdJukaar, Plantkillable
 - [AppleSkin](https://modrinth.com/mod/EsAfCjCV) by squeek
 - [Architectury](https://modrinth.com/mod/lhGA9TYQ) by shedaniel
 - [Armor Statues](https://modrinth.com/mod/bbGCtEvb) by Fuzs
 - [Arrow Trails](https://modrinth.com/mod/hXZ3rcle) by Biverom
+- [Artifacts](https://modrinth.com/mod/P0Mu4wcQ) by ochotonida
 - [Arts & Crafts](https://modrinth.com/mod/JI9mEkvq) by KekeCreations and Stellari\!
 - [AsyncParticles](https://modrinth.com/mod/c3onkd5k) by Harvey\_Husky
 - [Awesome dungeon](https://modrinth.com/mod/ptzsjBKT) by JTorLeon Studios
@@ -64,11 +66,13 @@ As it stands, the modpack includes exclusive features, such as:
 - [Chunks Fade In](https://modrinth.com/mod/JaNmzvA8) by kerudion \(koteinik\)
 - [Chunky](https://modrinth.com/mod/fALzjamp) by pop4959
 - [ChunkyBorder](https://modrinth.com/mod/s86X568j) by pop4959
+- [Cleaner Tooltips](https://modrinth.com/mod/OhlfsTuE) by TwentyyTwo
 - [Client Double Doors](https://modrinth.com/mod/oEJ7tKad) by NikoSolstice
 - [Cloth Config v15 API](https://modrinth.com/mod/9s6osm5g) by shedaniel
 - [Clutter No More](https://modrinth.com/mod/ewyjbmG4) by Tazer, Farcr, cassiancc
 - [Cobblemon](https://modrinth.com/mod/MdwFAVRL) by The Cobblemon Team
 - [Cobblemon Capture XP](https://modrinth.com/mod/LBl4Qguc) by timinc aka Timothy Metcalfe
+- [Cobblemon Journey Mounts](https://modrinth.com/mod/Vn5WCYr6) by FactionVoid
 - [Cobblemon Move Inspector](https://modrinth.com/mod/MqcGBDhG) by Starlotte
 - [Cobblemon Raid Dens](https://modrinth.com/mod/GebWh45l) by NecroSo1
 - [Cobblemon: CobbleStats](https://modrinth.com/mod/jlXFcQk4) by Flo\_12344
@@ -81,6 +85,7 @@ As it stands, the modpack includes exclusive features, such as:
 - [Colorwheel](https://modrinth.com/mod/BzHgFoGz) by djefrey
 - [Colorwheel Patcher](https://modrinth.com/mod/KPsw5jDu) by djefrey
 - [Comforts](https://modrinth.com/mod/SaCpeal4) by Illusive Soulworks
+- [Completionist's Index](https://modrinth.com/mod/iSCGCCV1) by Fuzs
 - [Concurrent Chunk Management Engine](https://modrinth.com/mod/COlSi5iR) by RelativityMC, ishland
 - [Configurable](https://modrinth.com/mod/lGffrQ3O) by Bawnorton
 - [Configured Defaults](https://modrinth.com/mod/SISoSFPP) by Fuzs
@@ -93,6 +98,7 @@ As it stands, the modpack includes exclusive features, such as:
 - [Crafting Tweaks](https://modrinth.com/mod/DMu0oBKf) by BlayTheNinth
 - [Crawl](https://modrinth.com/mod/H1JOVjhn) by fewizz
 - [Create](https://modrinth.com/mod/LNytGWDc) by simibubi
+- [Create Bits 'n' Bobs](https://modrinth.com/mod/T8bvmqVZ) by Cake, Kipti, NormalGuy, Astral, Spydnel
 - [Create Cobblemon Balls Overhaul](https://modrinth.com/mod/aXSKKweV) by xKcinnay
 - [Create Deco](https://modrinth.com/mod/sMvUb4Rb) by Kayla, Talrey, Ordana, Cassian
 - [Create Let The Adventure Begin](https://modrinth.com/mod/fUa6OtBG)
@@ -109,6 +115,7 @@ As it stands, the modpack includes exclusive features, such as:
 - [Data Anchor](https://modrinth.com/mod/z2XEADmE) by Corgi Taco
 - [Default Options](https://modrinth.com/mod/WEg59z5b) by BlayTheNinth
 - [Discord & Chat Images](https://modrinth.com/mod/yIWYj2mo) by denisnumb
+- [Display Delight](https://modrinth.com/mod/yXepZhp8) by jkvin114
 - [Drizzleproof](https://modrinth.com/mod/BOFbTsjc) by DavigJ
 - [Dungeons and Taverns](https://modrinth.com/mod/tpehi7ww) by NovaWostra, Konci, Walls
 - [Dungeons and Taverns Jungle Temple Replacement](https://modrinth.com/mod/oHjYCS0f) by NovaWostra, Konci, Walls
@@ -127,6 +134,7 @@ As it stands, the modpack includes exclusive features, such as:
 - [EntityCulling](https://modrinth.com/mod/NNAgCjsB) by tr7zw
 - [Explorer's Compass](https://modrinth.com/mod/RV1qfVQ8) by ChaosTheDude
 - [Extended Hotbar](https://modrinth.com/mod/VNE7B6rB) by denwav
+- [Extended Wrenches](https://modrinth.com/mod/WNRCHiE5) by Vercte
 - [Fallen Logs](https://modrinth.com/mod/v1oDxPXx) by ALDgamer
 - [Farmer's Delight](https://modrinth.com/mod/R2OftAxM) by vectorwing
 - [Ferrite Core](https://modrinth.com/mod/uXXizFIs) by malte0811
@@ -134,6 +142,7 @@ As it stands, the modpack includes exclusive features, such as:
 - [Fog](https://modrinth.com/mod/WuGVWUF2) by IMB11,Steveplays
 - [Fzzy Config](https://modrinth.com/mod/hYykXjDp) by fzzyhmstrs
 - [GPUTape](https://modrinth.com/mod/5CTSrY8X) by mr\_toad
+- [GUI Tween](https://modrinth.com/mod/6aRXFBGk) by remarxk
 - [Gadgets Against Grind](https://modrinth.com/mod/IeYLjzpn) by MaxNeedsSnacks
 - [GeckoLib 4](https://modrinth.com/mod/8BmcQJ2H) by Gecko, Eliot, AzureDoom, DerToaster, Tslat, Witixin
 - [GlitchCore](https://modrinth.com/mod/s3dmwKy5) by Adubbz
@@ -143,6 +152,7 @@ As it stands, the modpack includes exclusive features, such as:
 - [Handcrafted](https://modrinth.com/mod/pJmCFF0p) by Alex Nijjar, Kekie6
 - [Iceberg](https://modrinth.com/mod/5faXoLqX) by Grend
 - [ImmediatelyFast](https://modrinth.com/mod/5ZwdcRci) by RK\_01
+- [Immersive Furniture](https://modrinth.com/mod/SvN6UGeF) by Luke100000
 - [Immersive Optimization](https://modrinth.com/mod/vNZgQmjg) by Luke100000
 - [Immersive Paintings](https://modrinth.com/mod/6txNkua3) by Luke100000
 - [In\-game NBTEdit Reborn](https://modrinth.com/mod/Vr2eDeCw) by qyl27
@@ -154,8 +164,8 @@ As it stands, the modpack includes exclusive features, such as:
 - [Jade Addons](https://modrinth.com/mod/xuDOzCLy) by Snownee
 - [JeremySeq's Damage Indicators](https://modrinth.com/mod/SGJfwZzw) by JeremySeq
 - [JinxedLib](https://modrinth.com/mod/Vrr7WtS4) by KekeCreations
-- [Just Blahaj](https://modrinth.com/mod/NcD25WXU) by toastydoll
 - [Just Hammers](https://modrinth.com/mod/edU0NbZZ) by ErrorMikey
+- [Kiwi Library](https://modrinth.com/mod/ufdDoWPd) by Snownee
 - [Kotlin for Forge](https://modrinth.com/mod/ordsPcFz)
 - [KubeJS](https://modrinth.com/mod/umyGl7zF) by latvian\.dev
 - [KubeJS Create](https://modrinth.com/mod/T38eAZQC) by latvian\.dev
@@ -198,28 +208,36 @@ As it stands, the modpack includes exclusive features, such as:
 - [Particle Rain](https://modrinth.com/mod/nrikgvxm) by pigcart
 - [Particular](https://modrinth.com/mod/pYFUU6cq)
 - [Pehkui](https://modrinth.com/mod/t5W7Jfwy) by Virtuoel
+- [Persistent Creative Inventory](https://modrinth.com/mod/b6Drmxwj) by Snownee
+- [Persistent Inventory Search](https://modrinth.com/mod/KYSUUp57) by Rick South
 - [Player Animator](https://modrinth.com/mod/gedNE4y2) by KosmX
 - [Polymorph](https://modrinth.com/mod/tagwiZkJ) by Illusive Soulworks
 - [PreloadingTricks](https://modrinth.com/mod/FFeAJNCx) by SettingDust
 - [PrickleMC](https://modrinth.com/mod/aaRl8GiW) by Darkhax
 - [ProbeJS](https://www.curseforge.com/projects/585406) by Prunoideae
 - [Puzzles Lib](https://modrinth.com/mod/QAGBst4M) by Fuzs
+- [RAR\-Compat](https://modrinth.com/mod/GnU07giL) by Octo\-Studios
 - [Radical Cobblemon Trainers](https://modrinth.com/mod/lRwTUnD7) by HDainester
 - [Radical Cobblemon Trainers API](https://modrinth.com/mod/CBfM2yw7) by HDainester
+- [Reconnectible Chains](https://modrinth.com/mod/5pzBXDS3) by Evan, legoatoom
 - [Relics](https://modrinth.com/mod/OCJRPujW) by SSKirillSS
 - [Remove Reloading Screen](https://modrinth.com/mod/ZP7xHXtw) by dima\_dencep
 - [Repurposed Structures](https://modrinth.com/mod/QDNS5oAT) by TelepathicGrunt
 - [Repurposed Structures \- Farmer's Delight Compat](https://modrinth.com/mod/P5wB88AS) by TelepathicGrunt
 - [Resource Explorer](https://www.curseforge.com/projects/936066) by Traben
 - [Resource World](https://modrinth.com/mod/ynOPEE9I) by IAFEnvoy
+- [ResourceTrimmer](https://modrinth.com/mod/TVKrCZNh) by Darkhax
 - [Resourceful Lib](https://modrinth.com/mod/G1hIVOrD) by ThatGravyBoat, Epic\_Oreo
 - [Rhino](https://modrinth.com/mod/sk9knFPE) by latvian\.dev, Mozilla
 - [Ribbits](https://modrinth.com/mod/8YcE8y4T) by Joosh, YUNGNICKYOUNG, HellionGames, Refresh Studios
+- [RunicLib](https://modrinth.com/mod/mk0Htq87) by Yirmiri
 - [Saturn](https://modrinth.com/mod/2eT495vq) by AbdElAziz
 - [Searchables](https://modrinth.com/mod/fuuu3xnx) by Jaredlll08
 - [Seasonal Ambiance](https://modrinth.com/mod/aRjMwfjG) by MidnightTale\_
 - [Server I18n API](https://modrinth.com/mod/Cl2eyShu) by IAFEnvoy
+- [ServerCore](https://modrinth.com/mod/4WWQxlQP) by Wesley1808
 - [Shoulder Surfing Reloaded](https://modrinth.com/mod/kepjj2sy) by Exopandora
+- [ShutterUp](https://modrinth.com/mod/xaH4PQRj) by evanbones
 - [Sidekick](https://modrinth.com/mod/goA2JoBi) by unascribed
 - [Simple Voice Chat](https://modrinth.com/mod/9eGKb6K1) by Max Henkel
 - [SimpleTMs](https://modrinth.com/mod/yFqR0DNc)
@@ -245,12 +263,13 @@ As it stands, the modpack includes exclusive features, such as:
 - [TerraBlender](https://modrinth.com/mod/kkmrDlKT) by Adubbz
 - [Tim Core](https://modrinth.com/mod/lVP9aUaY) by timinc aka Timothy Metcalfe
 - [Tips](https://modrinth.com/mod/AMCbgyVw) by Darkhax
-- [Tomtaru's Cobblemon & Farmer's Delights Tweaks](https://modrinth.com/mod/LSnXhPa7) by Tomtaru
+- [Tomtaru's Cobblemon & Farmer's Delight Tweaks](https://modrinth.com/mod/LSnXhPa7) by Tomtaru
 - [TooManyRecipeViewers](https://modrinth.com/mod/yFypjcfd) by Nolij \(@xdMatthewbx\#1337\) & the Craftoria team
 - [TxniLib](https://modrinth.com/mod/vBbPDuOs) by Toni
 - [Underground Bunkers](https://modrinth.com/mod/MRK4tULJ) by Zephyrusjz, Aureljz
 - [Underground Worlds](https://modrinth.com/mod/g9fDJQZe) by HexagonNico
 - [UniLib](https://modrinth.com/mod/nT86WUER) by CDAGaming
+- [Urban Decor](https://modrinth.com/mod/1bLZdx1u) by Yirmiri & aridoitsu
 - [Useful Spyglass](https://modrinth.com/mod/XwvK7Tzg) by BrokenKeyboard
 - [Via Romana](https://modrinth.com/mod/FVToiKwr) by Rasa Novum
 - [Wanderer\_Ribbit](https://modrinth.com/mod/qYSYk2ef) by cosmic\_barri
@@ -272,11 +291,10 @@ As it stands, the modpack includes exclusive features, such as:
 - [eggpreview](https://modrinth.com/mod/T8dZAbPl) by mai\_xiyu
 - [mod\_sets](https://modrinth.com/mod/b313lC4Y)
 - [oωo](https://modrinth.com/mod/ccKDOlHs) by glisco, Blodhgarm, BasiqueEvangelist, Noaaan
-- rarcompat\-1\.21\-0\.9\.7\.jar\.duplicate
 - [small\-doubling](https://modrinth.com/mod/92WiWwBD) by DerErneuerer
 - [smart\-item\-deleter\-V2](https://modrinth.com/mod/bhzgSHHz) by metl\_play
 - [spark](https://modrinth.com/mod/l6YH9Als) by Luck
-- [zamega](https://modrinth.com/mod/2V1Y86sc)
+- [zamega](https://modrinth.com/mod/2V1Y86sc) by Yajat, Navas
 
 </details>
 
