@@ -41,8 +41,3 @@ ProbeEvents.snippets(event => {
 
 	ProbeJS.captureType("com.cobblemon.mod.common.api.events.CobblemonEvents")
 })
-
-// ProbeEvents.assignType(event => {
-// 	ProbeJS.captureType($PokemonSpecies)
-// 	ProbeJS.captureType($PropertiesCompletionProvider)
-// })

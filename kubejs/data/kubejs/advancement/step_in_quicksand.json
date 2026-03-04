@@ -1,5 +1,4 @@
 {
-  "$schema": "https://www.schemastore.org/minecraft-advancement.json",
   "parent": "kubejs:help_for_quicksand",
   "display": {
     "icon": {

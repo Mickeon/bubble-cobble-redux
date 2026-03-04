@@ -16,9 +16,40 @@
         },
         {
             "fileMatch": [
-                "/recipe_schema/*.json"
+                "/advancement/**/*.json"
             ],
-            "url": "./.vscode/recipe.json"
+            "url": "https://www.schemastore.org/minecraft-advancement.json"
+        },
+        {
+            "fileMatch": [
+                "/damage_type/**/*.json"
+            ],
+            "url": "https://www.schemastore.org/minecraft-damage-type.json"
+        },
+        {
+            "fileMatch": [
+                "/tags/**/*.json",
+                "!/export/tags/**/*.json"
+            ],
+            "url": "https://www.schemastore.org/minecraft-tag.json"
+        },
+        {
+            "fileMatch": [
+                "/loot_table/**/*.json"
+            ],
+            "url": "https://www.schemastore.org/minecraft-loot-table.json"
+        },
+        {
+            "fileMatch": [
+                "/assets/**/sounds.json"
+            ],
+            "url": "https://raw.githubusercontent.com/AxoCode/json-schema/master/minecraft/sounds.json"
+        },
+        {
+            "fileMatch": [
+                "pack.mcmeta"
+            ],
+            "url": "https://www.schemastore.org/minecraft-pack-mcmeta.json"
         }
     ],
     "files.trimTrailingWhitespace": true,
@@ -89,6 +120,9 @@
     },
     "[yaml]": {
         "files.trimTrailingWhitespace": false
+    },
+    "[json]": {
+        "editor.insertSpaces": false
     },
     "typescript.surveys.enabled": false
 }

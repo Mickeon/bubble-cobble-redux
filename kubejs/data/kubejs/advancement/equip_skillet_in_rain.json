@@ -1,5 +1,4 @@
 {
-  "$schema": "https://www.schemastore.org/minecraft-advancement.json",
   "parent": "minecraft:adventure/root",
   "display": {
     "icon": {

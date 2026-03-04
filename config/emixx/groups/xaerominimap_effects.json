@@ -1,0 +1,17 @@
+{
+	"id": "xaerominimap:effects",
+	"contents": [
+		"mob_effect:xaerominimap:no_cave_maps",
+		"mob_effect:xaerominimap:no_cave_maps_harmful",
+		"mob_effect:xaerominimap:no_entity_radar",
+		"mob_effect:xaerominimap:no_entity_radar_harmful",
+		"mob_effect:xaerominimap:no_minimap",
+		"mob_effect:xaerominimap:no_minimap_harmful",
+		"mob_effect:xaerominimap:no_waypoints",
+		"mob_effect:xaerominimap:no_waypoints_harmful",
+		"mob_effect:xaeroworldmap:no_world_map",
+		"mob_effect:xaeroworldmap:no_world_map_harmful",
+		"mob_effect:xaeroworldmap:no_cave_maps",
+		"mob_effect:xaeroworldmap:no_cave_maps_harmful"
+	]
+}

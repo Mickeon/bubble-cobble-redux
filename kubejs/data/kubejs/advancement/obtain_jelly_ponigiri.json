@@ -1,5 +1,4 @@
 {
-  "$schema": "https://www.schemastore.org/minecraft-advancement.json",
   "parent": "cobblemon:place_campfire_pot",
   "display": {
     "icon": {

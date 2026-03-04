@@ -180,7 +180,7 @@ ItemEvents.firstRightClicked(event => {
 		return
 	}
 	const {player} = event
-	const ruler = RulerData.getOrCreate(player.uuid)
+	const ruler = RulerData.get_or_create(player.uuid)
 	if (!ruler.measure_loop || ruler.begun_tick == event.server.tickCount) {
 		return
 	}

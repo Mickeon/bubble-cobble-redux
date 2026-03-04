@@ -36,8 +36,7 @@
   "sound_set": {
     "mods": [
       "sounds",
-      "more_sounds",
-      "coolrain"
+      "more_sounds"
     ]
   },
   "realistic_sound_set": {

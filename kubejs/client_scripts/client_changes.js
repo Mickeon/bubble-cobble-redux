@@ -205,11 +205,17 @@ ClientEvents.generateAssets("before_mods", event => {
 // TODO: Some more programmatic way to handle it. You can see the repetition.
 ClientEvents.lang("en_us", event => {
 	event.addAll({
+		"tag.item.amendments.sets_on_fire": "Sets on fire when attacking",
+		"tag.item.amendments.goes_in_tripwire_hook": "Goes in Tripwire Hook",
+		"tag.item.amendments.non_stackable_heads": "Heads that cannot be piled up",
+		"tag.item.arts_and_crafts.chalk_sticks": "Chalk Sticks",
+		"tag.item.arts_and_crafts.paintbrushes": "Paintbrushes",
 		"tag.item.bubble_cobble.cattails": "Cattails",
 		"tag.item.c.crops.cabbage": "Cabbage",
 		"tag.item.c.crops.grain": "Grain",
 		"tag.item.c.crops.rice": "Rice",
 		"tag.item.c.drinks.tea": "Tea",
+		"tag.item.c.foods.bat_wing": "Any Bat Wing",
 		"tag.item.c.foods.cooked_beef": "Any Cooked Beef",
 		"tag.item.c.foods.cooked_chicken": "Any Cooked Chicken",
 		"tag.item.c.foods.cooked_cod": "Any Cooked Cod",
@@ -279,14 +285,6 @@ ClientEvents.lang("en_us", event => {
 		"tag.item.sophisticatedbackpacks.upgrade": "Backpack Upgrades",
 		"tag.item.sophisticatedstorage.all_storage": "All Storage",
 		"tag.item.sophisticatedstorage.base_tier_wooden_storage": "Base Tier Wooden Storage",
-
-		// https://github.com/MehVahdJukaar/Supplementaries/pull/1869
-		"tag.item.supplementaries.buntings": "Buntings",
-		"tag.item.supplementaries.cannon_boats": "Cannon Boats",
-		"tag.item.supplementaries.causes_lightning_when_held": "Causes Lightning When Held",
-		"tag.item.supplementaries.flower_box_tall_plantable": "Tall Flowers Plantable in Flower Box",
-		"tag.item.supplementaries.globes": "Globes",
-		"tag.item.supplementaries.jar_cookies": "Jar Cookies",
 	})
 
 	if (Platform.isLoaded("urban_decor")) {

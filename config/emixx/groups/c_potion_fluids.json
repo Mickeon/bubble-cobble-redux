@@ -1,0 +1,7 @@
+{
+	"id": "c:potion_fluids",
+	"contents": [
+		"fluid:create:potion{'create:potion_fluid_bottle_type': {potion: 'minecraft:awkward'}}",
+		"fluid:create:potion{'create:potion_fluid_bottle_type': 'regular', 'minecraft:potion_contents': {potion: 'minecraft:fire_resistance'}}"
+	]
+}
