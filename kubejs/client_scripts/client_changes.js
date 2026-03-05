@@ -36,13 +36,13 @@ NativeEvents.onEvent($ScreenEvent$Init$Post, event => {
 		return
 	}
 	const screen = event.screen
-	// HACK: Nasty way to find the Mods Button.
+	// HACK: Genuinely horrid way to find the Mods/Links Button.
 	/** @type {import("net.minecraft.client.gui.components.Button").$Button$$Type} */
 	let mods_button
 	screen.children().forEach(existing_button => {
-		if (existing_button instanceof $Button) {
-			// console.log(Text.of(existing_button.getMessage()))
-			if (existing_button.getMessage().getString() == "Mods") {
+		if (!mods_button && existing_button instanceof $Button) {
+			let message_string = existing_button.getMessage().getString()
+			if (message_string == "Mods" || message_string == "Server Links...") {
 				mods_button = existing_button
 			}
 		}
