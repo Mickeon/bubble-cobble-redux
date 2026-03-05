@@ -202,11 +202,11 @@ ServerEvents.tick(event => {
 
 // Allow carrying Noteblocks.
 BlockEvents.rightClicked(["minecraft:note_block"], event => {
-	if (!event.item.isEmpty()) {
-		return
+	const player = event.player
+	if (player.isHoldingInAnyHand(item => item != Item.getEmpty())) {
+		return // Need to be fully empty-handed.
 	}
 
-	const player = event.player
 	const carry_on_data = player.getCarryOnData()
 	if (!carry_on_data.isKeyPressed() || event.hitResult.distanceTo(player) > 2.5) {
 		return
@@ -225,8 +225,8 @@ BlockEvents.rightClicked(["minecraft:note_block"], event => {
 // Allow tuning down Noteblocks.
 BlockEvents.rightClicked("minecraft:note_block", event => {
 	const player = event.player
-	if (!player.isShiftKeyDown()) {
-		return
+	if (!player.isShiftKeyDown() || event.item.block) {
+		return // You're likely trying to place a block onto the Noteblock.
 	}
 
 	const level = event.level
