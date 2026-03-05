@@ -7047,7 +7047,7 @@
             ]
         },
         {
-            "pakku_id": "bgma2hQrmvTSb2OH",
+            "pakku_id": "hCOpsQMnfONhDcBI",
             "type": "MOD",
             "side": "SERVER",
             "slug": {
@@ -7062,7 +7062,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "zamega-neoforge-1.6.jar",
+                    "file_name": "zamega-neoforge-1.6.1.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -7070,22 +7070,22 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/2V1Y86sc/versions/eMfPTUZG/zamega-neoforge-1.6.jar",
-                    "id": "eMfPTUZG",
+                    "url": "https://cdn.modrinth.com/data/2V1Y86sc/versions/IdlZH9j7/zamega-neoforge-1.6.1.jar",
+                    "id": "IdlZH9j7",
                     "parent_id": "2V1Y86sc",
                     "hashes": {
-                        "sha512": "bebb97649eee4a64aa411bb3001dffd1dfe82748054477f212a61a3a3038071c2a781c8032ce9ee8b32e17b9afed4134d5a79afffa820202d5718edd595bd587",
-                        "sha1": "7876db0d1898f892be98dfb0103305f5c3cdb74c"
+                        "sha512": "f0580bbee44b3dde71f41b5a26e0fc76974f3e03aef29051bf5b2ba057d5708ae43323f3fe3e0416df84ba97201efa397c0d0247ea0e4b757a342f132538b95f",
+                        "sha1": "05cf7d12763cdafd8ddb8f9a7313f9dfb052d780"
                     },
                     "required_dependencies": [
-                        "MdwFAVRL",
-                        "SszvX85I",
                         "lhGA9TYQ",
+                        "MdwFAVRL",
+                        "jtmvUHXj",
                         "ccKDOlHs",
-                        "jtmvUHXj"
+                        "SszvX85I"
                     ],
-                    "size": 2366997,
-                    "date_published": "2026-03-02T07:28:40.555797Z"
+                    "size": 2367998,
+                    "date_published": "2026-03-04T06:52:53.215362Z"
                 }
             ]
         },
@@ -9822,7 +9822,7 @@
             ]
         },
         {
-            "pakku_id": "TCuU2hidlcgtFqIK",
+            "pakku_id": "bcVPfHImRWiUmRA1",
             "type": "MOD",
             "side": "BOTH",
             "slug": {
@@ -9837,7 +9837,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "supplementaries-1.21-3.5.26-neoforge.jar",
+                    "file_name": "supplementaries-1.21-3.5.27-neoforge.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -9845,18 +9845,18 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/fFEIiSDQ/versions/MSKshgx9/supplementaries-1.21-3.5.26-neoforge.jar",
-                    "id": "MSKshgx9",
+                    "url": "https://cdn.modrinth.com/data/fFEIiSDQ/versions/B4k8qIJB/supplementaries-1.21-3.5.27-neoforge.jar",
+                    "id": "B4k8qIJB",
                     "parent_id": "fFEIiSDQ",
                     "hashes": {
-                        "sha512": "5413fa2d34a54475c01fa29ba6cf4b76f4d44834b5ba0ea4eaabb049c9445758cf23cd75591131ce9694d33f15bf1c757ef57d02b73e0aeabebd836838ecb06b",
-                        "sha1": "14e5539225e45764200e56091507a9220efda9be"
+                        "sha512": "0060b8a7225858bb9134c803a33f3fbcf8448e1ea1eaf12225928305041539c1d38a4319be4d6b6bf35142eb09f37e5fb79960a8014a182d4747403bc15d8e7c",
+                        "sha1": "ddc7007ca224ec367d9ffe0516d0f9978c0e6d18"
                     },
                     "required_dependencies": [
                         "twkfQtEc"
                     ],
-                    "size": 13354404,
-                    "date_published": "2026-02-28T01:56:30.676560Z"
+                    "size": 13354405,
+                    "date_published": "2026-03-05T18:32:09.636556Z"
                 }
             ]
         },
