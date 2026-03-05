@@ -1,4 +1,4 @@
-
+/** @import {global} from "./../startup_scripts/music_discs" */
 const MUSIC_LIST = global.MUSIC_LIST
 
 /**

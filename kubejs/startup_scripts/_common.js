@@ -20,8 +20,8 @@ let $ItemAttributeModifiers  = Java.loadClass("net.minecraft.world.item.componen
  * @typedef {import("dev.latvian.mods.kubejs.item.ItemModificationKubeEvent$ItemModifications").$ItemModificationKubeEvent$ItemModifications$$Original} $ItemModifications
  */
 
-const SEC = 20
-const MIN = SEC * 60
+const SEC = 20 // How many ticks in a second.
+const MIN = SEC * 60 // How many ticks in a minute.
 
 /** @param {number} value @param {number} min1 @param {number} max1 @param {number} min2 @param {number} max2 */
 function remap(value, min1, max1, min2, max2) {
@@ -56,6 +56,8 @@ function is_eligible_for_easter_egg(player, usernames) {
 	return usernames.includes(player.username)
 }
 
+global.SEC = SEC
+global.MIN = MIN
 global.play_sound_globally = play_sound_globally
 global.remap = remap
 global.is_eligible_for_easter_egg = is_eligible_for_easter_egg

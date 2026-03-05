@@ -10,11 +10,8 @@
  * @import {$SoundSource$$Type} from "net.minecraft.sounds.SoundSource"
  */
 
-const SEC = 20 // How many ticks in a second.
-const MIN = SEC * 60 // How many ticks in a minute.
-
 /** @import {global} from "./../startup_scripts/_common" */
-const {play_sound_globally, remap, is_eligible_for_easter_egg} = global
+const {SEC, MIN, play_sound_globally, remap, is_eligible_for_easter_egg} = global
 
 // Object.assign(globalThis, global)
 // /** @typedef {(value: number, min1: number, max1: number, min2: number, max2:) => number} RemapFunction */
