@@ -42,7 +42,7 @@ ServerEvents.tags("item", event => {
 	event.add("c:foods/safe_raw_fish", "create_bic_bit:raw_herring")
 	event.add("c:foods/cooked_fish", "create_bic_bit:cooked_herring")
 	event.add("c:foods/food_poisoning", "minersdelight:copper_carrot", "minersdelight:bat_wing", "minersdelight:arthropod", "minersdelight:squid", "mynethersdelight:ghasta", "mynethersdelight:ghast_dough")
-	event.add("c:foods/edible_when_placed", "#farmersdelight:feasts") // Reported https://github.com/vectorwing/FarmersDelight/issues/1234. Stuffed Squid & co. missing. For our case we can just assume every Feast counts.
+	event.add("c:foods/edible_when_placed", "#farmersdelight:feasts") // Reported and fixed. Remove next mod update: https://github.com/vectorwing/FarmersDelight/issues/1234. Stuffed Squid & co. missing. For our case we can just assume every Feast counts.
 	event.add("c:paper", "create_bic_bit:dirty_paper")
 	event.add("c:buckets", "sliceanddice:fertilizer_bucket", "create_bic_bit:ketchup_bucket", "create_bic_bit:mayonnaise_bucket", "create_bic_bit:frying_oil_bucket", "biomesoplenty:blood_bucket", "undergroundworlds:quicksand_bucket", "biomesoplenty:liquid_null_bucket", "sophisticatedcore:xp_bucket") // TODO: Report this.
 	event.add("c:buckets/entity_water", "create_bic_bit:herring_bucket") // Reported: https://discord.com/channels/1141667941935501442/1448294211542716550/1448294211542716550
@@ -197,10 +197,11 @@ ServerEvents.tags("item", event => {
 
 ServerEvents.tags("block", event => {
 	// Accidental omissions from the mod creators.
-	event.add("c:ropes", "farmersdelight:rope") // TODO: Report this. The tag is present on items but not blocks.
+	event.add("c:ropes", "farmersdelight:rope") // Reported and fixed. Remove next mod update: https://github.com/vectorwing/FarmersDelight/issues/1233
 	event.add("c:chests", "#minecraft:copper_chests", "undergroundworlds:ice_chest", "undergroundworlds:temple_chest", "undergroundworlds:web_covered_chest") // TODO: Report this.
-	event.add("minecraft:wither_summon_base_blocks", "mynethersdelight:resurgent_soil") // TODO: Report on My Nether Delight.
-	event.add("minecraft:hoglin_repellents", "mynethersdelight:warped_fungus_colony") // TODO: Report on My Nether Delight. Used to be reported on https://github.com/Chefs-Delight/NethersDelight_Forge/issues/46
+	event.add("minecraft:all_signs", "supplementaries:way_sign_wall") // https://github.com/MehVahdJukaar/Supplementaries/pull/1921
+	event.add("minecraft:wither_summon_base_blocks", "mynethersdelight:resurgent_soil") // https://github.com/SoyTutta/MyNethersDelight/issues/121
+	event.add("minecraft:hoglin_repellents", "mynethersdelight:warped_fungus_colony") // https://github.com/SoyTutta/MyNethersDelight/issues/121
 	event.add("minecraft:enchantment_power_provider", "#handcrafted:shelves") // https://github.com/terrarium-earth/Handcrafted/issues/136
 	event.add("minecraft:guarded_by_piglins", "handcrafted:golden_thin_pot", "handcrafted:golden_thick_pot", "handcrafted:golden_wide_pot", "handcrafted:golden_medium_pot") // Reported: https://github.com/terrarium-earth/Handcrafted/issues/152
 	event.add("cobblemon:machines", "simpletms:machine_tm")

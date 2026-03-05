@@ -9,7 +9,7 @@
     "shulker": true,
     "dispenser": true,
     "hopper": true,
-    "enchantment": false,
+    "enchantment": true,
     "anvil": true,
     "beacon": true,
     "brewing": true,
