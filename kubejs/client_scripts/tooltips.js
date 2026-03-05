@@ -7,6 +7,9 @@ let $Moves  = Java.loadClass("com.cobblemon.mod.common.api.moves.Moves")
 
 /** @import {$MutableComponent} from "net.minecraft.network.chat.MutableComponent" */
 
+/** @import {global} from "./../startup_scripts/_common" */
+const {is_eligible_for_easter_egg} = global
+
 const MASCOT_COLOR = "#83BED9"
 const MASCOT_COLOR_DARK = "#537B8D"
 const SHIFT_INFO_COLOR = "#7CB3D6"
@@ -472,19 +475,4 @@ function add_shift_info(event, item, info) {
 
 		text.insert(3, info)
 	})
-}
-
-/** @import {$Player} from "net.minecraft.world.entity.player.Player" */
-/**
- * @description Returns `true` if the given player matches one or more usernames. Always returns `true` in singleplayer. Intended for funny consequences.
- * @param {$Player} player @param {string | Array<string>} usernames
- */
-function is_eligible_for_easter_egg(player, usernames) {
-	if (Client.isSingleplayer()) {
-		return true
-	}
-	if (typeof usernames === "string") {
-		return player.username == usernames
-	}
-	return usernames.includes(player.username)
 }
