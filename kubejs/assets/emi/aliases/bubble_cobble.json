@@ -183,13 +183,15 @@
 		{
 			"stacks": [
 				"#item:create:table_cloths",
-				"#item:handcrafted:sheets"
+				"#item:handcrafted:sheets",
+				"#item:urban_decor:towels"
 			],
 			"text": [
 				"Cloth",
 				"Sheet",
 				"Towel",
-				"Cover"
+				"Cover",
+				"Rug"
 			]
 		},
 		{
@@ -225,12 +227,9 @@
 		},
 		{
 			"stacks": [
+				"#item:create:packages",
 				"item:create:cardboard_block",
-				"item:create:bound_cardboard_block",
-				"item:create:cardboard_package_12x10",
-				"item:create:cardboard_package_10x8",
-				"item:create:cardboard_package_10x12",
-				"item:create:cardboard_package_12x12"
+				"item:create:bound_cardboard_block"
 			],
 			"text": [
 				"Cardboard Box"
@@ -309,6 +308,38 @@
 				"Dust",
 				"Powder",
 				"Flour"
+			]
+		},
+		{
+			"stacks": [
+				"#item:minecraft:wool_carpets",
+				{"type": "item", "id": "brewinandchewin:coaster"},
+				{"type": "item", "id": "cobblemon:tatami_mat"},
+				{"type": "item", "id": "biomesoplenty:glowing_moss_carpet"},
+				{"type": "item", "id": "farmersdelight:canvas_rug"},
+				{"type": "item", "id": "farmersdelight:full_tatami_mat"},
+				{"type": "item", "id": "farmersdelight:half_tatami_mat"},
+				{"type": "item", "id": "minecraft:moss_carpet"},
+				{"type": "item", "id": "supplementaries:doormat"}
+			],
+			"text": [
+				"Carpet",
+				"Rug",
+				"Mat"
+			]
+		},
+		{
+			"stacks": [
+				"#item:bubble_cobble:coinstacks",
+				{"type": "item", "id": "biomesoplenty:orange_maple_leaf_pile"},
+				{"type": "item", "id": "biomesoplenty:red_maple_leaf_pile"},
+				{"type": "item", "id": "biomesoplenty:yellow_maple_leaf_pile"},
+				{"type": "item", "id": "biomeswevegone:leaf_pile"}
+			],
+			"text": [
+				"Stack",
+				"Pile",
+				"Hoard"
 			]
 		}
 	]

@@ -66,7 +66,7 @@ ServerEvents.tags("block", event => {
 
 	// Many sounds are also defined in their respective sounds/blocks files. This script is for the more programmatic ones.
 	// These sound like coins shattering.
-	event.add("bubble_cobble:sounds/raw_gold_block", /^createdeco:.*coinstack$/)
+	event.add("bubble_cobble:sounds/raw_gold_block", "#bubble_cobble:coinstacks")
 	event.add("bubble_cobble:sounds/sandstone", "#c:sandstone/blocks") // Mutes Presence Footsteps for some reason.
 
 	for (const wood_type of ["birch", "spruce", "jungle", "acacia", "mangrove"]) {
@@ -96,9 +96,6 @@ ServerEvents.tags("block", event => {
 	// A bit arbitrary.
 	event.add("bubble_cobble:sounds/clay_bricks", /^createdeco:.*brick/, "supplementaries:gravel_bricks", "supplementaries:suspicious_gravel_bricks")
 	event.add("bubble_cobble:sounds/end_stone_bricks", /^create:.*brick/, "supplementaries:ash_bricks", "supplementaries:ash_bricks_stairs", "supplementaries:ash_bricks_slab", "supplementaries:ash_bricks_wall")
-
-	event.add("minecraft:combination_step_sound_blocks", "yungscavebiomes:ice_sheet", "#snowyspirit:gumdrops")
-	// event.add("minecraft:inside_step_sound_blocks", "")
 })
 
 ServerEvents.tags("item", event => {

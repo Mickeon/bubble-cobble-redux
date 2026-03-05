@@ -109,6 +109,9 @@ ServerEvents.tags("item", event => {
 		 "mynethersdelight:magma_cake_slice", "mynethersdelight:magma_cake_block",
 	)
 
+	// Shared in a bunch of places.
+	event.add("bubble_cobble:coinstacks", /^createdeco:.*coinstack$/)
+
 	// Why not? It's fun.
 	event.add("supplementaries:blackboard_white",      "minecraft:sugar", "cobblemon:white_apricorn", "cobblemon:white_mint_leaf", "arts_and_crafts:white_paintbrush", "arts_and_crafts:white_chalk_stick")
 	event.add("supplementaries:blackboard_light_gray", "minecraft:iron_ingot", "minecraft:clay_ball", "arts_and_crafts:light_gray_paintbrush", "arts_and_crafts:light_gray_chalk_stick")
@@ -210,6 +213,7 @@ ServerEvents.tags("block", event => {
 	event.add("minecraft:mineable/pickaxe", COPPER_BUTTONS)
 	event.add("createdeco:placards", PLACARDS)
 	event.add("farmersdelight:mineable/knife", "#c:ropes") // Just to include Supplementaries's rope. Probably should be reported.
+	event.add("minecraft:combination_step_sound_blocks", "#bubble_cobble:coinstacks", "#snowyspirit:gumdrops", "brewinandchewin:coaster", "cobblemon:tatami_mat", "farmersdelight:canvas_rug", "farmersdelight:full_tatami_mat", "farmersdelight:half_tatami_mat", "supplementaries:doormat", "yungscavebiomes:ice_sheet") // TODO: Report all of this.
 
 	// Other omissions that make sense.
 	event.add("create:windmill_sails", "#supplementaries:flags")
@@ -220,6 +224,10 @@ ServerEvents.tags("block", event => {
 	event.add("supplementaries:water_holder", "minersdelight:sticky_basket") // TODO: Report this? Supplementaries can't account for everyone, can it?
 	event.add("minecraft:mineable/shear", "farmersdelight:rope")
 	event.add("herbalbrews:allows_cooking", "mynethersdelight:nether_stove")
+	event.add("amendments:stairs_carpets", "#bubble_cobble:coinstacks", "biomesoplenty:glowing_moss_carpet", "cobblemon:tatami_mat", "minecraft:snow", "supplementaries:ash")
+
+	// Shared in a bunch of places.
+	event.add("bubble_cobble:coinstacks", /^createdeco:.*coinstack$/)
 
 	// Bugged. See also https://github.com/terrarium-earth/Handcrafted/issues/132.
 	event.add("c:relocation_not_supported",	"#handcrafted:nightstands", "#handcrafted:desks", "#handcrafted:counters", "#handcrafted:tables")
@@ -245,6 +253,11 @@ ServerEvents.tags("block", event => {
 
 	if (Platform.isLoaded("connectiblechains")) {
 		event.add("connectiblechains:chain_connectible", /_bars$/, "#minecraft:lightning_rods")
+	}
+
+	if (Platform.isLoaded("urban_decor")) {
+		event.add("amendments:stairs_carpets",  /^urban_decor:.*_towel$/)
+		event.add("minecraft:combination_step_sound_blocks", /^urban_decor:.*_towel$/)
 	}
 })
 
