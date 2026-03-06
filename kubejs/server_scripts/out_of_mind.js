@@ -1,3 +1,4 @@
+/** @import {global} from "./../startup_scripts/out_of_sight" */
 
 // DO NOT USE the { output: } filter unless Brewin' and Chewin' recipes are filtered out, because on a dedicated server the script fails with this:
 // UnknownKubeRecipe.java#64: Error in 'ServerEvents.recipes': java.lang.NullPointerException:

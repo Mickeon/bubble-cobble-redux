@@ -1,4 +1,7 @@
 
+/** @type {typeof import("com.cobblemon.mod.common.api.events.CobblemonEvents").$CobblemonEvents } */
+let $CobblemonEvents  = Java.loadClass("com.cobblemon.mod.common.api.events.CobblemonEvents")
+
 ItemEvents.modification(event => {
 	event.modify(["minecraft:potion", "minecraft:splash_potion", "minecraft:lingering_potion"], /** @param {ItemModifications} item */ item => {
 		item.maxStackSize = 12
@@ -78,3 +81,24 @@ ItemEvents.modification(event => {
 	// 	modified.resetComponents().set("minecraft:enchantments", {fortune:2,looting:2})
 	// })
 })
+
+// Pokemon Egg hatching effect.
+if (global.on_hatch_egg_pre) {
+	global.on_hatch_egg_pre.unsubscribe()
+}
+global.on_hatch_egg_pre = $CobblemonEvents.HATCH_EGG_PRE.subscribe(event => {
+	const player = event.player
+	if (!player) {
+		return
+	}
+
+	player.playNotifySound("minecraft:block.sniffer_egg.hatch", "neutral", 1.0, player.getRandom().triangle(1.0, 0.2))
+	player.level.spawnParticles(`minecraft:item{item:{id: "cobbreeding:pokemon_egg"}}`, false, player.x, player.eyeY, player.z, 0.1, 0.1, 0.1, 20, 0.2)
+
+	const pokemon = event.egg
+	if (pokemon && pokemon.getShiny()) {
+		player.playNotifySound("minecraft:entity.firework_rocket.twinkle", "neutral", 1.0, player.getRandom().triangle(1.5, 0.2))
+		player.level.spawnParticles("biomeswevegone:borealis_glint", false, player.x, player.eyeY, player.z, 0.1, 0.1, 0.1, 60, 1)
+	}
+})
+

@@ -1,5 +1,3 @@
-/** @type {typeof import("com.cobblemon.mod.common.api.events.CobblemonEvents").$CobblemonEvents } */
-let $CobblemonEvents  = Java.loadClass("com.cobblemon.mod.common.api.events.CobblemonEvents")
 /** @type {typeof import("net.neoforged.neoforge.event.brewing.RegisterBrewingRecipesEvent").$RegisterBrewingRecipesEvent } */
 let $RegisterBrewingRecipesEvent  = Java.loadClass("net.neoforged.neoforge.event.brewing.RegisterBrewingRecipesEvent")
 /** @type {typeof import("net.minecraft.world.entity.animal.CatVariant").$CatVariant } */
@@ -201,7 +199,9 @@ StartupEvents.registry("attribute", event => {
 		.displayName(Text.of(`Air Dash`)
 	)
 	if (Platform.isLoaded("cleanertooltips")) {
+		/** @type {typeof import("net.twentyytwo.cleanertooltips.util.CleanerTooltipsUtil").$CleanerTooltipsUtil} */
 		let $CleanerTooltipsUtil = Java.loadClass("net.twentyytwo.cleanertooltips.util.CleanerTooltipsUtil")
+		/** @type {typeof import("net.twentyytwo.cleanertooltips.util.AttributeDisplayType").$AttributeDisplayType} */
 		let $AttributeDisplayType = Java.loadClass("net.twentyytwo.cleanertooltips.util.AttributeDisplayType")
 		$CleanerTooltipsUtil.ATTRIBUTE_DISPLAY_MAP.put(ID.of("dash_jump_count", true), $AttributeDisplayType.DIFFERENCE)
 	}
@@ -253,7 +253,7 @@ StartupEvents.registry("potion", event => {
 })
 
 NativeEvents.onEvent($RegisterBrewingRecipesEvent, event => {
-	event.builder.addRecipe(`potion[minecraft:potion_contents={\"potion\":\"minecraft:awkward\"}]`, "#c:ender_pearls", `minecraft:potion[minecraft:potion_contents={"potion":"kubejs:begone"}]`)
+	event.builder.addRecipe(`potion[minecraft:potion_contents={"potion":"minecraft:awkward"}]`, "#c:ender_pearls", `minecraft:potion[minecraft:potion_contents={"potion":"kubejs:begone"}]`)
 	event.builder.addRecipe("kubejs:horse_urine_bottle", "cobblemon:carbos" , `minecraft:potion[minecraft:potion_contents={"potion":"kubejs:girl_power"}]`)
 })
 
@@ -273,16 +273,6 @@ StartupEvents.registry("cat_variant", event => {
 	event.createCustom("pipi", () => new $CatVariant("kubejs:textures/entity/cat/pipi.png"))
 })
 
-/** @param {$ItemStack} carried_item @param {$ItemStack} stacked_on_item   */
-function get_item_to_destroy(carried_item, stacked_on_item) {
-	if (!carried_item.isEmpty() && stacked_on_item.id == "minecraft:lava_bucket") {
-		return carried_item
-	}
-	if (!stacked_on_item.isEmpty() && carried_item.id == "minecraft:lava_bucket") {
-		return stacked_on_item
-	}
-}
-
 // Put Skillet on your head with some really shoddy code.
 NativeEvents.onEvent($ItemStackedOnOtherEvent, event => {
 	// console.log(event.slot.getSlotIndex())
@@ -300,24 +290,3 @@ NativeEvents.onEvent($ItemStackedOnOtherEvent, event => {
 		event.setCanceled(true)
 	}
 })
-
-// Pokemon Egg hatching effect.
-if (global.on_hatch_egg_pre) {
-	global.on_hatch_egg_pre.unsubscribe()
-}
-global.on_hatch_egg_pre = $CobblemonEvents.HATCH_EGG_PRE.subscribe(event => {
-	const player = event.player
-	if (!player) {
-		return
-	}
-
-	player.playNotifySound("minecraft:block.sniffer_egg.hatch", "neutral", 1.0, player.getRandom().triangle(1.0, 0.2))
-	player.level.spawnParticles(`minecraft:item{item:{id: "cobbreeding:pokemon_egg"}}`, false, player.x, player.eyeY, player.z, 0.1, 0.1, 0.1, 20, 0.2)
-
-	const pokemon = event.egg
-	if (pokemon && pokemon.getShiny()) {
-		player.playNotifySound("minecraft:entity.firework_rocket.twinkle", "neutral", 1.0, player.getRandom().triangle(1.5, 0.2))
-		player.level.spawnParticles("biomeswevegone:borealis_glint", false, player.x, player.eyeY, player.z, 0.1, 0.1, 0.1, 60, 1)
-	}
-})
-

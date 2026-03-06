@@ -320,8 +320,6 @@ NO_FLAT_WORLD_MOBS.forEach(entity_type => {
 // https://github.com/CorgiTaco-MC/Enhanced-Celestials/blob/1.21.X/Common/src/main/java/dev/corgitaco/enhancedcelestials/lunarevent/EnhancedCelestialsLunarForecastWorldData.java
 /** @type {typeof import("dev.corgitaco.enhancedcelestials.EnhancedCelestials").$EnhancedCelestials } */
 let $EnhancedCelestials = Java.loadClass("dev.corgitaco.enhancedcelestials.EnhancedCelestials")
-/** @type {typeof import("net.minecraft.core.Holder").$Holder } */
-let $Holder  = Java.loadClass("net.minecraft.core.Holder")
 
 function is_lunar_event_happening(level) {
 	const forecast = $EnhancedCelestials.lunarForecastWorldData(level).orElse(null)

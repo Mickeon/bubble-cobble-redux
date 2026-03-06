@@ -7,7 +7,7 @@ let $BuildCreativeModeTabContentsEvent  = Java.loadClass("net.neoforged.neoforge
 // - Are hidden from recipe viewers
 // - Are hidden from Creative tabs
 /** @type {Special.Item[]} */
-global.DISABLED_ITEMS = [
+const DISABLED_ITEMS = [
 	// Unused.
 	/^libraryferret/,
 	"relics:researching_table",
@@ -29,7 +29,7 @@ global.DISABLED_ITEMS = [
 	/^cobbreeding/,
 	// Keeping only 4 hammers from this mod.
 	/^justhammers/,
-	// Keeping only the Escape Rope from this mod, for now.
+	// Keeping only a few items from this mod, for now.
 	/^gag/,
 
 	// These Artifacts are ridiculous.
@@ -54,7 +54,7 @@ global.DISABLED_ITEMS = [
 ]
 
 /** @type {Special.Item[]} */
-global.DISABLED_ITEM_EXCEPTIONS = [
+const DISABLED_ITEM_EXCEPTIONS = [
 	"cobbreeding:pokemon_egg",
 	"justhammers:stone_hammer",
 	"justhammers:stone_reinforced_hammer",
@@ -65,7 +65,8 @@ global.DISABLED_ITEM_EXCEPTIONS = [
 ]
 
 global.get_disabled_ingredient = function () {
-	return Ingredient.of(global.DISABLED_ITEMS).except(global.DISABLED_ITEM_EXCEPTIONS)
+	// Bit of a cache.
+	return Utils.expiringLazy(() => Ingredient.of(DISABLED_ITEMS).except(DISABLED_ITEM_EXCEPTIONS),	SECOND).get()
 }
 
 /** @type {Special.Fluid[]} */
@@ -73,7 +74,7 @@ global.DISABLED_FLUIDS = [
 	"create_bic_bit:curdled_milk"
 ]
 
-/** @type {Special.MobEffect[]} */
+/** @type {Special.MobEffect[] | RegExp} */
 global.HIDDEN_MOB_EFFECTS = [
 	// Unused.
 	/runiclib/, // Many neat effects are a byproduct of this library.

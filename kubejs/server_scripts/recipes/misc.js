@@ -145,10 +145,6 @@ ServerEvents.recipes(event => {
 		"cobblemon:malicious_armor"
 	)
 
-	// Overpowered, due to Create Deco's Industrial Iron Ingots. Their recipe is costly,
-	// but by crafting the Industrial Iron Block, it can be converted back into ingots, skipping the entire process.
-	// event.remove({id: "create:industrial_iron_block_from_ingots_iron_stonecutting"})
-
 	// Make Create Deco's industrial Iron compatible with Create: Dreams & Desires's.
 	// We don't even have the mod anymore, but this is innocuous.
 	event.replaceInput({mod: "createdeco"}, "createdeco:industrial_iron_nugget", "#c:nuggets/industrial_iron")

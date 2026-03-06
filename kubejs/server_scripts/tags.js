@@ -1,6 +1,5 @@
 // priority: 10
 
-const CREATE_STONE_TYPES = ["granite", "diorite", "andesite", "calcite", "dripstone", "deepslate", "tuff", "asurine", "crimsite", "limestone", "ochrum", "scoria", "scorchia", "veridium"]
 const COPPER_BUTTONS = [
 	"copperagebackport:copper_button", "copperagebackport:exposed_copper_button", "copperagebackport:oxidized_copper_button", "copperagebackport:weathered_copper_button",
 	"copperagebackport:waxed_copper_button", "copperagebackport:waxed_exposed_copper_button", "copperagebackport:waxed_oxidized_copper_button",  "copperagebackport:waxed_weathered_copper_button"
@@ -213,7 +212,8 @@ ServerEvents.tags("block", event => {
 	event.add("minecraft:mineable/pickaxe", COPPER_BUTTONS)
 	event.add("createdeco:placards", PLACARDS)
 	event.add("farmersdelight:mineable/knife", "#c:ropes") // Just to include Supplementaries's rope. Probably should be reported.
-	event.add("minecraft:combination_step_sound_blocks", "#bubble_cobble:coinstacks", "#snowyspirit:gumdrops", "brewinandchewin:coaster", "cobblemon:tatami_mat", "farmersdelight:canvas_rug", "farmersdelight:full_tatami_mat", "farmersdelight:half_tatami_mat", "supplementaries:doormat", "yungscavebiomes:ice_sheet") // TODO: Report all of this.
+	// Reported a bunch: https://github.com/MehVahdJukaar/Supplementaries/pull/1922, https://gitlab.com/cable-mc/cobblemon/-/merge_requests/2174.
+	event.add("minecraft:combination_step_sound_blocks", "#bubble_cobble:coinstacks", "#snowyspirit:gumdrops", "brewinandchewin:coaster", "cobblemon:tatami_mat", "farmersdelight:canvas_rug", "farmersdelight:full_tatami_mat", "farmersdelight:half_tatami_mat", "supplementaries:doormat", "yungscavebiomes:ice_sheet")
 
 	// Other omissions that make sense.
 	event.add("create:windmill_sails", "#supplementaries:flags")
@@ -224,7 +224,7 @@ ServerEvents.tags("block", event => {
 	event.add("supplementaries:water_holder", "minersdelight:sticky_basket") // TODO: Report this? Supplementaries can't account for everyone, can it?
 	event.add("minecraft:mineable/shear", "farmersdelight:rope")
 	event.add("herbalbrews:allows_cooking", "mynethersdelight:nether_stove")
-	event.add("amendments:stairs_carpets", "#bubble_cobble:coinstacks", "biomesoplenty:glowing_moss_carpet", "cobblemon:tatami_mat", "minecraft:snow", "supplementaries:ash")
+	event.add("amendments:stairs_carpets", "#bubble_cobble:coinstacks", "biomesoplenty:glowing_moss_carpet", "cobblemon:tatami_mat", "minecraft:snow", "supplementaries:ash") // https://github.com/MehVahdJukaar/amendments/pull/403.
 
 	// Shared in a bunch of places.
 	event.add("bubble_cobble:coinstacks", /^createdeco:.*coinstack$/)
@@ -256,8 +256,8 @@ ServerEvents.tags("block", event => {
 	}
 
 	if (Platform.isLoaded("urban_decor")) {
-		event.add("amendments:stairs_carpets",  /^urban_decor:.*_towel$/)
-		event.add("minecraft:combination_step_sound_blocks", /^urban_decor:.*_towel$/)
+		event.add("amendments:stairs_carpets", /^urban_decor:.*_towel$/)
+		event.add("minecraft:combination_step_sound_blocks", /^urban_decor:.*_towel$/) // Reported: https://github.com/Yirmiri/Urban-Decor/issues/6
 	}
 })
 

@@ -1,7 +1,4 @@
-
-RecipeViewerEvents.removeEntriesCompletely("item", event => {
-	// event.remove(global.get_disabled_ingredient())
-})
+/** @import {global} from "./../startup_scripts/out_of_sight" */
 
 RecipeViewerEvents.removeEntriesCompletely("fluid", event => {
 	for (const fluid of global.DISABLED_FLUIDS) {

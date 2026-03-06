@@ -38,3 +38,14 @@ if (Platform.isClientEnvironment()) {
 		}
 	})
 }
+
+/** @param {$ItemStack} carried_item @param {$ItemStack} stacked_on_item   */
+function get_item_to_destroy(carried_item, stacked_on_item) {
+	if (!carried_item.isEmpty() && stacked_on_item.id == "minecraft:lava_bucket") {
+		return carried_item
+	}
+	if (!stacked_on_item.isEmpty() && carried_item.id == "minecraft:lava_bucket") {
+		return stacked_on_item
+	}
+	return null
+}
