@@ -1,0 +1,23 @@
+{
+  "_comment": "Currently unused, but too neat to pass up",
+  "attributes": {
+    "y": -1,
+    "speedY": 40,
+    "duration": 20,
+    "count": 2
+  },
+  "attributes_variance": {
+    "x": 4,
+    "y": 4
+  },
+  "events": {
+    "onCarried": {
+      "interval": 10,
+      "particles": [
+        {
+          "id": "minecraft:falling_water"
+        }
+      ]
+    }
+  }
+}

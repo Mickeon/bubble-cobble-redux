@@ -1,0 +1,12 @@
+{
+  "parent": "bubble_cobble:dusts/base",
+  "attributes": {
+    "color_start": "#FF888888",
+    "color_end": "#222C2C2C"
+  },
+
+  "applies": [
+    {"id": "minecraft:gunpowder"},
+    {"id": "supplementaries:ash"}
+  ]
+}

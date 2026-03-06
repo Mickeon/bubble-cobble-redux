@@ -1,0 +1,14 @@
+{
+  "parent": "bubble_cobble:dusts/base",
+  "attributes": {
+    "color_start": "#FFB34949",
+    "color_end": "#22834141"
+  },
+
+  "applies": [
+    {"id": "create:cinder_flour"},
+    {"id": "cobblemon:remedy"},
+    {"id": "cobblemon:fine_remedy"},
+    {"id": "cobblemon:superb_remedy"}
+  ]
+}

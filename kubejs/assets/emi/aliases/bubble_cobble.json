@@ -341,6 +341,14 @@
 				"Pile",
 				"Hoard"
 			]
+		},
+		{
+			"stacks": [
+				{"type": "item", "id": "supplementaries:confetti_popper"}
+			],
+			"text": [
+				"Party Popper"
+			]
 		}
 	]
 }

@@ -1,0 +1,29 @@
+{
+  "parent": "bubble_cobble:dusts/base",
+  "attributes": {
+    "color_start": "#FFFCF2C4",
+    "color_end": "#66862C2E",
+    "count": 2
+  },
+  "attributes_variance": {
+    "color_end": "#00001133"
+  },
+  "events": {
+    "onIdle": {
+      "interval": 20,
+      "interval_variance": 15,
+      "particles": [
+        {
+          "id": "minecraft:falling_water",
+          "x": 0,
+          "y": 0,
+          "count": 2
+        }
+      ]
+    }
+  },
+
+  "applies": [
+    {"id": "mynethersdelight:pepper_powder"}
+  ]
+}

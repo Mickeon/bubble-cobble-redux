@@ -1,0 +1,28 @@
+{
+  "parent": "bubble_cobble:dusts/base",
+  "attributes": {
+    "color_start": "#FFFCB9EF",
+    "color_end": "#AACD1FC1"
+  },
+  "attributes_variance": {
+    "x": 4,
+    "y": 4
+  },
+  "events": {
+    "onCarried": {
+      "interval": 10,
+      "particles": [
+        {
+          "id": "minecraft:falling_water",
+          "y": -1,
+          "speedY": 40,
+          "duration": 20,
+          "count": 2
+        }
+      ]
+    }
+  },
+  "applies": [
+    {"id": "rarcompat:mimi_dust"}
+  ]
+}

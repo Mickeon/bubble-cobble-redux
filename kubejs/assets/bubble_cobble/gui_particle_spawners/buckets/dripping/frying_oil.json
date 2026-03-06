@@ -1,0 +1,14 @@
+{
+  "parent": "bubble_cobble:buckets/dripping/base",
+  "attributes": {
+    "color_start": "#FFE5AF63",
+    "color_end": "#00E5AF63"
+  },
+
+  "applies": [
+    {"id": "minecraft:honey_bottle"},
+    {"id": "create_bic_bit:frying_oil_bottle"},
+    {"id": "create_bic_bit:dirty_paper"},
+    {"id": "kubejs:horse_urine_bottle"}
+  ]
+}

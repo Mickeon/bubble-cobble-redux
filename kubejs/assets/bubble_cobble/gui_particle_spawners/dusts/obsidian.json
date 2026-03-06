@@ -1,0 +1,11 @@
+{
+  "parent": "bubble_cobble:dusts/base",
+  "attributes": {
+    "color_start": "#FF4D336F",
+    "color_end": "#223A2753"
+  },
+
+  "applies": [
+    {"id": "create:powdered_obsidian"}
+  ]
+}

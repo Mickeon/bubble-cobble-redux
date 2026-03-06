@@ -1,0 +1,12 @@
+{
+  "parent": "item_interactions:buckets/bucket_template",
+  "children": ["bubble_cobble:buckets/dripping/frying_oil"],
+  "attributes": {
+    "color_start": "#FFE5AF63",
+    "color_end": "#00E5AF63"
+  },
+
+  "applies": [
+    {"id": "create_bic_bit:frying_oil_bucket"}
+  ]
+}

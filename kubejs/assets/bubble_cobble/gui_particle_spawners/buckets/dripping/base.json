@@ -1,0 +1,33 @@
+{
+  "attributes": {
+    "y": -2,
+    "duration": 40,
+    "accelerationY": -4,
+    "frictionY": 0.5,
+    "color_start": "#FFE5AF63",
+    "color_end": "#00E5AF63"
+  },
+  "attributes_variance": {
+    "x": 4
+  },
+  "events": {
+    "onIdle": {
+      "interval": 30,
+      "interval_variance": 5,
+      "particles": [
+        {
+          "id": "minecraft:falling_water"
+        }
+      ]
+    },
+    "onCarried": {
+      "use": "onIdle",
+      "particles": [
+        {
+          "id": "minecraft:falling_water",
+          "duration": 20
+        }
+      ]
+    }
+  }
+}

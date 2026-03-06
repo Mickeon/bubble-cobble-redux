@@ -1,0 +1,13 @@
+{
+  "parent": "bubble_cobble:dusts/base",
+  "attributes": {
+    "color_start": "#FFF6D19A",
+    "color_end": "#668C552D"
+  },
+
+  "applies": [
+    {"id": "minecraft:glowstone_dust"},
+    {"id": "biomeswevegone:yellow_glowcane_powder"},
+    {"id": "createmonballsoverhaul:tumblestone_dust"}
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "attributes": {
+    "x": 0,
+    "y": 4,
+    "speedY": 24,
+    "frictionY": 0.75,
+    "color_start": "#FFFFFFFF",
+    "color_end": "#2222AAFF",
+    "duration": 30
+  },
+  "attributes_variance": {
+    "x": 2,
+    "y": 4,
+    "speedX": 2,
+    "speedY": 2,
+    "duration": 5,
+    "color_start": "#00112211",
+    "color_end": "#00116611"
+  },
+  "events": {
+    "onIdle": {
+      "interval": 120,
+      "interval_variance": 30,
+      "particles": [
+        { "id": "minecraft:bubble"}
+      ]
+    },
+
+    "onCarried": {
+      "use": "onIdle",
+      "interval": 30,
+      "interval_variance": 5
+    },
+
+    "onShake": {
+      "use": "onPut",
+      "interval": 60,
+      "interval_variance": 5
+    },
+    "onPut": {
+      "particles": [
+        {
+          "id": "supplementaries:bubble_block",
+          "x": 0,
+          "y": 0,
+          "duration": 5,
+          "color_end": "#FF22AAFF"
+        }
+      ]
+    }
+  },
+
+  "applies": [
+    {"id": "supplementaries:bubble_blower"},
+    {"id": "supplementaries:soap_block"},
+    {"id": "supplementaries:soap"}
+  ]
+}

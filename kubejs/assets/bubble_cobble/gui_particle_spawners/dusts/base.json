@@ -1,0 +1,45 @@
+{
+  "attributes": {
+    "y": -1,
+    "speedY": 40,
+    "accelerationY": -6,
+    "frictionX": 0.7,
+    "frictionY": 0.7,
+    "duration": 20,
+    "count": 6,
+    "color_start": "#FFFFFFFF",
+    "color_end": "#00FFFFFF"
+  },
+  "attributes_variance": {
+    "x": 6,
+    "y": 6,
+    "speedX": 48,
+    "speedY": 4,
+    "accelerationY": 2,
+    "frictionY": 0.1,
+    "frictionX": 0.1,
+    "duration": 10
+  },
+  "events": {
+    "onPut": {
+      "particles": [
+        {
+          "id": "minecraft:falling_water"
+        }
+      ]
+    },
+    "onCarried": {
+      "interval": 40,
+      "interval_variance": 30,
+      "particles": [
+        {
+          "id": "minecraft:falling_water",
+          "x": 0,
+          "y": 0,
+          "count": 2,
+          "speedY": 0
+        }
+      ]
+    }
+  }
+}

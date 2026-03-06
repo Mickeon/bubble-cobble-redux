@@ -1,0 +1,12 @@
+{
+  "parent": "bubble_cobble:dusts/base",
+  "attributes": {
+    "color_start": "#FFFC0000",
+    "color_end": "#66710000"
+  },
+
+  "applies": [
+    {"id": "minecraft:redstone"},
+    {"id": "biomeswevegone:red_glowcane_powder"}
+  ]
+}

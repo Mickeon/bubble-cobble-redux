@@ -1,0 +1,36 @@
+{
+  "parent": "item_interactions:buckets/bucket_template",
+  "attributes": {
+    "color_start": "#FFF500F5",
+    "color_end": "#FFF500F5"
+  },
+  "attributes_variance": {
+    "brightness_start": 1,
+    "brightness_end": 1
+  },
+  "events": {
+    "onIdle": {
+      "interval": 10
+    },
+    "onCarried": {
+      "interval": 10,
+      "particles": [
+        {
+          "id": "minecraft:falling_water",
+          "y": -1,
+          "speedY": 40,
+          "duration": 20,
+          "count": 1
+        }
+      ]
+    }
+  },
+
+  "applies": [
+    {"id": "biomesoplenty:liquid_null_bucket"},
+    {"id": "biomesoplenty:null_block"},
+    {"id": "biomesoplenty:null_end_stone"},
+    {"id": "biomesoplenty:null_leaves"},
+    {"id": "biomesoplenty:null_plant"}
+  ]
+}

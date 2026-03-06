@@ -1,0 +1,30 @@
+{
+  "parent": "bubble_cobble:buckets/dripping/base",
+  "attributes": {
+    "y": 2,
+    "frictionY": 0.2,
+    "duration": 40,
+    "color_start": "#FF8AD480",
+    "color_end": "#DD8AD480"
+  },
+  "attributes_variance": {
+    "x": 4,
+    "y": 2,
+    "duration": 20,
+    "frictionY": 0.1
+  },
+  "events": {
+    "onIdle": {
+      "interval": 100,
+      "interval_variance": 5
+    }
+  },
+
+  "applies": [
+    {"id": "minecraft:slime_ball"},
+    {"id": "minecraft:slime_block"},
+    {"id": "minecraft:sticky_piston"},
+    {"id": "create:sticky_mechanical_piston"},
+    {"id": "create:sticker"}
+  ]
+}

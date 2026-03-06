@@ -1,0 +1,29 @@
+{
+  "parent": "bubble_cobble:buckets/dripping/base",
+  "attributes": {
+    "color_start": "#FFF68764",
+    "color_end": "#66602933"
+  },
+  "attributes_variance": {
+    "x": 6,
+    "y": 2,
+    "frictionY": 0.1,
+    "brightness_start": 0.5
+  },
+
+  "applies": [
+    {"id": "create:bar_of_chocolate"},
+    {"id": "create:chocolate_bucket"},
+    {"id": "create:chocolate_glazed_berries"},
+    {"id": "create_bic_bit:coated_churros"},
+    {"id": "create_bic_bit:chocolate_glazed_stroopwafel"},
+    {"id": "create_bic_bit:wrapped_chocolate_glazed_stroopwafel"},
+    {"id": "create_bic_bit:wrapped_coated_churros"},
+    {"id": "create_deepfried:chocolate_glazed_donut"},
+    {"id": "create_deepfried:chocolate_filled_berliner"},
+    {"id": "create_deepfried:coated_chocolate_berliner"},
+    {"id": "create_deepfried:deepfried_chocolate_bar"},
+    {"id": "create_deepfried:glow_berry_chocolate_glazed_donut"},
+    {"id": "create_deepfried:sweet_berry_chocolate_glazed_donut"}
+  ]
+}

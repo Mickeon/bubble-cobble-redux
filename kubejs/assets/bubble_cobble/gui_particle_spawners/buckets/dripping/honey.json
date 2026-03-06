@@ -1,0 +1,31 @@
+{
+  "parent": "bubble_cobble:buckets/dripping/base",
+  "attributes": {
+    "frictionY": 0.4,
+    "color_start": "#FFAD513C",
+    "color_end": "#66FCD053"
+  },
+  "attributes_variance": {
+    "x": 6,
+    "y": 2,
+    "frictionY": 0.1
+  },
+
+  "applies": [
+    {"id": "minecraft:honeycomb"},
+    {"id": "minecraft:honeycomb_block"},
+    {"id": "minecraft:honey_block"},
+    {"id": "create:honey_bucket"},
+    {"id": "create:honeyed_apple"},
+    {"id": "create_deepfried:honey_glazed_donut"},
+    {"id": "create_deepfried:glow_berry_honey_glazed_donut"},
+    {"id": "create_deepfried:sweet_berry_honey_glazed_donut"},
+    {"id": "create_deepfried:coated_honey_berliner"},
+    {"id": "create_deepfried:honey_filled_berliner"},
+    {"id": "farmersdelight:honey_cookie"},
+    {"id": "farmersdelight:honey_glazed_ham"},
+    {"id": "farmersdelight:honey_glazed_ham_block"},
+    {"id": "minersdelight:glazed_arachnid_limbs"},
+    {"id": "minersdelight:plate_of_glazed_arachnid_limbs"}
+  ]
+}
