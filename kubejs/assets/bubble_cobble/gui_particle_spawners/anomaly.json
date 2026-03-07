@@ -2,11 +2,13 @@
   "children": [
     "bubble_cobble:buckets/null",
     "bubble_cobble:buckets/dripping/base",
-    "bubble_cobble:buckets/dripping/slime",
     "bubble_cobble:dusts/mimi_dust",
     "bubble_cobble:bubbles",
+    "bubble_cobble:dusty",
     "bubble_cobble:fire_pit",
-    "bubble_cobble:mascot"
+    "bubble_cobble:jukeboxes",
+    "bubble_cobble:mascot",
+    "bubble_cobble:time_sand_pouch"
   ],
 
   "applies": [

@@ -29,5 +29,25 @@
         }
       ]
     }
-  }
+  },
+
+  "applies": [
+    {"id": "arts_and_crafts:black_paintbrush"},
+    {"id": "arts_and_crafts:bleachdew_paintbrush"},
+    {"id": "arts_and_crafts:blue_paintbrush"},
+    {"id": "arts_and_crafts:brown_paintbrush"},
+    {"id": "arts_and_crafts:cyan_paintbrush"},
+    {"id": "arts_and_crafts:gray_paintbrush"},
+    {"id": "arts_and_crafts:green_paintbrush"},
+    {"id": "arts_and_crafts:light_blue_paintbrush"},
+    {"id": "arts_and_crafts:light_gray_paintbrush"},
+    {"id": "arts_and_crafts:lime_paintbrush"},
+    {"id": "arts_and_crafts:magenta_paintbrush"},
+    {"id": "arts_and_crafts:orange_paintbrush"},
+    {"id": "arts_and_crafts:pink_paintbrush"},
+    {"id": "arts_and_crafts:purple_paintbrush"},
+    {"id": "arts_and_crafts:red_paintbrush"},
+    {"id": "arts_and_crafts:white_paintbrush"},
+    {"id": "arts_and_crafts:yellow_paintbrush"}
+  ]
 }

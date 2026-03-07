@@ -24,6 +24,19 @@
   },
 
   "applies": [
-    {"id": "mynethersdelight:pepper_powder"}
+    {"id": "mynethersdelight:pepper_powder"},
+    {"id": "minersdelight:spicy_hoglin_stew_cup"},
+    {"id": "minersdelight:spicy_noodle_soup_cup"},
+    {"id": "mynethersdelight:chilidog"},
+    {"id": "mynethersdelight:fried_hoglin_chop"},
+    {"id": "mynethersdelight:hot_wings"},
+    {"id": "mynethersdelight:hot_wings_bucket"},
+    {"id": "mynethersdelight:hot_cream"},
+    {"id": "mynethersdelight:hot_cream_cone"},
+    {"id": "mynethersdelight:spicy_curry"},
+    {"id": "mynethersdelight:spicy_hoglin_stew"},
+    {"id": "mynethersdelight:spicy_noodle_soup"},
+    {"id": "mynethersdelight:plate_of_ghasta_with_cream"},
+    {"id": "mynethersdelight:rock_soup"}
   ]
 }

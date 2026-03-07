@@ -2,7 +2,7 @@
   "parent": "bubble_cobble:buckets/dripping/base",
   "attributes": {
     "frictionY": 0.4,
-    "color_start": "#FFAD513C",
+    "color_start": "#FFF7BD28",
     "color_end": "#66FCD053"
   },
   "attributes_variance": {

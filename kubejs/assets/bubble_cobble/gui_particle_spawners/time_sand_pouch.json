@@ -1,0 +1,45 @@
+{
+  "attributes": {
+    "y": 10,
+    "accelerationY": -4,
+    "frictionY": 0.5,
+    "duration": 40,
+    "color_start": "#88F2D686",
+    "color_end": "#FFFAF25E"
+  },
+  "attributes_variance": {
+    "x": 4,
+    "y": 1,
+    "frictionY": 0.05,
+    "brightness_start": 0.5,
+    "brightness_end": 0.1,
+    "color_start": "#66222200",
+    "color_end": "#11000000"
+  },
+  "events": {
+    "onIdle": {
+      "interval": 20,
+      "particles": [
+        {
+          "id": "minecraft:falling_water",
+          "x": 4,
+          "speedX": -8,
+          "accelerationX": 0.25
+        },
+        {
+          "id": "minecraft:falling_water",
+          "x": -4,
+          "speedX": 8,
+          "accelerationX": -0.25
+        }
+      ]
+    },
+    "onCarried": {
+      "use": "onIdle"
+    }
+  },
+
+  "applies": [
+    {"id": "gag:time_sand_pouch"}
+  ]
+}

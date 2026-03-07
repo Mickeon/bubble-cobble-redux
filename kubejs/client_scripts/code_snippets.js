@@ -40,4 +40,6 @@ ProbeEvents.snippets(event => {
 	}
 
 	ProbeJS.captureType("com.cobblemon.mod.common.api.events.CobblemonEvents")
+	ProbeJS.captureType("net.minecraft.world.entity.projectile.ProjectileUtil")
+	ProbeJS.captureType("net.neoforged.neoforge.common.DataMapHooks")
 })

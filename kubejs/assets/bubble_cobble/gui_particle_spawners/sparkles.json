@@ -30,8 +30,10 @@
 
   "applies": [
     {"id": "cobblemon:ancient_origin_ball"},
+    {"id": "cobblemon:ancient_origin_rod"},
     {"id": "cobblemon:ability_patch"},
     {"id": "cobblemon:master_ball"},
+    {"id": "cobblemon:master_rod"},
     {"id": "create:brass_ingot"},
     {"id": "create:brass_block"},
     {"id": "minecraft:nether_star"},

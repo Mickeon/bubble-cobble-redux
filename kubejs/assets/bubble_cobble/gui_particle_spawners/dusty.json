@@ -1,0 +1,112 @@
+{
+  "attributes": {
+    "duration": 10,
+    "count": 6,
+    "x": 0,
+    "y": -6,
+    "speedX": 0,
+    "speedY": -4,
+    "accelerationY": 1.5,
+    "frictionY": 0.9,
+    "brightness_start": 0.9,
+    "color_start": "#44FFFFFF",
+    "color_end": "#FFFFFFFF"
+  },
+  "attributes_variance": {
+    "duration": 6,
+    "x": 4,
+    "y": 4,
+    "speedX": 8,
+    "count": 2,
+    "brightness_start": 0.1
+  },
+  "events": {
+    "onPickup": {
+      "particles": [
+        {
+          "id": "minecraft:dust",
+          "count": 2,
+          "duration": 5
+        }
+      ]
+    },
+    "onPut": {
+      "particles": [
+        {
+          "id": "minecraft:dust"
+        }
+      ]
+    }
+  },
+
+  "applies": [
+    {"id": "arts_and_crafts:finale_pottery_sherd"},
+    {"id": "arts_and_crafts:gateway_pottery_sherd"},
+    {"id": "arts_and_crafts:pottery_sherd"},
+    {"id": "arts_and_crafts:roll_pottery_sherd"},
+    {"id": "arts_and_crafts:ruined_pottery_sherd"},
+    {"id": "arts_and_crafts:sus_pottery_sherd"},
+    {"id": "arts_and_crafts:victory_pottery_sherd"},
+    {"id": "cobblemon:armor_fossil"},
+    {"id": "cobblemon:claw_fossil"},
+    {"id": "cobblemon:cover_fossil"},
+    {"id": "cobblemon:dome_fossil"},
+    {"id": "cobblemon:fossil_analyzer"},
+    {"id": "cobblemon:fossilized_bird"},
+    {"id": "cobblemon:fossilized_dino"},
+    {"id": "cobblemon:fossilized_drake"},
+    {"id": "cobblemon:fossilized_fish"},
+    {"id": "cobblemon:helix_fossil"},
+    {"id": "cobblemon:jaw_fossil"},
+    {"id": "cobblemon:old_amber_fossil"},
+    {"id": "cobblemon:plume_fossil"},
+    {"id": "cobblemon:root_fossil"},
+    {"id": "cobblemon:sail_fossil"},
+    {"id": "cobblemon:skull_fossil"},
+    {"id": "cobblemon:bright_powder"},
+    {"id": "cobblemon:metal_powder"},
+    {"id": "cobblemon:quick_powder"},
+    {"id": "cobblemon:bygone_sherd"},
+    {"id": "cobblemon:capture_sherd"},
+    {"id": "cobblemon:dome_sherd"},
+    {"id": "cobblemon:helix_sherd"},
+    {"id": "cobblemon:nostalgic_sherd"},
+    {"id": "cobblemon:suspicious_sherd"},
+    {"id": "cobblemonraiddens:raid_pouch"},
+    {"id": "create:wheat_flour"},
+    {"id": "gag:time_sand_pouch"},
+    {"id": "minecraft:bundle"},
+    {"id": "minecraft:angler_pottery_sherd"},
+    {"id": "minecraft:archer_pottery_sherd"},
+    {"id": "minecraft:arms_up_pottery_sherd"},
+    {"id": "minecraft:blade_pottery_sherd"},
+    {"id": "minecraft:brewer_pottery_sherd"},
+    {"id": "minecraft:burn_pottery_sherd"},
+    {"id": "minecraft:danger_pottery_sherd"},
+    {"id": "minecraft:explorer_pottery_sherd"},
+    {"id": "minecraft:flow_pottery_sherd"},
+    {"id": "minecraft:friend_pottery_sherd"},
+    {"id": "minecraft:guster_pottery_sherd"},
+    {"id": "minecraft:heart_pottery_sherd"},
+    {"id": "minecraft:heartbreak_pottery_sherd"},
+    {"id": "minecraft:howl_pottery_sherd"},
+    {"id": "minecraft:miner_pottery_sherd"},
+    {"id": "minecraft:mourner_pottery_sherd"},
+    {"id": "minecraft:plenty_pottery_sherd"},
+    {"id": "minecraft:prize_pottery_sherd"},
+    {"id": "minecraft:scrape_pottery_sherd"},
+    {"id": "minecraft:sheaf_pottery_sherd"},
+    {"id": "minecraft:shelter_pottery_sherd"},
+    {"id": "minecraft:skull_pottery_sherd"},
+    {"id": "minecraft:snort_pottery_sherd"},
+    {"id": "supplementaries:sack"},
+    {"id": "sophisticatedbackpacks:copper_backpack"},
+    {"id": "sophisticatedbackpacks:diamond_backpack"},
+    {"id": "sophisticatedbackpacks:gold_backpack"},
+    {"id": "sophisticatedbackpacks:iron_backpack"},
+    {"id": "sophisticatedbackpacks:netherite_backpack"},
+    {"id": "sophisticatedbackpacks:backpack"},
+    {"id": "yungscavebiomes:clock_pottery_sherd"},
+    {"id": "yungscavebiomes:hourglass_pottery_sherd"}
+  ]
+}

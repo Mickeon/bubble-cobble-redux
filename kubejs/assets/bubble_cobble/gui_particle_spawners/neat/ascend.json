@@ -1,14 +1,19 @@
 {
-  "_comment": "Currently unused, but too neat to pass up",
+  "_comment": "Loosely used, but too neat to pass up",
   "attributes": {
     "y": -1,
     "speedY": 40,
     "duration": 20,
-    "count": 2
+    "count": 2,
+    "accelerationY": -0.5,
+    "color_start": "#FFFFFFFF",
+    "color_end": "#FFFFFFFF"
   },
   "attributes_variance": {
     "x": 4,
-    "y": 4
+    "y": 4,
+    "accelerationY": 0.5,
+    "color_end": "#00444444"
   },
   "events": {
     "onCarried": {
@@ -19,5 +24,11 @@
         }
       ]
     }
-  }
+  },
+
+  "applies": [
+    {"id": "cobblemonraiddens:cheer_attack"},
+    {"id": "cobblemonraiddens:cheer_defense"},
+    {"id": "cobblemonraiddens:cheer_heal"}
+  ]
 }

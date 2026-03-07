@@ -1,4 +1,6 @@
 //#region More imports than you will ever know what to do with.
+/** @type {typeof import("net.neoforged.neoforge.common.DataMapHooks").$DataMapHooks } */
+let $DataMapHooks  = Java.loadClass("net.neoforged.neoforge.common.DataMapHooks")
 /** @type {typeof import("net.neoforged.neoforge.client.event.ClientPauseChangeEvent$Post").$ClientPauseChangeEvent$Post } */
 let $ClientPauseChangeEvent$Post  = Java.loadClass("net.neoforged.neoforge.client.event.ClientPauseChangeEvent$Post")
 /** @type {typeof import("net.neoforged.neoforge.client.event.ScreenEvent$Init$Post").$ScreenEvent$Init$Post } */
@@ -506,3 +508,48 @@ Shulker boxes, bundles, and many containers from other mods can provide building
 		]))
 	})
 }
+
+// Highlight nearby waxed blocks.
+ClientEvents.highlight(event => {
+	const player = event.player
+	if (!player.isHolding("minecraft:honeycomb") || Client.isPaused()) {
+		return
+	}
+
+	const level = player.level
+	const eye_position = player.getEyePosition()
+	const area = AABB.ofSize(eye_position, 16, 8, 16)
+	BlockPos.betweenClosedStream(area).forEach(pos => {
+		const block = level.getBlock(pos).getBlock()
+		const is_waxed = $DataMapHooks.getBlockUnwaxed(block)
+		const can_be_waxed = $DataMapHooks.getBlockWaxed(block)
+		if (is_waxed || can_be_waxed) {
+			// let direction = Direction.UP
+			// let normal = new Vec3d(direction.normal.x, direction.normal.y, direction.normal.z)
+			// let particle_pos = pos.getCenter().add(normal).offsetRandom(Utils.getRandom(), 1)
+			// let particle_vel = Vec3d.atLowerCornerOf(normal).scale(1)
+			// if (can_be_waxed) {
+			// 	event.addBlock(pos, "white_dye")
+			// }
+
+			if (Utils.getRandom().nextFloat() > (is_waxed ? 0.2 : 0.5)) {
+				return // Reduce the amount of particles.
+			}
+
+			let particle_pos = pos.getCenter().offsetRandom(Utils.getRandom(), 1.25)
+			let vec_to_center = particle_pos.vectorTo(pos.getCenter())
+			let particle_vel = vec_to_center.scale(vec_to_center.lengthSqr() * 2.0 - 1.0)
+			event.level.addParticle(is_waxed ? "minecraft:wax_on" : "minecraft:wax_off", false,
+				particle_pos.x(), particle_pos.y(), particle_pos.z(),
+				particle_vel.x(), particle_vel.y(), particle_vel.z()
+			)
+
+			// const result = level.clip(new $ClipContext(player.getEyePosition(), pos.getCenter(), "visual", "none", player))
+			// event.addBlock(result.getBlockPos(), "yellow_dye")
+		}
+	})
+
+	if ($DataMapHooks.getBlockWaxed(event.targetBlock.getBlock())) {
+		event.addTargetBlock("gray_dye")
+	}
+})

@@ -37,13 +37,14 @@ function remove_and_merge_into_tab(from_id, to_id, items) {
 }
 
 rename_tab("create:base",                          " §6Create ")
-rename_tab("create:palettes",                      " §6Create§r's Building Blocks ")
 rename_tab("copycats:main",                        " §6Create: §rCopycats+ ")
 rename_tab("copycats:functional",                  " §6Create: §rCopycats+ | Functional ")
 rename_tab("createdeco:bricks_tab",                " §6Create: §rDeco's Bricks ")
 rename_tab("createdeco:props_tab",                 " §6Create: §rDeco's Props ")
 rename_tab("create_deepfried:base",                " §6Create: §rDeepfried ")
 rename_tab("create_bic_bit:base",                  " §6Create: §r§rBitterballen ")
+// rename_tab("bits_n_bobs:bnb_based",                " §6Create: §rBits 'n' Bobs ")
+rename_tab("create:palettes",                      " §6Create§r's Building Blocks ")
 
 rename_tab("cobblemon:agriculture",    " §cCobblemon: §rAgriculture ",     "cobblemon:red_apricorn")
 rename_tab("cobblemon:archaeology",    " §cCobblemon: §rArchaeology ")
@@ -71,6 +72,7 @@ rename_tab("farmersdelight:farmersdelight",   " §eFarmer's Delight ")
 rename_tab("brewinandchewin:brewinandchewin", " §eFarmer's Delight: §rBrewin' and Chewin' ")
 rename_tab("minersdelight:minersdelight",     " §eFarmer's Delight: §rMiner's Delight ")
 rename_tab("mynethersdelight:main",           " §eFarmer's Delight: §rMy Nether's Delight ")
+rename_tab("displaydelight:displaydelight",   " §eFarmer's Delight: §r§rDisplay Delight ")
 
 remove_tab("constructionstick:tab") // Items also exist in Tools & Utilities tab.
 remove_tab("sophisticatedcore:main") // Only contains "sophisticatedcore:xp_bucket".
@@ -304,7 +306,7 @@ remove_and_merge_into_tab("immersive_paintings:paintings", "minecraft:functional
 	"immersive_paintings:glow_graffiti",
 ])
 
-remove_and_merge_into_tab("bits_n_bobs:bnb_deco", "bits_n_bobs:bnb_based", [
+remove_and_merge_into_tab("bits_n_bobs:bnb_deco", "create:palettes", [
 	"bits_n_bobs:granite_tiles",
 	"bits_n_bobs:diorite_tiles",
 	"bits_n_bobs:andesite_tiles",
@@ -319,6 +321,18 @@ remove_and_merge_into_tab("bits_n_bobs:bnb_deco", "bits_n_bobs:bnb_based", [
 	"bits_n_bobs:scoria_tiles",
 	"bits_n_bobs:scorchia_tiles",
 	"bits_n_bobs:veridium_tiles",
+])
+remove_and_merge_into_tab("bits_n_bobs:bnb_based", "create:base", [
+	"bits_n_bobs:chain_pulley",
+	"bits_n_bobs:weathered_metal_girder",
+	"bits_n_bobs:nixie_board",
+	"bits_n_bobs:large_nixie_tube",
+	"bits_n_bobs:lightbulb",
+	"bits_n_bobs:headlamp",
+	"bits_n_bobs:brass_lamp",
+	"bits_n_bobs:small_flanged_cogwheel",
+	"bits_n_bobs:large_flanged_cogwheel",
+	"bits_n_bobs:red_chair",
 ])
 
 StartupEvents.modifyCreativeTab("ribbits:general", event => {

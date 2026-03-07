@@ -1,0 +1,12 @@
+{
+  "parent": "item_interactions:jukebox",
+
+  "applies": [
+    {"id": "minecraft:goat_horn"},
+    {"id": "sophisticatedbackpacks:jukebox_upgrade"},
+    {"id": "sophisticatedbackpacks:advanced_jukebox_upgrade"},
+    {"id": "sophisticatedstorage:jukebox_upgrade"},
+    {"id": "sophisticatedstorage:advanced_jukebox_upgrade"},
+    {"id": "supplementaries:flute"}
+  ]
+}
