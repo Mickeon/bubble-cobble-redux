@@ -874,10 +874,7 @@
             ]
         },
         {
-            "pakku_id": "dxpwnuQDYyAJdmuO",
-            "pakku_links": [
-                "Ep7lUecjm3myblB7"
-            ],
+            "pakku_id": "7nYfYFpTGvO8OR5H",
             "type": "MOD",
             "side": "BOTH",
             "slug": {
@@ -892,7 +889,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "bettercombat-neoforge-2.3.1+1.21.1.jar",
+                    "file_name": "bettercombat-neoforge-2.3.2+1.21.1.jar",
                     "mc_versions": [
                         "1.21",
                         "1.21.1"
@@ -901,19 +898,19 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/5sy6g3kz/versions/vyOG66rq/bettercombat-neoforge-2.3.1+1.21.1.jar",
-                    "id": "vyOG66rq",
+                    "url": "https://cdn.modrinth.com/data/5sy6g3kz/versions/2NyTus6V/bettercombat-neoforge-2.3.2+1.21.1.jar",
+                    "id": "2NyTus6V",
                     "parent_id": "5sy6g3kz",
                     "hashes": {
-                        "sha512": "2b8b86cd9255ebda9b7f2b31bb7e96797e785322665da6b20daa0899d77bc4dd032312ea8d75988a612f7c0a3a384a28823b3888916e9adc77b425ed16386e3a",
-                        "sha1": "0ab8800ae6d10279f6728ae4f85672cba3f36190"
+                        "sha512": "abc6c5e531492bcc9368b3c79034a19203b9fa871c7ec82380d47c776a087debce6f8e0f7af86993a1a125668a7eb2831af70a097ff2b90e01a0db83eccd111a",
+                        "sha1": "f752fbbf81027948ef4ab0fc0066260ccf574179"
                     },
                     "required_dependencies": [
-                        "9s6osm5g",
-                        "gedNE4y2"
+                        "gedNE4y2",
+                        "9s6osm5g"
                     ],
-                    "size": 1039102,
-                    "date_published": "2025-12-18T00:28:30.053135Z"
+                    "size": 1041845,
+                    "date_published": "2026-03-07T00:07:00.650969Z"
                 }
             ]
         },
@@ -6891,10 +6888,7 @@
             ]
         },
         {
-            "pakku_id": "yR2kJ3bU8lha86eK",
-            "pakku_links": [
-                "VdaMvMbtfhQQ5wmg"
-            ],
+            "pakku_id": "uMrLY0Fl4l6fdoMs",
             "type": "MOD",
             "side": "BOTH",
             "slug": {
@@ -6909,7 +6903,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "mowziesmobs-1.21.1-1.7.5.jar",
+                    "file_name": "mowziesmobs-1.21.1-1.8.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -6917,18 +6911,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/BFbX9xcm/versions/P2hiyNDT/mowziesmobs-1.21.1-1.7.5.jar",
-                    "id": "P2hiyNDT",
+                    "url": "https://cdn.modrinth.com/data/BFbX9xcm/versions/pQNTA6mf/mowziesmobs-1.21.1-1.8.jar",
+                    "id": "pQNTA6mf",
                     "parent_id": "BFbX9xcm",
                     "hashes": {
-                        "sha512": "993083b33a9a35e415616e1e04af8e6ce487c8c4bd6fc745dc0b26133f21f5d0fbd5da5de193ac7c10d973f7eb6d249dd03e86d09661a87fcc8b2d81912f69c5",
-                        "sha1": "f462b46d4bd3071708cebd4b06c16857ad593e22"
+                        "sha512": "55454444927d3d19c8c08af14da11b96b0c6e0a8ac313151287ea71a081a624bb0bf34478555bf345a59d37a205300728aaf0b79c4685a847423a650ae5635bf",
+                        "sha1": "f1f8104c189ec0421e9ca0a72be16abc059a3d63"
                     },
-                    "required_dependencies": [
-                        "8BmcQJ2H"
-                    ],
-                    "size": 35260457,
-                    "date_published": "2025-06-27T07:06:35.020193Z"
+                    "required_dependencies": [],
+                    "size": 36032821,
+                    "date_published": "2026-03-05T03:23:29.203520Z"
                 }
             ]
         },
@@ -8923,7 +8915,7 @@
             ]
         },
         {
-            "pakku_id": "fG1oitnBXmQyWXfe",
+            "pakku_id": "5wmQ95NiYXKlvwuZ",
             "type": "MOD",
             "side": "CLIENT",
             "slug": {
@@ -8938,7 +8930,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "ShoulderSurfing-NeoForge-1.21.1-4.22.0.jar",
+                    "file_name": "ShoulderSurfing-NeoForge-1.21.1-4.22.1.jar",
                     "mc_versions": [
                         "1.21",
                         "1.21.1"
@@ -8947,16 +8939,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/kepjj2sy/versions/4kL1z5XO/ShoulderSurfing-NeoForge-1.21.1-4.22.0.jar",
-                    "id": "4kL1z5XO",
+                    "url": "https://cdn.modrinth.com/data/kepjj2sy/versions/GRCXBCdK/ShoulderSurfing-NeoForge-1.21.1-4.22.1.jar",
+                    "id": "GRCXBCdK",
                     "parent_id": "kepjj2sy",
                     "hashes": {
-                        "sha512": "f187983dcddd43872aeaab7fb8ab586b90f209a22d7328fc1ad97bb685dbe1e5aa966d3798d47027dba36e29ccc29d62501b343cbadb7757dc8e69863b03b046",
-                        "sha1": "776c7ac0db88d58115b1ea589773f5de1cbf9f09"
+                        "sha512": "324407cf126c9ce0f959668579fda779b4fb869982c128142a4ee3247f8685c91af00ebffb009353ed1e5a9185a6e47fe5a3ebb91434fe9a0144812b7841a5df",
+                        "sha1": "19286f8b7746da7aa36d4c07fc184ddcc70627a4"
                     },
                     "required_dependencies": [],
-                    "size": 267366,
-                    "date_published": "2026-02-28T22:11:00.276748Z"
+                    "size": 266690,
+                    "date_published": "2026-03-06T19:11:47.526958Z"
                 }
             ]
         },
