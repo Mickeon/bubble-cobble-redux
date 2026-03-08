@@ -2,13 +2,16 @@
 
 const GENERAL_FURNITURE = Ingredient.of("@handcrafted").except(/trim/)
 		.or("#farmersdelight:cabinets")
+		.or("#minecraft:wooden_shelves")
+		.or("@shutterup")
 		.or(/urban_decor:.*(box|calendar|piano|grandfather_clock)/)
+		.or(/create:.*window/)
 
 ServerEvents.tags("item", event => {
-	for (const wood_type of ["oak", "birch", "spruce", "jungle", "bamboo", "acacia", "cherry", "mangrove", "warped", "crimson"]) {
+	for (const wood_type of ["oak", "birch", "spruce", "jungle", "dark_oak", "bamboo", "acacia", "cherry", "mangrove", "warped", "crimson"]) {
 		event.add(
 			`bubble_cobble:${wood_type}_furniture`,
-			GENERAL_FURNITURE.and(RegExp(`.*${wood_type}.*`)).itemIds
+			GENERAL_FURNITURE.and(RegExp(`.*:${wood_type}.*`)).itemIds
 		)
 	}
 })
@@ -83,19 +86,23 @@ LootJS.lootTables(event => {
 		let furniture_pool = event.create("kubejs:furniture", "chest").createPool()
 
 		furniture_pool.addEntry(
-			LootEntry.tag("bubble_cobble:spruce_furniture", true).withWeight("10")
+			LootEntry.tag("bubble_cobble:spruce_furniture", true).withWeight(10)
 			.matchBiome("#minecraft:is_taiga"))
 
 		furniture_pool.addEntry(
-			LootEntry.tag("bubble_cobble:bamboo_furniture", true).withWeight("10")
+			LootEntry.tag("bubble_cobble:bamboo_furniture", true).withWeight(10)
 			.matchBiome("#minecraft:is_jungle"))
 
 		furniture_pool.addEntry(
-			LootEntry.tag("bubble_cobble:jungle_furniture", true).withWeight("10")
+			LootEntry.tag("bubble_cobble:jungle_furniture", true).withWeight(10)
 			.matchBiome("#minecraft:is_jungle"))
 
 		furniture_pool.addEntry(
-			LootEntry.tag("bubble_cobble:acacia_furniture", true).withWeight("10")
+			LootEntry.tag("bubble_cobble:dark_oak_furniture", true).withWeight(10)
+			.matchBiome("#c:is_dark_forest"))
+
+		furniture_pool.addEntry(
+			LootEntry.tag("bubble_cobble:acacia_furniture", true).withWeight(10)
 			.matchAnyOf(
 				LootCondition.matchBiome("#minecraft:is_savanna"),
 				LootCondition.matchBiome("#minecraft:is_badlands")
@@ -103,7 +110,7 @@ LootJS.lootTables(event => {
 		)
 
 		furniture_pool.addEntry(
-			LootEntry.tag("bubble_cobble:cherry_furniture", true).withWeight("10")
+			LootEntry.tag("bubble_cobble:cherry_furniture", true).withWeight(10)
 			.matchAnyOf(
 				LootCondition.matchBiome("#c:is_floral"),
 				LootCondition.matchBiome("#cobblemon:is_cherry_blossom")
@@ -115,11 +122,11 @@ LootJS.lootTables(event => {
 			.matchBiome("#c:is_swamp"))
 
 		furniture_pool.addEntry(
-			LootEntry.tag("bubble_cobble:oak_furniture", true).withWeight(10)
+			LootEntry.tag("bubble_cobble:oak_furniture", true).withWeight(2)
 			.matchBiome("#c:is_plains"))
 
 		furniture_pool.addEntry(
-			LootEntry.tag("bubble_cobble:birch_furniture", true).withWeight(10)
+			LootEntry.tag("bubble_cobble:birch_furniture", true).withWeight(2)
 			.matchBiome("#c:is_plains"))
 
 		furniture_pool.addEntry(
@@ -131,17 +138,25 @@ LootJS.lootTables(event => {
 			.matchBiome("#c:in_nether"))
 
 		furniture_pool.addEntry(
-			LootEntry.tag("handcrafted:crockery", true).withWeight(5)
+			LootEntry.tag("handcrafted:crockery", true).withWeight(10)
 			.matchDimension("minecraft:overworld")
 			.matchStructure("#minecraft:village")
 		)
 
 		furniture_pool.addEntry(
-			LootEntry.tag("handcrafted:cushions", true).withWeight(2)
+			LootEntry.tag("handcrafted:cushions", true).withWeight(5)
 			.matchDimension("minecraft:overworld")
 			.matchStructure("#minecraft:village")
 		)
 
+		furniture_pool.addEntry(
+			LootEntry.tag("urban_decor:has_toolbox_variants", true).withWeight(10)
+			.matchDimension("minecraft:overworld")
+		)
+		furniture_pool.addEntry(
+			LootEntry.tag("bits_n_bobs:chairs", true).withWeight(5)
+			.matchDimension("minecraft:overworld")
+		)
 		furniture_pool.addEntry(
 			LootEntry.tag("handcrafted:pots", true).withWeight(2)
 			.matchDimension("minecraft:overworld")
@@ -151,8 +166,12 @@ LootJS.lootTables(event => {
 			LootEntry.tag("handcrafted:trophies", true).withWeight(1)
 			.matchDimension("minecraft:overworld")
 		)
+		furniture_pool.addEntry(
+			LootEntry.ofIngredient(/tatami/)
+			.matchDimension("minecraft:overworld")
+		)
 
-		furniture_pool.addEntry(LootEntry.empty().withWeight(50))
+		furniture_pool.addEntry(LootEntry.empty().withWeight(200))
 
 		event.forEachTable(/.*chest.*/, table => {
 			// event.forEachTable(/supplementaries:loot\/galleon\/chest/, table => {
@@ -160,12 +179,124 @@ LootJS.lootTables(event => {
 			if (table.lootType == "BLOCK") {
 				return // Otherwise, Chests would drop furniture at random when destroyed.
 			}
-			table.createPool().rolls(1).addEntry(
+			table.createPool().rolls(1).bonusRolls(1).addEntry(
 				LootEntry.reference("kubejs:furniture")
-				.matchLocation({position: {y: Range.atLeast(50)}})
-				.randomChance(0.5)
+					.matchLocation({position: {y: Range.atLeast(50)}})
+					.randomChance(0.1)
 			)
 		})
+	}
+
+	// Doohickey time. Arbitary mod check, I just want something to fold.
+	if (Platform.isLoaded("supplementaries")) {
+		/** @param {Special.ItemTag} tag  */
+		let loot_table_from_tag = function(tag) {
+			const name = "kubejs:doohickey/" + tag.replace(":", "/")
+			event.create(name, "chest").createPool().addEntry(LootEntry.tag(tag, true))
+			return LootEntry.reference(name)
+		}
+
+		let doohickey_table = event.create("kubejs:doohickey", "chest")
+		let doohickey_pool = doohickey_table.createPool()
+
+		doohickey_pool.addEntry(
+			LootEntry.group([
+				LootEntry.of("bits_n_bobs:headlamp").withWeight(10).setCount([1, 2]),
+				LootEntry.of("bits_n_bobs:lightbulb").withWeight(8).setCount([1, 3]),
+				LootEntry.of("supplementaries:redstone_illuminator").withWeight(6).setCount([1, 2]),
+				loot_table_from_tag("supplementaries:candle_holders").withWeight(6).setCount([1, 3]),
+				LootEntry.of("supplementaries:crystal_display").withWeight(4).setCount([1, 3]),
+				LootEntry.of("create:nixie_tube").withWeight(3).setCount([2, 4]),
+				LootEntry.of("bits_n_bobs:nixie_board").withWeight(3).setCount([2, 4]).limitCount(2, 4),
+				LootEntry.of("bits_n_bobs:large_nixie_tube").withWeight(3).setCount([2, 4]),
+				LootEntry.of("create:rose_quartz_lamp").withWeight(2).setCount([1, 3]),
+				loot_table_from_tag("bubble_cobble:lanterns").withWeight(2).setCount([1, 4]),
+				loot_table_from_tag("snowyspirit:glow_lights").withWeight(2).setCount([2, 4]),
+				LootEntry.of("bits_n_bobs:brass_lamp").withWeight(1),
+			])
+		)
+		let flute_names = [
+			"Amongus Drip", "Cara Mia Addio", "Carol", "Despacito",	"Fallen Kingdom",
+			"Lava Chicken", "Megalovania", "Shooting Stars", "Sweden",
+			"Revenge", "Revenge Full", "Wet Hands",
+		]
+
+		event.create("kubejs:doohickey/flutes", "chest").createPool().addEntry(
+			LootEntry.group(flute_names.map(
+				name => LootEntry.ofItem("supplementaries:flute").setName(name)
+			))
+		)
+
+		doohickey_pool.addEntry(
+			LootEntry.group([
+				LootEntry.of("supplementaries:cog_block").withWeight(20).setCount([1, 3]),
+				loot_table_from_tag("supplementaries:awnings").withWeight(20).setCount([1, 3]),
+				loot_table_from_tag("supplementaries:buntings").withWeight(20).setCount([2, 4]),
+				LootEntry.of("brewinandchewin:coaster").withWeight(20).setCount([1, 3]),
+				LootEntry.of("supplementaries:soap").withWeight(10).setCount([1, 3]),
+				LootEntry.of("supplementaries:bamboo_spikes").withWeight(10).setCount([2, 4]),
+				LootEntry.of("supplementaries:turn_table").withWeight(10).setCount([1, 2]),
+				LootEntry.of("supplementaries:crank").withWeight(10).setCount([1, 2]),
+				LootEntry.of("supplementaries:bubble_blower").withWeight(8),
+				LootEntry.reference("kubejs:doohickey/flutes").withWeight(8),
+				loot_table_from_tag("arts_and_crafts:chalk_sticks").withWeight(8).setCount([1, 2]),
+				loot_table_from_tag("arts_and_crafts:paintbrushes").withWeight(8),
+				LootEntry.of("supplementaries:jar").withWeight(6),
+				LootEntry.of("supplementaries:spring_launcher").withWeight(6).setCount([1, 2]),
+				LootEntry.of("supplementaries:bellows").withWeight(6).setCount([1, 3]),
+				LootEntry.of("supplementaries:timber_frame").withWeight(6).setCount([1, 4]),
+				LootEntry.of("supplementaries:timber_brace").withWeight(6).setCount([1, 4]),
+				LootEntry.of("supplementaries:timber_cross_brace").withWeight(6).setCount([1, 4]),
+				LootEntry.of("supplementaries:relayer").withWeight(4).setCount([2, 6]),
+				LootEntry.of("supplementaries:faucet").withWeight(4).setCount([1, 2]),
+				LootEntry.of("supplementaries:doormat").withWeight(4).setCount([1, 2]),
+				LootEntry.of("supplementaries:hourglass").withWeight(4),
+				LootEntry.of("supplementaries:clock_block").withWeight(4),
+				LootEntry.of("supplementaries:pulley_block").withWeight(4),
+				LootEntry.of("supplementaries:goblet").withWeight(4),
+				LootEntry.of("supplementaries:altimeter").withWeight(4),
+				loot_table_from_tag("supplementaries:presents").withWeight(4).setCount([1, 2]),
+				loot_table_from_tag("arts_and_crafts:decorated_pots").withWeight(4),
+				LootEntry.of("supplementaries:slingshot").withWeight(2),
+				LootEntry.of("immersive_paintings:graffiti").withWeight(2).setCount([1, 2]),
+				LootEntry.of("immersive_paintings:glow_graffiti").withWeight(2).setCount([1, 2]),
+				LootEntry.of("supplementaries:cannon").withWeight(1),
+			])
+		)
+
+		doohickey_pool.addEntry(
+			LootEntry.group([
+				LootEntry.of("create:hand_crank").withWeight(10).setCount([1, 2]),
+				loot_table_from_tag("create:dyed_table_cloths").withWeight(10).setCount([2, 4]),
+				loot_table_from_tag("create:valve_handles").withWeight(6),
+				LootEntry.of("create:desk_bell").withWeight(6),
+				LootEntry.of("create:placard").withWeight(4),
+				loot_table_from_tag("create:postboxes").withWeight(4).setCount([1, 2]),
+				loot_table_from_tag("create:toolboxes").withWeight(2),
+				LootEntry.of("copycats:copycat_light_weighted_pressure_plate").withWeight(2),
+				LootEntry.of("copycats:copycat_heavy_weighted_pressure_plate").withWeight(2),
+				LootEntry.of("create:peculiar_bell").withWeight(1),
+			])
+		)
+
+		event.forEachTable(/.*chest.*/, table => {
+			if (table.lootType == "BLOCK") {
+				return
+			}
+
+			table.firstPool().addEntry(LootEntry.reference("kubejs:doohickey").withWeight(10).randomChance(0.2))
+			table.createPool().rolls([2, 5]).bonusRolls(3).addEntry(
+				LootEntry.reference("kubejs:doohickey").withWeight(1)
+			).addEntry(
+				LootEntry.empty().withWeight(6)
+			)
+		})
+
+		event.getLootTable("minecraft:gameplay/fishing/junk").firstPool().addEntry(
+			LootEntry.reference("kubejs:doohickey")
+				.applyEnchantmentBonus([1, 2])
+				.randomChance(0.1)
+		)
 	}
 
 	// Let Headhunter work with Wither Skeletons.
@@ -184,4 +315,6 @@ LootJS.lootTables(event => {
 	if (Platform.isLoaded("urban_decor")) {
 		event.getLootTable("minecraft:gameplay/sniffer_digging").firstPool().addEntry(LootEntry.tag("urban_decor:polyanthous", true))
 	}
+
+	// console.log(Ingredient.of("#bits_n_bobs:chairs").getItemIds().toArray())
 })
