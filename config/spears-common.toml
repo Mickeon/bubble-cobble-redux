@@ -10,3 +10,5 @@ tridents_use_spear_attack_animation = false
 can_use_lunge_while_gliding = false
 #Allows lunging while underwater
 can_use_lunge_while_in_water = false
+#Enables attribute swapping on spears for lunge swapping
+attribute_swap_bypasses_minimum_attack_charge = true
