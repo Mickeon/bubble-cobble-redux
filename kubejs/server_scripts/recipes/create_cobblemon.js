@@ -98,7 +98,8 @@ ServerEvents.tags("item", event => {
 		/createmonballsoverhaul:half/,
 		/createmonballsoverhaul:.*ball_base/,
 		/createmonballsoverhaul:stamped/,
-		"createmonballsoverhaul:rubber_stamp_lid"
+		"createmonballsoverhaul:rubber_stamp_lid",
+		"createmonballsoverhaul:blank_ball_lid",
 	)
 })
 

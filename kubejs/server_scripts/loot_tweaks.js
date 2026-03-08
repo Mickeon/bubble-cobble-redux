@@ -316,5 +316,14 @@ LootJS.lootTables(event => {
 		event.getLootTable("minecraft:gameplay/sniffer_digging").firstPool().addEntry(LootEntry.tag("urban_decor:polyanthous", true))
 	}
 
+	// let log = (table) => {
+	// 	if (table.lootType == LootType.CHEST) {
+	// 		console.log(table.location)
+	// 	}
+	// }
+	// console.log("What")
+	// event.forEachTable(/.*[\w]+:chests\/[\w_\/]*(nether|infern|hell|chasm|lava|magma|m[eo]lt|fire|flame|blaze|ember|pyre)[\w_\/].*/, log)
+	// event.forEachTable("minecraft:chests/ruined_portal", log)
+
 	// console.log(Ingredient.of("#bits_n_bobs:chairs").getItemIds().toArray())
 })

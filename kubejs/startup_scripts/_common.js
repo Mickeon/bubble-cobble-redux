@@ -47,6 +47,9 @@ function play_sound_globally(level, pos, sound_event, source, volume, pitch) {
  * @param {$Player} player @param {string | Array<string>} usernames
  */
 function is_eligible_for_easter_egg(player, usernames) {
+	if (Platform.isClientEnvironment() && Client.isSingleplayer()) {
+		return true
+	}
 	if (player.server && player.server.isSingleplayer()) {
 		return true
 	}

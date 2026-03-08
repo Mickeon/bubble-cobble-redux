@@ -363,6 +363,8 @@ ServerEvents.recipes(event => {
 	event.remove({id: "handcrafted:berry_jam_jar"})
 	event.shapeless(Item.of("handcrafted:berry_jam_jar"), Ingredient.of("brewinandchewin:sweet_berry_jam"))
 	event.shapeless(Item.of("brewinandchewin:sweet_berry_jam"), Ingredient.of("handcrafted:berry_jam_jar"))
+	// TODO: This doesn't work. Likely because there's no recipe schema for deepfrying.
+	// event.replaceInput({id: "create_deepfried:deep_frying/calamari"}, "minecraft:ink_sac", "#c:foods/raw_squid")
 
 	// TODO: Add recipes for (this modpack's) Pale Jacaranda and Redder Wood.
 	// event.shaped("biomesoplenty:stripped_jacaranda_log", ["DAD", "ADA", "DAD"], {D: "minecraft:white_dye", A: "biomeswevegone:stripped_jacaranda_log"})

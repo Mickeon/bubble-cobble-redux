@@ -245,7 +245,17 @@ ItemEvents.modifyTooltips(event => {
 	event.modify("kubejs:banana_mayo_sandwich", text => {
 		text.dynamic("sue_banana_mayo_sandwich")
 	})
-	event.modify(["create:chocolate_bucket", "create:honey_bucket", "create_bic_bit:mayonnaise_bucket", "create_bic_bit:ketchup_bucket", "create:bound_cardboard_block"], text => {
+	event.modify([
+		"create:chocolate_bucket",
+		"create:honey_bucket",
+		"create_bic_bit:mayonnaise_bucket",
+		"create_bic_bit:ketchup_bucket",
+		"create:bound_cardboard_block",
+		"sophisticatedbackpacks:advanced_feeding_upgrade",
+		"sophisticatedbackpacks:feeding_upgrade",
+		"sophisticatedstorage:advanced_feeding_upgrade",
+		"sophisticatedstorage:feeding_upgrade",
+	], text => {
 		text.dynamic("add_pelad")
 	})
 
@@ -266,6 +276,15 @@ ItemEvents.modifyTooltips(event => {
 			Text.keybind("key.sophisticatedbackpacks.inventory_interaction").white()]).color(MASCOT_COLOR_DARK)
 		)
 	})
+	// Mitigate confusion between Sophisticated Backpack and Storage upgrades.
+	event.modify([
+		"#sophisticatedbackpacks:upgrade",
+		"#sophisticatedstorage:upgrade",
+		/sophisticated.*upgrade/, // Catch all.
+	], text => {
+		text.dynamic("add_sophisticated_marker")
+	})
+
 
 	event.modifyAll({advanced: false}, text => {
 		text.dynamic("show_tool_durability")
@@ -323,6 +342,10 @@ ItemEvents.dynamicTooltips("add_pelad", event => {
 	if (is_eligible_for_easter_egg(Client.player, GOURMANDS)) {
 		event.lines[0] = Text.of(event.lines[0]).append(Utils.getSystemTime() % 3000 > 1000 ? " 😳" : " 🥺")
 	}
+})
+
+ItemEvents.dynamicTooltips("add_sophisticated_marker", event => {
+	event.lines[0] = Text.of(event.lines[0]).append(event.item.mod == "sophisticatedbackpacks" ? " 🎒" : " 📦")
 })
 
 ItemEvents.dynamicTooltips("show_tool_durability", event => {
