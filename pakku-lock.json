@@ -2923,40 +2923,30 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "CreateSophisticatedBackpacks.zip",
+                    "file_name": "CreateSophBackpacks.zip",
                     "mc_versions": [
-                        "1.16.3",
-                        "1.16.4",
-                        "1.16.5",
-                        "1.17.1",
-                        "1.18",
-                        "1.18.1",
-                        "1.18.2",
-                        "1.19",
-                        "1.19.1",
-                        "1.19.2",
                         "1.20.1",
-                        "1.20.4",
-                        "1.21",
                         "1.21.1",
-                        "1.21.2",
                         "1.21.3",
-                        "1.21.4"
+                        "1.21.4",
+                        "1.21.8",
+                        "1.21.10",
+                        "1.21.11"
                     ],
                     "loaders": [
                         "minecraft"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/srJbhHkf/versions/KZj2cwZF/CreateSophisticatedBackpacks.zip",
-                    "id": "KZj2cwZF",
+                    "url": "https://cdn.modrinth.com/data/srJbhHkf/versions/3WMwR0Mh/CreateSophBackpacks.zip",
+                    "id": "3WMwR0Mh",
                     "parent_id": "srJbhHkf",
                     "hashes": {
-                        "sha512": "0e3d5b38b9b4c578e9612f61450386fcfb59b301909c27991830636fa7d76f45db4d61f360fe181fe3216b71636eba16dcb308c395932d1283e44a6a70a82ea8",
-                        "sha1": "0a119ab68a6b2cb824d545c0dc2dc44b1339cc94"
+                        "sha512": "766e3c68aff4bec310daa52f0b0800923c8171b7960f509c7f3fe8dbf8de0375e73bd4a4e5ea2b4ba9cdc77279f4d5ccbc6d3163218aa329052d42e92f0a025c",
+                        "sha1": "0c834a3a13d3d597b6d1273375d2bd049fc3d728"
                     },
                     "required_dependencies": [],
-                    "size": 556651,
-                    "date_published": "2025-02-04T14:29:53.121527Z"
+                    "size": 557473,
+                    "date_published": "2026-03-04T03:26:19.571554Z"
                 }
             ]
         },
