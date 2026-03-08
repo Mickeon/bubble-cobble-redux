@@ -28,7 +28,7 @@ ServerEvents.recipes(event => {
 		C: "minecraft:copper_ingot"
 	}).id("minecraft:copper_trapdoor")
 
-	// Recipe conflict between Create's Sand Paper and craftable Suspicious Sand from... I'm not sure what mod?
+	// Recipe conflict between Create's Sand Paper and craftable Suspicious Sand from Supplementaries.
 	// While at it, make the recipe way more generous.
 	event.shapeless("create:sand_paper", [
 		Ingredient.of("#c:sands").except("#c:sands/red"),

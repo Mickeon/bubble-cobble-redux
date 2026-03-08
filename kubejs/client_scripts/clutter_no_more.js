@@ -10,10 +10,8 @@
 /** @type {typeof import("dev.tazer.clutternomore.common.shape_map.ShapeMap").$ShapeMap } */
 let $ShapeMap = Java.loadClass("dev.tazer.clutternomore.common.shape_map.ShapeMap")
 
-/** @type {$List<$Item>} */
-let shapes
-/** @type {$Item} */
-let cached_item
+let shapes = /** @type {$List<$Item>?} */ (null)
+let cached_item = /** @type {$Item?} */ (null)
 
 ItemEvents.modifyTooltips(event => {
 	event.modifyAll(text => {

@@ -4,6 +4,8 @@
 let $Long  = Java.loadClass("java.lang.Long")
 /** @type {typeof import("net.minecraft.world.damagesource.DamageType").$DamageType } */
 let $DamageType  = Java.loadClass("net.minecraft.world.damagesource.DamageType")
+/** @type {typeof import("net.minecraft.world.entity.item.ItemEntity").$ItemEntity } */
+let $ItemEntity  = Java.loadClass("net.minecraft.world.entity.item.ItemEntity")
 
 /** @type {typeof import("net.neoforged.neoforge.event.entity.player.CanContinueSleepingEvent").$CanContinueSleepingEvent } */
 let $CanContinueSleepingEvent  = Java.loadClass("net.neoforged.neoforge.event.entity.player.CanContinueSleepingEvent")
@@ -111,7 +113,7 @@ const DreamDimension = {
 		const nearby_entites = player.level.getEntitiesWithin(AABB.CUBE.move(player.x, player.y, player.z).inflate(10))
 		const nearby_item_entities = Utils.newList()
 		nearby_entites.forEach(e => {
-			if (e.type == "minecraft:item") {
+			if (e instanceof $ItemEntity) {
 				nearby_item_entities.add(e)
 			}
 		})
@@ -382,7 +384,7 @@ const DreamDimension = {
 
 					let nearby_entites = level.getEntitiesWithin(AABB.CUBE.move(block_center.x(), block_center.y(), block_center.z()).inflate(explosion_strength))
 					nearby_entites.forEach(e => {
-						if (e.type == "minecraft:item") {
+						if (e instanceof $ItemEntity) {
 							e.kill()
 						}
 					})
@@ -514,7 +516,7 @@ const DreamDimension = {
 		if (!level) {
 			return
 		}
-		let data = level.getPersistentData()
+		const data = level.getPersistentData()
 
 		let chunky_size = data.getInt("chunky_size")
 		if (chunky_size >= 1024) {
