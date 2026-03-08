@@ -75,6 +75,27 @@ ItemEvents.modification(event => {
 	set_max_damage("create:sand_paper", 16)
 	set_max_damage("create:red_sand_paper", 16)
 
+	// The config settings for changing the Grappling Hooks' values has been removed. So we must do it this way.
+	function change_hook_values(item, max_damage, length) {
+		event.modify(item, /** @param {$ItemModifications} modified */ modified => {
+			const hook_definition = modified.item().hookDefinition
+			if (!hook_definition) {
+				console.error(`Hook definition not found for ${modified.item().id}. Aborting.`)
+				return
+			}
+			if (max_damage) {
+				hook_definition.durability = max_damage
+				modified.maxDamage = hook_definition.durability
+			}
+			if (length) {
+				hook_definition.length = length
+			}
+		})
+	}
+	change_hook_values("yo_hooks:gold_grappling_hook", 36, 30)
+	change_hook_values("yo_hooks:diamond_grappling_hook", 144, 21)
+	change_hook_values("yo_hooks:netherite_grappling_hook", 216, 26)
+
 	// TODO: Embed Fortune/Looting II into Golden tools (This is derived from Quark).
 	// Enchantments are not registered at this stage, so it's not possible like this.
 	// event.modify(["minecraft:golden_pickaxe", "minecraft:golden_axe", "minecraft:golden_shovel", "minecraft:golden_hoe", "minecraft:golden_sword", "farmersdelight:golden_knife"], /** @param {$ItemModifications} modified */ modified => {

@@ -13,6 +13,10 @@
 	"show_beam_tier_six": true,
 	// Show Beacon Beam for Tier Seven Raids
 	"show_beam_tier_seven": true,
+	// Render the raid crystal particle effects
+	"show_particles": true,
+	// Render the legacy beacon effect
+	"show_legacy_beacon": false,
 	// Automatically accept raid join requests
 	"auto_accept_requests": true,
 	// Show raid logs during raids

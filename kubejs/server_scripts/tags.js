@@ -151,6 +151,10 @@ ServerEvents.tags("item", event => {
 	// Make Construction sticks enchantable with Mending and Unbreaking.
 	event.add("minecraft:enchantable/durability", "#constructionstick:construction_sticks")
 
+	// Allow Netherite Grappling Hook to be repaired with Diamond and Netherite Scrap
+	// This is part of the Mending Rework rebalance.
+	event.add("yo_hooks:netherite_repairable", "minecraft:diamond", "minecraft:netherite_scrap")
+
 	// We reserve Accessories for Mega Showdown, and use Curios for Backpacks/Artifacts.
 	event.removeAll("accessories:back")
 	event.removeAll("accessories:hat")

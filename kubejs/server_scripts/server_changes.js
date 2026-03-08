@@ -416,7 +416,6 @@ PlayerEvents.decorateChat(event => {
 ServerEvents.tags("item", event => {
 	event.add("bubble_cobble:netherite_diamond_repairable",
 		"constructionstick:netherite_stick",
-		"yo_hooks:netherite_grappling_hook",
 	)
 })
 
