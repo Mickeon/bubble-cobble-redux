@@ -109,5 +109,8 @@
   },
   "balm": {
     "jade": true
+  },
+  "mega_showdown": {
+    "jade": true
   }
 }

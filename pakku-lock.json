@@ -2006,7 +2006,7 @@
             ]
         },
         {
-            "pakku_id": "HR2vEg5eO2BRdnxi",
+            "pakku_id": "tY9qAMloBiF80ySK",
             "type": "MOD",
             "side": "BOTH",
             "slug": {
@@ -2021,7 +2021,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "mega_showdown-neoforge-1.7.0+1.7.3+1.21.1.jar",
+                    "file_name": "mega_showdown-neoforge-1.7.1+1.7.3+1.21.1.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -2029,21 +2029,21 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/SszvX85I/versions/Haw8pe7a/mega_showdown-neoforge-1.7.0+1.7.3+1.21.1.jar",
-                    "id": "Haw8pe7a",
+                    "url": "https://cdn.modrinth.com/data/SszvX85I/versions/cZX2ELt1/mega_showdown-neoforge-1.7.1+1.7.3+1.21.1.jar",
+                    "id": "cZX2ELt1",
                     "parent_id": "SszvX85I",
                     "hashes": {
-                        "sha512": "c0d600ab27d6bc730ef7dc4421d15954ad1dcf4f224d5b6e2402f308c48e4524b1ce401e56de74ae9900226ce7321cf1628722866f41264a44dbb7b232ebbc16",
-                        "sha1": "04402f6c4f6ba27e631d3d47606889a4d3e341f4"
+                        "sha512": "a295a7371ca98e3dbf55adc3741105a473bd5fce96e2c470e7e4a4b32093a387e2c81590aff2e97d3bb22235d7f057f72b7a023b14c734beeac9766d368df14f",
+                        "sha1": "3692b107a202765968e810c618b1659b17d0b250"
                     },
                     "required_dependencies": [
+                        "ccKDOlHs",
                         "lhGA9TYQ",
                         "jtmvUHXj",
-                        "ccKDOlHs",
                         "MdwFAVRL"
                     ],
-                    "size": 16411614,
-                    "date_published": "2026-03-08T09:10:36.790057Z"
+                    "size": 16418696,
+                    "date_published": "2026-03-08T15:30:00.166495Z"
                 }
             ]
         },
@@ -3258,7 +3258,7 @@
             ]
         },
         {
-            "pakku_id": "9JP73NhQ9yJ7Yuhq",
+            "pakku_id": "Ocd7FYNCWYfEemQt",
             "type": "MOD",
             "side": "SERVER",
             "slug": {
@@ -3273,7 +3273,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "create_ltab-3.8.0.jar",
+                    "file_name": "create_ltab-3.8.1.jar",
                     "mc_versions": [
                         "1.20.1",
                         "1.21.1"
@@ -3285,16 +3285,16 @@
                         "quilt"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/fUa6OtBG/versions/Avv76b3R/create_ltab-3.8.0.jar",
-                    "id": "Avv76b3R",
+                    "url": "https://cdn.modrinth.com/data/fUa6OtBG/versions/B0635kI7/create_ltab-3.8.1.jar",
+                    "id": "B0635kI7",
                     "parent_id": "fUa6OtBG",
                     "hashes": {
-                        "sha512": "422d64fd40eef3d7a7a4530bced88367670f79afb5f90ac3354346231bac6d35d60fae0d8b23555c90d386f9b319f995ac158a9fc57392492aec359575c3e1ac",
-                        "sha1": "a5bfeffa8b7fbb105553b7924ddfc99dcdc824b3"
+                        "sha512": "b7f135c16e9ca5cc44d96208734fcd43f5605c92e89270938f7ab266a127b63077a8cae69c0a48bf365fdf2877ca4e3615d42493c5b1e80cf16024c9181448b4",
+                        "sha1": "e40ede0bb8908ba080a07fbc9953710604ba3315"
                     },
                     "required_dependencies": [],
-                    "size": 2416726,
-                    "date_published": "2026-03-03T16:54:44.598746Z"
+                    "size": 2417939,
+                    "date_published": "2026-03-08T13:18:32.040577Z"
                 }
             ]
         },
@@ -7270,7 +7270,7 @@
             ]
         },
         {
-            "pakku_id": "qtUwg4B5nMk0YUCl",
+            "pakku_id": "qhprNseqdTkNo8B8",
             "type": "MOD",
             "side": "SERVER",
             "slug": {
@@ -7285,7 +7285,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "Oh-The-Trees-Youll-Grow-neoforge-1.21.1-5.2.0.jar",
+                    "file_name": "Oh-The-Trees-Youll-Grow-neoforge-1.21.1-5.2.1.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -7293,16 +7293,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/g8NOG5OR/versions/8i7uvcZx/Oh-The-Trees-Youll-Grow-neoforge-1.21.1-5.2.0.jar",
-                    "id": "8i7uvcZx",
+                    "url": "https://cdn.modrinth.com/data/g8NOG5OR/versions/oKAgwPD0/Oh-The-Trees-Youll-Grow-neoforge-1.21.1-5.2.1.jar",
+                    "id": "oKAgwPD0",
                     "parent_id": "g8NOG5OR",
                     "hashes": {
-                        "sha512": "047fa35493fa2ba0806ddf4dcabf33e05161cee0aa10546cb1b05c6e730862f37d7d4280d24d76a0b97421301fbc617660bf40ba5269e8655c58d8b3c7a0adc9",
-                        "sha1": "82e14106325bebd5a536493aee90873a6cfb38fb"
+                        "sha512": "fee757648cfb577a3c5dca9217655d0ffa7467133d01e2f2b5e1aa0e098f385e55f2e294d425e7690a5bd77f41cda7aacdf07a2b0f5b863ec26bb23bae8285c0",
+                        "sha1": "26ce6de922a81f3104e95a126cc948c46ef629b7"
                     },
                     "required_dependencies": [],
-                    "size": 165280,
-                    "date_published": "2026-01-19T22:38:20.167602Z"
+                    "size": 165009,
+                    "date_published": "2026-03-08T16:10:19.915051Z"
                 }
             ]
         },
