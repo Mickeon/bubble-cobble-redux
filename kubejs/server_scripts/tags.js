@@ -100,12 +100,12 @@ ServerEvents.tags("item", event => {
 	event.add("soulbound:enchantable", "#c:tools")
 	event.add("create:blaze_burner_fuel/regular", "#simpletms:type_fire_tr", "cobblemon:charcoal_stick", "cobblemon:fire_stone", "mynethersdelight:bullet_pepper", "mynethersdelight:pepper_powder" )
 	event.add("create:blaze_burner_fuel/special", "#simpletms:type_fire_tm", "cobblemon:fire_gem", "cobblemon:fire_stone_block", "mega_showdown:firium_z", "kubejs:firebomb_whiskey",
-		 "mynethersdelight:chilidog", "mynethersdelight:hot_cream", "mynethersdelight:hot_cream_cone",
-		 "mynethersdelight:spicy_hoglin_stew", "mynethersdelight:hot_wings", "mynethersdelight:hot_wings_bucket",
-		 "mynethersdelight:spicy_curry", "mynethersdelight:rock_soup", "minersdelight:rock_soup_cup",
-		 "minersdelight:spicy_hoglin_stew_cup", "minersdelight:spicy_noodle_soup_cup", "mynethersdelight:fried_hoglin_chop",
-		 "mynethersdelight:spicy_noodle_soup", "mynethersdelight:plate_of_ghasta_with_cream",
-		 "mynethersdelight:magma_cake_slice", "mynethersdelight:magma_cake_block",
+		"mynethersdelight:chilidog", "mynethersdelight:hot_cream", "mynethersdelight:hot_cream_cone",
+		"mynethersdelight:spicy_hoglin_stew", "mynethersdelight:hot_wings", "mynethersdelight:hot_wings_bucket",
+		"mynethersdelight:spicy_curry", "mynethersdelight:rock_soup", "minersdelight:rock_soup_cup",
+		"minersdelight:spicy_hoglin_stew_cup", "minersdelight:spicy_noodle_soup_cup", "mynethersdelight:fried_hoglin_chop",
+		"mynethersdelight:spicy_noodle_soup", "mynethersdelight:plate_of_ghasta_with_cream",
+		"mynethersdelight:magma_cake_slice", "mynethersdelight:magma_cake_block",
 	)
 
 	// Shared in a bunch of places.
@@ -166,11 +166,11 @@ ServerEvents.tags("item", event => {
 	event.add("curios:back", "#supplementaries:sacks")
 
 	// Allow more tools to ride Chain Conveyors, as not everyone has a Wrench in hand.
-	event.add("create:chain_rideable", "#minecraft:pickaxes", "#minecraft:hoes") // Without the code below this would also include Hammers.
+	event.add("create:chain_rideable", "#minecraft:pickaxes", "#minecraft:hoes")
 
-	// Tidy up the way Hammers are tagged.
-	event.remove("minecraft:pickaxes", Ingredient.of("@justhammers").itemIds)
-	event.add("c:tools/mining_tool", "#justhammers:hammer")
+	// Allow some swords to harvest Straw.
+	// Currently can't do, as no durability is removed from non-knife tools.
+	// event.add("farmersdelight:straw_harvesters", "minecraft:stone_sword", "minecraft:copper_sword", "mowziesmobs:naga_fang_dagger")
 
 	// Bugged.
 	event.add("supplementaries:cannon_blacklist", "#comforts:sleeping_bags")

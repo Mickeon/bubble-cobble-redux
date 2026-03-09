@@ -258,6 +258,8 @@ ClientEvents.lang("en_us", event => {
 		"tag.item.curios.necklace": "Fits in Curios' Necklace slot",
 		"tag.item.enhancedcelestials.harvest_moon_crops": "Crops enhanced by the Harvest Moon",
 		"tag.item.farmersdelight.cabbage_roll_ingredients": "Cabbage Roll Ingredients",
+		"tag.item.farmersdelight.straw_harvesters": "Straw Harvesters",
+		"tag.item.farmersdelight.knives": "Knives",
 		"tag.item.kubejs.wines": "Wines",
 		"tag.item.mega_showdown.mega_bracelets": "Mega Bracelets",
 		"tag.item.mega_showdown.mega_stone": "Mega Stones",
@@ -343,7 +345,7 @@ ClientEvents.generateAssets("after_mods", event => {
 				"fuecoco",
 				"tinkaton",
 				"chikorita",
-				"liligant",
+				"liligant", // File-accurate typo indeed.
 				"chansey",
 				"cutiefly",
 				"chandelure",
@@ -355,7 +357,7 @@ ClientEvents.generateAssets("after_mods", event => {
 				"salamence",
 				"mew",
 				"arbok",
-				"meowscrada",
+				"meowscrada", // File-accurate typo indeed.
 				"floragato",
 				"sprigatito",
 				"milotic",

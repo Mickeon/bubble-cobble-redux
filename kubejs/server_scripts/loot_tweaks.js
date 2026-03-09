@@ -452,4 +452,8 @@ ServerEvents.generateData("last", event => {
 	// Rather rudimentary.
 	scavenging_meat("minecraft:pig", "farmersdelight:ham", true)
 	scavenging_meat("minecraft:hoglin", "farmersdelight:ham")
+	scavenging_meat("minecraft:ghast", "mynethersdelight:ghasta") // Technically incorrect, knife is not needed.
+	scavenging_meat("minecraft:strider", "mynethersdelight:strider_slice") // Technically incorrect, knife is not needed, the numbers are wrong.
+	scavenging_meat("minecraft:strider", "mynethersdelight:strider_rock") // Technically incorrect, the numbers are wrong.
+	scavenging_meat("minecraft:hoglin", "mynethersdelight:hoglin_hide") // Technically incorrect, the numbers are wrong.
 })

@@ -256,13 +256,6 @@ ServerEvents.recipes(event => {
 	// Waigee's request. Pale Oak Shelf from Jacaranda wood.
 	event.shaped(Item.of("minecraft:pale_oak_shelf", 6), ["SSS", "   ", "SSS"], {S: "biomesoplenty:stripped_jacaranda_log"})
 
-	// Use our own recipes for more reasonable hammers.
-	event.remove({mod: "justhammers"})
-	event.shaped(Item.of("justhammers:stone_hammer"), [" II", " SI", "S  "], {I: "minecraft:stone", S: "minecraft:stick"})
-	event.shaped(Item.of("justhammers:stone_reinforced_hammer"), ["III", " SI", "S I"], {I: "minecraft:stone", S: "minecraft:stick"})
-	event.shaped(Item.of("justhammers:iron_hammer"), [" II", " SI", "S  "], {I: "minecraft:iron_block", S: "minecraft:stick"})
-	event.shaped(Item.of("justhammers:iron_reinforced_hammer"), ["III", " SI", "S I"], {I: "minecraft:iron_block", S: "minecraft:stick"})
-
 	// New recipe for Gadgets Against Grind's Escape Rope.
 	// event.remove({mod: "gag"})
 	event.remove({id: "gag:escape_rope"})
@@ -373,9 +366,7 @@ ServerEvents.recipes(event => {
 		let wood_type = path.split("way_sign_")[1]
 		let original_namespace = path.includes("/") ? path.split("/")[0] : "minecraft"
 		let original_sign_id = `${original_namespace}:${wood_type}_sign`
-
-		console.log(`${way_sign_id} -> ${original_sign_id}`)
-
+		// console.log(`${way_sign_id} -> ${original_sign_id}`)
 		event.recipes.create.cutting(CreateItem.of(Item.of(way_sign_id, 2)), Ingredient.of(original_sign_id))
 	}
 
