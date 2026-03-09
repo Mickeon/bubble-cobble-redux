@@ -26,6 +26,22 @@
 		"order": 99
 	},
 
+	"emi_loot:chest_loot": {
+		"sort": "input_then_output",
+		"icon": {
+			"stack": "item:lootr:lootr_chest"
+		}
+	},
+	"emi_loot:block_drops": {
+		"sort": "input_then_output",
+		"icon": {
+			"stack": "#item:c:ore_rates/singular"
+		}
+	},
+	"emi_loot:trial_chamber": {
+		"order": 110
+	},
+
 	"minecraft:blasting": {
 		"order": 530
 	},

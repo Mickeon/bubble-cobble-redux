@@ -1,0 +1,10 @@
+{
+	"exclusions": [
+		{
+			"regex": "cobblemon:sets/"
+		},
+		{
+			"regex": "bubble_cobble:raid/"
+		}
+	]
+}

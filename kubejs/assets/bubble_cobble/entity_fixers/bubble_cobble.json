@@ -1,0 +1,52 @@
+{
+	"minecraft:copper_golem": {
+		"offset": -3
+	},
+	"minecraft:magma_cube": {
+		"scale": 0.333
+	},
+	"minecraft:parrot": {
+		"offset": -12,
+		"scale": 1.5
+	},
+	"minecraft:slime": {
+		"scale": 0.333
+	},
+	"create_bic_bit:herring": {
+		"offset": -17,
+		"z": -90.0
+	},
+	"biomeswevegone:man_o_war": {
+		"offset": -16,
+		"z": -5.0
+	},
+	"biomeswevegone:oddion": {
+		"offset": -12
+	},
+	"mowziesmobs:bluff": {
+		"scale": 1.25
+	},
+	"mowziesmobs:ferrous_wroughtnaut": {
+		"offset": 3,
+		"scale": 1.25
+	},
+	"mowziesmobs:frostmaw": {
+		"offset": 3
+	},
+	"mowziesmobs:naga": {
+		"scale": 0.5
+	},
+	"mowziesmobs:sculptor": {
+		"offset": 3
+	},
+	"mowziesmobs:umvuthi": {
+		"offset": 3
+	},
+	"snowyspirit:gingerbread_golem": {
+		"offset": -4
+	},
+	"undergroundworlds:jungle_bee": {
+		"offset": -8,
+		"scale": 1.25
+	}
+}

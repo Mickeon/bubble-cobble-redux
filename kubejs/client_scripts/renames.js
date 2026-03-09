@@ -105,6 +105,17 @@ ClientEvents.lang("en_us", event => {
 		"effect.cobblemon.mental_restoration.desc": "Delays the player's Insomnia",
 		"effect.create_bic_bit.oiled_up.desc": "Cover yourself in oil to float on the surface of water and outside in the rain. Also makes you quite slippery.",
 	})
+
+	// For loot tables shown in EMI Loot.
+	event.addAll("emi_loot", {
+		"emi_loot.chest.cobblemonraiddens:raid/tier/tier_one": "Tier 1 Raid",
+		"emi_loot.chest.cobblemonraiddens:raid/tier/tier_two": "Tier 2 Raid",
+		"emi_loot.chest.cobblemonraiddens:raid/tier/tier_three": "Tier 3 Raid",
+		"emi_loot.chest.cobblemonraiddens:raid/tier/tier_four": "Tier 4 Raid",
+		"emi_loot.chest.cobblemonraiddens:raid/tier/tier_five": "Tier 5 Raid",
+		"emi_loot.chest.cobblemonraiddens:raid/tier/tier_six": "Tier 6 Raid",
+		"emi_loot.chest.cobblemonraiddens:raid/tier/tier_seven": "Tier 7 Raid",
+	})
 })
 
 // This doesn't work for the first load.

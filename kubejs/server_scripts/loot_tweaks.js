@@ -327,3 +327,129 @@ LootJS.lootTables(event => {
 
 	// console.log(Ingredient.of("#bits_n_bobs:chairs").getItemIds().toArray())
 })
+
+// The crap we have to go through to show Farmer's Delight's loot modifiers.
+// TODO: Can it even be an ounce of automatable? I currently have to do a lot of copy-pasting and manual work here.
+// Perhaps if I play my cards right, that won't be necessary.
+ServerEvents.generateData("last", event => {
+	function straw_harvesting(block, properties, chance) {
+		const conditions = [
+			{
+				condition: "minecraft:match_tool",
+				predicate: {
+					items: "#farmersdelight:straw_harvesters"
+				}
+			}
+		]
+		if (properties) {
+			conditions.push({
+				condition: "minecraft:block_state_property",
+				block: block,
+				properties: properties
+			})
+		}
+		if (chance) {
+			conditions.push({
+				condition: "minecraft:random_chance",
+				chance: chance
+			})
+		}
+
+		event.json(`${ID.namespace(block)}:direct_drops/blocks/${ID.path(block)}`, {
+			type: "minecraft:block",
+			pools: [{
+				rolls: 1,
+				conditions: conditions,
+				entries: [{
+					type: "minecraft:item",
+					name: "farmersdelight:straw"
+				}],
+			}]
+		})
+	}
+
+	straw_harvesting("minecraft:short_grass", null, 0.2)
+	straw_harvesting("minecraft:tall_grass", null, 0.2)
+	straw_harvesting("farmersdelight:sandy_shrub", null, 0.3)
+	straw_harvesting("farmersdelight:rice_panicles", {age: "3"})
+	straw_harvesting("minecraft:wheat", {age: "7"})
+
+	function pastry_slicing(block, item, count) {
+		event.json(`${ID.namespace(block)}:direct_drops/blocks/${ID.path(block)}`, {
+			type: "minecraft:block",
+			pools: [{
+				rolls: 1,
+				conditions: [{
+					condition: "minecraft:match_tool",
+					predicate: {
+						items: "#farmersdelight:tools/knives"
+					}
+				}],
+				entries: [{
+					type: "minecraft:item",
+					name: item,
+					functions: [{
+						function: "minecraft:set_count",
+						count: count,
+					}],
+				}],
+			}]
+		})
+	}
+
+	// TODO: For each type of Candle Cake. See RegEx stuff in https://github.com/fzzyhmstrs/EMI_loot/wiki/Direct-Drops.
+	pastry_slicing("minecraft:cake", "farmersdelight:cake_slice", 7)
+	pastry_slicing("minecraft:candle_cake", "farmersdelight:cake_slice", 7)
+	pastry_slicing("farmersdelight:chocolate_pie", "farmersdelight:chocolate_pie_slice", 4)
+	pastry_slicing("farmersdelight:apple_pie", "farmersdelight:apple_pie_slice", 4)
+	pastry_slicing("farmersdelight:sweet_berry_cheesecake", "farmersdelight:sweet_berry_cheesecake_slice", 4)
+
+	function scavenging_meat(entity, item, chance_based) {
+		const conditions = [{
+			condition: "minecraft:match_tool",
+			predicate: {
+				items: "#farmersdelight:tools/knives"
+			}
+		}]
+		if (chance_based) {
+			conditions = {
+				condition: "minecraft:random_chance_with_enchanted_bonus",
+				enchantment: "minecraft:looting",
+				unenchanted_chance: 0.5,
+				enchanted_chance: {
+					type: "minecraft:linear",
+					base: 0.6,
+					per_level_above_first: 0.1
+				}
+			}
+		}
+
+		event.json(`${ID.namespace(entity)}:direct_drops/entities/${ID.path(entity)}`, {
+			type: "minecraft:entity",
+			pools: [{
+				rolls: 1,
+				conditions: conditions,
+				entries: [{
+					type: "minecraft:item",
+					name: item,
+					functions: [{
+						conditions: [{
+							condition: "minecraft:entity_properties",
+							entity: "this",
+							predicate: {
+								flags: {
+									is_on_fire: true
+								}
+							}
+						}],
+						function: "minecraft:furnace_smelt"
+					}]
+				}],
+			}]
+		})
+	}
+
+	// Rather rudimentary.
+	scavenging_meat("minecraft:pig", "farmersdelight:ham", true)
+	scavenging_meat("minecraft:hoglin", "farmersdelight:ham")
+})

@@ -14,7 +14,7 @@ skippedKeys = [
     "emi_loot.function.set_count_set"
 ]
 chestLootAlwaysStackSame = false
-splitChestLootByTrial = false
+splitChestLootByTrial = true
 chanceDecimalPlaces = 1
 conditionStyle = "default"
 linkFormatting = [
