@@ -21,6 +21,8 @@
 	"auto_accept_requests": true,
 	// Show raid logs during raids
 	"enable_raid_logs": true,
+	// Show health bars above Pokemon during raids
+	"enable_health_bars": true,
 	"raid_status_x": 100,
 	"raid_status_y": 50,
 	"raid_popup_x": 50,

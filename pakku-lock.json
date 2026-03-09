@@ -1783,7 +1783,7 @@
             ]
         },
         {
-            "pakku_id": "U2oB9pKcHplI5orC",
+            "pakku_id": "3aW2y5WNIoT4lhzi",
             "type": "MOD",
             "side": "BOTH",
             "slug": {
@@ -1798,7 +1798,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "cobblemonraiddens-neoforge-0.8.2+1.21.1.jar",
+                    "file_name": "cobblemonraiddens-neoforge-0.9.0+1.21.1.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -1806,19 +1806,19 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/GebWh45l/versions/VMvcndri/cobblemonraiddens-neoforge-0.8.2+1.21.1.jar",
-                    "id": "VMvcndri",
+                    "url": "https://cdn.modrinth.com/data/GebWh45l/versions/f047feXi/cobblemonraiddens-neoforge-0.9.0+1.21.1.jar",
+                    "id": "f047feXi",
                     "parent_id": "GebWh45l",
                     "hashes": {
-                        "sha512": "10cc0c272503adf3d80e65c7e07f9f4fec44803bb5b8d78b2b59366d29eb57e96355cfc5a11b386167086d5beaee4821680ce437de7abc08d47bb4fe99073ce0",
-                        "sha1": "631e29357b58135699c2728f6985250ba723e8eb"
+                        "sha512": "8ae55566b96b1122a1b45171cba98483769203904cdf8f036de10518a5e576ee1afb9259f3b50793ec4255abe2c9b7c8e36cc0fe2601b526d9b5b22b8045aa51",
+                        "sha1": "3d4023a230d5f72fd71bad36d55e81329663e597"
                     },
                     "required_dependencies": [
-                        "8BmcQJ2H",
-                        "MdwFAVRL"
+                        "MdwFAVRL",
+                        "8BmcQJ2H"
                     ],
-                    "size": 2593124,
-                    "date_published": "2026-03-07T04:23:41.397962Z"
+                    "size": 2621211,
+                    "date_published": "2026-03-09T12:20:31.286610Z"
                 }
             ]
         },
@@ -2006,7 +2006,7 @@
             ]
         },
         {
-            "pakku_id": "tY9qAMloBiF80ySK",
+            "pakku_id": "t8YI3gZKM1CWdJ7X",
             "type": "MOD",
             "side": "BOTH",
             "slug": {
@@ -2021,7 +2021,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "mega_showdown-neoforge-1.7.1+1.7.3+1.21.1.jar",
+                    "file_name": "mega_showdown-neoforge-1.7.1+1.7.3+1.21.1-hotfix.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -2029,21 +2029,21 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/SszvX85I/versions/cZX2ELt1/mega_showdown-neoforge-1.7.1+1.7.3+1.21.1.jar",
-                    "id": "cZX2ELt1",
+                    "url": "https://cdn.modrinth.com/data/SszvX85I/versions/YGB1z9eT/mega_showdown-neoforge-1.7.1+1.7.3+1.21.1-hotfix.jar",
+                    "id": "YGB1z9eT",
                     "parent_id": "SszvX85I",
                     "hashes": {
-                        "sha512": "a295a7371ca98e3dbf55adc3741105a473bd5fce96e2c470e7e4a4b32093a387e2c81590aff2e97d3bb22235d7f057f72b7a023b14c734beeac9766d368df14f",
-                        "sha1": "3692b107a202765968e810c618b1659b17d0b250"
+                        "sha512": "ae6612b96482640abafe3ef1f6d3a79e2b7cb5eae237e972f34c2df5633c7313c4cc7618067b10b8cd1976ecf9797d50d7b1903417701e79a11f430a640cfa88",
+                        "sha1": "89743622575a90f47a43013501bced98292f7773"
                     },
                     "required_dependencies": [
-                        "ccKDOlHs",
                         "lhGA9TYQ",
-                        "jtmvUHXj",
-                        "MdwFAVRL"
+                        "ccKDOlHs",
+                        "MdwFAVRL",
+                        "jtmvUHXj"
                     ],
-                    "size": 16418696,
-                    "date_published": "2026-03-08T15:30:00.166495Z"
+                    "size": 16445846,
+                    "date_published": "2026-03-09T06:12:34.954176Z"
                 }
             ]
         },
@@ -9364,7 +9364,7 @@
             ]
         },
         {
-            "pakku_id": "Gbq4u5zVd9C7YPGX",
+            "pakku_id": "W3ZKZZV1RVlOH7Jk",
             "type": "MOD",
             "side": "BOTH",
             "slug": {
@@ -9379,7 +9379,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "sophisticatedcore-1.21.1-1.4.6.1506.jar",
+                    "file_name": "sophisticatedcore-1.21.1-1.4.7.1515.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -9387,16 +9387,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/nmoqTijg/versions/n8SOoVPF/sophisticatedcore-1.21.1-1.4.6.1506.jar",
-                    "id": "n8SOoVPF",
+                    "url": "https://cdn.modrinth.com/data/nmoqTijg/versions/ikaeH6WK/sophisticatedcore-1.21.1-1.4.7.1515.jar",
+                    "id": "ikaeH6WK",
                     "parent_id": "nmoqTijg",
                     "hashes": {
-                        "sha512": "bd90b35de53325fa0ff94b7569275d8d12428fef0636192e32d901e5c60da453e0bd5ce1b05730212434717bba8a17820f7074416a602e33a9a1110693deab0b",
-                        "sha1": "b388bd9a2ac8f6b47612fdf73c973e56b49874a5"
+                        "sha512": "3deeb72ffea008b27dc22af0f31935f5c620c6462d4a8854ca99ab3c6c57cda3c378a933e3952205c52662f26aa899b9a4930a2de8b5802cf8a84c3154eea042",
+                        "sha1": "83e00bbee26d53230ecf73ef2bad187cf1e47574"
                     },
                     "required_dependencies": [],
-                    "size": 1462512,
-                    "date_published": "2026-03-01T22:00:52.118619Z"
+                    "size": 1462533,
+                    "date_published": "2026-03-08T22:24:33.979793Z"
                 }
             ]
         },
@@ -9480,7 +9480,7 @@
             ]
         },
         {
-            "pakku_id": "YvNTomlex475TMxj",
+            "pakku_id": "y5V9hMV8uqP2kp0p",
             "type": "MOD",
             "side": "BOTH",
             "slug": {
@@ -9495,7 +9495,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "sophisticatedstorage-1.21.1-1.5.28.1494.jar",
+                    "file_name": "sophisticatedstorage-1.21.1-1.5.29.1505.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -9503,18 +9503,18 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/hMlaZH8f/versions/BLT4pvsT/sophisticatedstorage-1.21.1-1.5.28.1494.jar",
-                    "id": "BLT4pvsT",
+                    "url": "https://cdn.modrinth.com/data/hMlaZH8f/versions/hBQf79zx/sophisticatedstorage-1.21.1-1.5.29.1505.jar",
+                    "id": "hBQf79zx",
                     "parent_id": "hMlaZH8f",
                     "hashes": {
-                        "sha512": "04b7d13b149d1428dd5f369ce2c0fb48ed0bcf23ac42b89422130caca86ade425059bc7fc6b8ef655517b469af35a3a03ae8da1eafbc05e60f63c0a71882757e",
-                        "sha1": "a5eb8e4a41daa54e231ffd3d637d26ad99f73fa0"
+                        "sha512": "f3bf75fe3d1888ea1ccd667931a98bda5cbfd99d763a08e1003df72bc497134ef11e34b82d93de50c6752cee1d26b3fa08c3eb73075c71f95f10f6ae6955111b",
+                        "sha1": "01230ea07f6ad6cef55a892d1ba4758889f3f96c"
                     },
                     "required_dependencies": [
                         "nmoqTijg"
                     ],
-                    "size": 1657236,
-                    "date_published": "2026-02-18T18:56:01.607654Z"
+                    "size": 1657297,
+                    "date_published": "2026-03-09T16:45:12.546604Z"
                 }
             ]
         },
