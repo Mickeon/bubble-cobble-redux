@@ -366,6 +366,19 @@ ServerEvents.recipes(event => {
 	// TODO: This doesn't work. Likely because there's no recipe schema for deepfrying.
 	// event.replaceInput({id: "create_deepfried:deep_frying/calamari"}, "minecraft:ink_sac", "#c:foods/raw_squid")
 
+	// Allow Way Signs to be crafted by cutting Signs with a saw.
+	// Due to a bug this happens to be the only way to craft them, actually.
+	for (const way_sign_id of Ingredient.of("#supplementaries:way_signs").itemIds) {
+		let path = ID.path(way_sign_id)
+		let wood_type = path.split("way_sign_")[1]
+		let original_namespace = path.includes("/") ? path.split("/")[0] : "minecraft"
+		let original_sign_id = `${original_namespace}:${wood_type}_sign`
+
+		console.log(`${way_sign_id} -> ${original_sign_id}`)
+
+		event.recipes.create.cutting(CreateItem.of(Item.of(way_sign_id, 2)), Ingredient.of(original_sign_id))
+	}
+
 	// TODO: Add recipes for (this modpack's) Pale Jacaranda and Redder Wood.
 	// event.shaped("biomesoplenty:stripped_jacaranda_log", ["DAD", "ADA", "DAD"], {D: "minecraft:white_dye", A: "biomeswevegone:stripped_jacaranda_log"})
 	// event.shaped("biomesoplenty:stripped_redwood_log", ["DAD", "ADA", "DAD"], {D: "minecraft:red_dye", A: "biomeswevegone:stripped_redwood_log"})

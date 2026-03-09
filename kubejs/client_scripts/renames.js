@@ -82,6 +82,9 @@ ClientEvents.lang("en_us", event => {
 	// Both Biomes o' Plenty and Biomes We've Gone have Roses.
 	event.add("block.biomesoplenty.rose", "Beta Rose")
 
+	// Both Supplementaries and Mega Showdown have Pedestals.
+	event.add("mega_showdown", "block.mega_showdown.pedestal", "Small Pedestal")
+
 	// These are accidentally unnamed, which...
 	// TODO: Should probably be reported.
 	event.addAll("createmonballsoverhaul", {

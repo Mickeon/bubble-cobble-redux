@@ -349,6 +349,17 @@
 			"text": [
 				"Party Popper"
 			]
+		},
+		{
+			"stacks": [
+				"#item:c:plates"
+			],
+			"text": [
+				"Flat",
+				"Sheet",
+				"Plate",
+				"Pane"
+			]
 		}
 	]
 }
