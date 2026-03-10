@@ -228,10 +228,11 @@ ServerEvents.recipes(event => {
 		Fluid.sizedIngredientOf("#minecraft:lava", 250)
 	])
 
-	// Allow all eggs to be fried.
-	event.replaceInput({id: "farmersdelight:fried_egg", input: "minecraft:egg"}, "minecraft:egg", "#c:eggs")
-	event.replaceInput({id: "farmersdelight:fried_egg_from_smoker", input: "minecraft:egg"}, "minecraft:egg", "#c:eggs")
-	event.replaceInput({id: "farmersdelight:fried_egg_from_campfire_cooking", input: "minecraft:egg"}, "minecraft:egg", "#c:eggs")
+	// Allow most eggs to be fried.
+	const most_eggs = Ingredient.of("#c:eggs").except("mynethersdelight:strider_egg")
+	event.replaceInput({id: "farmersdelight:fried_egg", input: "minecraft:egg"}, "minecraft:egg", most_eggs)
+	event.replaceInput({id: "farmersdelight:fried_egg_from_smoker", input: "minecraft:egg"}, "minecraft:egg", most_eggs)
+	event.replaceInput({id: "farmersdelight:fried_egg_from_campfire_cooking", input: "minecraft:egg"}, "minecraft:egg", most_eggs)
 
 	// Make Rails considerably cheaper. See also https://modrinth.com/datapack/rail-recipe-rebalance.
 	event.replaceInput({id: "minecraft:rail" }, "minecraft:iron_ingot", "minecraft:iron_nugget")

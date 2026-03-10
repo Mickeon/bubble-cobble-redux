@@ -42,6 +42,45 @@ ServerEvents.recipes(event => {
 	// Recipe conflict between Minecraft's Crafting Table and Biomes We've Gone's Crafting Table variations.
 	event.replaceInput({id: "minecraft:crafting_table"}, "*", Ingredient.of("#minecraft:planks").except("@biomeswevegone"))
 
+	// Recipe conflict between Minecraft's Bookshelf and Biomes We've Gone's Bookshelf variations.
+	event.replaceInput({id: "minecraft:bookshelf"}, Ingredient.of("#minecraft:planks"), Ingredient.of("#minecraft:planks").except("@biomeswevegone"))
+
 	// Recipe conflict between Display Delight's Food Plate and Handcrafted's Wood Cup.
 	event.shaped(Item.of("handcrafted:wood_cup", 5), ["S S", "SSS"], {S: "#minecraft:wooden_slabs"}).id("handcrafted:wood_cup")
+
+	// Recipe conflict between Biomes We've Gone's Wreath and Snowy Spirit's Wreath.
+	event.shaped("snowyspirit:wreath", [
+		" G ",
+		"GWG",
+		" G "
+	], {
+		W: "biomeswevegone:wreath",
+		G: "snowyspirit:ginger_flower"
+	}).id("snowyspirit:wreath")
+
+	// Recipe Conflict between Arts & Crafts's Terracotta Shingles and Handcrafted's Terracotta Thin Pot.
+	event.shaped(Item.of("handcrafted:terracotta_thin_pot", 3), ["T", "T", "T"], {T: "minecraft:terracotta"}).id("handcrafted:terracotta_thin_pot")
+
+	// Recipe conflict between Minecraft's spears and Construction Stick's construction sticks.
+	// Put Leather in the bottom-left.
+	event.forEachRecipe({id: /constructionstick:.*_stick$/}, recipe => {
+		const json = JSON.parse(recipe.json)
+		json.pattern[2] = "L  "
+		json.key.L = Ingredient.of("minecraft:leather")
+		event.custom(json).id(recipe.getId())
+	})
+
+	// Recipe conflict between Minecraft's Chiseled Bookshelf and Urban Decor's calendars.
+	// Put a Clock in the middle.
+	if (Platform.isLoaded("urban_decor")) {
+		let replace_char_at = (str, index, char) => {
+			return str.substring(0, index) + char + str.substring(index + 1)
+		}
+		event.forEachRecipe({id: /urban_decor:.*_calendar/}, recipe => {
+			const json = JSON.parse(recipe.json)
+			json.pattern[1] = replace_char_at(json.pattern[1], 1, "C")
+			json.key.C = Ingredient.of("minecraft:clock")
+			event.custom(json).id(recipe.getId())
+		})
+	}
 })
