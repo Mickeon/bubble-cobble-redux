@@ -29,7 +29,7 @@ ClientEvents.lang("en_us", event => {
 		"effect.kubejs.begone.description": "Teleports players to their spawn point",
 		"effect.kubejs.girl_power.description": "Gives access to the \"Girl Power Dash\" by pressing a keybind in mid-air (Mouse Button 4 by default)",
 		"entity.minecraft.wandering_trader": "Free Leash Guy",
-		"key.kubejs.bubble_cobble.dash": "Girl Power Dash"
+		"key.kubejs.bubble_cobble.dash": "Girl Power Dash",
 	})
 	event.addAll("enhancedcelestials", {
 		"enhancedcelestials.notification.blood_moon.rise": "The \"Blood Moon\" rises... Distant sounds of the undead can be heard...\nAnd that really pisses you off. WHY IS THE SKY RED",
@@ -37,4 +37,5 @@ ClientEvents.lang("en_us", event => {
 		"enhancedcelestials.notification.super_blood_moon.rise": "The \"Super Blood Moon\" rises... Distant sounds of the undead can be heard...\n...\nThis is how Wario must've felt on the Virtual Boy",
 		"enhancedcelestials.notification.super_blood_moon.set": "The \"Super Blood Moon\" sets... The undead begin to burn..."
 	})
+	event.add("brewinandchewin", "item.brewinandchewin.egg_grog", "§3@Grog§r Is This True?")
 })

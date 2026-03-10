@@ -92,6 +92,9 @@ ClientEvents.lang("en_us", event => {
 	// Both Supplementaries and Mega Showdown have Pedestals.
 	event.add("mega_showdown", "block.mega_showdown.pedestal", "Small Pedestal")
 
+	// Both Biomes We've Gone and and Snowy Spirit have Wreaths.
+	event.add("snowyspirit", "block.snowyspirit.wreath", "Jolly Wreath")
+
 	// These are accidentally unnamed, which...
 	// TODO: Should probably be reported.
 	event.addAll("createmonballsoverhaul", {
@@ -115,13 +118,42 @@ ClientEvents.lang("en_us", event => {
 
 	// For loot tables shown in EMI Loot.
 	event.addAll("emi_loot", {
-		"emi_loot.chest.cobblemonraiddens:raid/tier/tier_one": "Tier 1 Raid",
-		"emi_loot.chest.cobblemonraiddens:raid/tier/tier_two": "Tier 2 Raid",
-		"emi_loot.chest.cobblemonraiddens:raid/tier/tier_three": "Tier 3 Raid",
-		"emi_loot.chest.cobblemonraiddens:raid/tier/tier_four": "Tier 4 Raid",
-		"emi_loot.chest.cobblemonraiddens:raid/tier/tier_five": "Tier 5 Raid",
-		"emi_loot.chest.cobblemonraiddens:raid/tier/tier_six": "Tier 6 Raid",
-		"emi_loot.chest.cobblemonraiddens:raid/tier/tier_seven": "Tier 7 Raid",
+		// TODO: These are too many and it's not exhaustive. There's got to be a programmatic way to do it.
+		"emi_loot.archaeology.cobblemon:ruins/rare/automaton_armor_trim_smithing_template": "§b§nRare§r Armor Trim in Ruins",
+		"emi_loot.archaeology.cobblemon:ruins/rare/black_tumblestone": "§b§nRare§r Black Tumblestone in Ruins",
+		"emi_loot.archaeology.cobblemon:ruins/rare/sky_tumblestone": "§b§nRare§r Sky Tumblestone in Ruins",
+		"emi_loot.archaeology.cobblemon:ruins/rare/tumblestone": "§b§nRare§r Tumblestone in Ruins",
+		"emi_loot.archaeology.cobblemon:fossils/common/prehistoric_birch_tree": "Common in Prehistoric Birch Tree",
+		"emi_loot.archaeology.cobblemon:fossils/uncommon/prehistoric_birch_tree": "§e§nUncommon§r in Prehistoric Birch Tree",
+
+		"emi_loot.chest.cobblemon:ruins/gilded_chests/base": "Gilded Chest in Ruins's Base",
+		"emi_loot.chest.cobblemon:ruins/gilded_chests/ruins": "Gilded Chest in Ruins",
+		"emi_loot.chest.cobblemon:ruins/pots/ruins": "Pot in Ruins",
+		"emi_loot.chest.cobblemon:shipwreck_coves/fishing_boats/fishing_boat": "Fishing Boat Shipwreck Cove",
+		"emi_loot.chest.cobblemon:shipwreck_coves/gilded_chests/big_treasure": "Big Treasure in Shipwreck Cove",
+		"emi_loot.chest.cobblemon:shipwreck_coves/gilded_chests/lesser_treasure": "Lesser Treasure in Shipwreck Cove",
+		"emi_loot.chest.cobblemon:shipwreck_coves/spawners/extra_normal": "(Extra) Normal spawners in Shipwreck Cove",
+		"emi_loot.chest.cobblemon:shipwreck_coves/spawners/extra_ominous": "(Extra) Ominous spawners in Shipwreck Cove",
+		"emi_loot.chest.cobblemon:shipwreck_coves/spawners/normal": "Normal spawners in Shipwreck Cove",
+		"emi_loot.chest.cobblemon:shipwreck_coves/spawners/ominous": "Ominous spawners in Shipwreck Cove",
+		"emi_loot.chest.cobblemon:shipwreck_coves/vanilla_chests/cove1_barrel": "Barrel in Shipwreck Cove (1)",
+		"emi_loot.chest.cobblemon:shipwreck_coves/vanilla_chests/cove1_chest": "Chest in Shipwreck Cove (1)",
+		"emi_loot.chest.cobblemon:shipwreck_coves/vanilla_chests/cove2_barrel": "Barrel in Shipwreck Cove (2)",
+		"emi_loot.chest.cobblemon:villages/village_pokecenters": "Village Pokécenter",
+		"emi_loot.chest.cobblemonraiddens:raid/tier/tier_one": "Tier 1 Raid§8 ⭐",
+		"emi_loot.chest.cobblemonraiddens:raid/tier/tier_two": "Tier 2 Raid§8 ⭐⭐",
+		"emi_loot.chest.cobblemonraiddens:raid/tier/tier_three": "Tier 3 Raid§8 ⭐⭐⭐",
+		"emi_loot.chest.cobblemonraiddens:raid/tier/tier_four": "Tier 4 Raid§8 ⭐⭐⭐⭐",
+		"emi_loot.chest.cobblemonraiddens:raid/tier/tier_five": "Tier 5 Raid§8 ⭐⭐⭐⭐⭐",
+		"emi_loot.chest.cobblemonraiddens:raid/tier/tier_six": "Tier §4§n6§r Raid§4 ⭐⭐⭐⭐⭐⭐",
+		"emi_loot.chest.cobblemonraiddens:raid/tier/tier_seven": "Tier §c§n7§r Raid§c ⭐⭐⭐⭐⭐⭐⭐",
+		"emi_loot.chest.undergroundbunker:chests/underground_bunker/underground_bunker_normal": "Normal Loot in Underground Bunker",
+		"emi_loot.chest.undergroundbunker:chests/underground_bunker/underground_bunker_supply": "Supply Loot in Underground Bunker",
+		"emi_loot.chest.undergroundbunker:chests/underground_bunker/underground_bunker_treasure": "Treasure Loot in Underground Bunker",
+
+		"emi_loot.gameplay.cobblemon:fishing/pokerod": "Pokerod Fishing Drops",
+		"emi_loot.gameplay.cobblemon:fishing/pokerod_treasure": "Pokerod Fishing Treasure Drops",
+		"emi_loot.gameplay.mynethersdelight:gameplay/mnd_piglin_bartering": "Piglin Bantering (Delight)",
 	})
 })
 

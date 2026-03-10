@@ -251,7 +251,8 @@
 				"item:create:schematic_table"
 			],
 			"text": [
-				"Blueprint"
+				"Blueprint",
+				"Pattern"
 			]
 		},
 		{
@@ -359,6 +360,15 @@
 				"Sheet",
 				"Plate",
 				"Pane"
+			]
+		},
+		{
+			"stacks":[
+				"#c:bookshelves"
+			],
+			"text": [
+				"Library",
+				"Bookcase"
 			]
 		}
 	]

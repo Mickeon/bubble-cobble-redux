@@ -1,10 +1,19 @@
 {
 	"exclusions": [
 		{
+			"regex": "bubble_cobble:raid/"
+		},
+		{
+			"regex": "cobblemon:injection/"
+		},
+		{
 			"regex": "cobblemon:sets/"
 		},
 		{
-			"regex": "bubble_cobble:raid/"
-		}
+			"regex": "cobblenav:injection/"
+		},
+		"mss:empty",
+		"mvs:empty",
+		"snowyspirit:injection/ginger_sniffer"
 	]
 }

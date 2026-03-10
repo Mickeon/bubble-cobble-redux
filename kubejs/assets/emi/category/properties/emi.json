@@ -27,7 +27,6 @@
 	},
 
 	"emi_loot:chest_loot": {
-		"sort": "input_then_output",
 		"icon": {
 			"stack": "item:lootr:lootr_chest"
 		}
