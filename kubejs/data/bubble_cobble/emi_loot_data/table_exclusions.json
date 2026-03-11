@@ -15,8 +15,11 @@
 		{
 			"regex": "cobblenav:injection/"
 		},
+		"minecraft:spawn_bonus_chest",
 		"mss:empty",
 		"mvs:empty",
-		"snowyspirit:injection/ginger_sniffer"
+		"snowyspirit:injection/ginger_sniffer",
+		"sophisticatedbackpacks:inject/chests/spawn_bonus_chest",
+		"supplementaries:inject/test"
 	]
 }

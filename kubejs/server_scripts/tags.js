@@ -98,7 +98,7 @@ ServerEvents.tags("item", event => {
 	event.add("create:pulpifiable", "biomeswevegone:shrub", "biomeswevegone:firecracker_flower_bush", "cobblemon:medicinal_leek")
 	event.add("create_bic_bit:tulip", "#biomeswevegone:flowers/tulips")
 	event.add("soulbound:enchantable", "#c:tools")
-	event.add("create:blaze_burner_fuel/regular", "#simpletms:type_fire_tr", "cobblemon:charcoal_stick", "cobblemon:fire_stone", "mynethersdelight:bullet_pepper", "mynethersdelight:pepper_powder" )
+	event.add("create:blaze_burner_fuel/regular", "#simpletms:type_fire_tr", "cobblemon:charcoal_stick", "cobblemon:fire_stone", "mega_showdown:fire_tera_shard", "mynethersdelight:bullet_pepper", "mynethersdelight:pepper_powder" )
 	event.add("create:blaze_burner_fuel/special", "#simpletms:type_fire_tm", "cobblemon:fire_gem", "cobblemon:fire_stone_block", "mega_showdown:firium_z", "kubejs:firebomb_whiskey",
 		"mynethersdelight:chilidog", "mynethersdelight:hot_cream", "mynethersdelight:hot_cream_cone",
 		"mynethersdelight:spicy_hoglin_stew", "mynethersdelight:hot_wings", "mynethersdelight:hot_wings_bucket",
@@ -106,6 +106,11 @@ ServerEvents.tags("item", event => {
 		"minersdelight:spicy_hoglin_stew_cup", "minersdelight:spicy_noodle_soup_cup", "mynethersdelight:fried_hoglin_chop",
 		"mynethersdelight:spicy_noodle_soup", "mynethersdelight:plate_of_ghasta_with_cream",
 		"mynethersdelight:magma_cake_slice", "mynethersdelight:magma_cake_block",
+	)
+	event.add("amendments:sets_on_fire", "#create:blaze_burner_fuel/special",
+		"minecraft:campfire", "minecraft:soul_campfire", "minecraft:lava_bucket", "supplementaries:fire_pit",
+		"biomesoplenty:burning_blossom", "cobblemon:fire_stone", "mega_showdown:fire_tera_shard",
+		"mynethersdelight:bullet_pepper", "mynethersdelight:pepper_powder", "mynethersdelight:powdery_torch"
 	)
 
 	// Shared in a bunch of places.

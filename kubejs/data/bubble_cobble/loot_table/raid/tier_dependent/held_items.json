@@ -60,7 +60,7 @@
       "entries": [
         {
           "type": "minecraft:tag",
-          "name": "cobblemonraiddens:good_held_items",
+          "name": "bubble_cobble:good_held_items",
           "expand": true
         }
       ]
@@ -76,7 +76,7 @@
       "entries": [
         {
           "type": "minecraft:tag",
-          "name": "cobblemonraiddens:good_held_items",
+          "name": "bubble_cobble:good_held_items",
           "expand": true
         }
       ]
@@ -92,7 +92,7 @@
       "entries": [
         {
           "type": "minecraft:tag",
-          "name": "cobblemonraiddens:great_held_items",
+          "name": "bubble_cobble:great_held_items",
           "expand": true
         }
       ]
@@ -108,7 +108,7 @@
       "entries": [
         {
           "type": "minecraft:tag",
-          "name": "cobblemonraiddens:great_held_items",
+          "name": "bubble_cobble:great_held_items",
           "expand": true
         }
       ]
