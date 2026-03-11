@@ -18,7 +18,7 @@ splitChestLootByTrial = true
 chanceDecimalPlaces = 1
 conditionStyle = "default"
 linkFormatting = [
-    "UNDERLINE"
+    "DARK_GRAY"
 ]
 
 [debugModes]

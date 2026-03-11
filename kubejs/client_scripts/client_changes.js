@@ -296,7 +296,6 @@ ClientEvents.generateAssets("before_mods", event => {
 })
 
 // Proper localization strings to some tags shown in EMI, including the above.
-// TODO: Some more programmatic way to handle it. You can see the repetition.
 ClientEvents.lang("en_us", event => {
 	// let time_start = Utils.getSystemTime()
 

@@ -18,6 +18,8 @@
 		"biomeswevegone:dye/makes_red",
 		"biomeswevegone:dye/makes_yellow",
 		"biomeswevegone:dye/makes_white",
+		"bubble_cobble:emi/block_drops_icon",
+		"bubble_cobble:emi/chest_loot_icon",
 		"supplementaries:cannon_blacklist",
 		"yo_hooks:iron_repairable",
 		"yo_hooks:gold_repairable",

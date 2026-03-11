@@ -1,6 +1,9 @@
 {
 	"exclusions": [
 		{
+			"regex": ":blocks.*_(slab|stairs|wall)$"
+		},
+		{
 			"regex": "bubble_cobble:raid/"
 		},
 		{

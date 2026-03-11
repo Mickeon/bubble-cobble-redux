@@ -28,13 +28,13 @@
 
 	"emi_loot:chest_loot": {
 		"icon": {
-			"stack": "item:lootr:lootr_chest"
+			"stack": "#item:bubble_cobble:emi/chest_loot_icon"
 		}
 	},
 	"emi_loot:block_drops": {
 		"sort": "input_then_output",
 		"icon": {
-			"stack": "#item:c:ore_rates/singular"
+			"stack": "#item:bubble_cobble:emi/block_drops_icon"
 		}
 	},
 	"emi_loot:trial_chamber": {

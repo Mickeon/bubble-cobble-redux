@@ -111,6 +111,9 @@ ServerEvents.tags("item", event => {
 	// Shared in a bunch of places.
 	event.add("bubble_cobble:coinstacks", /^createdeco:.*coinstack$/)
 
+	event.add("bubble_cobble:emi/chest_loot_icon","minecraft:chest", "minecraft:barrel", "lootr:lootr_barrel", "lootr:lootr_chest", "lootr:lootr_shulker", "lootr:decorated_pot", "lootrmon:gilded_chest", "cobblemonraiddens:raid_pouch")
+	event.add("bubble_cobble:emi/block_drops_icon", "#c:ore_rates/singular")
+
 	// Why not? It's fun.
 	event.add("supplementaries:blackboard_white",      "minecraft:sugar", "cobblemon:white_apricorn", "cobblemon:white_mint_leaf", "arts_and_crafts:white_paintbrush", "arts_and_crafts:white_chalk_stick")
 	event.add("supplementaries:blackboard_light_gray", "minecraft:iron_ingot", "minecraft:clay_ball", "arts_and_crafts:light_gray_paintbrush", "arts_and_crafts:light_gray_chalk_stick")
