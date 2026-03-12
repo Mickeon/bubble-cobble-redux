@@ -326,6 +326,8 @@ LootJS.lootTables(event => {
 	// event.forEachTable("minecraft:chests/ruined_portal", log)
 
 	// console.log(Ingredient.of("#bits_n_bobs:chairs").getItemIds().toArray())
+	// print_simple_block_tables(event)
+
 })
 
 // The crap we have to go through to show Farmer's Delight's loot modifiers.
@@ -457,3 +459,82 @@ ServerEvents.generateData("last", event => {
 	scavenging_meat("minecraft:strider", "mynethersdelight:strider_rock") // Technically incorrect, the numbers are wrong.
 	scavenging_meat("minecraft:hoglin", "mynethersdelight:hoglin_hide") // Technically incorrect, the numbers are wrong.
 })
+
+// By "simple blocks" we should include any block that:
+// - Drops only one item.
+// - Drops the exact item representation of itself.
+// - Does not require any specific tool or enchantment.
+/** @param {import("com.almostreliable.lootjs.kube.LootTableEventJS").$LootTableEventJS$$Type} event  */
+function print_simple_block_tables(event) {
+	const SURVIVES_EXPLOSION_CONDITION_TYPE = LootCondition.survivesExplosion().getType()
+	/** @param {import("com.almostreliable.lootjs.loot.LootConditionList").$LootConditionList$$Type} conditions  */
+	function has_any_complex_condition(conditions) {
+		for (let condition of conditions) {
+			let condition_type = condition.getType()
+			if (condition_type == SURVIVES_EXPLOSION_CONDITION_TYPE) {
+				continue
+			}
+			// if (condition_type == "minecraft:match_tool") {
+			// 	continue
+			// }
+			return true
+		}
+		return false
+	}
+
+	let simple_table_ids = Utils.newList()
+	event.forEachTable(table => {
+		if (table.getLootType() != LootType.BLOCK) {
+			return
+		}
+		if (/_(slab|stairs|wall)$/.test(table.location.path)) {
+			return
+		}
+
+		if (table.getPools().size() != 1) {
+			return
+		}
+		const pool = table.firstPool()
+		if (pool.getEntries().size() != 1) {
+			return
+		}
+		if (pool.getConditions().size() > 0) {
+			// console.log(`Checking pool conditions for ${table.location}`)
+			if (has_any_complex_condition(pool.getConditions())) {
+				// console.log(`Complex condition found!`)
+				return
+			}
+		}
+
+		const entry = pool.getEntries().get(0)
+		// if (entry.isComposite()) {
+		// 	return
+		// 	// let composite_entry = /** @type {import("com.almostreliable.lootjs.core.entry.CompositeLootEntry").$CompositeLootEntry$$Type} */ (entry)
+		// 	// composite_entry.getEntries()
+		// }
+		// if (entry.getConditions().size() > 0) {
+		// 	return
+		// }
+		if (!entry.isItem()) {
+			return
+		}
+		const item_entry = /** @type {import("com.almostreliable.lootjs.core.entry.ItemLootEntry").$ItemLootEntry$$Type} */ (entry)
+		// The Block's ID must be the same as the Item id that comes out.
+		if (item_entry.getItem().mod != table.location.namespace || item_entry.getItem().idLocation.path != table.location.path.replace("blocks/", "") ) {
+			return
+		}
+		// Just to be on the extra-safe side.
+		if (item_entry.getFunctions().size() > 0) {
+			return
+		}
+
+		// table.print()
+		simple_table_ids.add(table.location.toString())
+	})
+	let output = ""
+	simple_table_ids.stream().sorted().forEach(id => {
+		output += `\n\t\"${id}\",`
+	})
+	console.log(output)
+	console.log(`There are ${simple_table_ids.size()} simple block loot tables`)
+}

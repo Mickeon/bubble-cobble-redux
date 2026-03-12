@@ -25,7 +25,7 @@ ServerEvents.recipes(event => {
 	// Remove Slabs & Co. recipes more thoroughly.
 	// All the mod does is remove their output when displayed. The recipes are not changed internally,
 	// which is simply not enough to prevent them from being shown in recipe viewers.
-	let shapes_regex = /(slab|stairs|wall)/
+	let shapes_regex = /_(slab|stairs|wall)/
 	event.remove({type: "minecraft:crafting_shaped", id: shapes_regex})
 	event.remove({type: "minecraft:stonecutting", id: shapes_regex})
 	// Can't be done, several block items are not tagged properly.

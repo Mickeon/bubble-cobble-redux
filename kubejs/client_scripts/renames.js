@@ -154,6 +154,12 @@ ClientEvents.lang("en_us", event => {
 		"emi_loot.gameplay.cobblemon:fishing/pokerod": "Pokerod Fishing Drops",
 		"emi_loot.gameplay.cobblemon:fishing/pokerod_treasure": "Pokerod Fishing Treasure Drops",
 		"emi_loot.gameplay.mynethersdelight:gameplay/mnd_piglin_bartering": "Piglin Bantering (Delight)",
+
+		"emi_loot.function.copy_name.BLOCK_ENTITY": "the destroyed block", // https://github.com/fzzyhmstrs/EMI_loot/issues/154.
+		"emi_loot.function.copy_state": "The destroyed block's properties are copied to this item",
+		"emi_loot.item_predicate.enchant.list": "%s",
+		"emi_loot.item_predicate.enchant.levels_3": "§8(at least %s§8)§r",
+		"emi_loot.item_predicate.enchant.levels_4": "§8(at most %s§8)§r",
 	})
 })
 
