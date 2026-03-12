@@ -1,0 +1,9 @@
+{
+	"type": "emi:world_interaction",
+	"left": [
+		"item:minecraft:mooshroom_spawn_egg",
+		"item:cobblemon:pokemon_model{'cobblemon:pokemon_item': {species: 'cobblemon:miltank', aspects: ['mooshtank-brown']}, lore: ['{text:\"Wild Pokémon\", color: \"green\", italic: false}']}"
+	],
+	"right": "item:minecraft:bowl",
+	"output": "item:minecraft:mushroom_stew"
+}

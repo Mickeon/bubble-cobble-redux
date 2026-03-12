@@ -1,0 +1,9 @@
+{
+  "_comment": "Removed the Dragon Breath, Glass Bottle, and Ominous Bottle from here",
+  "keys": [
+    "minecraft:lingering_potion",
+    "minecraft:potion",
+    "minecraft:splash_potion"
+  ],
+  "soundEvent": "minecraft:item.bottle.fill"
+}

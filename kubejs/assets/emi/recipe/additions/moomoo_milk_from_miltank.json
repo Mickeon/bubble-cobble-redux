@@ -1,0 +1,6 @@
+{
+	"type": "emi:world_interaction",
+	"left": "item:cobblemon:pokemon_model{'cobblemon:pokemon_item': {species: 'cobblemon:miltank', aspects: ['']}, lore: ['{text:\"Captured Pokémon\", color: \"green\", italic: false}']}",
+	"right": "item:minecraft:glass_bottle",
+	"output": "item:cobblemon:moomoo_milk"
+}

@@ -1,0 +1,9 @@
+{
+  "keys": [
+    "minecraft:dragon_breath",
+    "minecraft:ominous_bottle"
+  ],
+    "pitch": 0.9,
+  "soundEvent": "minecraft:item.bottle.fill",
+  "volume": 0.25
+}

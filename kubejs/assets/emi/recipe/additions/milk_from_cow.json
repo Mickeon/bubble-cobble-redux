@@ -1,0 +1,9 @@
+{
+	"type": "emi:world_interaction",
+	"left": [
+		"item:minecraft:cow_spawn_egg",
+		"item:cobblemon:pokemon_model{'cobblemon:pokemon_item': {species: 'cobblemon:miltank', aspects: ['']}, lore: ['{text:\"Captured Pokémon\", color: \"green\", italic: false}']}"
+	],
+	"right": "item:minecraft:bucket",
+	"output": "item:minecraft:milk_bucket"
+}
