@@ -3,8 +3,9 @@
 	"stacks": [
 		{"type": "item", "id": "relics:blazing_flask"},
 		{"type": "item", "id": "relics:magma_walker"},
+		{"type": "item", "id": "relics:rage_glove"},
 		{"type": "item", "id": "relics:reflection_necklace"},
 		{"type": "item", "id": "relics:space_dissector"}
 	],
-	"text": "Can be found in ruined portals and the Nether."
+	"text": "Can be found in ruined portals, the Nether, and similar blazing places."
 }

@@ -119,10 +119,10 @@ const txr = (item_id) => {
  */
 /** @type {Array<TagDisplayData>} */
 const ITEM_TAG_DISPLAY_INFO = [
-	{tag: "amendments.goes_in_tripwire_hook", name: "Goes in Tripwire Hook"},
-	{tag: "amendments.non_stackable_heads", name: "Heads that cannot be piled up"},
-	{tag: "amendments.sets_on_fire", name: "Sets on fire when attacking"},
-	{tag: "arts_and_crafts.chalk_sticks", name: "Chalk Sticks"},
+	{tag: "amendments:goes_in_tripwire_hook", name: "Goes in Tripwire Hook"},
+	{tag: "amendments:non_stackable_heads", name: "Heads that cannot be piled up"},
+	{tag: "amendments:sets_on_fire", name: "Sets on fire when attacking"},
+	{tag: "arts_and_crafts:chalk_sticks", name: "Chalk Sticks"},
 	{tag: "arts_and_crafts:paintbrushes", name: "Paintbrushes", textures: [txr("arts_and_crafts:red_paintbrush"), txr("arts_and_crafts:blue_paintbrush")]},
 	{tag: "brewinandchewin:foods/cheese_wedge", textures: ["brewinandchewin:item/flaxen_cheese_wedge", "brewinandchewin:item/scarlet_cheese_wedge"]},
 	{tag: "brewinandchewin:foods/jerky_meat", textures: ["minecraft:item/rotten_flesh", "farmersdelight:item/bacon", "minecraft:item/chicken"]},
@@ -140,30 +140,33 @@ const ITEM_TAG_DISPLAY_INFO = [
 	{tag: "c:foods/bread", textures: ["minecraft:item/bread", "mynethersdelight:item/slices_of_bread"]},
 	{tag: "c:foods/cooked_beef", name: "Any Cooked Beef"},
 	{tag: "c:foods/cooked_chicken", name: "Any Cooked Chicken", textures: ["minecraft:item/cooked_chicken", "farmersdelight:item/cooked_chicken_cuts"]},
-	{tag: "c:foods/cooked_cod", name: "Any Cooked Cod"},
+	{tag: "c:foods/cooked_cod", name: "Any Cooked Cod",  textures: ["minecraft:item/cooked_cod", "farmersdelight:item/cooked_cod_slice"]},
 	{tag: "c:foods/cooked_egg", name: "Any Cooked Egg", textures: ["farmersdelight:item/fried_egg", "mynethersdelight:item/boiled_egg"]},
-	{tag: "c:foods/cooked_hoglin", name: "Any Cooked Hoglin"},
+	{tag: "c:foods/cooked_hoglin", name: "Any Cooked Hoglin", textures: ["mynethersdelight:item/cooked_loin", "mynethersdelight:item/roasted_sausage"]},
 	{tag: "c:foods/cooked_meat", textures: ["minecraft:item/cooked_beef", "farmersdelight:item/cooked_chicken_cuts", "minecraft:item/cooked_rabbit"]},
 	{tag: "c:foods/cooked_mutton", name: "Any Cooked Mutton", textures: ["minecraft:item/cooked_mutton", "farmersdelight:item/cooked_mutton_chops"]},
-	{tag: "c:foods/cooked_pork", name: "Any Cooked Pork"},
-	{tag: "c:foods/cooked_salmon", name: "Any Cooked Salmon"},
-	{tag: "c:foods/cooked_sausage", name: "Any Cooked Sausage"},
+	{tag: "c:foods/cooked_pork", name: "Any Cooked Pork", textures: ["minecraft:item/cooked_porkchop", "mynethersdelight:item/roasted_sausage", "farmersdelight:item/cooked_bacon"]},
+	{tag: "c:foods/cooked_salmon", name: "Any Cooked Salmon", textures: ["minecraft:item/cooked_salmon", "farmersdelight:item/cooked_salmon_slice"]},
+	{tag: "c:foods/cooked_sausage", name: "Any Cooked Sausage", textures: ["mynethersdelight:item/sausage", "mynethersdelight:item/roasted_sausage"]}, // Weird. Why is Hoglin Sausage in the tag? It's not cooked...?
 	{tag: "c:foods/dough", name: "Dough", model_type: "split", textures: ["farmersdelight:item/wheat_dough", "farmersdelight:item/wheat_dough", "mynethersdelight:item/ghast_dough", "create:item/dough"]},
 	{tag: "c:foods/magma_cube", name: "Mmmm magma cubes yummy"},
 	{tag: "c:foods/pasta", name: "Pasta", textures: ["farmersdelight:item/raw_pasta", "mynethersdelight:item/ghasta"]},
 	{tag: "c:foods/raw_beef", name: "Any Raw Beef", textures: ["minecraft:item/beef", "farmersdelight:item/minced_beef"]},
 	{tag: "c:foods/raw_chicken", name: "Any Raw Chicken", textures: ["minecraft:item/chicken", "farmersdelight:item/chicken_cuts"]},
+	{tag: "c:foods/raw_cod", name: "Any Raw Cod", textures: ["minecraft:item/cod", "farmersdelight:item/cod_slice"]},
 	{tag: "c:foods/raw_ghast", name: "Any Raw Ghast", textures: ["mynethersdelight:item/ghasta", "mynethersdelight:item/ghasmati"]},
 	{tag: "c:foods/raw_hoglin", name: "Any Raw Hoglin", textures: ["mynethersdelight:item/loin", "mynethersdelight:item/sausage"]},
-	{tag: "c:foods/raw_meat", name: "Any Raw Mutton", textures: ["minecraft:item/beef", "farmersdelight:item/chicken_cuts", "farmersdelight:item/minced_beef", "cobblemon:item/food/tasty_tail"]},
-	{tag: "c:foods/raw_pork", name: "Any Raw Pork"},
-	{tag: "c:foods/raw_salmon", name: "Any Raw Salmon"},
-	{tag: "c:foods/raw_squid", name: "Any Raw Squid"},
+	{tag: "c:foods/raw_meat", name: "Any Raw Meat", textures: ["minecraft:item/beef", "farmersdelight:item/chicken_cuts", "farmersdelight:item/minced_beef", "cobblemon:item/food/tasty_tail"]},
+	{tag: "c:foods/raw_mutton", name: "Any Raw Mutton", textures: ["minecraft:item/mutton", "farmersdelight:item/mutton_chops"]},
+	{tag: "c:foods/raw_pork", name: "Any Raw Pork", textures: ["minecraft:item/porkchop", "mynethersdelight:item/sausage", "farmersdelight:item/bacon"]},
+	{tag: "c:foods/raw_salmon", name: "Any Raw Salmon",  textures: ["minecraft:item/salmon", "farmersdelight:item/salmon_slice"]},
+	{tag: "c:foods/raw_squid", name: "Any Raw Squid", textures: ["minersdelight:item/squid", "minersdelight:item/tentacles"]},
 	{tag: "c:foods/raw_strider", name: "Any Raw Strider", textures: ["mynethersdelight:item/strider", "mynethersdelight:item/minced_strider"]},
 	{tag: "c:foods/safe_raw_fish", name: "Safe Raw Fish", textures: ["minecraft:item/cod", "farmersdelight:item/cod_slice", "minersdelight:item/tentacles"]},
-	{tag: "c:foods/squid", name: "Any Squid"},
-	{tag: "c:foods/tentacles", name: "Any Tentacles"},
+	{tag: "c:foods/squid", name: "Any Squid", textures: ["minersdelight:item/squid", "minersdelight:item/baked_squid"]},
+	{tag: "c:foods/tentacles", name: "Any Tentacles", textures: ["minersdelight:item/tentacles", "minersdelight:item/baked_tentacles"]},
 	{tag: "c:foods/vegetable", textures: ["minecraft:item/carrot", "cobblemon:item/medicine/medicinal_leek", "farmersdelight:item/tomato"]},
+	{tag: "c:mushrooms", textures: ["minecraft:block/brown_mushroom", "biomesoplenty:block/glowshroom"]},
 	{tag: "c:ropes", textures: ["supplementaries:item/rope", "farmersdelight:item/rope"]},
 	{tag: "c:slime_balls", textures: ["minecraft:item/slime_ball", "mowziesmobs:item/glowing_jelly"]},
 	{tag: "c:tools/knife", name: "Knives"},
@@ -202,11 +205,12 @@ const ITEM_TAG_DISPLAY_INFO = [
 	{tag: "mega_showdown:z_crystal", name: "Z-Crystals"},
 	{tag: "mega_showdown:z_ring", name: "Z-Rings"},
 	{tag: "minersdelight:baked_cave_carrot", name: "Any Baked Cave Carrot", textures: ["minersdelight:item/baked_cave_carrot", "minersdelight:item/vegan_patty"]},
-	{tag: "minersdelight:cooked_insect_meat", name: "Any Cooked Insect Meat"},
-	{tag: "minersdelight:insect_meat", name: "Any Insect Meat"},
+	{tag: "minersdelight:cooked_insect_meat", name: "Any Cooked Insect Meat", textures: ["minersdelight:item/baked_spider_leg", "minersdelight:item/crunchy_bar"]},
+	{tag: "minersdelight:insect_meat", name: "Any Insect Meat", textures: ["minersdelight:item/spider_leg", "minersdelight:item/cooked_arthropod"]},
 	{tag: "mynethersdelight:hot_spice", name: "Hot Spice", textures: ["mynethersdelight:item/bullet_pepper", "mynethersdelight:item/pepper_powder"]},
 	{tag: "mynethersdelight:stove_fire_fuel", name: "Stove Fire Fuel"},
 	{tag: "mynethersdelight:stuffed_hoglin_items", name: "Pieces of Stuffed Hoglin"},
+	{tag: "rarcompat:mimic_loot", name: "Released from Mimic"},
 	{tag: "simpletms:category_physical_tm", name: "Physical TMs"},
 	{tag: "simpletms:category_physical_tr", name: "Physical TRs"},
 	{tag: "simpletms:category_special_tm", name: "Special TMs"},
@@ -217,13 +221,13 @@ const ITEM_TAG_DISPLAY_INFO = [
 	{tag: "simpletms:tr_items", name: "TRs", model_type: "split", textures: ["simpletms:item/tr/fire", "simpletms:item/tr/dragon", "simpletms:item/tr/fairy", "simpletms:item/tr/grass"]},
 
 	// https://github.com/MehVahdJukaar/SnowySpirit/pull/123
-	{tag: "snowyspirit.gumdrops", name: "Gumdrops"},
-	{tag: "snowyspirit.sleds", name: "Sleds"},
+	{tag: "snowyspirit:gumdrops", name: "Gumdrops"},
+	{tag: "snowyspirit:sleds", name: "Sleds"},
 
-	{tag: "sophisticatedbackpacks.upgrade", name: "Backpack Upgrades"},
-	{tag: "sophisticatedstorage.all_storage", name: "All Storage"},
-	{tag: "sophisticatedstorage.base_tier_wooden_storage", name: "Base Tier Wooden Storage"},
-	{tag: "soulbound.enchantable", name: "Enchantable with Soulbound"},
+	{tag: "sophisticatedbackpacks:upgrade", name: "Backpack Upgrades"},
+	{tag: "sophisticatedstorage:all_storage", name: "All Storage"},
+	{tag: "sophisticatedstorage:base_tier_wooden_storage", name: "Base Tier Wooden Storage"},
+	{tag: "soulbound:enchantable", name: "Enchantable with Soulbound"},
 
 	{tag: "urban_decor:polyanthous", name: "Any Polyanthous Flower", model_type: "split", textures: ["urban_decor:item/daffodil_polyanthous", "urban_decor:item/spring_polyanthous", "urban_decor:item/mint_polyanthous"]},
 	{tag: "urban_decor:porcelain", name: "Any Porcelain", model_type: "split", textures: ["urban_decor:item/porcelain", "urban_decor:item/dark_porcelain"]},
@@ -234,7 +238,7 @@ const ITEM_TAG_DISPLAY_INFO = [
 // Add models for EMI (the recipe viewer) to display when tags are referenced.
 // We could use resource packs for this,
 // but that would massively bloat the folders around the place.
-ClientEvents.generateAssets("before_mods", event => {
+ClientEvents.generateAssets("after_mods", event => {
 	/** @param {Special.ItemTag} item_tag @param {Array<string>} texture_paths */
 	function split_model(item_tag, texture_paths) {
 		const [first, second, third, fourth] = texture_paths

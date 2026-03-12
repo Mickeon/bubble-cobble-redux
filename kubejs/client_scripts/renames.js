@@ -119,12 +119,12 @@ ClientEvents.lang("en_us", event => {
 	// For loot tables shown in EMI Loot.
 	event.addAll("emi_loot", {
 		// TODO: These are too many and it's not exhaustive. There's got to be a programmatic way to do it.
-		"emi_loot.archaeology.cobblemon:ruins/rare/automaton_armor_trim_smithing_template": "§b§nRare§r Armor Trim in Ruins",
-		"emi_loot.archaeology.cobblemon:ruins/rare/black_tumblestone": "§b§nRare§r Black Tumblestone in Ruins",
-		"emi_loot.archaeology.cobblemon:ruins/rare/sky_tumblestone": "§b§nRare§r Sky Tumblestone in Ruins",
-		"emi_loot.archaeology.cobblemon:ruins/rare/tumblestone": "§b§nRare§r Tumblestone in Ruins",
+		"emi_loot.archaeology.cobblemon:ruins/rare/automaton_armor_trim_smithing_template": "§bRare§r Armor Trim in Ruins",
+		"emi_loot.archaeology.cobblemon:ruins/rare/black_tumblestone": "§bRare§r Black Tumblestone in Ruins",
+		"emi_loot.archaeology.cobblemon:ruins/rare/sky_tumblestone": "§bRare§r Sky Tumblestone in Ruins",
+		"emi_loot.archaeology.cobblemon:ruins/rare/tumblestone": "§bRare§r Tumblestone in Ruins",
 		"emi_loot.archaeology.cobblemon:fossils/common/prehistoric_birch_tree": "Common in Prehistoric Birch Tree",
-		"emi_loot.archaeology.cobblemon:fossils/uncommon/prehistoric_birch_tree": "§e§nUncommon§r in Prehistoric Birch Tree",
+		"emi_loot.archaeology.cobblemon:fossils/uncommon/prehistoric_birch_tree": "§eUncommon§r in Prehistoric Birch Tree",
 
 		"emi_loot.chest.cobblemon:ruins/gilded_chests/base": "Gilded Chest in Ruins's Base",
 		"emi_loot.chest.cobblemon:ruins/gilded_chests/ruins": "Gilded Chest in Ruins",
@@ -147,6 +147,13 @@ ClientEvents.lang("en_us", event => {
 		"emi_loot.chest.cobblemonraiddens:raid/tier/tier_five": "Tier 5 Raid§8 ⭐⭐⭐⭐⭐",
 		"emi_loot.chest.cobblemonraiddens:raid/tier/tier_six": "Tier §4§n6§r Raid§4 ⭐⭐⭐⭐⭐⭐",
 		"emi_loot.chest.cobblemonraiddens:raid/tier/tier_seven": "Tier §c§n7§r Raid§c ⭐⭐⭐⭐⭐⭐⭐",
+		"emi_loot.chest.lootr:reward/trophy": "Open 100 Lootr containers!",
+		"emi_loot.chest.ribbits:chests/fisherman_main": "🐸 Fisherman Main Chest",
+		"emi_loot.chest.ribbits:chests/fisherman_storage": "🐸 Fisherman Storage Chest",
+		"emi_loot.chest.ribbits:chests/gardener": "🐸 Gardener Chest",
+		"emi_loot.chest.ribbits:chests/merchant": "🐸 Merchant Chest",
+		"emi_loot.chest.ribbits:chests/nitwit": "🐸 Nitwit Chest",
+		"emi_loot.chest.ribbits:chests/sorcerer": "🐸 Sorcerer Chest",
 		"emi_loot.chest.undergroundbunker:chests/underground_bunker/underground_bunker_normal": "Normal Loot in Underground Bunker",
 		"emi_loot.chest.undergroundbunker:chests/underground_bunker/underground_bunker_supply": "Supply Loot in Underground Bunker",
 		"emi_loot.chest.undergroundbunker:chests/underground_bunker/underground_bunker_treasure": "Treasure Loot in Underground Bunker",

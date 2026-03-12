@@ -4,6 +4,9 @@
 			"regex": ":blocks.*_(slab|stairs|wall)$"
 		},
 		{
+			"regex": ":blocks.*potted_"
+		},
+		{
 			"regex": "bubble_cobble:raid/"
 		},
 		{
@@ -19,10 +22,10 @@
 			"regex": "supplementaries:blocks/bunting_wall"
 		},
 		"minecraft:blocks/empty",
-		"minecraft:spawn_bonus_chest",
+		"minecraft:chests/spawn_bonus_chest",
 		"mss:empty",
 		"mvs:empty",
-		"snowyspirit:injection/ginger_sniffer",
+		"snowyspirit:injects/ginger_sniffer",
 		"sophisticatedbackpacks:inject/chests/spawn_bonus_chest",
 		"supplementaries:inject/test"
 	]

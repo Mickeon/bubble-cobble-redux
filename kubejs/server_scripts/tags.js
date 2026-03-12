@@ -88,10 +88,10 @@ ServerEvents.tags("item", event => {
 	event.add("cobblemon:pokedex_screen", "mowziesmobs:glowing_jelly")
 	event.add("supplementaries:pedestal_downright", "#c:tools/spear")
 	event.add("supplementaries:pedestal_upright", "#c:tools/knives", "mega_showdown:rusted_sword")
-	event.add("supplementaries:statue_tools", "#yo_hooks:enchantable/hooks", "#constructionstick:construction_sticks", "minecraft:mace", "kubejs:trowel", "kubejs:ruler")
+	event.add("supplementaries:statue_tools", "#yo_hooks:hooks", "#constructionstick:construction_sticks", "minecraft:mace", "kubejs:trowel", "kubejs:ruler")
 
 	// Makes sense.
-	event.add("c:tools", "#constructionstick:construction_sticks", "#yo_hooks:enchantable/hooks")
+	event.add("c:tools", "#constructionstick:construction_sticks", "#yo_hooks:hooks")
 	event.add("c:bones", "cnc:wishbone", "cnc:lucky_wishbone", "cnc:unlucky_wishbone", "#cnc:antlers")
 	event.add("c:eggs", "undergroundworlds:spider_egg")
 	event.add("c:mushrooms", "ribbits:toadstool") // No, it doesn't make sense?
