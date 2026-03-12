@@ -63,12 +63,12 @@ ServerEvents.recipes(event => {
 
 	// Recipe conflict between Minecraft's spears and Construction Stick's construction sticks.
 	// Put Leather in the bottom-left.
-	event.forEachRecipe({id: /constructionstick:.*_stick$/}, recipe => {
-		const json = JSON.parse(recipe.json)
-		json.pattern[2] = "L  "
-		json.key.L = Ingredient.of("minecraft:leather")
-		event.custom(json).id(recipe.getId())
-	})
+	// event.forEachRecipe({id: /constructionstick:.*_stick$/}, recipe => {
+	// 	const json = JSON.parse(recipe.json)
+	// 	json.pattern[2] = "L  "
+	// 	json.key.L = Ingredient.of("minecraft:leather")
+	// 	event.custom(json).id(recipe.getId())
+	// })
 
 	// Recipe conflict between Minecraft's Chiseled Bookshelf and Urban Decor's calendars.
 	// Put a Clock in the middle.
