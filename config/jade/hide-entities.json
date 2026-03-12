@@ -13,6 +13,7 @@
     "mowziesmobs:boulder_platform_crumbling",
     "yo_hooks:hook_entity",
     "minecraft:experience_orb",
-    "relics:relic_experience_orb"
+    "relics:relic_experience_orb",
+    "sleep_tight:dreamer_essence_dummy"
   ]
 }

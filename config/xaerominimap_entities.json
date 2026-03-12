@@ -22,8 +22,8 @@
     "dotSize": 1.0,
     "renderOverMinimapFrame": 0.0,
     "icons": 1.0,
-    "heightLimit": 20.0,
     "names": 0.0,
+    "heightLimit": 20.0,
     "iconScale": 1.0
   },
   "subCategories": [
@@ -54,7 +54,8 @@
         "mowziesmobs:boulder_platform_crumbling",
         "relics:relic_experience_orb",
         "supplementaries:cannonball",
-        "yo_hooks:hook_entity"
+        "yo_hooks:hook_entity",
+        "sleep_tight:dreamer_essence_dummy"
       ],
       "includeListInSuperCategory": true,
       "excludeMode": "ONLY",
@@ -94,8 +95,8 @@
             "displayed": true,
             "heightBasedFade": false,
             "renderOrder": 925.0,
-            "heightLimit": 200.0,
             "names": 1.0,
+            "heightLimit": 200.0,
             "color": -1.0,
             "renderOverMinimapFrame": 2.0,
             "icons": 2.0,
@@ -283,8 +284,8 @@
               "protection": true,
               "settingOverrides": {
                 "renderOrder": 4.0,
-                "heightLimit": 40.0,
                 "names": 1.0,
+                "heightLimit": 40.0,
                 "color": 11.0,
                 "displayNameWhenIconFails": true,
                 "renderOverMinimapFrame": 1.0,

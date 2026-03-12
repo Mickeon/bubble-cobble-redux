@@ -326,8 +326,17 @@ ItemEvents.modifyTooltips(event => {
 		})
 	}
 
-	event.add(Ingredient.of("@urban_decor").or("@immersive_furniture"), [
+	if (Platform.isLoaded("sleep_tight")) {
+		event.add(["#sleep_tight:hammocks"], [Text.of([`Placeable between `, Text.of(`3 blocks`).color(MASCOT_COLOR), ` or `, Text.of(`2 fences`).color(MASCOT_COLOR)]).color(MASCOT_COLOR_DARK)])
+		event.add(["sleep_tight:dreamer_essence"], [subtle("Keeps Bedbugs at bay, attracts Phantoms,"), subtle("    and is rather soothing...")])
+		event.add(["sleep_tight:bedbug_eggs"], subtle("Use on a bed to infest it."))
+	}
+
+	event.add(Ingredient.of("@urban_decor").or("@immersive_furniture").or("@sleep_tight"), [
 		Text.yellow("Experimental").append(Text.of(` 🧊`).white()),
+	])
+	event.add(Ingredient.of("@comforts"), [
+		Text.red("Deprecated").append(Text.of(` 🧊`).white()),
 	])
 })
 

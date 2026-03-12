@@ -371,6 +371,18 @@ ServerEvents.recipes(event => {
 		event.recipes.create.cutting(CreateItem.of(Item.of(way_sign_id, 2)), Ingredient.of(original_sign_id))
 	}
 
+	// Deprecate existing Hammocks and Sleeping Bags.
+	if (Platform.isLoaded("sleep_tight") && Platform.isLoaded("comforts")) {
+		for (let dye of ["white", "light_gray", "gray", "black", "brown", "red", "orange", "yellow", "lime", "green", "cyan", "light_blue", "blue", "purple", "magenta", "pink"]) {
+			let new_hammock = Item.of("sleep_tight:hammock_" + dye)
+			let old_hammock = Ingredient.of("comforts:hammock_" + dye)
+			event.shapeless(new_hammock, old_hammock)
+
+			let old_sleeping_bag = Ingredient.of("comforts:sleeping_bag_" + dye)
+			event.shapeless(Item.of(`minecraft:${dye}_wool`, 3), old_sleeping_bag)
+		}
+	}
+
 	// TODO: Add recipes for (this modpack's) Pale Jacaranda and Redder Wood.
 	// event.shaped("biomesoplenty:stripped_jacaranda_log", ["DAD", "ADA", "DAD"], {D: "minecraft:white_dye", A: "biomeswevegone:stripped_jacaranda_log"})
 	// event.shaped("biomesoplenty:stripped_redwood_log", ["DAD", "ADA", "DAD"], {D: "minecraft:red_dye", A: "biomeswevegone:stripped_redwood_log"})

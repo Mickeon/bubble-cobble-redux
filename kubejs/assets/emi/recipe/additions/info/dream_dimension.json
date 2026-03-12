@@ -7,7 +7,8 @@
 		},
 		"#item:minecraft:beds",
 		"#item:comforts:hammocks",
-		"#item:comforts:sleeping_bags"
+		"#item:comforts:sleeping_bags",
+		"#item:sleep_tight:hammocks"
 	],
 	"text": "When you're Tipsy, you may try sleeping it off and find yourself in the Dream Dimension.\nThis is a temporary \"resource world\". Items you find are yours to keep."
 }

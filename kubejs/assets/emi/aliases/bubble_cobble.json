@@ -370,6 +370,14 @@
 				"Library",
 				"Bookcase"
 			]
+		},
+		{
+			"stacks":[
+				"item:sleep_tight:night_bag"
+			],
+			"text": [
+				"Sleeping Bag"
+			]
 		}
 	]
 }

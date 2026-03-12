@@ -5,9 +5,10 @@
 		"id": "brewinandchewin:tipsy"
 	},
 	"right": [
-		"#minecraft:beds",
-		"#comforts:hammocks",
-		"#item:comforts:sleeping_bags"
+		"#item:minecraft:beds",
+		"#item:comforts:hammocks",
+		"#item:comforts:sleeping_bags",
+		"#item:sleep_tight:hammocks"
 	],
 	"output": {
 		"type": "item",

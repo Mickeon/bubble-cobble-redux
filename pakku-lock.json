@@ -9087,6 +9087,48 @@
             ]
         },
         {
+            "pakku_id": "ynkpeSIED6XYiKas",
+            "pakku_links": [
+                "EfxS3F0APTaTnq0U"
+            ],
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "modrinth": "sleep-tight"
+            },
+            "name": {
+                "modrinth": "Sleep Tight"
+            },
+            "id": {
+                "modrinth": "tNai0h2Y"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "sleep_tight-1.21-1.4.1-neoforge.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/tNai0h2Y/versions/GYSiMQJI/sleep_tight-1.21-1.4.1-neoforge.jar",
+                    "id": "GYSiMQJI",
+                    "parent_id": "tNai0h2Y",
+                    "hashes": {
+                        "sha512": "e4fc7280b884e526dd6160afd89ee7921af1f5a386effecf3e1e45776df9816cd6387c3e76ab30ec4327d1523d59ec82ba87dcb9c763ca497894a2eb8478e4d7",
+                        "sha1": "4013e30bb47bac31fe6e96aaef96a228ff2b3b82"
+                    },
+                    "required_dependencies": [
+                        "twkfQtEc"
+                    ],
+                    "size": 768856,
+                    "date_published": "2026-03-06T05:06:04.951538Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "3PN5dtGyFUrLMnyP",
             "type": "MOD",
             "side": "BOTH",
