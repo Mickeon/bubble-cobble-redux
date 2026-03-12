@@ -1,0 +1,7 @@
+{
+	"type": "emi:info",
+	"stacks": [
+		{"type": "item", "id": "relics:holy_locket"}
+	],
+	"text": "Can be found in deserts and badlands."
+}

@@ -1,0 +1,8 @@
+{
+	"type": "emi:info",
+	"stacks": [
+		{"type": "item", "id": "relics:hunter_belt"},
+		{"type": "item", "id": "relics:leather_belt"}
+	],
+	"text": "Can be found in any Loot Chest in the Overworld."
+}

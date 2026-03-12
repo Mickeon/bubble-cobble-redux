@@ -1,0 +1,10 @@
+{
+	"type": "emi:info",
+	"stacks": [
+		{"type": "item", "id": "relics:amphibian_boot"},
+		{"type": "item", "id": "relics:aqua_walker"},
+		{"type": "item", "id": "relics:drowned_belt"},
+		{"type": "item", "id": "relics:jellyfish_necklace"}
+	],
+	"text": "Can be found in oceans, beaches, and rivers."
+}

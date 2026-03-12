@@ -1,0 +1,7 @@
+{
+	"type": "emi:info",
+	"stacks": [
+		{"type": "item", "id": "relics:spore_sack"}
+	],
+	"text": "Can be found in jungles and rainforests."
+}

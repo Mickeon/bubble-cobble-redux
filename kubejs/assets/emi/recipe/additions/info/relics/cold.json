@@ -1,0 +1,8 @@
+{
+	"type": "emi:info",
+	"stacks": [
+		{"type": "item", "id": "relics:ice_breaker"},
+		{"type": "item", "id": "relics:wool_mitten"}
+	],
+	"text": "Can be found in frozen, cold, and snowy biomes, taigas, as well as high up mountains, hills, and cliffs."
+}

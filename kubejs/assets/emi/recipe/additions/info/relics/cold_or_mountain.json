@@ -1,0 +1,7 @@
+{
+	"type": "emi:info",
+	"stacks": [
+		{"type": "item", "id": "relics:ice_skates"}
+	],
+	"text": "Can be found in frozen, cold, and snowy biomes."
+}

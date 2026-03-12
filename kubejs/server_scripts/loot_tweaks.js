@@ -16,7 +16,6 @@ ServerEvents.tags("item", event => {
 	}
 })
 
-
 LootJS.lootTables(event => {
 	if (Item.exists("supplementaries:urn")) {
 		event.modifyLootTables(["supplementaries:loot/urn_loot/common", "supplementaries:loot/urn_loot/uncommon", "supplementaries:loot/urn_loot/rare"])
@@ -327,7 +326,6 @@ LootJS.lootTables(event => {
 
 	// console.log(Ingredient.of("#bits_n_bobs:chairs").getItemIds().toArray())
 	// print_simple_block_tables(event)
-
 })
 
 // The crap we have to go through to show Farmer's Delight's loot modifiers.
@@ -538,3 +536,182 @@ function print_simple_block_tables(event) {
 	console.log(output)
 	console.log(`There are ${simple_table_ids.size()} simple block loot tables`)
 }
+
+
+// Debugging where Relics generate. Regexes taken from their respective yaml files.
+// This is actually quite the rough approximation.
+// const RELIC_LOOT_ENTRIES = {
+// 	"relics:amphibian_boot": {
+// 		biomes: [
+// 			/[\w]+:.*(ocean|sea|marine|pelagic|beach|shore|coast|strand|sandbank|river|stream|creek|brook|water|tributary)[\w_\/]*/
+// 		]
+// 	},
+// 	"relics:aqua_walker": {
+// 		biomes: [
+// 			/[\w]+:.*(ocean|sea|marine|pelagic|beach|shore|coast|strand|sandbank|river|stream|creek|brook|water|tributary)[\w_\/]*/
+// 		]
+// 	},
+// 	"relics:bastion_ring": {
+// 		tables: [
+// 			/[\w]+:chests\/[\w_\/]*(bastion|piglin)[\w_\/]*/
+// 		]
+// 	},
+// 	"relics:blazing_flask": {
+// 		tables: [
+// 			/[\w]+:chests\/[\w_\/]*(nether|infern|hell|chasm|lava|magma|m[eo]lt|fire|flame|blaze|ember|pyre)[\w_\/]*/,
+// 			"minecraft:chests/ruined_portal"
+// 		]
+// 	},
+// 	"relics:chorus_inhibitor": {
+// 		tables: [
+// 			/[\w]+:chests\/[\w_\/]*(end|stronghold)[\w_\/]*/
+// 		]
+// 	},
+// 	"relics:drowned_belt": {
+// 		biomes: [
+// 			/[\w]+:.*(ocean|sea|marine|pelagic|beach|shore|coast|strand|sandbank|river|stream|creek|brook|water|tributary)[\w_\/]*/
+// 		]
+// 	},
+// 	"relics:enders_hand": {
+// 		tables: [
+// 			/[\w]+:chests\/[\w_\/]*(end|stronghold)[\w_\/]*/
+// 		]
+// 	},
+// 	"relics:holy_locket": {
+// 		biomes: [
+// 			/[\w]+:.*(desert|badlands|outback)[\w_\/]*/
+// 		]
+// 	},
+// 	// "relics:hunter_belt": { // Pretty much found in any chest in the Overworld.
+// 	// 	tables: [
+// 	// 		/[\w]+:chests\/[\w_\/]*[\w]+[\w_\/]*/
+// 	// 	]
+// 	// },
+// 	"relics:ice_breaker": {
+// 		biomes: [
+// 			/[\w]+:.*(taiga|pine)[\w_\/]*/,
+// 			/[\w]+:.*(fro[sz]|ic[ey]|glac|cold|snow)[\w_\/]*/,
+// 			/[\w]+:.*(mountain|peak|summit|ridge|alp|highland|hill|cliff|height)[\w_\/]*/,
+// 		]
+// 	},
+// 	"relics:ice_skates": {
+// 		biomes: [
+// 			/[\w]+:.*(fro[sz]|ic[ey]|glac|cold|snow)[\w_\/]/
+// 		]
+// 	},
+// 	"relics:jellyfish_necklace": {
+// 		biomes: [
+// 			/'[\w]+:.*(ocean|sea|marine|pelagic|beach|shore|coast|strand|sandbank|river|stream|creek|brook|water|tributary)[\w_\/]*/
+// 		]
+// 	},
+// 	// "relics:leather_belt": { // Pretty much found in any chest in the Overworld.
+// 	// 	tables: [
+// 	// 		/[\w]+:chests\/[\w_\/]*[\w]+[\w_\/]*/
+// 	// 	]
+// 	// },
+// 	"relics:magma_walker": {
+// 		tables: [
+// 			/[\w]+:chests\/[\w_\/]*(nether|infern|hell|chasm|lava|magma|m[eo]lt|fire|flame|blaze|ember|pyre)[\w_\/]*/,
+// 			"minecraft:chests/ruined_portal"
+// 		]
+// 	},
+// 	"relics:midnight_robe": {
+// 		table: [
+// 			/[\w]+:chests\/[\w_\/]*(end|stronghold)[\w_\/]*/
+// 		]
+// 	},
+// 	"relics:rage_glove": {
+// 		tables: [
+// 			/[\w]+:chests\/[\w_\/]*(nether|infern|hell|chasm|lava|magma|m[eo]lt|fire|flame|blaze|ember|pyre)[\w_\/]*/,
+// 			"minecraft:chests/ruined_portal"
+// 		]
+// 	},
+// 	"relics:reflection_necklace": {
+// 		tables: [
+// 			/[\w]+:chests\/[\w_\/]*(nether|infern|hell|chasm|lava|magma|m[eo]lt|fire|flame|blaze|ember|pyre)[\w_\/]*/,
+// 			"minecraft:chests/ruined_portal"
+// 		]
+// 	},
+// 	"relics:shadow_glaive": {
+// 		tables: [
+// 			/[\w]+:chests\/[\w_\/]*(end|stronghold)[\w_\/]*/
+// 		]
+// 	},
+// 	"relics:space_dissector": {
+// 		tables: [
+// 			/[\w]+:chests\/[\w_\/]*(nether|infern|hell|chasm|lava|magma|m[eo]lt|fire|flame|blaze|ember|pyre)[\w_\/]*/,
+// 			"minecraft:chests/ruined_portal"
+// 		]
+// 	},
+// 	"relics:spore_sack": {
+// 		biomes: [
+// 			/[\w]+:.*(jungle|rainforest|tropic|wildwood|thicket|boscage|humid|bamboo)[\w_\/]*/
+// 		]
+// 	},
+// 	"relics:springy_boot": {
+// 		biomes: [
+// 			/[\w]+:.*(mountain|peak|summit|ridge|alp|highland|hill|cliff|height)[\w_\/]*/
+// 		]
+// 	},
+// 	"relics:wool_mitten": {
+// 		biomes: [
+// 			/[\w]+:.*(taiga|pine)[\w_\/]*/,
+// 			/[\w]+:.*(fro[sz]|ic[ey]|glac|cold|snow)[\w_\/]*/,
+// 			/[\w]+:.*(mountain|peak|summit|ridge|alp|highland|hill|cliff|height)[\w_\/]*/,
+// 		]
+// 	},
+// }
+
+// PlayerEvents.chat(event => {
+// 	if (event.message == "cheese") {
+// 		print_places_with_relics(event.server)
+// 	}
+// })
+
+// /** @param {$MinecraftServer} server */
+// function print_places_with_relics(server) {
+// 	// server.reloadableRegistries().get().registries().forEach(a => console.log(a.key()))
+// 	const all_loot_table_ids = server.reloadableRegistries().get().lookup("minecraft:loot_table").get().listElementIds().map(key => key.location().toString()).toList()
+// 	const all_biome_ids = server.reloadableRegistries().get().lookup("minecraft:worldgen/biome").get().listElementIds().map(key => key.location().toString()).toList()
+
+// 	/** @param {$List<String>} ids  @param {Array<RegExp | string>} regexes */
+// 	function get_matching_from_list(ids, regexes) {
+// 		let matching_ids = Utils.newList()
+// 		if (!regexes) {
+// 			return matching_ids
+// 		}
+
+// 		for (let regex of regexes) {
+// 			if (typeof regex == "string") {
+// 				matching_ids.add(regex)
+// 			} else {
+// 				matching_ids.addAll(ids.stream().filter(id => regex.test(id)).toList())
+// 			}
+// 		}
+// 		return matching_ids
+// 	}
+
+// 	Object.keys(RELIC_LOOT_ENTRIES).forEach(relic_name => {
+// 		let output = `\n==== "${relic_name}":`
+
+// 		const relic_biomes = /** @type {Array<RegExp | string> | null} */ (RELIC_LOOT_ENTRIES[relic_name].biomes)
+// 		let matching_biomes = get_matching_from_list(all_biome_ids, relic_biomes)
+// 		if (matching_biomes.size() > 0) {
+// 			output += `\nMay be in the following biomes:`
+// 			matching_biomes.stream().sorted().distinct().forEach(id => {
+// 				output += `\n\t"${id}"`
+// 			})
+// 		}
+
+// 		const relic_tables = /** @type {Array<RegExp | string> | null} */ (RELIC_LOOT_ENTRIES[relic_name].tables)
+// 		let matching_tables = get_matching_from_list(all_loot_table_ids, relic_tables)
+// 		if (matching_tables.size() > 0) {
+// 			output += `\nMay be in the following loot tables:`
+// 			matching_tables.stream().sorted().distinct().forEach(id => {
+// 				output += `\n\t"${id}"`
+// 			})
+// 		}
+
+// 		console.log(output)
+// 	})
+// }
