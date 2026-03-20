@@ -19,7 +19,9 @@ blacklist = [
 	"#create:packages",
 	"sophisticatedstorage:debug_tool",
 	"yungscavebiomes:ice_sheet",
-	"relics:leafy_ring"
+	"relics:leafy_ring",
+	"minecraft:copper_horse_armor",
+	"copperagebackport:*"
 ]
 #Choose which screens to add the Completionist's Index button to.
 #Default Value: PAUSE_MENU

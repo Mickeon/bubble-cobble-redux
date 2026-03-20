@@ -273,7 +273,7 @@ ServerEvents.tags("block", event => {
 	event.add("supplementaries:lights_gunpowder", "#bubble_cobble:very_hot") // This has weird consequences (e.g. Campfire lights up Gunpowder)
 	event.add("create:passive_boiler_heaters", "#bubble_cobble:very_hot")
 	event.add("minecraft:strider_warm_blocks", "#bubble_cobble:very_hot")
-	event.add("bubble_cobble:very_cold",  "cobblemon:ice_stone_block", "yungscavebiomes:rare_ice", /undergroundworlds:ice_/)
+	event.add("bubble_cobble:very_cold", "minecraft:frosted_ice", "cobblemon:ice_stone_block", "yungscavebiomes:rare_ice", /undergroundworlds:ice_/, "yungscavebiomes:frost_lily", "yungscavebiomes:ice_sheet", "yungscavebiomes:icicle")
 	event.add("brewinandchewin:freeze_sources", "#bubble_cobble:very_cold")
 
 	// Normally these can't be chopped, yet they essentially make up some trees.
@@ -304,6 +304,7 @@ ServerEvents.tags("fluid", event => {
 	event.add("create:bottomless/allow", "biomesoplenty:blood")
 	event.add("create:fan_processing_catalysts/smoking", "supplementaries:lumisene")
 	event.add("create:fan_processing_catalysts/haunting", "biomesoplenty:liquid_null", "biomesoplenty:flowing_liquid_null")
+	event.add("sliceanddice:burning", "supplementaries:lumisene")
 })
 
 ServerEvents.tags("entity_type", event => {
@@ -314,6 +315,8 @@ ServerEvents.tags("entity_type", event => {
 	event.add("supplementaries:flute_pet", "minecraft:copper_golem", "minecraft:iron_golem", "minecraft:snow_golem", "minecraft:player", "minecraft:turtle")
 	event.add("artifacts:creepers", "undergroundworlds:icy_creeper")
 	event.add("create:ignore_seat", "minecraft:bee")
+	event.add("farmersdelight:dog_food_users", "cobblemon:pokemon")
+	event.add("farmersdelight:horse_feed_users", "cobblemon:pokemon")
 })
 
 ServerEvents.tags("damage_type", event => {
@@ -347,9 +350,8 @@ ServerEvents.tags("worldgen/biome", event => {
 	event.add("c:is_dead", "biomeswevegone:pale_bog")
 
 	event.add("mss:has_structure/cherry_biomes", "biomesoplenty:snowblossom_grove")
-	event.add("c:primary_wood_type/cherry", "biomesoplenty:snowblossom_grove") // Used by MVS.
-
 	event.add("mss:has_structure/ocean_biomes", "#minecraft:is_ocean") // The original tag only includes vanilla and #c:is_water/overworld?
+	event.add("c:primary_wood_type/cherry", "biomesoplenty:snowblossom_grove") // Used by MVS.
 
 	event.add("yungsextras:has_structure/desert_decorations", "#c:is_desert")
 	event.add("yungsextras:has_structure/swamp_structures", "#c:is_swamp")
@@ -366,17 +368,56 @@ ServerEvents.tags("worldgen/biome", event => {
 	event.add("nova_structures:collections/snowy_plains", "#c:is_snowy_plains") // TODO: Report this? Accidentally includes non-existent "c:snowy_plains". Doesn't change anything for us.
 
 	// TODO: Fill Awesome Dungeon's tags. They're really brief and don't encompass anything.
-	// event.add("awesomedungeon:has_structure/abandoned_oak_palace_biomes", "")
-	// event.add("variantsandventures:collections/deserts")
-	// event.add("undergroundworlds:has_structure/chillager_outpost")
+	// Inferring by where else they're usually in.
+	event.add("awesomedungeon:has_structure/abandoned_oak_palace_biomes", "biomesoplenty:prairie", "biomesoplenty:grassland", "biomeswevegone:prairie")
+	event.add("awesomedungeon:has_structure/better_default_jungle_temple_biomes", "biomesoplenty:fungal_jungle")
+	event.add("awesomedungeon:has_structure/jungle_giant_tree_biomes", "biomesoplenty:fungal_jungle", "biomeswevegone:fragment_jungle")
+	event.add("awesomedungeon:has_structure/swamp_big_temple_biomes", "#c:is_swamp")
+	event.add("awesomedungeon:has_structure/the_ztower_biomes", "#c:is_spooky")
+	event.add("awesomedungeon:has_structure/witch_castle_biomes", "#c:is_spooky", "biomeswevegone:maple_taiga")
 
+	event.add("awesomedungeonocean:has_structure/frigate_large_biomes", "biomeswevegone:dead_sea", "biomeswevegone:lush_stacks") // They're hot like Warm Ocean.
+	event.add("awesomedungeonocean:has_structure/ocean_warn_temple_biomes", "biomeswevegone:dead_sea", "biomeswevegone:lush_stacks") // They're is hot like Warm Ocean.
 
 	event.add("supplementaries:has_basalt_ash", "biomesoplenty:volcanic_plains", "biomesoplenty:volcano")
 	event.add("snowyspirit:has_gingerbread_house", "#c:is_snowy") // TODO: Report this.
 
-	// This does not work. Specific biomes would have to be removed more thoroughly because of the c:is_swamp tag.
-	// event.remove("cnc:blackbear_spawning", "biomeswevegone:pale_bog") // I don't know if this even works.
-	// event.remove("cnc:goose_spawning", "biomeswevegone:pale_bog") // I don't know if this even works.
+	// Potentially worth reporting some of these?
+	event.add("arts_and_crafts:gypsum_can_generate_in", "#c:is_desert")
+	event.add("arts_and_crafts:ochre_pietraforte_patch", "#c:is_desert", "#minecraft:is_beach")
+	event.add("arts_and_crafts:verdant_pietraforte_patch", "#minecraft:is_jungle", "#minecraft:is_forest")
+
+	event.add("create_ltab:has_structure/sand_structure", "#c:is_desert")
+
+	event.add("mowziesmobs:is_magical", "#c:is_magical")
+
+	event.add("undergroundworlds:has_structure/jungle_treehouse", "#c:is_jungle")
+	event.add("undergroundworlds:has_structure/swamp_house", "#c:is_swamp")
+
+	// This usually only spawns in the Mystic Grove, otherwise.
+	event.add("biomesoplenty:has_wolf_variant/spectral", "biomesoplenty:ominous_woods", "biomeswevegone:pale_bog")
+
+	// Do not let these spawn in the Pale Bog.
+	for (let tag of ["cnc:blackbear_spawning", "cnc:goose_spawning", "cnc:squonk_spawning"]) {
+		// Specific biomes have to be re-added manually because the c:is_swamp tag is used.
+		event.remove(tag, "#c:is_swamp")
+		event.add(tag,
+			"biomeswevegone:bayou",
+			"biomeswevegone:cypress_swamplands",
+			"biomeswevegone:cypress_wetlands",
+			"biomeswevegone:pale_bog",
+			"biomeswevegone:white_mangrove_marshes",
+			"biomesoplenty:bayou",
+			"biomesoplenty:bog",
+			"biomesoplenty:floodplain",
+			"biomesoplenty:marsh",
+			"biomesoplenty:moor",
+			"biomesoplenty:muskeg",
+			"biomesoplenty:wetland",
+			"minecraft:mangrove_swamp",
+			"minecraft:swamp",
+		)
+	}
 
 	// There's got to be a bunch of biomes to fill here...
 	// event.add("nova_structures:collections/giant_trees", "")
@@ -406,5 +447,15 @@ ServerEvents.tags("worldgen/structure", event => {
 		"supplementaries:galleon",
 		"awesomedungeonocean:frigate_medium",
 		"awesomedungeonocean:frigate_large",
+	)
+
+	// More integration. The usual.
+	event.add("amendments:add_potion_cauldron", "#nova_structures:witch_villa", "awesomedungeon:witch_castle")
+	event.add("supplementaries:road_sign_destinations",
+		"#biomeswevegone:prairie_houses",
+		"ribbits:ribbit_village",
+		"luistercorp:lava_chicken",
+		"mss:white_house", "mss:calcite_house", "mss:diorite_house", "mss:spruce_huts",
+		"mvs:cartographer_tower", "mvs:house", "mvs:tall_house", "mvs:azelea_house", "mvs:warped_house", "mvs:deepslate_house",
 	)
 })

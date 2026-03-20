@@ -55,6 +55,16 @@ EntityEvents.drops("minecraft:player", event => {
 			add_drop(player, Item.of("create:cogwheel"), 0.5)
 			add_drop(player, Item.of("minecraft:blue_dye"), 0.25)
 		} break;
+		case "Chailotl": {
+			add_drop(player, Item.of("minecraft:string"), 0.75)
+			add_drop(get_funny_salmon(), 0.5)
+			add_drop(player, Item.of("farmersdelight:salmon_roll"), 0.5)
+			add_drop(player, Item.of("farmersdelight:kelp_roll_slice"), 0.5)
+			add_drop(player, Item.of("minecraft:amethyst_shard"), 0.5)
+			add_drop(player, Item.of("minecraft:purple_dye"), 0.25)
+			add_drop(player, Item.of("supplementaries:soap"), 0.25)
+			add_drop(player, Item.of("minecraft:axolotl_spawn_egg"), 0.01)
+		} break;
 		case "CyanGoat": {
 			add_drop(player, Item.of("minecraft:cyan_dye"), 0.75)
 			add_drop(player, Item.of("minecraft:goat_horn"), 0.1)
