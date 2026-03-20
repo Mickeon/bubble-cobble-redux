@@ -1,6 +1,7 @@
 {
   "keys": [
-    "#cobblemon:mochis"
+    "#cobblemon:mochis",
+    "cobblemon:potato_mochi"
   ],
   "pitch": 2.0,
   "soundEvent": "create:slime_added",

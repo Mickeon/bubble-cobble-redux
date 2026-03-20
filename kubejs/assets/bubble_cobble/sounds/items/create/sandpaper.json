@@ -1,0 +1,8 @@
+{
+  "keys": [
+    "#create:sandpaper"
+  ],
+  "pitch": 1.75,
+  "soundEvent": "create:sanding_short",
+  "volume": 0.2
+}

@@ -1,0 +1,15 @@
+{
+  "keys": [
+    "cobblemon:iron_ball",
+    "cobblemon:metal_coat",
+    "cobblemon:metal_alloy",
+    "create:schematicannon",
+    "supplementaries:bomb",
+    "supplementaries:bomb_blue",
+    "supplementaries:cannon",
+    "supplementaries:cannonball"
+  ],
+  "pitch": 1.25,
+  "soundEvent": "minecraft:block.copper.step",
+  "volume": 0.25
+}

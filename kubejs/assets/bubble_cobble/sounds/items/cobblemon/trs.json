@@ -2,7 +2,7 @@
   "keys": [
     "#simpletms:tr_items",
     "#simpletms:tm_tr_case",
-    "simpletms:blank_tr",
+    "simpletms:tr_blank",
     "#c:music_discs"
   ],
   "pitch": 0.9,

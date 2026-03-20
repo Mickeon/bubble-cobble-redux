@@ -1,0 +1,8 @@
+{
+  "keys": [
+    "#c:dyes"
+  ],
+  "pitch": 1.5,
+  "soundEvent": "minecraft:block.powder_snow.hit",
+  "volume": 0.75
+}

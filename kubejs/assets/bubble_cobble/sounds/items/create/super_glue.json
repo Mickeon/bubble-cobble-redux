@@ -1,0 +1,8 @@
+{
+  "keys": [
+    "create:super_glue"
+  ],
+  "pitch": 1.25,
+  "soundEvent": "minecraft:block.chiseled_bookshelf.pickup",
+  "volume": 0.1
+}

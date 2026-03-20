@@ -1,0 +1,9 @@
+{
+  "_comment": "I genuinely have no idea what to use this sound for, I just know it sounds good.",
+  "keys": [
+    "supplementaries:bellows"
+  ],
+  "pitch": 1.25,
+  "soundEvent": "sounds:block.loom.hit",
+  "volume": 0.25
+}

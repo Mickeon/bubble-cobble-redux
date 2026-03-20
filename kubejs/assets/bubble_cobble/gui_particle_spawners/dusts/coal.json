@@ -1,0 +1,29 @@
+{
+  "parent": "bubble_cobble:dusts/base",
+  "attributes": {
+    "speedY": 20,
+    "accelerationY": -3,
+    "frictionX": 0.8,
+    "frictionY": 0.8,
+    "duration": 15,
+    "count": 4,
+    "color_start": "#FF5F5442",
+    "color_end": "#001D1A14"
+  },
+  "attributes_variance": {
+    "x": 6,
+    "y": 6,
+    "speedX": 4,
+    "accelerationY": 1,
+    "duration": 5
+  },
+
+  "applies": [
+    {"id": "minecraft:coal"},
+    {"id": "minecraft:coal_block"},
+    {"id": "minecraft:charcoal"},
+    {"id": "cobblemon:charcoal_stick"},
+    {"id": "herbalbrews:dried_black_tea"},
+    {"id": "herbalbrews:dried_oolong_tea"}
+  ]
+}

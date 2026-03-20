@@ -25,6 +25,7 @@
 
   "applies": [
     {"id": "mynethersdelight:pepper_powder"},
+    {"id": "minersdelight:rock_soup_cup"},
     {"id": "minersdelight:spicy_hoglin_stew_cup"},
     {"id": "minersdelight:spicy_noodle_soup_cup"},
     {"id": "mynethersdelight:chilidog"},

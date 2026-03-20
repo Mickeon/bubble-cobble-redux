@@ -2,7 +2,8 @@
   "keys": [
     "#cobblemon:mints",
     "cobblemon:galarica_cuff",
-    "cobblemon:galarica_wreath"
+    "cobblemon:galarica_wreath",
+    "minersdelight:moss"
   ],
   "pitch": 1.5,
   "soundEvent": "cobblemon:block.mint.place",

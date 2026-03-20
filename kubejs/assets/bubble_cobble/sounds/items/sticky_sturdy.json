@@ -1,0 +1,9 @@
+{
+  "_comment": "#c:foods/fruit, some berries do not work here. Overshadowed by some other sound definition, probably for #c:foods",
+  "keys": [
+    "#bubble_cobble:sounds/sticky_sturdy"
+  ],
+  "pitch": 1.25,
+  "soundEvent": "minecraft:block.coral_block.step",
+  "volume": 0.25
+}

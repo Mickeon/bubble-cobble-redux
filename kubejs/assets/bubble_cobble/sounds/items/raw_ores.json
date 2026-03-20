@@ -1,0 +1,9 @@
+{
+  "_comment": "Only Raw Zinc works. Overshadowed by some other sound definition.",
+  "keys": [
+    "#c:raw_materials"
+  ],
+  "pitch": 2.0,
+  "soundEvent": "sounds:block.deepslate_gold_ore.step",
+  "volume": 0.25
+}

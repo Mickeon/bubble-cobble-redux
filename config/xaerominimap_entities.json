@@ -10,8 +10,8 @@
   "name": "gui.xaero_entity_category_root",
   "protection": true,
   "settingOverrides": {
-    "displayHeight": 0.0,
     "displayed": true,
+    "displayHeight": 0.0,
     "heightBasedFade": true,
     "renderOrder": 0.0,
     "color": 13.0,
@@ -53,9 +53,9 @@
         "mowziesmobs:boulder_platform",
         "mowziesmobs:boulder_platform_crumbling",
         "relics:relic_experience_orb",
+        "sleep_tight:dreamer_essence_dummy",
         "supplementaries:cannonball",
-        "yo_hooks:hook_entity",
-        "sleep_tight:dreamer_essence_dummy"
+        "yo_hooks:hook_entity"
       ],
       "includeListInSuperCategory": true,
       "excludeMode": "ONLY",

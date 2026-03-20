@@ -1,7 +1,7 @@
 {
   "keys": [
     "#simpletms:tm_items",
-    "simpletms:blank_tm"
+    "simpletms:tm_blank"
   ],
   "pitch": 1.0,
   "soundEvent": "bubble_cobble:grab_disc",

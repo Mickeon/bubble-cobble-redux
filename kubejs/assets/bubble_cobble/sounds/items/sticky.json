@@ -8,7 +8,15 @@
     "cobblemon:poke_bait",
     "cobblemon:peat_block",
     "mynethersdelight:ghast_sourdough",
-    "create_bic_bit:sweet_dough"
+    "create_bic_bit:sweet_dough",
+    "create_deepfried:raw_arancini",
+    "create_deepfried:raw_donut",
+    "create_deepfried:raw_panzerotto",
+    "create_bic_bit:raw_bitterballen",
+    "create_bic_bit:raw_cheese_souffle",
+    "create_bic_bit:raw_eggball",
+    "create_bic_bit:raw_frikandel",
+    "create_bic_bit:raw_kroket"
   ],
   "pitch": 1.25,
   "soundEvent": "minecraft:entity.slime.squish",

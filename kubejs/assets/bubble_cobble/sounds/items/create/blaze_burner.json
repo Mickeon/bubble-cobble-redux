@@ -1,0 +1,8 @@
+{
+  "keys": [
+    "create:blaze_burner"
+  ],
+  "pitch": 2.0,
+  "soundEvent": "minecraft:entity.blaze.ambient",
+  "volume": 0.05
+}

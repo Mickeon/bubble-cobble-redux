@@ -1,0 +1,27 @@
+{
+  "children": [
+    "bubble_cobble:sparkles"
+  ],
+  "attributes": {
+    "duration": 5,
+    "color_start": "#FFFCE4F2",
+    "color_end": "#F0C24ABB"
+  },
+  "attributes_variance": {
+    "duration": 2,
+    "color_end": "#00113311"
+  },
+
+  "applies": [
+    {"id": "minecraft:barrier"},
+    {"id": "minecraft:structure_void"},
+    {"id": "minecraft:jigsaw"},
+    {"id": "minecraft:structure_block"},
+    {"id": "moonlight:spawn_box"},
+    {"id": "create:creative_crate"},
+    {"id": "create:creative_fluid_tank"},
+    {"id": "create:creative_motor"},
+    {"id": "create:creative_blaze_cake"},
+    {"id": "create:handheld_worldshaper"}
+  ]
+}

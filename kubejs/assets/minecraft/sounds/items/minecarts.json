@@ -1,0 +1,17 @@
+{
+  "keys": [
+    "minecraft:chest_minecart",
+    "minecraft:command_block_minecart",
+    "minecraft:furnace_minecart",
+    "minecraft:hopper_minecart",
+    "minecraft:minecart",
+    "minecraft:tnt_minecart",
+    "supplementaries:dispenser_minecart",
+    "create:minecart_contraption",
+    "create:chest_minecart_contraption",
+    "create:furnace_minecart_contraption"
+  ],
+  "pitch": 1.75,
+  "soundEvent": "sounds:block.sheet_metal.step",
+  "volume": 0.75
+}

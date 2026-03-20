@@ -114,6 +114,8 @@ ServerEvents.tags("item", event => {
 
 	// Shared in a bunch of places.
 	event.add("bubble_cobble:coinstacks", /^createdeco:.*coinstack$/)
+	event.add("bubble_cobble:pokefinders", /^cobblenav:pokefinder_item/)
+	event.add("bubble_cobble:pokenavs", "#cobblenav:pokenav", "cobblenav:pokenav_item_gholdengo", "cobblenav:pokenav_item_wanderer")
 
 	event.add("bubble_cobble:emi/chest_loot_icon","minecraft:chest", "minecraft:barrel", "lootr:lootr_barrel", "lootr:lootr_chest", "lootr:lootr_shulker", "lootr:decorated_pot", "lootrmon:gilded_chest", "cobblemonraiddens:raid_pouch")
 	event.add("bubble_cobble:emi/block_drops_icon", "#c:ore_rates/singular")
@@ -218,7 +220,7 @@ ServerEvents.tags("block", event => {
 	event.add("minecraft:enchantment_power_provider", "#handcrafted:shelves") // https://github.com/terrarium-earth/Handcrafted/issues/136
 	event.add("minecraft:guarded_by_piglins", "handcrafted:golden_thin_pot", "handcrafted:golden_thick_pot", "handcrafted:golden_wide_pot", "handcrafted:golden_medium_pot") // Reported: https://github.com/terrarium-earth/Handcrafted/issues/152
 	event.add("cobblemon:machines", "simpletms:machine_tm")
-	// event.add("create:single_block_inventories", "supplementaries:sack", "supplementaries:safe", "supplementaries:pulley_block") // TODO: Report this. // Commenting out as a test.
+	// event.add("create:single_block_inventories", "supplementaries:sack", "supplementaries:safe", "supplementaries:pulley_block") // TODO: Report this. // Commenting out as a test. Doesn't seem to be useful for us.
 	event.add("minecraft:buttons", COPPER_BUTTONS)
 	event.add("minecraft:mineable/pickaxe", COPPER_BUTTONS)
 	event.add("createdeco:placards", PLACARDS)

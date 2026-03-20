@@ -1,7 +1,9 @@
 {
   "keys": [
     "#minecraft:bookshelf_books",
-    "handcrafted:stackable_book"
+    "handcrafted:stackable_book",
+    "cnc:field_guide",
+    "mega_showdown:rotom_catalogue"
   ],
   "pitch": 1.25,
   "soundEvent": "minecraft:block.chiseled_bookshelf.pickup",

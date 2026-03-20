@@ -283,12 +283,10 @@ LootJS.lootTables(event => {
 				return
 			}
 
-			table.firstPool().addEntry(LootEntry.reference("kubejs:doohickey").withWeight(10).randomChance(0.2))
-			table.createPool().rolls([2, 5]).bonusRolls(3).addEntry(
-				LootEntry.reference("kubejs:doohickey").withWeight(1)
-			).addEntry(
-				LootEntry.empty().withWeight(6)
-			)
+			table.firstPool().addEntry(LootEntry.reference("kubejs:doohickey").withWeight(10).randomChance(0.1))
+			table.createPool().rolls([2, 5]).bonusRolls(3)
+					.addEntry(LootEntry.reference("kubejs:doohickey").withWeight(1))
+					.addEntry(LootEntry.empty().withWeight(12))
 		})
 
 		event.getLootTable("minecraft:gameplay/fishing/junk").firstPool().addEntry(

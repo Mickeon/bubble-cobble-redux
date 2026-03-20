@@ -1,0 +1,26 @@
+{
+  "parent": "bubble_cobble:buckets/dripping/base",
+  "attributes": {
+    "frictionY": 0.4,
+    "color_start": "#FF446EE9",
+    "color_end": "#00446EE9"
+  },
+  "attributes_variance": {
+    "x": 6,
+    "y": 2,
+    "frictionY": 0.1
+  },
+  "events": {
+    "onPut": {
+      "particles": [{
+        "id": "minecraft:falling_water",
+        "count": 4,
+        "speedY": 8
+      }]
+    }
+  },
+
+  "applies": [
+    {"id": "create:pulp"}
+  ]
+}

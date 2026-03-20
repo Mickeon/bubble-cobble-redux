@@ -1,0 +1,8 @@
+{
+  "keys": [
+    "#create:crushed_raw_materials"
+  ],
+  "pitch": 2.0,
+  "soundEvent": "sounds:block.deepslate_gold_ore.step",
+  "volume": 0.25
+}

@@ -1,0 +1,15 @@
+{
+  "keys": [
+    "createdeco:brass_coin",
+    "createdeco:copper_coin",
+    "createdeco:gold_coin",
+    "createdeco:industrial_iron_coin",
+    "createdeco:iron_coin",
+    "createdeco:netherite_coin",
+    "createdeco:zinc_coin",
+    "cobblemon:relic_coin"
+  ],
+  "pitch": 1.0,
+  "soundEvent": "sounds:block.gold_ore.hit",
+  "volume": 0.25
+}

@@ -1,0 +1,8 @@
+{
+  "keys": [
+    "#bubble_cobble:sounds/spicy_food"
+  ],
+  "pitch": 1.25,
+  "soundEvent": "minecraft:block.candle.extinguish",
+  "volume": 0.4
+}

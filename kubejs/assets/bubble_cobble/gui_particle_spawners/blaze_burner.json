@@ -1,0 +1,40 @@
+{
+  "parent": "item_interactions:torch_smoke",
+  "attributes": {
+    "y": 0,
+    "speedY": 1,
+    "accelerationY": 3.5,
+    "frictionY": 0.8,
+    "duration": 40,
+    "count": 3,
+    "brightness_end": 0.2,
+    "color_start": "#88FFFFFF",
+    "color_end": "#FFFFFFFF"
+  },
+  "attributes_variance": {
+    "x": 4,
+    "y": 1,
+    "speedX": 2,
+    "speedY": 4,
+    "accelerationY": 1.0,
+    "duration": 10,
+    "brightness_end": 0.2
+  },
+  "events": {
+    "onCarried": {
+      "interval": 15,
+      "interval_variance": 10,
+      "particles": [
+        {
+          "id": "smoke"
+        }
+      ]
+    }
+  },
+
+  "applies": [
+    {"id": "create:blaze_burner"},
+    {"id": "create:blaze_cake"},
+    {"id": "create:creative_blaze_cake"}
+  ]
+}

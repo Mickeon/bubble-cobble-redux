@@ -1,0 +1,8 @@
+{
+  "keys": [
+    "#bubble_cobble:sounds/glass_frozen"
+  ],
+  "pitch": 1.5,
+  "soundEvent": "sounds:block.ice.hit",
+  "volume": 0.25
+}

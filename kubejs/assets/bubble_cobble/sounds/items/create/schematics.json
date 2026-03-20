@@ -4,7 +4,7 @@
     "create:empty_schematic",
     "create:schematic_and_quill"
   ],
-  "pitch": 1.25,
-  "soundEvent": "sounds:block.loom.hit",
+  "pitch": 2.0,
+  "soundEvent": "minecraft:item.book.page_turn",
   "volume": 0.5
 }

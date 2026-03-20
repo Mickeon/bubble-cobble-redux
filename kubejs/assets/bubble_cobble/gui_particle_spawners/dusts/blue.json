@@ -1,0 +1,14 @@
+{
+  "parent": "bubble_cobble:dusts/base",
+  "attributes": {
+    "color_start": "#FFB4FCF7",
+    "color_end": "#66677DFC"
+  },
+
+  "applies": [
+    {"id": "biomeswevegone:blue_glowcane_powder"},
+    {"id": "cobblemon:quick_powder"},
+    {"id": "createmonballsoverhaul:sky_tumblestone_dust"},
+    {"id": "createmonballsoverhaul:black_tumblestone_dust"}
+  ]
+}

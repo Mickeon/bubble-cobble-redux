@@ -1,0 +1,8 @@
+{
+  "keys": [
+    "#bubble_cobble:coinstacks"
+  ],
+  "pitch": 1.25,
+  "soundEvent": "sounds:block.raw_gold_block.step",
+  "volume": 0.05
+}

@@ -3,7 +3,7 @@
   "keys": [
     "#c:foods/candy",
     "#arts_and_crafts:chalk_sticks",
-    "supplementaries:soap"
+    "arts_and_crafts:bleachdew"
   ],
   "pitch": 2.0,
   "soundEvent": "snowyspirit:block.gingerbread.hit",

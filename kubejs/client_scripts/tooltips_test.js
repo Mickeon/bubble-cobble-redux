@@ -47,10 +47,20 @@ ItemEvents.dynamicTooltips("show_player_head_owner", event => {
 ItemEvents.dynamicTooltips("show_modpack_debug_stuff", event => {
 	event.add(Text.gray(["🏴 ", Text.darkGray(event.item.getDescriptionId() ?? "none")]))
 
+	if (Platform.isLoaded("sounds")) {
+		let $ItemStackSoundContext = Java.tryLoadClass("dev.imb11.sounds.sound.context.ItemStackSoundContext")
+		if ($ItemStackSoundContext) {
+			let sound_context = new $ItemStackSoundContext()
+			/** @type {import("net.minecraft.client.resources.sounds.SoundInstance").$SoundInstance$$Type} */
+			let sound_instance = sound_context.handleContext(event.item, ID.of("minecraft:intentionally_empty", false), 1.0, 1.0)
+			event.add(Text.gray("🔊 ").append(Text.darkGray(sound_instance.getLocation())))
+		}
+	}
+
 	const block = event.item.block
 	if (block) {
 		let sound_type = block.invokeGetSoundType(block.defaultBlockState())
-		event.add(Text.gray("🔊 ").append(Text.darkGray(sound_type.placeSound.location)))
+		event.add(Text.gray("⏹ ").append(Text.darkGray(sound_type.placeSound.getLocation())))
 	}
 
 })

@@ -1,0 +1,14 @@
+{
+  "keys": [
+    "#minersdelight:insect_meat",
+    "minersdelight:insect_sandwich",
+    "minersdelight:insect_wrap",
+    "minersdelight:seasoned_arthropods",
+    "minersdelight:silverfish_eggs",
+    "minersdelight:weird_caviar",
+    "sleep_tight:bedbug_eggs"
+  ],
+  "pitch": 2.5,
+  "soundEvent": "minecraft:entity.spider.step",
+  "volume": 0.1
+}
