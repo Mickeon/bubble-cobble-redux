@@ -1,6 +1,6 @@
 {
   "keys": [
-    "#bubble_cobble:sounds/sticky_crunchy"
+    "#bubble_cobble:sounds/grass_crunchy"
   ],
   "pitch": 1.25,
   "soundEvent": "minecraft:item.nether_wart.plant",

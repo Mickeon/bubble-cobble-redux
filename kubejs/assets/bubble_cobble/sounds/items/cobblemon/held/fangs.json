@@ -1,11 +1,14 @@
 {
   "keys": [
+    "#c:bones",
     "cobblemon:deep_sea_tooth",
     "cobblemon:dragon_fang",
     "cobblemon:quick_claw",
     "cobblemon:razor_fang",
     "cobblemon:razor_claw",
+    "cobblemon:sharp_beak",
     "mowziesmobs:naga_fang",
+    "mynethersdelight:strider_rock",
     "undergroundworlds:spider_fang"
   ],
   "pitch": 2.0,

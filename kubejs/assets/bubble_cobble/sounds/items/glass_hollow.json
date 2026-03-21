@@ -1,6 +1,6 @@
 {
   "keys": [
-    "minecraft:glass_bottle"
+    "#bubble_cobble:sounds/glass_hollow"
   ],
   "soundEvent": "sounds:block.glass.step"
 }

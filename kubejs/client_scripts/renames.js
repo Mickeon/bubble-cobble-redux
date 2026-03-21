@@ -95,6 +95,10 @@ ClientEvents.lang("en_us", event => {
 	// Both Biomes We've Gone and and Snowy Spirit have Wreaths.
 	event.add("snowyspirit", "block.snowyspirit.wreath", "Jolly Wreath")
 
+	// As Dog Food now works on Pokemon, too.
+	event.add("farmersdelight", "item.farmersdelight.dog_food", "Pet Food")
+	event.add("farmersdelight", "farmersdelight.tooltip.dog_food.when_feeding", "When fed to a tamed pet:")
+
 	// These are accidentally unnamed, which...
 	// TODO: Should probably be reported.
 	event.addAll("createmonballsoverhaul", {

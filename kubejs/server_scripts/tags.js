@@ -77,6 +77,7 @@ ServerEvents.tags("item", event => {
 	event.add("minecraft:buttons", COPPER_BUTTONS)
 	event.remove("create:chain_rideable", COPPER_CHAINS) // They didn't realise this was plainly wrong.
 	event.add("c:chests", COPPER_CHESTS) // TODO: Report this. They have the block tag, but not the item tag.
+	event.add("mega_showdown:mega_stone", /zamega:/).remove("zamega:ange") // TODO: Report this.
 
 	// More compatibility.
 	event.add("cobblemon:held/leaves_leftover", "create:honeyed_apple", "biomeswevegone:green_apple")
@@ -208,6 +209,12 @@ ServerEvents.tags("item", event => {
 		"brewinandchewin:glow_berry_marmalade",
 		"brewinandchewin:sweet_berry_jam",
 	)
+
+	if (Platform.isLoaded("urban_decor")) {
+		// Nitpicky omissions.
+		event.add("c:nuggets", "urban_decor:stainless_steel_nugget")
+		event.add("c:ingots", "urban_decor:stainless_steel_ingot")
+	}
 })
 
 ServerEvents.tags("block", event => {
@@ -273,7 +280,7 @@ ServerEvents.tags("block", event => {
 	event.add("supplementaries:lights_gunpowder", "#bubble_cobble:very_hot") // This has weird consequences (e.g. Campfire lights up Gunpowder)
 	event.add("create:passive_boiler_heaters", "#bubble_cobble:very_hot")
 	event.add("minecraft:strider_warm_blocks", "#bubble_cobble:very_hot")
-	event.add("bubble_cobble:very_cold", "minecraft:frosted_ice", "cobblemon:ice_stone_block", "yungscavebiomes:rare_ice", /undergroundworlds:ice_/, "yungscavebiomes:frost_lily", "yungscavebiomes:ice_sheet", "yungscavebiomes:icicle")
+	event.add("bubble_cobble:very_cold", "#biomeswevegone:black_ice", "#biomeswevegone:borealis_ice", "minecraft:frosted_ice", "cobblemon:ice_stone_block", "yungscavebiomes:rare_ice", /undergroundworlds:ice_/, "yungscavebiomes:frost_lily", "yungscavebiomes:ice_sheet", "yungscavebiomes:icicle")
 	event.add("brewinandchewin:freeze_sources", "#bubble_cobble:very_cold")
 
 	// Normally these can't be chopped, yet they essentially make up some trees.
@@ -316,7 +323,6 @@ ServerEvents.tags("entity_type", event => {
 	event.add("artifacts:creepers", "undergroundworlds:icy_creeper")
 	event.add("create:ignore_seat", "minecraft:bee")
 	event.add("farmersdelight:dog_food_users", "cobblemon:pokemon")
-	event.add("farmersdelight:horse_feed_users", "cobblemon:pokemon")
 })
 
 ServerEvents.tags("damage_type", event => {

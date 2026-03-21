@@ -1,7 +1,9 @@
 {
   "keys": [
     "#cobblemon:mochis",
-    "cobblemon:potato_mochi"
+    "cobblemon:potato_mochi",
+    "cobblemon:ponigiri",
+    "kubejs:banana_mayo_sandwich"
   ],
   "pitch": 2.0,
   "soundEvent": "create:slime_added",

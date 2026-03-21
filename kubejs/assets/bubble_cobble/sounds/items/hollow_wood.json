@@ -1,7 +1,9 @@
 {
   "_comment": "I genuinely have no idea what to use this sound for, I just know it sounds good.",
   "keys": [
-    "supplementaries:bellows"
+    "supplementaries:bellows",
+    "displaydelight:food_plate",
+    "displaydelight:small_food_plate"
   ],
   "pitch": 1.25,
   "soundEvent": "sounds:block.loom.hit",

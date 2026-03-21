@@ -6,7 +6,8 @@
     "cobblemon:binding_band",
     "cobblemon:sticky_barb",
     "cobblemon:float_stone",
-    "kubejs:super_ghostbusters"
+    "kubejs:super_ghostbusters",
+    "minecraft:nether_star"
   ],
   "pitch": 1.75,
   "soundEvent": "artifacts:item.whoopee_cushion.fart",

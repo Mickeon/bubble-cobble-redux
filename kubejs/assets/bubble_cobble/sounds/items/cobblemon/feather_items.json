@@ -3,7 +3,7 @@
     "#cobblemon:feathers",
     "cobblemon:fairy_feather"
   ],
-  "pitch": 1.25,
+  "pitch": 1.75,
   "soundEvent": "cobblemon:item.medicine.feather.use",
-  "volume": 0.25
+  "volume": 0.2
 }

@@ -4,7 +4,9 @@
     "immersive_paintings:painting",
     "immersive_paintings:glow_painting",
     "handcrafted:fancy_painting",
-    "create:crafting_blueprint"
+    "create:crafting_blueprint",
+    "minecraft:item_frame",
+    "minecraft:glow_item_frame"
   ],
   "pitch": 1.5,
   "soundEvent": "minecraft:entity.painting.place",

@@ -1,9 +1,10 @@
 {
   "keys": [
     "#cobblemon:battle_items",
-    "#cobblemon:vitamins"
+    "#cobblemon:vitamins",
+    "cobblemon:ability_capsule"
   ],
-  "pitch": 1.75,
+  "pitch": 1.5,
   "soundEvent": "cobblemon:item.medicine.pills.use",
-  "volume": 0.25
+  "volume": 0.2
 }

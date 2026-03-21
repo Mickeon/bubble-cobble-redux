@@ -1,0 +1,9 @@
+{
+  "keys": [
+    "create:brass_ingot",
+    "create:zinc_ingot",
+    "createdeco:industrial_iron_ingot",
+    "urban_decor:stainless_steel_ingot"
+  ],
+  "soundEvent": "minecraft:block.metal.break"
+}

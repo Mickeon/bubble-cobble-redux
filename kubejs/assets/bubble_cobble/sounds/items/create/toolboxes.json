@@ -1,6 +1,7 @@
 {
   "keys": [
-    "#create:toolboxes"
+    "#create:toolboxes",
+    "#mega_showdown:rotom_appliances"
   ],
   "pitch": 1.25,
   "soundEvent": "create:packager",

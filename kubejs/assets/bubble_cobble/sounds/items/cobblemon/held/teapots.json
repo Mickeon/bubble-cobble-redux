@@ -2,7 +2,8 @@
   "keys": [
     "#cobblemon:teapots",
     "cobblemon:loaded_dice",
-    "cobblemon:protector"
+    "cobblemon:protector",
+    "cobblemon:rocky_helmet"
   ],
   "pitch": 2.0,
   "soundEvent": "cobblemon:block.display_case.step",
