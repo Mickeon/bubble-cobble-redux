@@ -32,7 +32,9 @@ ServerEvents.tags("block", event => {
 
 ServerEvents.tags("entity_type", event => {
 	event.add("bubble_cobble:no_fast_travel_when_carrying",
-		"#lootr:containers",
+		// "#lootr:containers", // They set up the tags wrong, this doesn't work.
+		"lootr:item_frame",
+		"lootr:lootr_minecart",
 	)
 })
 
@@ -43,20 +45,25 @@ PlayerEvents.tick(event => {
 		return
 	}
 
-	// CarryOn really does not like it when we check the `block` property without carrying a block.
-	// So we check it like this.
-	if (player.carryOnData.nbt.getString("type") != "BLOCK") {
-		return
-	}
-	if (player.carryOnData.block.hasTag("bubble_cobble:no_fast_travel_when_carrying")) {
-		player.addEffect(MobEffectUtil.of("via_romana:travellers_fatigue", SEC, 0, true, true))
-		player.addEffect(MobEffectUtil.of("supplementaries:overencumbered", SEC, 5, true, true))
-		player.unRide()
-		player.modifyAttribute("minecraft:generic.jump_strength", "bubble_cobble:carrying", -2, "add_multiplied_total")
-		player.server.scheduleInTicks(1, callback => {
-			if (!player.carryOnData.carrying) {
-				player.removeAttribute("minecraft:generic.jump_strength", "bubble_cobble:carrying")
-			}
-		})
+	// CarryOn really does not like it when we check the `block` property without carrying a block. So we check it like this.
+	const carrying_type = player.carryOnData.nbt.getString("type")
+	if (carrying_type == "BLOCK" && player.carryOnData.block.hasTag("bubble_cobble:no_fast_travel_when_carrying")) {
+		apply_carrying_penalty(player)
+	} else if (carrying_type == "ENTITY" && player.carryOnData.getEntity(player.level).getEntityType().hasTag("bubble_cobble:no_fast_travel_when_carrying")) {
+		apply_carrying_penalty(player)
 	}
 })
+
+/** @param {$Player} player  */
+function apply_carrying_penalty(player) {
+	player.addEffect(MobEffectUtil.of("via_romana:travellers_fatigue", SEC, 0, true, true))
+	player.addEffect(MobEffectUtil.of("supplementaries:overencumbered", SEC, 5, true, true))
+	player.unRide()
+	player.modifyAttribute("minecraft:generic.jump_strength", "bubble_cobble:carrying", -2, "add_multiplied_total")
+	// Not sure why I have to wait 2 ticks now, but okay.
+	player.server.scheduleInTicks(2, callback => {
+		if (!player.carryOnData.carrying) {
+			player.removeAttribute("minecraft:generic.jump_strength", "bubble_cobble:carrying")
+		}
+	})
+}

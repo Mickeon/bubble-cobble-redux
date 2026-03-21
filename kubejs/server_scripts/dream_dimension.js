@@ -1,5 +1,4 @@
 // requires: resource_world
-
 /** @type {typeof import("java.lang.Long").$Long } */
 let $Long  = Java.loadClass("java.lang.Long")
 /** @type {typeof import("net.minecraft.world.damagesource.DamageType").$DamageType } */
@@ -11,6 +10,8 @@ let $ItemEntity  = Java.loadClass("net.minecraft.world.entity.item.ItemEntity")
 let $CanContinueSleepingEvent  = Java.loadClass("net.neoforged.neoforge.event.entity.player.CanContinueSleepingEvent")
 /** @type {typeof import("net.neoforged.neoforge.event.entity.player.PlayerSetSpawnEvent").$PlayerSetSpawnEvent } */
 let $PlayerSetSpawnEvent  = Java.loadClass("net.neoforged.neoforge.event.entity.player.PlayerSetSpawnEvent")
+/** @type {typeof import("net.neoforged.neoforge.event.entity.EntityTravelToDimensionEvent").$EntityTravelToDimensionEvent } */
+let $EntityTravelToDimensionEvent  = Java.loadClass("net.neoforged.neoforge.event.entity.EntityTravelToDimensionEvent")
 
 /**
  * @import {$MinecraftServer} from "net.minecraft.server.MinecraftServer"
@@ -31,12 +32,8 @@ const DreamDimension = {
 			title: `Dream Journal`,
 			author: "Micky",
 			pages: [
-				`["",{"color":"dark_purple","text":"Dream Journal\n\n"},
-				"If you're finding yourself here, you're either in bliss or completely wasted.\n\n\n\n\n",
-				{"italic":true,"text":"","extra":[{"color":"dark_gray","text":"TL:DR: Find a "},
-				{"color":"dark_red","text":"Bed"},{"color":"dark_gray","text":" or "},
-				{"color":"dark_red","text":"Raid Den Crystal"},
-				{"color":"dark_gray","text":" to get out safely. You are timed."}]}]`
+				// Trying to keep this in one page. but it's not exactly sustainable.
+				`["If you're finding yourself here, you're either in bliss or completely wasted.\n\n",{"italic":true,"text":"","extra":[{"color":"dark_gray","text":"TL:DR: Find a "},{"color":"dark_red","text":"Bed"},{"color":"dark_gray","text":" or "},{"color":"dark_red","text":"Raid Den Crystal"},{"color":"dark_gray","text":" to get out safely."}]},"\n",{"italic":true,"text":"","extra":[{"color":"#aa1a1a","text":"L"},{"color":"#a71c1c","text":"e"},{"color":"#a41d1d","text":"t "},{"color":"#9d2020","text":"t"},{"color":"#9a2222","text":"h"},{"color":"#972323","text":"e "},{"color":"#912626","text":"t"},{"color":"#8d2828","text":"i"},{"color":"#8a2929","text":"m"},{"color":"#872b2b","text":"e "},{"color":"#812e2e","text":"r"},{"color":"#7e2f2f","text":"u"},{"color":"#7b3131","text":"n "},{"color":"#743333","text":"o"},{"color":"#713535","text":"u"},{"color":"#6e3636","text":"t "},{"color":"#683939","text":"i"},{"color":"#643b3b","text":"f "},{"color":"#5e3e3e","text":"y"},{"color":"#5b3f3f","text":"o"},{"color":"#584141","text":"u "},{"color":"#514444","text":"d"},{"color":"#4e4545","text":"a"},{"color":"#4b4747","text":"r"},{"color":"#484848","text":"e"},{"color":"dark_gray","text":"."}]},"\n",{"italic":true,"text":"","extra":[{"color":"dark_gray","text":"If you die, you're "},{"color":"dark_red","text":"awakened"},{"color":"dark_gray","text":" in one piece."}]},"\n",{"color":"dark_gray","italic":true,"text":"All items are yours to keep."}]`
 			]
 		}
 	}),
@@ -230,7 +227,8 @@ const DreamDimension = {
 	},
 
 	show_clock_to_players() {
-		const formatted_time = this.format_time(this.get_time_left())
+		const time_left = this.get_time_left()
+		const formatted_time = this.format_time(time_left)
 		this.get().getPlayers().forEach(p => p.setStatusMessage(formatted_time))
 	},
 
@@ -249,10 +247,15 @@ const DreamDimension = {
 		const formatted_minutes = minutes.toFixed().padStart(2, "0")
 
 		if (time_left < 59 * MIN) {
-			return Text.of(`${formatted_minutes}:${formatted_seconds}`)
+			let formatted_time = Text.of(`${formatted_minutes}:${formatted_seconds}`)
+			if (time_left < this.EXPIRATION_WARNING_OFFSET) {
+				return formatted_time.color(seconds % 2 == 0 ? "#F6FF71" : "#F7ED67")
+			}
+
+			return formatted_time.gray()
 		}
 		if (time_left < 24 * 60 * MIN) {
-			const hours = Math.floor(time_left / 60 * MIN) % 24
+			const hours = Math.floor(time_left / (60 * MIN))
 			const formatted_hours = hours.toFixed().padStart(2, "0")
 			return Text.of(`${formatted_hours}:${formatted_minutes}:${formatted_seconds}`)
 		}
@@ -272,10 +275,32 @@ const DreamDimension = {
 			return SEC
 		}
 		if (time_left < 59 * MIN) {
-			return 1 * MIN
+			return 50 * SEC
 		}
 
 		return 5 * MIN
+	},
+
+	last_hint_time: 0,
+	show_hint() {
+		const current_time = this.server.getOverworld().time
+		if ((current_time - this.last_hint_time > 5 * MIN) && !this.attempting_reset && Math.random() < 0.01) {
+			this.last_hint_time = current_time
+			const hint_string = (Math.random() < 0.2
+				? "You feel the sudden thrill to let the dream run its course..."
+				: "It chases people and Pokémon from its territory...")
+			this.get().tell(Text.gray(hint_string).italic())
+		}
+	},
+
+	every_second() {
+		const time_left = this.get_time_left()
+		if (time_left < DreamDimension.EXPIRATION_WARNING_OFFSET && time_left > DreamDimension.TIME_WITHER_BEGINS) {
+			let seconds_are_even = Math.floor(time_left / SEC) % 2 == 0
+			let ticking_sound = seconds_are_even ? "supplementaries:block.clock.tick_1" : "supplementaries:block.clock.tick_2"
+
+			this.get().getPlayers().forEach(p => p.playNotifySound(ticking_sound, "master", 0.05, 1.0))
+		}
 	},
 
 	TIME_WITHER_BEGINS: 21 * SEC,
@@ -342,7 +367,7 @@ const DreamDimension = {
 		const range_outer = 96
 		let pokemon_spawned = false
 
-		level.tell(Text.gray("It chases people and Pokémon from its territory...").italic())
+		level.tell(Text.gray("...experience deep, nightmarish slumbers.").italic())
 
 		// The music should be in beat. Using specific numbers for pitch and frequency here.
 		play_sound_globally(level, new Vec3d(0, 1000, 0), "minecraft:music_disc.precipice", "music", level.worldBorder.absoluteMaxSize, 0.9866)
@@ -432,7 +457,7 @@ const DreamDimension = {
 					pokemon_spawned = true
 
 					this.spawn_darkrai(level, block_center.add(0, 2, 0))
-					level.tell(Text.gray("...by causing them to experience deep, nightmarish slumbers.").italic())
+					level.tell(Text.gray("It chases people and Pokémon from its territory...").italic())
 				}
 			})
 		})
@@ -458,7 +483,7 @@ const DreamDimension = {
 			const pokemon_entity = /** @type {$PokemonEntity} */ (entity)
 			const pokemon = pokemon_entity.pokemon
 			pokemon.species = $PokemonSpecies.getByName("darkrai")
-			pokemon.level = 75
+			pokemon.level = 100
 			pokemon.scaleModifier = 2.0
 			pokemon.setEV($Stats.HP, 4)
 			pokemon.setEV($Stats.SPECIAL_ATTACK, 252)
@@ -473,6 +498,7 @@ const DreamDimension = {
 			pokemon_entity.addEffect(MobEffectUtil.of("minecraft:glowing", 2 * MIN))
 			pokemon_entity.setPos(position)
 			pokemon_entity.setInvulnerable(true)
+			pokemon_entity.setPersistenceRequired()
 			level.server.scheduleRepeatingInTicks(1, callback => {
 				if (pokemon_entity.getAttributeBaseValue("minecraft:generic.scale") >= 5) {
 					callback.clear()
@@ -554,6 +580,15 @@ NativeEvents.onEvent($PlayerSetSpawnEvent, event => {
 	})
 })
 
+NativeEvents.onEvent($EntityTravelToDimensionEvent, event => {
+	if (event.entity.level.dimension == DreamDimension.ID) {
+		if (event.dimension != "minecraft:overworld") {
+			event.entity.setStatusMessage("Nuh-uh.")
+			event.setCanceled(true)
+		}
+	}
+})
+
 EntityEvents.death("minecraft:player", event => {
 	const player = event.player
 	if (player.level.dimension.getNamespace() != DreamDimension.NAMESPACE) {
@@ -597,8 +632,14 @@ PlayerEvents.cloned(event => {
 LevelEvents.tick(DreamDimension.ID, event => {
 	DreamDimension.server = event.server
 	const time_left = DreamDimension.get_time_left()
-	if (time_left % DreamDimension.get_clock_frequency(time_left) == 0) {
-		DreamDimension.show_clock_to_players()
+	if (event.level.getPlayers().size() > 0) {
+		if (time_left % DreamDimension.get_clock_frequency() == 0) {
+			DreamDimension.show_clock_to_players()
+			DreamDimension.show_hint()
+		}
+		if (time_left % SEC == 0) {
+			DreamDimension.every_second()
+		}
 	}
 	if (DreamDimension.attempting_reset) {
 		return

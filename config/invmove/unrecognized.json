@@ -189,7 +189,8 @@
     "net.minecraft.client.gui.screens.options.SkinCustomizationScreen": true,
     "net.mehvahdjukaar.supplementaries.client.screens.BlackBoardScreen": true,
     "de.maxhenkel.gravestone.gui.ObituaryScreen": true,
-    "net.irisshaders.iris.gui.screen.ShaderPackScreen": true
+    "net.irisshaders.iris.gui.screen.ShaderPackScreen": true,
+    "net.conczin.immersive_furniture.client.gui.ArtisansWorkstationLibraryScreen": true
   },
   "hideBackground": {
     "dev.emi.emi.screen.RecipeScreen": false,
