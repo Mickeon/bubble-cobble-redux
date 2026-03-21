@@ -31,7 +31,7 @@
 	"max_catches": -1,
 	// The default script to add to raid bosses without a script. Default: {}
 	"default_scripts": { },
-	// The battle AI used by the raid boss (Options: RANDOM, STRONG, RCT). Default: RANDOM
+	// The battle AI used by the raid boss (Options: random, strong, rct). Default: random
 	"raid_ai": "STRONG",
 	// The list of marks the reward Pokemon will have. Default: [].
 	"marks": [],

@@ -69,11 +69,6 @@ ServerEvents.tags("item", event => {
 	event.add("minecraft:horse_food", "biomeswevegone:green_apple") // TODO: Report this.
 	event.add("c:music_discs", "cnc:music_disc_slough_choir", "cnc:music_disc_wreck_of_the_old_97", "cnc:music_disc_hills")
 	event.removeAll("minecraft:music_discs") // This tag doesn't exist anymore.
-	event.add("minecraft:pickaxes", "undergroundworlds:temple_pickaxe", "undergroundworlds:freezing_pickaxe") // Reported: https://codeberg.org/HexagonNico/UndergroundWorlds/issues/3
-	event.add("minecraft:axes", "undergroundworlds:temple_axe", "undergroundworlds:freezing_axe", "undergroundworlds:axe_of_regrowth")
-	event.add("minecraft:hoes", "undergroundworlds:temple_hoe", "undergroundworlds:freezing_hoe")
-	event.add("minecraft:shovels", "undergroundworlds:temple_shovel", "undergroundworlds:freezing_shovel")
-	event.add("minecraft:swords", "undergroundworlds:temple_sword", "undergroundworlds:freezing_sword", "undergroundworlds:blade_of_the_jungle")
 	event.add("minecraft:buttons", COPPER_BUTTONS)
 	event.remove("create:chain_rideable", COPPER_CHAINS) // They didn't realise this was plainly wrong.
 	event.add("c:chests", COPPER_CHESTS) // TODO: Report this. They have the block tag, but not the item tag.
@@ -220,7 +215,7 @@ ServerEvents.tags("item", event => {
 ServerEvents.tags("block", event => {
 	// Accidental omissions from the mod creators.
 	event.add("c:ropes", "farmersdelight:rope") // Reported and fixed. Remove next mod update: https://github.com/vectorwing/FarmersDelight/issues/1233
-	event.add("c:chests", "#minecraft:copper_chests", "undergroundworlds:ice_chest", "undergroundworlds:temple_chest", "undergroundworlds:web_covered_chest") // Reported: https://codeberg.org/HexagonNico/UndergroundWorlds/issues/2
+	event.add("c:chests", "#minecraft:copper_chests")
 	event.add("minecraft:all_signs", "supplementaries:way_sign_wall") // https://github.com/MehVahdJukaar/Supplementaries/pull/1921
 	event.add("minecraft:wither_summon_base_blocks", "mynethersdelight:resurgent_soil") // https://github.com/SoyTutta/MyNethersDelight/issues/121
 	event.add("minecraft:hoglin_repellents", "mynethersdelight:warped_fungus_colony") // https://github.com/SoyTutta/MyNethersDelight/issues/121
