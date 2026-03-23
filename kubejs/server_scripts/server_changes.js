@@ -307,6 +307,7 @@ ServerEvents.loaded(event => {
 		console.log(`Bubble Cobble fluid interactions already registered (Lava has ${interactions_with_lava} of them)`)
 		return
 	}
+	// $FluidInteractionRegistry.getInteractions().clear() // For debugging purposes. Please do not let this in release.
 	console.log("Adding Bubble Cobble fluid interactions")
 
 	$FluidInteractionRegistry.addInteraction(LAVA, new $InteractionInformation(
@@ -317,6 +318,11 @@ ServerEvents.loaded(event => {
 	$FluidInteractionRegistry.addInteraction(LAVA, new $InteractionInformation(
 		Fluid.getType("create_bic_bit:mayonnaise").getFluidType(),
 		Blocks.CALCITE.defaultBlockState()
+	))
+
+	$FluidInteractionRegistry.addInteraction(LAVA, new $InteractionInformation(
+		Fluid.getType("sliceanddice:fertilizer").getFluidType(),
+		Block.getBlock("create:veridium").defaultBlockState()
 	))
 
 	// Note that Curdled Milk is currently unavailable.
@@ -330,6 +336,22 @@ ServerEvents.loaded(event => {
 		Fluid.getType("create:chocolate").getFluidType(),
 		Block.getBlock("kubejs:chiseled_mud_bricks").defaultBlockState()
 	))
+
+	const clone_catalyst_fluid = Fluid.getType("create:chocolate").getFluidType()
+	function below_block_cloning_fluid_interaction(block_state) {
+		$FluidInteractionRegistry.addInteraction(clone_catalyst_fluid, new $InteractionInformation["(net.neoforged.neoforge.fluids.FluidInteractionRegistry$HasFluidInteraction,net.minecraft.world.level.block.state.BlockState)"](
+			/** @type {import("net.neoforged.neoforge.fluids.FluidInteractionRegistry$HasFluidInteraction").$FluidInteractionRegistry$HasFluidInteraction$$Type} */
+			(level, current_pos, relative_pos, current_state) => {
+				return level.getBlockState(current_pos.below()) == block_state
+			},
+			block_state
+		))
+	}
+
+	below_block_cloning_fluid_interaction(Block.getBlock("create:veridium").defaultBlockState())
+	below_block_cloning_fluid_interaction(Block.getBlock("create:ochrum").defaultBlockState())
+	below_block_cloning_fluid_interaction(Block.getBlock("create:asurine").defaultBlockState())
+	below_block_cloning_fluid_interaction(Block.getBlock("create:crimsite").defaultBlockState())
 
 	/** @import {$FluidState} from "net.minecraft.world.level.material.FluidState" */
 

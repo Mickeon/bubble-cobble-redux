@@ -307,21 +307,21 @@ ServerEvents.recipes(event => {
 	event.remove({id: "biomeswevegone:white_sand"}) // This recipe uses dye, which is somewhat gamebreaking for what we're going to do with this item.
 	event.recipes.create.milling(CreateItem.of(Item.of("biomeswevegone:white_sand")), Ingredient.of("minecraft:calcite"), 10 * SEC)
 	event.recipes.create.splashing([
-			CreateItem.of(Item.of("create:zinc_nugget"), 0.12),
+			CreateItem.of(Item.of("create:zinc_nugget", 3), 0.12),
 			CreateItem.of(Item.of("biomesoplenty:dead_branch"), 0.05)
 		],
 		Ingredient.of("biomeswevegone:white_sand").or("biomesoplenty:white_sand")
 	)
 	event.recipes.create.milling(CreateItem.of(Item.of("biomesoplenty:orange_sand")), Ingredient.of("arts_and_crafts:gypsum"), 10 * SEC)
 	event.recipes.create.splashing([
-			CreateItem.of(Item.of("minecraft:copper_nugget"), 0.12),
+			CreateItem.of(Item.of("minecraft:copper_nugget", 3), 0.12),
 			CreateItem.of(Item.of("biomesoplenty:dead_branch"), 0.05)
 		],
 		Ingredient.of("biomesoplenty:orange_sand")
 	)
 	event.recipes.create.milling(CreateItem.of(Item.of("biomesoplenty:black_sand")), Ingredient.of("minecraft:blackstone"), 10 * SEC)
 	event.recipes.create.splashing([
-			CreateItem.of(Item.of("minecraft:gold_nugget"), 0.12),
+			CreateItem.of(Item.of("minecraft:gold_nugget", 3), 0.12),
 			CreateItem.of(Item.of("biomesoplenty:dead_branch"), 0.05)
 		],
 		Ingredient.of("biomesoplenty:black_sand")
