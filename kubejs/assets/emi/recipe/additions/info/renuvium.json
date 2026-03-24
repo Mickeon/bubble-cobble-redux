@@ -1,0 +1,8 @@
+{
+	"type": "emi:info",
+	"stacks": [
+		"item:kubejs:renuvium_bucket",
+		"fluid:kubejs:renuvium"
+	],
+	"text": "A rather viscuous substance capable of §dturning into§r into some of the minerals it pours onto.\nStone generation galore!"
+}

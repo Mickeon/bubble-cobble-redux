@@ -1,0 +1,22 @@
+{
+  "parent": "create:spout",
+  "display": {
+    "icon": {
+      "id": "kubejs:renuvium_bucket"
+    },
+    "title": "Finally, I Have Them All",
+    "description": "Obtain a Bucket of the ever-so-transmogrifying Renuvium by mixing all sorts of colorful rocks in a Basin"
+  },
+  "criteria": {
+    "renuvium_bucket": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "kubejs:renuvium_bucket"
+          }
+        ]
+      }
+    }
+  }
+}

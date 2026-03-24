@@ -1,0 +1,13 @@
+{
+  "parent": "item_interactions:buckets/bucket_template",
+  "attributes": {
+    "color_start": "#FFFFFFFF",
+    "color_end": "#00FFFFFF"
+  },
+  "attributes_variance": {
+    "color_start": "#00808080",
+    "color_end": "#00808080"
+  },
+
+  "applies": [{"id": "kubejs:renuvium_bucket"}]
+}

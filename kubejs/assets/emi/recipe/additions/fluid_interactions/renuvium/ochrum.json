@@ -1,0 +1,26 @@
+{
+	"type": "emi:world_interaction",
+	"left": {
+		"type": "fluid",
+		"amount": 1000,
+		"id": "kubejs:renuvium",
+		"remainder": {
+			"type": "fluid",
+			"amount": 1000,
+			"id": "kubejs:renuvium"
+		}
+	},
+	"right": {
+		"type": "item",
+		"id": "create:ochrum",
+		"nbt": "{lore: ['{text:\"Below flowing Renuvium\", color: \"green\", italic: false}']}",
+		"remainder": {
+			"type": "item",
+			"id": "create:ochrum"
+		}
+	},
+	"output": {
+		"type": "item",
+		"id": "create:ochrum"
+	}
+}

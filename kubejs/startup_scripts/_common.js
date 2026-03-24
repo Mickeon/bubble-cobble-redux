@@ -16,8 +16,10 @@ let $ItemAttributeModifiers  = Java.loadClass("net.minecraft.world.item.componen
  * @import {$Item} from "net.minecraft.world.item.Item"
  * @import {$Player} from "net.minecraft.world.entity.player.Player"
  * @import {$LivingEntity} from "net.minecraft.world.entity.LivingEntity"
+ * @import {$SoundSource$$Type} from "net.minecraft.sounds.SoundSource"
  *
  * @typedef {import("dev.latvian.mods.kubejs.item.ItemModificationKubeEvent$ItemModifications").$ItemModificationKubeEvent$ItemModifications$$Original} $ItemModifications
+ * @typedef {import("dev.latvian.mods.kubejs.block.BlockModificationKubeEvent$BlockModifications").$BlockModificationKubeEvent$BlockModifications$$Original} $BlockModifications
  */
 
 const SEC = 20 // How many ticks in a second.

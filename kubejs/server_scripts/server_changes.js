@@ -337,22 +337,6 @@ ServerEvents.loaded(event => {
 		Block.getBlock("kubejs:chiseled_mud_bricks").defaultBlockState()
 	))
 
-	const clone_catalyst_fluid = Fluid.getType("create:chocolate").getFluidType()
-	function below_block_cloning_fluid_interaction(block_state) {
-		$FluidInteractionRegistry.addInteraction(clone_catalyst_fluid, new $InteractionInformation["(net.neoforged.neoforge.fluids.FluidInteractionRegistry$HasFluidInteraction,net.minecraft.world.level.block.state.BlockState)"](
-			/** @type {import("net.neoforged.neoforge.fluids.FluidInteractionRegistry$HasFluidInteraction").$FluidInteractionRegistry$HasFluidInteraction$$Type} */
-			(level, current_pos, relative_pos, current_state) => {
-				return level.getBlockState(current_pos.below()) == block_state
-			},
-			block_state
-		))
-	}
-
-	below_block_cloning_fluid_interaction(Block.getBlock("create:veridium").defaultBlockState())
-	below_block_cloning_fluid_interaction(Block.getBlock("create:ochrum").defaultBlockState())
-	below_block_cloning_fluid_interaction(Block.getBlock("create:asurine").defaultBlockState())
-	below_block_cloning_fluid_interaction(Block.getBlock("create:crimsite").defaultBlockState())
-
 	/** @import {$FluidState} from "net.minecraft.world.level.material.FluidState" */
 
 	const fluid_rand = Utils.getRandom().fork()

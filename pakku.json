@@ -45,6 +45,7 @@
         "!kubejs/config/probe-settings.json",
         "!kubejs/config/web_server.json",
         "!*.bak",
+        "!*.aseprite",
 
         "!config/ali",
         "!config/moveslikemafuyu_config.toml",
