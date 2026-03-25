@@ -1,6 +1,6 @@
 {
     "name": "Bubble Cobble Redux",
-    "version": "1.10.1",
+    "version": "1.11.0",
     "description": "A pinch of Cobblemon, Create, Farmer's Delight, and a Bubble Pub aftertaste.",
     "author": "Mickeon",
     "overrides": [
@@ -68,8 +68,8 @@
         "!*locomotionmap.json"
     ],
     "paths": {
-        "resource_packs": "global_packs/resourcepacks/",
-        "data_packs": "global_packs/datapacks/",
+        "resource_packs": "global_packs/resourcepacks",
+        "data_packs": "global_packs/datapacks",
         "shader_packs": "shaderpacks_dummy"
     },
     "projects": {
