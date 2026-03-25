@@ -1824,7 +1824,7 @@
         },
         {
             "pakku_id": "IAu7n09zUCBNZY8M",
-            "type": "MOD",
+            "type": "DATA_PACK",
             "side": "SERVER",
             "slug": {
                 "modrinth": "cobblemonraiddens-typedesigns"
@@ -1904,7 +1904,7 @@
         },
         {
             "pakku_id": "iLaIzRQ8FymnqiK7",
-            "type": "MOD",
+            "type": "DATA_PACK",
             "side": "SERVER",
             "slug": {
                 "modrinth": "cobble-caf-forms"
@@ -7854,6 +7854,49 @@
                     "required_dependencies": [],
                     "size": 240751,
                     "date_published": "2024-04-15T12:41:17.718378Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "YsJeIzatXyw4XImm",
+            "pakku_links": [
+                "rcNaZofHJ2yMvMzg"
+            ],
+            "type": "DATA_PACK",
+            "side": "SERVER",
+            "slug": {
+                "modrinth": "poke-costume"
+            },
+            "name": {
+                "modrinth": "Poké Costume [cobblemon]"
+            },
+            "id": {
+                "modrinth": "k1X1bPvt"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "PokeCostume v.3.2.zip",
+                    "mc_versions": [
+                        "1.20.1",
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "datapack"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/k1X1bPvt/versions/K06nH2ep/PokeCostume v.3.2.zip",
+                    "id": "K06nH2ep",
+                    "parent_id": "k1X1bPvt",
+                    "hashes": {
+                        "sha512": "948dfc7d1c126cc9d58ef53a1154f7425ee7a4ba805ac4074585710bcc86317068455182533aed3b65ce851cd31dd87cda4aa5a256d3510eb312a6248779c30c",
+                        "sha1": "225c5e45cd83e82fe82844f0cb8b545c446038da"
+                    },
+                    "required_dependencies": [
+                        "MdwFAVRL"
+                    ],
+                    "size": 190881,
+                    "date_published": "2025-12-14T23:06:10.893042Z"
                 }
             ]
         },
