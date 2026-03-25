@@ -41,7 +41,6 @@ ServerEvents.tags("item", event => {
 	event.add("c:foods/safe_raw_fish", "create_bic_bit:raw_herring")
 	event.add("c:foods/cooked_fish", "create_bic_bit:cooked_herring")
 	event.add("c:foods/food_poisoning", "minersdelight:copper_carrot", "minersdelight:bat_wing", "minersdelight:arthropod", "minersdelight:squid", "mynethersdelight:ghasta", "mynethersdelight:ghast_dough")
-	event.add("c:foods/edible_when_placed", "#farmersdelight:feasts") // Reported and fixed. Remove next mod update: https://github.com/vectorwing/FarmersDelight/issues/1234. Stuffed Squid & co. missing. For our case we can just assume every Feast counts.
 	event.add("c:paper", "create_bic_bit:dirty_paper")
 	event.add("c:buckets", "sliceanddice:fertilizer_bucket", "create_bic_bit:ketchup_bucket", "create_bic_bit:mayonnaise_bucket", "create_bic_bit:frying_oil_bucket", "biomesoplenty:blood_bucket", "undergroundworlds:quicksand_bucket", "biomesoplenty:liquid_null_bucket", "sophisticatedcore:xp_bucket") // TODO: Report this.
 	event.add("c:buckets/entity_water", "create_bic_bit:herring_bucket") // Reported: https://discord.com/channels/1141667941935501442/1448294211542716550/1448294211542716550
@@ -214,7 +213,6 @@ ServerEvents.tags("item", event => {
 
 ServerEvents.tags("block", event => {
 	// Accidental omissions from the mod creators.
-	event.add("c:ropes", "farmersdelight:rope") // Reported and fixed. Remove next mod update: https://github.com/vectorwing/FarmersDelight/issues/1233
 	event.add("c:chests", "#minecraft:copper_chests")
 	event.add("minecraft:all_signs", "supplementaries:way_sign_wall") // https://github.com/MehVahdJukaar/Supplementaries/pull/1921
 	event.add("minecraft:wither_summon_base_blocks", "mynethersdelight:resurgent_soil") // https://github.com/SoyTutta/MyNethersDelight/issues/121
@@ -233,7 +231,7 @@ ServerEvents.tags("block", event => {
 		"#snowyspirit:gumdrops",
 		"brewinandchewin:coaster", // Reported: https://github.com/ChrysanthCow/BrewinAndChewin/pull/110
 		"cobblemon:tatami_mat",
-		"farmersdelight:basket", "farmersdelight:canvas_rug", "farmersdelight:cutting_board", "farmersdelight:full_tatami_mat", "farmersdelight:half_tatami_mat", // Reported: https://github.com/vectorwing/FarmersDelight/pull/1252
+		"farmersdelight:basket", "farmersdelight:cutting_board", // Reported: https://github.com/vectorwing/FarmersDelight/pull/1252
 		"supplementaries:bamboo_spikes", "supplementaries:crank", "supplementaries:doormat", "supplementaries:pancake", // Reported: https://github.com/MehVahdJukaar/Supplementaries/pull/1932
 		"yungscavebiomes:ice_sheet"
 	)
