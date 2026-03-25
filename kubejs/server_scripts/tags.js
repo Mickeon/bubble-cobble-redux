@@ -42,7 +42,13 @@ ServerEvents.tags("item", event => {
 	event.add("c:foods/cooked_fish", "create_bic_bit:cooked_herring")
 	event.add("c:foods/food_poisoning", "minersdelight:copper_carrot", "minersdelight:bat_wing", "minersdelight:arthropod", "minersdelight:squid", "mynethersdelight:ghasta", "mynethersdelight:ghast_dough")
 	event.add("c:paper", "create_bic_bit:dirty_paper")
-	event.add("c:buckets", "sliceanddice:fertilizer_bucket", "create_bic_bit:ketchup_bucket", "create_bic_bit:mayonnaise_bucket", "create_bic_bit:frying_oil_bucket", "biomesoplenty:blood_bucket", "undergroundworlds:quicksand_bucket", "biomesoplenty:liquid_null_bucket", "sophisticatedcore:xp_bucket") // TODO: Report this.
+	event.add("c:buckets",
+		"sliceanddice:fertilizer_bucket", // https://github.com/PssbleTrngle/SliceAndDice/issues/270.
+		"create_bic_bit:ketchup_bucket", "create_bic_bit:mayonnaise_bucket", "create_bic_bit:frying_oil_bucket",
+		"biomesoplenty:blood_bucket", "biomesoplenty:liquid_null_bucket", // Reported: https://github.com/Glitchfiend/BiomesOPlenty/issues/2440.
+		"undergroundworlds:quicksand_bucket", // Reported: https://codeberg.org/HexagonNico/UndergroundWorlds/issues/6.
+		"sophisticatedcore:xp_bucket" // Reported: http://github.com/P3pp3rF1y/SophisticatedCore/issues/449.
+	)
 	event.add("c:buckets/entity_water", "create_bic_bit:herring_bucket") // Reported: https://discord.com/channels/1141667941935501442/1448294211542716550/1448294211542716550
 	event.add("c:drinks", "#c:drinks/tea", "create_bic_bit:ketchup_bottle", "create_bic_bit:mayonnaise_bottle", "create_bic_bit:frying_oil_bottle") // Reported: https://discord.com/channels/1141667941935501442/1448294211542716550/1448294211542716550
 	event.add("c:drinks/tea", "herbalbrews:green_tea", "herbalbrews:black_tea", "herbalbrews:hibiscus_tea", "herbalbrews:lavender_tea", "herbalbrews:rooibos_tea", "herbalbrews:oolong_tea", "herbalbrews:yerba_mate_tea") // TODO: Report this.
@@ -61,16 +67,16 @@ ServerEvents.tags("item", event => {
 	event.add("c:nuggets", "minecraft:copper_nugget", "#c:nuggets/industrial_iron", "#c:nuggets/netherite") // Reported: https://github.com/talrey/CreateDeco/issues/234 , but not the copper nuggets.
 	event.add("c:plates", "#c:plates/industrial_iron")
 	event.add("c:ingots", "#c:ingots/industrial_iron")
-	event.add("c:tools/spear", "#minecraft:spears")
+	event.add("c:tools/spear", "#minecraft:spears") // Reported: https://github.com/Unknowneth/Backported-Spears/issues/60.
 	event.add("c:storage_blocks", "#c:storage_blocks/industrial_iron")
 	event.add("c:storage_blocks/industrial_iron", "create:industrial_iron_block")
 	event.add("minecraft:piglin_loved", "solonion:golden_lunchbox", "handcrafted:golden_thin_pot", "handcrafted:golden_thick_pot", "handcrafted:golden_wide_pot", "handcrafted:golden_medium_pot") //Reported: https://github.com/terrarium-earth/Handcrafted/issues/152
-	event.add("minecraft:horse_food", "biomeswevegone:green_apple") // TODO: Report this.
+	event.add("minecraft:horse_food", "biomeswevegone:green_apple") // Reported: https://github.com/Potion-Studios/Oh-The-Biomes-Weve-Gone/issues/384.
 	event.add("c:music_discs", "cnc:music_disc_slough_choir", "cnc:music_disc_wreck_of_the_old_97", "cnc:music_disc_hills")
 	event.removeAll("minecraft:music_discs") // This tag doesn't exist anymore.
 	event.add("minecraft:buttons", COPPER_BUTTONS)
-	event.remove("create:chain_rideable", COPPER_CHAINS) // They didn't realise this was plainly wrong.
-	event.add("c:chests", COPPER_CHESTS) // TODO: Report this. They have the block tag, but not the item tag.
+	event.remove("create:chain_rideable", COPPER_CHAINS) // They didn't realise this was plainly wrong. Reported: https://github.com/Smallinger/Copper-Age-Backport/issues/87.
+	event.add("c:chests", COPPER_CHESTS) // Reported: https://github.com/Smallinger/Copper-Age-Backport/issues/86.
 	event.add("mega_showdown:mega_stone", /zamega:/).remove("zamega:ange") // TODO: Report this.
 
 	// More compatibility.
@@ -220,17 +226,16 @@ ServerEvents.tags("block", event => {
 	event.add("minecraft:enchantment_power_provider", "#handcrafted:shelves") // https://github.com/terrarium-earth/Handcrafted/issues/136
 	event.add("minecraft:guarded_by_piglins", "handcrafted:golden_thin_pot", "handcrafted:golden_thick_pot", "handcrafted:golden_wide_pot", "handcrafted:golden_medium_pot") // Reported: https://github.com/terrarium-earth/Handcrafted/issues/152
 	event.add("cobblemon:machines", "simpletms:machine_tm")
-	// event.add("create:single_block_inventories", "supplementaries:sack", "supplementaries:safe", "supplementaries:pulley_block") // TODO: Report this. // Commenting out as a test. Doesn't seem to be useful for us.
+	// event.add("create:single_block_inventories", "supplementaries:sack", "supplementaries:safe", "supplementaries:pulley_block") // Doesn't seem to be useful for us?
 	event.add("minecraft:buttons", COPPER_BUTTONS)
 	event.add("minecraft:mineable/pickaxe", COPPER_BUTTONS)
 	event.add("createdeco:placards", PLACARDS)
 	event.add("farmersdelight:mineable/knife", "#c:ropes") // Just to include Supplementaries's rope. Probably should be reported.
-	// Reported a bunch: https://github.com/MehVahdJukaar/Supplementaries/pull/1922, https://gitlab.com/cable-mc/cobblemon/-/merge_requests/2174.
 	event.add("minecraft:combination_step_sound_blocks",
 		"#bubble_cobble:coinstacks",
 		"#snowyspirit:gumdrops",
 		"brewinandchewin:coaster", // Reported: https://github.com/ChrysanthCow/BrewinAndChewin/pull/110
-		"cobblemon:tatami_mat",
+		"cobblemon:tatami_mat", // Reported: https://gitlab.com/cable-mc/cobblemon/-/merge_requests/2174.
 		"farmersdelight:basket", "farmersdelight:cutting_board", // Reported: https://github.com/vectorwing/FarmersDelight/pull/1252
 		"supplementaries:bamboo_spikes", "supplementaries:crank", "supplementaries:doormat", "supplementaries:pancake", // Reported: https://github.com/MehVahdJukaar/Supplementaries/pull/1932
 		"yungscavebiomes:ice_sheet"
@@ -238,15 +243,15 @@ ServerEvents.tags("block", event => {
 	event.add("create:brittle", // Allows these blocks to be assembled/unassembled in contraptions without destroying themselves.
 		"#brewinandchewin:cheese_wheels/unripe", "#brewinandchewin:cheese_wheels/ripe", "brewinandchewin:coaster", "brewinandchewin:pizza", "brewinandchewin:quiche",
 		"#supplementaries:candle_holders", "#supplementaries:sconces", "#supplementaries:buntings", "supplementaries:sconce_lever", "supplementaries:pancake", "supplementaries:barnacles", "supplementaries:crank", "supplementaries:item_shelf", "supplementaries:doormat", "supplementaries:ash", "supplementaries:gunpowder", // Reported and partially fixed for next time https://github.com/MehVahdJukaar/Supplementaries/pull/1933.
-		"#snowyspirit:gumdrops", "snowyspirit:wreath",
+		"#snowyspirit:gumdrops", "snowyspirit:wreath", // Reported: https://github.com/MehVahdJukaar/SnowySpirit/pull/125.
 		// Unfortunately manual. Also somewhat reported: https://github.com/vectorwing/FarmersDelight/issues/1255.
 		"farmersdelight:apple_pie", "farmersdelight:chocolate_pie", "farmersdelight:sweet_berry_cheesecake", "farmersdelight:honey_glazed_ham_block", "farmersdelight:shepherds_pie_block", "farmersdelight:rice_roll_medley_block",
 		"minersdelight:fake_meatloaf", "minersdelight:glazed_arachnid_limbs", "minersdelight:stuffed_squid",
 		"mynethersdelight:stuffed_hoglin", "mynethersdelight:striderloaf_block", "mynethersdelight:cold_striderloaf_block", "mynethersdelight:ghasta_with_cream_block", "mynethersdelight:bread_loaf_block", "mynethersdelight:magma_cake_block",
 	)
 	event.add("create:movable_empty_collider", "#supplementaries:timber_frames", ) // Reported and fixed for next time: https://github.com/MehVahdJukaar/Supplementaries/pull/1935
-	event.add("minecraft:doors", "copycats:copycat_iron_door") // TODO: Report this. Also missing for item tag.
-	event.add("minecraft:trapdoors", "copycats:copycat_trapdoor", "copycats:copycat_iron_trapdoor") // TODO: Report this. Also missing for item tag.
+	event.add("minecraft:doors", "copycats:copycat_iron_door") // Reported: https://github.com/copycats-plus/copycats/issues/377.
+	event.add("minecraft:trapdoors", "copycats:copycat_trapdoor", "copycats:copycat_iron_trapdoor")
 
 	// Other omissions that make sense.
 	event.add("create:windmill_sails", "#supplementaries:flags")
@@ -295,8 +300,8 @@ ServerEvents.tags("block", event => {
 		event.add("amendments:stairs_carpets", /^urban_decor:.*_towel$/)
 		event.add("create:brittle", /^urban_decor:.*(piano|grandfather_clock|picture_frame|plastic_lights)/ )
 		event.add("minecraft:combination_step_sound_blocks", /^urban_decor:.*_towel$/) // Reported: https://github.com/Yirmiri/Urban-Decor/issues/6
-		event.add("minecraft:doors", "urban_decor:stainless_steel_door") // TODO: Report this. Also missing for item tag.
-		event.add("minecraft:trapdoors", "urban_decor:stainless_steel_trapdoor") // TODO: Report this. Also missing for item tag.
+		event.add("minecraft:doors", "urban_decor:stainless_steel_door") // Reported: https://github.com/Yirmiri/Urban-Decor/issues/8.
+		event.add("minecraft:trapdoors", "urban_decor:stainless_steel_trapdoor")
 	}
 })
 
@@ -404,7 +409,6 @@ ServerEvents.tags("worldgen/biome", event => {
 			"biomeswevegone:bayou",
 			"biomeswevegone:cypress_swamplands",
 			"biomeswevegone:cypress_wetlands",
-			"biomeswevegone:pale_bog",
 			"biomeswevegone:white_mangrove_marshes",
 			"biomesoplenty:bayou",
 			"biomesoplenty:bog",
