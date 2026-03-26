@@ -98,4 +98,5 @@
 /config/measurements-client.toml
 /config/ixeris.toml
 /config/item_descriptions.toml
+/config/freecam.json5
 *locomotionmap.json
