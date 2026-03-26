@@ -117,6 +117,7 @@ remove_and_merge_into_tab("cobblemonraiddens:raid_den_tab", "cobblemon:utility_i
 	"cobblemonraiddens:cheer_defense",
 	"cobblemonraiddens:cheer_heal",
 	"cobblemonraiddens:raid_shard",
+	"cobblemonraiddens:catching_charm",
 ])
 
 remove_and_merge_into_tab("rctmod:creative_tab", "cobblemon:utility_item", [
@@ -343,7 +344,7 @@ StartupEvents.modifyCreativeTab("minecraft:tools_and_utilities", event => {
 	event.remove("minecraft:bundle") // In case its experimental datapack is enabled.
 	event.add("minecraft:bundle")
 	// event.removeFromParent(Ingredient.of("#minecraft:boats").except(/oak/))
-	// event.removeFromParent(Ingredient.of(/^snowyspirit:.*sled/))
+	// event.remove(Ingredient.of("#snowyspirit:sleds")) // This does nothing. They're persistent for some reason.
 })
 StartupEvents.modifyCreativeTab("minecraft:redstone_blocks", event => {
 	event.removeFromParent("@copperagebackport")
@@ -353,6 +354,34 @@ remove_tab("artifacts:main") // Items also exist in "Relics" tab. Well, except t
 StartupEvents.modifyCreativeTab("relics:relics", event => {
 	event.add("artifacts:mimic_spawn_egg")
 })
+
+if (Platform.isLoaded("yo_hooks")) {
+	remove_tab("yo_hooks:grappling_hooks") // Rather small and redundant tab.
+	StartupEvents.modifyCreativeTab("minecraft:tools_and_utilities", event => {
+		event.addAfter("minecraft:iron_hoe", "yo_hooks:iron_grappling_hook")
+		event.addAfter("minecraft:golden_hoe", "yo_hooks:gold_grappling_hook")
+		event.addAfter("minecraft:diamond_hoe", "yo_hooks:diamond_grappling_hook")
+		event.addAfter("minecraft:netherite_hoe", "yo_hooks:netherite_grappling_hook")
+	})
+	StartupEvents.modifyCreativeTab("minecraft:ingredients", event => {
+		event.add([
+			"yo_hooks:iron_hook_head",
+			"yo_hooks:gold_hook_head",
+			"yo_hooks:diamond_hook_head",
+			"yo_hooks:netherite_hook_head"
+		])
+	})
+}
+
+if (Platform.isLoaded("gag")) {
+	remove_tab("gag:gag") // A lot of the items here go unused in this modpack.
+	StartupEvents.modifyCreativeTab("minecraft:tools_and_utilities", event => {
+		event.add([
+			"gag:time_sand_pouch",
+			"gag:escape_rope"
+		])
+	})
+}
 
 if (Platform.isLoaded("displaydelight")) {
 	// https://github.com/jkvin114/display-delight-neoforge/blob/main/src/main/java/com/jkvin114/displaydelight/init/BlockAssociations.java

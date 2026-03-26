@@ -1,0 +1,19 @@
+{
+	"type": "emi:world_interaction",
+	"left": {
+		"type": "item",
+		"id": "minecraft:sand"
+	},
+	"right": {
+		"type": "item",
+		"id": "mowziesmobs:sand_rake",
+		"remainder": {
+			"type": "item",
+			"id": "mowziesmobs:sand_rake"
+		}
+	},
+	"output": {
+		"type": "item",
+		"id": "mowziesmobs:raked_sand"
+	}
+}

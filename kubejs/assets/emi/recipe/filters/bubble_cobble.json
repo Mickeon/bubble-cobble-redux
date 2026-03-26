@@ -15,6 +15,12 @@
 		{
 			"id": "/sophisticatedstorage:.*maincolor/",
 			"category": "minecraft:crafting"
+		},
+		{
+			"id": "gag:/heartstone_energizing"
+		},
+		{
+			"id": "gag:/energized_heartstone_repairing"
 		}
 	]
 }
