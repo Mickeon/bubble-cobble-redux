@@ -33,6 +33,10 @@ key_key.hotbar.7:key.keyboard.7:
 key_key.hotbar.8:key.keyboard.8:
 key_key.hotbar.9:key.keyboard.9:
 key_lambdynlights.key.toggle_fps_dynamic_lighting:key.keyboard.unknown:
+key_key.yo_hooks.jump:key.mouse.right:
+key_key.yo_hooks.climb:key.keyboard.space:
+key_key.yo_hooks.climb_down:key.keyboard.left.shift:
+key_key.yo_hooks.prevent_use:key.keyboard.unknown:
 key_key.modernfix.config:key.keyboard.unknown:
 key_iris.keybind.reload:key.keyboard.unknown:
 key_iris.keybind.toggleShaders:key.keyboard.i:
@@ -155,7 +159,10 @@ key_key.craftingtweaks.transfer_stack:key.keyboard.unknown:
 key_key.cobblemonraiddens.mouse:key.keyboard.left.alt:
 key_key.cobblemonraiddens.accept:key.keyboard.unknown:
 key_key.cobblemonraiddens.deny:key.keyboard.n:
+key_key.cleanertooltips.hide_tooltip:key.keyboard.left.shift:
 key_key.sophisticatedcore.sort:key.keyboard.unknown:
+key_key.sophisticatedcore.transfer_to_storage:key.keyboard.unknown:
+key_key.sophisticatedcore.transfer_to_inventory:key.keyboard.unknown:
 key_gui.xaero_open_map:key.keyboard.m:
 key_gui.xaero_open_settings:key.keyboard.keypad.enter:
 key_gui.xaero_map_zoom_in:key.keyboard.keypad.add:
@@ -182,6 +189,7 @@ key_key.fog.toggle:key.keyboard.f7:
 key_key.yo_hooks.jump:key.mouse.right:
 key_key.yo_hooks.climb:key.keyboard.space:
 key_key.yo_hooks.climb_down:key.keyboard.left.shift:
+key_key.atlasviewer.open_viewer:key.keyboard.home:
 key_key.kubejs.kubedex:key.keyboard.unknown:
 key_key.kubejs.bubble_cobble.dash:key.mouse.4:
 key_keyinfo.copycats.fill_copycat:key.keyboard.left.alt:
