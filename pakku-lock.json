@@ -596,6 +596,43 @@
             ]
         },
         {
+            "pakku_id": "SGS0RV30pgl6FjEd",
+            "type": "MOD",
+            "side": "CLIENT",
+            "slug": {
+                "modrinth": "atlasviewer"
+            },
+            "name": {
+                "modrinth": "AtlasViewer"
+            },
+            "id": {
+                "modrinth": "pX7w1J23"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "AtlasViewer-neoforge-9.2.0.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/pX7w1J23/versions/F4YBS0oA/AtlasViewer-neoforge-9.2.0.jar",
+                    "id": "F4YBS0oA",
+                    "parent_id": "pX7w1J23",
+                    "hashes": {
+                        "sha512": "59edea69536f345c8d9ee8f60fed13e0e73aa405bf1870bc2e9474fcd3b6350f43a3646056a8fa2ecb429844d79d1cc4a9053b3175e1dfa504388cd32acdf189",
+                        "sha1": "3ac0df359df97769eaf7fa20848d9e7650ba917b"
+                    },
+                    "required_dependencies": [],
+                    "size": 239280,
+                    "date_published": "2025-01-14T23:12:40.605787Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "LeF2FvIw5W6PWL11",
             "pakku_links": [
                 "b0DpIvvJrjZ9jtpW"

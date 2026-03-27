@@ -4,7 +4,8 @@
       "resource_explorer",
       "probejs",
       "nbt_ac",
-      "kubejsoffline"
+      "kubejsoffline",
+      "atlasviewer"
     ]
   },
   "emi_set": {

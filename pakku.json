@@ -86,6 +86,9 @@
         "probejs": {
             "export": false
         },
+        "atlasviewer": {
+            "export": false
+        },
 
         "creativecore": {
             "side": "BOTH"
