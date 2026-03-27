@@ -1,0 +1,8 @@
+{
+	"type": "emi:info",
+	"stacks": [
+		"item:arts_and_crafts:lotus_pistils",
+		"#item:biomeswevegone:glowcane_shoot"
+	],
+	"text": "Obtained from §dSniffer digging§r."
+}

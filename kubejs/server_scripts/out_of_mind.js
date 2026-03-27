@@ -14,7 +14,9 @@ ServerEvents.recipes(event => {
 	// Gotta do this manually I guess.
 	event.remove({id: "create_bic_bit:mixing/curdled_milk" })
 	event.remove({id: "create:crafting/materials/copper_ingot"}) // Duplicate because of Minecraft's own recipe.
+	event.remove({id: "create:crafting/materials/copper_nugget"}) // Duplicate because of Minecraft's own recipe.
 	event.replaceInput({input: "create:copper_nugget"}, "create:copper_nugget", "minecraft:copper_nugget" )
+	event.replaceOutput({id: "create:splashing/crushed_raw_copper"}, "create:copper_nugget", Item.of("minecraft:copper_nugget", 9)) // Odd to be needing this here but alas.
 	event.replaceOutput({output: "create:copper_nugget", not: {type: "brewinandchewin:fermenting"}}, "create:copper_nugget", "minecraft:copper_nugget")
 
 	event.remove({input: global.get_disabled_ingredient().stackArray, not: {type: "brewinandchewin:fermenting"}}) // Doesn't seem to do much of anything?

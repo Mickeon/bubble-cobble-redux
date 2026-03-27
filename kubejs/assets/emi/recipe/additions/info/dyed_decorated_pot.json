@@ -1,0 +1,7 @@
+{
+	"type": "emi:info",
+	"stacks": [
+		"#item:arts_and_crafts:decorated_pots"
+	],
+	"text": "To dye a §dDecorated Pot§r in the Crafting Table, surround the dye of your choosing with 4 §dSherds§r or §dBricks§r.\nAlternatively, you can combine an already-crafted Decorated Pot and dye in the Crafting Table."
+}

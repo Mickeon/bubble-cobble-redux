@@ -454,6 +454,22 @@ ServerEvents.generateData("last", event => {
 	scavenging_meat("minecraft:strider", "mynethersdelight:strider_slice") // Technically incorrect, knife is not needed, the numbers are wrong.
 	scavenging_meat("minecraft:strider", "mynethersdelight:strider_rock") // Technically incorrect, the numbers are wrong.
 	scavenging_meat("minecraft:hoglin", "mynethersdelight:hoglin_hide") // Technically incorrect, the numbers are wrong.
+
+	// Bonus: Document Bleachdew:
+	event.json(`arts_and_crafts:direct_drops/blocks/lotus_flower`, {
+		type: "minecraft:block",
+		pools: [{
+			rolls: 1.0,
+			entries: [{
+				type: "minecraft:item",
+				name: "arts_and_crafts:bleachdew",
+				functions: [{
+					function: "minecraft:set_count",
+					count: 2
+				}]
+			}],
+		}]
+	})
 })
 
 // By "simple blocks" we should include any block that:
