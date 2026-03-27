@@ -1,6 +1,6 @@
 {
-    "typescript.disableAutomaticTypeAcquisition": true,
-    "typescript.validate.enable": false,
+    "js/ts.tsserver.automaticTypeAcquisition.enabled": false,
+    "js/ts.validate.enabled": false,
     "json.schemas": [
         {
             "fileMatch": [
@@ -89,7 +89,7 @@
         "Use of hardcoded text function. Consider using language keys instead."
     ],
     "editor.tokenColorCustomizations": {
-        "[Default Dark Modern]": {
+        "[Dark Modern]": {
             "textMateRules": [
                 {
                     "scope": "comment.block.documentation.js",
