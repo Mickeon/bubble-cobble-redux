@@ -572,3 +572,37 @@ ClientEvents.highlight(event => {
 		event.addTargetBlock("gray_dye")
 	}
 })
+
+// Purposely remove unused textures that take up a lot of memory space.
+// ClientEvents.generateAssets("after_mods", event => {
+// 	/** @type {typeof import("dev.latvian.mods.kubejs.client.LoadedTexture").$LoadedTexture } */
+// 	let $LoadedTexture  = Java.loadClass("dev.latvian.mods.kubejs.client.LoadedTexture")
+// 	const REMOVED_TEXTURE_PATHS = [
+// 		"cnc:textures/item/tent_item-sc.png",
+// 		"sophisticatedstorage:textures/block/logo.png",
+// 		"accessories:textures/gui/sprites/highlight/clickbait.png",
+// 		"lodestone:textures/painting/lefunny.png",
+// 	]
+// 	const get_empty_texture = (() => $LoadedTexture.EMPTY.toBytes())
+
+// 	for (let id of REMOVED_TEXTURE_PATHS) {
+// 		event.add({id: id, data: get_empty_texture})
+// 	}
+
+// 	// These textures are huge and should be brought down to a reasonable size.
+// 	// Does not work for some reason. The texture cannot be loaded.
+// 	// event.add({id: "mega_showdown:textures/item/likos_pendant.png", data: () => {
+// 	// 	let path = "mega_showdown:item/likos_pendant"
+// 	// 	let texture = event.loadTexture(path)
+// 	// 	if (!texture || texture.width <= 0 || texture.height <= 0) {
+// 	// 		console.error(`Could not find texture at "${path}"`)
+// 	// 		return $LoadedTexture.EMPTY.toBytes()
+// 	// 	}
+// 	// 	texture = texture.resize(16, 16)
+// 	// 	if (!texture || texture.width <= 0 || texture.height <= 0) {
+// 	// 		console.error(`Could not resize texture at "${path}"`)
+// 	// 		return $LoadedTexture.EMPTY.toBytes()
+// 	// 	}
+// 	// 	return texture.toBytes()
+// 	// }})
+// })
