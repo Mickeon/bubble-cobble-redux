@@ -66,6 +66,8 @@
         "!config/ixeris.toml",
         "!config/item_descriptions.toml",
         "!config/freecam.json5",
+        "!config/simplefog.json",
+        "!config/highly_customizable_damage_numbers",
         "!*locomotionmap.json"
     ],
     "paths": {
