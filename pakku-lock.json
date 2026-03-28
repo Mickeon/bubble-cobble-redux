@@ -608,6 +608,7 @@
             "id": {
                 "modrinth": "pX7w1J23"
             },
+            "export": false,
             "files": [
                 {
                     "type": "modrinth",
