@@ -9084,7 +9084,7 @@
             ]
         },
         {
-            "pakku_id": "YmqS1wHkLdvShkNO",
+            "pakku_id": "Ou4ANL6esU3hP80u",
             "type": "MOD",
             "side": "BOTH",
             "slug": {
@@ -9099,7 +9099,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "voicechat-neoforge-1.21.1-2.6.12.jar",
+                    "file_name": "voicechat-neoforge-1.21.1-2.6.14.jar",
                     "mc_versions": [
                         "1.21",
                         "1.21.1"
@@ -9108,16 +9108,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/9eGKb6K1/versions/WxJDv3oM/voicechat-neoforge-1.21.1-2.6.12.jar",
-                    "id": "WxJDv3oM",
+                    "url": "https://cdn.modrinth.com/data/9eGKb6K1/versions/BhWeUeeg/voicechat-neoforge-1.21.1-2.6.14.jar",
+                    "id": "BhWeUeeg",
                     "parent_id": "9eGKb6K1",
                     "hashes": {
-                        "sha512": "e7ce05aa487ed1487f34e8300bba77e4c091d928912adc664f72a10862b222d84ee0f8193441392087d7ac907f6b5afad1faeee8e6089bc0081e435197043736",
-                        "sha1": "afd194f9a97924c1958c8ef90acab00eb3922a39"
+                        "sha512": "bfcb1984d0a57e871b8efce67ae42a65a875a7745ace315d2cb6ae1b1df16603a3ca6dd3058f6973992afe0a6f301bb79db4e6e852be2fc25bbbdccb9841c0af",
+                        "sha1": "617b3b4e39f119974dc6439caeb1b39c362e4467"
                     },
                     "required_dependencies": [],
-                    "size": 4890490,
-                    "date_published": "2026-02-12T12:34:17.930120Z"
+                    "size": 4894250,
+                    "date_published": "2026-03-28T09:12:16.526727Z"
                 }
             ]
         },
