@@ -20,6 +20,9 @@ ClientEvents.lang("en_us", event => {
 	// Accounting for Mending Rework.
 	event.add("enchdesc", "enchantment.minecraft.mending.desc", "When repaired, restores more durability and never damages the Anvil.")
 
+	event.add("key.kubejs.bubble_cobble.mouse_wheel_up", "Simulate Mouse Wheel Up")
+	event.add("key.kubejs.bubble_cobble.mouse_wheel_down", "Simulate Mouse Wheel Down")
+
 	// Generated with the code below after a reload.
 	// console.log(`event.addAll("biomesoplenty", {`)
 	// function log_rename_item(item_id, new_name) {
