@@ -606,3 +606,38 @@ ClientEvents.highlight(event => {
 // 	// 	return texture.toBytes()
 // 	// }})
 // })
+
+
+if (Platform.isLoaded("smartkeyprompts")) {
+	/** @type {typeof import("com.mafuyu404.smartkeyprompts.util.PromptUtils").$PromptUtils } */
+	let $PromptUtils  = Java.loadClass("com.mafuyu404.smartkeyprompts.util.PromptUtils")
+	/** @type {typeof import("com.mafuyu404.smartkeyprompts.util.KeyUtils").$KeyUtils } */
+	let $KeyUtils  = Java.loadClass("com.mafuyu404.smartkeyprompts.util.KeyUtils")
+
+	ClientEvents.tick(event => {
+		const player = event.player
+		if (!player) {
+			return
+		}
+		if (Client.getCurrentScreen() || Client.options.hideGui) {
+			return
+		}
+
+		$PromptUtils.enablePrompt("create", "Grab")
+		if (player.isHolding("create:wrench") && player.rayTrace().block.hasTag("create:wrench_pickup")) {
+			$PromptUtils.custom("create", `${$KeyUtils.getKeyByDesc("key.sneak")}+${$KeyUtils.getKeyByDesc("key.use")}`, "Grab")
+		}
+
+		if (player.hook) {
+			$PromptUtils.show("yo_hooks", "key.yo_hooks.jump");
+			$PromptUtils.show("yo_hooks", "key.yo_hooks.climb");
+			$PromptUtils.show("yo_hooks", "key.yo_hooks.climb_down");
+			$PromptUtils.show("yo_hooks", "key.yo_hooks.prevent_use");
+		}
+
+		if (player.getControlledVehicle()?.type == "cobblemon:pokemon") {
+			$PromptUtils.show("cobblemon", "key.cobblemon.jump");
+			$PromptUtils.custom("cobblemon", $KeyUtils.getKeyByDesc("key.cobblemon.throwpartypokemon"), "Dismount")
+		}
+	})
+}

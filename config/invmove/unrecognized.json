@@ -192,7 +192,9 @@
     "net.irisshaders.iris.gui.screen.ShaderPackScreen": true,
     "net.conczin.immersive_furniture.client.gui.ArtisansWorkstationLibraryScreen": true,
     "com.simibubi.create.content.logistics.stockTicker.StockKeeperCategoryScreen": true,
-    "dev.tazer.clutternomore.client.ShapeSwitcherOptionsScreen": true
+    "dev.tazer.clutternomore.client.ShapeSwitcherOptionsScreen": true,
+    "xfacthd.atlasviewer.client.screen.AtlasScreen": true,
+    "com.nododiiiii.ponderer.ui.FunctionScreen": true
   },
   "hideBackground": {
     "dev.emi.emi.screen.RecipeScreen": false,

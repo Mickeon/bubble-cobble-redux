@@ -43,4 +43,20 @@ ProbeEvents.snippets(event => {
 	ProbeJS.captureType("net.minecraft.world.entity.projectile.ProjectileUtil")
 	ProbeJS.captureType("net.neoforged.neoforge.common.DataMapHooks")
 	ProbeJS.captureType("com.yori3o.yo_hooks.common.hookregistry.HookRegistry")
+
+	// I don't know why ProbeJS refuses to capture them unless I do this.
+	if (Platform.isLoaded("smartkeyprompts")) {
+		/** @type {typeof import("com.mafuyu404.smartkeyprompts.util.SkpUtils").$SkpUtils } */
+		let $SkpUtils = Java.loadClass("com.mafuyu404.smartkeyprompts.util.SkpUtils")
+		/** @type {typeof import("com.mafuyu404.smartkeyprompts.util.CommonUtils").$CommonUtils } */
+		let $CommonUtils = Java.loadClass("com.mafuyu404.smartkeyprompts.util.CommonUtils")
+		/** @type {typeof import("com.mafuyu404.smartkeyprompts.util.KeyUtils").$KeyUtils } */
+		let $KeyUtils = Java.loadClass("com.mafuyu404.smartkeyprompts.util.KeyUtils")
+		/** @type {typeof import("com.mafuyu404.smartkeyprompts.util.NBTUtils").$NBTUtils } */
+		let $NBTUtils = Java.loadClass("com.mafuyu404.smartkeyprompts.util.NBTUtils")
+		/** @type {typeof import("com.mafuyu404.smartkeyprompts.util.PlayerUtils").$PlayerUtils } */
+		let $PlayerUtils = Java.loadClass("com.mafuyu404.smartkeyprompts.util.PlayerUtils")
+		/** @type {typeof import("com.mafuyu404.smartkeyprompts.util.PromptUtils").$PromptUtils } */
+		let $PromptUtils = Java.loadClass("com.mafuyu404.smartkeyprompts.util.PromptUtils")
+	}
 })
