@@ -2044,7 +2044,7 @@
             ]
         },
         {
-            "pakku_id": "t8YI3gZKM1CWdJ7X",
+            "pakku_id": "wGXjbClryRqT5CCn",
             "type": "MOD",
             "side": "BOTH",
             "slug": {
@@ -2059,7 +2059,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "mega_showdown-neoforge-1.7.1+1.7.3+1.21.1-hotfix.jar",
+                    "file_name": "mega_showdown-neoforge-1.7.2+1.7.3+1.21.1.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -2067,21 +2067,21 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/SszvX85I/versions/YGB1z9eT/mega_showdown-neoforge-1.7.1+1.7.3+1.21.1-hotfix.jar",
-                    "id": "YGB1z9eT",
+                    "url": "https://cdn.modrinth.com/data/SszvX85I/versions/PGoyef9U/mega_showdown-neoforge-1.7.2+1.7.3+1.21.1.jar",
+                    "id": "PGoyef9U",
                     "parent_id": "SszvX85I",
                     "hashes": {
-                        "sha512": "ae6612b96482640abafe3ef1f6d3a79e2b7cb5eae237e972f34c2df5633c7313c4cc7618067b10b8cd1976ecf9797d50d7b1903417701e79a11f430a640cfa88",
-                        "sha1": "89743622575a90f47a43013501bced98292f7773"
+                        "sha512": "d5866c3aea850e60e2e8c2b83480bf905b0d721a0a15317f1b174acd496c1597dd6e671de8ba9eecc8a979ac23d6e96e87d562c18f7241d1ec5924f2694e1b69",
+                        "sha1": "8a15eb15c6efa591e112c708dc4195e38be29baf"
                     },
                     "required_dependencies": [
+                        "jtmvUHXj",
                         "lhGA9TYQ",
                         "ccKDOlHs",
-                        "MdwFAVRL",
-                        "jtmvUHXj"
+                        "MdwFAVRL"
                     ],
-                    "size": 16445846,
-                    "date_published": "2026-03-09T06:12:34.954176Z"
+                    "size": 16550658,
+                    "date_published": "2026-03-28T15:52:10.726058Z"
                 }
             ]
         },
@@ -2213,7 +2213,7 @@
             ]
         },
         {
-            "pakku_id": "7no9dqCNvn6I2sge",
+            "pakku_id": "tHh6cWEG2rivDdCY",
             "type": "MOD",
             "side": "CLIENT",
             "slug": {
@@ -2228,7 +2228,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "colorwheel-neoforge-1.2.2+mc1.21.1.jar",
+                    "file_name": "colorwheel-neoforge-1.2.3+mc1.21.1.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -2236,18 +2236,18 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/BzHgFoGz/versions/JwDFI3aj/colorwheel-neoforge-1.2.2+mc1.21.1.jar",
-                    "id": "JwDFI3aj",
+                    "url": "https://cdn.modrinth.com/data/BzHgFoGz/versions/upV9hiSS/colorwheel-neoforge-1.2.3+mc1.21.1.jar",
+                    "id": "upV9hiSS",
                     "parent_id": "BzHgFoGz",
                     "hashes": {
-                        "sha512": "85cf58e55e85b14ac90b8a452d798985e71ab4781086165e6d67660c8eb709b31448776e51f092ba9967953f3314a78451ca0031b78d6db0fcf1a87d8569087e",
-                        "sha1": "e3678d8172da6792d193ae1b9c20b53d23c480d4"
+                        "sha512": "fc05c3c0baee781106d488379502e4edb9d325ae0a28f9a1d2e0d5f8bd4997c8bf7fa2cb88cb48a905d57389f9e46d145e291ca4a3065d96d0d2c88e329dbe5c",
+                        "sha1": "87b4df7de4ffb0325ba2dca27deabbbd6cad6810"
                     },
                     "required_dependencies": [
                         "YL57xq9U"
                     ],
-                    "size": 374610,
-                    "date_published": "2026-03-14T17:11:46.562283Z"
+                    "size": 376978,
+                    "date_published": "2026-03-27T20:12:51.088335Z"
                 }
             ]
         },
@@ -8973,7 +8973,7 @@
             ]
         },
         {
-            "pakku_id": "5wmQ95NiYXKlvwuZ",
+            "pakku_id": "HXPsSYE9B0v1wy38",
             "type": "MOD",
             "side": "CLIENT",
             "slug": {
@@ -8988,7 +8988,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "ShoulderSurfing-NeoForge-1.21.1-4.22.1.jar",
+                    "file_name": "ShoulderSurfing-NeoForge-1.21.1-4.22.3.jar",
                     "mc_versions": [
                         "1.21",
                         "1.21.1"
@@ -8997,16 +8997,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/kepjj2sy/versions/GRCXBCdK/ShoulderSurfing-NeoForge-1.21.1-4.22.1.jar",
-                    "id": "GRCXBCdK",
+                    "url": "https://cdn.modrinth.com/data/kepjj2sy/versions/TGMmqvKB/ShoulderSurfing-NeoForge-1.21.1-4.22.3.jar",
+                    "id": "TGMmqvKB",
                     "parent_id": "kepjj2sy",
                     "hashes": {
-                        "sha512": "324407cf126c9ce0f959668579fda779b4fb869982c128142a4ee3247f8685c91af00ebffb009353ed1e5a9185a6e47fe5a3ebb91434fe9a0144812b7841a5df",
-                        "sha1": "19286f8b7746da7aa36d4c07fc184ddcc70627a4"
+                        "sha512": "e5e14622bf2e87b335414447f92f6c6aa2ce2c8bc2cc88fb43fb3b8ef2ddedd4c5f7264d68189d667cfeffe384aa0ce2be96ff8068434e786bd6d8709b8ea74f",
+                        "sha1": "2fd8f030015d1ce56955e9aada1ad7f56156b167"
                     },
                     "required_dependencies": [],
-                    "size": 266690,
-                    "date_published": "2026-03-06T19:11:47.526958Z"
+                    "size": 266828,
+                    "date_published": "2026-03-28T15:44:44.558637Z"
                 }
             ]
         },
