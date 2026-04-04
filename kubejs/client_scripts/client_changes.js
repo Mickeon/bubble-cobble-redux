@@ -590,6 +590,7 @@ ClientEvents.highlight(event => {
 // 	}
 
 // 	// These textures are huge and should be brought down to a reasonable size.
+//	// Note that Liko's Pendant's texture is no longer huge.
 // 	// Does not work for some reason. The texture cannot be loaded.
 // 	// event.add({id: "mega_showdown:textures/item/likos_pendant.png", data: () => {
 // 	// 	let path = "mega_showdown:item/likos_pendant"
