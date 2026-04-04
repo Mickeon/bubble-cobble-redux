@@ -46,7 +46,6 @@ ServerEvents.tags("item", event => {
 		"sliceanddice:fertilizer_bucket", // https://github.com/PssbleTrngle/SliceAndDice/issues/270.
 		"create_bic_bit:ketchup_bucket", "create_bic_bit:mayonnaise_bucket", "create_bic_bit:frying_oil_bucket",
 		"biomesoplenty:blood_bucket", "biomesoplenty:liquid_null_bucket", // Reported: https://github.com/Glitchfiend/BiomesOPlenty/issues/2440.
-		"undergroundworlds:quicksand_bucket", // Reported: https://codeberg.org/HexagonNico/UndergroundWorlds/issues/6.
 		"sophisticatedcore:xp_bucket" // Reported: http://github.com/P3pp3rF1y/SophisticatedCore/issues/449.
 	)
 	event.add("c:buckets/entity_water", "create_bic_bit:herring_bucket") // Reported: https://discord.com/channels/1141667941935501442/1448294211542716550/1448294211542716550
@@ -72,7 +71,7 @@ ServerEvents.tags("item", event => {
 	event.add("c:storage_blocks/industrial_iron", "create:industrial_iron_block")
 	event.add("minecraft:piglin_loved", "solonion:golden_lunchbox", "handcrafted:golden_thin_pot", "handcrafted:golden_thick_pot", "handcrafted:golden_wide_pot", "handcrafted:golden_medium_pot") //Reported: https://github.com/terrarium-earth/Handcrafted/issues/152
 	event.add("minecraft:horse_food", "biomeswevegone:green_apple") // Reported: https://github.com/Potion-Studios/Oh-The-Biomes-Weve-Gone/issues/384.
-	event.add("c:music_discs", "cnc:music_disc_slough_choir", "cnc:music_disc_wreck_of_the_old_97", "cnc:music_disc_hills")
+	event.add("c:music_discs", "cnc:music_disc_slough_choir", "cnc:music_disc_wreck_of_the_old_97", "cnc:music_disc_hills", "undergroundworlds:music_disc_abbeyence") // TODO: Report this.
 	event.removeAll("minecraft:music_discs") // This tag doesn't exist anymore.
 	event.add("minecraft:buttons", COPPER_BUTTONS)
 	event.remove("create:chain_rideable", COPPER_CHAINS) // They didn't realise this was plainly wrong. Reported: https://github.com/Smallinger/Copper-Age-Backport/issues/87.

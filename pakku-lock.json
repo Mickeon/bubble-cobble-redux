@@ -10256,7 +10256,7 @@
             ]
         },
         {
-            "pakku_id": "gOnyCwyQbmr93KOJ",
+            "pakku_id": "MQVCp48djfaf5xMI",
             "type": "MOD",
             "side": "BOTH",
             "slug": {
@@ -10271,7 +10271,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "undergroundworlds-neoforge-21.1.1.jar",
+                    "file_name": "undergroundworlds-neoforge-3.0-1.21.1.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -10279,16 +10279,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/g9fDJQZe/versions/QrxlXkT2/undergroundworlds-neoforge-21.1.1.jar",
-                    "id": "QrxlXkT2",
+                    "url": "https://cdn.modrinth.com/data/g9fDJQZe/versions/jP434Q8O/undergroundworlds-neoforge-3.0-1.21.1.jar",
+                    "id": "jP434Q8O",
                     "parent_id": "g9fDJQZe",
                     "hashes": {
-                        "sha512": "3be03e14694bed732e572e619472ccb553d3e478f82677c0641a0c6ed251311741981768f9fc97ef44ec822a5fe002a4d31dd6d8ff6c41965f5d9f0d0281ac19",
-                        "sha1": "e91e5867c9b41013a53a3324ba01cae537f76b8b"
+                        "sha512": "88c32911969243531bdab043e3c756f4b2b42744dda0a9ddcfaa31a5619c4b30a4f180eccb363d6b069b234f6965e273874b89a7776ff79cf03bda591b71ba82",
+                        "sha1": "fce6bcc4c6bcd0b246ee908b56a146f08d1351de"
                     },
                     "required_dependencies": [],
-                    "size": 624209,
-                    "date_published": "2026-03-21T16:41:32.772221Z"
+                    "size": 3830696,
+                    "date_published": "2026-04-01T07:52:54.807740Z"
                 }
             ]
         },

@@ -35,7 +35,11 @@
     "undergroundworlds:spider_helmet",
     "undergroundworlds:spider_chestplate",
     "undergroundworlds:spider_leggings",
-    "undergroundworlds:spider_boots"
+    "undergroundworlds:spider_boots",
+    "undergroundworlds:winter_helmet",
+    "undergroundworlds:winter_chestplate",
+    "undergroundworlds:winter_leggings",
+    "undergroundworlds:winter_boots"
   ],
   "soundEvent": "minecraft:item.armor.equip_leather"
 }
