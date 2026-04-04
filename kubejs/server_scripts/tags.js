@@ -237,19 +237,18 @@ ServerEvents.tags("block", event => {
 		"brewinandchewin:coaster", // Reported: https://github.com/ChrysanthCow/BrewinAndChewin/pull/110
 		"cobblemon:tatami_mat", // Reported: https://gitlab.com/cable-mc/cobblemon/-/merge_requests/2174.
 		"farmersdelight:basket", "farmersdelight:cutting_board", // Reported: https://github.com/vectorwing/FarmersDelight/pull/1252
-		"supplementaries:bamboo_spikes", "supplementaries:crank", "supplementaries:doormat", "supplementaries:pancake", // Reported: https://github.com/MehVahdJukaar/Supplementaries/pull/1932
+		"supplementaries:crank", // I forgot to report here: https://github.com/MehVahdJukaar/Supplementaries/pull/1932
 		"yungscavebiomes:ice_sheet"
 	)
 	event.add("create:brittle", // Allows these blocks to be assembled/unassembled in contraptions without destroying themselves.
 		"#brewinandchewin:cheese_wheels/unripe", "#brewinandchewin:cheese_wheels/ripe", "brewinandchewin:coaster", "brewinandchewin:pizza", "brewinandchewin:quiche",
-		"#supplementaries:candle_holders", "#supplementaries:sconces", "#supplementaries:buntings", "supplementaries:sconce_lever", "supplementaries:pancake", "supplementaries:barnacles", "supplementaries:crank", "supplementaries:item_shelf", "supplementaries:doormat", "supplementaries:ash", "supplementaries:gunpowder", // Reported and partially fixed for next time https://github.com/MehVahdJukaar/Supplementaries/pull/1933.
+		"supplementaries:gunpowder", // I forgot to report here: https://github.com/MehVahdJukaar/Supplementaries/pull/1933.
 		"#snowyspirit:gumdrops", "snowyspirit:wreath", // Reported: https://github.com/MehVahdJukaar/SnowySpirit/pull/125.
 		// Unfortunately manual. Also somewhat reported: https://github.com/vectorwing/FarmersDelight/issues/1255.
 		"farmersdelight:apple_pie", "farmersdelight:chocolate_pie", "farmersdelight:sweet_berry_cheesecake", "farmersdelight:honey_glazed_ham_block", "farmersdelight:shepherds_pie_block", "farmersdelight:rice_roll_medley_block",
 		"minersdelight:fake_meatloaf", "minersdelight:glazed_arachnid_limbs", "minersdelight:stuffed_squid",
 		"mynethersdelight:stuffed_hoglin", "mynethersdelight:striderloaf_block", "mynethersdelight:cold_striderloaf_block", "mynethersdelight:ghasta_with_cream_block", "mynethersdelight:bread_loaf_block", "mynethersdelight:magma_cake_block",
 	)
-	event.add("create:movable_empty_collider", "#supplementaries:timber_frames", ) // Reported and fixed for next time: https://github.com/MehVahdJukaar/Supplementaries/pull/1935
 	event.add("minecraft:doors", "copycats:copycat_iron_door") // Reported: https://github.com/copycats-plus/copycats/issues/377.
 	event.add("minecraft:trapdoors", "copycats:copycat_trapdoor", "copycats:copycat_iron_trapdoor")
 
