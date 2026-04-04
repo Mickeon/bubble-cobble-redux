@@ -194,7 +194,7 @@ remove_and_merge_into_tab("zamega:zamega_tab", "mega_showdown:mega_tab", [
 	"zamega:baxcalibrite",
 	"zamega:chandelurite",
 	"zamega:chesnaughtite",
-	"zamega:chimechoite",
+	"zamega:chimechite",
 	"zamega:clefablite",
 	"zamega:crabominite",
 	"zamega:darkranite",
