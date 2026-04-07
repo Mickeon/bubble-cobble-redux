@@ -4,6 +4,7 @@ ClientEvents.lang("en_us", event => {
 	event.add("item.handcrafted.hammer", "Handcrafter's Hammer")
 	event.add("item.supplementaries.wrench", "Rotation Wrench")
 	event.add("block.supplementaries.crank", "Redstone Crank")
+	event.add("block.urban_decor.toolbox", "Furniture Toolbox")
 
 	event.add("block.biomesoplenty.rose_quartz_block", "Block of Nether Rose Quartz")
 	event.add("block.biomesoplenty.rose_quartz_cluster", "Nether Rose Quartz Cluster")

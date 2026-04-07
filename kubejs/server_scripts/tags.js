@@ -298,6 +298,7 @@ ServerEvents.tags("block", event => {
 	if (Platform.isLoaded("urban_decor")) {
 		event.add("amendments:stairs_carpets", /^urban_decor:.*_towel$/)
 		event.add("create:brittle", /^urban_decor:.*(piano|grandfather_clock|picture_frame|plastic_lights)/ )
+		event.add("create:fan_transparent", "urban_decor:stainless_steel_bars", "urban_decor:stainless_steel_fence", "urban_decor:plastic_chair", "urban_decor:radiator")
 		event.add("minecraft:combination_step_sound_blocks", /^urban_decor:.*_towel$/) // Reported: https://github.com/Yirmiri/Urban-Decor/issues/6
 		event.add("minecraft:doors", "urban_decor:stainless_steel_door") // Reported: https://github.com/Yirmiri/Urban-Decor/issues/8.
 		event.add("minecraft:trapdoors", "urban_decor:stainless_steel_trapdoor")

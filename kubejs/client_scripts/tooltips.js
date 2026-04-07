@@ -15,6 +15,7 @@ const MASCOT_COLOR_DARK = "#537B8D"
 const SHIFT_INFO_COLOR = "#7CB3D6"
 
 const PLACEABLE_TOOLTIP = Text.of(`Placeable`).color(MASCOT_COLOR_DARK)
+const PLACEABLE_SNEAKING_TOOLTIP = PLACEABLE_TOOLTIP.copy().append([" while", Text.of(` sneaking`).color(MASCOT_COLOR)])
 const HAMMER_TOOLTIP = Text.of(`Can be changed with the Handcrafter's Hammer`).color(MASCOT_COLOR_DARK)
 const HANDCRAFTED_ITEMS_WITH_SHIFT_INFO = [
 	"#handcrafted:cushions",
@@ -309,9 +310,7 @@ ItemEvents.modifyTooltips(event => {
 
 	if (Platform.isLoaded("displaydelight")) {
 		event.modify("#displaydelight:displayable", text => {
-			text.insert(1, PLACEABLE_TOOLTIP.copy().append(
-				[" while", Text.of(` sneaking`).color(MASCOT_COLOR)]
-			))
+			text.insert(1, PLACEABLE_SNEAKING_TOOLTIP)
 		})
 
 		let plate_displayable = Ingredient.of("#displaydelight:plate_displayable")
@@ -332,6 +331,23 @@ ItemEvents.modifyTooltips(event => {
 		event.add(["#sleep_tight:hammocks"], [Text.of([`Placeable between `, Text.of(`3 blocks`).color(MASCOT_COLOR), ` or `, Text.of(`2 fences`).color(MASCOT_COLOR)]).color(MASCOT_COLOR_DARK)])
 		event.add(["sleep_tight:dreamer_essence"], [subtle("Keeps Bedbugs at bay, attracts Phantoms,"), subtle("    and is rather soothing...")])
 		event.add(["sleep_tight:bedbug_eggs"], subtle("Use on a bed to infest it."))
+	}
+
+	if (Platform.isLoaded("urban_decor")) {
+		event.modify(["urban_decor:steel_pipe"], text => {
+			text.insert(1, PLACEABLE_TOOLTIP)
+		})
+		event.modify("urban_decor:toolbox", text => {
+			text.insert(1, PLACEABLE_SNEAKING_TOOLTIP)
+		})
+		event.modify("#urban_decor:wraps", text => {
+			text.insert(1, [
+				PLACEABLE_TOOLTIP.copy().append(" on:"),
+				Text.of(["• Any ", Text.of(`wooden box`).color(MASCOT_COLOR)]).color(MASCOT_COLOR_DARK),
+				Text.of(["• ", Text.translate("block.urban_decor.plastic_desk_table").color(MASCOT_COLOR)]).color(MASCOT_COLOR_DARK)
+			])
+		})
+		event.add(["urban_decor:towel_bar"], [subtle("Can contain").append(Text.gold(" any towel"))])
 	}
 
 	event.add(Ingredient.of("@immersive_furniture").or("@sleep_tight"), [
