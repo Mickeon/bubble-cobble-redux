@@ -170,6 +170,7 @@ ServerEvents.tags("item", event => {
 	event.removeAll("accessories:hand")
 	event.removeAll("accessories:belt")
 	event.removeAll("accessories:shoes")
+	event.removeAll("accessories:charm")
 
 	event.add("curios:back", "#supplementaries:sacks")
 
