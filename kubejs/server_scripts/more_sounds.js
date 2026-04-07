@@ -91,6 +91,10 @@ ServerEvents.tags("block", event => {
 			`handcrafted:${wood_type}_side_table`,
 			`handcrafted:${wood_type}_table`,
 			`minecraft:${wood_type}_shelf`,
+			`urban_decor:${wood_type}_box`,
+			`urban_decor:${wood_type}_calendar`,
+			`urban_decor:${wood_type}_grandfather_clock`,
+			`urban_decor:${wood_type}_piano`,
 		)
 	}
 	// A bit arbitrary.

@@ -1,9 +1,10 @@
 {
   "keys": [
     "#bubble_cobble:pokenavs",
-    "#bubble_cobble:pokefinders"
+    "#cobblenav:pokefinder",
+    "cobblenav:fishingnav_item"
   ],
-  "pitch": 1.1,
-  "soundEvent": "cobblemon:gui.click",
+  "pitch": 2.0,
+  "soundEvent": "cobblemon:pc.drop",
   "volume": 0.1
 }

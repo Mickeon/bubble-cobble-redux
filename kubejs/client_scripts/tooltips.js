@@ -237,6 +237,8 @@ ItemEvents.modifyTooltips(event => {
 	event.add(["supplementaries:gravel_bricks"], [subtle("It's frail under your feet")])
 	event.add(["supplementaries:lumisene_bucket"], [subtle("Bewildering, perhaps ").append(Text.gold("flammable")).append("?")])
 	event.add(["supplementaries:sack"], [subtle("This can store stuff, by the way")])
+	event.add(["supplementaries:flower_box"], [subtle("Can only contain ").append(Text.gold("tall flowers"))])
+	event.add(["supplementaries:pulley_block"], [subtle("").append(Text.gold("Ropes")).append(" and ").append(Text.gold("chains")).append(" in here!")])
 
 	event.modify(["#c:foods/edible_when_placed", "supplementaries:lunch_basket", "supplementaries:cannonball"], text => {
 		text.insert(1, PLACEABLE_TOOLTIP)
@@ -332,7 +334,7 @@ ItemEvents.modifyTooltips(event => {
 		event.add(["sleep_tight:bedbug_eggs"], subtle("Use on a bed to infest it."))
 	}
 
-	event.add(Ingredient.of("@urban_decor").or("@immersive_furniture").or("@sleep_tight"), [
+	event.add(Ingredient.of("@immersive_furniture").or("@sleep_tight"), [
 		Text.yellow("Experimental").append(Text.of(` 🧊`).white()),
 	])
 	event.add(Ingredient.of("@comforts"), [
@@ -413,11 +415,56 @@ NativeEvents.onEvent("highest", $RenderTooltipEvent$Color, event => {
 				graphics.pop()
 			}
 		} break;
-		case "cobblemon": {
-			graphics.renderFakeItem("cobblemon:poke_ball", event.x, event.y - 10)
+		case "cobblemon":
+		case "cobbreeding":
+		case "cobblenav":
+		case "cobblemonraiddens": {
+			let rarity = item_stack.getRarity()
+			if (rarity == "epic") {
+				graphics.renderFakeItem("cobblemon:master_ball", event.x, event.y - 10)
+				event.setBorderStart(Color.rgba(184, 26, 176, 1).getArgb())
+			} else if (rarity == "rare") {
+				graphics.renderFakeItem("cobblemon:beast_ball", event.x, event.y - 10)
+				event.setBorderStart(Color.rgba(60, 148, 170, 1).getArgb())
+			} else {
+				graphics.renderFakeItem("cobblemon:poke_ball", event.x, event.y - 10)
+				event.setBorderStart(Color.rgba(151, 36, 28, 1).getArgb())
+			}
 		} break;
-		case "mega_showdown": {
-			graphics.renderFakeItem("mega_showdown:swampertite", event.x, event.y - 10)
+		case "mega_showdown":
+		case "zamega": {
+			graphics.renderFakeItem(item_stack.mod == "mega_showdown"
+					? "mega_showdown:swampertite"
+					: "zamega:absolitez",
+				event.x,
+				event.y - 10
+			)
+			if (item_stack.hasTag("mega_showdown:mega_stone")) {
+				let progress = Math.abs(Math.sin(Utils.getSystemTime() * 0.0025))
+				let r = progress * 100
+				let g = progress * 100
+				let b = progress * 80
+				event.setBorderStart(Color.rgba(85 + r, 101 + g, 114 + b, 1).getArgb())
+				event.setBorderEnd(Color.rgba(30, 50, 87, 1).getArgb())
+			} else if (item_stack.is("mega_showdown:mega_stone")
+				|| item_stack.is("mega_showdown:mega_stone_crystal")
+			) {
+				event.setBorderStart(Color.rgba(195, 202, 216, 1).getArgb())
+				event.setBorderEnd(Color.rgba(30, 50, 87, 1).getArgb())
+			} else if (item_stack.is("mega_showdown:keystone")
+				|| item_stack.is("mega_showdown:keystone_block")
+				|| item_stack.is("mega_showdown:keystone_ore")
+			) {
+				event.setBorderStart(Color.rgba(
+					180 + Math.sin(Utils.getSystemTime() * 0.0025) * 60,
+					180 + Math.sin(Utils.getSystemTime() * 0.001) * 60,
+					180 + Math.sin(Utils.getSystemTime() * 0.005) * 60,
+					1
+				).getArgb())
+				event.setBorderEnd(Color.rgba(30, 50, 87, 1).getArgb())
+			} else {
+				event.setBorderStart(Color.rgba(60, 99, 170, 1).getArgb())
+			}
 		} break;
 		case "create":
 		case "createdeco":
@@ -471,7 +518,12 @@ NativeEvents.onEvent("highest", $RenderTooltipEvent$Color, event => {
 				// Jank jank jank.
 				let color_name = item_stack.idLocation.getPath().split("_paintbrush")[0] + "_dye"
 				event.setBorderStart(Color.wrap(color_name).getArgb())
+			} else if (item_stack.is("arts_and_crafts:bleachdew")) {
+				event.setBorderStart(Color.wrap("bleachdew_dye").getArgb())
 			}
+		}
+		case "urban_decor": {
+			event.setBorderStart(Color.wrap("gray_dye").getArgb())
 		}
 	}
 	// event.setBackground(Color.rgba(8, 21, 95, 1).getArgb())

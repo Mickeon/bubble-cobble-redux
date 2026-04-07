@@ -114,7 +114,6 @@ ServerEvents.tags("item", event => {
 
 	// Shared in a bunch of places.
 	event.add("bubble_cobble:coinstacks", /^createdeco:.*coinstack$/)
-	event.add("bubble_cobble:pokefinders", /^cobblenav:pokefinder_item/)
 	event.add("bubble_cobble:pokenavs", "#cobblenav:pokenav", "cobblenav:pokenav_item_gholdengo", "cobblenav:pokenav_item_wanderer")
 
 	event.add("bubble_cobble:emi/chest_loot_icon","minecraft:chest", "minecraft:barrel", "lootr:lootr_barrel", "lootr:lootr_chest", "lootr:lootr_shulker", "lootr:decorated_pot", "lootrmon:gilded_chest", "cobblemonraiddens:raid_pouch")
@@ -247,6 +246,7 @@ ServerEvents.tags("block", event => {
 		"farmersdelight:apple_pie", "farmersdelight:chocolate_pie", "farmersdelight:sweet_berry_cheesecake", "farmersdelight:honey_glazed_ham_block", "farmersdelight:shepherds_pie_block", "farmersdelight:rice_roll_medley_block",
 		"minersdelight:fake_meatloaf", "minersdelight:glazed_arachnid_limbs", "minersdelight:stuffed_squid",
 		"mynethersdelight:stuffed_hoglin", "mynethersdelight:striderloaf_block", "mynethersdelight:cold_striderloaf_block", "mynethersdelight:ghasta_with_cream_block", "mynethersdelight:bread_loaf_block", "mynethersdelight:magma_cake_block",
+		"cobblemon:cleanse_tag", "cobblemon:spell_tag", "cobblemon:weakness_policy", "cobblemon:blunder_policy",
 	)
 	event.add("minecraft:doors", "copycats:copycat_iron_door") // Reported: https://github.com/copycats-plus/copycats/issues/377.
 	event.add("minecraft:trapdoors", "copycats:copycat_trapdoor", "copycats:copycat_iron_trapdoor")

@@ -1,6 +1,6 @@
 {
 	"match": {
-		"items": "#bubble_cobble:pokefinders"
+		"items": "#cobblenav:pokefinder"
 	},
 	"luminance": 8
 }

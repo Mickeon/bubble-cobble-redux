@@ -116,5 +116,7 @@ if (Platform.isClientEnvironment()) {
 		// Client.options.keyMappings.forEach(key_mapping => {
 		// 	console.log(`${key_mapping.getName()} | ${key_mapping.saveString()}}`)
 		// })
+
+		Color.createMapped("#F2C891", "bleachdew", "bleachdew_dye")
 	})
 }

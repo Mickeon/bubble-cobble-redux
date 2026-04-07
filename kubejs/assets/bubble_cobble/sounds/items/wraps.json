@@ -1,0 +1,9 @@
+{
+  "keys": [
+    "#urban_decor:wraps",
+    "urban_decor:toilet_paper"
+  ],
+  "pitch": 2.0,
+  "soundEvent": "urban_decor:item.wrap.use",
+  "volume": 0.2
+}

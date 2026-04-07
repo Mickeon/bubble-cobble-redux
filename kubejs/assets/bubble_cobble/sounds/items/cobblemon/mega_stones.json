@@ -1,8 +1,10 @@
 {
   "keys": [
-    "#mega_showdown:mega_stone"
+    "#mega_showdown:mega_stone",
+    "mega_showdown:keystone",
+    "mega_showdown:mega_stone"
   ],
-  "pitch": 0.75,
-  "soundEvent": "bubble_cobble:grab_whimsy",
+  "pitch": 1.75,
+  "soundEvent": "minecraft:block.copper.step",
   "volume": 0.25
 }

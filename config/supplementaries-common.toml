@@ -128,7 +128,7 @@
 		#Disable if you think this ability is op (honey for example). Cookies are excluded
 		drink_from_jar = false
 		#Allows the player to directly drink from jar items
-		drink_from_jar_item = false
+		drink_from_jar_item = true
 		#Dynamically allows all small mobs inside jars depending on their hitbox size
 		jar_auto_detect = false
 		#Allow Jars to capture small mobs
@@ -420,7 +420,7 @@
 		allow_breaking = false
 
 	[building.slidy_block]
-		enabled = false
+		enabled = true
 		#Slidy block speed
 		# Default: 0.125
 		# Range: 0.0 ~ 1.0
@@ -585,7 +585,7 @@
 		#Time in ticks to fully charge a slingshot
 		# Default: 20
 		# Range: 0 ~ 100
-		charge_time = 20
+		charge_time = 15
 		#Deceleration for the stasis projectile
 		# Default: 0.9625
 		# Range: 0.1 ~ 1.0
