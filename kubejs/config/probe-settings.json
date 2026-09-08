@@ -10,9 +10,10 @@
         "kubejs",
         "neoforge",
         "probejs",
+        "lootjs",
         "cobblemon",
         "create"
     ],
     "probejs.hintsForLLM": false,
-    "probejs.reset": true
+    "probejs.reset": false
 }
