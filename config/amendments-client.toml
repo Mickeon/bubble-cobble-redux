@@ -1,10 +1,11 @@
 [general]
 	tooltip_hints = true
-	custom_configured_screen = true
 	#Makes dynamically generated assets depend on texture packs too and not just vanilla files
 	texture_pack_support = false
 	#Allowed Values: ALWAYS, CACHED, CACHED_ZIPPED, NEVER
 	dynamic_assets_generation_mode = "CACHED"
+	#Disables the chat warning shown when Enhanced Block Entities is installed
+	no_enhanced_block_entities_warn = false
 
 [sign]
 	#Gives signs a pixel consistent model and texture. Also affects other mods. This also makes them use a Block Model, making them render much much much faster than as block entities
@@ -89,6 +90,8 @@
 	lantern_item_holding = true
 	#Makes lantern holding animation have the arm angled more upwards. Looks better if you have dynamic lights on
 	lantern_item_holding_up = true
+	#Renders the swaying wall lantern through the item renderer so its shading comes from the model's normals instead of the block model's baked per-face shading. This makes the lantern shade correctly no matter which wall it faces, at the cost of losing block ambient occlusion. Only affects the animated (close-up) renderer
+	entity_shading = true
 
 	[lantern.swing_physics]
 		min_angle = 0.7999999523162842
@@ -126,3 +129,7 @@
 	fixed_holding_animations = false
 	#Prevents campfire smoke from rendering if there is a solid block above it
 	campfire_smoke_through_blocks = false
+	#Renders a flame particle on top of held torches
+	torch_item_flame = false
+	#Gives the villager trade buttons the same look loom and stonecutter buttons have
+	villager_trade_buttons = true
