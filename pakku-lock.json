@@ -3939,9 +3939,9 @@
             ]
         },
         {
-            "pakku_id": "MBUxbJUbuhOhmryo",
+            "pakku_id": "vqYPIgcIU332HHHj",
             "type": "MOD",
-            "side": "BOTH",
+            "side": "CLIENT",
             "slug": {
                 "modrinth": "emi"
             },
@@ -3954,7 +3954,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "emi-1.1.22+1.21.1+neoforge.jar",
+                    "file_name": "emi-1.1.24+1.21.1+neoforge.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -3962,16 +3962,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/fRiHVvU7/versions/ouSj7NfF/emi-1.1.22+1.21.1+neoforge.jar",
-                    "id": "ouSj7NfF",
+                    "url": "https://cdn.modrinth.com/data/fRiHVvU7/versions/5sIPA1To/emi-1.1.24+1.21.1+neoforge.jar",
+                    "id": "5sIPA1To",
                     "parent_id": "fRiHVvU7",
                     "hashes": {
-                        "sha512": "6b4f2b93ccd40bbbf3d1f368a9d92b43777543c44243a76ed4010bd563a7f9658decdd58a3d79a3cdc04a288bf98e327a1cce93a5a9d2b8840306578fe633bca",
-                        "sha1": "cbbd038194cd63249db185c53b1d50a1767f80a3"
+                        "sha512": "f4c45ed686fe617311d6debadcb6ace5963e66f8cfe0cfed398231f081f87407070efc7a73c8b695d158f1d87a97180737b9107a46771e77df2bc9a7dc715ebd",
+                        "sha1": "3fd494b37027dfbc7f78414d7cbf251c9eb6738a"
                     },
                     "required_dependencies": [],
-                    "size": 1038248,
-                    "date_published": "2025-04-14T03:34:26.836424Z"
+                    "size": 1111538,
+                    "date_published": "2026-05-13T06:21:14.878169Z"
                 }
             ]
         },
@@ -4056,50 +4056,6 @@
                     ],
                     "size": 465870,
                     "date_published": "2026-01-04T16:33:12.673648Z"
-                }
-            ]
-        },
-        {
-            "pakku_id": "rYy6hNgOuT3BIiVk",
-            "pakku_links": [
-                "MBUxbJUbuhOhmryo",
-                "tbL8tCkeGeSia2W2"
-            ],
-            "type": "MOD",
-            "side": "CLIENT",
-            "slug": {
-                "modrinth": "emixx"
-            },
-            "name": {
-                "modrinth": "EMI++"
-            },
-            "id": {
-                "modrinth": "AWMWYMwC"
-            },
-            "files": [
-                {
-                    "type": "modrinth",
-                    "file_name": "emixx-neoforge-1.2.3.jar",
-                    "mc_versions": [
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "beta",
-                    "url": "https://cdn.modrinth.com/data/AWMWYMwC/versions/sdRUQHCL/emixx-neoforge-1.2.3.jar",
-                    "id": "sdRUQHCL",
-                    "parent_id": "AWMWYMwC",
-                    "hashes": {
-                        "sha512": "15eb94d5c2be00f06a96a45a68fc2fe3171f60c87c26d2ebf4ef359271f8b0ee3995f281af17e2b228ab543770ec2d8b486c98f0fe4b511c168a4c0c0e30db40",
-                        "sha1": "5bfd6ca144cd6cf72c6df9a9ab400403ca774e79"
-                    },
-                    "required_dependencies": [
-                        "fRiHVvU7",
-                        "ordsPcFz"
-                    ],
-                    "size": 207208,
-                    "date_published": "2025-08-29T11:33:57.071643Z"
                 }
             ]
         },
@@ -8304,6 +8260,50 @@
             ]
         },
         {
+            "pakku_id": "Y4hjtggQidwRsWd6",
+            "pakku_links": [
+                "WWiX8dynol1cESFV",
+                "vqYPIgcIU332HHHj"
+            ],
+            "type": "MOD",
+            "side": "CLIENT",
+            "slug": {
+                "modrinth": "reliable-emi"
+            },
+            "name": {
+                "modrinth": "Reliable EMI (REMI)"
+            },
+            "id": {
+                "modrinth": "N9WucjHL"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "remi-neoforge-1.21.1-4.6.9.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/N9WucjHL/versions/TW4FpmG9/remi-neoforge-1.21.1-4.6.9.jar",
+                    "id": "TW4FpmG9",
+                    "parent_id": "N9WucjHL",
+                    "hashes": {
+                        "sha512": "6795537738ea4359acca54417057439719c8f3c50aefc68b667266f750eea388e24b3c4cd09e7c82294e593a69a7f89664a8ae382c6550637fe7c5f6873e867a",
+                        "sha1": "f90db9347ca0f230758478e5aac80f34a3486ec6"
+                    },
+                    "required_dependencies": [
+                        "1eAoo2KR",
+                        "fRiHVvU7"
+                    ],
+                    "size": 279057,
+                    "date_published": "2026-09-07T07:02:47.167685Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "qjtj1Mo40p0UcVrE",
             "type": "MOD",
             "side": "BOTH",
@@ -10159,7 +10159,7 @@
             ]
         },
         {
-            "pakku_id": "zOusAT5W2COncE0N",
+            "pakku_id": "QU8SDFo2NDyu5RY7",
             "type": "MOD",
             "side": "CLIENT",
             "slug": {
@@ -10174,7 +10174,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "toomanyrecipeviewers-0.7.2+mc.21.1.jar",
+                    "file_name": "toomanyrecipeviewers-0.9.0+mc.21.1.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -10182,18 +10182,18 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/yFypjcfd/versions/46hQ6QAt/toomanyrecipeviewers-0.7.2+mc.21.1.jar",
-                    "id": "46hQ6QAt",
+                    "url": "https://cdn.modrinth.com/data/yFypjcfd/versions/pEhG9g9P/toomanyrecipeviewers-0.9.0+mc.21.1.jar",
+                    "id": "pEhG9g9P",
                     "parent_id": "yFypjcfd",
                     "hashes": {
-                        "sha512": "eedff5ceaf154571eb8fa9718734d29c8ad74f32953d2e0b728f0a7dec9d094fc309a7dc05fa4ae16ceb64d8313b0f9b1bc914dfdf8de54d8ce562840037ea1e",
-                        "sha1": "a80f68d67da36e5fdf6ab6fd7390e9361133e346"
+                        "sha512": "d3f628928fd823dd65ffdfcf8097b5af873287616e85ce3bab7e777f6db5d5edbb792f509b8ac33e786191b5a53ea6fd8e72eab1ccaa738582ea45cdfccaa0b7",
+                        "sha1": "d82ca1db3f4323534b1ce5f43b94a5ae31f65edb"
                     },
                     "required_dependencies": [
                         "fRiHVvU7"
                     ],
-                    "size": 1165041,
-                    "date_published": "2026-03-20T17:25:46.335130Z"
+                    "size": 1241625,
+                    "date_published": "2026-06-28T20:48:09.478880Z"
                 }
             ]
         },
