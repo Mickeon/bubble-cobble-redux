@@ -462,14 +462,14 @@ NativeEvents.onEvent("highest", $RenderTooltipEvent$Color, event => {
 				let b = progress * 80
 				event.setBorderStart(Color.rgba(85 + r, 101 + g, 114 + b, 1).getArgb())
 				event.setBorderEnd(Color.rgba(30, 50, 87, 1).getArgb())
-			} else if (item_stack.is("mega_showdown:mega_stone")
-				|| item_stack.is("mega_showdown:mega_stone_crystal")
+			} else if (item_stack.id == "mega_showdown:mega_stone"
+				|| item_stack.id == "mega_showdown:mega_stone_crystal"
 			) {
 				event.setBorderStart(Color.rgba(195, 202, 216, 1).getArgb())
 				event.setBorderEnd(Color.rgba(30, 50, 87, 1).getArgb())
-			} else if (item_stack.is("mega_showdown:keystone")
-				|| item_stack.is("mega_showdown:keystone_block")
-				|| item_stack.is("mega_showdown:keystone_ore")
+			} else if (item_stack.id == "mega_showdown:keystone"
+				|| item_stack.id == "mega_showdown:keystone_block"
+				|| item_stack.id == "mega_showdown:keystone_ore"
 			) {
 				event.setBorderStart(Color.rgba(
 					180 + Math.sin(Utils.getSystemTime() * 0.0025) * 60,
@@ -534,7 +534,7 @@ NativeEvents.onEvent("highest", $RenderTooltipEvent$Color, event => {
 				// Jank jank jank.
 				let color_name = item_stack.idLocation.getPath().split("_paintbrush")[0] + "_dye"
 				event.setBorderStart(Color.wrap(color_name).getArgb())
-			} else if (item_stack.is("arts_and_crafts:bleachdew")) {
+			} else if (item_stack.id == "arts_and_crafts:bleachdew") {
 				event.setBorderStart(Color.wrap("bleachdew_dye").getArgb())
 			}
 		}

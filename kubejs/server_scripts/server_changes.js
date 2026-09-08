@@ -391,7 +391,7 @@ ServerEvents.loaded(event => {
 
 // Put logs back together with Tree Bark.
 BlockEvents.rightClicked(event => {
-	if (!event.item.is("farmersdelight:tree_bark")) {
+	if (!event.item.id == "farmersdelight:tree_bark") {
 		return
 	}
 
@@ -432,7 +432,7 @@ BlockEvents.rightClicked(event => {
 
 // Repair Anvil with Iron Blocks.
 BlockEvents.rightClicked(["minecraft:chipped_anvil", "minecraft:damaged_anvil"], event => {
-	if (!event.item.is("minecraft:iron_block")) {
+	if (!event.item.id == "minecraft:iron_block") {
 		return
 	}
 

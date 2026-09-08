@@ -277,14 +277,14 @@ StartupEvents.registry("cat_variant", event => {
 NativeEvents.onEvent($ItemStackedOnOtherEvent, event => {
 	// console.log(event.slot.getSlotIndex())
 	if (event.carriedItem.isEmpty()
-	&& event.stackedOnItem.is("farmersdelight:skillet")
+	&& event.stackedOnItem.id == "farmersdelight:skillet"
 	&& event.clickAction == "SECONDARY"
 	) {
 		event.player.inventory.insertItem(event.player.getEquipment("head").copyAndClear(), false)
 		event.player.setEquipment("head", event.stackedOnItem.copyAndClear())
 		event.setCanceled(true)
 	}
-	if (event.carriedItem.is("farmersdelight:skillet") && event.slot.getSlotIndex() == 39) {
+	if (event.carriedItem.id == "farmersdelight:skillet" && event.slot.getSlotIndex() == 39) {
 		event.player.inventory.insertItem(event.slot.item.copyAndClear(), false)
 		event.slot.set(event.carriedItem.copyAndClear())
 		event.setCanceled(true)
