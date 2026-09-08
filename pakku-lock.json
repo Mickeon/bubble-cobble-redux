@@ -8,11 +8,7 @@
     },
     "projects": [
         {
-            "pakku_id": "08I4CB46BKqGToXP",
-            "pakku_links": [
-                "JmvMnLNaQfW308CI",
-                "YmqS1wHkLdvShkNO"
-            ],
+            "pakku_id": "jWnwGH6Y5cXFsT2i",
             "type": "MOD",
             "side": "CLIENT",
             "slug": {
@@ -58,7 +54,8 @@
                         "1.21.7",
                         "1.21.8",
                         "1.21.9",
-                        "1.21.10"
+                        "1.21.10",
+                        "1.21.11"
                     ],
                     "loaders": [
                         "fabric",
@@ -6258,10 +6255,7 @@
             ]
         },
         {
-            "pakku_id": "PQzCCNfTByn2W3DX",
-            "pakku_links": [
-                "6vHwPYI1wvMA4F1o"
-            ],
+            "pakku_id": "CqAU0Zm1LGuzNjEE",
             "type": "MOD",
             "side": "SERVER",
             "slug": {
@@ -6289,10 +6283,14 @@
                         "1.21.8",
                         "1.21.9",
                         "1.21.10",
-                        "1.21.11"
+                        "1.21.11",
+                        "26.1",
+                        "26.1.1",
+                        "26.1.2"
                     ],
                     "loaders": [
                         "fabric",
+                        "forge",
                         "neoforge"
                     ],
                     "release_type": "release",
@@ -6312,7 +6310,7 @@
             ]
         },
         {
-            "pakku_id": "hJlZRBAt0HP37esR",
+            "pakku_id": "6FNqxgeJPnrwqXLU",
             "type": "MOD",
             "side": "SERVER",
             "slug": {
@@ -6340,10 +6338,14 @@
                         "1.21.8",
                         "1.21.9",
                         "1.21.10",
-                        "1.21.11"
+                        "1.21.11",
+                        "26.1",
+                        "26.1.1",
+                        "26.1.2"
                     ],
                     "loaders": [
                         "fabric",
+                        "forge",
                         "neoforge"
                     ],
                     "release_type": "release",
@@ -6363,10 +6365,7 @@
             ]
         },
         {
-            "pakku_id": "m2sUL4dAEXHW6ioi",
-            "pakku_links": [
-                "6vHwPYI1wvMA4F1o"
-            ],
+            "pakku_id": "1XbhRoCbZfKw8Q4h",
             "type": "MOD",
             "side": "SERVER",
             "slug": {
@@ -6394,10 +6393,14 @@
                         "1.21.8",
                         "1.21.9",
                         "1.21.10",
-                        "1.21.11"
+                        "1.21.11",
+                        "26.1",
+                        "26.1.1",
+                        "26.1.2"
                     ],
                     "loaders": [
                         "fabric",
+                        "forge",
                         "neoforge"
                     ],
                     "release_type": "release",
@@ -6907,7 +6910,7 @@
             ]
         },
         {
-            "pakku_id": "QY37YlZ7D8E9OPBM",
+            "pakku_id": "VefCn3T567VW0GJy",
             "type": "MOD",
             "side": "BOTH",
             "slug": {
@@ -6937,7 +6940,9 @@
                         "sha512": "ab10d2f759df613d5094bac26c5a8bbe144786699018f7e4ae027fc4a86632aa7f96206f2c8be9970338eadef42539614a19b41d0d70b6216c3ed1c4c4421f0a",
                         "sha1": "d64475cd77444b056ece6472c79d40293dc63c6c"
                     },
-                    "required_dependencies": [],
+                    "required_dependencies": [
+                        "8BmcQJ2H"
+                    ],
                     "size": 36042925,
                     "date_published": "2026-03-15T06:52:50.101583Z"
                 }
@@ -7534,10 +7539,7 @@
             ]
         },
         {
-            "pakku_id": "QkETQJLviCPiY4wf",
-            "pakku_links": [
-                "hYihIjRF5Sndl85s"
-            ],
+            "pakku_id": "r3V26TZzQ5xmhh4i",
             "type": "MOD",
             "side": "CLIENT",
             "slug": {
@@ -7555,7 +7557,10 @@
                     "file_name": "PersistentCreativeInventory-1.0.1.jar",
                     "mc_versions": [
                         "1.21",
-                        "1.21.1"
+                        "1.21.1",
+                        "26.1",
+                        "26.1.1",
+                        "26.1.2"
                     ],
                     "loaders": [
                         "fabric",
@@ -8419,7 +8424,7 @@
             ]
         },
         {
-            "pakku_id": "MtJFmEaeboknr1Sr",
+            "pakku_id": "kScEmHlgJPvCI7Ag",
             "type": "MOD",
             "side": "SERVER",
             "slug": {
@@ -8437,7 +8442,17 @@
                     "file_name": "repurposed_structures_farmers_delight_compat_v7.jar",
                     "mc_versions": [
                         "1.21",
-                        "1.21.1"
+                        "1.21.1",
+                        "1.21.2",
+                        "1.21.3",
+                        "1.21.4",
+                        "1.21.5",
+                        "1.21.6",
+                        "1.21.7",
+                        "1.21.8",
+                        "1.21.9",
+                        "1.21.10",
+                        "1.21.11"
                     ],
                     "loaders": [
                         "fabric",
@@ -8452,8 +8467,8 @@
                         "sha1": "7304ad83540513d16926dec8c1a9ba98c0e8d424"
                     },
                     "required_dependencies": [
-                        "QDNS5oAT",
-                        "R2OftAxM"
+                        "R2OftAxM",
+                        "QDNS5oAT"
                     ],
                     "size": 57233,
                     "date_published": "2024-07-26T00:47:58.112441Z"
@@ -8658,7 +8673,7 @@
             ]
         },
         {
-            "pakku_id": "OUeGggTfIgEk7ZGJ",
+            "pakku_id": "bzobajyY1jgk0MQz",
             "type": "MOD",
             "side": "BOTH",
             "slug": {
@@ -8679,14 +8694,24 @@
                         "1.21.1",
                         "1.21.2",
                         "1.21.3",
-                        "1.21.4"
+                        "1.21.4",
+                        "1.21.5",
+                        "1.21.6",
+                        "1.21.7",
+                        "1.21.8",
+                        "1.21.9",
+                        "1.21.10",
+                        "1.21.11",
+                        "26.1",
+                        "26.1.1",
+                        "26.1.2"
                     ],
                     "loaders": [
                         "fabric",
                         "forge",
                         "neoforge"
                     ],
-                    "release_type": "beta",
+                    "release_type": "release",
                     "url": "https://cdn.modrinth.com/data/sk9knFPE/versions/ZdLtebKH/rhino-2101.2.7-build.81.jar",
                     "id": "ZdLtebKH",
                     "parent_id": "sk9knFPE",
