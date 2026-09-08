@@ -42,8 +42,9 @@
 	show_insomnia_timer = false
 	#Show insomnia cooldown as a small bed icon above crossair when aiming at a bed or in one
 	crossair_insomnia_cooldown = true
-	#Displays current time when sleeping
-	show_time_when_sleeping = true
+	#Displays current time when sleeping. WITH_CLOCK only shows it while a clock is in the inventory
+	#Allowed Values: OFF, ALWAYS, WITH_CLOCK
+	show_time_when_sleeping = "ALWAYS"
 	#Makes villagers close their eyes when sleeping
 	sleeping_villagers_eyes = true
 	#Spawn particles when sleeping. Set to 0 to disable

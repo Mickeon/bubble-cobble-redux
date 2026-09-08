@@ -220,10 +220,6 @@ const ITEM_TAG_DISPLAY_INFO = [
 	{tag: "simpletms:tm_items", name: "TMs", model_type: "split", textures: ["simpletms:item/tm/fire", "simpletms:item/tm/dragon", "simpletms:item/tm/fairy", "simpletms:item/tm/grass"]},
 	{tag: "simpletms:tr_items", name: "TRs", model_type: "split", textures: ["simpletms:item/tr/fire", "simpletms:item/tr/dragon", "simpletms:item/tr/fairy", "simpletms:item/tr/grass"]},
 
-	// https://github.com/MehVahdJukaar/SnowySpirit/pull/123
-	{tag: "snowyspirit:gumdrops", name: "Gumdrops"},
-	{tag: "snowyspirit:sleds", name: "Sleds"},
-
 	{tag: "sophisticatedbackpacks:upgrade", name: "Backpack Upgrades"},
 	{tag: "sophisticatedstorage:all_storage", name: "All Storage"},
 	{tag: "sophisticatedstorage:base_tier_wooden_storage", name: "Base Tier Wooden Storage"},

@@ -242,7 +242,6 @@ ServerEvents.tags("block", event => {
 	event.add("create:brittle", // Allows these blocks to be assembled/unassembled in contraptions without destroying themselves.
 		"#brewinandchewin:cheese_wheels/unripe", "#brewinandchewin:cheese_wheels/ripe", "brewinandchewin:coaster", "brewinandchewin:pizza", "brewinandchewin:quiche",
 		"supplementaries:gunpowder", // I forgot to report here: https://github.com/MehVahdJukaar/Supplementaries/pull/1933.
-		"#snowyspirit:gumdrops", "snowyspirit:wreath", // Reported: https://github.com/MehVahdJukaar/SnowySpirit/pull/125.
 		// Unfortunately manual. Also somewhat reported: https://github.com/vectorwing/FarmersDelight/issues/1255.
 		"farmersdelight:apple_pie", "farmersdelight:chocolate_pie", "farmersdelight:sweet_berry_cheesecake", "farmersdelight:honey_glazed_ham_block", "farmersdelight:shepherds_pie_block", "farmersdelight:rice_roll_medley_block",
 		"minersdelight:fake_meatloaf", "minersdelight:glazed_arachnid_limbs", "minersdelight:stuffed_squid",

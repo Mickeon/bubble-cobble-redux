@@ -23,8 +23,8 @@
 		#Gives some benefit when sleeping next to somebody else. By default only works in conjunction with heartstone mod
 		#Allowed Values: HEARTSTONE_PLAYER_OR_VILLAGER, HEARTSTONE_PLAYER, ANY_PLAYER_OR_VILLAGER, ANY_PLAYER, OFF
 		enabled = "ANY_PLAYER_OR_VILLAGER"
-		#Effect to give to players when they wake up
 		#This is a list. Add more entries with syntax [[...]]
+		#Effect to give to players when they wake up
 		[[misc.heartstone_mod_integration.effects]]
 			intensity_per_level = 0.0
 			base_duration = 1800
@@ -56,6 +56,24 @@
 	prevented_by_dream_essence = true
 	#Only spawns bedbugs when sleeping in your home bed
 	only_when_in_home_bed = false
+	#Chance for each bed generated in a woodland mansion to start out infested with a bedbug. Set to 0 to disable
+	# Default: 0.5
+	# Range: 0.0 ~ 1.0
+	mansion_infestation_chance = 0.5
+	#Enables phantom-style ambient bedbug spawning while awake (requires consistent recent sleep, opposite of phantoms)
+	ambient_spawner = true
+	#Consecutive nights slept before ambient bedbugs can appear (phantoms use ~3 nights without sleep)
+	# Default: 3
+	# Range: 1 ~ 50
+	ambient_min_consecutive_nights = 3
+	#Min spawn distance from the player for ambient bedbugs. Note that natural spawn rules still forbid spawning within 24 blocks of any player, so values below that have no effect
+	# Default: 24
+	# Range: 1 ~ 64
+	ambient_min_spawn_radius = 24
+	#Max spawn distance from the player for ambient bedbugs
+	# Default: 48
+	# Range: 1 ~ 64
+	ambient_max_spawn_radius = 48
 
 [sleep_cooldown]
 	#Time before you can sleep/rest again after you've slept in a hammock
