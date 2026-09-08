@@ -1,5 +1,5 @@
 {
-  "configVersion": 7,
+  "configVersion": 8,
   "renderNametagsThroughWalls": true,
   "blockEntityWhitelist": [
     "create:rope_pulley",
@@ -60,6 +60,13 @@
     "minecraft:bamboo_chest_raft",
     "minecraft:mangrove_chest_boat",
     "voidscape:corrupted_pawn",
+    "cinematiccataclysm:scylla_cutscene",
+    "cinematiccataclysm:maledictus_cutscene",
+    "cinematiccataclysm:leviathan_cutscene",
+    "cinematiccataclysm:ancient_remnant_cutscene",
+    "createbigcannons:cannon_carriage",
+    "createbigcannons:pitch_contraption",
+    "cinematiccataclysm:ignis_cutscene",
     "cobblemon:empty_pokeball",
     "cobblemon:boat",
     "cobblemon:chest_boat",
@@ -77,5 +84,7 @@
   "disableF3": false,
   "skipEntityCulling": false,
   "skipBlockEntityCulling": false,
-  "blockEntityFrustumCulling": true
+  "blockEntityFrustumCulling": true,
+  "forceDisplayCulling": false,
+  "solidLeaves": false
 }

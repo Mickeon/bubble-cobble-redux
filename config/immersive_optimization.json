@@ -1,7 +1,8 @@
 {
   "_documentation": "https://github.com/Luke100000/ImmersiveOptimization/wiki",
   "enableEntities": true,
-  "enableBlockEntities": true,
+  "enableBlockEntities": false,
+  "optimizeForceLoadedChunks": false,
   "enableDistanceCulling": true,
   "enableTrackingCulling": true,
   "enableViewportCulling": true,
@@ -23,15 +24,16 @@
   "entities": {
     "minecraft:ender_pearl": false,
     "fromanotherworld:starship": false,
+    "#minecraft:arrows": false,
     "minecraft:player": false,
     "valkyrienskies": false,
-    "minecraft:arrow": false,
     "create": false,
     "minecraft:ender_dragon": false,
     "bits_n_bobs:inert_stationary_contraption": false,
     "yo_hooks:hook_entity": false,
     "cobblemon:poke_bobber": false,
-    "cobblemon:empty_pokeball": false
+    "cobblemon:empty_pokeball": false,
+    "*": true
   },
   "cullProjectiles": false,
   "version": 2,
