@@ -2,6 +2,7 @@
     "recommendations": [
         "prunoideae.probejs",
         "grant.mc-color-updated",
-        "misodee.vscode-nbt"
+        "misodee.vscode-nbt",
+        "typescriptteam.native-preview"
     ]
 }

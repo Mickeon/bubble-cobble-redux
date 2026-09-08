@@ -1,0 +1,18 @@
+{
+    "probejs.modHash": -8967269308374427635,
+    "probejs.complete": false,
+    "probejs.enableDecompiler": false,
+    "probejs.enabled": false,
+    "probejs.newGame": false,
+    "probejs.generateBeans": true,
+    "probejs.fullScanMods": [
+        "minecraft",
+        "kubejs",
+        "neoforge",
+        "probejs",
+        "cobblemon",
+        "create"
+    ],
+    "probejs.hintsForLLM": false,
+    "probejs.reset": true
+}
