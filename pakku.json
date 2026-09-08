@@ -40,13 +40,11 @@
         "!config/waterframes-client.toml",
         "!config/aiutd-enduser.json5",
         "!config/cobbreeding/encryption",
-
         "!*/jsconfig.json",
         "!kubejs/config/probe-settings.json",
         "!kubejs/config/web_server.json",
         "!*.bak",
         "!*.aseprite",
-
         "!config/ali",
         "!config/moveslikemafuyu_config.toml",
         "!config/smartkeyprompts_config.toml",
@@ -91,7 +89,6 @@
         "atlasviewer": {
             "export": false
         },
-
         "creativecore": {
             "side": "BOTH"
         },
@@ -119,14 +116,12 @@
         "sophisticated-sorter": {
             "side": "BOTH"
         },
-
         "preloading-tricks": {
             "side": "CLIENT"
         },
         "mod-sets": {
             "side": "CLIENT"
         },
-
         "spark": {
             "side": "SERVER"
         },

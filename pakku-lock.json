@@ -8,7 +8,7 @@
     },
     "projects": [
         {
-            "pakku_id": "jWnwGH6Y5cXFsT2i",
+            "pakku_id": "h3g4h7jAyeXICINe",
             "type": "MOD",
             "side": "CLIENT",
             "slug": {
@@ -23,7 +23,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "cpm-svc-compat-1.2.1.jar",
+                    "file_name": "cpm-svc-compat-1.3.2.jar",
                     "mc_versions": [
                         "1.16.4",
                         "1.16.5",
@@ -55,7 +55,10 @@
                         "1.21.8",
                         "1.21.9",
                         "1.21.10",
-                        "1.21.11"
+                        "1.21.11",
+                        "26.1",
+                        "26.1.1",
+                        "26.1.2"
                     ],
                     "loaders": [
                         "fabric",
@@ -64,19 +67,19 @@
                         "quilt"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/xVbeCJyB/versions/DURp3gsS/cpm-svc-compat-1.2.1.jar",
-                    "id": "DURp3gsS",
+                    "url": "https://cdn.modrinth.com/data/xVbeCJyB/versions/D1ulkgL6/cpm-svc-compat-1.3.2.jar",
+                    "id": "D1ulkgL6",
                     "parent_id": "xVbeCJyB",
                     "hashes": {
-                        "sha512": "ea8d77345ab4ae1fdecc53e0d7ab28c3e0d9c8753cafff2ee9b6bfc66f745fe14dd1b44a983008e41fc9439dbcecb93c9abbf64d3c2881a0bd8bcb12c7f4f752",
-                        "sha1": "11d954eb33ddb8f15a4332139e441f242bbe9f6d"
+                        "sha512": "06067b11b3dcb0380a7dfb7dcd835882e50c9e2c0bc91620c06fe4755c344db16e4d5c9cd191596e971bab47f8012911eb22c45a82ce6100395ab622b95ab418",
+                        "sha1": "8461351bc6ca9b5bd3d9853f0708e899928f9933"
                     },
                     "required_dependencies": [
                         "h1E7sQNL",
                         "9eGKb6K1"
                     ],
-                    "size": 29437,
-                    "date_published": "2024-04-25T19:10:13.980482Z"
+                    "size": 27257,
+                    "date_published": "2026-07-26T19:02:33.695385Z"
                 }
             ]
         },
@@ -827,7 +830,7 @@
             ]
         },
         {
-            "pakku_id": "Quz1QiK4nnDhx200",
+            "pakku_id": "foGKPSqDm5DnEQ0K",
             "type": "MOD",
             "side": "BOTH",
             "slug": {
@@ -842,7 +845,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "BTP-NeoForge-1.21.1-1.0.2.jar",
+                    "file_name": "BTP-NeoForge-1.21.1-2.0.1.jar",
                     "mc_versions": [
                         "1.21",
                         "1.21.1"
@@ -851,16 +854,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/H3a6cFKr/versions/t2I6XEOQ/BTP-NeoForge-1.21.1-1.0.2.jar",
-                    "id": "t2I6XEOQ",
+                    "url": "https://cdn.modrinth.com/data/H3a6cFKr/versions/1IKhBo7j/BTP-NeoForge-1.21.1-2.0.1.jar",
+                    "id": "1IKhBo7j",
                     "parent_id": "H3a6cFKr",
                     "hashes": {
-                        "sha512": "80cb064311cf2faddca63179b647e4b9b3622855d30cc841468830f321c5a8b66c23cc58646476fd3601d89a68d71fe948ffc1c1c4579178e5284640494c88ab",
-                        "sha1": "918621be1919941e920d3592026a3b0366821c6f"
+                        "sha512": "3f9a825ad2618fd84dfae26acc7d189db138d39e6ccd06fde97598b2d7c9e8096995d16617d3516e01e18e0915ead7f9a96a423f20878533e543125a39ec8b89",
+                        "sha1": "fcbe40d2dccab177afd6514269f7a66d70fe7afc"
                     },
                     "required_dependencies": [],
-                    "size": 815875,
-                    "date_published": "2025-11-26T17:02:03.811104Z"
+                    "size": 2042799,
+                    "date_published": "2026-07-18T10:29:17.134231Z"
                 }
             ]
         },
@@ -909,7 +912,7 @@
             ]
         },
         {
-            "pakku_id": "7nYfYFpTGvO8OR5H",
+            "pakku_id": "hQnPRlCbnfB6P0tx",
             "type": "MOD",
             "side": "BOTH",
             "slug": {
@@ -924,7 +927,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "bettercombat-neoforge-2.3.2+1.21.1.jar",
+                    "file_name": "bettercombat-neoforge-2.4.0+1.21.1.jar",
                     "mc_versions": [
                         "1.21",
                         "1.21.1"
@@ -933,19 +936,19 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/5sy6g3kz/versions/2NyTus6V/bettercombat-neoforge-2.3.2+1.21.1.jar",
-                    "id": "2NyTus6V",
+                    "url": "https://cdn.modrinth.com/data/5sy6g3kz/versions/VhIOvcXP/bettercombat-neoforge-2.4.0+1.21.1.jar",
+                    "id": "VhIOvcXP",
                     "parent_id": "5sy6g3kz",
                     "hashes": {
-                        "sha512": "abc6c5e531492bcc9368b3c79034a19203b9fa871c7ec82380d47c776a087debce6f8e0f7af86993a1a125668a7eb2831af70a097ff2b90e01a0db83eccd111a",
-                        "sha1": "f752fbbf81027948ef4ab0fc0066260ccf574179"
+                        "sha512": "db24730a42ae7e2dd546ee031d2f5e0dd6f9896418417a529fa21a44121761ebb29c8b8299db8f20500f7497f7b60a7d793b66c93abf37a8ea0aa3edafd80eb6",
+                        "sha1": "bacbc8c86671663e9998b141c5732250c1f4d4fb"
                     },
                     "required_dependencies": [
-                        "gedNE4y2",
-                        "9s6osm5g"
+                        "9s6osm5g",
+                        "gedNE4y2"
                     ],
-                    "size": 1041845,
-                    "date_published": "2026-03-07T00:07:00.650969Z"
+                    "size": 1045389,
+                    "date_published": "2026-07-14T10:59:20.462587Z"
                 }
             ]
         },
@@ -3481,7 +3484,7 @@
             ]
         },
         {
-            "pakku_id": "JmvMnLNaQfW308CI",
+            "pakku_id": "PDwfcitKw4E4qyXE",
             "type": "MOD",
             "side": "BOTH",
             "slug": {
@@ -3496,7 +3499,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "CustomPlayerModels-1.21-0.6.25a.jar",
+                    "file_name": "CustomPlayerModels-1.21-0.6.27a.jar",
                     "mc_versions": [
                         "1.21",
                         "1.21.1"
@@ -3505,16 +3508,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/h1E7sQNL/versions/P9MI3qCj/CustomPlayerModels-1.21-0.6.25a.jar",
-                    "id": "P9MI3qCj",
+                    "url": "https://cdn.modrinth.com/data/h1E7sQNL/versions/YXfPij2E/CustomPlayerModels-1.21-0.6.27a.jar",
+                    "id": "YXfPij2E",
                     "parent_id": "h1E7sQNL",
                     "hashes": {
-                        "sha512": "14e1495c9713263c28ca5d1466910b0196e8304b8901e66e558bb9bd5d6ac3023f6a62921206d10377346945d1813b48d48f3255ad01f8fd624176f34b7460af",
-                        "sha1": "c896082b4fd9b6ee8895abead19ac29aa6c4df1f"
+                        "sha512": "5af1150d16bfc3adfa942bf606a8e4d829cdcc15d3ec46eb98cdb03bd85db81ceac4b85274b4207a928497d78a4f53afeab1cf5b43ac73219d20147948fea38b",
+                        "sha1": "34d57efcc56c043f89c61f169944d7b95c11f504"
                     },
                     "required_dependencies": [],
-                    "size": 2780404,
-                    "date_published": "2025-11-06T15:15:30.522307Z"
+                    "size": 2793136,
+                    "date_published": "2026-07-05T15:04:52.094627Z"
                 }
             ]
         },
@@ -9106,7 +9109,7 @@
             ]
         },
         {
-            "pakku_id": "Ou4ANL6esU3hP80u",
+            "pakku_id": "fr6Ez5WHb06bjspA",
             "type": "MOD",
             "side": "BOTH",
             "slug": {
@@ -9121,7 +9124,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "voicechat-neoforge-1.21.1-2.6.14.jar",
+                    "file_name": "voicechat-neoforge-1.21.1-2.6.22.jar",
                     "mc_versions": [
                         "1.21",
                         "1.21.1"
@@ -9130,16 +9133,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/9eGKb6K1/versions/BhWeUeeg/voicechat-neoforge-1.21.1-2.6.14.jar",
-                    "id": "BhWeUeeg",
+                    "url": "https://cdn.modrinth.com/data/9eGKb6K1/versions/2s7zUspF/voicechat-neoforge-1.21.1-2.6.22.jar",
+                    "id": "2s7zUspF",
                     "parent_id": "9eGKb6K1",
                     "hashes": {
-                        "sha512": "bfcb1984d0a57e871b8efce67ae42a65a875a7745ace315d2cb6ae1b1df16603a3ca6dd3058f6973992afe0a6f301bb79db4e6e852be2fc25bbbdccb9841c0af",
-                        "sha1": "617b3b4e39f119974dc6439caeb1b39c362e4467"
+                        "sha512": "309e3b18e299b2bccf9128dbb05c2603a9860f7cd68858d23f8fdb8265ea85ec7fb1655c95b87c0a9522ae1fd6380b26e4a4c31207f9c7af80870fcc6207abad",
+                        "sha1": "3b2001d8df61fe6dc03dcd5f5cd4a8f49821feb0"
                     },
                     "required_dependencies": [],
-                    "size": 4894250,
-                    "date_published": "2026-03-28T09:12:16.526727Z"
+                    "size": 4918442,
+                    "date_published": "2026-08-08T11:51:32.715274Z"
                 }
             ]
         },
