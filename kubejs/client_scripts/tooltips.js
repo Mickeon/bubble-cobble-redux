@@ -241,7 +241,13 @@ ItemEvents.modifyTooltips(event => {
 	event.add(["supplementaries:flower_box"], [subtle("Can only contain ").append(Text.gold("tall flowers"))])
 	event.add(["supplementaries:pulley_block"], [subtle("").append(Text.gold("Ropes")).append(" and ").append(Text.gold("chains")).append(" in here!")])
 
-	event.modify(["#c:foods/edible_when_placed", "supplementaries:lunch_basket", "supplementaries:cannonball"], text => {
+	event.modify([
+		"#c:foods/edible_when_placed",
+		"minecraft:pumpkin_pie", // Odd edge-case. It can also be placed on Food Plates.
+		"supplementaries:lunch_basket",
+		"supplementaries:cannonball"
+	], text => {
+		text.removeText(Text.translate("tooltip.farmersdelight.placeable")) // If it exists, replace with our tooltip. TODO: Report this. Can it be a config?
 		text.insert(1, PLACEABLE_TOOLTIP)
 	})
 

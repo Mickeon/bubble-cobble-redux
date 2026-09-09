@@ -69,7 +69,7 @@
 					"ambient": true,
 					"amplifier": 0,
 					"duration_in_ticks": 300,
-					"effect": "farmersdelight:comfort",
+					"effect": "brewinandchewin:sweet_heart",
 					"show_icon": false,
 					"visible": false
 				}

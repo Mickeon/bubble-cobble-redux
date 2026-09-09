@@ -380,7 +380,7 @@ ServerEvents.generateData("last", event => {
 				conditions: [{
 					condition: "minecraft:match_tool",
 					predicate: {
-						items: "#farmersdelight:tools/knives"
+						items: "#c:tools/knives"
 					}
 				}],
 				entries: [{
@@ -406,7 +406,7 @@ ServerEvents.generateData("last", event => {
 		const conditions = [{
 			condition: "minecraft:match_tool",
 			predicate: {
-				items: "#farmersdelight:tools/knives"
+				items: "#c:tools/knives"
 			}
 		}]
 		if (chance_based) {

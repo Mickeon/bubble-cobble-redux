@@ -62,7 +62,7 @@ StartupEvents.registry("item", event => {
 					.nutrition(2)
 					.saturation(1)
 					.alwaysEdible()
-					.effect("farmersdelight:comfort", 5 * MIN, 0, 1.0)
+					.effect("brewinandchewin:sweet_heart", 5 * MIN, 0, 1.0)
 					.effect("minecraft:slowness", 0.1 * MIN, 20, 1.0)
 					.usingConvertsTo(Item.of("minecraft:glass_bottle"))
 			)

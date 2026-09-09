@@ -234,6 +234,7 @@ ServerEvents.tags("item", event => {
 		"farmersdelight:fried_rice",
 		"farmersdelight:fried_egg",
 		"farmersdelight:fruit_salad",
+		"farmersdelight:gleaming_salad",
 		"farmersdelight:horse_feed",
 		"farmersdelight:mushroom_rice",
 		"farmersdelight:rotten_tomato",

@@ -1105,7 +1105,7 @@
             ]
         },
         {
-            "pakku_id": "QtthYBLH5WY8xLez",
+            "pakku_id": "xE3oY7NX34BiCpIR",
             "type": "MOD",
             "side": "BOTH",
             "slug": {
@@ -1120,7 +1120,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "BrewinAndChewin-neoforge-4.4.2+1.21.1.jar",
+                    "file_name": "BrewinAndChewin-neoforge-4.5.0+1.21.1.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -1128,16 +1128,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/hIu9KJTT/versions/CKLYp96Y/BrewinAndChewin-neoforge-4.4.2+1.21.1.jar",
-                    "id": "CKLYp96Y",
+                    "url": "https://cdn.modrinth.com/data/hIu9KJTT/versions/MbcR48Ou/BrewinAndChewin-neoforge-4.5.0+1.21.1.jar",
+                    "id": "MbcR48Ou",
                     "parent_id": "hIu9KJTT",
                     "hashes": {
-                        "sha512": "ca6db594cc244307041b9f896956ad7dcba4727c62609a30aef9f913f5513238b7c898ecc39d4599385bdd177dea5c5de3149da34ab086217a307ab3f3e5aa06",
-                        "sha1": "c01b9e39b4c116c3ce4b1b66f87c1921997337a5"
+                        "sha512": "2d4d264564d12784f5425177fb1b88b5ec0d1672c0957d6a78eb1e12ffa5e0e31a7f85f8beb9c02df0489043f5d2ae5889fc3f589e8e5f8ee7971a458ba0f34d",
+                        "sha1": "bc86c776779b16dec386f4b667ff46d9e2ecb88d"
                     },
                     "required_dependencies": [],
-                    "size": 1566859,
-                    "date_published": "2026-01-25T10:36:25.690249Z"
+                    "size": 1575450,
+                    "date_published": "2026-06-24T00:01:20.791498Z"
                 }
             ]
         },
@@ -3671,7 +3671,7 @@
             ]
         },
         {
-            "pakku_id": "BjTCxjlYwmq3h7To",
+            "pakku_id": "nXxD9p2gFp5ZGNZ7",
             "type": "MOD",
             "side": "BOTH",
             "slug": {
@@ -3686,7 +3686,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "displaydelight-1.4.0.jar",
+                    "file_name": "displaydelight-1.6.0.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -3694,16 +3694,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/yXepZhp8/versions/z7aitPH9/displaydelight-1.4.0.jar",
-                    "id": "z7aitPH9",
+                    "url": "https://cdn.modrinth.com/data/yXepZhp8/versions/LhcOrDyJ/displaydelight-1.6.0.jar",
+                    "id": "LhcOrDyJ",
                     "parent_id": "yXepZhp8",
                     "hashes": {
-                        "sha512": "a72457157625b1f2fe038ba741d528bd833f79506b67698a5794880378470f99bd84544f21b6ee0cb9bdd12eb2ded68a5116f5530491fb952703851398542efa",
-                        "sha1": "2802211859cf6c4985913563b2165414ce0d6bbb"
+                        "sha512": "217ea855795936973d7f4d689b9397e7edc1ffea179fb6483037e87b64e129fe65ca3b2f37846a0696d1df91856837d5fb238e27f2d8c0fd1504581697161d5a",
+                        "sha1": "a53384fc7e66b1ed25f34fe8b168ba8174b69b2f"
                     },
                     "required_dependencies": [],
-                    "size": 1008939,
-                    "date_published": "2025-11-01T19:11:09.742146Z"
+                    "size": 1050007,
+                    "date_published": "2026-05-07T13:49:45.463462Z"
                 }
             ]
         },
@@ -4503,7 +4503,7 @@
             ]
         },
         {
-            "pakku_id": "0WfNVRuwutpHu3Em",
+            "pakku_id": "qjZPRSsfQ4JMxPxr",
             "type": "MOD",
             "side": "BOTH",
             "slug": {
@@ -4518,7 +4518,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "FarmersDelight-1.21.1-1.2.11.jar",
+                    "file_name": "FarmersDelight-1.21.1-1.3.4.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -4526,16 +4526,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/R2OftAxM/versions/cYqC3svy/FarmersDelight-1.21.1-1.2.11.jar",
-                    "id": "cYqC3svy",
+                    "url": "https://cdn.modrinth.com/data/R2OftAxM/versions/XTVZDOol/FarmersDelight-1.21.1-1.3.4.jar",
+                    "id": "XTVZDOol",
                     "parent_id": "R2OftAxM",
                     "hashes": {
-                        "sha512": "0af142f085dbb3178bdb521b80bcbf6fd0d0d767df2a899df9066f0fe5641240da15343fe5ed7441d1e44aeff72e402fe17157f2003932ae03761788417e0332",
-                        "sha1": "2415b91d6437977e676985b4a2ef877208d202e1"
+                        "sha512": "1f6f8796469f747cff36f477b4f589a3d69613882399f9ee7f86db36c7bca9aa4828731f43db15dc6c7f5a4c1bbe3d4092a232e8cef010b09cec0581848fda90",
+                        "sha1": "27675ddfcb8cc37e6ea1ab6c15051c7949d94657"
                     },
                     "required_dependencies": [],
-                    "size": 2941573,
-                    "date_published": "2026-03-23T20:53:30.208345Z"
+                    "size": 3160490,
+                    "date_published": "2026-08-29T23:21:15.190939Z"
                 }
             ]
         },
@@ -6526,7 +6526,7 @@
             ]
         },
         {
-            "pakku_id": "3XT9TXw1l9FlBAiv",
+            "pakku_id": "8hzpeBjwHJi7fpFQ",
             "type": "MOD",
             "side": "BOTH",
             "slug": {
@@ -6541,7 +6541,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "minersdelight-1.21.1-1.4.2.jar",
+                    "file_name": "minersdelight-1.21.1-1.4.5.jar",
                     "mc_versions": [
                         "1.21",
                         "1.21.1"
@@ -6550,19 +6550,19 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/qMxbM4BQ/versions/owA45PkH/minersdelight-1.21.1-1.4.2.jar",
-                    "id": "owA45PkH",
+                    "url": "https://cdn.modrinth.com/data/qMxbM4BQ/versions/YUHbwbgQ/minersdelight-1.21.1-1.4.5.jar",
+                    "id": "YUHbwbgQ",
                     "parent_id": "qMxbM4BQ",
                     "hashes": {
-                        "sha512": "bfd76ad8ea7c87492f13a1fd7095dfde2d6c8d1096bc9ab87d8f8dc650ff632c5d930b7facec6d52ef4d250336935b171a6d7bf5f958299318dd8586da4ddb09",
-                        "sha1": "c19ad4f93945a92f83ae6fc9bb5a0d74d8c5cf73"
+                        "sha512": "98db53ab135281ab11e9abacbce846bfb42fdee6e0a85ae38802a5809fddc24af2e3fb5ba6ed53aa2244ce45f3a5ff93970dd1bc1b55d599560f99019a7fcac1",
+                        "sha1": "9361a43c3b2cfeda977d34a28e25a6e089465dcc"
                     },
                     "required_dependencies": [
                         "bN3xUWdo",
                         "R2OftAxM"
                     ],
-                    "size": 386636,
-                    "date_published": "2025-08-07T19:07:07.577908Z"
+                    "size": 390203,
+                    "date_published": "2026-04-29T18:11:06.051897Z"
                 }
             ]
         },
@@ -6899,7 +6899,7 @@
             ]
         },
         {
-            "pakku_id": "2Ht4A28ZuZI1PY1F",
+            "pakku_id": "ndXK4engkIjD6eQk",
             "type": "MOD",
             "side": "BOTH",
             "slug": {
@@ -6914,7 +6914,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "MyNethersDelight-1.21.1-1.9.jar",
+                    "file_name": "MyNethersDelight-1.21.1-1.10.4.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -6922,18 +6922,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/O53VhQoZ/versions/n2vJCdff/MyNethersDelight-1.21.1-1.9.jar",
-                    "id": "n2vJCdff",
+                    "url": "https://cdn.modrinth.com/data/O53VhQoZ/versions/OdH19ieD/MyNethersDelight-1.21.1-1.10.4.jar",
+                    "id": "OdH19ieD",
                     "parent_id": "O53VhQoZ",
                     "hashes": {
-                        "sha512": "0c32e35b573d9a15a1f1fdfdc3d0af8c59a38a41918ee6e6b00f6b9fd8f0997609aea8f372110caaa4d284e31583eeb9ccdbb8c29b6cd72b9fca81889ac8598f",
-                        "sha1": "146bc38650e09875c678a78014a3ed55d2fd4ca9"
+                        "sha512": "97b3244486430bce3bc6851bf700a9643cd018fdb48961210fecce3a6823ad2a4a25e4943763c0a27f68607cc33c7ce6b0b913cacb12dd1a28850ac5508cc57c",
+                        "sha1": "6f2803d6a84d296e07382dd2f6c13c3b4fd57cbd"
                     },
-                    "required_dependencies": [
-                        "R2OftAxM"
-                    ],
-                    "size": 798485,
-                    "date_published": "2025-08-28T18:45:04.866091Z"
+                    "required_dependencies": [],
+                    "size": 904388,
+                    "date_published": "2026-07-29T19:23:43.495311Z"
                 }
             ]
         },
@@ -10113,7 +10111,7 @@
             ]
         },
         {
-            "pakku_id": "ZYO4Yi3aXTnvbkM9",
+            "pakku_id": "OrNWVplVke15UOqH",
             "type": "MOD",
             "side": "BOTH",
             "slug": {
@@ -10128,7 +10126,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "TMTCF-NF-1.21.1-2.0.3.jar",
+                    "file_name": "TMTCF-NF-1.21.1-2.0.4.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -10136,16 +10134,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/LSnXhPa7/versions/Fe8s25gF/TMTCF-NF-1.21.1-2.0.3.jar",
-                    "id": "Fe8s25gF",
+                    "url": "https://cdn.modrinth.com/data/LSnXhPa7/versions/F9ho6FHG/TMTCF-NF-1.21.1-2.0.4.jar",
+                    "id": "F9ho6FHG",
                     "parent_id": "LSnXhPa7",
                     "hashes": {
-                        "sha512": "6ede8fa9120ebc48153916f6d2052cf07570116a5a5bc68a2ea4339c26776e41e35835fdcc8929727f38218448b1b7044b835cdc4524549b32fbc2744d9e82f7",
-                        "sha1": "5bf141a8410ed852fa866297b1989261a5d9c383"
+                        "sha512": "659caade9aa072e01760139542723c941bb1e42a0913d2fbffe7ee3295deefc2d8e77ec7b32a4421d7456659b2daebe6e4caec1ed1951edcca362d0a06fc4d47",
+                        "sha1": "5e0a33b5af457a23e0332169f7fd46aa538a4549"
                     },
                     "required_dependencies": [],
-                    "size": 128360,
-                    "date_published": "2026-02-14T16:40:53.336246Z"
+                    "size": 127259,
+                    "date_published": "2026-08-16T21:35:22.391028Z"
                 }
             ]
         },

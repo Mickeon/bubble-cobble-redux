@@ -57,7 +57,7 @@ ItemEvents.foodEaten("kubejs:banana_mayo_sandwich", event => {
 	}
 	const entity = event.entity
 	if (is_eligible_for_easter_egg(entity, "SueTheMimiga")) {
-		entity.potionEffects.add("farmersdelight:comfort", 600, 1)
+		entity.potionEffects.add("brewinandchewin:sweet_heart", 600, 1)
 	} else {
 		entity.potionEffects.add("minecraft:nausea", 200, 1)
 	}
@@ -150,7 +150,7 @@ if (Item.exists("kubejs:bearded_dragon_bowl")) {
 
 		play_sound_at_entity(player, "kubejs:item.bearded_dragon_chirp", "players", 1.0, 1.25 + 0.25 * Math.random())
 		player.addItemCooldown(item_stack.item, 10)
-		player.potionEffects.add("farmersdelight:comfort", 20, 1)
+		player.potionEffects.add("brewinandchewin:sweet_heart", 20, 1)
 	})
 
 	ItemEvents.pickedUp("kubejs:bearded_dragon_bowl", event => {

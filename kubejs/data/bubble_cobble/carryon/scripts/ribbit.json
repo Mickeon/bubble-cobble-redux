@@ -10,7 +10,7 @@
 	},
 	"effects": {
 		"commandPickup" : "gamerule sendCommandFeedback false",
-		"commandLoop" : "effect give @s farmersdelight:comfort 1 1 true",
+		"commandLoop" : "effect give @s brewinandchewin:sweet_heart 1 1 true",
 		"commandPlace" : "gamerule sendCommandFeedback true"
 	}
 }

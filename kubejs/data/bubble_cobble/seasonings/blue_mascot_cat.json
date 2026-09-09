@@ -3,7 +3,7 @@
 	"colour": "light_blue",
 	"mobEffects": [
 		{
-			"effect": "farmersdelight:comfort",
+			"effect": "brewinandchewin:sweet_heart",
 			"duration": 1200,
 			"amplifier": 0,
 			"ambient": false,

@@ -82,8 +82,6 @@ ServerEvents.tags("item", event => {
 	event.add("cobblemon:held/leaves_leftover", "create:honeyed_apple", "biomeswevegone:green_apple")
 	event.add("brewinandchewin:raw_meats", "#c:foods/raw_meat")
 	event.add("c:cheese", "#brewinandchewin:foods/cheese_wedge") // Required because we disabled Bitterballen's cheese.
-	event.add("c:drinks/milk", "minersdelight:milk_cup")
-	event.add("c:foods/milk", "minersdelight:milk_cup", "cobblemon:moomoo_milk") // Deprecated tag.
 	event.add("cobblemon:pokedex_screen", "mowziesmobs:glowing_jelly")
 	event.add("supplementaries:pedestal_downright", "#c:tools/spear")
 	event.add("supplementaries:pedestal_upright", "#c:tools/knives", "mega_showdown:rusted_sword")
@@ -220,8 +218,6 @@ ServerEvents.tags("block", event => {
 	// Accidental omissions from the mod creators.
 	event.add("c:chests", "#minecraft:copper_chests")
 	event.add("minecraft:all_signs", "supplementaries:way_sign_wall") // https://github.com/MehVahdJukaar/Supplementaries/pull/1921
-	event.add("minecraft:wither_summon_base_blocks", "mynethersdelight:resurgent_soil") // https://github.com/SoyTutta/MyNethersDelight/issues/121
-	event.add("minecraft:hoglin_repellents", "mynethersdelight:warped_fungus_colony") // https://github.com/SoyTutta/MyNethersDelight/issues/121
 	event.add("minecraft:enchantment_power_provider", "#handcrafted:shelves") // https://github.com/terrarium-earth/Handcrafted/issues/136
 	event.add("minecraft:guarded_by_piglins", "handcrafted:golden_thin_pot", "handcrafted:golden_thick_pot", "handcrafted:golden_wide_pot", "handcrafted:golden_medium_pot") // Reported: https://github.com/terrarium-earth/Handcrafted/issues/152
 	event.add("cobblemon:machines", "simpletms:machine_tm")
@@ -233,19 +229,13 @@ ServerEvents.tags("block", event => {
 	event.add("minecraft:combination_step_sound_blocks",
 		"#bubble_cobble:coinstacks",
 		"#snowyspirit:gumdrops",
-		"brewinandchewin:coaster", // Reported: https://github.com/ChrysanthCow/BrewinAndChewin/pull/110
 		"cobblemon:tatami_mat", // Reported: https://gitlab.com/cable-mc/cobblemon/-/merge_requests/2174.
-		"farmersdelight:basket", "farmersdelight:cutting_board", // Reported: https://github.com/vectorwing/FarmersDelight/pull/1252
 		"supplementaries:crank", // I forgot to report here: https://github.com/MehVahdJukaar/Supplementaries/pull/1932
 		"yungscavebiomes:ice_sheet"
 	)
 	event.add("create:brittle", // Allows these blocks to be assembled/unassembled in contraptions without destroying themselves.
 		"#brewinandchewin:cheese_wheels/unripe", "#brewinandchewin:cheese_wheels/ripe", "brewinandchewin:coaster", "brewinandchewin:pizza", "brewinandchewin:quiche",
 		"supplementaries:gunpowder", // I forgot to report here: https://github.com/MehVahdJukaar/Supplementaries/pull/1933.
-		// Unfortunately manual. Also somewhat reported: https://github.com/vectorwing/FarmersDelight/issues/1255.
-		"farmersdelight:apple_pie", "farmersdelight:chocolate_pie", "farmersdelight:sweet_berry_cheesecake", "farmersdelight:honey_glazed_ham_block", "farmersdelight:shepherds_pie_block", "farmersdelight:rice_roll_medley_block",
-		"minersdelight:fake_meatloaf", "minersdelight:glazed_arachnid_limbs", "minersdelight:stuffed_squid",
-		"mynethersdelight:stuffed_hoglin", "mynethersdelight:striderloaf_block", "mynethersdelight:cold_striderloaf_block", "mynethersdelight:ghasta_with_cream_block", "mynethersdelight:bread_loaf_block", "mynethersdelight:magma_cake_block",
 		"cobblemon:cleanse_tag", "cobblemon:spell_tag", "cobblemon:weakness_policy", "cobblemon:blunder_policy",
 	)
 	event.add("minecraft:doors", "copycats:copycat_iron_door") // Reported: https://github.com/copycats-plus/copycats/issues/377.
@@ -253,7 +243,7 @@ ServerEvents.tags("block", event => {
 
 	// Other omissions that make sense.
 	event.add("create:windmill_sails", "#supplementaries:flags")
-	event.add("create:fan_transparent",	"farmersdelight:safety_net", "#supplementaries:buntings", "supplementaries:wind_vane", /^minecraft:.*copper_(bars|trapdoor)$/, /ladder$/, "cobblemon:water_stone_block", "cobblemon:fire_stone_block") // Fun. // Reported: https://github.com/vectorwing/FarmersDelight/discussions/1250
+	event.add("create:fan_transparent", "#supplementaries:buntings", "supplementaries:wind_vane", /^minecraft:.*copper_(bars|trapdoor)$/, /ladder$/, "cobblemon:water_stone_block", "cobblemon:fire_stone_block") // Fun.
 	event.add("create:fan_processing_catalysts/splashing", "cobblemon:water_stone_block")
 	event.add("create:fan_processing_catalysts/smoking", "cobblemon:campfire")
 	event.add("create:fan_processing_catalysts/blasting", "mynethersdelight:magma_cake_block", "cobblemon:fire_stone_block")

@@ -57,7 +57,7 @@ StartupEvents.registry("item", event => {
 				return true
 			})
 			.finishUsing((item_stack, level, entity) => {
-				entity.potionEffects.add("farmersdelight:comfort", 5 * SEC)
+				entity.potionEffects.add("brewinandchewin:sweet_heart", 5 * SEC)
 
 				if (entity.player) {
 					let is_finite = !item_stack.customData.getBoolean("infinite")
@@ -102,7 +102,7 @@ StartupEvents.registry("item", event => {
 					.saturation(0.25)
 					.eatSeconds(0.25)
 					.alwaysEdible()
-					.effect("farmersdelight:comfort", 30, 0, 1)
+					.effect("brewinandchewin:sweet_heart", 30, 0, 1)
 			)
 			.maxStackSize(63)
 			.rarity("uncommon")
