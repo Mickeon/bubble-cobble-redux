@@ -127,6 +127,11 @@
     {"id": "copperagebackport:waxed_exposed_copper_button"},
     {"id": "copperagebackport:waxed_weathered_copper_button"},
     {"id": "copperagebackport:waxed_oxidized_copper_button"},
-    {"id": "mynethersdelight:waxed_hoglin_trophy"}
+    {"id": "mynethersdelight:waxed_hoglin_trophy"},
+
+    {"id": "shutterup:waxed_copper_shutter"},
+    {"id": "shutterup:waxed_exposed_copper_shutter"},
+    {"id": "shutterup:waxed_weathered_copper_shutter"},
+    {"id": "shutterup:waxed_oxidized_copper_shutter"}
   ]
 }
