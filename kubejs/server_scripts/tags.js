@@ -250,7 +250,7 @@ ServerEvents.tags("block", event => {
 	event.add("supplementaries:water_holder", "minersdelight:sticky_basket") // TODO: Report this? Supplementaries can't account for everyone, can it?
 	event.add("minecraft:mineable/shear", "farmersdelight:rope")
 	event.add("herbalbrews:allows_cooking", "mynethersdelight:nether_stove")
-	event.add("amendments:stairs_carpets", "#bubble_cobble:coinstacks", "biomesoplenty:glowing_moss_carpet", "cobblemon:tatami_mat", "minecraft:snow", "supplementaries:ash") // https://github.com/MehVahdJukaar/amendments/pull/403.
+	event.add("amendments:stairs_carpets", "#bubble_cobble:coinstacks", "cobblemon:tatami_mat", "minecraft:snow", "supplementaries:ash")
 
 	// Shared in a bunch of places.
 	event.add("bubble_cobble:coinstacks", /^createdeco:.*coinstack$/)
@@ -345,7 +345,7 @@ ServerEvents.tags("worldgen/biome", event => {
 	event.add("mss:has_structure/ocean_biomes", "#minecraft:is_ocean") // The original tag only includes vanilla and #c:is_water/overworld?
 	event.add("c:primary_wood_type/cherry", "biomesoplenty:snowblossom_grove") // Used by MVS.
 
-	event.add("yungsextras:has_structure/desert_decorations", "#c:is_desert")
+	event.add("yungsextras:has_structure/desert_decorations", "#c:is_desert") // TODO: Report this. These tags only contain #forge:is_desert.
 	event.add("yungsextras:has_structure/swamp_structures", "#c:is_swamp")
 	event.add("yungsextras:has_structure/vanilla_desert_well", "#c:is_desert")
 

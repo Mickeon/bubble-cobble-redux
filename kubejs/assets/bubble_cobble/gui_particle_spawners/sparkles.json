@@ -30,6 +30,8 @@
     {"id": "cobblemonraiddens:raid_crystal_block"},
     {"id": "create:brass_ingot"},
     {"id": "create:brass_block"},
+    {"id": "farmersdelight:gleaming_salad"},
+    {"id": "farmersdelight:gleaming_salad_block"},
     {"id": "minecraft:beacon"},
     {"id": "minecraft:enchanted_golden_apple"},
     {"id": "minecraft:nether_star"},
