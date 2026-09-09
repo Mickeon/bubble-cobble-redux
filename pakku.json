@@ -45,6 +45,8 @@
         "!kubejs/config/web_server.json",
         "!*.bak",
         "!*.aseprite",
+        "!config/nbtac.txt",
+        "!config/resource_explorer.json",
 
         "!config/ali",
         "!config/moveslikemafuyu_config.toml",
@@ -67,6 +69,7 @@
         "!config/freecam.json5",
         "!config/simplefog.json",
         "!config/highly_customizable_damage_numbers",
+        "!config/viewboard-client.json",
         "!*locomotionmap.json"
     ],
     "paths": {
