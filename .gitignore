@@ -65,6 +65,7 @@
 /usercache.json
 /usernamecache.json
 /config/voicechat/username-cache.json
+/particular_cache
 
 # Currently useless to push.
 /resourcepacks

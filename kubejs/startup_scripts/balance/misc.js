@@ -76,6 +76,7 @@ ItemEvents.modification(event => {
 	set_max_damage("create:red_sand_paper", 16)
 
 	// The config settings for changing the Grappling Hooks' values has been removed. So we must do it this way.
+	// This is technically no longer necessary, see config/yo_hooks/overlaps.json
 	function change_hook_values(item, max_damage, length) {
 		event.modify(item, /** @param {$ItemModifications} modified */ modified => {
 			const hook_definition = modified.item().hookDefinition
