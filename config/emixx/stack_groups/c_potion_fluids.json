@@ -1,0 +1,7 @@
+{
+	"type": "remi:group",
+	"id": "c:potion_fluids",
+	"contents": [
+		"fluid:create:potion"
+	]
+}

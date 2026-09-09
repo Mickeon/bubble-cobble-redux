@@ -1,0 +1,7 @@
+{
+  "type": "remi:tag",
+  "id": "cobblemon:poke_rods",
+  "tag": "cobblemon:poke_rods",
+  "registry": "minecraft:item",
+  "enabled": true
+}

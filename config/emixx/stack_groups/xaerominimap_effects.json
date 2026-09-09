@@ -1,5 +1,7 @@
 {
+	"type": "remi:group",
 	"id": "xaerominimap:effects",
+	"name": "Effects that affect the map/minimap",
 	"contents": [
 		"mob_effect:xaerominimap:no_cave_maps",
 		"mob_effect:xaerominimap:no_cave_maps_harmful",
