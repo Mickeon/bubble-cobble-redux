@@ -6202,7 +6202,7 @@
             ]
         },
         {
-            "pakku_id": "CqAU0Zm1LGuzNjEE",
+            "pakku_id": "NHczJ1sbWeNaU167",
             "type": "MOD",
             "side": "SERVER",
             "slug": {
@@ -6217,7 +6217,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "MoogsNetherStructures-1.21-2.0.31.jar",
+                    "file_name": "MoogsNetherStructures-1.21-3.0.0.jar",
                     "mc_versions": [
                         "1.21",
                         "1.21.1",
@@ -6233,7 +6233,8 @@
                         "1.21.11",
                         "26.1",
                         "26.1.1",
-                        "26.1.2"
+                        "26.1.2",
+                        "26.2"
                     ],
                     "loaders": [
                         "fabric",
@@ -6241,23 +6242,23 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/nGUXvjTa/versions/zruwScWL/MoogsNetherStructures-1.21-2.0.31.jar",
-                    "id": "zruwScWL",
+                    "url": "https://cdn.modrinth.com/data/nGUXvjTa/versions/RFeEhpv4/MoogsNetherStructures-1.21-3.0.0.jar",
+                    "id": "RFeEhpv4",
                     "parent_id": "nGUXvjTa",
                     "hashes": {
-                        "sha512": "052e0df6a0ec18cb35636bbfff88502537ed05e9ff17315589300244e49fc26dfc689b328231a2153279ed35b76e55d9e02443d8ce6af129e09df2e0c8edb9f5",
-                        "sha1": "e36e41bca1e953fc05306bb84da7aef8fa9576bb"
+                        "sha512": "e9ea480ace4d91b03babcc63b9006c917c2e591a33102811f425ef5c8c3fc45926552ea1afbb8fbfc092a88862a804a0f1d99c75ae9a0c791d1ccdc71b49406a",
+                        "sha1": "b07843ca80d49579beabb4397157de0c4330db01"
                     },
                     "required_dependencies": [
                         "1oUDhxuy"
                     ],
-                    "size": 1469454,
-                    "date_published": "2025-12-09T18:19:41.822109Z"
+                    "size": 3794509,
+                    "date_published": "2026-06-22T07:35:07.494338Z"
                 }
             ]
         },
         {
-            "pakku_id": "6FNqxgeJPnrwqXLU",
+            "pakku_id": "6X1wzzwPfUxjXVO5",
             "type": "MOD",
             "side": "SERVER",
             "slug": {
@@ -6272,7 +6273,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "MoogsSoaringStructures-1.21-2.0.2.jar",
+                    "file_name": "MoogsSoaringStructures-1.21-2.1.2.jar",
                     "mc_versions": [
                         "1.21",
                         "1.21.1",
@@ -6288,7 +6289,8 @@
                         "1.21.11",
                         "26.1",
                         "26.1.1",
-                        "26.1.2"
+                        "26.1.2",
+                        "26.2"
                     ],
                     "loaders": [
                         "fabric",
@@ -6296,23 +6298,23 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/RJCLIx7k/versions/5oeZ3VOH/MoogsSoaringStructures-1.21-2.0.2.jar",
-                    "id": "5oeZ3VOH",
+                    "url": "https://cdn.modrinth.com/data/RJCLIx7k/versions/i1RQPVjQ/MoogsSoaringStructures-1.21-2.1.2.jar",
+                    "id": "i1RQPVjQ",
                     "parent_id": "RJCLIx7k",
                     "hashes": {
-                        "sha512": "452618a01a81c9101d8f720f51f67f667ca8ff7c8a5e629c05ab0c0f8792e3cf413a914d07db452904c8d00022e31a9c522ec8935bba1f2a3b7ea03832ef0bb1",
-                        "sha1": "74b79d7913140321d070b0a9bd46c78b89d5a3d3"
+                        "sha512": "85e13d55a2f191e0dc88c5e84927cfe0a48878673a6c42badb67ab7189c76112ecfa9ac3d68b2c015f7208086e2873ae69fa029f4a3d31c3bc5170568bf33e56",
+                        "sha1": "4cb63d032e016804f1dd3b2225a2105aa3425fb2"
                     },
                     "required_dependencies": [
                         "1oUDhxuy"
                     ],
-                    "size": 3074614,
-                    "date_published": "2026-01-28T09:43:26.552680Z"
+                    "size": 3621647,
+                    "date_published": "2026-05-22T15:14:35.055542Z"
                 }
             ]
         },
         {
-            "pakku_id": "1XbhRoCbZfKw8Q4h",
+            "pakku_id": "UXbcyMdRAxi4SRbB",
             "type": "MOD",
             "side": "SERVER",
             "slug": {
@@ -6327,7 +6329,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "MoogsVoyagerStructures-1.21-5.0.5.jar",
+                    "file_name": "MoogsVoyagerStructures-universal-1.21-5.1.1.jar",
                     "mc_versions": [
                         "1.21",
                         "1.21.1",
@@ -6343,7 +6345,8 @@
                         "1.21.11",
                         "26.1",
                         "26.1.1",
-                        "26.1.2"
+                        "26.1.2",
+                        "26.2"
                     ],
                     "loaders": [
                         "fabric",
@@ -6351,18 +6354,18 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/OQAgZMH1/versions/aHamoWna/MoogsVoyagerStructures-1.21-5.0.5.jar",
-                    "id": "aHamoWna",
+                    "url": "https://cdn.modrinth.com/data/OQAgZMH1/versions/F4KldqbX/MoogsVoyagerStructures-universal-1.21-5.1.1.jar",
+                    "id": "F4KldqbX",
                     "parent_id": "OQAgZMH1",
                     "hashes": {
-                        "sha512": "bc6f2a0590816e20a9df722181221e4e7769e64f9fe0efdb88666bae3443354ad59df95a0562f5a854cdc3d5d9a9c12448b605cc3b7fee51e61a85b397fd8f05",
-                        "sha1": "6335b4caf8d5f969c948b5a2ce6c675d367a600b"
+                        "sha512": "c05abf7a226da3a59e7eb4889fa78aef7e391ccc075551a3545d4b24ee908958dca13c87408c95dfa8e659d0dc5fbabf99dd1d034ad258eb4937bb984ae767c8",
+                        "sha1": "a845fe54a5afc9c0efcfd7b99069f0c9b7fa3a52"
                     },
                     "required_dependencies": [
                         "1oUDhxuy"
                     ],
-                    "size": 2670229,
-                    "date_published": "2026-01-28T14:48:40.872304Z"
+                    "size": 2244261,
+                    "date_published": "2026-09-02T12:55:35.070175Z"
                 }
             ]
         },
@@ -6698,7 +6701,7 @@
             ]
         },
         {
-            "pakku_id": "6vHwPYI1wvMA4F1o",
+            "pakku_id": "Qe23P1dDqzLnSD8s",
             "type": "MOD",
             "side": "SERVER",
             "slug": {
@@ -6713,7 +6716,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "moogs_structures-1.1.0-1.21-1.21.1-neoforge.jar",
+                    "file_name": "MoogsStructureLib-neoforge-1.21.1-3.1.2.jar",
                     "mc_versions": [
                         "1.21",
                         "1.21.1"
@@ -6722,16 +6725,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/1oUDhxuy/versions/mu01uYir/moogs_structures-1.1.0-1.21-1.21.1-neoforge.jar",
-                    "id": "mu01uYir",
+                    "url": "https://cdn.modrinth.com/data/1oUDhxuy/versions/3AOwEzBy/MoogsStructureLib-neoforge-1.21.1-3.1.2.jar",
+                    "id": "3AOwEzBy",
                     "parent_id": "1oUDhxuy",
                     "hashes": {
-                        "sha512": "3f1a22fff74805dbe1cc1ad2eaa9e4c4bbe3eddb77ed99bd873bdf9b8b6d0b55c12bf0064e5459816d4429250483e24978db816100a9b71462daaf1cdfe92af1",
-                        "sha1": "cde9ef5e7d4d74bb6d5725367398a6dc4d02ee99"
+                        "sha512": "c2d4e6d6da6703c03d607245b78043fb54b8a96a1949169b263dee70b148da22d7029c495c3ea2bf14a1a045fb17a75222a783873c3f3b77713dc49dea65ac6b",
+                        "sha1": "627a970a8cdf09ef86d36c97cb85b161459c04d3"
                     },
                     "required_dependencies": [],
-                    "size": 250067,
-                    "date_published": "2025-11-19T12:11:59.486011Z"
+                    "size": 413682,
+                    "date_published": "2026-08-25T13:47:57.027595Z"
                 }
             ]
         },
@@ -8466,7 +8469,7 @@
             ]
         },
         {
-            "pakku_id": "gLdNM0t6GsAEKc5Q",
+            "pakku_id": "PmevMuR3MQ80iFXG",
             "type": "MOD",
             "side": "SERVER",
             "slug": {
@@ -8481,7 +8484,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "repurposed_structures-7.5.18+1.21.1-neoforge.jar",
+                    "file_name": "repurposed_structures-7.5.22+1.21.1-neoforge.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -8489,16 +8492,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/QDNS5oAT/versions/fuRQkVgT/repurposed_structures-7.5.18+1.21.1-neoforge.jar",
-                    "id": "fuRQkVgT",
+                    "url": "https://cdn.modrinth.com/data/QDNS5oAT/versions/8duZuWci/repurposed_structures-7.5.22+1.21.1-neoforge.jar",
+                    "id": "8duZuWci",
                     "parent_id": "QDNS5oAT",
                     "hashes": {
-                        "sha512": "5971435442c1c8aa0c252caf0dc4ccb3959fad5e6e67d09ff7c2a66d76d94c76168448b981985b1d6f876cd012fbc2015c44e5deb08e79191301c15ef254f1b0",
-                        "sha1": "545fafd13197186038191d99c378ac4c04a6504c"
+                        "sha512": "cb6d22bc8d426aefda37ba63dcd0346db342157500e86782ebf142d09cc81970d4745b81b760a639e5734f91d9f3275d6430d4a8c54dfd8256e732ea682e8bd2",
+                        "sha1": "a64f6b2d331d5c3a5feefcd18d23f4585a42b097"
                     },
                     "required_dependencies": [],
-                    "size": 8238563,
-                    "date_published": "2026-02-22T14:38:37.227432Z"
+                    "size": 8246760,
+                    "date_published": "2026-08-20T01:30:28.438921Z"
                 }
             ]
         },

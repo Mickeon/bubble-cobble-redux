@@ -342,8 +342,7 @@ ServerEvents.tags("worldgen/biome", event => {
 	event.add("c:is_dead", "biomeswevegone:pale_bog")
 
 	event.add("mss:has_structure/cherry_biomes", "biomesoplenty:snowblossom_grove")
-	event.add("mss:has_structure/ocean_biomes", "#minecraft:is_ocean") // The original tag only includes vanilla and #c:is_water/overworld?
-	event.add("c:primary_wood_type/cherry", "biomesoplenty:snowblossom_grove") // Used by MVS.
+	event.add("mvs:primary_wood_type/cherry", "biomesoplenty:snowblossom_grove")
 
 	event.add("yungsextras:has_structure/desert_decorations", "#c:is_desert") // TODO: Report this. These tags only contain #forge:is_desert.
 	event.add("yungsextras:has_structure/swamp_structures", "#c:is_swamp")
