@@ -4,7 +4,7 @@
         "1.21.1"
     ],
     "loaders": {
-        "neoforge": "21.1.233"
+        "neoforge": "21.1.234"
     },
     "projects": [
         {
@@ -1028,7 +1028,7 @@
             ]
         },
         {
-            "pakku_id": "rrwpv8YDxXBeGEZi",
+            "pakku_id": "Fc3GgRNDEX6HANAq",
             "type": "MOD",
             "side": "BOTH",
             "slug": {
@@ -1043,7 +1043,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "BiomesOPlenty-neoforge-1.21.1-21.1.0.13.jar",
+                    "file_name": "BiomesOPlenty-neoforge-1.21.1-21.1.0.14.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -1051,19 +1051,19 @@
                         "neoforge"
                     ],
                     "release_type": "beta",
-                    "url": "https://cdn.modrinth.com/data/HXF82T3G/versions/8vIRXPpR/BiomesOPlenty-neoforge-1.21.1-21.1.0.13.jar",
-                    "id": "8vIRXPpR",
+                    "url": "https://cdn.modrinth.com/data/HXF82T3G/versions/BtZKRp69/BiomesOPlenty-neoforge-1.21.1-21.1.0.14.jar",
+                    "id": "BtZKRp69",
                     "parent_id": "HXF82T3G",
                     "hashes": {
-                        "sha512": "a238c6dbeccf9bb8f7144601e8f8fd7973d76c60344b50670141e76f49f886f6f89487eb81749dfca7c36166831924052106884a9f8dc18893261476a34d4b32",
-                        "sha1": "e277fba0c94fea3c3f58d23bfa53d2eb457555f6"
+                        "sha512": "1569d9ed5b619f99d61a7cf1b2d886b278df2905b3ce9324f8e7a17c5c960312ec681cc06f1ad96644bde2cdc60440d8be9952f0ee0f84f7937210f46fbb21d7",
+                        "sha1": "294ae397c011980623bf155f9dfce82bb81865a0"
                     },
                     "required_dependencies": [
-                        "kkmrDlKT",
-                        "s3dmwKy5"
+                        "s3dmwKy5",
+                        "kkmrDlKT"
                     ],
-                    "size": 22338082,
-                    "date_published": "2025-11-23T04:05:48.266528Z"
+                    "size": 22338156,
+                    "date_published": "2026-06-20T17:57:17.589490Z"
                 }
             ]
         },
@@ -4822,7 +4822,7 @@
             ]
         },
         {
-            "pakku_id": "QdXOT1aeasSYuvCI",
+            "pakku_id": "LFOzFYA7Ry4lX0Yo",
             "type": "MOD",
             "side": "BOTH",
             "slug": {
@@ -4837,7 +4837,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "GlitchCore-neoforge-1.21.1-2.1.0.0.jar",
+                    "file_name": "GlitchCore-neoforge-1.21.1-2.1.0.2.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -4845,16 +4845,16 @@
                         "neoforge"
                     ],
                     "release_type": "beta",
-                    "url": "https://cdn.modrinth.com/data/s3dmwKy5/versions/8wmCpbQ2/GlitchCore-neoforge-1.21.1-2.1.0.0.jar",
-                    "id": "8wmCpbQ2",
+                    "url": "https://cdn.modrinth.com/data/s3dmwKy5/versions/S2TfWrZR/GlitchCore-neoforge-1.21.1-2.1.0.2.jar",
+                    "id": "S2TfWrZR",
                     "parent_id": "s3dmwKy5",
                     "hashes": {
-                        "sha512": "008ec969716ffa2a45bf74f8c44d2c28e16558688a71806670e307d29fa76a82daf4d2f990a4964345228a7ba77bdb8592d1572c723b7b06c8f9c3ffae63acdb",
-                        "sha1": "b95318c14ef20bd24886480d7640a5eca6aa6cec"
+                        "sha512": "7a009ed163d03536fdfaee7b37cb1ec3073204dffcb06a683369aa88da8dbc3780b0ac69d466bb32a3ad9394c97b698d0fda676e1b4dd4edfc50ac5aa2283c32",
+                        "sha1": "e3d4bb80a06f619be989ab529d0cd4e33e076943"
                     },
                     "required_dependencies": [],
-                    "size": 90918,
-                    "date_published": "2024-08-25T01:51:19.944143Z"
+                    "size": 90717,
+                    "date_published": "2026-05-18T17:16:27.870194Z"
                 }
             ]
         },
@@ -7213,7 +7213,7 @@
             ]
         },
         {
-            "pakku_id": "mrhJCkuQEMTqhjVJ",
+            "pakku_id": "oDBIMxd1P6IXe4du",
             "type": "MOD",
             "side": "BOTH",
             "slug": {
@@ -7228,7 +7228,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "Oh-The-Biomes-Weve-Gone-NeoForge-2.5.5.jar",
+                    "file_name": "Oh-The-Biomes-Weve-Gone-NeoForge-2.6.0.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -7236,26 +7236,26 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/NTi7d3Xc/versions/6cLkgRgD/Oh-The-Biomes-Weve-Gone-NeoForge-2.5.5.jar",
-                    "id": "6cLkgRgD",
+                    "url": "https://cdn.modrinth.com/data/NTi7d3Xc/versions/aPEcdSHb/Oh-The-Biomes-Weve-Gone-NeoForge-2.6.0.jar",
+                    "id": "aPEcdSHb",
                     "parent_id": "NTi7d3Xc",
                     "hashes": {
-                        "sha512": "c71db94abe31f563f44b6384cdf562ed32fe93d27d7b9dbe6b0e85e043b0da7373bd49c1f430ff4fed81da1c6bece04cfba66ab53407a834d307f241b6ddd596",
-                        "sha1": "b7d028def9c15698dff076e1c606d4496f0a2730"
+                        "sha512": "76ceb60d1058bca79e13c7059dc42f8b230cb480986e1d88b505f958fc3922a00bef463eb267c9b676be053bec1e71806fbc27fb2a41df6dcd9881a0f0711f77",
+                        "sha1": "4611dc5bb4240333178e14e81f76168f78167448"
                     },
                     "required_dependencies": [
-                        "kkmrDlKT",
                         "8BmcQJ2H",
+                        "ziOp6EO8",
                         "g8NOG5OR",
-                        "ziOp6EO8"
+                        "kkmrDlKT"
                     ],
-                    "size": 20759732,
-                    "date_published": "2026-03-12T00:23:14.480399Z"
+                    "size": 20484967,
+                    "date_published": "2026-06-14T02:26:21.187914Z"
                 }
             ]
         },
         {
-            "pakku_id": "kZF7mJ9tDLpIZLwv",
+            "pakku_id": "vtgJAhg8hi19bczu",
             "type": "MOD",
             "side": "SERVER",
             "slug": {
@@ -7270,7 +7270,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "Oh-The-Trees-Youll-Grow-neoforge-1.21.1-5.3.0.jar",
+                    "file_name": "Oh-The-Trees-Youll-Grow-neoforge-1.21.1-5.3.2.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -7278,16 +7278,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/g8NOG5OR/versions/AZhRLtso/Oh-The-Trees-Youll-Grow-neoforge-1.21.1-5.3.0.jar",
-                    "id": "AZhRLtso",
+                    "url": "https://cdn.modrinth.com/data/g8NOG5OR/versions/ozzakIcu/Oh-The-Trees-Youll-Grow-neoforge-1.21.1-5.3.2.jar",
+                    "id": "ozzakIcu",
                     "parent_id": "g8NOG5OR",
                     "hashes": {
-                        "sha512": "a41e3b5b3c44382dcaf5ff0ba13cedf9f5cd82fe1a8e582fe0bd44400a1653b27f5d5ef9c2a81c93f032875f21cd6fcecd09457c665d8868571ab97fe9aee9f4",
-                        "sha1": "2722116e140607d4f44279c84c13987e96f2bd90"
+                        "sha512": "1a1bf395c5ec7366b938f1891a6b6666ab0cac9da8f5e7fbc8c07a3518b568759772a7ce6a4326b448773a75a7b5aacb032f580baf447029f329dff3aa115789",
+                        "sha1": "1867792e4e3d9fc6bb7acabb31cbec7a3d49ecad"
                     },
                     "required_dependencies": [],
-                    "size": 165580,
-                    "date_published": "2026-04-02T21:29:27.969131Z"
+                    "size": 167431,
+                    "date_published": "2026-05-16T01:02:05.551818Z"
                 }
             ]
         },
@@ -10307,7 +10307,7 @@
             ]
         },
         {
-            "pakku_id": "oS0WK7g8baWZNSAa",
+            "pakku_id": "m4MwjVdUNtA4RcMV",
             "type": "MOD",
             "side": "BOTH",
             "slug": {
@@ -10322,7 +10322,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "undergroundworlds-neoforge-3.0.1-1.21.1.jar",
+                    "file_name": "undergroundworlds-neoforge-3.0.2-1.21.1.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -10330,16 +10330,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/g9fDJQZe/versions/8chVaCao/undergroundworlds-neoforge-3.0.1-1.21.1.jar",
-                    "id": "8chVaCao",
+                    "url": "https://cdn.modrinth.com/data/g9fDJQZe/versions/aqtQkQ70/undergroundworlds-neoforge-3.0.2-1.21.1.jar",
+                    "id": "aqtQkQ70",
                     "parent_id": "g9fDJQZe",
                     "hashes": {
-                        "sha512": "a6f22c32c4c2e280619dcf46a6404666fb441b31c1ea875911c7e0bd20377056944060c82a84fb9665c0fa3438bf985af925e408c7acec16e8c6c8fb7710ccf7",
-                        "sha1": "398af4096fcd2d8113d3e6d30612f1821596d1c7"
+                        "sha512": "f6920b3fa97c84b3c80df7bb3cba79ca206d1730b9210966eeaaae2c7f7096f4625a0b5b8d2d207e1b92c35838c396a116db4c556a1fb70473d2a20aeb11afbc",
+                        "sha1": "681d8c8d6a8960c112c7f2499a2bfefb05bd4901"
                     },
                     "required_dependencies": [],
-                    "size": 3830742,
-                    "date_published": "2026-04-07T15:29:49.069840Z"
+                    "size": 3831434,
+                    "date_published": "2026-05-31T08:21:38.910310Z"
                 }
             ]
         },

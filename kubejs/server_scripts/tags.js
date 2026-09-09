@@ -70,7 +70,6 @@ ServerEvents.tags("item", event => {
 	event.add("c:storage_blocks", "#c:storage_blocks/industrial_iron")
 	event.add("c:storage_blocks/industrial_iron", "create:industrial_iron_block")
 	event.add("minecraft:piglin_loved", "solonion:golden_lunchbox", "handcrafted:golden_thin_pot", "handcrafted:golden_thick_pot", "handcrafted:golden_wide_pot", "handcrafted:golden_medium_pot") //Reported: https://github.com/terrarium-earth/Handcrafted/issues/152
-	event.add("minecraft:horse_food", "biomeswevegone:green_apple") // Reported: https://github.com/Potion-Studios/Oh-The-Biomes-Weve-Gone/issues/384.
 	event.add("c:music_discs", "cnc:music_disc_slough_choir", "cnc:music_disc_wreck_of_the_old_97", "cnc:music_disc_hills", "undergroundworlds:music_disc_abbeyence") // TODO: Report this.
 	event.removeAll("minecraft:music_discs") // This tag doesn't exist anymore.
 	event.add("minecraft:buttons", COPPER_BUTTONS)
