@@ -149,7 +149,6 @@ ServerEvents.recipes(event => {
 	// We don't even have the mod anymore, but this is innocuous.
 	event.replaceInput({mod: "createdeco"}, "createdeco:industrial_iron_nugget", "#c:nuggets/industrial_iron")
 	event.replaceInput({mod: "createdeco"}, "createdeco:industrial_iron_ingot", "#c:ingots/industrial_iron")
-	// event.replaceInput({mod: "createdeco"}, "create:industrial_iron_block", "#c:storage_blocks/industrial_iron")
 
 
 	// Haunt all seafood for Zinc nuggets.

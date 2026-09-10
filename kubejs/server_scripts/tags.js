@@ -13,43 +13,17 @@ const COPPER_CHESTS = [
 	"minecraft:waxed_copper_chest", "minecraft:waxed_exposed_copper_chest", "minecraft:waxed_oxidized_copper_chest", "minecraft:waxed_weathered_copper_chest",
 ]
 
-const PLACARDS = [
-	"create:placard",
-	"createdeco:black_placard",
-	"createdeco:blue_placard",
-	"createdeco:brown_placard",
-	"createdeco:cyan_placard",
-	"createdeco:gray_placard",
-	"createdeco:green_placard",
-	"createdeco:light_blue_placard",
-	"createdeco:light_gray_placard",
-	"createdeco:lime_placard",
-	"createdeco:magenta_placard",
-	"createdeco:orange_placard",
-	"createdeco:pink_placard",
-	"createdeco:purple_placard",
-	"createdeco:red_placard",
-	"createdeco:yellow_placard"
-]
-
 ServerEvents.tags("item", event => {
 	// Accidental omissions from the mod creators.
 	// Some of these mods add them in the block tags, but not the item tags.
-	event.add("minecraft:rails", "create:controller_rail") // Reported: https://github.com/Creators-of-Create/Create/pull/9684
-	event.add("minecraft:fishes", "create_bic_bit:raw_herring", "create_bic_bit:cooked_herring")
-	event.add("c:foods/raw_fish", "create_bic_bit:raw_herring", "minersdelight:squid", "minersdelight:glow_squid", "minersdelight:tentacles") // We only really use this ourselves for haunting Zinc. Perhaps these definitions should be removed.
-	event.add("c:foods/safe_raw_fish", "create_bic_bit:raw_herring")
-	event.add("c:foods/cooked_fish", "create_bic_bit:cooked_herring")
+	event.add("minecraft:rails", "create:controller_rail") // Reported. Accepted, but not fixed? https://github.com/Creators-of-Create/Create/pull/9684
+	event.add("c:foods/raw_fish", "minersdelight:squid", "minersdelight:glow_squid", "minersdelight:tentacles") // We only really use this ourselves (+ Bitterballen) for haunting Zinc. Perhaps these definitions should be removed.
 	event.add("c:foods/food_poisoning", "minersdelight:copper_carrot", "minersdelight:bat_wing", "minersdelight:arthropod", "minersdelight:squid", "mynethersdelight:ghasta", "mynethersdelight:ghast_dough")
-	event.add("c:paper", "create_bic_bit:dirty_paper")
 	event.add("c:buckets",
-		"sliceanddice:fertilizer_bucket", // https://github.com/PssbleTrngle/SliceAndDice/issues/270.
-		"create_bic_bit:ketchup_bucket", "create_bic_bit:mayonnaise_bucket", "create_bic_bit:frying_oil_bucket",
 		"biomesoplenty:blood_bucket", "biomesoplenty:liquid_null_bucket", // Reported: https://github.com/Glitchfiend/BiomesOPlenty/issues/2440.
 		"sophisticatedcore:xp_bucket" // Reported: http://github.com/P3pp3rF1y/SophisticatedCore/issues/449.
 	)
-	event.add("c:buckets/entity_water", "create_bic_bit:herring_bucket") // Reported: https://discord.com/channels/1141667941935501442/1448294211542716550/1448294211542716550
-	event.add("c:drinks", "#c:drinks/tea", "create_bic_bit:ketchup_bottle", "create_bic_bit:mayonnaise_bottle", "create_bic_bit:frying_oil_bottle") // Reported: https://discord.com/channels/1141667941935501442/1448294211542716550/1448294211542716550
+	event.add("c:drinks", "#c:drinks/tea")
 	event.add("c:drinks/tea", "herbalbrews:green_tea", "herbalbrews:black_tea", "herbalbrews:hibiscus_tea", "herbalbrews:lavender_tea", "herbalbrews:rooibos_tea", "herbalbrews:oolong_tea", "herbalbrews:yerba_mate_tea") // TODO: Report this.
 	event.add("c:drinks/juice", "kubejs:berry_juice_soda", "biomeswevegone:aloe_vera_juice")
 	event.add("supplementaries:statue_swords", "#minecraft:swords", "#minecraft:spears")
@@ -63,12 +37,9 @@ ServerEvents.tags("item", event => {
 	event.add("cobblemon:shiny_stone_ores", "mega_showdown:mega_meteorid_shiny_ore")
 	event.add("cobblemon:sun_stone_ores", "mega_showdown:mega_meteorid_sun_ore")
 	event.add("cobblemon:thunder_stone_ores", "mega_showdown:mega_meteorid_thunder_ore")
-	event.add("c:nuggets", "minecraft:copper_nugget", "#c:nuggets/industrial_iron", "#c:nuggets/netherite") // Reported: https://github.com/talrey/CreateDeco/issues/234 , but not the copper nuggets.
-	event.add("c:plates", "#c:plates/industrial_iron")
-	event.add("c:ingots", "#c:ingots/industrial_iron")
-	event.add("c:tools/spear", "#minecraft:spears") // Reported: https://github.com/Unknowneth/Backported-Spears/issues/60.
-	event.add("c:storage_blocks", "#c:storage_blocks/industrial_iron")
-	event.add("c:storage_blocks/industrial_iron", "create:industrial_iron_block")
+	event.add("c:nuggets", "minecraft:copper_nugget")
+	event.add("c:tools/spear", "#minecraft:spears") // Reported, but marked as "Won't fix": https://github.com/Unknowneth/Backported-Spears/issues/60.
+	event.add("c:storage_blocks", "#c:storage_blocks/industrial_iron") // TODO: Report this.
 	event.add("minecraft:piglin_loved", "solonion:golden_lunchbox", "handcrafted:golden_thin_pot", "handcrafted:golden_thick_pot", "handcrafted:golden_wide_pot", "handcrafted:golden_medium_pot") //Reported: https://github.com/terrarium-earth/Handcrafted/issues/152
 	event.add("c:music_discs", "cnc:music_disc_slough_choir", "cnc:music_disc_wreck_of_the_old_97", "cnc:music_disc_hills", "undergroundworlds:music_disc_abbeyence") // TODO: Report this.
 	event.removeAll("minecraft:music_discs") // This tag doesn't exist anymore.
@@ -80,7 +51,7 @@ ServerEvents.tags("item", event => {
 	// More compatibility.
 	event.add("cobblemon:held/leaves_leftover", "create:honeyed_apple", "biomeswevegone:green_apple")
 	event.add("brewinandchewin:raw_meats", "#c:foods/raw_meat")
-	event.add("c:cheese", "#brewinandchewin:foods/cheese_wedge") // Required because we disabled Bitterballen's cheese.
+	event.add("c:cheese", "#brewinandchewin:foods/cheese_wedge") // Required because we disabled Bitterballen's cheese, but this tag is used in recipes.
 	event.add("cobblemon:pokedex_screen", "mowziesmobs:glowing_jelly")
 	event.add("supplementaries:pedestal_downright", "#c:tools/spear")
 	event.add("supplementaries:pedestal_upright", "#c:tools/knives", "mega_showdown:rusted_sword")
@@ -92,7 +63,6 @@ ServerEvents.tags("item", event => {
 	event.add("c:eggs", "undergroundworlds:spider_egg", "sleep_tight:bedbug_eggs")
 	event.add("c:mushrooms", "ribbits:toadstool") // No, it doesn't make sense?
 	event.add("create:pulpifiable", "biomeswevegone:shrub", "biomeswevegone:firecracker_flower_bush", "cobblemon:medicinal_leek")
-	event.add("create_bic_bit:tulip", "#biomeswevegone:flowers/tulips")
 	event.add("soulbound:enchantable", "#c:tools")
 	event.add("create:blaze_burner_fuel/regular", "#simpletms:type_fire_tr", "cobblemon:charcoal_stick", "cobblemon:fire_stone", "mega_showdown:fire_tera_shard", "mynethersdelight:bullet_pepper", "mynethersdelight:pepper_powder" )
 	event.add("create:blaze_burner_fuel/special", "#simpletms:type_fire_tm", "cobblemon:fire_gem", "cobblemon:fire_stone_block", "mega_showdown:firium_z", "kubejs:firebomb_whiskey",
@@ -223,7 +193,6 @@ ServerEvents.tags("block", event => {
 	// event.add("create:single_block_inventories", "supplementaries:sack", "supplementaries:safe", "supplementaries:pulley_block") // Doesn't seem to be useful for us?
 	event.add("minecraft:buttons", COPPER_BUTTONS)
 	event.add("minecraft:mineable/pickaxe", COPPER_BUTTONS)
-	event.add("createdeco:placards", PLACARDS)
 	event.add("farmersdelight:mineable/knife", "#c:ropes") // Just to include Supplementaries's rope. Probably should be reported.
 	event.add("minecraft:combination_step_sound_blocks",
 		"#bubble_cobble:coinstacks",
@@ -377,8 +346,6 @@ ServerEvents.tags("worldgen/biome", event => {
 	event.add("arts_and_crafts:gypsum_can_generate_in", "#c:is_desert")
 	event.add("arts_and_crafts:ochre_pietraforte_patch", "#c:is_desert", "#minecraft:is_beach")
 	event.add("arts_and_crafts:verdant_pietraforte_patch", "#minecraft:is_jungle", "#minecraft:is_forest")
-
-	event.add("create_ltab:has_structure/sand_structure", "#c:is_desert")
 
 	event.add("mowziesmobs:is_magical", "#c:is_magical")
 

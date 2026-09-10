@@ -2816,9 +2816,9 @@
             ]
         },
         {
-            "pakku_id": "mjse1gMXfneuvrpy",
+            "pakku_id": "bYqPXoDKOvTQoqxu",
             "type": "MOD",
-            "side": "BOTH",
+            "side": "SERVER",
             "slug": {
                 "modrinth": "create"
             },
@@ -2831,7 +2831,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "create-1.21.1-6.0.8.jar",
+                    "file_name": "create-1.21.1-6.0.10.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -2839,21 +2839,21 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/LNytGWDc/versions/88L641Un/create-1.21.1-6.0.8.jar",
-                    "id": "88L641Un",
+                    "url": "https://cdn.modrinth.com/data/LNytGWDc/versions/UjX6dr61/create-1.21.1-6.0.10.jar",
+                    "id": "UjX6dr61",
                     "parent_id": "LNytGWDc",
                     "hashes": {
-                        "sha512": "cb3ffee35ee2b2ab212fb4649e75ccfcb8e99ae954cf0b0251591062e3f200e5e639e8f40d7af7c79b7dc71164a027b0e6fbcd5c0bafe2da88f888fc3ffd254c",
-                        "sha1": "eee603ac7b083c9cd3a8ded4d4e3ed1a9a836f96"
+                        "sha512": "11cc8fc049d2f67f6548c7abfada6b82a3adb5c7ca410a742de04bbca76e03862c518721b88d806f6e6d768a4d68531fdb903a85859b25d1484d550cc7bafd4b",
+                        "sha1": "0e97e49837bed766e6f28a4c95b04885d6acc353"
                     },
                     "required_dependencies": [],
-                    "size": 19001557,
-                    "date_published": "2025-11-02T16:12:53.110793Z"
+                    "size": 19123767,
+                    "date_published": "2026-04-21T22:20:03.579201Z"
                 }
             ]
         },
         {
-            "pakku_id": "65J5e6friFw02BAz",
+            "pakku_id": "F6sITjZZaLJUi5jA",
             "type": "MOD",
             "side": "BOTH",
             "slug": {
@@ -2868,7 +2868,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "createdeco-2.1.2-1.21.1-neo.jar",
+                    "file_name": "createdeco-2.1.3.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -2876,26 +2876,21 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/sMvUb4Rb/versions/k95JcfbJ/createdeco-2.1.2-1.21.1-neo.jar",
-                    "id": "k95JcfbJ",
+                    "url": "https://cdn.modrinth.com/data/sMvUb4Rb/versions/qrcMVoBD/createdeco-2.1.3.jar",
+                    "id": "qrcMVoBD",
                     "parent_id": "sMvUb4Rb",
                     "hashes": {
-                        "sha512": "c600f15ce173b01f86aed12d40d97c11298d63c0f707f83e5a1f14129cefd45c15ea28642b23b7847033fdd3d36c61b0a13db6e96b060d55ea778178103b4b09",
-                        "sha1": "cff4f94238d15db929bf0db48f006da438d345b5"
+                        "sha512": "c536662f9d47ad57a37419165ded14835b23ad6c3e82a920298ecd7ee074244b0b6062ef9cc7ea4501ddd35919a840faccd7fc64e43eb8df31e12076681c3c0d",
+                        "sha1": "93d9eff58b46c6953e907d071e6be4e3ce07be38"
                     },
-                    "required_dependencies": [
-                        "LNytGWDc"
-                    ],
-                    "size": 3318509,
-                    "date_published": "2025-12-10T05:11:36.858557Z"
+                    "required_dependencies": [],
+                    "size": 3328498,
+                    "date_published": "2026-04-18T03:50:01.032897Z"
                 }
             ]
         },
         {
-            "pakku_id": "dlJgIcPcTbG0xKTl",
-            "pakku_links": [
-                "mjse1gMXfneuvrpy"
-            ],
+            "pakku_id": "nrE8DY11fwBWjl5y",
             "type": "MOD",
             "side": "BOTH",
             "slug": {
@@ -2910,7 +2905,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "sliceanddice-forge-4.2.2.jar",
+                    "file_name": "sliceanddice-4.3.3-neoforge.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -2918,18 +2913,19 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/GmjmRQ0A/versions/DwseRoo3/sliceanddice-forge-4.2.2.jar",
-                    "id": "DwseRoo3",
+                    "url": "https://cdn.modrinth.com/data/GmjmRQ0A/versions/N67LJgrN/sliceanddice-4.3.3-neoforge.jar",
+                    "id": "N67LJgrN",
                     "parent_id": "GmjmRQ0A",
                     "hashes": {
-                        "sha512": "6bc2bb30ae523b1b522e3fdd4bd6437e9f69074a4101b0d43bac3867b0e37ee60eb05cdaee55fea434444323f5c1fc4b3cab9bca0b6fda53b3685291b8b734ef",
-                        "sha1": "980f26c4ed2b077462950e1710d28c0b6af7aecd"
+                        "sha512": "3bdbd282ae5aa11ef6c186b752497541730b50fb400c4962230bcd7734cfe4e8daa2ee565387450dfe0eb6deaa0fa44bf81f99c788bac09b1a60d8f1991db37f",
+                        "sha1": "dea6393354faf06632ca1f0185a51fb3c9b5816e"
                     },
                     "required_dependencies": [
+                        "ordsPcFz",
                         "LNytGWDc"
                     ],
-                    "size": 406282,
-                    "date_published": "2025-10-29T11:25:34.613499Z"
+                    "size": 1354014,
+                    "date_published": "2026-07-31T12:48:06.777106Z"
                 }
             ]
         },
@@ -3075,10 +3071,7 @@
             ]
         },
         {
-            "pakku_id": "C2xtI2kdqTcnBJGF",
-            "pakku_links": [
-                "mjse1gMXfneuvrpy"
-            ],
+            "pakku_id": "4tUqj1YgH8leKziJ",
             "type": "MOD",
             "side": "BOTH",
             "slug": {
@@ -3093,7 +3086,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "createbicbit-forge-1.21.1-1.0.2B.jar",
+                    "file_name": "create_bitterballen+1.21.1-1.0.4.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -3101,18 +3094,18 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/16DuAG4k/versions/549nOFOk/createbicbit-forge-1.21.1-1.0.2B.jar",
-                    "id": "549nOFOk",
+                    "url": "https://cdn.modrinth.com/data/16DuAG4k/versions/ivtKd3YL/create_bitterballen+1.21.1-1.0.4.jar",
+                    "id": "ivtKd3YL",
                     "parent_id": "16DuAG4k",
                     "hashes": {
-                        "sha512": "c45862f037dbb37f6ab61d503c53def97e153c93013e4db5ad2abeb7a9c6932d5ce2cdb10ad7b229505e288f2767b89edfc5e703eded4515c9663e37b9f21781",
-                        "sha1": "e9118da99498a4af0b06d6b3a1b8bf004bd229db"
+                        "sha512": "4446713ce2211907d4fc4e12f68176b06cd36d869ae783c982418c63ce77953c16533fe68eb102d31f07ff1c364c6383f4c0a940a0bf5a781227ba96fce4810e",
+                        "sha1": "439714d6e3fb4926dd83356f019bf51b7571cc66"
                     },
                     "required_dependencies": [
                         "LNytGWDc"
                     ],
-                    "size": 396273,
-                    "date_published": "2025-11-28T10:08:21.674062Z"
+                    "size": 396179,
+                    "date_published": "2026-09-10T21:42:42.431001Z"
                 }
             ]
         },
@@ -3161,10 +3154,7 @@
             ]
         },
         {
-            "pakku_id": "aH4TAIY79AiZH3eh",
-            "pakku_links": [
-                "mjse1gMXfneuvrpy"
-            ],
+            "pakku_id": "UqOkPH3gxmHYC4eb",
             "type": "MOD",
             "side": "BOTH",
             "slug": {
@@ -3179,7 +3169,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "copycats-3.0.4+mc.1.21.1-neoforge.jar",
+                    "file_name": "copycats-3.0.6+mc.1.21.1-neoforge.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -3187,18 +3177,18 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/UT2M39wf/versions/kecZ0sl7/copycats-3.0.4+mc.1.21.1-neoforge.jar",
-                    "id": "kecZ0sl7",
+                    "url": "https://cdn.modrinth.com/data/UT2M39wf/versions/DVQFhrV3/copycats-3.0.6+mc.1.21.1-neoforge.jar",
+                    "id": "DVQFhrV3",
                     "parent_id": "UT2M39wf",
                     "hashes": {
-                        "sha512": "ecc98e659be66a71af0aee66a9f4c7c8838f4f0101402644929079ce7280a572a000e7e417905e1869a51d6e49ebbd601008f54585e07ee4ed01f2c4bc752bfe",
-                        "sha1": "6a11d5806bcf521e08faba1ee6ef5f31af55ca0f"
+                        "sha512": "40c7b0b7ab7e9e532c5760d89d73594c9920aac0daefe537ed5a89a5c11712f08ea28093a5452baaf77f2c7620bb566ecc86e52883236ee01f29f7c9e6c91c30",
+                        "sha1": "0e683c5d3db4942899453fd93054ac0a926c7ef8"
                     },
                     "required_dependencies": [
                         "LNytGWDc"
                     ],
-                    "size": 1791747,
-                    "date_published": "2025-11-23T03:28:55.419625Z"
+                    "size": 1800542,
+                    "date_published": "2026-08-20T13:56:14.117907Z"
                 }
             ]
         },
@@ -3247,10 +3237,7 @@
             ]
         },
         {
-            "pakku_id": "GdFsiAyW4ZUBeC3r",
-            "pakku_links": [
-                "mjse1gMXfneuvrpy"
-            ],
+            "pakku_id": "KJJAAa6ku9Vt1VBG",
             "type": "MOD",
             "side": "BOTH",
             "slug": {
@@ -3265,7 +3252,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "create-extended-wrenches-1.21.1-2.0.1.jar",
+                    "file_name": "create-extended-wrenches-1.21.1-2.0.2.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -3273,23 +3260,23 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/WNRCHiE5/versions/BM3Pr9Mj/create-extended-wrenches-1.21.1-2.0.1.jar",
-                    "id": "BM3Pr9Mj",
+                    "url": "https://cdn.modrinth.com/data/WNRCHiE5/versions/g0PyoRas/create-extended-wrenches-1.21.1-2.0.2.jar",
+                    "id": "g0PyoRas",
                     "parent_id": "WNRCHiE5",
                     "hashes": {
-                        "sha512": "7aa1d515b3841a7d8eacf753500576c3322126758f76478ccd692ac7e8b40753122d247609c034f17e4ac1a37c6aedc57d51acfbe5c546154051ae5d629b4d37",
-                        "sha1": "24b8bdd2e1ae864bbf80667b70b636a87e3707de"
+                        "sha512": "dfd0f7e343bf5232a43eea440ff0734db80ca011121d461b22a9247e46a9a3377a2fe0f78cfb84986e92ce4b9f3ccc7c630d452396ce9c615d741e21c6e9e4c3",
+                        "sha1": "fbb77bc688c8ec0d9d2bccb6e6e31b0b8600a927"
                     },
                     "required_dependencies": [
                         "LNytGWDc"
                     ],
                     "size": 401219,
-                    "date_published": "2026-01-02T19:43:25.164768Z"
+                    "date_published": "2026-04-22T02:22:40.233059Z"
                 }
             ]
         },
         {
-            "pakku_id": "wALHJmzFMJvmZ7wG",
+            "pakku_id": "Rz6grOT5FE0UEhLZ",
             "type": "MOD",
             "side": "SERVER",
             "slug": {
@@ -3304,7 +3291,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "create_ltab-3.8.6.jar",
+                    "file_name": "create_ltab-4.1.0.jar",
                     "mc_versions": [
                         "1.20.1",
                         "1.21.1"
@@ -3316,16 +3303,16 @@
                         "quilt"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/fUa6OtBG/versions/hcAQXLu1/create_ltab-3.8.6.jar",
-                    "id": "hcAQXLu1",
+                    "url": "https://cdn.modrinth.com/data/fUa6OtBG/versions/dQQazoxf/create_ltab-4.1.0.jar",
+                    "id": "dQQazoxf",
                     "parent_id": "fUa6OtBG",
                     "hashes": {
-                        "sha512": "b962edb5439dc74905350dffa6e8b51ec6c56ac8f2c8c30d3afdc2598eb21be332fe3f7b59da6cc76ad05bb14390cc023433f1de70b8e99bbb8d8070b706e3a0",
-                        "sha1": "af65fd5c24bfee9dbfbd60f7ff84611a6c319377"
+                        "sha512": "05d2c6df728fbfe8d3522ffd88be492be5dfa6f06c806dc1f6d948afff39455f695add1edbb38fee2ed7f197668d13b5d72909bc60192c40d94df3ff0048d138",
+                        "sha1": "c5725961ba8585693a84cf06becb21e8f4b13f11"
                     },
                     "required_dependencies": [],
-                    "size": 2513562,
-                    "date_published": "2026-04-07T10:46:01.542551Z"
+                    "size": 2894822,
+                    "date_published": "2026-08-09T10:56:12.601585Z"
                 }
             ]
         },
@@ -4059,11 +4046,7 @@
             ]
         },
         {
-            "pakku_id": "gVGsfVPg0IjI3fBr",
-            "pakku_links": [
-                "MBUxbJUbuhOhmryo",
-                "mjse1gMXfneuvrpy"
-            ],
+            "pakku_id": "osaLqM7ucXIntaqt",
             "type": "MOD",
             "side": "CLIENT",
             "slug": {
@@ -4078,36 +4061,27 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "emi_create_schematics-1.0.3.jar",
+                    "file_name": "emi_create_schematics-1.1.0.jar",
                     "mc_versions": [
-                        "1.21.1",
-                        "1.21.2",
-                        "1.21.3",
-                        "1.21.4",
-                        "1.21.5",
-                        "1.21.6",
-                        "1.21.7",
-                        "1.21.8",
-                        "1.21.9",
-                        "1.21.10"
+                        "1.21.1"
                     ],
                     "loaders": [
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/5bgqgixq/versions/lTjSdvox/emi_create_schematics-1.0.3.jar",
-                    "id": "lTjSdvox",
+                    "url": "https://cdn.modrinth.com/data/5bgqgixq/versions/opyfkMHl/emi_create_schematics-1.1.0.jar",
+                    "id": "opyfkMHl",
                     "parent_id": "5bgqgixq",
                     "hashes": {
-                        "sha512": "b3396493522b486a9265f20792a81157d04defec03bf4288c440ec89e30dcbf17de2168e7d085bdf31143c8e7875a894e746b4594e232051a623a819abc24ac6",
-                        "sha1": "5df932609b494ef16222250fb50fbbda19b721f5"
+                        "sha512": "c25c5c0a7759d43790c785315e394bf81b064c79775bd032784d4588acd3afce37dd4e43be4d2db879561b9b7853245b7f9f79b5ffc40333a9703c8ff006f868",
+                        "sha1": "a34c4df9c1a39c553ac7cef28bb78132e4185cb6"
                     },
                     "required_dependencies": [
-                        "fRiHVvU7",
-                        "LNytGWDc"
+                        "LNytGWDc",
+                        "fRiHVvU7"
                     ],
-                    "size": 48530,
-                    "date_published": "2025-11-25T12:44:12.666518Z"
+                    "size": 848445,
+                    "date_published": "2026-02-01T23:39:01.618432Z"
                 }
             ]
         },

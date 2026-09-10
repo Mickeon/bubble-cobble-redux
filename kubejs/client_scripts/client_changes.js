@@ -181,6 +181,7 @@ const ITEM_TAG_DISPLAY_INFO = [
 	{tag: "conforts:sleeping_bags", name: "Sleeping Bags"},
 	{tag: "constructionstick:construction_sticks", name: "Construction Sticks", textures: ["constructionstick:item/wooden_stick", "constructionstick:item/copper_stick", "constructionstick:item/diamond_stick", "constructionstick:item/netherite_stick"]},
 	{tag: "create:pulpifiable", textures: ["minecraft:item/bamboo", "cobblemon:item/medicine/medicinal_leek", "minecraft:item/sugar_cane", "minecraft:block/oak_sapling"]},
+	{tag: "createdeco:placards", name: "Placards"},
 	{tag: "create_bic_bit:snacks", name: "Snacks"},
 	{tag: "create_bic_bit:snacks_deepfried", name: "Deepfried Snacks"},
 	{tag: "create_bic_bit:tulip", name: "Tulips"},
