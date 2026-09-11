@@ -1,5 +1,5 @@
 {
-	"parent": "cobblemon:first_evolution",
+	"parent": "cobblemon:catching/first_evolution",
 	"display": {
 		"icon": {
 			"id": "cobblemon:azure_ball"

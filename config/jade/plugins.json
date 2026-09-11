@@ -57,9 +57,6 @@
     "show_tree_block_counts": true,
     "show_num_chops_remaining": true
   },
-  "jadeaddons": {
-    "equipment_requirement": ""
-  },
   "jadeaddons.create": {
     "filter": true,
     "backtank_capacity": true,
@@ -80,18 +77,13 @@
   "cobblemonraiddens": {
     "raid_crystal": true
   },
-  "jadeaddons.lootr": {
-    "info": true
-  },
   "cobblemonintegrations": {
     "healer": true,
     "campfire_pot": true,
     "fossil_analyzer": true,
+    "tm_machine": true,
     "pokemon_entity": true,
     "berry_bush": true
-  },
-  "supplementaries": {
-    "hat_stand": true
   },
   "jade": {
     "coordinates.rel": false,
@@ -104,11 +96,20 @@
     "block_properties": false,
     "mod_name": true
   },
-  "gravestone": {
-    "grave": true
-  },
   "balm": {
     "jade": true
+  },
+  "jadeaddons": {
+    "equipment_requirement": ""
+  },
+  "jadeaddons.lootr": {
+    "info": true
+  },
+  "supplementaries": {
+    "hat_stand": true
+  },
+  "gravestone": {
+    "grave": true
   },
   "mega_showdown": {
     "jade": true

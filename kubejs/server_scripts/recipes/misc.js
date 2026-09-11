@@ -263,10 +263,11 @@ ServerEvents.recipes(event => {
 	event.remove({id: "gag:escape_rope"})
 	event.shapeless("gag:escape_rope", ["yo_hooks:iron_hook_head", Ingredient.of("#c:ropes").withCount(3)])
 
-	// Recipes for normally-unobtainable Applin evolution items.
+	// Recipes for Applin evolution items, leftover from when they were unobtainable.
 	event.shaped(Item.of("cobblemon:sweet_apple"), ["SSS", "SAS", "SSS"], {A: "minecraft:apple", S: "minecraft:sweet_berries"})
 	event.shaped(Item.of("cobblemon:tart_apple"), ["SSS", "SAS", "SSS"], {A: "minecraft:apple", S: "biomeswevegone:blueberries"})
 	event.shaped(Item.of("cobblemon:syrupy_apple"), ["SSS", "SAS", "SSS"], {A: "minecraft:apple", S: "minecraft:glow_berries"})
+	// FIXME: What do? This was unobtainable before, but now Cobblemon also has a recipe for it.
 	event.shaped(Item.of("cobblemon:metal_alloy"), ["ZAZ", "ANA", "ZAZ"], {Z: "create:zinc_nugget", A: "create:andesite_alloy", N: "minecraft:netherite_scrap"})
 
 	// Make Lanterns craftable with Zinc Nuggets, too.

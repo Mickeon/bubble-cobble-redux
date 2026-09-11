@@ -2,8 +2,8 @@
     "placement": {
         "type": "minecraft:random_spread",
         "exclusion_zone": {
-            "chunk_count": 2,
-            "other_set": "minecraft:swamp_huts"
+            "chunk_count": 5,
+            "other_set": "minecraft:woodland_mansions"
         },
         "spacing": 12,
         "separation": 7,
@@ -12,7 +12,7 @@
     },
     "structures": [
         {
-            "structure": "cobblemon:ruins/mossy_oubliette_ruins",
+            "structure": "cobblemon:ruins/old_garden_ruins",
             "weight": 1
         }
     ]

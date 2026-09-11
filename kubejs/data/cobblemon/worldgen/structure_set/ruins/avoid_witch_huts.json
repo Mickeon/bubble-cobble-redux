@@ -2,17 +2,17 @@
     "placement": {
         "type": "minecraft:random_spread",
         "exclusion_zone": {
-            "chunk_count": 2,
+            "chunk_count": 5,
             "other_set": "minecraft:swamp_huts"
         },
-        "spacing": 4,
-        "separation": 2,
-        "salt": 1691118712,
+        "spacing": 12,
+        "separation": 7,
+        "salt": 1628364155,
         "spread_type": "triangular"
     },
     "structures": [
         {
-            "structure": "cobblemon:fossils/prehistoric_rooted_pit",
+            "structure": "cobblemon:ruins/mossy_oubliette_ruins",
             "weight": 1
         }
     ]

@@ -1,5 +1,5 @@
 {
-	"parent": "cobblemon:full_party",
+	"parent": "cobblemon:catching/full_party",
 	"display": {
 		"icon": {
 			"id": "immersive_paintings:painting"

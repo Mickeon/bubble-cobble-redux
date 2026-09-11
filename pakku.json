@@ -134,6 +134,10 @@
         },
         "log-begone": {
             "side": "SERVER"
+        },
+
+        "sodium-core-shader-support": {
+            "export": false
         }
     }
 }

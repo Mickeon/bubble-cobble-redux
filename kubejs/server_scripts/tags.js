@@ -53,7 +53,7 @@ ServerEvents.tags("item", event => {
 	event.add("mega_showdown:mega_stone", /zamega:/).remove("zamega:ange") // TODO: Report this.
 
 	// More compatibility.
-	event.add("cobblemon:held/leaves_leftover", "create:honeyed_apple", "biomeswevegone:green_apple")
+	event.add("cobblemon:held/leaves_leftover", "biomeswevegone:green_apple")
 	event.add("brewinandchewin:raw_meats", "#c:foods/raw_meat")
 	event.add("c:cheese", "#brewinandchewin:foods/cheese_wedge") // Required because we disabled Bitterballen's cheese, but this tag is used in recipes.
 	event.add("cobblemon:pokedex_screen", "mowziesmobs:glowing_jelly")
@@ -115,10 +115,6 @@ ServerEvents.tags("item", event => {
 		"createmonballsoverhaul:black_tumblestone_dust",
 		"createmonballsoverhaul:sky_tumblestone_dust",
 		"createmonballsoverhaul:tumblestone_dust",
-		"cobblemon:bright_powder",
-		"cobblemon:metal_powder",
-		"cobblemon:quick_powder",
-		"cobblemon:silver_powder",
 		"cobblemon:soft_sand",
 		"mynethersdelight:pepper_powder",
 		"rarcompat:mimi_dust",
@@ -206,7 +202,6 @@ ServerEvents.tags("block", event => {
 	event.add("minecraft:combination_step_sound_blocks",
 		"#bubble_cobble:coinstacks",
 		"#snowyspirit:gumdrops",
-		"cobblemon:tatami_mat", // Reported: https://gitlab.com/cable-mc/cobblemon/-/merge_requests/2174.
 		"supplementaries:crank", // I forgot to report here: https://github.com/MehVahdJukaar/Supplementaries/pull/1932
 		"yungscavebiomes:ice_sheet"
 	)
@@ -316,7 +311,7 @@ ServerEvents.tags("worldgen/biome", event => {
 	event.add("cobblemon:is_magical", "biomesoplenty:aspen_glade")
 
 	event.add("cobblemon:is_cherry_blossom", "biomesoplenty:snowblossom_grove")
-	event.add("cobblemon:nether/is_forest", "#c:is_nether_forest") // For some reason the Cobblemon tag is empty normally.
+	event.add("cobblemon:nether/is_forest", "#c:is_nether_forest")
 
 	event.add("c:is_floral", "biomesoplenty:lavender_field", "biomesoplenty:orchard", "biomesoplenty:lush_savanna")
 	event.add("c:is_spooky", "biomeswevegone:pale_bog")

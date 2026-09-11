@@ -21,7 +21,8 @@ blacklist = [
 	"yungscavebiomes:ice_sheet",
 	"relics:leafy_ring",
 	"minecraft:copper_horse_armor",
-	"copperagebackport:*"
+	"copperagebackport:*",
+	"cobblemon:habitat_block"
 ]
 #Choose which screens to add the Completionist's Index button to.
 #Default Value: PAUSE_MENU

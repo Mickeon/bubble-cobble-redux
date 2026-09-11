@@ -11,6 +11,7 @@
   "reservedPokemonEntitiesAreInvulnerable": true,
   "requirePartyToFishPokemon": false,
   "fossilMachineResurrectionTime": 14400,
+  "disableEvGain": false,
   "bucketKeys": {
     "common": "tim_core.buckets.common",
     "uncommon": "tim_core.buckets.uncommon",

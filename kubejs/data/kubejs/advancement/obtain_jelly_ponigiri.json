@@ -1,5 +1,5 @@
 {
-  "parent": "cobblemon:place_campfire_pot",
+  "parent": "cobblemon:agriculture/place_campfire_pot",
   "display": {
     "icon": {
       "id": "cobblemon:ponigiri",

@@ -234,7 +234,7 @@ ItemEvents.modifyTooltips(event => {
 	event.add(["supplementaries:flint_block"], [subtle("Scraped against Iron lights a ").append(Text.gold("spark")).append("...")])
 	event.add(["supplementaries:doormat"], [subtle("Could there be ").append(Text.gold("something")).append(" underneath it?")])
 	event.add(["supplementaries:confetti_popper"], [subtle("Makes for a nice ").append(Text.gold("hat")).append(". Creepers like it too!")])
-	event.add(["supplementaries:bunting"], [subtle("Can be placed on ").append(Text.gold("Ropes"))])
+	// event.add(["#supplementaries:buntings"], [subtle("Can be placed on ").append(Text.gold("Ropes"))]) // Redundant, the mod has its own tooltip.
 	event.add(["supplementaries:gravel_bricks"], [subtle("It's frail under your feet")])
 	event.add(["supplementaries:lumisene_bucket"], [subtle("Bewildering, perhaps ").append(Text.gold("flammable")).append("?")])
 	event.add(["supplementaries:sack"], [subtle("This can store stuff, by the way")])
@@ -457,7 +457,7 @@ NativeEvents.onEvent("highest", $RenderTooltipEvent$Color, event => {
 		case "zamega": {
 			graphics.renderFakeItem(item_stack.mod == "mega_showdown"
 					? "mega_showdown:swampertite"
-					: "zamega:absolitez",
+					: "mega_showdown:absolite_z",
 				event.x,
 				event.y - 10
 			)

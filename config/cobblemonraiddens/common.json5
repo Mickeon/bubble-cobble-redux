@@ -18,12 +18,16 @@
 		"minecraft:overworld": 256,
 		"resource_world:dream_dimension": 512
 	},
+	// The timer system raid dens use for resets (Options: GAME_TIME, SYSTEM_TIME, GLOBAL_GAME_TIME, GLOBAL_SYSTEM_TIME). Default: GAME_TIME
+	"reset_mode": "GAME_TIME",
 	// How long in seconds until raid dens reset (Set to -1 for no resets). Default: 7200
 	"reset_time": 5400,
 	// Whether the raid boss and raid tier changes between resets (Options: NONE, LOCK_BOTH, LOCK_TIER, LOCK_TYPE, BUCKET, ALL). Default: ALL
 	"cycle_mode": "ALL",
 	// Whether failed raids count towards the max clears. Default: false
 	"max_clears_include_fails": false,
+	// Whether players can retry failed raids
+	"retry_failed_raids": true,
 	// Whether the reward Pokemon attributes (IVs/Shiny/etc.) are synced between all players or rolled individually. Default: true
 	"sync_rewards": false,
 	// Whether raid crystals can be broken. Default: true
@@ -33,5 +37,11 @@
 	// The maximum number of players in a raid before shared supporting moves are disabled. Default: 4
 	"max_players_for_support": 4,
 	// The amount of raid energy required to convert a raid shard. Default: 100
-	"required_energy": 100
+	"required_energy": 100,
+	// How many raids can occur simultaneously. Determines raid coordinate allocation. Default: 10000
+	"raid_cap": 10000,
+	// How raid coordinate allocation is determined (Options: SPIRAL, RANDOM). Default: SPIRAL
+	"raid_allocation": "SPIRAL",
+	// Whether IVs from raids affect the Pokemon's natural IVs or hyper trained IVs. Default: true
+	"use_natural_ivs": true
 }
