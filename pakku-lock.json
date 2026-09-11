@@ -3376,7 +3376,7 @@
             ]
         },
         {
-            "pakku_id": "gtAO9ZIKb8Qht6HU",
+            "pakku_id": "p2ybuPw53qjbB91B",
             "type": "MOD",
             "side": "BOTH",
             "slug": {
@@ -3391,7 +3391,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "CreativeCore_NEOFORGE_v2.13.44_mc1.21.1.jar",
+                    "file_name": "CreativeCore_NEOFORGE_v2.13.46_mc1.21.1.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -3399,16 +3399,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/OsZiaDHq/versions/JX9o5pJD/CreativeCore_NEOFORGE_v2.13.44_mc1.21.1.jar",
-                    "id": "JX9o5pJD",
+                    "url": "https://cdn.modrinth.com/data/OsZiaDHq/versions/fdEYikBb/CreativeCore_NEOFORGE_v2.13.46_mc1.21.1.jar",
+                    "id": "fdEYikBb",
                     "parent_id": "OsZiaDHq",
                     "hashes": {
-                        "sha512": "bf09773b202158d6ceb81ccfad3a8dd5b2e422d5cd0a7b9affca821af163c381bf839117765e7ca10b32ace0f477141e57f0ae9ea5c4fee38f06e1af6accef2b",
-                        "sha1": "ed55360f72cd6666a1b191506a6270e05ef1ef49"
+                        "sha512": "cae19e90001272f3d9be35b279e1c5eed6f1079740380532b5055af19fb378f32a74754beb3c9ca7d2e49f75259f6e1b44c5d602db6362bd6017b3a95d3fee75",
+                        "sha1": "180613074e3f8df9b1e052a3abe19a1c4ac38b48"
                     },
                     "required_dependencies": [],
-                    "size": 1232783,
-                    "date_published": "2026-08-21T14:39:59.396511Z"
+                    "size": 1235813,
+                    "date_published": "2026-09-11T13:42:08.209714Z"
                 }
             ]
         },
@@ -7484,7 +7484,7 @@
             ]
         },
         {
-            "pakku_id": "r3V26TZzQ5xmhh4i",
+            "pakku_id": "oZU6V1MYxK3Tzb59",
             "type": "MOD",
             "side": "CLIENT",
             "slug": {
@@ -7501,7 +7501,6 @@
                     "type": "modrinth",
                     "file_name": "PersistentCreativeInventory-1.0.1.jar",
                     "mc_versions": [
-                        "1.21",
                         "1.21.1",
                         "26.1",
                         "26.1.1",
@@ -8903,7 +8902,7 @@
             ]
         },
         {
-            "pakku_id": "HGwkATWAb19JtINr",
+            "pakku_id": "y9wJPeTPeYyySvKq",
             "type": "MOD",
             "side": "SERVER",
             "slug": {
@@ -8918,7 +8917,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "server_i18n_api-1.4.2-1.21.3-neoforge.jar",
+                    "file_name": "server_i18n_api-1.5.2-1.21.3-neoforge.jar",
                     "mc_versions": [
                         "1.21",
                         "1.21.1",
@@ -8929,16 +8928,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/Cl2eyShu/versions/Jz8EoWCY/server_i18n_api-1.4.2-1.21.3-neoforge.jar",
-                    "id": "Jz8EoWCY",
+                    "url": "https://cdn.modrinth.com/data/Cl2eyShu/versions/DllhjKG5/server_i18n_api-1.5.2-1.21.3-neoforge.jar",
+                    "id": "DllhjKG5",
                     "parent_id": "Cl2eyShu",
                     "hashes": {
-                        "sha512": "1d4c0ea6a0ad6f55a1289c7e3beb809b393321fb9326317fcd7a9e9f9b0477f5904cd9494c7097d9a3762024a7c54b152c72139fb07c3b5a5853df6bab1a957b",
-                        "sha1": "6af19005985f4fd68df51732b7649ff83cd46513"
+                        "sha512": "54f94139c06e96fcd3ac811b4954b4778d5716fbbeba6ffa0480643be7bca491ed64c23457da3981839b1c79a71e741bfde612b56581abebcccb7a7fa5b36c18",
+                        "sha1": "4c6c3099980d1e106586baaf6eada8d001b75047"
                     },
                     "required_dependencies": [],
-                    "size": 25137,
-                    "date_published": "2026-01-26T02:23:15.405784Z"
+                    "size": 25897,
+                    "date_published": "2026-06-26T09:35:10.927209Z"
                 }
             ]
         },
