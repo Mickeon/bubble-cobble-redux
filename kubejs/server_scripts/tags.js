@@ -37,14 +37,18 @@ ServerEvents.tags("item", event => {
 	event.add("cobblemon:shiny_stone_ores", "mega_showdown:mega_meteorid_shiny_ore")
 	event.add("cobblemon:sun_stone_ores", "mega_showdown:mega_meteorid_sun_ore")
 	event.add("cobblemon:thunder_stone_ores", "mega_showdown:mega_meteorid_thunder_ore")
-	event.add("c:nuggets", "minecraft:copper_nugget")
+	if (Item.exists("minecraft:copper_nugget")) {
+		event.add("c:nuggets", "minecraft:copper_nugget")
+	}
 	event.add("c:tools/spear", "#minecraft:spears") // Reported, but marked as "Won't fix": https://github.com/Unknowneth/Backported-Spears/issues/60.
 	event.add("c:storage_blocks", "#c:storage_blocks/industrial_iron") // TODO: Report this.
 	event.add("minecraft:piglin_loved", "solonion:golden_lunchbox", "handcrafted:golden_thin_pot", "handcrafted:golden_thick_pot", "handcrafted:golden_wide_pot", "handcrafted:golden_medium_pot") //Reported: https://github.com/terrarium-earth/Handcrafted/issues/152
 	event.add("c:music_discs", "cnc:music_disc_slough_choir", "cnc:music_disc_wreck_of_the_old_97", "cnc:music_disc_hills", "undergroundworlds:music_disc_abbeyence") // TODO: Report this.
 	event.removeAll("minecraft:music_discs") // This tag doesn't exist anymore.
-	event.add("minecraft:buttons", COPPER_BUTTONS)
-	event.remove("create:chain_rideable", COPPER_CHAINS) // They didn't realise this was plainly wrong. Reported: https://github.com/Smallinger/Copper-Age-Backport/issues/87.
+	if (Platform.isLoaded("copperagebackport")) {
+		event.add("minecraft:buttons", COPPER_BUTTONS)
+		event.remove("create:chain_rideable", COPPER_CHAINS) // They didn't realise this was plainly wrong. Reported: https://github.com/Smallinger/Copper-Age-Backport/issues/87.
+	}
 	event.add("c:chests", COPPER_CHESTS) // Reported: https://github.com/Smallinger/Copper-Age-Backport/issues/86.
 	event.add("mega_showdown:mega_stone", /zamega:/).remove("zamega:ange") // TODO: Report this.
 
@@ -120,7 +124,10 @@ ServerEvents.tags("item", event => {
 		"rarcompat:mimi_dust",
 	)
 	event.add("supplementaries:pancake_syrup", "create:chocolate_bucket")
-	event.add("supplementaries:causes_lightning_when_held", "constructionstick:copper_stick", "minecraft:copper_sword", "minecraft:copper_axe") // Funny.
+	event.add("supplementaries:causes_lightning_when_held", "constructionstick:copper_stick") // Funny.
+	if (Item.exists("minecraft:copper_sword")) {
+		event.add("supplementaries:causes_lightning_when_held", "minecraft:copper_sword", "minecraft:copper_axe")
+	}
 	event.add("supplementaries:overencumbering", "#create:toolboxes", "#create:packages", /sophisticatedstorage:.*shulker_box/)
 
 	// Make Construction sticks enchantable with Mending and Unbreaking.
@@ -191,8 +198,10 @@ ServerEvents.tags("block", event => {
 	event.add("minecraft:guarded_by_piglins", "handcrafted:golden_thin_pot", "handcrafted:golden_thick_pot", "handcrafted:golden_wide_pot", "handcrafted:golden_medium_pot") // Reported: https://github.com/terrarium-earth/Handcrafted/issues/152
 	event.add("cobblemon:machines", "simpletms:machine_tm")
 	// event.add("create:single_block_inventories", "supplementaries:sack", "supplementaries:safe", "supplementaries:pulley_block") // Doesn't seem to be useful for us?
-	event.add("minecraft:buttons", COPPER_BUTTONS)
-	event.add("minecraft:mineable/pickaxe", COPPER_BUTTONS)
+	if (Platform.isLoaded("copperagebackport")) {
+		event.add("minecraft:buttons", COPPER_BUTTONS)
+		event.add("minecraft:mineable/pickaxe", COPPER_BUTTONS)
+	}
 	event.add("farmersdelight:mineable/knife", "#c:ropes") // Just to include Supplementaries's rope. Probably should be reported.
 	event.add("minecraft:combination_step_sound_blocks",
 		"#bubble_cobble:coinstacks",
@@ -273,8 +282,11 @@ ServerEvents.tags("entity_type", event => {
 	event.add("supplementaries:urn_spawn", "minecraft:tropical_fish", "minecraft:rabbit", "cnc:mouse") // Funny.
 	// event.add("supplementaries:ash_blacklist", "minecraft:allay", "") // TODO: Report this. No mob seems to drop ash for some reason?
 	// Tee-hee.
-	event.add("supplementaries:cage_catchable", "minecraft:copper_golem")
-	event.add("supplementaries:flute_pet", "minecraft:copper_golem", "minecraft:iron_golem", "minecraft:snow_golem", "minecraft:player", "minecraft:turtle")
+	if (Platform.isLoaded("copperagebackport")) {
+		event.add("supplementaries:cage_catchable", "minecraft:copper_golem")
+		event.add("supplementaries:flute_pet", "minecraft:copper_golem")
+	}
+	event.add("supplementaries:flute_pet", "minecraft:iron_golem", "minecraft:snow_golem", "minecraft:player", "minecraft:turtle")
 	event.add("artifacts:creepers", "undergroundworlds:icy_creeper")
 	event.add("create:ignore_seat", "minecraft:bee")
 	event.add("farmersdelight:dog_food_users", "cobblemon:pokemon")

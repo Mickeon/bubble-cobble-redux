@@ -32,7 +32,7 @@ LootJS.lootTables(event => {
 
 		event.getLootTable("supplementaries:loot/urn_loot/uncommon").firstPool()
 			.addEntry(LootEntry.of("create:zinc_nugget").withWeight(10).setCount([8, 32]))
-			.addEntry(LootEntry.of("minecraft:copper_nugget").withWeight(10).setCount([8, 32]))
+			.addEntry(LootEntry.of(Item.exists("minecraft:copper_nugget") ? "minecraft:copper_nugget" : "create:copper_nugget").withWeight(10).setCount([8, 32]))
 			.addEntry(LootEntry.of("supplementaries:rope").withWeight(10).setCount([3, 6]))
 			.addEntry(LootEntry.of("farmersdelight:canvas").withWeight(10).setCount([2, 4]))
 			.addEntry(LootEntry.of("farmersdelight:straw").withWeight(10).setCount([2, 4]))

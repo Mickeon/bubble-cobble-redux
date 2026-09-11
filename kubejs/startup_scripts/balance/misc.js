@@ -66,10 +66,12 @@ ItemEvents.modification(event => {
 	}
 
 	// Fix Copper Armor having no durability.
-	set_max_damage("minecraft:copper_helmet", 121)
-	set_max_damage("minecraft:copper_chestplate", 176)
-	set_max_damage("minecraft:copper_leggings", 165)
-	set_max_damage("minecraft:copper_boots", 143)
+	if (Platform.isLoaded("copperagebackport")) {
+		set_max_damage("minecraft:copper_helmet", 121)
+		set_max_damage("minecraft:copper_chestplate", 176)
+		set_max_damage("minecraft:copper_leggings", 165)
+		set_max_damage("minecraft:copper_boots", 143)
+	}
 
 	// Make Sandpaper last double as much.
 	set_max_damage("create:sand_paper", 16)

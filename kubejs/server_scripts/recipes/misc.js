@@ -254,7 +254,9 @@ ServerEvents.recipes(event => {
 	event.replaceInput({id: "mega_showdown:likos_pendant"}, "minecraft:string", "#c:ropes")
 
 	// Waigee's request. Pale Oak Shelf from Jacaranda wood.
-	event.shaped(Item.of("minecraft:pale_oak_shelf", 6), ["SSS", "   ", "SSS"], {S: "biomesoplenty:stripped_jacaranda_log"})
+	if (Item.exists("minecraft:pale_oak_shelf")) {
+		event.shaped(Item.of("minecraft:pale_oak_shelf", 6), ["SSS", "   ", "SSS"], {S: "biomesoplenty:stripped_jacaranda_log"})
+	}
 
 	// New recipe for Gadgets Against Grind's Escape Rope.
 	// event.remove({mod: "gag"})
@@ -291,7 +293,9 @@ ServerEvents.recipes(event => {
 	}
 
 	// All of the other types require differently colored torches, because Copper Torches didn't exist.
-	event.replaceInput({id: /createdeco:green_.*lamp/}, "minecraft:glow_berries", "minecraft:copper_torch")
+	if (Item.exists("minecraft:copper_torch")) {
+		event.replaceInput({id: /createdeco:green_.*lamp/}, "minecraft:glow_berries", "minecraft:copper_torch")
+	}
 
 	event.shaped("mega_showdown:sparkling_stone_light", ["AAA", "ASA", "AAA"], {A: "minecraft:white_dye", S: "mega_showdown:sparkling_stone_dark"})
 	event.shaped("mega_showdown:sparkling_stone_dark", ["AAA", "ASA", "AAA"], {A: "minecraft:black_dye", S: "mega_showdown:sparkling_stone_light"})
@@ -313,7 +317,7 @@ ServerEvents.recipes(event => {
 	)
 	event.recipes.create.milling(CreateItem.of(Item.of("biomesoplenty:orange_sand")), Ingredient.of("arts_and_crafts:gypsum"), 10 * SEC)
 	event.recipes.create.splashing([
-			CreateItem.of(Item.of("minecraft:copper_nugget", 3), 0.12),
+			CreateItem.of(Item.of(Item.exists("minecraft:copper_nugget") ? "minecraft:copper_nugget" : "create:copper_nugget", 3), 0.12),
 			CreateItem.of(Item.of("biomesoplenty:dead_branch"), 0.05)
 		],
 		Ingredient.of("biomesoplenty:orange_sand")
