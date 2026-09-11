@@ -9995,7 +9995,7 @@
             "files": [
                 {
                     "type": "curseforge",
-                    "file_name": "TemperatureBands-1.0.0-NeoForge-1.21.1.jar",
+                    "file_name": "TemperatureBands-2.2.0-NeoForge-1.21.1.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -10003,16 +10003,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/6521/159/TemperatureBands-1.0.0-NeoForge-1.21.1.jar",
-                    "id": "6521159",
+                    "url": "https://edge.forgecdn.net/files/8520/846/TemperatureBands-2.2.0-NeoForge-1.21.1.jar",
+                    "id": "8520846",
                     "parent_id": "1258324",
                     "hashes": {
-                        "sha1": "b5bbd231c2a52225d3abdef8bf261e1a5eca7f1d",
-                        "md5": "0b37f014867c941288f46214d76f0286"
+                        "sha1": "d1bb701fac96bf8b183276a35e69795590f9cc68",
+                        "md5": "e4315871f9941717f03ea0138260e758"
                     },
                     "required_dependencies": [],
-                    "size": 19401,
-                    "date_published": "2025-05-12T00:26:55.430Z"
+                    "size": 917039,
+                    "date_published": "2026-07-27T15:17:03.287Z"
                 }
             ]
         },
