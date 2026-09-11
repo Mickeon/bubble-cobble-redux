@@ -514,10 +514,7 @@
             ]
         },
         {
-            "pakku_id": "fb3jLDTIl1r9qzbe",
-            "pakku_links": [
-                "bfo1VDLqtn0HGg7O"
-            ],
+            "pakku_id": "7W3j6yEpJZRvxgJk",
             "type": "MOD",
             "side": "BOTH",
             "slug": {
@@ -532,7 +529,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "arts_and_crafts-neoforge-1.21.1-1.5.3.jar",
+                    "file_name": "arts_and_crafts-neoforge-1.21.1-1.5.4.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -540,18 +537,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/JI9mEkvq/versions/61y93vG7/arts_and_crafts-neoforge-1.21.1-1.5.3.jar",
-                    "id": "61y93vG7",
+                    "url": "https://cdn.modrinth.com/data/JI9mEkvq/versions/Aq4HVonr/arts_and_crafts-neoforge-1.21.1-1.5.4.jar",
+                    "id": "Aq4HVonr",
                     "parent_id": "JI9mEkvq",
                     "hashes": {
-                        "sha512": "6eeff8da44598bf573d8e44b2ece1b70b1a6f17462c43a1294830db11ea8905b5f01f54b2a90b369d65f5458ae0465656bcc158c5cd37a23bdde719d57e57ab2",
-                        "sha1": "5dcd51c5e6d2919e1f9e0f76f52c6e06e9c77353"
+                        "sha512": "90fea6dce341b39c974d63bf4bce6808492be3cda29b27e2331359851a302caf100937ed11989de8058b266ae80401167fd18e064f119e6b52277c6166a934b7",
+                        "sha1": "08729408d2d2078060352c9529a95a4240a0558d"
                     },
-                    "required_dependencies": [
-                        "Vrr7WtS4"
-                    ],
-                    "size": 4970128,
-                    "date_published": "2025-12-23T19:48:03.051137Z"
+                    "required_dependencies": [],
+                    "size": 4970987,
+                    "date_published": "2026-05-05T01:08:14.367808Z"
                 }
             ]
         },
@@ -6873,7 +6868,7 @@
             ]
         },
         {
-            "pakku_id": "ndXK4engkIjD6eQk",
+            "pakku_id": "vVRTVoUS6WmZk5Lm",
             "type": "MOD",
             "side": "BOTH",
             "slug": {
@@ -6888,7 +6883,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "MyNethersDelight-1.21.1-1.10.4.jar",
+                    "file_name": "MyNethersDelight-1.21.1-1.10.4.1.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -6896,16 +6891,18 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/O53VhQoZ/versions/OdH19ieD/MyNethersDelight-1.21.1-1.10.4.jar",
-                    "id": "OdH19ieD",
+                    "url": "https://cdn.modrinth.com/data/O53VhQoZ/versions/SGFJBL5q/MyNethersDelight-1.21.1-1.10.4.1.jar",
+                    "id": "SGFJBL5q",
                     "parent_id": "O53VhQoZ",
                     "hashes": {
-                        "sha512": "97b3244486430bce3bc6851bf700a9643cd018fdb48961210fecce3a6823ad2a4a25e4943763c0a27f68607cc33c7ce6b0b913cacb12dd1a28850ac5508cc57c",
-                        "sha1": "6f2803d6a84d296e07382dd2f6c13c3b4fd57cbd"
+                        "sha512": "36df146974d70fe5f7c92c4aeef613d1e0192efbb550faa88efaa8170212c07f9fc5938961d1b8da489355579910e95fea2cd5ae714b614ce17f1b8e352f0bbf",
+                        "sha1": "9c54439d65e77c7b4b711831138f81f3a849ff35"
                     },
-                    "required_dependencies": [],
-                    "size": 904388,
-                    "date_published": "2026-07-29T19:23:43.495311Z"
+                    "required_dependencies": [
+                        "R2OftAxM"
+                    ],
+                    "size": 905059,
+                    "date_published": "2026-09-11T00:10:31.538898Z"
                 }
             ]
         },
@@ -8227,11 +8224,7 @@
             ]
         },
         {
-            "pakku_id": "Y4hjtggQidwRsWd6",
-            "pakku_links": [
-                "WWiX8dynol1cESFV",
-                "vqYPIgcIU332HHHj"
-            ],
+            "pakku_id": "UJohCccJqFEa46HY",
             "type": "MOD",
             "side": "CLIENT",
             "slug": {
@@ -8246,7 +8239,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "remi-neoforge-1.21.1-4.6.9.jar",
+                    "file_name": "remi-neoforge-1.21.1-4.7.0.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -8254,19 +8247,19 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/N9WucjHL/versions/TW4FpmG9/remi-neoforge-1.21.1-4.6.9.jar",
-                    "id": "TW4FpmG9",
+                    "url": "https://cdn.modrinth.com/data/N9WucjHL/versions/qZtPW6gc/remi-neoforge-1.21.1-4.7.0.jar",
+                    "id": "qZtPW6gc",
                     "parent_id": "N9WucjHL",
                     "hashes": {
-                        "sha512": "6795537738ea4359acca54417057439719c8f3c50aefc68b667266f750eea388e24b3c4cd09e7c82294e593a69a7f89664a8ae382c6550637fe7c5f6873e867a",
-                        "sha1": "f90db9347ca0f230758478e5aac80f34a3486ec6"
+                        "sha512": "5ec660eca299c64e7d11813443392e37d43a72ec9071603c5faa64b6dc7c4cef8618b8213d84538fcafdacbc6d40cbd08696da5b4774e6a18e18e46f7acd4025",
+                        "sha1": "b9a844e7da498d5f8dffd9c0605615d718d6d471"
                     },
                     "required_dependencies": [
                         "1eAoo2KR",
                         "fRiHVvU7"
                     ],
-                    "size": 279057,
-                    "date_published": "2026-09-07T07:02:47.167685Z"
+                    "size": 283515,
+                    "date_published": "2026-09-10T05:56:56.317061Z"
                 }
             ]
         },
@@ -10823,7 +10816,7 @@
             ]
         },
         {
-            "pakku_id": "Tn5jgtSMsghgheW9",
+            "pakku_id": "irzAUcHsZfARBeqP",
             "type": "MOD",
             "side": "BOTH",
             "slug": {
@@ -10838,7 +10831,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "xaerominimap-neoforge-1.21.1-26.4.2.jar",
+                    "file_name": "xaerominimap-neoforge-1.21.1-26.5.0.jar",
                     "mc_versions": [
                         "1.21",
                         "1.21.1"
@@ -10847,21 +10840,21 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/1bokaNcj/versions/JXvcT1hp/xaerominimap-neoforge-1.21.1-26.4.2.jar",
-                    "id": "JXvcT1hp",
+                    "url": "https://cdn.modrinth.com/data/1bokaNcj/versions/Q1tuMQBB/xaerominimap-neoforge-1.21.1-26.5.0.jar",
+                    "id": "Q1tuMQBB",
                     "parent_id": "1bokaNcj",
                     "hashes": {
-                        "sha512": "7ece42b6665cb3a83d77bca1ae9ab31e9f418a7e0ee73f4be1839b62a8dde7e2727d554b6ed056ca4e7510c1aaa6603e5caaa62355bca9ff202171df73ac49ee",
-                        "sha1": "21b3232e62dabcbb5bf28866481e8de2c0ccb780"
+                        "sha512": "0fde1066dd922ac0796d166ba1bf1b843873b8d8563da3a08777df54bb377ff6466096650c730ad1b96e0aecf2d8974cd87c32165edf6a30f6653840c3f99abf",
+                        "sha1": "7553dddbe478d1c8c15198090217e723d27f79c4"
                     },
                     "required_dependencies": [],
-                    "size": 2185409,
-                    "date_published": "2026-07-17T08:52:05.284978Z"
+                    "size": 2185559,
+                    "date_published": "2026-09-10T11:37:53.816631Z"
                 }
             ]
         },
         {
-            "pakku_id": "mRWWCaMapwuqYge4",
+            "pakku_id": "J5O2ndxIPZo5nSaZ",
             "type": "MOD",
             "side": "BOTH",
             "slug": {
@@ -10876,7 +10869,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "xaeroworldmap-neoforge-1.21.1-1.45.0.jar",
+                    "file_name": "xaeroworldmap-neoforge-1.21.1-1.46.0.jar",
                     "mc_versions": [
                         "1.21",
                         "1.21.1"
@@ -10885,16 +10878,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/NcUtCpym/versions/fOv9QzLO/xaeroworldmap-neoforge-1.21.1-1.45.0.jar",
-                    "id": "fOv9QzLO",
+                    "url": "https://cdn.modrinth.com/data/NcUtCpym/versions/9Ckiihkz/xaeroworldmap-neoforge-1.21.1-1.46.0.jar",
+                    "id": "9Ckiihkz",
                     "parent_id": "NcUtCpym",
                     "hashes": {
-                        "sha512": "57a3175d91c237682b65e1b9df78be23ad8cd03f1c8ca074fc61e1672d280df8fa7335c88a173b46b1e17834af621e5121b80ac0d12cd7c9aba3e3ceb367d1eb",
-                        "sha1": "f243d6877ab32333f27bf27ad1e9eb600361e6aa"
+                        "sha512": "fb14d11d66e0a6441981b18454c86534d8f534cd159ca19fa612950521788d858f37f18fe2093bb9b43ca0a88ae9af578eced5d140ff645a7681d7e452e8a268",
+                        "sha1": "82b4ae6c0f2e13f02cbdc1325342909ed083fc24"
                     },
                     "required_dependencies": [],
-                    "size": 1422531,
-                    "date_published": "2026-08-21T12:04:23.351740Z"
+                    "size": 1422680,
+                    "date_published": "2026-09-10T11:26:22.762444Z"
                 }
             ]
         },

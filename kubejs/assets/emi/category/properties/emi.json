@@ -59,9 +59,6 @@
 	"emi:grinding": {
 		"order": 830
 	},
-	"emixx:villager_trades": {
-		"order": 840
-	},
 
 	"emiffect:status_effect_info": {
 		"order": 960
