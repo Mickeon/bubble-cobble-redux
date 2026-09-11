@@ -39,6 +39,8 @@
 /config/waterframes-client.toml
 /config/aiutd-enduser.json5
 /config/cobbreeding/encryption
+/config/emixx/emixx-client.toml
+/config/sodium-fingerprint.json
 /cobblemon
 /cobblemoncreatified
 /cobblenav

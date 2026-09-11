@@ -207,6 +207,8 @@ chunk_rebuild_scheduler = "culling"
 				grottol = true
 				naga = true
 				umvuthana_crane_player = true
+				elokosa_follower_howler = true
+				elokosa_howler = true
 
 			[light_sources.settings.entities.biomesoplenty]
 				chest_boat = true
@@ -367,9 +369,16 @@ chunk_rebuild_scheduler = "culling"
 				spore = true
 				shadow_glaive = true
 				relic_experience_orb = true
+				block_simulation = true
+				chair = true
+				dissection = true
+				shockwave = true
+				solid_snowball = true
+				stalactite = true
 
 			[light_sources.settings.entities.lootr]
 				lootr_minecart = true
+				item_frame = true
 
 			[light_sources.settings.entities.cobblemoncreatified]
 				trial_trainer = true
@@ -511,6 +520,42 @@ chunk_rebuild_scheduler = "culling"
 
 			[light_sources.settings.entities.usefulspyglass]
 				watcher_eye = true
+
+			[light_sources.settings.entities.sleep_tight]
+				bedbug = true
+				bed_entity = true
+				dreamer_essence_dummy = true
+
+			[light_sources.settings.entities.arts_and_crafts]
+				boat = true
+				chest_boat = true
+				floating_block = true
+
+			[light_sources.settings.entities.connectiblechains]
+				chain_knot = true
+
+			[light_sources.settings.entities.yo_hooks]
+				hook_entity = true
+
+			[light_sources.settings.entities.bits_n_bobs]
+				inert_stationary_contraption = true
+
+			[light_sources.settings.entities.artifacts]
+				mimic = true
+
+			[light_sources.settings.entities.urban_decor]
+				seat = true
+
+			[light_sources.settings.entities.gag]
+				fishing_dynamite = true
+				mining_dynamite = true
+				time_accelerator = true
+
+			[light_sources.settings.entities.immersive_furniture]
+				sitting = true
+
+			[light_sources.settings.entities.rarcompat]
+				spark = true
 
 [debug]
 	active_dynamic_lighting_cells = false

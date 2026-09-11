@@ -57,6 +57,7 @@
         ".cache": true,
         ".mixin.out": true,
         ".probe": true,
+        "*.bak": true,
         "build": true,
         "cache": true,
         "cobble*": true,
@@ -124,5 +125,9 @@
     "[json]": {
         "editor.insertSpaces": false
     },
-    "typescript.surveys.enabled": false
+    "typescript.surveys.enabled": false,
+    "search.exclude": {
+        ".vscode/probejs.code-snippets": true,
+        "saves/**/stats/*.json": true
+    }
 }
