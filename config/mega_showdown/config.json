@@ -17,8 +17,8 @@
   "legacyTeraEffect": false,
   "likoPendentDuration": 1440000,
   "minBondingRequired": 200,
-  "showBattleHUD": true,
-  "showStatChanges": true,
-  "showMoveTooltips": true,
+  "showBattleHUD": false,
+  "showStatChanges": false,
+  "showMoveTooltips": false,
   "debugMode": false
 }

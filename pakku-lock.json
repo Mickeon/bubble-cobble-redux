@@ -1569,6 +1569,48 @@
             ]
         },
         {
+            "pakku_id": "wTgSBba2nAYw2ysd",
+            "pakku_links": [
+                "BHRBsZDVcujiy5Yy"
+            ],
+            "type": "MOD",
+            "side": "CLIENT",
+            "slug": {
+                "modrinth": "cobblemon-battle-extras"
+            },
+            "name": {
+                "modrinth": "Cobblemon Battle Extras"
+            },
+            "id": {
+                "modrinth": "2iY8VFqL"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "cobblemon-battle-extras-neoforge-1.13.45.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/2iY8VFqL/versions/liJnZJxw/cobblemon-battle-extras-neoforge-1.13.45.jar",
+                    "id": "liJnZJxw",
+                    "parent_id": "2iY8VFqL",
+                    "hashes": {
+                        "sha512": "7a608e6bba5af29fa792db38540bb95becbb614ee7b7e0b8fd425c5de1e8cd39d057508a4dc4842e43a374ef1d72df3b2b05972f988cafe543339be4e7cefb87",
+                        "sha1": "eb446be193bdd4981d16c86bb40410be3f0cb693"
+                    },
+                    "required_dependencies": [
+                        "MdwFAVRL"
+                    ],
+                    "size": 1651388,
+                    "date_published": "2026-04-22T20:05:43.885334Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "qxswqccDGCkLA8aT",
             "type": "MOD",
             "side": "SERVER",
@@ -1723,45 +1765,6 @@
                     ],
                     "size": 42717,
                     "date_published": "2024-09-10T23:20:36.037191Z"
-                }
-            ]
-        },
-        {
-            "pakku_id": "q6elRcsWg6BuzVyk",
-            "type": "MOD",
-            "side": "CLIENT",
-            "slug": {
-                "modrinth": "cobblemon-move-inspector"
-            },
-            "name": {
-                "modrinth": "Cobblemon Move Inspector"
-            },
-            "id": {
-                "modrinth": "MqcGBDhG"
-            },
-            "files": [
-                {
-                    "type": "modrinth",
-                    "file_name": "CobblemonMoveInspector-neoforge-1.3.0.jar",
-                    "mc_versions": [
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/MqcGBDhG/versions/kzhF1fB9/CobblemonMoveInspector-neoforge-1.3.0.jar",
-                    "id": "kzhF1fB9",
-                    "parent_id": "MqcGBDhG",
-                    "hashes": {
-                        "sha512": "6a264e36f1f69c1e660fd6c25f27032da66ad48ff4f31e305e76af2865375e1d2e5548bad9ed566c0ba312e445d52cab1a641983553c3398e0613ce1bdad49ea",
-                        "sha1": "428b18c023a0dff9871d231f454d10db34212fa7"
-                    },
-                    "required_dependencies": [
-                        "MdwFAVRL"
-                    ],
-                    "size": 26970,
-                    "date_published": "2025-11-22T04:54:42.798147Z"
                 }
             ]
         },
@@ -1979,48 +1982,6 @@
                     "required_dependencies": [],
                     "size": 1202010,
                     "date_published": "2026-02-27T06:22:34.076944Z"
-                }
-            ]
-        },
-        {
-            "pakku_id": "sRDyFwwUN0z3F8da",
-            "pakku_links": [
-                "rcNaZofHJ2yMvMzg"
-            ],
-            "type": "MOD",
-            "side": "BOTH",
-            "slug": {
-                "modrinth": "cobblemon-cobblestats"
-            },
-            "name": {
-                "modrinth": "Cobblemon: CobbleStats"
-            },
-            "id": {
-                "modrinth": "jlXFcQk4"
-            },
-            "files": [
-                {
-                    "type": "modrinth",
-                    "file_name": "cobblestats-neoforge-1.9.2+1.21.1.jar",
-                    "mc_versions": [
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/jlXFcQk4/versions/nXjZdYx4/cobblestats-neoforge-1.9.2+1.21.1.jar",
-                    "id": "nXjZdYx4",
-                    "parent_id": "jlXFcQk4",
-                    "hashes": {
-                        "sha512": "297e7021a1cc6fb0525cd392549939aba27e195ea791b1ef7a434596f30bd817b9be88f593033d695c9f9048ca41c6153d61449238147f17ed788723949e5c82",
-                        "sha1": "3e61f8968da3415e26f36c12955c657340fb77bf"
-                    },
-                    "required_dependencies": [
-                        "MdwFAVRL"
-                    ],
-                    "size": 68993,
-                    "date_published": "2026-02-05T20:13:24.962304Z"
                 }
             ]
         },

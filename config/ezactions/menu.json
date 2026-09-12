@@ -115,6 +115,18 @@
         }
       },
       {
+        "id": "cmd_1a09797e912",
+        "title": "Battle UI",
+        "icon": "cobblemon:master_ball",
+        "note": "Cobblemon Battle Extra settings",
+        "action": {
+          "type": "COMMAND",
+          "command": "/moonlight config cobblemon_battle_extras",
+          "delayTicks": 0,
+          "cycleCommands": false
+        }
+      },
+      {
         "id": "cmd_19b12ea7f3b",
         "title": "Accessories",
         "icon": "mega_showdown:mega_bracelet_red",
@@ -491,6 +503,18 @@
         "action": {
           "type": "KEY",
           "name": "key.hide_icons",
+          "toggle": false,
+          "mode": "AUTO"
+        }
+      },
+      {
+        "id": "key_1a0979625da",
+        "title": "Battle Log",
+        "icon": "cobblemon:technical_machine",
+        "note": "from Cobblemon Battle Extras",
+        "action": {
+          "type": "KEY",
+          "name": "key.cobblemon-battle-extras.battle_logs",
           "toggle": false,
           "mode": "AUTO"
         }

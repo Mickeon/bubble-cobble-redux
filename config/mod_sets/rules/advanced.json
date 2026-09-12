@@ -112,7 +112,6 @@
               "type": "mods_group",
               "ids": [
                 "cobblemon",
-                "cobblemon_move_inspector",
                 "cobblemonraiddens",
                 "cobblemonintegrations",
                 "capture_xp",
@@ -122,8 +121,8 @@
                 "cobbreeding",
                 "zamega",
                 "mega_showdown",
-                "cobblestats",
-                "mr_cobblemon_journeymounts"
+                "mr_cobblemon_journeymounts",
+                "cobblemon_battle_extras"
               ]
             }
           },
