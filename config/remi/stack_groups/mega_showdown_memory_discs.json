@@ -1,0 +1,7 @@
+{
+  "type": "remi:regex",
+  "id": "mega_showdown:memory_discs",
+  "registry": "minecraft:item",
+  "regex": "^mega_showdown:.*_memory",
+  "enabled": true
+}

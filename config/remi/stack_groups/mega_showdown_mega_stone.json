@@ -1,0 +1,7 @@
+{
+  "type": "remi:tag",
+  "id": "mega_showdown:mega_stone",
+  "tag": "mega_showdown:mega_stone",
+  "registry": "minecraft:item",
+  "enabled": true
+}

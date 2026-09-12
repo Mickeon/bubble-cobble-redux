@@ -1,0 +1,7 @@
+{
+  "type": "remi:tag",
+  "id": "mega_showdown:z_crystal",
+  "tag": "mega_showdown:z_crystal",
+  "registry": "minecraft:item",
+  "enabled": true
+}

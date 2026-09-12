@@ -1,0 +1,7 @@
+{
+  "type": "remi:regex",
+  "id": "mega_showdown:tera_pouches",
+  "registry": "minecraft:item",
+  "regex": "^mega_showdown:tera_pouch_.*",
+  "enabled": true
+}

@@ -1,0 +1,7 @@
+{
+  "type": "remi:tag",
+  "id": "cobblemon:potions",
+  "tag": "cobblemon:potions",
+  "registry": "minecraft:item",
+  "enabled": true
+}

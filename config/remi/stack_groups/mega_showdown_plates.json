@@ -1,0 +1,7 @@
+{
+  "type": "remi:tag",
+  "id": "mega_showdown:plates",
+  "tag": "mega_showdown:plates",
+  "registry": "minecraft:item",
+  "enabled": true
+}

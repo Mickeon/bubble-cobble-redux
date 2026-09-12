@@ -1,0 +1,7 @@
+{
+  "type": "remi:tag",
+  "id": "sleep_tight:hammocks",
+  "tag": "sleep_tight:hammocks",
+  "registry": "minecraft:item",
+  "enabled": true
+}

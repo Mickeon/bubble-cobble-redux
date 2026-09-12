@@ -1,0 +1,7 @@
+{
+  "type": "remi:tag",
+  "id": "mega_showdown:tera_shard",
+  "tag": "mega_showdown:tera_shard",
+  "registry": "minecraft:item",
+  "enabled": true
+}
