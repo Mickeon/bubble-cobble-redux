@@ -1,27 +1,22 @@
 {
-  "version": 1,
+  "version": 2,
   "particle": {
     "particleLimit": 16384,
-    "removeIfMissedTick": false,
+    "cleanupStrategy": "PARALLEL_WITH_TICK",
+    "parallelQueueRemoval": false,
+    "parallelQueueEviction": false,
     "particleLightCache": true,
     "cullUnderwaterParticleType": true
   },
   "tick": {
-    "animationTickMode": "INTERRUPTIBLE",
-    "particleTickMode": "INTERRUPTIBLE",
+    "animationTickMode": false,
+    "particleAsyncMode": "SEQUENTIAL",
+    "gpuOnlyAsyncParticleTick": false,
     "tickWeatherAsync": true,
     "deferredTextureTick": true,
     "failPerSecLimit": 5,
     "failBehavior": "RAISE_CRASH",
     "suppressCME": false,
-    "syncParticleClasses": []
-  },
-  "rendering": {
-    "particleCulling": "SPHERE",
-    "particleRenderingMode": "DELAYED",
-    "cullWeathers": true,
-    "failPerSecLimit": 20,
-    "failBehavior": "MARK_AS_SYNC",
     "syncParticleClasses": [
       "com.lootbeams.VFXParticle",
       "ovh.corail.tombstone.particle.ParticleCasting",
@@ -36,14 +31,26 @@
       "com.cobblemon.mod.common.client.render.SnowstormParticle"
     ]
   },
+  "rendering": {
+    "particleCulling": "SPHERE",
+    "gpuAcceleration": true,
+    "appendNewParticlesToRenderer": true,
+    "computeExecutionStage": "LEVEL_RENDERING",
+    "tickRendererOnMainThread": false,
+    "cullWeathers": true
+  },
   "valkyrienSkies": {
     "rainEffect": "STATIONARY",
     "fixParticleLights": true
   },
-  "create": {
-    "rainEffect": "STATIONARY"
+  "sable": {
+    "fixParticleLights": true
   },
-  "cooParticlesAPI": {
-    "tickMode": "ASYNC_IN_PARALLEL"
+  "create": {
+    "rainEffect": "STATIONARY",
+    "tickRainBlockingRange": 32
+  },
+  "mobile": {
+    "multiDrawWorkaround": true
   }
 }

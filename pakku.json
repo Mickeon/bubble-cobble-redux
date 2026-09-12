@@ -81,9 +81,6 @@
         "shader_packs": "shaderpacks_dummy"
     },
     "projects": {
-        "kubejs-offline": {
-            "export": false
-        },
         "nbt-autocomplete": {
             "export": false
         },
@@ -140,6 +137,9 @@
         },
 
         "sodium-core-shader-support": {
+            "export": false
+        },
+        "asyncparticles": {
             "export": false
         }
     }
