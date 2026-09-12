@@ -9000,47 +9000,6 @@
             ]
         },
         {
-            "pakku_id": "pXy0lLhVXuumIPhC",
-            "type": "MOD",
-            "side": "BOTH",
-            "slug": {
-                "modrinth": "simpletms-tms-and-trs-for-cobblemon"
-            },
-            "name": {
-                "modrinth": "SimpleTMs: TMs and TRs for Cobblemon"
-            },
-            "id": {
-                "modrinth": "yFqR0DNc"
-            },
-            "files": [
-                {
-                    "type": "modrinth",
-                    "file_name": "SimpleTMs-neoforge-2.3.3.jar",
-                    "mc_versions": [
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/yFqR0DNc/versions/uaKfPMYS/SimpleTMs-neoforge-2.3.3.jar",
-                    "id": "uaKfPMYS",
-                    "parent_id": "yFqR0DNc",
-                    "hashes": {
-                        "sha512": "9adb638419e08c05fc1eb123903848c3e999cfea9b3e111f22f4869891be282fc18b4a17066027757bbb0a5ee3ef0be0a7d278d7f593f26a5dd68280ef0edc01",
-                        "sha1": "f30723c57a72ff9c9f4b54fe1652430273355607"
-                    },
-                    "required_dependencies": [
-                        "MdwFAVRL",
-                        "ordsPcFz",
-                        "lhGA9TYQ"
-                    ],
-                    "size": 825317,
-                    "date_published": "2025-12-11T07:06:51.967528Z"
-                }
-            ]
-        },
-        {
             "pakku_id": "zN8t95ozY6FWh09B",
             "type": "MOD",
             "side": "BOTH",

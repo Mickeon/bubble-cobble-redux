@@ -452,6 +452,23 @@ NativeEvents.onEvent("highest", $RenderTooltipEvent$Color, event => {
 				graphics.renderFakeItem("cobblemon:poke_ball", event.x, event.y - 10)
 				event.setBorderStart(Color.rgba(151, 36, 28, 1).getArgb())
 			}
+			if (item_stack.id == "cobblemon:technical_machine") {
+				let move_name = item_stack.get("cobblemon:tm_move")?.moveName
+				if (move_name) {
+					let move = $Moves.getByNameOrDummy(move_name)
+					let type_hue = move.elementalType.hue
+					let vec = new Vec3f(
+						type_hue % 0x1000000 / 0x10000,
+						type_hue % 0x10000 / 0x100,
+						type_hue % 0x100
+					)
+					let progress = Math.abs(Math.sin(Utils.getSystemTime() * 0.001))
+					vec = vec.lerp(new Vec3f(255, 255, 255), progress)
+
+					event.setBorderStart(Color.rgba(vec.x(), vec.y(), vec.z(), 1).getArgb())
+				}
+			}
+
 		} break;
 		case "mega_showdown":
 		case "zamega": {
@@ -508,27 +525,6 @@ NativeEvents.onEvent("highest", $RenderTooltipEvent$Color, event => {
 			event.setBorderStart(Color.rgba(85 + r, 101 + g, 114 + b, 1).getArgb())
 			event.setBorderEnd(Color.rgba(32, 38, 44, 1).getArgb())
 			// event.setBackgroundStart(Color.rgba(18, 21, 27, 1).getArgb())
-		} break;
-		case "simpletms": {
-			// All of this because moveName is a private property.
-			let move_name = item_stack.id.substring(item_stack.id.search("_") + 1)
-			if (move_name) {
-				let move = $Moves.getByNameOrDummy(move_name)
-				if (item_stack.hasTag("simpletms:tr_items")) {
-					event.setBorderStart(Color.wrap(move.elementalType.hue).getArgb())
-				} else {
-					let type_hue = move.elementalType.hue
-					let vec = new Vec3f(
-						type_hue % 0x1000000 / 0x10000,
-						type_hue % 0x10000 / 0x100,
-						type_hue % 0x100
-					)
-					let progress = Math.abs(Math.sin(Utils.getSystemTime() * 0.001))
-					vec = vec.lerp(new Vec3f(255, 255, 255), progress)
-
-					event.setBorderStart(Color.rgba(vec.x(), vec.y(), vec.z(), 1).getArgb())
-				}
-			}
 		} break;
 		case "farmersdelight": {
 			if (item_stack.id == "farmersdelight:hamburger") {

@@ -1,8 +1,0 @@
-{
-    "replace": false,
-    "values": [],
-    "remove": [
-        "simpletms:tr_doubleslap",
-		"simpletms:tr_furyattack"
-    ]
-}

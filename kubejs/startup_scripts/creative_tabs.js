@@ -198,12 +198,6 @@ remove_and_merge_into_tab("zamega:zamega_tab", "mega_showdown:mega_tab", [
 	"zamega:ange",
 ])
 
-remove_and_merge_into_tab("simpletms:tm_storage_items", "cobblemon:utility_item", [
-	"simpletms:case_tm",
-	"simpletms:case_tr",
-	"simpletms:machine_tm",
-])
-
 remove_and_merge_into_tab("createmonballsoverhaul:create_cobblemon_balls_overhaul_lids_tab",
 	"createmonballsoverhaul:create_cobblemon_balls_overhaul_items_tab", [
 		"createmonballsoverhaul:red_ball_lid",

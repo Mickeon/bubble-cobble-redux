@@ -1,7 +1,0 @@
-{
-  "keys": [
-    "simpletms:tm_machine_menu",
-    "simpletms:move_case_menu"
-  ],
-  "soundEvent": "bubble_cobble:tm_machine"
-}

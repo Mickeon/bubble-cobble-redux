@@ -1,1 +1,1 @@
-give @s simpletms:tr_helpinghand[lore=['{text:"Your gift, man. Do whatever you want it it.", color:"white", "italic":false}']]
+give @s cobblemon:technical_machine[cobblemon:tm_move={move:"helpinghand"}, lore=['{text:"Your gift, man. Do whatever you want it it.", color:"white", "italic":false}']]

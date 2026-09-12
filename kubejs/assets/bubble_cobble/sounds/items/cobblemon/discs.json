@@ -1,8 +1,6 @@
 {
   "keys": [
-    "#simpletms:tr_items",
-    "#simpletms:tm_tr_case",
-    "simpletms:tr_blank",
+    "cobblemon:technical_machine",
     "#c:music_discs"
   ],
   "pitch": 0.9,

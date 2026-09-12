@@ -68,8 +68,8 @@ ServerEvents.tags("item", event => {
 	event.add("c:mushrooms", "ribbits:toadstool") // No, it doesn't make sense?
 	event.add("create:pulpifiable", "biomeswevegone:shrub", "biomeswevegone:firecracker_flower_bush", "cobblemon:medicinal_leek")
 	event.add("soulbound:enchantable", "#c:tools")
-	event.add("create:blaze_burner_fuel/regular", "#simpletms:type_fire_tr", "cobblemon:charcoal_stick", "cobblemon:fire_stone", "mega_showdown:fire_tera_shard", "mynethersdelight:bullet_pepper", "mynethersdelight:pepper_powder" )
-	event.add("create:blaze_burner_fuel/special", "#simpletms:type_fire_tm", "cobblemon:fire_gem", "cobblemon:fire_stone_block", "mega_showdown:firium_z", "kubejs:firebomb_whiskey",
+	event.add("create:blaze_burner_fuel/regular", "cobblemon:charcoal_stick", "cobblemon:fire_stone", "mega_showdown:fire_tera_shard", "mynethersdelight:bullet_pepper", "mynethersdelight:pepper_powder" )
+	event.add("create:blaze_burner_fuel/special", "cobblemon:fire_gem", "cobblemon:fire_stone_block", "mega_showdown:firium_z", "kubejs:firebomb_whiskey",
 		"mynethersdelight:chilidog", "mynethersdelight:hot_cream", "mynethersdelight:hot_cream_cone",
 		"mynethersdelight:spicy_hoglin_stew", "mynethersdelight:hot_wings", "mynethersdelight:hot_wings_bucket",
 		"mynethersdelight:spicy_curry", "mynethersdelight:rock_soup", "minersdelight:rock_soup_cup",
@@ -192,7 +192,6 @@ ServerEvents.tags("block", event => {
 	event.add("minecraft:all_signs", "supplementaries:way_sign_wall") // https://github.com/MehVahdJukaar/Supplementaries/pull/1921
 	event.add("minecraft:enchantment_power_provider", "#handcrafted:shelves") // https://github.com/terrarium-earth/Handcrafted/issues/136
 	event.add("minecraft:guarded_by_piglins", "handcrafted:golden_thin_pot", "handcrafted:golden_thick_pot", "handcrafted:golden_wide_pot", "handcrafted:golden_medium_pot") // Reported: https://github.com/terrarium-earth/Handcrafted/issues/152
-	event.add("cobblemon:machines", "simpletms:machine_tm")
 	// event.add("create:single_block_inventories", "supplementaries:sack", "supplementaries:safe", "supplementaries:pulley_block") // Doesn't seem to be useful for us?
 	if (Platform.isLoaded("copperagebackport")) {
 		event.add("minecraft:buttons", COPPER_BUTTONS)

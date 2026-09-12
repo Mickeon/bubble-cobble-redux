@@ -1,7 +1,6 @@
 {
   "keys": [
-    "#simpletms:tm_items",
-    "simpletms:tm_blank"
+    "cobblemon:blank_tm"
   ],
   "pitch": 1.0,
   "soundEvent": "bubble_cobble:grab_disc",

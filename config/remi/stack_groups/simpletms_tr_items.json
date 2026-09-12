@@ -1,7 +1,0 @@
-{
-  "type": "remi:tag",
-  "id": "simpletms:tr_items",
-  "tag": "simpletms:tr_items",
-  "registry": "minecraft:item",
-  "enabled": true
-}

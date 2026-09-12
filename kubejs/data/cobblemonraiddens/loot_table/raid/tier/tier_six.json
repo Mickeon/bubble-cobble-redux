@@ -151,7 +151,7 @@
         },
         {
           "type": "minecraft:loot_table",
-          "value": "bubble_cobble:raid/type_dependent/tms",
+          "value": "bubble_cobble:raid/type_dependent/tms_rare",
           "weight": 10
         },
         {

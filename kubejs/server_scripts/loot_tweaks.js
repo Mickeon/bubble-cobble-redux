@@ -58,13 +58,19 @@ LootJS.lootTables(event => {
 			.addEntry(LootEntry.of("create:raw_zinc").withWeight(10).setCount([3, 8]))
 			.addEntry(LootEntry.of("gag:escape_rope").withWeight(10).setCount([1, 2]))
 			.addEntry(LootEntry.of("cobblemon:ancient_gigaton_ball").withWeight(7).setCount([3, 4]))
-			.addEntry(LootEntry.tag("simpletms:type_ground_tr", true).withWeight(5))
+			// TODO: This should be one of a random "rare" ground-type TM. This is a placeholder.
+			.addEntry(LootEntry.of("cobblemon:technical_machine")
+				.jsonFunction({function: "minecraft:set_components", components: {"cobblemon:tm_move": {move: "dig"}}})
+				.withWeight(5))
+			.addEntry(LootEntry.of("cobblemon:blank_tm").withWeight(2))
 			.addEntry(LootEntry.of("kubejs:doublemint_gum").withWeight(1).setCount([1, 2]))
 
 		event.getLootTable("supplementaries:loot/urn_loot/epic").firstPool()
 			.addEntry(LootEntry.of("minersdelight:nutritional_bar").withWeight(10).setCount([2, 6]))
-			.addEntry(LootEntry.tag("simpletms:type_ground_tm", true).withWeight(10))
-			.addEntry(LootEntry.of("simpletms:tm_blank").withWeight(2))
+			// TODO: This should be one of a random "epic" ground-type TM. This is a placeholder.
+			.addEntry(LootEntry.of("cobblemon:technical_machine")
+				.jsonFunction({function: "minecraft:set_components", components: {"cobblemon:tm_move": {move: "earthquake"}}})
+				.withWeight(10))
 			.addEntry(LootEntry.of("cobblemon:ability_patch").withWeight(2))
 	}
 
