@@ -4619,52 +4619,6 @@
             ]
         },
         {
-            "pakku_id": "bqWwEQUgG8CNsXei",
-            "pakku_links": [
-                "2yEhDv4DiDHeNYOg",
-                "WWiX8dynol1cESFV"
-            ],
-            "type": "MOD",
-            "side": "CLIENT",
-            "slug": {
-                "modrinth": "fog"
-            },
-            "name": {
-                "modrinth": "Fog"
-            },
-            "id": {
-                "modrinth": "WuGVWUF2"
-            },
-            "files": [
-                {
-                    "type": "modrinth",
-                    "file_name": "Fog-neoforge-1.11.0-1.21.1.jar",
-                    "mc_versions": [
-                        "1.21",
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/WuGVWUF2/versions/c4ytB02Y/Fog-neoforge-1.11.0-1.21.1.jar",
-                    "id": "c4ytB02Y",
-                    "parent_id": "WuGVWUF2",
-                    "hashes": {
-                        "sha512": "930acf4610db47432ae305ab12ed317c00961e96bbb6c8c41c2f528f5b16a798405297b42f313dc641fbf725cb9d2aae8ab98e83a72739669284843e1df2959d",
-                        "sha1": "106460aa8b09e8ce6051b332d104c787c208d28a"
-                    },
-                    "required_dependencies": [
-                        "lhGA9TYQ",
-                        "SNVQ2c0g",
-                        "1eAoo2KR"
-                    ],
-                    "size": 300280,
-                    "date_published": "2025-10-07T20:21:24.855997Z"
-                }
-            ]
-        },
-        {
             "pakku_id": "xBSOgFa0NS8yAPaO",
             "type": "MOD",
             "side": "BOTH",

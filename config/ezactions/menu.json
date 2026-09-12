@@ -429,17 +429,6 @@
         }
       },
       {
-        "id": "key_19b61ae2f8f",
-        "title": "Fancier Fog",
-        "icon": "minecraft:powder_snow_bucket",
-        "action": {
-          "type": "KEY",
-          "name": "key.fog.toggle",
-          "toggle": false,
-          "mode": "AUTO"
-        }
-      },
-      {
         "id": "key_19b61b02688",
         "title": "Extended Hotbar",
         "icon": "minecraft:iron_pickaxe",

@@ -185,7 +185,6 @@ key_key.cnc.caribou_dash:key.keyboard.space:
 key_key.extendedhotbar.switch:key.keyboard.x:
 key_key.extendedhotbar.toggle:key.keyboard.f8:
 key_key.bridgingmod.toggle_bridging:key.keyboard.unknown:
-key_key.fog.toggle:key.keyboard.f7:
 key_key.yo_hooks.jump:key.mouse.right:
 key_key.yo_hooks.climb:key.keyboard.space:
 key_key.yo_hooks.climb_down:key.keyboard.left.shift:
