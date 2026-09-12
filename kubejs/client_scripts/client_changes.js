@@ -202,7 +202,7 @@ const ITEM_TAG_DISPLAY_INFO = [
 	{tag: "mega_showdown:z_ring", name: "Z-Rings"},
 	{tag: "minersdelight:baked_cave_carrot", name: "Any Baked Cave Carrot", textures: ["minersdelight:item/baked_cave_carrot", "minersdelight:item/vegan_patty"]},
 	{tag: "minersdelight:cooked_insect_meat", name: "Any Cooked Insect Meat", textures: ["minersdelight:item/baked_spider_leg", "minersdelight:item/crunchy_bar"]},
-	{tag: "minersdelight:raw_insect_meat", name: "Any Raw Insect Meat", textures: ["minersdelight:item/spider_leg", "minersdelight:item/anthropod"]},
+	{tag: "minersdelight:raw_insect_meat", name: "Any Raw Insect Meat", textures: ["minersdelight:item/spider_leg", "minersdelight:item/arthropod"]},
 	{tag: "mynethersdelight:hot_spice", name: "Hot Spice", textures: ["mynethersdelight:item/bullet_pepper", "mynethersdelight:item/pepper_powder"]},
 	{tag: "mynethersdelight:stove_fire_fuel", name: "Stove Fire Fuel"},
 	{tag: "mynethersdelight:stuffed_hoglin_items", name: "Pieces of Stuffed Hoglin"},
@@ -330,6 +330,37 @@ RecipeViewerEvents.addEntries("item", event => {
 ClientEvents.generateAssets("after_mods", event => {
 	// This, unfortunately, can only be partially automated as the features are server-side.
 	const COSMETIC_SETS = {
+		// TODO: Add the rest of the built-in Cobblemon cosmetics.
+		big_malasada: {
+			item: "cobblemon:big_malasada",
+			aspect: "cosmetic_item-big_malasada",
+			pokemon: [
+				"pikachu",
+				"raichu",
+				"pichu"
+			]
+		},
+		black_glasses: {
+			item: "cobblemon:black_glasses",
+			aspect: "cosmetic_item-black_glasses",
+			pokemon: [
+				"squirtle",
+				"wartortle",
+				"blastoise",
+				"sandile",
+				"krokorok",
+				"krookodile",
+				"pancham",
+				"pangoro"
+			],
+		},
+		bundle: {
+			item: "minecraft:bundle",
+			aspect: "cosmetic_item-bundle",
+			pokemon: [
+				"dragonite"
+			]
+		},
 		white_wool: {
 			item: "minecraft:white_wool",
 			aspect: "cosmetic_item-white_wool",
