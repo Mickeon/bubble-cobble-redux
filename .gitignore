@@ -17,6 +17,7 @@
 /moddata
 /showdown
 /imgui.ini
+/config/highly_customizable_damage_numbers/README.txt
 *.bak
 
 # Personal.
@@ -101,6 +102,5 @@
 /config/item_descriptions.toml
 /config/freecam.json5
 /config/simplefog.json
-/config/highly_customizable_damage_numbers
 /config/viewboard-client.json
 *locomotionmap.json

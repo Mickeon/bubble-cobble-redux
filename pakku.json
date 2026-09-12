@@ -44,6 +44,7 @@
         "!*/jsconfig.json",
         "!kubejs/config/probe-settings.json",
         "!kubejs/config/web_server.json",
+        "!config/highly_customizable_damage_numbers/README.txt",
         "!*.bak",
         "!*.aseprite",
         "!config/nbtac.txt",
@@ -71,7 +72,6 @@
         "!config/item_descriptions.toml",
         "!config/freecam.json5",
         "!config/simplefog.json",
-        "!config/highly_customizable_damage_numbers",
         "!config/viewboard-client.json",
         "!*locomotionmap.json"
     ],

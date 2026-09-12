@@ -1,0 +1,46 @@
+{
+  "enabled": 2,
+  "criticalEnabled": 1,
+  "inGameConfigEnabled": true,
+  "numberScale": 1.5,
+  "numberDuration": 14,
+  "numberSeparation": -3,
+  "selectedFont": "retro_default",
+  "thresholds": [
+    5,
+    10,
+    15
+  ],
+  "colors": [
+    13303798,
+    15728541,
+    16558336,
+    9961472,
+    16777215
+  ],
+  "scaleBasedOnDamage": true,
+  "colorStyle": 1,
+  "animationShake": true,
+  "shakeIntensity": 10.0,
+  "shakeDuration": 9,
+  "animationPopIn": true,
+  "popinDuration": 3,
+  "animationFadeOut": true,
+  "fadeoutDuration": 12,
+  "flickerDuration": 15,
+  "flickerFrequency": 0.8,
+  "flickerIntensity": 0.7,
+  "animationScalePulse": true,
+  "scalePulseDuration": 6,
+  "scalePulseFactor": 0.09649123,
+  "indicatorsMaxSpawnDistance": 20,
+  "maxDamageThresholdSlider": 50,
+  "maxDurationSlider": 100,
+  "minScaleSlider": 0.5,
+  "maxScaleSlider": 2.0,
+  "debugMode": false,
+  "enableBlacklist": true,
+  "blacklistedEntities": [
+    "cobblemon:pokemon"
+  ]
+}

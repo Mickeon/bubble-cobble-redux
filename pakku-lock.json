@@ -4962,6 +4962,44 @@
             ]
         },
         {
+            "pakku_id": "hplvToNm3bWOyVlg",
+            "type": "MOD",
+            "side": "CLIENT",
+            "slug": {
+                "modrinth": "hicudan"
+            },
+            "name": {
+                "modrinth": "Highly Customizable Damage Numbers"
+            },
+            "id": {
+                "modrinth": "3DnMjWfL"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "highly_customizable_damage_numbers-neoforge-1.21-1.1.31.jar",
+                    "mc_versions": [
+                        "1.21",
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/3DnMjWfL/versions/rsTVs2KV/highly_customizable_damage_numbers-neoforge-1.21-1.1.31.jar",
+                    "id": "rsTVs2KV",
+                    "parent_id": "3DnMjWfL",
+                    "hashes": {
+                        "sha512": "9ffee7fa81cabb35f81b36cd6c2d6582c096f6eeb72bf519464898677a881d1d705152261989234c1b6e9913a4f0849240473c431e42b670d138aeaffbac10e8",
+                        "sha1": "1f55166a89638d3ae5d098a99bec3b9361eea9ec"
+                    },
+                    "required_dependencies": [],
+                    "size": 133927,
+                    "date_published": "2026-04-03T04:34:04.858795Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "gnrJZp6kYCOBXDXY",
             "type": "MOD",
             "side": "CLIENT",
