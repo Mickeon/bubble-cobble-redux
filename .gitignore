@@ -110,7 +110,6 @@
 /config/parcool*
 /config/presencefootsteps/userconfig.json
 /config/smooth_hover.json
-/config/smoothskies.json
 /config/chatnotify.json
 /config/open_in_inventory.json
 /config/undertale_death_screen.json
@@ -120,6 +119,5 @@
 /config/ixeris.toml
 /config/item_descriptions.toml
 /config/freecam.json5
-/config/simplefog.json
 /config/viewboard-client.json
 *locomotionmap.json
