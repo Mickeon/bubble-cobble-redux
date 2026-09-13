@@ -1986,7 +1986,7 @@
             ]
         },
         {
-            "pakku_id": "CN9uVZwvkeclfvQU",
+            "pakku_id": "qzS2Kdb4ac6i7PNv",
             "type": "MOD",
             "side": "BOTH",
             "slug": {
@@ -2001,7 +2001,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "mega_showdown-neoforge-1.1.2+1.8+1.21.1-release.jar",
+                    "file_name": "mega_showdown-neoforge-1.2.0+1.8.1+1.21.1-release.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -2009,21 +2009,21 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/SszvX85I/versions/OqWDIPCw/mega_showdown-neoforge-1.1.2+1.8+1.21.1-release.jar",
-                    "id": "OqWDIPCw",
+                    "url": "https://cdn.modrinth.com/data/SszvX85I/versions/PzUYM6Nz/mega_showdown-neoforge-1.2.0+1.8.1+1.21.1-release.jar",
+                    "id": "PzUYM6Nz",
                     "parent_id": "SszvX85I",
                     "hashes": {
-                        "sha512": "f035694f07d978fce2b41c53aab52b89dd30b8f85de6d37e6ae7890caa50a67f01bc25c42001a24221bd852f39a0a98831d0261874e21557e02d11d76f8747f9",
-                        "sha1": "709a62b758cedac23dc2183353404e5913a6d956"
+                        "sha512": "5b8aa9452e87894bd222fa3b442b9119ad18e72a66b0d1b9d32aa59cedd554a280835552e6aa33eae8fa3d44f823b888dafba3277b6fbedc58773a3b297dd69e",
+                        "sha1": "fddf66671aad5f3ec2f51f8d87ee43a54b82f5e7"
                     },
                     "required_dependencies": [
-                        "ccKDOlHs",
                         "lhGA9TYQ",
+                        "ccKDOlHs",
                         "MdwFAVRL",
                         "jtmvUHXj"
                     ],
-                    "size": 20179867,
-                    "date_published": "2026-09-10T17:13:28.306148Z"
+                    "size": 20201829,
+                    "date_published": "2026-09-13T05:56:45.764073Z"
                 }
             ]
         },
@@ -5073,7 +5073,7 @@
             ]
         },
         {
-            "pakku_id": "69o3HvdmuHGMiqSk",
+            "pakku_id": "McOipcRxmk0FOvAW",
             "type": "MOD",
             "side": "BOTH",
             "slug": {
@@ -5088,7 +5088,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "immersive_paintings-neoforge-1.21.1-0.7.8.jar",
+                    "file_name": "immersive_paintings-neoforge-1.21.1-0.7.9.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -5096,18 +5096,18 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/6txNkua3/versions/DeOfrXC3/immersive_paintings-neoforge-1.21.1-0.7.8.jar",
-                    "id": "DeOfrXC3",
+                    "url": "https://cdn.modrinth.com/data/6txNkua3/versions/ItQ1UJGH/immersive_paintings-neoforge-1.21.1-0.7.9.jar",
+                    "id": "ItQ1UJGH",
                     "parent_id": "6txNkua3",
                     "hashes": {
-                        "sha512": "f08e759ab6bbdd8b2d00ae3e1cc7044dfe3efa86d34fbbf7553d097ad1be358818d6569902b122cff2654c3a0942eb1a7406cf17ca537386b7d382aa8454b326",
-                        "sha1": "2a8ddb25e4206f3ca11fdffec3bdbde1ff1e6ae8"
+                        "sha512": "de3e06f3c9f8ce6f041daff5c2b835ec0f386ccdab7ea7fe2cfec57f808ed25675fe056ff062d5f435f5248aa7f0eb3816ae7d4748da8e53beae2419008cb031",
+                        "sha1": "0386ff2db20edfcafc890760adb96073cd38c1a2"
                     },
                     "required_dependencies": [
                         "hYykXjDp"
                     ],
-                    "size": 5500916,
-                    "date_published": "2026-06-04T08:46:57.747477Z"
+                    "size": 5506376,
+                    "date_published": "2026-09-13T10:53:00.666880Z"
                 }
             ]
         },
@@ -5549,10 +5549,7 @@
             ]
         },
         {
-            "pakku_id": "wdrFJzlMO6ms3kpt",
-            "pakku_links": [
-                "OUeGggTfIgEk7ZGJ"
-            ],
+            "pakku_id": "NwnIdeTB28U9Edvj",
             "type": "MOD",
             "side": "BOTH",
             "slug": {
@@ -5567,7 +5564,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "kubejs-neoforge-2101.7.2-build.374.jar",
+                    "file_name": "kubejs-neoforge-2101.7.2-build.377.jar",
                     "mc_versions": [
                         "1.21",
                         "1.21.1"
@@ -5576,19 +5573,19 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/umyGl7zF/versions/Fw7O9eLd/kubejs-neoforge-2101.7.2-build.374.jar",
-                    "id": "Fw7O9eLd",
+                    "url": "https://cdn.modrinth.com/data/umyGl7zF/versions/THIGFPwf/kubejs-neoforge-2101.7.2-build.377.jar",
+                    "id": "THIGFPwf",
                     "parent_id": "umyGl7zF",
                     "hashes": {
-                        "sha512": "8169980c5764884187fbd419cdf3d6a68f28331e0b7169b055348cf9ecf2210305bcb8445b84619bd70723cffee5978d544219a73a3867e4e25ec5a4e080403f",
-                        "sha1": "1e921f327c8c5c9d64b33326ede412d87bfbd491"
+                        "sha512": "fcdbee8790f8f39c106ab4bf606808c9c5bf0f13a41e216207a6fe4d15bf4a5722ce57078781e3a1823e7fdd2928e8e042d104d8ae255a36db8f12a9f46d8089",
+                        "sha1": "7313fcd99318834c642ee9f3a05ed7fd7bcb6ef4"
                     },
                     "required_dependencies": [
-                        "iHLDc0eo",
-                        "sk9knFPE"
+                        "sk9knFPE",
+                        "iHLDc0eo"
                     ],
-                    "size": 2292654,
-                    "date_published": "2026-08-23T14:22:23.368697Z"
+                    "size": 2294111,
+                    "date_published": "2026-09-09T12:27:24.922502Z"
                 }
             ]
         },
