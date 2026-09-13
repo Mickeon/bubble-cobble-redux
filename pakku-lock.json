@@ -3300,43 +3300,6 @@
             ]
         },
         {
-            "pakku_id": "iyikANqICIIUgCyO",
-            "type": "MOD",
-            "side": "CLIENT",
-            "slug": {
-                "modrinth": "creativetabsplus"
-            },
-            "name": {
-                "modrinth": "Creative Tabs +"
-            },
-            "id": {
-                "modrinth": "bdoGfcHG"
-            },
-            "files": [
-                {
-                    "type": "modrinth",
-                    "file_name": "CreativeTabPlus-neoforge-1.21.1-1.1.0.jar",
-                    "mc_versions": [
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/bdoGfcHG/versions/hQm1Jde5/CreativeTabPlus-neoforge-1.21.1-1.1.0.jar",
-                    "id": "hQm1Jde5",
-                    "parent_id": "bdoGfcHG",
-                    "hashes": {
-                        "sha512": "20365e421913d7bf1ca375e1dfd280c14001c75628b934fca510bb41684e066dc1517a0c8f9138957828535309c5e62e8b573ce742fd83e5c2bbbb2b6d229733",
-                        "sha1": "89909dee0269034df6ed92ee00b54389e45bbe2b"
-                    },
-                    "required_dependencies": [],
-                    "size": 390483,
-                    "date_published": "2025-02-01T02:53:34.167794Z"
-                }
-            ]
-        },
-        {
             "pakku_id": "p2ybuPw53qjbB91B",
             "type": "MOD",
             "side": "BOTH",
@@ -9576,6 +9539,43 @@
                     ],
                     "size": 8741,
                     "date_published": "2025-05-31T13:59:00.128307Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "7cpbOw30QnYvwnMT",
+            "type": "MOD",
+            "side": "CLIENT",
+            "slug": {
+                "modrinth": "sorted-creative-tabs"
+            },
+            "name": {
+                "modrinth": "Sorted Creative Tabs"
+            },
+            "id": {
+                "modrinth": "DgtSMabz"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "sortedcreativetabs-1.0.1.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/DgtSMabz/versions/sRjEFF2n/sortedcreativetabs-1.0.1.jar",
+                    "id": "sRjEFF2n",
+                    "parent_id": "DgtSMabz",
+                    "hashes": {
+                        "sha512": "19f08107d116a964e0d46662ebefbdda40c00831827bd225b2d259921787856a5f5d7a7429376cb31ecdc0e493ff76af81061986265d3b37fc37bb89b684efdf",
+                        "sha1": "c03cfc186cc8d4868bcdde023206f9b63edcd62e"
+                    },
+                    "required_dependencies": [],
+                    "size": 39806,
+                    "date_published": "2026-08-14T18:22:29.684883Z"
                 }
             ]
         },
