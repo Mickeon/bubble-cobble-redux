@@ -1,0 +1,27 @@
+[filtering]
+	# The specified logging levels will be filtered out and not logged. Valid values: TRACE, DEBUG, INFO, WARN, ERROR, FATAL
+	levels = []
+	# Messages logged by loggers with the specified names will be filtered out and not logged.
+	loggers = [
+		# Debug log: Many, many errors due to unneeded heart textures missing.
+		"Colorful Hearts",
+		# Display Delight logs a warning for every food item missing from mods we don't have.
+		"com.jkvin114.displaydelight.DisplayDelight",
+	]
+	# Messages containing the specified substrings will be filtered out and not logged.
+	strings = [
+		# Not *too* intrusive currently but keep an eye on them.
+		# "PersistentEntitySectionManager]: Entity PokemonEntity",
+		# "moved too quickly!",
+		# "[voicechat/]",
+
+		# Debug log: clutters with massive JSON strings we don't need.
+		"Received version check data:",
+		# Mixin warnings the likes of "Discarding @Unique public method rotate in
+		# CopycatBlockMixin from mod copycats because it already exists in CopycatButtonBlock".
+		"copycats-neoforge.mixins.json:foundation.copycat.CopycatBlockMixin",
+		# The modpack's aliases are not localized and that's okay.
+		"[EMI] Untranslated alias",
+	]
+	# Messages that match the specified regexes will be filtered out and not logged.
+	regexes = []

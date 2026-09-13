@@ -551,6 +551,51 @@
             ]
         },
         {
+            "pakku_id": "flvdrVeyInBD2fag",
+            "type": "MOD",
+            "side": "CLIENT",
+            "slug": {
+                "modrinth": "asynclogger"
+            },
+            "name": {
+                "modrinth": "Async Logger"
+            },
+            "id": {
+                "modrinth": "zvNzKfGF"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "asynclogger-2.2.2+1.21.1-neoforge.jar",
+                    "mc_versions": [
+                        "1.21",
+                        "1.21.1",
+                        "1.21.2",
+                        "1.21.3",
+                        "1.21.4",
+                        "1.21.5",
+                        "1.21.6",
+                        "1.21.7",
+                        "1.21.8"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/zvNzKfGF/versions/yj7KaIVy/asynclogger-2.2.2+1.21.1-neoforge.jar",
+                    "id": "yj7KaIVy",
+                    "parent_id": "zvNzKfGF",
+                    "hashes": {
+                        "sha512": "f6d5c145eabd57d0e7ca30f377acb3fd17b5eba67215993e23c221990fe8935b3d9a6499ceb02505fd0b6bcb341ba012c3321d784df7a5c401084447e9b6ee34",
+                        "sha1": "7375313a17917e93c3ef7f4325c5e862d5acbffe"
+                    },
+                    "required_dependencies": [],
+                    "size": 589385,
+                    "date_published": "2026-08-12T08:59:25.477172Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "3q4XHXvsXChsjfef",
             "type": "MOD",
             "side": "CLIENT",
@@ -5828,43 +5873,6 @@
                     "required_dependencies": [],
                     "size": 818829,
                     "date_published": "2026-01-12T01:39:43.145782Z"
-                }
-            ]
-        },
-        {
-            "pakku_id": "IXBUon5ytTw6qdYV",
-            "type": "MOD",
-            "side": "SERVER",
-            "slug": {
-                "modrinth": "log-begone"
-            },
-            "name": {
-                "modrinth": "Log Begone"
-            },
-            "id": {
-                "modrinth": "9ON3zv6e"
-            },
-            "files": [
-                {
-                    "type": "modrinth",
-                    "file_name": "logbegone-neoforge-1.21.1-1.0.3.jar",
-                    "mc_versions": [
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/9ON3zv6e/versions/1OrkaiPD/logbegone-neoforge-1.21.1-1.0.3.jar",
-                    "id": "1OrkaiPD",
-                    "parent_id": "9ON3zv6e",
-                    "hashes": {
-                        "sha512": "5908033aa96432ff55b9d81bd010172e353997312537f82c25b2ddf4767e8dc0100469cefc7513cf1542a919c79f090f7c74e5f29ccd788422231914335d047d",
-                        "sha1": "ee401552a031798993fffb7c9761742bdf6789e8"
-                    },
-                    "required_dependencies": [],
-                    "size": 73237,
-                    "date_published": "2024-08-08T19:57:12.745457Z"
                 }
             ]
         },

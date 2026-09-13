@@ -18,6 +18,7 @@
         "!config/sounds/mod_utils.json",
         "!config/sounds/ui.json",
         "!config/sounds/world.json",
+        "!config/asynclogger.toml",
         "!config/cpm.json",
         "!config/flywheel-client.toml",
         "!config/lambdynlights.toml",
