@@ -16,31 +16,45 @@
 /downloads
 /moddata
 /showdown
-/imgui.ini
 /config/highly_customizable_damage_numbers/README.txt
-*.bak
+*/**.bak
 
-# Personal.
+# These have defaults defined in the configureddefaults folder.
+# Any file in configureddefaults will be pasted to the root folder at launch,
+# if the file doesn't exist in the destination.
+# They should also not be exported by Pakku.
+/config/immersive_paintings/client_config.toml
+/config/jade/jade.json
 /config/maplink/general.json5
 /config/maplink/friends.json5
-/config/mod_sets/disabled_mods.json
+/config/sounds/event.json
+/config/sounds/mod_utils.json
+/config/sounds/ui.json
+/config/sounds/world.json
+/config/spark/
+/config/asynclogger.toml
 /config/cpm.json
-/config/discord_chat_mod-*
+/config/flywheel-client.toml
 /config/iris.properties
-/config/sidekick.ini
-/config/spark
-/config/one-click-join
+/config/lambdynlights.toml
+/config/particlerain.json
+
+# Personal.
+/config/cobbreeding/encryption
+/config/chunky/tasks
+/config/chunkyborder/borders.json
+/config/mod_sets/disabled_mods.json
 /config/voicechat/category-volumes.properties
 /config/voicechat/player-volumes.properties
 /config/voicechat/translations.properties
 /config/voicechat/voicechat-client.properties
 /config/voicechat/username-cache.json
-/config/chunkyborder/borders.json
-/config/chunky/tasks
-/config/waterframes-client.toml
 /config/aiutd-enduser.json5
-/config/cobbreeding/encryption
+/config/discord_chat_mod-*
+/config/one-click-join
+/config/sidekick.ini
 /config/sodium-fingerprint.json
+/config/waterframes-client.toml
 /cobblemon
 /cobblemoncreatified
 /cobblenav
@@ -75,11 +89,16 @@
 /texturepacks
 
 # Pakku takes care of this.
-/mods
+/mods/*
 /build
 /.pakku
 /global_packs/datapacks
 /global_packs/resourcepacks
+
+# The band-aid mod needed for Copper Age Backport
+# is non-redistributable on CurseForge, in spite of the author's wishes.
+# So I need to embed it within the modpack itself.
+!/mods/copperagebackportduplicatematerialfix-neoforge-0.1.jar
 
 # Mods being tested.
 /config/ali
