@@ -65,5 +65,21 @@
 	},
 	"emi_enchanting:enchantments": {
 		"order": 970
+	},
+
+	"remi:item_tags": {
+		"order": 1000
+	},
+	"remi:block_tags": {
+		"order": 1001
+	},
+	"remi:fluid_tags": {
+		"order": 1002
+	},
+	"remi:entity_type_tags": {
+		"order": 1003
+	},
+	"emi:tag": {
+		"order": 1004
 	}
 }

@@ -1,5 +1,6 @@
 {
     "js/ts.tsserver.automaticTypeAcquisition.enabled": false,
+    "js/ts.validate.enabled": false,
     "json.schemas": [
         {
             "fileMatch": [
@@ -72,6 +73,8 @@
         "logs/*.gz": true,
         "moddata": true,
         "mods": true,
+        "particular_cache": true,
+        "player_models": true,
         "schematics": true,
         "screenshots": true,
         "server-resource-packs": true,
@@ -124,10 +127,11 @@
     "[json]": {
         "editor.insertSpaces": false
     },
-    "typescript.surveys.enabled": false,
     "search.exclude": {
-        ".vscode/probejs.code-snippets": true,
-        "saves/**/stats/*.json": true
+        "/logs/": true,
+        "/emi.json": true,
+        "/.vscode/probejs.code-snippets": true,
+        "/saves/**/stats/*.json": true,
+        "/saves/**/advancements/*.json": true
     },
-    "js/ts.experimental.useTsgo": true
 }

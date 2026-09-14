@@ -74,6 +74,13 @@
         "!config/item_descriptions.toml",
         "!config/freecam.json5",
         "!config/viewboard-client.json",
+        "!config/numismatics*",
+        "!config/the_bumblezone*",
+        "!config/tea_aroma*",
+        "!config/exposure*",
+        "!config/fieldguide*",
+        "!config/better_respawn*",
+        "!fieldguide_cache/",
         "!*locomotionmap.json"
     ],
     "paths": {
@@ -131,9 +138,6 @@
         },
 
         "spark": {
-            "side": "SERVER"
-        },
-        "log-begone": {
             "side": "SERVER"
         },
 

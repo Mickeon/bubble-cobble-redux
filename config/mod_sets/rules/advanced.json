@@ -11,32 +11,6 @@
       }
     },
     {
-      "text": "Miscellaneous",
-      "description": "Self-sustaining mods belonging to no other category.\n\nHonestly this category exists mostly for testing...",
-      "controller": {
-        "type": "mods_group",
-        "collapsed": "true",
-        "ids": [
-          "rrls",
-          "invmove",
-          "invmove_compat",
-          "extendedhotbar",
-          "emojiful",
-          "advancementplaques",
-          "one_click_join",
-          "appleskin",
-          "craftingtweaks",
-          "aiutd",
-          "resourcetrimmer",
-          "shouldersurfing",
-          "persistentinventorysearch",
-          "persistentcreativeinventory",
-          "bridgingmod",
-          "cleanertooltips"
-        ]
-      }
-    },
-    {
       "text": {"text": "⚠ Danger Zone ⚠", "color": "red", "bold": true},
       "description": "That sign can't stop me, 'cause I can't read.",
       "controller": {
