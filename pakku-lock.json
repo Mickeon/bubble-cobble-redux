@@ -10289,10 +10289,7 @@
             ]
         },
         {
-            "pakku_id": "paKIYm9pjkKdhWBs",
-            "pakku_links": [
-                "vsdAR0xk56CLyII8"
-            ],
+            "pakku_id": "M8itYWFRT7g7N9D1",
             "type": "MOD",
             "side": "BOTH",
             "slug": {
@@ -10307,27 +10304,24 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "neoforge-urban_decor-1.21.1-1.1.0.jar",
+                    "file_name": "neoforge-urban_decor-1.21.1-1.2.1.jar",
                     "mc_versions": [
-                        "1.21",
                         "1.21.1"
                     ],
                     "loaders": [
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/1bLZdx1u/versions/RekxXBav/neoforge-urban_decor-1.21.1-1.1.0.jar",
-                    "id": "RekxXBav",
+                    "url": "https://cdn.modrinth.com/data/1bLZdx1u/versions/q8hWZBAq/neoforge-urban_decor-1.21.1-1.2.1.jar",
+                    "id": "q8hWZBAq",
                     "parent_id": "1bLZdx1u",
                     "hashes": {
-                        "sha512": "518094c96797c3e57b58d808aa20cfd53a50402cffbc7951678f9e6a9631246f49bc7cdb18a8a79a44b5562d417e0d79da5ca23ad8baaaf4c68976ca2df57e82",
-                        "sha1": "418f36099b738b7400de47063a87192d6d7d2fef"
+                        "sha512": "ffce2151fc69a281c275f164c12187c4194cd870edf0e91accac96abbaf7e28ff2713e03727e28799a6891f64d1062284d92a494d1738e146e5f1e1f23aba8d3",
+                        "sha1": "66a232e4e8baf23d1fd35c09f3a2b8f230310e76"
                     },
-                    "required_dependencies": [
-                        "mk0Htq87"
-                    ],
-                    "size": 3250639,
-                    "date_published": "2026-01-03T19:36:00.145723Z"
+                    "required_dependencies": [],
+                    "size": 4126135,
+                    "date_published": "2026-06-15T21:48:16.014503Z"
                 }
             ]
         },

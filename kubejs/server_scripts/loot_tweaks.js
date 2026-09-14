@@ -159,6 +159,10 @@ LootJS.lootTables(event => {
 			.matchDimension("minecraft:overworld")
 		)
 		furniture_pool.addEntry(
+			LootEntry.tag("urban_decor:has_wrapped_variants", true).withWeight(5)
+			.matchDimension("minecraft:overworld")
+		)
+		furniture_pool.addEntry(
 			LootEntry.tag("bits_n_bobs:chairs", true).withWeight(5)
 			.matchDimension("minecraft:overworld")
 		)

@@ -346,11 +346,15 @@ ItemEvents.modifyTooltips(event => {
 		event.modify("urban_decor:toolbox", text => {
 			text.insert(1, PLACEABLE_SNEAKING_TOOLTIP)
 		})
+		// There is a tooltip for each wrappable block, and there's many more of them.
+		// Is this even necessary anymore?
 		event.modify("#urban_decor:wraps", text => {
 			text.insert(1, [
 				PLACEABLE_TOOLTIP.copy().append(" on:"),
+				Text.of(["• ", Text.translate("block.urban_decor.porcelain_table").color(MASCOT_COLOR)]).color(MASCOT_COLOR_DARK),
+				Text.of(["• ", Text.translate("block.urban_decor.fridge").color(MASCOT_COLOR)]).color(MASCOT_COLOR_DARK),
 				Text.of(["• Any ", Text.of(`wooden box`).color(MASCOT_COLOR)]).color(MASCOT_COLOR_DARK),
-				Text.of(["• ", Text.translate("block.urban_decor.plastic_desk_table").color(MASCOT_COLOR)]).color(MASCOT_COLOR_DARK)
+				Text.of(["• and so much more!"]).color(MASCOT_COLOR_DARK)
 			])
 		})
 		event.add(["urban_decor:towel_bar"], [subtle("Can contain").append(Text.gold(" any towel"))])

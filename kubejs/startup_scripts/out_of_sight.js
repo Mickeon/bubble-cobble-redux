@@ -11,6 +11,7 @@ const DISABLED_ITEMS = [
 	// Unused.
 	/^libraryferret/,
 	"relics:researching_table",
+	"urban_decor:sewing_needle",
 
 	// Obsolete.
 	"createmonballsoverhaul:apricorn_punch",
