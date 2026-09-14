@@ -1,11 +1,7 @@
-/** @type {typeof import("net.neoforged.neoforge.event.server.ServerAboutToStartEvent").$ServerAboutToStartEvent } */
-let $ServerAboutToStartEvent  = Java.loadClass("net.neoforged.neoforge.event.server.ServerAboutToStartEvent")
-/** @type {typeof import("net.neoforged.neoforge.event.server.ServerStoppedEvent").$ServerStoppedEvent } */
-let $ServerStoppedEvent  = Java.loadClass("net.neoforged.neoforge.event.server.ServerStoppedEvent")
-/** @type {typeof import("net.minecraft.world.level.GameRules").$GameRules } */
-let $GameRules  = Java.loadClass("net.minecraft.world.level.GameRules")
-/** @type {typeof import("net.minecraft.world.level.GameRules$IntegerValue").$GameRules$IntegerValue } */
-let $GameRules$IntegerValue  = Java.loadClass("net.minecraft.world.level.GameRules$IntegerValue")
+let $ServerAboutToStartEvent = Java.loadClass("net.neoforged.neoforge.event.server.ServerAboutToStartEvent")
+let $ServerStoppedEvent = Java.loadClass("net.neoforged.neoforge.event.server.ServerStoppedEvent")
+let $GameRules = Java.loadClass("net.minecraft.world.level.GameRules")
+let $GameRules$IntegerValue = Java.loadClass("net.minecraft.world.level.GameRules$IntegerValue")
 
 StartupEvents.init(event => {
 	global.GAME_RULES = {}

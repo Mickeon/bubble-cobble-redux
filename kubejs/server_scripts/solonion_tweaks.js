@@ -1,7 +1,6 @@
 // priority: 10
 // requires: solonion
 
-/** @type {typeof import("team.creative.solonion.api.SOLOnionAPI").$SOLOnionAPI } */
 const SOLOnionAPI = Java.loadClass("team.creative.solonion.api.SOLOnionAPI")
 
 const MAX_DIVERSITY = 32.0

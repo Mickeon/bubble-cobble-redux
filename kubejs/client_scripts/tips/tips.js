@@ -134,7 +134,7 @@ function markdown_string_to_component(str) {
 	// const regex = /(\[.*\]|\|\||\*\*|\*|_|.$)/g
 	// const regex = /(?:^|[^\\])(\*\*\*|\*\*|\*|_|.$)/g // Get second group in the match [1] with this one.
 	// const regex = /(?<!\\)(?:\\\\)*(\*\*|\*|_|.$)/g // Does not work for Rhino.
-	let /** @type {RegExpExecArray} */ match
+	let /** @type {RegExpExecArray?} */ match
 
 	let bold = false
 	let italic = false

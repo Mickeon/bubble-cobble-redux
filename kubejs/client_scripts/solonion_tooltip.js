@@ -1,8 +1,6 @@
 // requires: solonion
 
-/** @type {typeof import("team.creative.solonion.api.SOLOnionAPI").$SOLOnionAPI } */
 const SOLOnionAPI = Java.loadClass("team.creative.solonion.api.SOLOnionAPI")
-/** @type {typeof import("team.creative.solonion.common.SOLOnion").$SOLOnion } */
 const SOLOnion = Java.loadClass("team.creative.solonion.common.SOLOnion")
 
 

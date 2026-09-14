@@ -155,7 +155,7 @@ const Patterns = {
 }
 
 /**
- * @param {import("dev.latvian.mods.kubejs.recipe.RecipesKubeEvent").$RecipesKubeEvent$$Original} event
+ * @param {import("@package/dev/latvian/mods/kubejs/recipe").$RecipesKubeEvent} event
  */
 function add_sophisticated_storage_recipes_for_modded_wood_types(event) {
 	for (const type of STORAGE_WOOD_TYPES) {

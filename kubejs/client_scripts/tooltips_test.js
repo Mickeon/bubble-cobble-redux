@@ -36,7 +36,7 @@ ItemEvents.dynamicTooltips("skeleton_skull", event => {
 
 
 ItemEvents.dynamicTooltips("show_player_head_owner", event => {
-	/** @import {$ResolvableProfile} from "net.minecraft.world.item.component.ResolvableProfile"*/
+	/** @import {$ResolvableProfile} from "@package/net/minecraft/world/item/component"*/
 	const profile = /** @type {$ResolvableProfile?} */ (event.item.components.get("minecraft:profile"))
 	const player_name = profile && profile.isResolved() && profile.name().get()
 	if (player_name) {
@@ -48,10 +48,11 @@ ItemEvents.dynamicTooltips("show_modpack_debug_stuff", event => {
 	event.add(Text.gray(["🏴 ", Text.darkGray(event.item.getDescriptionId() ?? "none")]))
 
 	if (Platform.isLoaded("sounds")) {
+		/** @type {import {"@package/imb11/sounds/sound/context"}.$ItemStackSoundContext} */
 		let $ItemStackSoundContext = Java.tryLoadClass("dev.imb11.sounds.sound.context.ItemStackSoundContext")
 		if ($ItemStackSoundContext) {
 			let sound_context = new $ItemStackSoundContext()
-			/** @type {import("net.minecraft.client.resources.sounds.SoundInstance").$SoundInstance$$Type} */
+			/** @type {import("@package/net/minecraft/client/resources/sounds").$SoundInstance} */
 			let sound_instance = sound_context.handleContext(event.item, ID.of("minecraft:intentionally_empty", false), 1.0, 1.0)
 			event.add(Text.gray("🔊 ").append(Text.darkGray(sound_instance.getLocation())))
 		}

@@ -1,12 +1,12 @@
 
 StartupEvents.registry("item", event => {
 	/**
-	 * @param {import("net.minecraft.world.entity.ai.attributes.Attribute").$Attribute$$Type} attribute
+	 * @param {import("@package/net/minecraft/world/entity/ai/attributes").$Attribute_} attribute
 	 * @param {string} id
 	 * @param {number} amount
-	 * @param {import("net.minecraft.world.entity.ai.attributes.AttributeModifier$Operation").$AttributeModifier$Operation$$Type} operation
-	 * @param {import("net.minecraft.world.entity.EquipmentSlotGroup").$EquipmentSlotGroup$$Type} slot
-	 * @returns {import("net.minecraft.world.item.component.ItemAttributeModifiers$Entry").$ItemAttributeModifiers$Entry$$Type}
+	 * @param {import("@package/net/minecraft/world/entity/ai/attributes").$AttributeModifier$Operation_} operation
+	 * @param {import("@package/net/minecraft/world/entity").$EquipmentSlotGroup_} slot
+	 * @returns {import("@package/net/minecraft/world/item/component").$ItemAttributeModifiers$Entry_}
 	 */
 	function modifier(attribute, amount, operation, id, slot) {
 		return {attribute: attribute, slot: slot, modifier: {amount: amount, id: id, operation: operation}}

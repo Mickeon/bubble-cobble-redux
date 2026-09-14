@@ -1,10 +1,10 @@
 
-/** @import {$MutableComponent} from "net.minecraft.network.chat.MutableComponent" */
+/** @import {$MutableComponent} from "@package/net/minecraft/network/chat" */
 
 /**
- * @param {Special.CreativeModeTab} tab_id
+ * @param {RegistryTypes.CreativeModeTab} tab_id
  * @param {$MutableComponent} to
- * @param {Special.Item} icon_item_id
+ * @param {RegistryTypes.Item} icon_item_id
  */
 function rename_tab(tab_id, to, icon_item_id) {
 	StartupEvents.modifyCreativeTab(tab_id, event => {
@@ -14,7 +14,7 @@ function rename_tab(tab_id, to, icon_item_id) {
 		}
 	})
 }
-/** @param {Special.CreativeModeTab} tab_id */
+/** @param {RegistryTypes.CreativeModeTab} tab_id */
 function remove_tab(tab_id) {
 	StartupEvents.modifyCreativeTab(tab_id, event => {
 		event.remove("*")
@@ -22,9 +22,9 @@ function remove_tab(tab_id) {
 }
 
 /**
- * @param {Special.CreativeModeTab} from_id
- * @param {Special.CreativeModeTab} to_id
- * @param {Special.Item[]} items
+ * @param {RegistryTypes.CreativeModeTab} from_id
+ * @param {RegistryTypes.CreativeModeTab} to_id
+ * @param {RegistryTypes.Item[]} items
  */
 function remove_and_merge_into_tab(from_id, to_id, items) {
 	StartupEvents.modifyCreativeTab(from_id, event => {
@@ -339,10 +339,8 @@ if (Platform.isLoaded("gag")) {
 
 if (Platform.isLoaded("displaydelight")) {
 	// https://github.com/jkvin114/display-delight-neoforge/blob/main/src/main/java/com/jkvin114/displaydelight/init/BlockAssociations.java
-	/** @type {typeof import("com.jkvin114.displaydelight.init.BlockAssociations").$BlockAssociations } */
-	let $BlockAssociations  = Java.loadClass("com.jkvin114.displaydelight.init.BlockAssociations")
-	/** @type {typeof import("com.jkvin114.displaydelight.block.AbstractItemBlock").$AbstractItemBlock } */
-	let $AbstractItemBlock  = Java.loadClass("com.jkvin114.displaydelight.block.AbstractItemBlock")
+	let $BlockAssociations = Java.loadClass("com.jkvin114.displaydelight.init.BlockAssociations")
+	let $AbstractItemBlock = Java.loadClass("com.jkvin114.displaydelight.block.AbstractItemBlock")
 
 	StartupEvents.modifyCreativeTab("displaydelight:displaydelight", event => {
 		event.removeFromParent(item => {
@@ -372,7 +370,7 @@ if (Platform.isLoaded("displaydelight")) {
 // Remove all non-max level Enchanted Books from searches, which is more than whatever mod is doing this already.
 // Commenting out for now, as it fails on startup for some reason.
 // StartupEvents.modifyCreativeTab("minecraft:ingredients", event => {
-// 	/** @import {$Enchantment} from "net.minecraft.world.item.enchantment.Enchantment" */
+// 	/** @import {$Enchantment} from "@package/net/minecraft/world/item/enchantment" */
 // 	Registry.of("enchantment").getValueMap().forEach(/** @param {$Enchantment} enchantment */ (key, enchantment) => {
 // 		const max_level = enchantment.maxLevel
 // 		for (let level = 1; level < max_level; level += 1) {

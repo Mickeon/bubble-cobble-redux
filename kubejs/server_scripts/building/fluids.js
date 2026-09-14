@@ -23,12 +23,9 @@ ServerEvents.tags("block", event => {
 }
 
 ServerEvents.loaded(event => {
-	/** @type {typeof import("net.neoforged.neoforge.fluids.FluidInteractionRegistry").$FluidInteractionRegistry } */
-	let $FluidInteractionRegistry  = Java.loadClass("net.neoforged.neoforge.fluids.FluidInteractionRegistry")
-	/** @type {typeof import("net.neoforged.neoforge.fluids.FluidInteractionRegistry$InteractionInformation").$FluidInteractionRegistry$InteractionInformation } */
+	let $FluidInteractionRegistry = Java.loadClass("net.neoforged.neoforge.fluids.FluidInteractionRegistry")
 	let $InteractionInformation = Java.loadClass("net.neoforged.neoforge.fluids.FluidInteractionRegistry$InteractionInformation")
-	/** @type {typeof import("net.minecraft.world.level.material.FluidState").$FluidState } */
-	let $FluidState  = Java.loadClass("net.minecraft.world.level.material.FluidState")
+	let $FluidState = Java.loadClass("net.minecraft.world.level.material.FluidState")
 
 	const clone_catalyst_fluid = Fluid.exists("kubejs:renuvium")
 		? Fluid.getType("kubejs:renuvium").getFluidType()
@@ -45,7 +42,7 @@ ServerEvents.loaded(event => {
 
 	function below_block_cloning_fluid_interaction(block_state) {
 		$FluidInteractionRegistry.addInteraction(clone_catalyst_fluid, new $InteractionInformation["(net.neoforged.neoforge.fluids.FluidInteractionRegistry$HasFluidInteraction,net.minecraft.world.level.block.state.BlockState)"](
-			/** @type {import("net.neoforged.neoforge.fluids.FluidInteractionRegistry$HasFluidInteraction").$FluidInteractionRegistry$HasFluidInteraction$$Type} */
+			/** @type {import("@package/net/neoforged/neoforge/fluids").$FluidInteractionRegistry$HasFluidInteraction} */
 			(level, current_pos, relative_pos, current_state) => {
 				return current_state.getAmount() < $FluidState.AMOUNT_FULL && level.getBlockState(current_pos.below()) == block_state
 			},

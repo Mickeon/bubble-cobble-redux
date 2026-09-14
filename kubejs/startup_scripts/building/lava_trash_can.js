@@ -1,5 +1,4 @@
-/** @type {typeof import("net.neoforged.neoforge.event.ItemStackedOnOtherEvent").$ItemStackedOnOtherEvent } */
-let $ItemStackedOnOtherEvent  = Java.loadClass("net.neoforged.neoforge.event.ItemStackedOnOtherEvent")
+let $ItemStackedOnOtherEvent = Java.loadClass("net.neoforged.neoforge.event.ItemStackedOnOtherEvent")
 
 NativeEvents.onEvent($ItemStackedOnOtherEvent, event => {
 	if (event.clickAction == "SECONDARY") {
@@ -17,8 +16,7 @@ NativeEvents.onEvent($ItemStackedOnOtherEvent, event => {
 })
 
 if (Platform.isClientEnvironment()) {
-	/** @type {typeof import("net.neoforged.neoforge.client.event.ContainerScreenEvent$Render$Foreground").$ContainerScreenEvent$Render$Foreground } */
-	let $ContainerScreenEvent$Render$Foreground  = Java.loadClass("net.neoforged.neoforge.client.event.ContainerScreenEvent$Render$Foreground")
+	let $ContainerScreenEvent$Render$Foreground = Java.loadClass("net.neoforged.neoforge.client.event.ContainerScreenEvent$Render$Foreground")
 	NativeEvents.onEvent($ContainerScreenEvent$Render$Foreground, event => {
 		if (event.containerScreen.menu?.carried.isEmpty()) {
 			return

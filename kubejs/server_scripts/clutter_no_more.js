@@ -2,7 +2,7 @@
 // requires: lootjs
 // Fix Clutter No More duplication exploit using Slabs.
 
-/** @import {$SimpleLootEntry} from "com.almostreliable.lootjs.core.entry.SimpleLootEntry" */
+/** @import {$SimpleLootEntry} from "@package/com/almostreliable/lootjs/core/entry" */
 
 LootJS.lootTables(event => {
 	// This causes a sea of

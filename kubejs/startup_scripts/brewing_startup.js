@@ -1,23 +1,16 @@
 // requires: brewinandchewin
-/** @type {typeof import("net.minecraft.world.entity.projectile.ThrowableItemProjectile").$ThrowableItemProjectile } */
-let $ThrowableItemProjectile  = Java.loadClass("net.minecraft.world.entity.projectile.ThrowableItemProjectile")
-/** @type {typeof import("net.neoforged.neoforge.event.entity.ProjectileImpactEvent").$ProjectileImpactEvent } */
-let $ProjectileImpactEvent  = Java.loadClass("net.neoforged.neoforge.event.entity.ProjectileImpactEvent")
-/** @type {typeof import("net.minecraft.world.entity.projectile.Projectile").$Projectile } */
-let $Projectile  = Java.loadClass("net.minecraft.world.entity.projectile.Projectile")
-/** @type {typeof import("net.minecraft.world.level.Level").$Level } */
-let $Level  = Java.loadClass("net.minecraft.world.level.Level")
-/** @type {typeof import("net.minecraft.world.item.Item$Properties").$Item$Properties } */
-let $Item$Properties  = Java.loadClass("net.minecraft.world.item.Item$Properties")
-/** @type {typeof import("umpaz.brewinandchewin.common.item.BoozeItem").$BoozeItem } */
-let $BoozeItem  = Java.loadClass("umpaz.brewinandchewin.common.item.BoozeItem")
-/** @type {typeof import("dev.latvian.mods.kubejs.item.ItemBuilder").$ItemBuilder } */
-let $ItemBuilder  = Java.loadClass("dev.latvian.mods.kubejs.item.ItemBuilder")
+let $ThrowableItemProjectile = Java.loadClass("net.minecraft.world.entity.projectile.ThrowableItemProjectile")
+let $ProjectileImpactEvent = Java.loadClass("net.neoforged.neoforge.event.entity.ProjectileImpactEvent")
+let $Projectile = Java.loadClass("net.minecraft.world.entity.projectile.Projectile")
+let $Level = Java.loadClass("net.minecraft.world.level.Level")
+let $Item$Properties = Java.loadClass("net.minecraft.world.item.Item$Properties")
+let $BoozeItem = Java.loadClass("umpaz.brewinandchewin.common.item.BoozeItem")
+let $ItemBuilder = Java.loadClass("dev.latvian.mods.kubejs.item.ItemBuilder")
 
 /**
- * @import {$Level} from "net.minecraft.world.level.Level"
- * @import {$Projectile} from "net.minecraft.world.entity.projectile.Projectile"
- * @import {$RegistryKubeEvent} from "dev.latvian.mods.kubejs.registry.RegistryKubeEvent"
+ * @import {$Level} from "@package/net/minecraft/world/level"
+ * @import {$Projectile} from "@package/net/minecraft/world/entity/projectile"
+ * @import {$RegistryKubeEvent} from "@package/dev/latvian/mods/kubejs/registry"
  */
 
 

@@ -57,11 +57,11 @@ ServerEvents.recipes(event => {
 
 /**
  * @param {$RecipesKubeEvent} event
- * @param {import("net.neoforged.neoforge.fluids.FluidStack").$FluidStack$$Type} fluid_result
+ * @param {import("@package/net/neoforged/neoforge/fluids").$FluidStack} fluid_result
  * @param {Temperature} temperature
  * @param {$Ingredient[]} ingredients
- * @param {import("net.minecraft.world.item.ItemStack").$ItemStack$$Type} item_result
- * @param {import("net.neoforged.neoforge.fluids.crafting.SizedFluidIngredient").$SizedFluidIngredient$$Type} fluid_base
+ * @param {import("@package/net/minecraft/world/item").$ItemStack} item_result
+ * @param {import("@package/net/neoforged/neoforge/fluids/crafting").$SizedFluidIngredient} fluid_base
  */
 function fermenting(event, fluid_result, temperature, ingredients, item_result, fluid_base) {
 	event.custom({

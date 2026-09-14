@@ -3,23 +3,20 @@
 Platform.setModName("kubejs", "Bubble Cobble")
 Platform.setModName("bubble_cobble", "Bubble Cobble")
 
-/** @type {typeof import("net.minecraft.world.entity.player.Player").$Player } */
-let $Player  = Java.loadClass("net.minecraft.world.entity.player.Player")
-/** @type {typeof import("dev.latvian.mods.kubejs.item.FoodBuilder").$FoodBuilder } */
-let $FoodBuilder  = Java.loadClass("dev.latvian.mods.kubejs.item.FoodBuilder")
-/** @type {typeof import("net.minecraft.world.item.component.ItemAttributeModifiers").$ItemAttributeModifiers } */
-let $ItemAttributeModifiers  = Java.loadClass("net.minecraft.world.item.component.ItemAttributeModifiers")
+let $Player = Java.loadClass("net.minecraft.world.entity.player.Player")
+let $FoodBuilder = Java.loadClass("dev.latvian.mods.kubejs.item.FoodBuilder")
+let $ItemAttributeModifiers = Java.loadClass("net.minecraft.world.item.component.ItemAttributeModifiers")
 
 /**
- * @import {$List} from "java.util.List"
- * @import {$ItemStack} from "net.minecraft.world.item.ItemStack"
- * @import {$Item} from "net.minecraft.world.item.Item"
- * @import {$Player} from "net.minecraft.world.entity.player.Player"
- * @import {$LivingEntity} from "net.minecraft.world.entity.LivingEntity"
- * @import {$SoundSource$$Type} from "net.minecraft.sounds.SoundSource"
+ * @import {RegistryTypes, SpecialTypes} from "@special/types"
+ * @import {$List} from "@package/java/util"
+ * @import {$ItemStack} from "@package/net/minecraft/world/item"
+ * @import {$Player} from "@package/net/minecraft/world/entity/player"
+ * @import {$LivingEntity} from "@package/net/minecraft/world/entity"
+ * @import {$SoundEvent_, $SoundSource_} from "@package/net/minecraft/sounds"
  *
- * @typedef {import("dev.latvian.mods.kubejs.item.ItemModificationKubeEvent$ItemModifications").$ItemModificationKubeEvent$ItemModifications$$Original} $ItemModifications
- * @typedef {import("dev.latvian.mods.kubejs.block.BlockModificationKubeEvent$BlockModifications").$BlockModificationKubeEvent$BlockModifications$$Original} $BlockModifications
+ * @typedef {import("@package/dev/latvian/mods/kubejs/item").$ItemModificationKubeEvent$ItemModifications} $ItemModifications
+ * @typedef {import("@package/dev/latvian/mods/kubejs/block").$BlockModificationKubeEvent$BlockModifications} $BlockModifications
  */
 
 const SEC = 20 // How many ticks in a second.
@@ -34,7 +31,7 @@ function remap(value, min1, max1, min2, max2) {
 /**
  * @description Plays a sound for every player. This is unlike Player.playNotifySound() which only plays the sound to a specific player.
  * @see https://lexxie.dev/neoforge/1.21.1/net/minecraft/world/level/Level.html#playSound(net.minecraft.world.entity.Entity,net.minecraft.core.BlockPos,net.minecraft.sounds.SoundEvent,net.minecraft.sounds.SoundSource,float,float)
- * @param {$Level} level @param {$Vec3} pos @param {Special.SoundEvent} sound_event @param {$SoundSource$$Type} source @param {number?} pitch @param {number?} volume
+ * @param {$Level} level @param {$Vec3} pos @param {$SoundEvent_} sound_event @param {$SoundSource_} source @param {number?} pitch @param {number?} volume
  */
 function play_sound_globally(level, pos, sound_event, source, volume, pitch) {
 	volume = volume || 1.0

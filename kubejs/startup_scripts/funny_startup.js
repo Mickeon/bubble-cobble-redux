@@ -1,11 +1,7 @@
-/** @type {typeof import("net.neoforged.neoforge.event.brewing.RegisterBrewingRecipesEvent").$RegisterBrewingRecipesEvent } */
-let $RegisterBrewingRecipesEvent  = Java.loadClass("net.neoforged.neoforge.event.brewing.RegisterBrewingRecipesEvent")
-/** @type {typeof import("net.minecraft.world.entity.animal.CatVariant").$CatVariant } */
-let $CatVariant  = Java.loadClass("net.minecraft.world.entity.animal.CatVariant")
-/** @type {typeof import("net.minecraft.server.level.ServerPlayer").$ServerPlayer } */
-let $ServerPlayer  = Java.loadClass("net.minecraft.server.level.ServerPlayer")
-/** @type {typeof import("net.minecraft.world.level.portal.DimensionTransition").$DimensionTransition } */
-let $DimensionTransition  = Java.loadClass("net.minecraft.world.level.portal.DimensionTransition")
+let $RegisterBrewingRecipesEvent = Java.loadClass("net.neoforged.neoforge.event.brewing.RegisterBrewingRecipesEvent")
+let $CatVariant = Java.loadClass("net.minecraft.world.entity.animal.CatVariant")
+let $ServerPlayer = Java.loadClass("net.minecraft.server.level.ServerPlayer")
+let $DimensionTransition = Java.loadClass("net.minecraft.world.level.portal.DimensionTransition")
 
 
 ItemEvents.modification(event => {
@@ -199,9 +195,7 @@ StartupEvents.registry("attribute", event => {
 		.displayName(Text.of(`Air Dash`)
 	)
 	if (Platform.isLoaded("cleanertooltips")) {
-		/** @type {typeof import("net.twentyytwo.cleanertooltips.util.CleanerTooltipsUtil").$CleanerTooltipsUtil} */
 		let $CleanerTooltipsUtil = Java.loadClass("net.twentyytwo.cleanertooltips.util.CleanerTooltipsUtil")
-		/** @type {typeof import("net.twentyytwo.cleanertooltips.util.AttributeDisplayType").$AttributeDisplayType} */
 		let $AttributeDisplayType = Java.loadClass("net.twentyytwo.cleanertooltips.util.AttributeDisplayType")
 		$CleanerTooltipsUtil.ATTRIBUTE_DISPLAY_MAP.put(ID.of("dash_jump_count", true), $AttributeDisplayType.DIFFERENCE)
 	}
@@ -230,7 +224,7 @@ ForgeEvents.onEvent("net.minecraftforge.event.entity.ProjectileImpactEvent", eve
 	}
 })
 */
-/** @param {import("net.minecraft.server.MinecraftServer").$MinecraftServer$$Type} server */
+/** @param {import("@package/net/minecraft/server").$MinecraftServer} server */
 function find_mickeon(server) {
 	const player_list = server.getPlayerList()
 	return player_list.getPlayerByName("Mickeon")

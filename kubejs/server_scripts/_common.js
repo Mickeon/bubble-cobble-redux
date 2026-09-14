@@ -1,13 +1,14 @@
 // priority: 1000
 
 /**
- * @import {$ServerPlayer} from "net.minecraft.server.level.ServerPlayer"
- * @import {$ItemStack} from "net.minecraft.world.item.ItemStack"
- * @import {$ScheduledEvents$ScheduledEvent} from "dev.latvian.mods.kubejs.util.ScheduledEvents$ScheduledEvent"
- * @import {$PotionContents} from "net.minecraft.world.item.alchemy.PotionContents"
- * @import {$Entity} from "net.minecraft.world.entity.Entity"
- * @import {$Level} from "net.minecraft.world.level.Level
- * @import {$SoundSource$$Type} from "net.minecraft.sounds.SoundSource"
+ * @import {$Player} from "@package/net/minecraft/world/entity/player"
+ * @import {$ServerPlayer} from "@package/net/minecraft/server/level"
+ * @import {$ItemStack} from "@package/net/minecraft/world/item"
+ * @import {$ScheduledEvents$ScheduledEvent} from "@package/dev/latvian/mods/kubejs/util"
+ * @import {$PotionContents} from "@package/net/minecraft/world/item/alchemy"
+ * @import {$Entity} from "@package/net/minecraft/world/entity"
+ * @import {$Level} from "@package/net/minecraft/world/level"
+ * @import {$SoundEvent_, $SoundSource_} from "@package/net/minecraft/sounds"
  */
 
 /** @import {global} from "./../startup_scripts/_common" */
@@ -29,7 +30,7 @@ function pick_random(array) {
 
 /**
  * @description A shorthand for play_sound_globally when an entity (and therefore player!) plays a sound.
- * @param {$Entity} entity @param {Special.SoundEvent} sound_event @param {$SoundSource$$Type} source @param {number?} pitch @param {number?} volume
+ * @param {$Entity} entity @param {$SoundEvent_} sound_event @param {$SoundSource_} source @param {number?} pitch @param {number?} volume
  */
 function play_sound_at_entity(entity, sound_event, source, volume, pitch) {
 	play_sound_globally(entity.level, entity.position(), sound_event, source, volume, pitch)

@@ -1,7 +1,12 @@
 // requires: cobblemon
 // requires: create
-/** @type {typeof import("dev.latvian.mods.kubejs.item.FoodBuilder").$FoodBuilder } */
-let $FoodBuilder  = Java.loadClass("dev.latvian.mods.kubejs.item.FoodBuilder")
+
+/**
+ * @import {$PokemonEntity} from "@package/com/cobblemon/mod/common/entity/pokemon"
+ */
+
+const $FoodBuilder = Java.loadClass("dev.latvian.mods.kubejs.item.FoodBuilder")
+
 
 ServerEvents.recipes(event => {
 	console.log("Changing recipes in funny_server.js")
@@ -200,7 +205,7 @@ PlayerEvents.decorateChat(event => {
 	if (message.toLowerCase() == "hi") {
 		// const nearby_pokemon = speaker.level.getEntitiesWithin(AABB.CUBE.inflate(4).move(speaker.x, speaker.y, speaker.z)).filterSelector("@n[type=cobblemon:pokemon, nbt={Pokemon:{PokemonOriginalTrainerType:NONE}}]").first
 		let traced = speaker.rayTrace()
-		/** @type {import("com.cobblemon.mod.common.entity.pokemon.PokemonEntity").$PokemonEntity$$Type} */
+		/** @type {$PokemonEntity} */
 		let attacker = traced.entity
 		if (attacker?.type == "cobblemon:pokemon" && attacker?.nbt.getCompound("Pokemon").get("PokemonOriginalTrainerType") == "NONE") {
 			attacker.cry()
@@ -276,26 +281,29 @@ PlayerEvents.loggedIn(event => {
 
 // https://discord.com/channels/303440391124942858/303440391124942858/1450918369342521548
 function DashData() {
-	this.last_tick_used = 0
-	this.air_time_ticks = 0
-	this.jump_count = 0
-	this.strength_multiplier = 1.0
-	this.restoration = DASH_BASE_RESTORATION
-	this.check_landed = /** @type {$ScheduledEvents$ScheduledEvent?} */ (null)
-	this.lower_tiredness = /** @type {$ScheduledEvents$ScheduledEvent?} */ (null)
+	return {
+		last_tick_used: 0,
+		air_time_ticks: 0,
+		jump_count: 0,
+		strength_multiplier: 1.0,
+		restoration: DASH_BASE_RESTORATION,
+		check_landed: /** @type {$ScheduledEvents$ScheduledEvent?} */ (null),
+		lower_tiredness: /** @type {$ScheduledEvents$ScheduledEvent?} */ (null)
+	}
 }
 
 const DASH_FORCE = 1.0
 const DASH_COOLDOWN_TICKS = 10
 const DASH_BASE_RESTORATION = 0.0125
-/** @param {$UUID} uuid @returns {DashData} */
+/** @param {$UUID} uuid */
 DashData.get_or_create = function(uuid) {
 	if (!players_dash_data[uuid]) {
-		players_dash_data[uuid] = new DashData()
+		players_dash_data[uuid] = DashData()
 	}
 	return players_dash_data[uuid]
 }
-const players_dash_data = {}
+
+const players_dash_data = /** @type {Object<string, ReturnType<typeof DashData>>} */ ({})
 NetworkEvents.dataReceived("kubejs:dash", event => {
 	const player = event.player
 	const dash = DashData.get_or_create(player.uuid)
@@ -369,7 +377,7 @@ NetworkEvents.dataReceived("kubejs:dash", event => {
 		dash.lower_tiredness = event.server.scheduleRepeatingInTicks(5, () => {
 			if (dash.strength_multiplier >= 1.0) {
 				player.playNotifySound("bubble_cobble:recharged", "players", 0.25, 1.0)
-				dash.bonus_restoration = 0.0
+				// dash.bonus_restoration = 0.0
 
 				dash.lower_tiredness.clear()
 				delete dash.lower_tiredness
@@ -399,11 +407,8 @@ ItemEvents.entityInteracted("minecraft:glass_bottle", event => {
 
 const GIRL_POWER_EFFECT = Registry.of("mob_effect").get("kubejs:girl_power")
 if (GIRL_POWER_EFFECT) {
-	/** @type {typeof import("net.neoforged.neoforge.event.entity.living.MobEffectEvent$Added").$MobEffectEvent$Added } */
 	let $MobEffectEvent$Added  = Java.loadClass("net.neoforged.neoforge.event.entity.living.MobEffectEvent$Added")
-	/** @type {typeof import("net.neoforged.neoforge.event.entity.living.MobEffectEvent$Expired").$MobEffectEvent$Expired } */
 	let $MobEffectEvent$Expired  = Java.loadClass("net.neoforged.neoforge.event.entity.living.MobEffectEvent$Expired")
-	/** @type {typeof import("net.neoforged.neoforge.event.entity.living.MobEffectEvent$Remove").$MobEffectEvent$Remove } */
 	let $MobEffectEvent$Remove  = Java.loadClass("net.neoforged.neoforge.event.entity.living.MobEffectEvent$Remove")
 
 	NativeEvents.onEvent($MobEffectEvent$Added, event => {
@@ -424,10 +429,6 @@ if (GIRL_POWER_EFFECT) {
 		}
 	})
 
-	/**
-	 * @import {$PokemonEntity} from "com.cobblemon.mod.common.entity.pokemon.PokemonEntity"
-	 */
-
 	ItemEvents.entityInteracted("minecraft:potion", event => {
 		if (event.target.type != "cobblemon:pokemon") {
 			return
@@ -436,7 +437,7 @@ if (GIRL_POWER_EFFECT) {
 		const pokemon_entity = /** @type {$PokemonEntity} */ (event.target)
 		const pokemon = pokemon_entity.pokemon
 		const item = event.item
-		const player = event.entity
+		const player = /** @type {$Player} */ (event.entity)
 
 		const current_contents = /** @type {$PotionContents} */ (item.getComponents().get("minecraft:potion_contents"))
 		if (!current_contents.is("kubejs:girl_power")) {
@@ -501,8 +502,8 @@ PlayerEvents.tick(event => {
 	}
 
 	const level = event.level
-	const bounding_box_min = player.boundingBox.minPosition
-	const bounding_box_max = player.boundingBox.maxPosition
+	const bounding_box_min = player.getBoundingBox().minPosition
+	const bounding_box_max = player.getBoundingBox().maxPosition
 	const block_pos_around_head = BlockPos.betweenClosed(bounding_box_min.with("y", player.eyeY), bounding_box_max.with("y", player.eyeY + 0.5)).iterator()
 	while (block_pos_around_head.hasNext()) {
 		let block_pos = block_pos_around_head.next()
@@ -518,21 +519,19 @@ PlayerEvents.tick(event => {
 		}
 
 		level.setBlockAndUpdate(block_pos, Blocks.AIR)
-		level.spawnEntity("minecraft:falling_block", /** @param {import("net.minecraft.world.entity.item.FallingBlockEntity").$FallingBlockEntity$$Type} falling_block */ falling_block => {
+		level.spawnEntity("minecraft:falling_block", /** @param {import("@package/net/minecraft/world/entity/item").$FallingBlockEntity} falling_block */ falling_block => {
 			falling_block.setBlockState(block)
 			falling_block.setPos(block_pos.center)
 			falling_block.addMotion(0, 0.25, 0)
 			falling_block.cancelDrop = true
-			level.playLocalSound(block_pos, falling_block.blockState.soundType.fallSound, "blocks", 1.0, 1.0, false)
+			level.playLocalSound(block_pos, falling_block.getBlockState().soundType.fallSound, "blocks", 1.0, 1.0, false)
 		})
 		powder_snow.snow_balls_stored += 1
 	})
 
 	player.setIsInPowderSnow(false)
 	player.modifyAttribute("minecraft:generic.gravity", "kubejs:powder_snow_pause", -player.getAttributeValue("minecraft:generic.gravity"), "add_multiplied_base")
-	player.motionX = 0.0
-	player.motionZ = 0.0
-	player.motionY = 0.25
+	player.setMotion(0.0, 0.25, 0.0)
 	player.hurtMarked = true
 
 	powder_snow.last_tick_jumped = event.server.tickCount
@@ -542,7 +541,7 @@ PlayerEvents.tick(event => {
 			play_sound_at_entity(player, "bubble_cobble:crate_jump", "players", 1.0, 0.75 + powder_snow.combo * 0.05)
 			player.removeAttribute("minecraft:generic.gravity", "kubejs:powder_snow_pause")
 			player.modifyAttribute("minecraft:generic.safe_fall_distance", "kubejs:powder_snow_leniency", 5, "add_value")
-			player.motionY = 1.0
+			player.setMotionY(1.0)
 			player.hurtMarked = true
 			delete powder_snow.delayed_jump
 
@@ -597,11 +596,10 @@ PlayerEvents.tick(event => {
 // })
 
 // Craftable Roses from Rose Bushes, but... owch.
-/** @type {typeof import("net.neoforged.neoforge.event.entity.player.PlayerEvent$ItemCraftedEvent").$PlayerEvent$ItemCraftedEvent } */
 let $PlayerEvent$ItemCraftedEvent  = Java.loadClass("net.neoforged.neoforge.event.entity.player.PlayerEvent$ItemCraftedEvent")
 NativeEvents.onEvent($PlayerEvent$ItemCraftedEvent, event => {
 	if (event.crafting.id == "biomeswevegone:rose" && event.inventory.countItem("minecraft:rose_bush")) {
-		let entity = event.entity
+		const entity = event.entity
 		entity.attack(new DamageSource("biomesoplenty:bramble", entity, entity, entity.position().add(entity.forward)), 1)
 		entity.addMotion(0, 0.1, 0)
 		entity.hurtMarked = true

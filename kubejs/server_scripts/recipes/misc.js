@@ -26,7 +26,7 @@ ServerEvents.tags("item", event => {
 })
 
 ServerEvents.recipes(event => {
-	/** @param {import("dev.latvian.mods.kubejs.recipe.filter.RecipeFilter").RecipeFilterObject} filter @param {number} new_count  */
+	/** @param {import("@package/dev/latvian.mods.kubejs.recipe.filter.RecipeFilter").RecipeFilterObject} filter @param {number} new_count  */
 	function change_result_count(filter, new_count) {
 		event.forEachRecipe(filter, recipe => {
 			const json = JSON.parse(recipe.json)

@@ -101,10 +101,8 @@ ItemEvents.foodEaten(["artifacts:everlasting_beef", "artifacts:eternal_steak", "
 })
 
 if (Platform.isLoaded("displaydelight")) {
-	/** @type {typeof import("com.jkvin114.displaydelight.init.BlockAssociations").$BlockAssociations } */
-	let $BlockAssociations  = Java.loadClass("com.jkvin114.displaydelight.init.BlockAssociations")
-	/** @type {typeof import("com.jkvin114.displaydelight.block.AbstractItemBlock").$AbstractItemBlock } */
-	let $AbstractItemBlock  = Java.loadClass("com.jkvin114.displaydelight.block.AbstractItemBlock")
+	let $BlockAssociations = Java.loadClass("com.jkvin114.displaydelight.init.BlockAssociations")
+	let $AbstractItemBlock = Java.loadClass("com.jkvin114.displaydelight.block.AbstractItemBlock")
 
 	// Gotta do it manually, I guess. I want these to only show up when looking them up in the Creative Tabs.
 	ServerEvents.tags("item", event => {

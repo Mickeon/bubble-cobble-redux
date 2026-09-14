@@ -1,16 +1,13 @@
 
 // https://aldak.netlify.app/javadoc/1.21.1-21.1.x/net/minecraft/commands/commandsourcestack
 /**
- * @import {$Component} from "net.minecraft.network.chat.Component"
- * @import {$Player} from "net.minecraft.world.entity.player.Player"
- * @import {$CommandContext} from "com.mojang.brigadier.context.CommandContext"
- * @import {$CommandSourceStack} from "net.minecraft.commands.CommandSourceStack"
+ * @import {$Component} from "@package/net/minecraft/network/chat"
+ * @import {$CommandContext} from "@package/com/mojang/brigadier/context"
+ * @import {$CommandSourceStack} from "@package/net/minecraft/commands"
  */
 
 
-/** @type {typeof import("net.neoforged.neoforge.event.entity.player.PlayerEvent$TabListNameFormat").$PlayerEvent$TabListNameFormat } */
 let $PlayerEvent$TabListNameFormat  = Java.loadClass("net.neoforged.neoforge.event.entity.player.PlayerEvent$TabListNameFormat")
-/** @type {typeof import("net.neoforged.neoforge.event.entity.player.PlayerEvent$NameFormat").$PlayerEvent$NameFormat } */
 let $PlayerEvent$NameFormat  = Java.loadClass("net.neoforged.neoforge.event.entity.player.PlayerEvent$NameFormat")
 
 const NICKNAME_JSON_PATH = "nicknames.json"

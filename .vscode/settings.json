@@ -1,6 +1,7 @@
 {
     "js/ts.tsserver.automaticTypeAcquisition.enabled": false,
-    "js/ts.validate.enabled": false,
+    "js/ts.experimental.useTsgo": false,
+    "js/ts.validate.enabled": true,
     "json.schemas": [
         {
             "fileMatch": [
@@ -91,6 +92,9 @@
     "errorLens.excludeByMessage": [
         "Use of hardcoded text function. Consider using language keys instead."
     ],
+    "errorLens.excludeBySource": [
+        "ts(2352)"
+    ],
     "editor.tokenColorCustomizations": {
         "[Dark Modern]": {
             "textMateRules": [
@@ -134,4 +138,5 @@
         "/saves/**/stats/*.json": true,
         "/saves/**/advancements/*.json": true
     },
+    "editor.wordSeparators": "`~!@#%^&*()-=+[{]}\\|;:'\",.<>/?",
 }

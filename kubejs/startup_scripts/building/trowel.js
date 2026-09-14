@@ -1,23 +1,18 @@
 
-/** @type {typeof import("net.minecraft.world.item.component.Tool").$Tool } */
-let $Tool  = Java.loadClass("net.minecraft.world.item.component.Tool")
-/** @type {typeof import("java.util.Random").$Random } */
-let $Random  = Java.loadClass("java.util.Random")
-/** @type {typeof import("net.minecraft.world.item.context.UseOnContext").$UseOnContext } */
-let $UseOnContext  = Java.loadClass("net.minecraft.world.item.context.UseOnContext")
-/** @type {typeof import("net.minecraft.world.item.context.BlockPlaceContext").$BlockPlaceContext } */
-let $BlockPlaceContext  = Java.loadClass("net.minecraft.world.item.context.BlockPlaceContext")
-/** @type {typeof import("net.minecraft.world.phys.BlockHitResult").$BlockHitResult } */
-let $BlockHitResult  = Java.loadClass("net.minecraft.world.phys.BlockHitResult")
+let $Tool = Java.loadClass("net.minecraft.world.item.component.Tool")
+let $Random = Java.loadClass("java.util.Random")
+let $UseOnContext = Java.loadClass("net.minecraft.world.item.context.UseOnContext")
+let $BlockPlaceContext = Java.loadClass("net.minecraft.world.item.context.BlockPlaceContext")
+let $BlockHitResult = Java.loadClass("net.minecraft.world.phys.BlockHitResult")
 
 StartupEvents.registry("item", event => {
 	/**
-	 * @param {import("net.minecraft.world.entity.ai.attributes.Attribute").$Attribute$$Type} attribute
+	 * @param {import("@package/net/minecraft/world/entity/ai/attributes").$Attribute_} attribute
 	 * @param {string} id
 	 * @param {number} amount
-	 * @param {import("net.minecraft.world.entity.ai.attributes.AttributeModifier$Operation").$AttributeModifier$Operation$$Type} operation
-	 * @param {import("net.minecraft.world.entity.EquipmentSlotGroup").$EquipmentSlotGroup$$Type} slot
-	 * @returns {import("net.minecraft.world.item.component.ItemAttributeModifiers$Entry").$ItemAttributeModifiers$Entry$$Type}
+	 * @param {import("@package/net/minecraft/world/entity/ai/attributes").$AttributeModifier$Operation_} operation
+	 * @param {import("@package/net/minecraft/world/entity").$EquipmentSlotGroup_} slot
+	 * @returns {import("@package/net/minecraft/world/item/component").$ItemAttributeModifiers$Entry_}
 	 */
 	function modifier(attribute, amount, operation, id, slot) {
 		return {attribute: attribute, slot: slot, modifier: {amount: amount, id: id, operation: operation}}
@@ -48,7 +43,7 @@ StartupEvents.modifyCreativeTab("minecraft:tools_and_utilities", event => {
 })
 
 // TODO: Should be called on both clients and servers, ideally. Currently only on server.
-/** @param {import("dev.latvian.mods.kubejs.block.BlockRightClickedKubeEvent").$BlockRightClickedKubeEvent$$Type} event */
+/** @param {import("@package/dev/latvian/mods/kubejs/block").$BlockRightClickedKubeEvent} event */
 global.use_trowel_on_block = function (event) {
 	const player = event.player
 	const level = event.level

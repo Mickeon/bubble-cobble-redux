@@ -1,13 +1,8 @@
-/** @type {typeof import("dev.latvian.mods.kubejs.block.BlockRightClickedKubeEvent").$BlockRightClickedKubeEvent } */
-let $BlockRightClickedKubeEvent  = Java.loadClass("dev.latvian.mods.kubejs.block.BlockRightClickedKubeEvent")
-/** @type {typeof import("net.minecraft.world.item.context.UseOnContext").$UseOnContext } */
-let $UseOnContext  = Java.loadClass("net.minecraft.world.item.context.UseOnContext")
-/** @type {typeof import("net.minecraft.world.phys.BlockHitResult").$BlockHitResult } */
-let $BlockHitResult  = Java.loadClass("net.minecraft.world.phys.BlockHitResult")
-/** @type {typeof import("net.minecraft.world.level.block.SlabBlock").$SlabBlock } */
-let $SlabBlock  = Java.loadClass("net.minecraft.world.level.block.SlabBlock")
-/** @type {typeof import("net.minecraft.world.level.block.StairBlock").$StairBlock } */
-let $StairBlock  = Java.loadClass("net.minecraft.world.level.block.StairBlock")
+let $BlockRightClickedKubeEvent = Java.loadClass("dev.latvian.mods.kubejs.block.BlockRightClickedKubeEvent")
+let $UseOnContext = Java.loadClass("net.minecraft.world.item.context.UseOnContext")
+let $BlockHitResult = Java.loadClass("net.minecraft.world.phys.BlockHitResult")
+let $SlabBlock = Java.loadClass("net.minecraft.world.level.block.SlabBlock")
+let $StairBlock = Java.loadClass("net.minecraft.world.level.block.StairBlock")
 
 ServerEvents.tags("item", event => {
 	event.add("bubble_cobble:lanterns", "minecraft:lantern", "minecraft:soul_lantern", "#minecraft:lanterns", "ribbits:swamp_lantern", "#biomeswevegone:glow_bottle")
@@ -175,7 +170,7 @@ BlockEvents.rightClicked(event => {
 })
 
 // Right-click with empty hand on fences to disconnect/reconnect them from solid faces.
-/** @import {$FenceBlock} from "net.minecraft.world.level.block.FenceBlock" */
+/** @import {$FenceBlock} from "@package/net/minecraft/world/level/block" */
 const FENCES = [
 	"biomesoplenty:dead_fence",
 	"biomesoplenty:empyreal_fence",

@@ -1,21 +1,15 @@
 // requires: resource_world
-/** @type {typeof import("java.lang.Long").$Long } */
-let $Long  = Java.loadClass("java.lang.Long")
-/** @type {typeof import("net.minecraft.world.damagesource.DamageType").$DamageType } */
-let $DamageType  = Java.loadClass("net.minecraft.world.damagesource.DamageType")
-/** @type {typeof import("net.minecraft.world.entity.item.ItemEntity").$ItemEntity } */
-let $ItemEntity  = Java.loadClass("net.minecraft.world.entity.item.ItemEntity")
+let $Long = Java.loadClass("java.lang.Long")
+let $DamageType = Java.loadClass("net.minecraft.world.damagesource.DamageType")
+let $ItemEntity = Java.loadClass("net.minecraft.world.entity.item.ItemEntity")
 
-/** @type {typeof import("net.neoforged.neoforge.event.entity.player.CanContinueSleepingEvent").$CanContinueSleepingEvent } */
-let $CanContinueSleepingEvent  = Java.loadClass("net.neoforged.neoforge.event.entity.player.CanContinueSleepingEvent")
-/** @type {typeof import("net.neoforged.neoforge.event.entity.player.PlayerSetSpawnEvent").$PlayerSetSpawnEvent } */
-let $PlayerSetSpawnEvent  = Java.loadClass("net.neoforged.neoforge.event.entity.player.PlayerSetSpawnEvent")
-/** @type {typeof import("net.neoforged.neoforge.event.entity.EntityTravelToDimensionEvent").$EntityTravelToDimensionEvent } */
-let $EntityTravelToDimensionEvent  = Java.loadClass("net.neoforged.neoforge.event.entity.EntityTravelToDimensionEvent")
+let $CanContinueSleepingEvent = Java.loadClass("net.neoforged.neoforge.event.entity.player.CanContinueSleepingEvent")
+let $PlayerSetSpawnEvent = Java.loadClass("net.neoforged.neoforge.event.entity.player.PlayerSetSpawnEvent")
+let $EntityTravelToDimensionEvent = Java.loadClass("net.neoforged.neoforge.event.entity.EntityTravelToDimensionEvent")
 
 /**
- * @import {$MinecraftServer} from "net.minecraft.server.MinecraftServer"
- * @import {$ServerLevel} from "net.minecraft.server.level.ServerLevel"
+ * @import {$MinecraftServer} from "@package/net/minecraft/server"
+ * @import {$ServerLevel} from "@package/net/minecraft/server/level"
  */
 
 const DreamDimension = {
@@ -361,7 +355,7 @@ const DreamDimension = {
 		console.log(`Trying to cause explosions around in ${this.ID}`)
 
 		const level = this.get()
-		const min_height = level.getMinBuildHeight()
+		const min_height = level.getMinBuildHeight() // TODO: Check if this property actually exists.
 		const max_height = level.getMaxBuildHeight()
 		const range_inner = 16
 		const range_outer = 96
@@ -470,14 +464,10 @@ const DreamDimension = {
 
 	/** @param {$ServerLevel} level @param {$Vec3} position  */
 	spawn_darkrai(level, position) {
-		/** @type {typeof import("com.cobblemon.mod.common.entity.pokemon.PokemonEntity").$PokemonEntity } */
-		let $PokemonEntity  = Java.loadClass("com.cobblemon.mod.common.entity.pokemon.PokemonEntity")
-		/** @type {typeof import("com.cobblemon.mod.common.api.pokemon.PokemonSpecies").$PokemonSpecies } */
-		let $PokemonSpecies  = Java.loadClass("com.cobblemon.mod.common.api.pokemon.PokemonSpecies")
-		/** @type {typeof import("com.cobblemon.mod.common.api.moves.Moves").$Moves } */
-		let $Moves  = Java.loadClass("com.cobblemon.mod.common.api.moves.Moves")
-		/** @type {typeof import("com.cobblemon.mod.common.api.pokemon.stats.Stats").$Stats } */
-		let $Stats  = Java.loadClass("com.cobblemon.mod.common.api.pokemon.stats.Stats")
+		let $PokemonEntity = Java.loadClass("com.cobblemon.mod.common.entity.pokemon.PokemonEntity")
+		let $PokemonSpecies = Java.loadClass("com.cobblemon.mod.common.api.pokemon.PokemonSpecies")
+		let $Moves = Java.loadClass("com.cobblemon.mod.common.api.moves.Moves")
+		let $Stats = Java.loadClass("com.cobblemon.mod.common.api.pokemon.stats.Stats")
 
 		level.spawnEntity("cobblemon:pokemon", entity => {
 			const pokemon_entity = /** @type {$PokemonEntity} */ (entity)
@@ -602,7 +592,7 @@ EntityEvents.death("minecraft:player", event => {
 		player.setFoodLevel(6)
 		player.experienceLevel *= 0.75
 
-		/** @param {import("net.minecraft.world.effect.MobEffectInstance").$MobEffectInstance$$Type} effect_instance */
+		/** @param {import("@package/net/minecraft/world/effect").$MobEffectInstance} effect_instance */
 		let incurable = function(effect_instance) {
 			effect_instance.getCures().clear()
 			return effect_instance
@@ -696,8 +686,7 @@ BlockEvents.rightClicked("cobblemonraiddens:raid_crystal_block", event => {
 
 
 // if (Platform.isLoaded("via_romana")) {
-// 	/** @type {typeof import("net.neoforged.neoforge.event.entity.living.MobEffectEvent$Remove").$MobEffectEvent$Remove } */
-// 	let $MobEffectEvent$Remove  = Java.loadClass("net.neoforged.neoforge.event.entity.living.MobEffectEvent$Remove")
+// 	let $MobEffectEvent$Remove = Java.loadClass("net.neoforged.neoforge.event.entity.living.MobEffectEvent$Remove")
 // 	NativeEvents.onEvent($MobEffectEvent$Remove, event => {
 // 		if (event.getCure().name() == "milk" && event.effect.is("via_romana:travellers_fatigue")) {
 // 			event.setCanceled(true)

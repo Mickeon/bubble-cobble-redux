@@ -1,10 +1,8 @@
 // requires: pehkui
 
-/** @type {typeof import("virtuoel.pehkui.api.ScaleTypes").$ScaleTypes } */
-let $ScaleTypes  = Java.loadClass("virtuoel.pehkui.api.ScaleTypes")
+let $ScaleTypes = Java.loadClass("virtuoel.pehkui.api.ScaleTypes")
 // https://github.com/Virtuoel/Pehkui/blob/neoforge/1.21/src/main/java/virtuoel/pehkui/api/ScaleEasings.java
-/** @type {typeof import("virtuoel.pehkui.api.ScaleEasings").$ScaleEasings } */
-let $ScaleEasings  = Java.loadClass("virtuoel.pehkui.api.ScaleEasings")
+let $ScaleEasings = Java.loadClass("virtuoel.pehkui.api.ScaleEasings")
 
 // Creepers explode without destroying blocks. Sometimes they explode in confetti, too!
 LevelEvents.beforeExplosion(event => {
@@ -57,8 +55,7 @@ LevelEvents.afterExplosion(event => {
 
 
 // Teleport players hit by the Warden to their spawn point.
-/** @type {typeof import("net.minecraft.world.level.portal.DimensionTransition").$DimensionTransition } */
-let $DimensionTransition  = Java.loadClass("net.minecraft.world.level.portal.DimensionTransition")
+let $DimensionTransition = Java.loadClass("net.minecraft.world.level.portal.DimensionTransition")
 EntityEvents.beforeHurt("minecraft:player", event => {
 	if (event.source.getActual()?.type == "minecraft:warden") {
 		const player = /** @type {$ServerPlayer} */ (event.player)
@@ -75,7 +72,7 @@ EntityEvents.beforeHurt("minecraft:player", event => {
 			player.unlockAdvancement("kubejs:bad_dream")
 		}
 
-		/** @type {import("net.minecraft.world.entity.monster.warden.Warden").$Warden$$Type} */
+		/** @type {import("@package/net/minecraft/world/entity/monster/warden").$Warden} */
 		const warden = event.source.getActual()
 		warden.clearAnger(player)
 		event.cancel()
@@ -84,13 +81,12 @@ EntityEvents.beforeHurt("minecraft:player", event => {
 })
 
 // Make ghasts less dangerous.
-/** @type {typeof import("net.neoforged.neoforge.event.entity.ProjectileImpactEvent").$ProjectileImpactEvent } */
-let $ProjectileImpactEvent  = Java.loadClass("net.neoforged.neoforge.event.entity.ProjectileImpactEvent")
+let $ProjectileImpactEvent = Java.loadClass("net.neoforged.neoforge.event.entity.ProjectileImpactEvent")
 NativeEvents.onEvent($ProjectileImpactEvent, event => {
 	if (event.projectile.type != "minecraft:fireball" || event.projectile.owner?.type != "minecraft:ghast") {
 		return
 	}
-	/** @type {import("net.minecraft.world.entity.projectile.Fireball").$Fireball$$Type} */
+	/** @type {import("@package/net/minecraft/world/entity/projectile").$Fireball} */
 	const fireball = event.projectile
 
 	if (event.rayTraceResult.type == "entity") {
@@ -106,7 +102,7 @@ NativeEvents.onEvent($ProjectileImpactEvent, event => {
 		}
 
 	} else {
-		fireball.playsound("create:chiff player", 1.0, 0.9 + Math.random() * 0.2)
+		fireball.playSound("create:chiff player", 1.0, 0.9 + Math.random() * 0.2)
 		fireball.block.explode({
 			source: fireball,
 			causesFire: true,
@@ -127,8 +123,7 @@ NativeEvents.onEvent($ProjectileImpactEvent, event => {
 const ENDERMAN_CRACKING_INTERVAL = 15 * SEC
 
 // Endermen suffer from Osteoporosis when trying to pick up blocks.
-/** @type {typeof import("net.neoforged.neoforge.event.entity.EntityMobGriefingEvent").$EntityMobGriefingEvent } */
-let $EntityMobGriefingEvent  = Java.loadClass("net.neoforged.neoforge.event.entity.EntityMobGriefingEvent")
+let $EntityMobGriefingEvent = Java.loadClass("net.neoforged.neoforge.event.entity.EntityMobGriefingEvent")
 NativeEvents.onEvent($EntityMobGriefingEvent, event => {
 	if (event.entity.type != "minecraft:enderman") {
 		return
@@ -136,7 +131,7 @@ NativeEvents.onEvent($EntityMobGriefingEvent, event => {
 
 	event.setCanGrief(false)
 
-	/** @type {import("net.minecraft.world.entity.monster.EnderMan").$EnderMan$$Type} */
+	/** @type {import("@package/net/minecraft/world/entity/monster").$EnderMan} */
 	const enderman = event.entity
 
 	// Endermen check for this basically every tick. The paralysis isn't just for fun.

@@ -1,6 +1,6 @@
 /**
- * @import {$Vec3} from "net.minecraft.world.phys.Vec3"
- * @import {$UUID} from "java.util.UUID"
+ * @import {$Vec3} from "@package/net/minecraft/world/phys"
+ * @import {$UUID} from "@package/java/util"
  */
 
 ServerEvents.recipes(event => {
@@ -13,6 +13,7 @@ function RulerData() {
 	this.target_pos = BlockPos.ZERO
 	this.target_face_normal = Vec3d.ZERO
 	this.draw_start = Vec3d.ZERO
+	this.begun_tick = 0
 
 	this.measure_loop = /** @type {$ScheduledEvents$ScheduledEvent?} */ (null)
 	this.stop_measuring = function() {

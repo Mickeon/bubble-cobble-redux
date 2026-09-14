@@ -7,16 +7,13 @@
 // Useful when I don't remember how to spell Fezandipiti.
 
 ProbeEvents.snippets(event => {
-	/** @type {typeof import("com.cobblemon.mod.common.api.pokemon.PokemonSpecies").$PokemonSpecies } */
-	let $PokemonSpecies  = Java.loadClass("com.cobblemon.mod.common.api.pokemon.PokemonSpecies")
-	/** @type {typeof import("com.cobblemon.mod.common.pokemon.properties.PropertiesCompletionProvider").$PropertiesCompletionProvider } */
-	let $PropertiesCompletionProvider  = Java.loadClass("com.cobblemon.mod.common.pokemon.properties.PropertiesCompletionProvider")
-	/** @type {typeof import("com.cobblemon.mod.common.api.abilities.Abilities").$Abilities } */
-	let $Abilities  = Java.loadClass("com.cobblemon.mod.common.api.abilities.Abilities")
+	let $PokemonSpecies = Java.loadClass("com.cobblemon.mod.common.api.pokemon.PokemonSpecies")
+	let $PropertiesCompletionProvider = Java.loadClass("com.cobblemon.mod.common.pokemon.properties.PropertiesCompletionProvider")
+	let $Abilities = Java.loadClass("com.cobblemon.mod.common.api.abilities.Abilities")
 
 	/**
-	 * @import {$Stream} from "java.util.stream.Stream"
-	 * @import {$Snippet} from "moe.wolfgirl.probejs.lang.snippet.Snippet"
+	 * @import {$Stream} from "@package/java/util/stream"
+	 * @import {$Snippet} from "@package/moe/wolfgirl/probejs/lang/snippet" does not work.
 	 */
 
 	/** @param {string} name @param {string} prefix @param {$Stream} stream @param {string} description */
@@ -47,17 +44,11 @@ ProbeEvents.snippets(event => {
 
 	// I don't know why ProbeJS refuses to capture them unless I do this.
 	if (Platform.isLoaded("smartkeyprompts")) {
-		/** @type {typeof import("com.mafuyu404.smartkeyprompts.util.SkpUtils").$SkpUtils } */
 		let $SkpUtils = Java.loadClass("com.mafuyu404.smartkeyprompts.util.SkpUtils")
-		/** @type {typeof import("com.mafuyu404.smartkeyprompts.util.CommonUtils").$CommonUtils } */
 		let $CommonUtils = Java.loadClass("com.mafuyu404.smartkeyprompts.util.CommonUtils")
-		/** @type {typeof import("com.mafuyu404.smartkeyprompts.util.KeyUtils").$KeyUtils } */
 		let $KeyUtils = Java.loadClass("com.mafuyu404.smartkeyprompts.util.KeyUtils")
-		/** @type {typeof import("com.mafuyu404.smartkeyprompts.util.NBTUtils").$NBTUtils } */
 		let $NBTUtils = Java.loadClass("com.mafuyu404.smartkeyprompts.util.NBTUtils")
-		/** @type {typeof import("com.mafuyu404.smartkeyprompts.util.PlayerUtils").$PlayerUtils } */
 		let $PlayerUtils = Java.loadClass("com.mafuyu404.smartkeyprompts.util.PlayerUtils")
-		/** @type {typeof import("com.mafuyu404.smartkeyprompts.util.PromptUtils").$PromptUtils } */
 		let $PromptUtils = Java.loadClass("com.mafuyu404.smartkeyprompts.util.PromptUtils")
 	}
 })

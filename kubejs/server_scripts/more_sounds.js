@@ -2,7 +2,7 @@
 
 ServerEvents.tags("block", event => {
 	/**
-	 * @param {Special.Mod} namespace
+	 * @param {SpecialTypes.ModId} namespace
 	 * @param {string} wood_type
 	 * @param {"birch" | "spruce" | "jungle" | "acacia" | "mangrove"} sound_type
 	 */

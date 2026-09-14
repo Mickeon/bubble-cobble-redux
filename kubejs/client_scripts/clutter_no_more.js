@@ -1,13 +1,12 @@
 // requires: clutternomore
 
 /**
- * @import {$Item} from "net.minecraft.world.item.Item"
- * @import {$List} from "java.util.List"
+ * @import {$Item} from "@package/net/minecraft/world/item"
+ * @import {$List} from "@package/java/util"
  */
 
 // https://aldak.netlify.app/javadoc/1.21.1-21.1.x/net/minecraft/client/gui/guigraphics
 // https://github.com/Alchemists-Of-Yore/ClutterNoMore/blob/0a5832a75ccfb65c999b207134cf0f43d369ab96/src/main/java/dev/tazer/clutternomore/common/shape_map/ShapeMap.java
-/** @type {typeof import("dev.tazer.clutternomore.common.shape_map.ShapeMap").$ShapeMap } */
 let $ShapeMap = Java.loadClass("dev.tazer.clutternomore.common.shape_map.ShapeMap")
 
 let shapes = /** @type {$List<$Item>?} */ (null)
@@ -51,7 +50,7 @@ ItemEvents.dynamicTooltips("show_available_shapes", event => {
 			new_lines.add(Text.of(`• `).append(shape.description).color("dark_gray"))
 		})
 
-		let hovered_slot = /** @type {import("net.minecraft.world.inventory.Slot").$Slot$$Type} */ (Client.getCurrentScreen()?.hoveredSlot)
+		let hovered_slot = /** @type {import("@package/net/minecraft/world/inventory").$Slot} */ (Client.getCurrentScreen()?.hoveredSlot)
 		if (hovered_slot && hovered_slot.item == stack && !hovered_slot.isFake()) {
 			new_lines.add(Text.translate("Hold %s to change shape", [Text.keybind("key.clutternomore.change_block_shape").color(MASCOT_COLOR)]).color(MASCOT_COLOR_DARK))
 		}
@@ -67,13 +66,9 @@ ItemEvents.dynamicTooltips("show_available_shapes", event => {
 // This artificially skips any mixin logic and triggers the KeyPressed.Post event directly.
 // No More Clutter executes its block-changing logic there.
 
-/** @type {typeof import("net.neoforged.neoforge.common.NeoForge").$NeoForge } */
 let $NeoForge = Java.loadClass("net.neoforged.neoforge.common.NeoForge")
-/** @type {typeof import("net.minecraft.client.gui.screens.inventory.AbstractContainerScreen").$AbstractContainerScreen } */
 let $AbstractContainerScreen = Java.loadClass("net.minecraft.client.gui.screens.inventory.AbstractContainerScreen")
-/** @type {typeof import("net.neoforged.neoforge.client.event.ScreenEvent$KeyPressed$Pre").$ScreenEvent$KeyPressed$Pre } */
 let $ScreenEvent$KeyPressed$Pre = Java.loadClass("net.neoforged.neoforge.client.event.ScreenEvent$KeyPressed$Pre")
-/** @type {typeof import("net.neoforged.neoforge.client.event.ScreenEvent$KeyPressed$Post").$ScreenEvent$KeyPressed$Post } */
 let $ScreenEvent$KeyPressed$Post = Java.loadClass("net.neoforged.neoforge.client.event.ScreenEvent$KeyPressed$Post")
 
 NativeEvents.onEvent($ScreenEvent$KeyPressed$Pre, event => {

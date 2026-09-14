@@ -1,14 +1,13 @@
 
-/** @type {typeof import("com.cobblemon.mod.common.api.events.CobblemonEvents").$CobblemonEvents } */
-let $CobblemonEvents  = Java.loadClass("com.cobblemon.mod.common.api.events.CobblemonEvents")
+let $CobblemonEvents = Java.loadClass("com.cobblemon.mod.common.api.events.CobblemonEvents")
 
 ItemEvents.modification(event => {
-	event.modify(["minecraft:potion", "minecraft:splash_potion", "minecraft:lingering_potion"], /** @param {ItemModifications} item */ item => {
-		item.maxStackSize = 12
+	event.modify(["minecraft:potion", "minecraft:splash_potion", "minecraft:lingering_potion"], modified => {
+		modified.maxStackSize = 12
 	})
 
 	// Lower how much time it takes to eat food in general.
-	event.modify(i => Boolean(i.getFoodProperties(null)), /** @param {$ItemModifications} modified */ modified => {
+	event.modify(i => Boolean(i.getFoodProperties(null)), modified => {
 		const item = modified.item()
 		const food_properties = item.getFoodProperties(Item.of(item), null)
 		if (food_properties.eatSeconds() <= 0.0) {
@@ -59,7 +58,7 @@ ItemEvents.modification(event => {
 
 	/** @param {$Item} item  @param {number} max_damage */
 	function set_max_damage(item, max_damage) {
-		event.modify(item, /** @param {$ItemModifications} modified */ modified => {
+		event.modify(item, modified => {
 			modified.maxDamage = max_damage
 			modified.damage = 0
 		})
@@ -80,7 +79,7 @@ ItemEvents.modification(event => {
 	// The config settings for changing the Grappling Hooks' values has been removed. So we must do it this way.
 	// This is technically no longer necessary, see config/yo_hooks/overlaps.json
 	function change_hook_values(item, max_damage, length) {
-		event.modify(item, /** @param {$ItemModifications} modified */ modified => {
+		event.modify(item, modified => {
 			const hook_definition = modified.item().hookDefinition
 			if (!hook_definition) {
 				console.error(`Hook definition not found for ${modified.item().id}. Aborting.`)

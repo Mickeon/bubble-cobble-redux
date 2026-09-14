@@ -1,8 +1,8 @@
 // requires: justhammers
 
 /**
- * @import {$Tool} from "net.minecraft.world.item.component.Tool"
- * @import {$Tool$Rule} from "net.minecraft.world.item.component.Tool$Rule"
+ * @import {$Tool} from "@package/net/minecraft/world/item/component"
+ * @import {$Tool$Rule} from "@package/net/minecraft/world/item/component"
  */
 
 ItemEvents.modification(event => {

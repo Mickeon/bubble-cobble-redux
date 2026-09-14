@@ -1,10 +1,8 @@
 // requires: clutternomore
 // https://aldak.netlify.app/javadoc/1.21.1-21.1.x/net/minecraft/client/gui/guigraphics
 // https://github.com/Alchemists-Of-Yore/ClutterNoMore/blob/0a5832a75ccfb65c999b207134cf0f43d369ab96/src/main/java/dev/tazer/clutternomore/common/shape_map/ShapeMap.java
-/** @type {typeof import("dev.tazer.clutternomore.common.shape_map.ShapeMap").$ShapeMap } */
 let $ShapeMap = Java.loadClass("dev.tazer.clutternomore.common.shape_map.ShapeMap")
 // https://discord.com/channels/303440391124942858/1421136321824424059/1421862264654401608
-/** @type {typeof import("net.neoforged.neoforge.client.event.RegisterGuiLayersEvent").$RegisterGuiLayersEvent } */
 let $RegisterGuiLayersEvent  = Java.loadClass("net.neoforged.neoforge.client.event.RegisterGuiLayersEvent")
 
 NativeEvents.onEvent($RegisterGuiLayersEvent, event => {
@@ -18,8 +16,8 @@ NativeEvents.onEvent($RegisterGuiLayersEvent, event => {
 const TEXT_APPEAR_TIME = 80.0 // 80.0
 let elapsed_time = 0.0
 /**
- * @param {import("net.minecraft.client.gui.GuiGraphics").$GuiGraphics$$Type} gui_graphics
- * @param {import("net.minecraft.client.DeltaTracker").$DeltaTracker$$Type} delta_tracker
+ * @param {import("@package/net/minecraft/client/gui").$GuiGraphics} gui_graphics
+ * @param {import("@package/net/minecraft/client").$DeltaTracker} delta_tracker
  */
 global.draw_shape_hint = (gui_graphics, delta_tracker) => {
 	if (!Client.player || Client.options.hideGui || Client.isPaused()) {
@@ -85,8 +83,7 @@ global.draw_shape_hint = (gui_graphics, delta_tracker) => {
 	}
 }
 
-// /** @type {typeof import("net.neoforged.neoforge.client.event.RenderGuiLayerEvent$Post").$RenderGuiLayerEvent$Post } */
-// let $RenderGuiLayerEvent$Post  = Java.loadClass("net.neoforged.neoforge.client.event.RenderGuiLayerEvent$Post")
+// let $RenderGuiLayerEvent$Post = Java.loadClass("net.neoforged.neoforge.client.event.RenderGuiLayerEvent$Post")
 // NativeEvents.onEvent($RenderGuiLayerEvent$Post, event => {
 // 	if (event.getName() != ID.mc("crosshair")) {
 // 		return

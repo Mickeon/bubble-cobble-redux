@@ -55,7 +55,7 @@ ItemEvents.dropped(event => {
 	const result = dropper.rayTrace(dropper.entityInteractionRange() + 1)
 	let target = result.entity
 
-	/** @param {import("net.minecraft.world.entity.LivingEntity").$LivingEntity$$Original} target */
+	/** @param {import("@package/net/minecraft/world/entity").$LivingEntity} target */
 	const can_receive_dropped_item = (target) => {
 		return target && target != dropper && (target.isPlayer() || target.type == "minecraft:armor_stand") && target.isAlive()
 	}
@@ -86,7 +86,7 @@ ItemEvents.dropped(event => {
 		if (target.isPlayer()) {
 			target.give(item.copyAndClear())
 		} else {
-			/** @type {import("net.minecraft.world.entity.LivingEntity").$LivingEntity$$Original} */
+			/** @type {import("@package/net/minecraft/world/entity").$LivingEntity} */
 			let armor_stand = target
 			if (armor_stand.mainHandItem.isEmpty()) {
 				armor_stand.mainHandItem = item.copyAndClear()
@@ -118,7 +118,7 @@ BlockEvents.rightClicked("minecraft:note_block", event => {
 	const block_pos = level_block.getPos()
 	const block_state = level_block.getBlockState()
 	const properties = level_block.getProperties()
-	const block = /** @type {import("net.minecraft.world.level.block.NoteBlock").$NoteBlock$$Type} */ (level_block.getBlock())
+	const block = /** @type {import("@package/net/minecraft/world/level/block").$NoteBlock} */ (level_block.getBlock())
 
 	const current_note = Number.parseInt(properties.get("note"))
 	const new_note = (current_note - 1.0 + 24) % 24
@@ -151,8 +151,7 @@ ItemEvents.foodEaten(event => {
 
 
 if (Item.exists("herbalbrews:flask")) {
-	/** @type {typeof import("net.minecraft.world.item.alchemy.PotionContents").$PotionContents } */
-	let $PotionContents  = Java.loadClass("net.minecraft.world.item.alchemy.PotionContents")
+	let $PotionContents = Java.loadClass("net.minecraft.world.item.alchemy.PotionContents")
 
 	// Fix HerbalBrews Flask's potion effects duration being wrong. It should be 20 times the duration.
 	// Does not fix the tooltip, which will show an absurd duration. Rectify that with a stupid hack.
@@ -227,7 +226,6 @@ ServerEvents.tags("item", event => {
 	)
 })
 
-/** @type {typeof import("net.neoforged.neoforge.event.AnvilUpdateEvent").$AnvilUpdateEvent } */
 let $AnvilUpdateEvent  = Java.loadClass("net.neoforged.neoforge.event.AnvilUpdateEvent")
 NativeEvents.onEvent($AnvilUpdateEvent, event => {
 	const { left, right } = event
@@ -266,7 +264,7 @@ NativeEvents.onEvent($AnvilUpdateEvent, event => {
 
 
 ServerEvents.basicCommand("currentstructure", event => {
-	/** @type {import("net.minecraft.server.level.ServerLevel").$ServerLevel$$Type} */
+	/** @type {import("@package/net/minecraft/server/level").$ServerLevel} */
 	const level = event.level
 
 	const block_pos = event.block.getPos()
@@ -292,9 +290,7 @@ ServerEvents.basicCommand("currentstructure", event => {
 // when the server is closed. This is fine for dedicated servers, but you will eventually run out of memory in singleplayer.
 // At the same time, interactions can't be added properly on startup as some registries are not ready yet(?)
 // https://lexxie.dev/neoforge/1.21.1/net/neoforged/neoforge/fluids/FluidInteractionRegistry.FluidInteraction.html
-/** @type {typeof import("net.neoforged.neoforge.fluids.FluidInteractionRegistry").$FluidInteractionRegistry } */
 let $FluidInteractionRegistry  = Java.loadClass("net.neoforged.neoforge.fluids.FluidInteractionRegistry")
-/** @type {typeof import("net.neoforged.neoforge.fluids.FluidInteractionRegistry$InteractionInformation").$FluidInteractionRegistry$InteractionInformation } */
 let $InteractionInformation = Java.loadClass("net.neoforged.neoforge.fluids.FluidInteractionRegistry$InteractionInformation")
 ServerEvents.loaded(event => {
 	const LAVA = Fluid.lava().getFluidType()
@@ -337,7 +333,7 @@ ServerEvents.loaded(event => {
 		Block.getBlock("kubejs:chiseled_mud_bricks").defaultBlockState()
 	))
 
-	/** @import {$FluidState} from "net.minecraft.world.level.material.FluidState" */
+	/** @import {$FluidState} from "@package/net/minecraft/world/level/material" */
 
 	const fluid_rand = Utils.getRandom().fork()
 

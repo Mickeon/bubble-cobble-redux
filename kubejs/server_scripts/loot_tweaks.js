@@ -198,7 +198,7 @@ LootJS.lootTables(event => {
 
 	// Doohickey time. Arbitary mod check, I just want something to fold.
 	if (Platform.isLoaded("supplementaries")) {
-		/** @param {Special.ItemTag} tag  */
+		/** @param {RegistryTypes.ItemTag} tag  */
 		let loot_table_from_tag = function(tag) {
 			const name = "kubejs:doohickey/" + tag.replace(":", "/")
 			event.create(name, "chest").createPool().addEntry(LootEntry.tag(tag, true))
@@ -486,10 +486,10 @@ ServerEvents.generateData("last", event => {
 // - Drops only one item.
 // - Drops the exact item representation of itself.
 // - Does not require any specific tool or enchantment.
-/** @param {import("com.almostreliable.lootjs.kube.LootTableEventJS").$LootTableEventJS$$Type} event  */
+/** @param {import("@package/com/almostreliable/lootjs/kube").$LootTableEventJS} event  */
 function print_simple_block_tables(event) {
 	const SURVIVES_EXPLOSION_CONDITION_TYPE = LootCondition.survivesExplosion().getType()
-	/** @param {import("com.almostreliable.lootjs.loot.LootConditionList").$LootConditionList$$Type} conditions  */
+	/** @param {import("@package/com/almostreliable/lootjs/loot").$LootConditionList} conditions  */
 	function has_any_complex_condition(conditions) {
 		for (let condition of conditions) {
 			let condition_type = condition.getType()
@@ -531,7 +531,7 @@ function print_simple_block_tables(event) {
 		const entry = pool.getEntries().get(0)
 		// if (entry.isComposite()) {
 		// 	return
-		// 	// let composite_entry = /** @type {import("com.almostreliable.lootjs.core.entry.CompositeLootEntry").$CompositeLootEntry$$Type} */ (entry)
+		// 	// let composite_entry = /** @type {import("@package/com/almostreliable/lootjs/core/entry").$CompositeLootEntry} */ (entry)
 		// 	// composite_entry.getEntries()
 		// }
 		// if (entry.getConditions().size() > 0) {
@@ -540,7 +540,7 @@ function print_simple_block_tables(event) {
 		if (!entry.isItem()) {
 			return
 		}
-		const item_entry = /** @type {import("com.almostreliable.lootjs.core.entry.ItemLootEntry").$ItemLootEntry$$Type} */ (entry)
+		const item_entry = /** @type {import("@package/com/almostreliable/lootjs/core/entry").$ItemLootEntry} */ (entry)
 		// The Block's ID must be the same as the Item id that comes out.
 		if (item_entry.getItem().mod != table.location.namespace || item_entry.getItem().idLocation.path != table.location.path.replace("blocks/", "") ) {
 			return

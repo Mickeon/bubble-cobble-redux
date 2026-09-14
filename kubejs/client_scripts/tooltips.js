@@ -1,11 +1,9 @@
 // priority: 100
 // Run before solonion_tooltip.
-/** @type {typeof import("com.cobblemon.mod.common.api.moves.Move").$Move } */
-let $Move  = Java.loadClass("com.cobblemon.mod.common.api.moves.Move")
-/** @type {typeof import("com.cobblemon.mod.common.api.moves.Moves").$Moves } */
-let $Moves  = Java.loadClass("com.cobblemon.mod.common.api.moves.Moves")
+let $Move = Java.loadClass("com.cobblemon.mod.common.api.moves.Move")
+let $Moves = Java.loadClass("com.cobblemon.mod.common.api.moves.Moves")
 
-/** @import {$MutableComponent} from "net.minecraft.network.chat.MutableComponent" */
+/** @import {$MutableComponent} from "net/minecraft/network/chat" */
 
 /** @import {global} from "./../startup_scripts/_common" */
 const {is_eligible_for_easter_egg} = global
@@ -393,7 +391,7 @@ ItemEvents.dynamicTooltips("show_tool_durability", event => {
 
 	const durability = (item.maxDamage - item.damageValue)
 	const durability_ratio = durability / item.maxDamage
-	const damage_color = Color.GRAY
+	let damage_color = Color.GRAY
 
 	if (durability_ratio <= 0.1) {
 		damage_color = Color.DARK_RED
@@ -413,8 +411,7 @@ ItemEvents.dynamicTooltips("show_tool_durability", event => {
 	])
 })
 
-/** @type {typeof import("net.neoforged.neoforge.client.event.RenderTooltipEvent$Color").$RenderTooltipEvent$Color } */
-let $RenderTooltipEvent$Color  = Java.loadClass("net.neoforged.neoforge.client.event.RenderTooltipEvent$Color")
+let $RenderTooltipEvent$Color = Java.loadClass("net.neoforged.neoforge.client.event.RenderTooltipEvent$Color")
 NativeEvents.onEvent("highest", $RenderTooltipEvent$Color, event => {
 	event.setBorderStart(Color.rgba(26, 108, 184, 1).getArgb())
 
@@ -553,9 +550,9 @@ NativeEvents.onEvent("highest", $RenderTooltipEvent$Color, event => {
 })
 
 /**
- * @import {$TextActionBuilder} from "dev.latvian.mods.kubejs.text.action.TextActionBuilder"
- * @import {$ModifyItemTooltipsKubeEvent} from "dev.latvian.mods.kubejs.item.ModifyItemTooltipsKubeEvent"
- * @import {$Ingredient} from "net.minecraft.world.item.crafting.Ingredient"
+ * @import {$TextActionBuilder} from "@package/dev/latvian/mods/kubejs/text/action"
+ * @import {$ModifyItemTooltipsKubeEvent} from "@package/dev/latvian/mods/kubejs/item"
+ * @import {$Ingredient} from "@package/net/minecraft/world/item/crafting"
  * */
 
 /**

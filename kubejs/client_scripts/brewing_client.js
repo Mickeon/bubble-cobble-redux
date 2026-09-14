@@ -1,14 +1,9 @@
 
 // requires:brewinandchewin
-// /** @type {typeof import("net.minecraft.client.resources.sounds.SoundInstance").$SoundInstance } */
 // let $SoundInstance  = Java.loadClass("net.minecraft.client.resources.sounds.SoundInstance")
-// /** @type {typeof import("net.neoforged.neoforge.event.entity.living.MobEffectEvent$Expired").$MobEffectEvent$Expired } */
 // let $MobEffectEvent$Expired  = Java.loadClass("net.neoforged.neoforge.event.entity.living.MobEffectEvent$Expired")
-// /** @type {typeof import("net.minecraft.world.entity.player.Player").$Player } */
 // let $Player  = Java.loadClass("net.minecraft.world.entity.player.Player")
-// /** @type {typeof import("net.neoforged.neoforge.event.entity.living.MobEffectEvent$Remove").$MobEffectEvent$Remove } */
 // let $MobEffectEvent$Remove  = Java.loadClass("net.neoforged.neoforge.event.entity.living.MobEffectEvent$Remove")
-// /** @type {typeof import("net.neoforged.neoforge.event.entity.living.MobEffectEvent$Added").$MobEffectEvent$Added } */
 // let $MobEffectEvent$Added  = Java.loadClass("net.neoforged.neoforge.event.entity.living.MobEffectEvent$Added")
 
 const WINES = ["kubejs:sweet_berry_wine", "kubejs:honey_liqueur", "kubejs:spumante", "kubejs:sparkling_rose", "kubejs:berry_juice_soda", "kubejs:firebomb_whiskey"]
@@ -39,7 +34,7 @@ ClientEvents.generateAssets("after_mods", event => {
 })
 
 
-// /** @type {import("net.minecraft.client.resources.sounds.SoundInstance").$SoundInstance$$Type} */
+// /** @type {import("@package/net/minecraft/client/resources/sounds").$SoundInstance} */
 // NativeEvents.onEvent($MobEffectEvent$Added, event => {
 // 	const player = event.entity
 // 	if (player instanceof $Player

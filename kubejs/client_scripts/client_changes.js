@@ -1,22 +1,13 @@
 //#region More imports than you will ever know what to do with.
-/** @type {typeof import("net.neoforged.neoforge.common.DataMapHooks").$DataMapHooks } */
-let $DataMapHooks  = Java.loadClass("net.neoforged.neoforge.common.DataMapHooks")
-/** @type {typeof import("net.neoforged.neoforge.client.event.ClientPauseChangeEvent$Post").$ClientPauseChangeEvent$Post } */
-let $ClientPauseChangeEvent$Post  = Java.loadClass("net.neoforged.neoforge.client.event.ClientPauseChangeEvent$Post")
-/** @type {typeof import("net.neoforged.neoforge.client.event.ScreenEvent$Init$Post").$ScreenEvent$Init$Post } */
-let $ScreenEvent$Init$Post  = Java.loadClass("net.neoforged.neoforge.client.event.ScreenEvent$Init$Post")
-/** @type {typeof import("net.minecraft.client.gui.components.Tooltip").$Tooltip } */
-let $Tooltip  = Java.loadClass("net.minecraft.client.gui.components.Tooltip")
-/** @type {typeof import("net.minecraft.client.gui.screens.PauseScreen").$PauseScreen } */
-let $PauseScreen  = Java.loadClass("net.minecraft.client.gui.screens.PauseScreen")
-/** @type {typeof import("net.minecraft.client.gui.screens.TitleScreen").$TitleScreen } */
-let $TitleScreen  = Java.loadClass("net.minecraft.client.gui.screens.TitleScreen")
-/** @type {typeof import("net.minecraft.client.gui.components.Button").$Button } */
-let $Button  = Java.loadClass("net.minecraft.client.gui.components.Button")
-/** @type {typeof import("net.minecraft.client.gui.components.Button$Builder").$Button$Builder } */
-let $Button$Builder  = Java.loadClass("net.minecraft.client.gui.components.Button$Builder")
-/** @type {typeof import("net.neoforged.neoforge.client.gui.widget.ModsButton").$ModsButton } */
-let $ModsButton  = Java.loadClass("net.neoforged.neoforge.client.gui.widget.ModsButton")
+let $DataMapHooks = Java.loadClass("net.neoforged.neoforge.common.DataMapHooks")
+let $ClientPauseChangeEvent$Post = Java.loadClass("net.neoforged.neoforge.client.event.ClientPauseChangeEvent$Post")
+let $ScreenEvent$Init$Post = Java.loadClass("net.neoforged.neoforge.client.event.ScreenEvent$Init$Post")
+let $Tooltip = Java.loadClass("net.minecraft.client.gui.components.Tooltip")
+let $PauseScreen = Java.loadClass("net.minecraft.client.gui.screens.PauseScreen")
+let $TitleScreen = Java.loadClass("net.minecraft.client.gui.screens.TitleScreen")
+let $Button = Java.loadClass("net.minecraft.client.gui.components.Button")
+let $Button$Builder = Java.loadClass("net.minecraft.client.gui.components.Button$Builder")
+let $ModsButton = Java.loadClass("net.neoforged.neoforge.client.gui.widget.ModsButton")
 //#endregion
 
 // Avoid accidentally placing lanterns when held in offhand.
@@ -31,7 +22,6 @@ BlockEvents.rightClicked(event => {
 // Add easily-accessible Mod Sets button.
 if (Platform.isLoaded("mod_sets")) {
 // https://github.com/SettingDust/ModSets/blob/main/src/common/game/main/java/settingdust/mod_sets/game/ModSetsConfigScreenGenerator.java
-/** @type {typeof import("settingdust.mod_sets.game.ModSetsConfigScreenGenerator").$ModSetsConfigScreenGenerator} */
 let $ModSetsConfigScreenGenerator = Java.loadClass("settingdust.mod_sets.game.ModSetsConfigScreenGenerator")
 NativeEvents.onEvent($ScreenEvent$Init$Post, event => {
 	if (!(event.screen instanceof $PauseScreen || event.screen instanceof $TitleScreen)) {
@@ -39,7 +29,7 @@ NativeEvents.onEvent($ScreenEvent$Init$Post, event => {
 	}
 	const screen = event.screen
 	// HACK: Genuinely horrid way to find the Mods/Links Button.
-	/** @type {import("net.minecraft.client.gui.components.Button").$Button$$Type} */
+	/** @type {import("@package/net/minecraft/client/gui/components").$Button} */
 	let mods_button
 	screen.children().forEach(existing_button => {
 		if (!mods_button && existing_button instanceof $Button) {
@@ -71,10 +61,9 @@ NativeEvents.onEvent($ScreenEvent$Init$Post, event => {
 
 // Move EMI buttons away from the bottom-right.
 // Currently disabled as there's no reason to be doing this.
-// /** @import {$AbstractWidget} from "net.minecraft.client.gui.components.AbstractWidget" */
+// /** @import {$AbstractWidget} from "@package/net/minecraft/client/gui/components" */
 // // https://github.com/emilyploszaj/emi/blob/1.21/xplat/src/main/java/dev/emi/emi/screen/EmiScreenManager.java
 // let $EmiScreenManager = Java.loadClass("dev.emi.emi.screen.EmiScreenManager")
-// /** @type {typeof import("net.minecraft.client.gui.screens.inventory.AbstractContainerScreen").$AbstractContainerScreen } */
 // let $AbstractContainerScreen  = Java.loadClass("net.minecraft.client.gui.screens.inventory.AbstractContainerScreen")
 // NativeEvents.onEvent("highest", $ScreenEvent$Render$Pre, event => {
 // 	console.log(event.screen.getMenu)
@@ -105,14 +94,14 @@ NativeEvents.onEvent($ScreenEvent$Init$Post, event => {
 // 	}
 // })
 
-/** @param {Special.Item} item_id @private Shorthand for "item_id_to_texture" */
+/** @param {RegistryTypes.Item} item_id @private Shorthand for "item_id_to_texture" */
 const txr = (item_id) => {
 	return ID.namespace(item_id) + ":item/" + ID.path(item_id)
 }
 
 /**
  * @typedef {Object} TagDisplayData
- * @property {Special.ItemTag} tag
+ * @property {RegistryTypes.ItemTag} tag
  * @property {string=} name
  * @property {"split" | "stacked"=} model_type
  * @property {Array<string>=} textures
@@ -223,7 +212,7 @@ const ITEM_TAG_DISPLAY_INFO = [
 // We could use resource packs for this,
 // but that would massively bloat the folders around the place.
 ClientEvents.generateAssets("after_mods", event => {
-	/** @param {Special.ItemTag} item_tag @param {Array<string>} texture_paths */
+	/** @param {RegistryTypes.ItemTag} item_tag @param {Array<string>} texture_paths */
 	function split_model(item_tag, texture_paths) {
 		const [first, second, third, fourth] = texture_paths
 		const textures = {
@@ -248,7 +237,7 @@ ClientEvents.generateAssets("after_mods", event => {
 		event.json(`${ID.namespace(item_tag)}:models/tag/item/${ID.path(item_tag)}`, new_model)
 	}
 
-	/** @param {Special.ItemTag} item_tag @param {Array<string>} texture_paths */
+	/** @param {RegistryTypes.ItemTag} item_tag @param {Array<string>} texture_paths */
 	function stacked_model(item_tag, texture_paths) {
 		const new_model = {
 			parent: "kubejs:item/tag/stacked_two_item",
@@ -526,7 +515,7 @@ Having blocks in the offhand will place those with the stick, instead of the blo
 §5§nCONTAINERS§0§r
 Shulker boxes, bundles, and many containers from other mods can provide building blocks for the stick.`
 
-		/** @param {Special.LangKey} lang_key  */
+		/** @param {SpecialTypes.TranslationKey} lang_key  */
 		function key_format(lang_key) {
 			return Text.of([
 				"[", Text.keybind(lang_key).blue(), "] ",
@@ -590,7 +579,6 @@ ClientEvents.highlight(event => {
 
 // Purposely remove unused textures that take up a lot of memory space.
 // ClientEvents.generateAssets("after_mods", event => {
-// 	/** @type {typeof import("dev.latvian.mods.kubejs.client.LoadedTexture").$LoadedTexture } */
 // 	let $LoadedTexture  = Java.loadClass("dev.latvian.mods.kubejs.client.LoadedTexture")
 // 	const REMOVED_TEXTURE_PATHS = [
 // 		"cnc:textures/item/tent_item-sc.png",
@@ -625,10 +613,8 @@ ClientEvents.highlight(event => {
 
 
 if (Platform.isLoaded("smartkeyprompts")) {
-	/** @type {typeof import("com.mafuyu404.smartkeyprompts.util.PromptUtils").$PromptUtils } */
-	let $PromptUtils  = Java.loadClass("com.mafuyu404.smartkeyprompts.util.PromptUtils")
-	/** @type {typeof import("com.mafuyu404.smartkeyprompts.util.KeyUtils").$KeyUtils } */
-	let $KeyUtils  = Java.loadClass("com.mafuyu404.smartkeyprompts.util.KeyUtils")
+	let $PromptUtils = Java.loadClass("com.mafuyu404.smartkeyprompts.util.PromptUtils")
+	let $KeyUtils = Java.loadClass("com.mafuyu404.smartkeyprompts.util.KeyUtils")
 
 	ClientEvents.tick(event => {
 		const player = event.player
@@ -667,7 +653,7 @@ KeyBindEvents.tick("bubble_cobble.mouse_wheel_down", event => {
 })
 
 /**
- * @param {import("dev.latvian.mods.kubejs.client.KubeJSKeybinds$TickingKeyEvent").$KubeJSKeybinds$TickingKeyEvent$$Type} event
+ * @param {import("@package/dev/latvian/mods/kubejs/client").$KubeJSKeybinds$TickingKeyEvent} event
  * @param {number} delta
  * */
 function simulate_mouse_scroll(event, delta) {
@@ -682,7 +668,6 @@ function simulate_mouse_scroll(event, delta) {
 	const client = event.client
 	const current_screen = client.getCurrentScreen()
 	if (!current_screen) {
-		/** @type {typeof import("com.simibubi.create.$CreateClient").$CreateClient } */
 		let $CreateClient = Java.tryLoadClass("com.simibubi.create.CreateClient")
 		if ($CreateClient) {
 			$CreateClient.SCHEMATIC_HANDLER.mouseScrolled(delta)
@@ -701,12 +686,10 @@ function simulate_mouse_scroll(event, delta) {
 	current_screen.mouseScrolled(mouse_x, mouse_y, 0, delta)
 
 	// Doesn't really work for anything.
-	// /** @type {typeof import("net.neoforged.neoforge.client.event.ScreenEvent$MouseScrolled$Pre").$ScreenEvent$MouseScrolled$Pre } */
-	// let $ScreenEvent$MouseScrolled$Pre  = Java.loadClass("net.neoforged.neoforge.client.event.ScreenEvent$MouseScrolled$Pre")
+	// let $ScreenEvent$MouseScrolled$Pre = Java.loadClass("net.neoforged.neoforge.client.event.ScreenEvent$MouseScrolled$Pre")
 	// let new_event = new $ScreenEvent$MouseScrolled$Pre(current_screen, mouse_x, mouse_y, 0, delta)
 	// $NeoForge.EVENT_BUS.post(new_event)
-	// /** @type {typeof import("net.neoforged.neoforge.client.event.InputEvent$MouseScrollingEvent").$InputEvent$MouseScrollingEvent } */
-	// let $InputEvent$MouseScrollingEvent  = Java.loadClass("net.neoforged.neoforge.client.event.InputEvent$MouseScrollingEvent")
+	// let $InputEvent$MouseScrollingEvent = Java.loadClass("net.neoforged.neoforge.client.event.InputEvent$MouseScrollingEvent")
 	// let new_event = new $InputEvent$MouseScrollingEvent(0, 1, false, false, false, event.client.mouseHandler.getMouseX(), event.client.mouseHandler.getMouseY())
 	// $NeoForge.EVENT_BUS.post(new_event)
 }

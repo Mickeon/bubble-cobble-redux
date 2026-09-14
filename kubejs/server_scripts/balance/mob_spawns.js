@@ -11,7 +11,6 @@ NO_FLAT_WORLD_MOBS.forEach(entity_type => {
 })
 
 // https://github.com/CorgiTaco-MC/Enhanced-Celestials/blob/1.21.X/Common/src/main/java/dev/corgitaco/enhancedcelestials/lunarevent/EnhancedCelestialsLunarForecastWorldData.java
-/** @type {typeof import("dev.corgitaco.enhancedcelestials.EnhancedCelestials").$EnhancedCelestials } */
 let $EnhancedCelestials = Java.loadClass("dev.corgitaco.enhancedcelestials.EnhancedCelestials")
 
 function is_lunar_event_happening(level) {
@@ -22,7 +21,7 @@ function is_lunar_event_happening(level) {
 // Do not spawn most hostiles naturally under the skylight.
 // Allow them to spawn with a bit of skylight during a Lunar Event.
 
-/** @type {Special.EntityType[]} */
+/** @type {RegistryTypes.EntityType[]} */
 const NO_SKY_LIGHT_MOBS = [
 	// Basically all undead.
 	"cnc:wechuge",

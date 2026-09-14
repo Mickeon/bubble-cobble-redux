@@ -11,7 +11,7 @@ StartupEvents.registry("block", event => {
 				side: "kubejs:block/chiseled_mud_bricks"
 			})
 			.bounciness(0.5)
-			.fallenOn(/** @param {import("dev.latvian.mods.kubejs.block.callback.EntityFallenOnBlockCallback").$EntityFallenOnBlockCallback$$Type} callback */ callback => {
+			.fallenOn(callback => {
 				callback.applyFallDamage()
 				if (!Platform.isClientEnvironment() || !Client.isLocalPlayer(callback.entity.uuid)) {
 					return
@@ -22,7 +22,7 @@ StartupEvents.registry("block", event => {
 	event.create("mud_pillar")
 			.copyPropertiesFrom(Blocks.MUD_BRICKS)
 			.property(BlockProperties.AXIS)
-			.placementState(/** @param {import("dev.latvian.mods.kubejs.block.callback.BlockStateModifyPlacementCallback").$BlockStateModifyPlacementCallback$$Type} callback */ callback => {
+			.placementState(callback => {
 				callback.set(BlockProperties.AXIS, callback.clickedFace.axis)
 			})
 })
