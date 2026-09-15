@@ -234,7 +234,7 @@ ServerEvents.basicPublicCommand("suebegone", event => {
 	const invoker = event.entity
 	const invoker_pos = invoker.position()
 	const bounds = AABB.CUBE.move(invoker_pos.x(), invoker_pos.y(), invoker_pos.z()).inflate(5)
-	const nearby_entities = event.level.getEntitiesWithin(bounds).oneFilter(e => is_eligible_for_easter_egg(e, "SueTheMimiga"))
+	const nearby_entities = event.level.getEntitiesWithin(bounds).filter(e => is_eligible_for_easter_egg(e, "SueTheMimiga"))
 	nearby_entities.forEach(player => {
 		const push_center = invoker.position()
 		if (invoker == player) {

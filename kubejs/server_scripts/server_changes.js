@@ -72,7 +72,7 @@ ItemEvents.dropped(event => {
 			// 	box.getCenter().x(), box.getCenter().y(), box.getCenter().z(),
 			// 	0, 0.0, 0.0, 0.0, 4.0
 			// )
-			let found_entities = event.level.getEntitiesWithin(box).oneFilter(can_receive_dropped_item)
+			let found_entities = event.level.getEntitiesWithin(box).filter(can_receive_dropped_item)
 			if (!found_entities.isEmpty()) {
 				target = found_entities.getFirst()
 				break
@@ -387,7 +387,7 @@ ServerEvents.loaded(event => {
 
 // Put logs back together with Tree Bark.
 BlockEvents.rightClicked(event => {
-	if (!event.item.id == "farmersdelight:tree_bark") {
+	if (event.item.id != "farmersdelight:tree_bark") {
 		return
 	}
 
@@ -428,7 +428,7 @@ BlockEvents.rightClicked(event => {
 
 // Repair Anvil with Iron Blocks.
 BlockEvents.rightClicked(["minecraft:chipped_anvil", "minecraft:damaged_anvil"], event => {
-	if (!event.item.id == "minecraft:iron_block") {
+	if (event.item.id != "minecraft:iron_block") {
 		return
 	}
 
