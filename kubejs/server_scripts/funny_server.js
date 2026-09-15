@@ -280,7 +280,8 @@ PlayerEvents.loggedIn(event => {
 })
 
 // https://discord.com/channels/303440391124942858/303440391124942858/1450918369342521548
-function DashData() {
+/** @typedef {ReturnType<typeof DashDataBuilder>} DashData */
+function DashDataBuilder() {
 	return {
 		last_tick_used: 0,
 		air_time_ticks: 0,
@@ -295,18 +296,18 @@ function DashData() {
 const DASH_FORCE = 1.0
 const DASH_COOLDOWN_TICKS = 10
 const DASH_BASE_RESTORATION = 0.0125
-/** @param {$UUID} uuid */
-DashData.get_or_create = function(uuid) {
-	if (!players_dash_data[uuid]) {
-		players_dash_data[uuid] = DashData()
+DashDataBuilder.players_dash_data = /** @type {Object<string, DashData>} */ ({})
+DashDataBuilder.get_or_create = /** @param {$UUID} uuid */ function(uuid) {
+	/** @alias */
+	if (!this.players_dash_data[uuid]) {
+		this.players_dash_data[uuid] = DashDataBuilder()
 	}
-	return players_dash_data[uuid]
+	return this.players_dash_data[uuid]
 }
 
-const players_dash_data = /** @type {Object<string, ReturnType<typeof DashData>>} */ ({})
 NetworkEvents.dataReceived("kubejs:dash", event => {
 	const player = event.player
-	const dash = DashData.get_or_create(player.uuid)
+	const dash = DashDataBuilder.get_or_create(player.uuid)
 
 	if (player.isSwimming()
 	|| player.onGround()
@@ -473,22 +474,24 @@ if (GIRL_POWER_EFFECT) {
 	})
 }
 
-function PowderSnowData() {
-	this.combo = 0
-	this.snow_balls_stored = 0
-	this.last_tick_jumped = 0
-	this.check_landed = /** @type {$ScheduledEvents$ScheduledEvent?} */ (null)
-	this.delayed_jump = /** @type {$ScheduledEvents$ScheduledEvent?} */ (null)
-	this.reward_loop = /** @type {$ScheduledEvents$ScheduledEvent?} */ (null)
-}
-/** @param {$UUID} uuid @returns {PowderSnowData} */
-PowderSnowData.get_or_create = function(uuid) {
-	if (!players_powder_snow_data[uuid]) {
-		players_powder_snow_data[uuid] = new PowderSnowData()
+/** @typedef {ReturnType<typeof PowderSnowDataBuilder>} PowderSnowData */
+function PowderSnowDataBuilder() {
+	return {
+		combo: 0,
+		snow_balls_stored: 0,
+		last_tick_jumped: 0,
+		check_landed: /** @type {$ScheduledEvents$ScheduledEvent?} */ (null),
+		delayed_jump: /** @type {$ScheduledEvents$ScheduledEvent?} */ (null),
+		reward_loop: /** @type {$ScheduledEvents$ScheduledEvent?} */ (null)
 	}
-	return players_powder_snow_data[uuid]
 }
-const players_powder_snow_data = {}
+PowderSnowDataBuilder.players_powder_snow_data = /** @type {Object<string, PowderSnowData>} */ ({})
+PowderSnowDataBuilder.get_or_create = /** @param {$UUID} uuid */ function(uuid) {
+	if (!this.players_powder_snow_data[uuid]) {
+		this.players_powder_snow_data[uuid] = PowderSnowDataBuilder()
+	}
+	return this.players_powder_snow_data[uuid]
+}
 PlayerEvents.tick(event => {
 	const player = /** @type {$ServerPlayer} */ (event.player)
 	// if (player.blockStateOn.block != Blocks.POWDER_SNOW) {
@@ -496,7 +499,7 @@ PlayerEvents.tick(event => {
 		return
 	}
 
-	const powder_snow = PowderSnowData.get_or_create(player.uuid)
+	const powder_snow = PowderSnowDataBuilder.get_or_create(player.uuid)
 	if (powder_snow.last_tick_jumped + 6 > event.server.tickCount) {
 		return
 	}
@@ -600,7 +603,7 @@ let $PlayerEvent$ItemCraftedEvent  = Java.loadClass("net.neoforged.neoforge.even
 NativeEvents.onEvent($PlayerEvent$ItemCraftedEvent, event => {
 	if (event.crafting.id == "biomeswevegone:rose" && event.inventory.countItem("minecraft:rose_bush")) {
 		const entity = event.entity
-		entity.attack(new DamageSource("biomesoplenty:bramble", entity, entity, entity.position().add(entity.forward)), 1)
+		entity.damage(1, new DamageSource("biomesoplenty:bramble", entity, entity, entity.position().add(entity.forward)))
 		entity.addMotion(0, 0.1, 0)
 		entity.hurtMarked = true
 		entity.statusMessage = "Ow my hand"

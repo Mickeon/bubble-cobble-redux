@@ -1,6 +1,6 @@
 {
     "js/ts.tsserver.automaticTypeAcquisition.enabled": false,
-    "js/ts.experimental.useTsgo": false,
+    "js/ts.experimental.useTsgo": true,
     "js/ts.validate.enabled": true,
     "json.schemas": [
         {

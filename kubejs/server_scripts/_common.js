@@ -23,7 +23,7 @@ function clamp(value, min, max) {
 	return Math.min(Math.max(value, min), max)
 }
 
-/** @param {Array<T>} array @returns {T} */
+/** @template T @param {Array<T>} array @returns {T} */
 function pick_random(array) {
 	return array[Math.floor(Math.random() * array.length)]
 }

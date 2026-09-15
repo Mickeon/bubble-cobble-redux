@@ -333,7 +333,7 @@ ServerEvents.loaded(event => {
 		Block.getBlock("kubejs:chiseled_mud_bricks").defaultBlockState()
 	))
 
-	/** @import {$FluidState} from "@package/net/minecraft/world/level/material" */
+	/** @typedef {import("@package/net/minecraft/world/level/material").$FluidState} $FluidState */
 
 	const fluid_rand = Utils.getRandom().fork()
 

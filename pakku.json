@@ -45,6 +45,7 @@
         "!config/waterframes-client.toml",
 
         "!**/jsconfig.json",
+        "!*/**.d.ts",
         "!kubejs/config/probe-settings.json",
         "!kubejs/config/web_server.json",
         "!config/highly_customizable_damage_numbers/README.txt",

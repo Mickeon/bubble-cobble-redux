@@ -39,6 +39,7 @@
         "./**/*.d.ts",
         "../../.probe/@package/**/*.d.ts",
         "../../.probe/@side-only/client/**/*.d.ts",
-        "../../.probe/@special/**/*.d.ts"
+        "../../.probe/@special/**/*.d.ts",
+        "../patch.d.ts"
     ]
 }
