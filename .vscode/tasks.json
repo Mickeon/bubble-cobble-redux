@@ -1,0 +1,95 @@
+{
+	// See https://go.microsoft.com/fwlink/?LinkId=733558
+	// for the documentation about the tasks.json format.
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Modpack: Export",
+			"type": "shell",
+			"group": "build",
+			"icon": {"id": "export"},
+			"command": "java -jar pakku.jar export ${input:export_no_server}"
+		},
+		{
+			"label": "Modpack: Add Project",
+			"type": "shell",
+			"icon": {"id": "file-add"},
+			"command": "java -jar pakku.jar add prj ${input:add_host_platform} ${input:add_project_id} ${input:add_project_type}",
+		},
+		{
+			"label": "Modpack: Remove Project",
+			"type": "shell",
+			"icon": {"id": "eraser"},
+			"command": "java -jar pakku.jar rm ${input:project_id}",
+		},
+		{
+			"label": "Modpack: Update Project",
+			"type": "shell",
+			"icon": {"id": "beaker"},
+			"command": "java -jar pakku.jar update ${input:project_id}",
+		},
+		{
+			"label": "Modpack: Synchronize",
+			"detail": "Checks the mods folder for changes, compared to the modpack's properties.",
+			"icon": {"id": "sync"},
+			"type": "shell",
+			"command": "java -jar pakku.jar sync ${input:sync_options}",
+		},
+		{
+			// Does not work.
+			"hide": true,
+			"label": "Modpack: List projects",
+			"command": "java -jar pakku.jar ls | grep",
+			"args": [
+				"--only-matching",
+				"-e", "\\{.*\\}"
+			],
+			"options": {
+				"shell": {
+					"executable": "bash.exe"
+				}
+			}
+		}
+	],
+	"inputs": [
+		{
+			"id": "add_host_platform",
+			"type": "pickString",
+			"description": "Host platform",
+			"options": ["--modrinth", "--curseforge", "--github"],
+			"default": "--modrinth"
+		},
+		{
+			"id": "add_project_id",
+			"type": "promptString",
+			"description": "Project slug (or ID) of the project to download (e.g. \"sorted-creative-tabs\")"
+		},
+		{
+			"id": "add_project_type",
+			"type": "pickString",
+			"description": "Type of the provided project (leave empty to infer)",
+			"options": ["", "--type MOD", "--type RESOURCE_PACK", "--type DATA_PACK", "--type WORLD", "--type SHADER"],
+			"default": ""
+		},
+		{
+			"id": "project_id",
+			"type": "promptString",
+			"description": "ID of existing project(s) (e.g. \"sorted-creative-tabs\")"
+		},
+		{
+			"id": "export_no_server",
+			"type": "pickString",
+			"description": "Exclude server-side overrides & projects.",
+			"options": ["", "--no-server"],
+			"default": ""
+		},
+		{
+			"id": "sync_options",
+			"type": "pickString",
+			"description": "Sync only updates, additions, or removals.",
+			"options": ["","--updates", "--additions", "--removals"],
+			"default": "--updates"
+		}
+	],
+	"problemMatcher": []
+}
