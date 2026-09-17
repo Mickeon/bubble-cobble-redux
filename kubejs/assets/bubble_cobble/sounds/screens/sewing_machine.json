@@ -1,0 +1,8 @@
+{
+  "keys": [
+    "urban_decor:sewing_machine"
+  ],
+  "soundEvent": "urban_decor:block.metallic.open",
+  "volume": 0.5,
+  "pitch": 2.0
+}

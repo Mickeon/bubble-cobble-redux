@@ -3,7 +3,7 @@
   "keys": [
     "farmersdelight:cooking_pot",
     "minersdelight:copper_pot",
-    "minecraft:cooking_pot"
+    "minecraft:cooking_pot_menu"
   ],
   "soundEvent": "cobblemon:block.campfire_pot.retrieve",
   "volume": 0.75,

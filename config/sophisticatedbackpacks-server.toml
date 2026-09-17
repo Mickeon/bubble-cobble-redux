@@ -646,12 +646,12 @@
 		#Multiplier applied to hostile mob slot cost.
 		# Default: 2.0
 		# Range: 0.1 ~ 10.0
-		hostileMultiplier = 2.0
+		hostileMultiplier = 2.5
 		#When true, mobs that expose inventories or container menus are not capturable.
 		disallowInventoryEntities = false
 		#Entity types or entity tags prefixed with # that cannot be captured.
-		entityBlockList = ["cobblemon:empty_pokeball", "cobblemon:pokemon"]
+		entityBlockList = ["cobblemon:empty_pokeball", "cobblemon:pokemon", "create:package", "sleep_tight:dreamer_essence_dummy"]
 		#Entity types or entity tags prefixed with # treated as hostile by mob catcher slot cost and tier rules.
-		hostileOverrides = []
+		hostileOverrides = ["minecraft:sniffer", "minecraft:villager", "minecraft:wandering_trader"]
 		#Entity types or entity tags prefixed with # treated as passive by mob catcher slot cost and tier rules.
 		passiveOverrides = []

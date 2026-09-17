@@ -1,0 +1,7 @@
+{
+	"__comment": "Doesn't work for some reason. Actually, all of these don't work?",
+	"name": "SewingMachineScreen",
+	"output_slots": [
+		2
+	]
+}

@@ -224,7 +224,7 @@ ServerEvents.tags("block", event => {
 	event.add("bubble_cobble:coinstacks", /^createdeco:.*coinstack$/)
 
 	// Bugged. See also https://github.com/terrarium-earth/Handcrafted/issues/132.
-	event.add("c:relocation_not_supported",	"#handcrafted:nightstands", "#handcrafted:desks", "#handcrafted:counters", "#handcrafted:tables", "#handcrafted:benches", "#handcrafted:couches")
+	event.add("c:relocation_not_supported",	"#handcrafted:nightstands", "#handcrafted:desks", "#handcrafted:counters", "#handcrafted:tables", "#handcrafted:benches", "#handcrafted:couches", "immersive_furniture:furniture_proxy")
 
 	// Weird, and bugged.
 	event.add("supplementaries:un_rotatable", "#c:relocation_not_supported", "#lootr:containers")

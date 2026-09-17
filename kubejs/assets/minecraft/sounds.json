@@ -97,5 +97,13 @@
 		}],
 		"replace": true,
 		"subtitle": "subtitles.block.fire.ambient"
+	},
+	"entity.llama.spit": {
+		"sounds": [
+			"bubble_cobble:stuart_onion_1",
+			"bubble_cobble:stuart_onion_2",
+			"bubble_cobble:stuart_onion_3"
+		],
+		"subtitle": "subtitles.entity.llama.spit"
 	}
 }
