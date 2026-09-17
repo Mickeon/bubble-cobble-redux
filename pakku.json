@@ -10,6 +10,7 @@
         "global_packs/desktop.ini",
         "global_packs/icon.ico",
         "kubejs",
+
         "!config/immersive_paintings/client_config.toml",
         "!config/jade/jade.json",
         "!config/maplink/general.json5",
@@ -26,6 +27,7 @@
         "!config/lambdynlights.toml",
         "!config/modlistmemory.json",
         "!config/particlerain.json",
+
         "!config/cobbreeding/encryption",
         "!config/chunky/tasks",
         "!config/chunkyborder/borders.json",
@@ -41,6 +43,7 @@
         "!config/sidekick.ini",
         "!config/sodium-fingerprint.json",
         "!config/waterframes-client.toml",
+
         "!**/jsconfig.json",
         "!*/**.d.ts",
         "!kubejs/config/probe-settings.json",
@@ -50,7 +53,9 @@
         "!*/**.aseprite",
         "!config/nbtac.txt",
         "!config/resource_explorer.json",
+
         "mods/copperagebackportduplicatematerialfix-neoforge-0.1.jar",
+
         "!config/ali",
         "!config/moveslikemafuyu_config.toml",
         "!config/smartkeyprompts_config.toml",
@@ -97,6 +102,7 @@
         "atlasviewer": {
             "export": false
         },
+
         "creativecore": {
             "side": "BOTH"
         },
@@ -124,15 +130,18 @@
         "sophisticated-sorter": {
             "side": "BOTH"
         },
+
         "preloading-tricks": {
             "side": "CLIENT"
         },
         "mod-sets": {
             "side": "CLIENT"
         },
+
         "spark": {
             "side": "SERVER"
         },
+
         "sodium-core-shader-support": {
             "export": false
         },
