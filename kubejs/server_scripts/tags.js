@@ -151,9 +151,6 @@ ServerEvents.tags("item", event => {
 	// Currently can't do, as no durability is removed from non-knife tools.
 	// event.add("farmersdelight:straw_harvesters", "minecraft:stone_sword", "minecraft:copper_sword", "mowziesmobs:naga_fang_dagger")
 
-	// Bugged.
-	event.add("supplementaries:cannon_blacklist", "#comforts:sleeping_bags")
-
 	// Entirely redundant and confusing.
 	event.removeAll("c:foods/cooked_meats") // Deprecated version of `c:foods/cooked_meat`
 	event.removeAll("c:foods/fruits") // Deprecated version of `c:foods/fruit`

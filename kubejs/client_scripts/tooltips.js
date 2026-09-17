@@ -361,9 +361,6 @@ ItemEvents.modifyTooltips(event => {
 	event.add(Ingredient.of("@immersive_furniture").or("@sleep_tight"), [
 		Text.yellow("Experimental").append(Text.of(` 🧊`).white()),
 	])
-	event.add(Ingredient.of("@comforts"), [
-		Text.red("Deprecated").append(Text.of(` 🧊`).white()),
-	])
 })
 
 ItemEvents.dynamicTooltips("sue_banana_mayo_sandwich", event => {

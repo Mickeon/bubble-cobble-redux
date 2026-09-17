@@ -6,8 +6,6 @@
 	},
 	"right": [
 		"#item:minecraft:beds",
-		"#item:comforts:hammocks",
-		"#item:comforts:sleeping_bags",
 		"#item:sleep_tight:hammocks"
 	],
 	"output": {
