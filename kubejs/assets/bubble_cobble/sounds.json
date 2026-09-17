@@ -161,5 +161,10 @@
 		"sounds": [
 			"bubble_cobble:spray_can"
 		]
+	},
+	"light_fire": {
+		"sounds": [
+			"bubble_cobble:light_fire"
+		]
 	}
 }

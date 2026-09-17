@@ -3344,45 +3344,6 @@
             ]
         },
         {
-            "pakku_id": "lSWUSq11hweVMJPU",
-            "type": "MOD",
-            "side": "BOTH",
-            "slug": {
-                "modrinth": "critters-n-crawlers"
-            },
-            "name": {
-                "modrinth": "Critters n' Crawlers"
-            },
-            "id": {
-                "modrinth": "JxyIfnWu"
-            },
-            "files": [
-                {
-                    "type": "modrinth",
-                    "file_name": "Critters n' Crawlers-2.2.5-neo-mc1.21.1.jar",
-                    "mc_versions": [
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/JxyIfnWu/versions/WdCq8adl/Critters n' Crawlers-2.2.5-neo-mc1.21.1.jar",
-                    "id": "WdCq8adl",
-                    "parent_id": "JxyIfnWu",
-                    "hashes": {
-                        "sha512": "3f3d42741c4a7bb625794373f496211e99efcf072a2489e24428010b6606f8d40a8be732071f30639948c94c2b1bbacbd7d8b76d9733979bf600198f4da63bc1",
-                        "sha1": "559e32a6eec7faf04cae631ae10ae374f6275807"
-                    },
-                    "required_dependencies": [
-                        "8BmcQJ2H"
-                    ],
-                    "size": 9001416,
-                    "date_published": "2025-11-18T22:55:42.204488Z"
-                }
-            ]
-        },
-        {
             "pakku_id": "mOsJtNdmMgzTm68D",
             "type": "MOD",
             "side": "BOTH",

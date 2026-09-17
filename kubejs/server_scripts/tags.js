@@ -43,7 +43,7 @@ ServerEvents.tags("item", event => {
 	event.add("c:tools/spear", "#minecraft:spears") // Reported, but marked as "Won't fix": https://github.com/Unknowneth/Backported-Spears/issues/60.
 	event.add("c:storage_blocks", "#c:storage_blocks/industrial_iron") // TODO: Report this.
 	event.add("minecraft:piglin_loved", "solonion:golden_lunchbox", "handcrafted:golden_thin_pot", "handcrafted:golden_thick_pot", "handcrafted:golden_wide_pot", "handcrafted:golden_medium_pot") //Reported: https://github.com/terrarium-earth/Handcrafted/issues/152
-	event.add("c:music_discs", "cnc:music_disc_slough_choir", "cnc:music_disc_wreck_of_the_old_97", "cnc:music_disc_hills", "undergroundworlds:music_disc_abbeyence") // TODO: Report this.
+	event.add("c:music_discs", "undergroundworlds:music_disc_abbeyence") // TODO: Report this.
 	event.removeAll("minecraft:music_discs") // This tag doesn't exist anymore.
 	if (Platform.isLoaded("copperagebackport")) {
 		event.add("minecraft:buttons", COPPER_BUTTONS)
@@ -63,7 +63,6 @@ ServerEvents.tags("item", event => {
 
 	// Makes sense.
 	event.add("c:tools", "#constructionstick:construction_sticks", "#yo_hooks:hooks")
-	event.add("c:bones", "cnc:wishbone", "cnc:lucky_wishbone", "cnc:unlucky_wishbone", "#cnc:antlers")
 	event.add("c:eggs", "undergroundworlds:spider_egg", "sleep_tight:bedbug_eggs")
 	event.add("c:mushrooms", "ribbits:toadstool") // No, it doesn't make sense?
 	event.add("create:pulpifiable", "biomeswevegone:shrub", "biomeswevegone:firecracker_flower_bush", "cobblemon:medicinal_leek")
@@ -270,7 +269,7 @@ ServerEvents.tags("fluid", event => {
 })
 
 ServerEvents.tags("entity_type", event => {
-	event.add("supplementaries:urn_spawn", "minecraft:tropical_fish", "minecraft:rabbit", "cnc:mouse") // Funny.
+	event.add("supplementaries:urn_spawn", "minecraft:tropical_fish", "minecraft:rabbit") // Funny.
 	// event.add("supplementaries:ash_blacklist", "minecraft:allay", "") // TODO: Report this. No mob seems to drop ash for some reason?
 	// Tee-hee.
 	if (Platform.isLoaded("copperagebackport")) {
@@ -357,27 +356,6 @@ ServerEvents.tags("worldgen/biome", event => {
 
 	// This usually only spawns in the Mystic Grove, otherwise.
 	event.add("biomesoplenty:has_wolf_variant/spectral", "biomesoplenty:ominous_woods", "biomeswevegone:pale_bog")
-
-	// Do not let these spawn in the Pale Bog.
-	for (let tag of ["cnc:blackbear_spawning", "cnc:goose_spawning", "cnc:squonk_spawning"]) {
-		// Specific biomes have to be re-added manually because the c:is_swamp tag is used.
-		event.remove(tag, "#c:is_swamp")
-		event.add(tag,
-			"biomeswevegone:bayou",
-			"biomeswevegone:cypress_swamplands",
-			"biomeswevegone:cypress_wetlands",
-			"biomeswevegone:white_mangrove_marshes",
-			"biomesoplenty:bayou",
-			"biomesoplenty:bog",
-			"biomesoplenty:floodplain",
-			"biomesoplenty:marsh",
-			"biomesoplenty:moor",
-			"biomesoplenty:muskeg",
-			"biomesoplenty:wetland",
-			"minecraft:mangrove_swamp",
-			"minecraft:swamp",
-		)
-	}
 
 	// There's got to be a bunch of biomes to fill here...
 	// event.add("nova_structures:collections/giant_trees", "")

@@ -117,7 +117,6 @@ ClientEvents.lang("en_us", event => {
 	})
 
 	event.addAll("effectdescriptions", {
-		"effect.cnc.sobbing.desc": "Makes you cry uncontrollably, fully covering your vision with tears",
 		"effect.cobblemon.cleanse_all.desc": "Removes all current effects",
 		"effect.cobblemon.cleanse_negative.desc": "Removes all current negative effects",
 		"effect.cobblemon.mental_restoration.desc": "Delays the player's Insomnia",

@@ -157,7 +157,6 @@ const ITEM_TAG_DISPLAY_INFO = [
 	{tag: "c:mushrooms", textures: ["minecraft:block/brown_mushroom", "biomesoplenty:block/glowshroom"]},
 	{tag: "c:ropes", textures: ["supplementaries:item/rope", "farmersdelight:item/rope"]},
 	{tag: "c:slime_balls", textures: ["minecraft:item/slime_ball", "mowziesmobs:item/glowing_jelly"]},
-	{tag: "cnc:antlers", textures: ["cnc:item/white_tailed_deer_antler", "cnc:item/caribou_antler"]},
 	{tag: "cobblemon:apricorns", model_type: "split", textures: ["cobblemon:item/green_apricorn", "cobblemon:item/white_apricorn", "cobblemon:item/red_apricorn"]},
 	{tag: "cobblemon:berries", textures: ["cobblemon:item/berries/cheri_berry", "cobblemon:item/berries/oran_berry", "cobblemon:item/berries/persim_berry"]},
 	{tag: "cobblemon:pokedex_screen", textures: ["minecraft:item/glow_ink_sac", "cobblemon:item/held_items/bright_powder"]},
@@ -581,7 +580,6 @@ ClientEvents.highlight(event => {
 // ClientEvents.generateAssets("after_mods", event => {
 // 	let $LoadedTexture  = Java.loadClass("dev.latvian.mods.kubejs.client.LoadedTexture")
 // 	const REMOVED_TEXTURE_PATHS = [
-// 		"cnc:textures/item/tent_item-sc.png",
 // 		"sophisticatedstorage:textures/block/logo.png",
 // 		"accessories:textures/gui/sprites/highlight/clickbait.png",
 // 		"lodestone:textures/painting/lefunny.png",

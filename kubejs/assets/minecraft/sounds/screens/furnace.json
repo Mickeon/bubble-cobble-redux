@@ -3,7 +3,7 @@
     "minecraft:blast_furnace",
     "minecraft:furnace"
   ],
-  "soundEvent": "cnc:block.fire.light",
+  "soundEvent": "bubble_cobble:light_fire",
   "volume": 0.5,
   "pitch": 1.25
 }

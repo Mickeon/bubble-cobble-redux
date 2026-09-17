@@ -54,7 +54,6 @@ LootJS.lootTables(event => {
 			.addEntry(LootEntry.of("minersdelight:rabbit_stew_cup").withWeight(10).setCount([1, 2]))
 			.addEntry(LootEntry.of("minersdelight:cave_soup_cup").withWeight(10).setCount([1, 2]))
 			.addEntry(LootEntry.of("minersdelight:bat_rolls").withWeight(10).setCount([1, 2]))
-			.addEntry(LootEntry.of("cnc:wishbone").withWeight(10).setCount([1, 4]))
 			.addEntry(LootEntry.of("create:raw_zinc").withWeight(10).setCount([3, 8]))
 			.addEntry(LootEntry.of("gag:escape_rope").withWeight(10).setCount([1, 2]))
 			.addEntry(LootEntry.of("cobblemon:ancient_gigaton_ball").withWeight(7).setCount([3, 4]))
@@ -306,12 +305,7 @@ LootJS.lootTables(event => {
 		)
 	}
 
-	// Let Headhunter work with Wither Skeletons.
-	if (Platform.isLoaded("cnc")) {
-		event.getEntityTable("minecraft:wither_skeleton").createPool()
-			.when(c => c.killedByPlayer() && c.randomChanceWithEnchantment("cnc:headhunter", [0.0, 0.15]))
-			.addEntry("minecraft:wither_skeleton_skull")
-	}
+	// TODO: Re-implemented Critters n' Crawlers' Headhunter enchantment.
 
 	// This block normally requires Vanilla Backport to be dropped.
 	if (Item.exists("minecraft:pale_oak_shelf")) {

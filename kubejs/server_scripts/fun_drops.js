@@ -191,8 +191,7 @@ EntityEvents.drops("minecraft:player", event => {
 			add_drop(player, Item.of("minecraft:bread"), 0.75)
 			add_drop(player, Item.of("minecraft:moss_block").withCustomName("Kept Moss"), 0.5)
 			add_drop(player, Item.of("mynethersdelight:boiled_egg"), 0.5)
-			add_drop(player, Item.of("cnc:giant_boar_head"), 0.25)
-			add_drop(player, Item.of("cnc:giant_boar_spawn_egg"), 0.1)
+			// TODO: Add boar head.
 		} break;
 		case "WaiGee": {
 			add_drop(player, Item.of("create:cut_calcite_bricks"), 0.75)

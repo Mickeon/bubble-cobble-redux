@@ -1,7 +1,7 @@
 // requires: enhancedcelestials
 
 // Do not ever spawn Slimes or Bats naturally in Flat World.
-const NO_FLAT_WORLD_MOBS = ["minecraft:slime", "minecraft:bat", "cnc:giant_boar", "cnc:white_tailed_deer"]
+const NO_FLAT_WORLD_MOBS = ["minecraft:slime", "minecraft:bat"]
 NO_FLAT_WORLD_MOBS.forEach(entity_type => {
 	EntityEvents.checkSpawn(entity_type, event => {
 		if (event.server.worldData.isFlatWorld() && event.type != "SPAWN_EGG") {
@@ -24,8 +24,6 @@ function is_lunar_event_happening(level) {
 /** @type {RegistryTypes.EntityType[]} */
 const NO_SKY_LIGHT_MOBS = [
 	// Basically all undead.
-	"cnc:wechuge",
-	"cnc:wendigo",
 	"minecraft:bogged",
 	"minecraft:drowned",
 	"minecraft:husk",
