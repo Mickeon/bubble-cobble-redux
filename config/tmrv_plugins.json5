@@ -2,7 +2,7 @@
 	"allowDefaultAsync": null,
 	"defaultDisableDuplicatePlugins": false,
 	"typeOverrides": {
-	
+		"mendingrework:jei_plugin": "DISABLED"
 	},
 	"defaultPhaseOverrides": {
 	
