@@ -4509,7 +4509,7 @@
             ]
         },
         {
-            "pakku_id": "MholyjcGhUCYFQTe",
+            "pakku_id": "wYqhurc1VPG2C6vZ",
             "type": "MOD",
             "side": "CLIENT",
             "slug": {
@@ -4524,7 +4524,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "guitween-3.0.2.jar",
+                    "file_name": "guitween-3.4.2-1.21.1+neoforge.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -4532,16 +4532,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/6aRXFBGk/versions/ftMwzTty/guitween-3.0.2.jar",
-                    "id": "ftMwzTty",
+                    "url": "https://cdn.modrinth.com/data/6aRXFBGk/versions/YmUnr3vK/guitween-3.4.2-1.21.1+neoforge.jar",
+                    "id": "YmUnr3vK",
                     "parent_id": "6aRXFBGk",
                     "hashes": {
-                        "sha512": "53e70d1168a70b0e3589d3748cadda5555715e85d8ed24288db43691b918543e0517a84e805d570e1012b223176985459c5b936800b984cb8b7d0f9c0c2f49f6",
-                        "sha1": "dbeeebf4c625db30f631182525e7cdeee216efa4"
+                        "sha512": "0778bff331dbcfcd422017e8e32b1430752972a5ee4fcb8c31ac7f33dac97f88b668efc59255c26de4d279930a0d33c4115c6821caad08db9a9efde06c582d58",
+                        "sha1": "04ac435f39abb468235f05c74a25c2d03f7afe42"
                     },
                     "required_dependencies": [],
-                    "size": 79470,
-                    "date_published": "2026-02-22T04:33:53.304464Z"
+                    "size": 172269,
+                    "date_published": "2026-09-09T12:48:32.451808Z"
                 }
             ]
         },
