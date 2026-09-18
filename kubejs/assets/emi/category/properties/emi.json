@@ -73,7 +73,7 @@
 	"remi:block_tags": {
 		"order": 1001,
 		"icon": {
-			"texture": "item:cobblemon:cleanse_tag"
+			"stack": "item:cobblemon:cleanse_tag"
 		}
 	},
 	"remi:fluid_tags": {
