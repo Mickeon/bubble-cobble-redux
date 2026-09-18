@@ -1927,9 +1927,9 @@
             ]
         },
         {
-            "pakku_id": "IAu7n09zUCBNZY8M",
+            "pakku_id": "epBrdSZRYiyOtLAP",
             "type": "DATA_PACK",
-            "side": "SERVER",
+            "side": "BOTH",
             "slug": {
                 "modrinth": "cobblemonraiddens-typedesigns"
             },
@@ -1942,7 +1942,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "CobblemonRaidDenDesigns-0.5_RELEASE.zip",
+                    "file_name": "CobblemonRaidDenDesigns-0.6_RELEASE.zip",
                     "mc_versions": [
                         "1.21",
                         "1.21.1"
@@ -1951,16 +1951,16 @@
                         "datapack"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/ulsDecfN/versions/PzkSoc8f/CobblemonRaidDenDesigns-0.5_RELEASE.zip",
-                    "id": "PzkSoc8f",
+                    "url": "https://cdn.modrinth.com/data/ulsDecfN/versions/kqRRPTiu/CobblemonRaidDenDesigns-0.6_RELEASE.zip",
+                    "id": "kqRRPTiu",
                     "parent_id": "ulsDecfN",
                     "hashes": {
-                        "sha512": "975107f6834176f84ae072a7a9a1e590e8c54217b4d132ecfb247b25ba8af2de14ec3a50c6135b03f3e6167d3df00a46d8bb4ffa2b12d8f2962254a99e7c5376",
-                        "sha1": "97fb160061552f3e66eeb484d5c8f6d5be9f3180"
+                        "sha512": "c47ee888af01d84c7638cb9ad44b8a8624830dc2ce17e70a989e386349be952bfbfbc34e35e480f74e64617c34cfad6cd623c08b476d6f38aa8922ff10b26379",
+                        "sha1": "ed993e84838f7e2f2777b1a1b118c8f08011bf6c"
                     },
                     "required_dependencies": [],
-                    "size": 2565176,
-                    "date_published": "2026-03-05T09:24:36.483492Z"
+                    "size": 4093530,
+                    "date_published": "2026-09-07T21:40:18.544100Z"
                 }
             ]
         },
@@ -2004,9 +2004,12 @@
             ]
         },
         {
-            "pakku_id": "iLaIzRQ8FymnqiK7",
+            "pakku_id": "4x377iQ3eb182fi7",
+            "pakku_links": [
+                "9c4a6SKLrSlVPtX8"
+            ],
             "type": "DATA_PACK",
-            "side": "SERVER",
+            "side": "BOTH",
             "slug": {
                 "modrinth": "cobble-caf-forms"
             },
@@ -2019,7 +2022,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "CobbleCafe [1.7].zip",
+                    "file_name": "Cobblemon Cafe.zip",
                     "mc_versions": [
                         "24w12a",
                         "24w13a",
@@ -2051,16 +2054,18 @@
                         "datapack"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/469QXqgC/versions/SM2gUSAQ/CobbleCafe [1.7].zip",
-                    "id": "SM2gUSAQ",
+                    "url": "https://cdn.modrinth.com/data/469QXqgC/versions/qzaWZweI/Cobblemon Cafe.zip",
+                    "id": "qzaWZweI",
                     "parent_id": "469QXqgC",
                     "hashes": {
-                        "sha512": "c4195cc8e6fbb786838319934f0beaed451069ee194863a80c2fc29fed8487e532573db2c2a3ca0b3e9fda1a842f5167f7a2a4625fed45ca9352189719197a79",
-                        "sha1": "cc2b95212e57abfddfcdb94bc9adf2b470fc6325"
+                        "sha512": "6aef594cbf5a3538d783aba7bcc5deff3caf308dea44e91c15325a6fbed142af1864aca88311351f27bfa90ac867195bb63418ea3d06312f05fe3bd3f4b8f633",
+                        "sha1": "59f01475d9392a7bd7afd079ccfdb6fad0ed20ad"
                     },
-                    "required_dependencies": [],
-                    "size": 1202010,
-                    "date_published": "2026-02-27T06:22:34.076944Z"
+                    "required_dependencies": [
+                        "MdwFAVRL"
+                    ],
+                    "size": 2100609,
+                    "date_published": "2026-09-11T10:30:15.625623Z"
                 }
             ]
         },
@@ -7675,12 +7680,9 @@
             ]
         },
         {
-            "pakku_id": "YsJeIzatXyw4XImm",
-            "pakku_links": [
-                "rcNaZofHJ2yMvMzg"
-            ],
+            "pakku_id": "nGlLwFxuFPg5hZfi",
             "type": "DATA_PACK",
-            "side": "SERVER",
+            "side": "BOTH",
             "slug": {
                 "modrinth": "poke-costume"
             },
@@ -7693,27 +7695,48 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "PokeCostume v.3.2.zip",
+                    "file_name": "PokeCostume v.3.3.zip",
                     "mc_versions": [
-                        "1.20.1",
+                        "24w12a",
+                        "24w13a",
+                        "24w14a",
+                        "1.20.5-pre1",
+                        "1.20.5-pre2",
+                        "1.20.5-pre3",
+                        "1.20.5-pre4",
+                        "1.20.5-rc1",
+                        "1.20.5-rc2",
+                        "1.20.5-rc3",
+                        "1.20.5",
+                        "1.20.6",
+                        "24w18a",
+                        "24w19a",
+                        "24w19b",
+                        "24w20a",
+                        "24w21a",
+                        "24w21b",
+                        "1.21-pre1",
+                        "1.21-pre2",
+                        "1.21-pre3",
+                        "1.21-pre4",
+                        "1.21-rc1",
+                        "1.21",
                         "1.21.1"
                     ],
                     "loaders": [
                         "datapack"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/k1X1bPvt/versions/K06nH2ep/PokeCostume v.3.2.zip",
-                    "id": "K06nH2ep",
+                    "url": "https://cdn.modrinth.com/data/k1X1bPvt/versions/DEtvGMQW/PokeCostume v.3.3.zip",
+                    "id": "DEtvGMQW",
                     "parent_id": "k1X1bPvt",
                     "hashes": {
-                        "sha512": "948dfc7d1c126cc9d58ef53a1154f7425ee7a4ba805ac4074585710bcc86317068455182533aed3b65ce851cd31dd87cda4aa5a256d3510eb312a6248779c30c",
-                        "sha1": "225c5e45cd83e82fe82844f0cb8b545c446038da"
+                        "sha512": "8a7dc97f5598e0a8d6096b54491c20173cd136041b6de99c25f663675451cbe140196aded720cd0b337d5b73b5f384158fdc193b757367d36c7f75bd32bcf1c5",
+                        "sha1": "a46d9dc61d4e911d83ca737320db1d88cb3380e4"
                     },
-                    "required_dependencies": [
-                        "MdwFAVRL"
-                    ],
-                    "size": 190881,
-                    "date_published": "2025-12-14T23:06:10.893042Z"
+                    "required_dependencies": [],
+                    "size": 210597,
+                    "date_published": "2026-07-06T11:11:12.110767Z"
                 }
             ]
         },
@@ -10088,11 +10111,7 @@
             ]
         },
         {
-            "pakku_id": "KTgotJAPSzTuLB6s",
-            "pakku_links": [
-                "rcNaZofHJ2yMvMzg",
-                "rrwpv8YDxXBeGEZi"
-            ],
+            "pakku_id": "w4Kser4JzRLGmdli",
             "type": "DATA_PACK",
             "side": "SERVER",
             "slug": {
@@ -10107,7 +10126,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "Torterras O' Plenty.zip",
+                    "file_name": "Torterras O' Plenty v1.1.zip",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -10116,19 +10135,16 @@
                         "minecraft"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/Gt8Qpbs4/versions/z8fSJRm6/Torterras O' Plenty.zip",
-                    "id": "z8fSJRm6",
+                    "url": "https://cdn.modrinth.com/data/Gt8Qpbs4/versions/Xszmkvou/Torterras O' Plenty v1.1.zip",
+                    "id": "Xszmkvou",
                     "parent_id": "Gt8Qpbs4",
                     "hashes": {
-                        "sha512": "3f0709011623f3c80119aa600aa9485c574593303e31d2047e317dcffaec014ce1f2464710a8d5fef81766ca7a48a2f5a96a27f78c9e8f61a1e6f0bc67eeaab0",
-                        "sha1": "2cef1725b8866a1c57d270060082dd3ce699b4f0"
+                        "sha512": "5e6540dad6aacdf320a290e7f8ffae86559f617aa1e0d007a425b2790bb29b2d2e57880114969cedd3a2b52da3b49c0e285f73a0288be54867f4d0af9e6f5f12",
+                        "sha1": "6d02953f4d03603bc9db0d8947751d52fdffa3cf"
                     },
-                    "required_dependencies": [
-                        "MdwFAVRL",
-                        "HXF82T3G"
-                    ],
-                    "size": 714133,
-                    "date_published": "2025-07-06T01:34:57.793211Z"
+                    "required_dependencies": [],
+                    "size": 755235,
+                    "date_published": "2026-08-03T03:48:00.256872Z"
                 }
             ]
         },

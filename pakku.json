@@ -133,6 +133,18 @@
         "sophisticated-sorter": {
             "side": "BOTH"
         },
+        "cobble-caf-forms": {
+            "side": "BOTH"
+        },
+        "cobblemonraiddens-typedesigns": {
+            "side": "BOTH"
+        },
+        "poke-costume": {
+            "side": "BOTH"
+        },
+        "torterras-o-plenty": {
+            "side": "BOTH"
+        },
 
         "preloading-tricks": {
             "side": "CLIENT"
