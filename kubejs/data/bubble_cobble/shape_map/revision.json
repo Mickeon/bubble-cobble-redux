@@ -1,0 +1,8 @@
+{
+	"__comment": "Separate Glass from Create's Framed Glass.",
+	"priority": 599,
+	"remove": {
+		"glass": ["/.*/"],
+		"glass_pane": ["/.*/"]
+	}
+}

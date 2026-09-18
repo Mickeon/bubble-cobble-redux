@@ -5,12 +5,14 @@
  * @import {$List} from "@package/java/util"
  */
 
-// https://aldak.netlify.app/javadoc/1.21.1-21.1.x/net/minecraft/client/gui/guigraphics
 // https://github.com/Alchemists-Of-Yore/ClutterNoMore/blob/0a5832a75ccfb65c999b207134cf0f43d369ab96/src/main/java/dev/tazer/clutternomore/common/shape_map/ShapeMap.java
 let $ShapeMap = Java.loadClass("dev.tazer.clutternomore.common.shape_map.ShapeMap")
 
 let shapes = /** @type {$List<$Item>?} */ (null)
 let cached_item = /** @type {$Item?} */ (null)
+
+const KEYBIND_TOOLTIP = Text.translate("Hold %s to change shape", [Text.keybind("key.clutternomore.change_block_shape").color(MASCOT_COLOR)]).color(MASCOT_COLOR_DARK)
+const SCROLL_TOOLTIP = Text.translate("%s the Mouse Wheel", [Text.of(`Scroll`).color(MASCOT_COLOR)]).color(MASCOT_COLOR_DARK)
 
 ItemEvents.modifyTooltips(event => {
 	event.modifyAll(text => {
@@ -23,42 +25,51 @@ ItemEvents.dynamicTooltips("show_available_shapes", event => {
 		return
 	}
 
-	let new_lines = Utils.newList()
-	// Quite the nasty hack because I can't fetch the keybind press from here.
-	let selecting_shape = event.lines.getFirst().getString().endsWith("[+]")
-	if (selecting_shape) {
-		let stack = event.item
-
-		// No point re-getting the list every frame.
-		if (stack.item != cached_item) {
-			cached_item = stack.item
-			shapes = Utils.newList()
-			shapes.add($ShapeMap.getParent(stack))
-			shapes.addAll($ShapeMap.getShapes(stack))
-
-			// Make the list appear like it's scrolling smoothly.
-			let base_scroll_index = shapes.indexOf(stack.item)
-			for (let i = 0; i < base_scroll_index; i++) {
-				shapes.addLast(shapes.removeFirst())
-			}
-		}
-
-		shapes.forEach(shape => {
-			if (stack.item.id == shape.id) {
-				return
-			}
-			new_lines.add(Text.of(`• `).append(shape.description).color("dark_gray"))
-		})
-
-		let hovered_slot = /** @type {import("@package/net/minecraft/world/inventory").$Slot} */ (Client.getCurrentScreen()?.hoveredSlot)
-		if (hovered_slot && hovered_slot.item == stack && !hovered_slot.isFake()) {
-			new_lines.add(Text.translate("Hold %s to change shape", [Text.keybind("key.clutternomore.change_block_shape").color(MASCOT_COLOR)]).color(MASCOT_COLOR_DARK))
-		}
-	} else {
-		new_lines.add(Text.translate("Scroll the %s", [Text.of(`Mouse Wheel`).color(MASCOT_COLOR)]).color(MASCOT_COLOR_DARK))
+	let hovered_slot = /** @type {import("@package/net/minecraft/world/inventory").$Slot} */ (Client.getCurrentScreen()?.hoveredSlot)
+	if (!(hovered_slot) || hovered_slot.isFake() || !hovered_slot.allowModification(Client.player)) {
+		return
 	}
 
-	event.lines.addAll(1, new_lines)
+	let selecting_shape = Client.isKeyMappingDown(global.CHANGE_BLOCK_SHAPE_KEY) // FIXME: There is one frame of delay by doing this.
+	if (selecting_shape) {
+		event.lines.add(1, SCROLL_TOOLTIP)
+	} else {
+		// The list doesn't really convince me anymore...
+		/*
+		let new_lines = Utils.newList()
+		let stack = event.item
+
+		const $CustomCreativeSlot = Java.loadClass("net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen$CustomCreativeSlot")
+		let no_fancy_selector = !(hovered_slot instanceof $CustomCreativeSlot)
+		if (no_fancy_selector) {
+			// No point re-getting the list every frame.
+			if (stack.item != cached_item) {
+				cached_item = stack.item
+				shapes = Utils.newList()
+				// shapes.add($ShapeMap.getParent(stack))
+				shapes.addAll($ShapeMap.getShapes(stack))
+
+				// Make the list appear like it's scrolling smoothly.
+				let base_scroll_index = shapes.indexOf(stack.item)
+				for (let i = 0; i < base_scroll_index; i++) {
+					shapes.addLast(shapes.removeFirst())
+				}
+			}
+
+			shapes.forEach(shape => {
+				if (stack.item.id == shape.id) {
+					return
+				}
+				new_lines.add(Text.of(`• `).append(shape.description).color("dark_gray"))
+			})
+		}
+		new_lines.add(KEYBIND_TOOLTIP)
+		event.lines.addAll(1, new_lines)
+		*/
+
+		event.lines.add(1, KEYBIND_TOOLTIP)
+	}
+
 })
 
 

@@ -3,7 +3,7 @@
 // https://github.com/Alchemists-Of-Yore/ClutterNoMore/blob/0a5832a75ccfb65c999b207134cf0f43d369ab96/src/main/java/dev/tazer/clutternomore/common/shape_map/ShapeMap.java
 let $ShapeMap = Java.loadClass("dev.tazer.clutternomore.common.shape_map.ShapeMap")
 // https://discord.com/channels/303440391124942858/1421136321824424059/1421862264654401608
-let $RegisterGuiLayersEvent  = Java.loadClass("net.neoforged.neoforge.client.event.RegisterGuiLayersEvent")
+let $RegisterGuiLayersEvent = Java.loadClass("net.neoforged.neoforge.client.event.RegisterGuiLayersEvent")
 
 NativeEvents.onEvent($RegisterGuiLayersEvent, event => {
 	event.registerBelow(
@@ -59,7 +59,7 @@ global.draw_shape_hint = (gui_graphics, delta_tracker) => {
 		// color_a = Math.max(color_a, 0.15)
 	}
 
-	// Text.of("Press Tab to change shape").color("white")
+	// Text.of(`Press Tab to change shape`).color("white")
 	// gui_graphics.drawCenteredString(Client.font, text, pos_x + 96, gui_graphics.guiHeight() - 16, 0xFFFFFF)
 	gui_graphics.setColor(color_r, color_b, color_g, color_a)
 	gui_graphics.blitSprite("kubejs:hud/crosshair_multishape", pos_x - 10.5, pos_y - 8.5, 0, 21, 17)

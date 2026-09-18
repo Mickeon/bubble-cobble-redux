@@ -1574,7 +1574,7 @@
             ]
         },
         {
-            "pakku_id": "vPPYdHzuZ3H4QY03",
+            "pakku_id": "nNAllv7ItbR1rVAK",
             "type": "MOD",
             "side": "BOTH",
             "slug": {
@@ -1589,7 +1589,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "clutternomore-1.1.8+1.21.1-neoforge.jar",
+                    "file_name": "clutternomore-2.0.7+1.21.1-neoforge.jar",
                     "mc_versions": [
                         "1.21",
                         "1.21.1"
@@ -1598,16 +1598,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/ewyjbmG4/versions/qmh6QSjL/clutternomore-1.1.8+1.21.1-neoforge.jar",
-                    "id": "qmh6QSjL",
+                    "url": "https://cdn.modrinth.com/data/ewyjbmG4/versions/EaL0l4U1/clutternomore-2.0.7+1.21.1-neoforge.jar",
+                    "id": "EaL0l4U1",
                     "parent_id": "ewyjbmG4",
                     "hashes": {
-                        "sha512": "218a462966e629d8e12dcb673cea5a9b5a8a26ef69eabad6448768bb14de7818df69a5209fa528603747eaa4140ff5ff328c62774fd6b2e2e4ef8589b2967566",
-                        "sha1": "676aceeebecd1a18efaccf0f29368b8df2290fa1"
+                        "sha512": "392e17d4fdfd6dc0fc3ea9545c66bb536813f2b8081dbbbf3d4125c49b9bcb64ce666d1c69409ab26f8d5b3d14c7f6c483f6d3c4015fc075a1f6a09c1cf90327",
+                        "sha1": "9d6465e3183eaa4e7244539ee3c722d64fc7225d"
                     },
                     "required_dependencies": [],
-                    "size": 426491,
-                    "date_published": "2026-01-09T20:36:43.088979Z"
+                    "size": 759576,
+                    "date_published": "2026-08-07T15:52:59.126848Z"
                 }
             ]
         },
