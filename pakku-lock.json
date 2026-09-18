@@ -282,6 +282,43 @@
             ]
         },
         {
+            "pakku_id": "DzlL1KNiiAViUas6",
+            "type": "MOD",
+            "side": "CLIENT",
+            "slug": {
+                "modrinth": "ambient-camera"
+            },
+            "name": {
+                "modrinth": "Ambient Camera"
+            },
+            "id": {
+                "modrinth": "clAZIcaY"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "ambient_camera-1.21.1-1.0.1.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/clAZIcaY/versions/PznuJW3I/ambient_camera-1.21.1-1.0.1.jar",
+                    "id": "PznuJW3I",
+                    "parent_id": "clAZIcaY",
+                    "hashes": {
+                        "sha512": "256fb55087d9b16bedaf73dbb76a5b70916a09ebecac5640a6e51eddf8adf46cacbaf18dbb0d897f3bb1a251e7f0367c858886a284d24c393223f2f775212062",
+                        "sha1": "6ccf7cdc3e14ab1b16e36e9c9aea9cdbd90579fe"
+                    },
+                    "required_dependencies": [],
+                    "size": 39567,
+                    "date_published": "2026-08-02T17:15:55.679991Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "mIWYVyAeCHBtixKp",
             "type": "MOD",
             "side": "BOTH",
