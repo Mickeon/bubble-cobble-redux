@@ -3955,6 +3955,48 @@
             ]
         },
         {
+            "pakku_id": "aziv0ZpmZKQLvqZq",
+            "pakku_links": [
+                "vqYPIgcIU332HHHj"
+            ],
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "modrinth": "emi-recipe-sharing"
+            },
+            "name": {
+                "modrinth": "EMI Recipe Sharing (EMIRS)"
+            },
+            "id": {
+                "modrinth": "hAwuJJg9"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "emirecipesharing-neoforge-1.21.1-1.0.3.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/hAwuJJg9/versions/eEt6lfe7/emirecipesharing-neoforge-1.21.1-1.0.3.jar",
+                    "id": "eEt6lfe7",
+                    "parent_id": "hAwuJJg9",
+                    "hashes": {
+                        "sha512": "1cd2afd02a766304c44f8b8f7a5c270f2a56522607e50c796fb557d243c52fb2dbe1172976bd0b40cb40cb46e4e0b7fb110724b72419b6d0dc9b9a55094aa91d",
+                        "sha1": "953faf21140ea5def3d74983883aabc65354a345"
+                    },
+                    "required_dependencies": [
+                        "fRiHVvU7"
+                    ],
+                    "size": 62457,
+                    "date_published": "2026-09-08T12:47:28.359453Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "osaLqM7ucXIntaqt",
             "type": "MOD",
             "side": "CLIENT",
@@ -4067,6 +4109,43 @@
                     "required_dependencies": [],
                     "size": 498920,
                     "date_published": "2026-04-22T16:07:29.841031Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "Ba1D9NcV2UyNoHwZ",
+            "type": "MOD",
+            "side": "CLIENT",
+            "slug": {
+                "modrinth": "easy-building"
+            },
+            "name": {
+                "modrinth": "Easy Building"
+            },
+            "id": {
+                "modrinth": "t3wlJuW5"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "easybuilding-neoforge-1.21.1-v1.1.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/t3wlJuW5/versions/HxkdqSKS/easybuilding-neoforge-1.21.1-v1.1.jar",
+                    "id": "HxkdqSKS",
+                    "parent_id": "t3wlJuW5",
+                    "hashes": {
+                        "sha512": "89913e21adcb3a84f03f566d4b27972b739f3eb34f048e2541d435012d3daf16e12105bd61672c184eb7a8330eaf8c55e4feff15453568a8f56bc76f3819d47a",
+                        "sha1": "71af9283f28ac1f4f0ad2d0f7d92a0e519928a12"
+                    },
+                    "required_dependencies": [],
+                    "size": 20727,
+                    "date_published": "2026-06-15T17:32:43.558637Z"
                 }
             ]
         },
