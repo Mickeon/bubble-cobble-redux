@@ -297,8 +297,7 @@ const DASH_FORCE = 1.0
 const DASH_COOLDOWN_TICKS = 10
 const DASH_BASE_RESTORATION = 0.0125
 DashDataBuilder.players_dash_data = /** @type {Object<string, DashData>} */ ({})
-DashDataBuilder.get_or_create = /** @param {$UUID} uuid */ function(uuid) {
-	/** @alias */
+DashDataBuilder.get_or_create = /** @param {string} uuid */ function(uuid) {
 	if (!this.players_dash_data[uuid]) {
 		this.players_dash_data[uuid] = DashDataBuilder()
 	}
@@ -372,12 +371,14 @@ NetworkEvents.dataReceived("kubejs:dash", event => {
 	}
 
 	dash.restoration = DASH_BASE_RESTORATION
-	dash.strength_multiplier = Math.max(dash.strength_multiplier - 0.1, 0.25)
+	dash.strength_multiplier = player.isCreative() ? 1.0 : Math.max(dash.strength_multiplier - 0.1, 0.25)
 
 	if (!dash.lower_tiredness) {
 		dash.lower_tiredness = event.server.scheduleRepeatingInTicks(5, () => {
 			if (dash.strength_multiplier >= 1.0) {
-				player.playNotifySound("bubble_cobble:recharged", "players", 0.25, 1.0)
+				if (!player.isCreative()) {
+					player.playNotifySound("bubble_cobble:recharged", "players", 0.25, 1.0)
+				}
 				// dash.bonus_restoration = 0.0
 
 				dash.lower_tiredness.clear()
@@ -486,7 +487,7 @@ function PowderSnowDataBuilder() {
 	}
 }
 PowderSnowDataBuilder.players_powder_snow_data = /** @type {Object<string, PowderSnowData>} */ ({})
-PowderSnowDataBuilder.get_or_create = /** @param {$UUID} uuid */ function(uuid) {
+PowderSnowDataBuilder.get_or_create = /** @param {string} uuid */ function(uuid) {
 	if (!this.players_powder_snow_data[uuid]) {
 		this.players_powder_snow_data[uuid] = PowderSnowDataBuilder()
 	}

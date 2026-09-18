@@ -90,6 +90,7 @@ key_key.shouldersurfing.enter_third_person_front:key.keyboard.unknown:
 key_key.shouldersurfing.enter_third_person_back:key.keyboard.unknown:
 key_key.shouldersurfing.enter_shoulder_surfing:key.keyboard.unknown:
 key_gui.xaero_minimap_settings:key.keyboard.unknown:
+key_gui.xaero_minimap_server_profiles:key.keyboard.unknown:
 key_gui.xaero_zoom_in:key.keyboard.keypad.add:
 key_gui.xaero_zoom_out:key.keyboard.keypad.subtract:
 key_gui.xaero_new_waypoint:key.keyboard.comma:
@@ -135,6 +136,7 @@ key_key.sidekick.power.hold.super_speed:key.keyboard.unknown:
 key_key.constructionstick.change_restriction:key.keyboard.unknown:
 key_key.constructionstick.change_upgrade:key.keyboard.unknown:
 key_key.constructionstick.change_direction:key.keyboard.unknown:
+key_key.constructionstick.toggle_random:key.keyboard.unknown:
 key_key.constructionstick.open_gui:key.keyboard.r:
 key_key.constructionstick.undo:key.keyboard.tab:
 key_key.constructionstick.show_previous:key.keyboard.tab:
@@ -165,6 +167,7 @@ key_key.sophisticatedcore.transfer_to_storage:key.keyboard.unknown:
 key_key.sophisticatedcore.transfer_to_inventory:key.keyboard.unknown:
 key_gui.xaero_open_map:key.keyboard.m:
 key_gui.xaero_open_settings:key.keyboard.keypad.enter:
+key_gui.xaero_world_map_server_settings:key.keyboard.unknown:
 key_gui.xaero_map_zoom_in:key.keyboard.keypad.add:
 key_gui.xaero_map_zoom_out:key.keyboard.keypad.subtract:
 key_gui.xaero_quick_confirm:key.keyboard.right.shift:
@@ -180,17 +183,15 @@ key_key.sophisticatedbackpacks.toggle_upgrade_5:key.keyboard.unknown:
 key_key.relics.active_abilities_list:key.keyboard.left.alt:
 key_key.relics.research_relic:key.keyboard.left.shift:
 key_key.carry.desc:key.keyboard.unknown:
-key_key.cnc.whistle:key.keyboard.unknown:
-key_key.cnc.caribou_dash:key.keyboard.space:
 key_key.extendedhotbar.switch:key.keyboard.x:
 key_key.extendedhotbar.toggle:key.keyboard.f8:
 key_key.bridgingmod.toggle_bridging:key.keyboard.unknown:
-key_key.yo_hooks.jump:key.mouse.right:
-key_key.yo_hooks.climb:key.keyboard.space:
-key_key.yo_hooks.climb_down:key.keyboard.left.shift:
+key_key.easybuilding.show_grid:key.keyboard.tab:SHIFT
 key_key.atlasviewer.open_viewer:key.keyboard.home:
 key_key.kubejs.kubedex:key.keyboard.unknown:
 key_key.kubejs.bubble_cobble.dash:key.mouse.4:
+key_key.kubejs.bubble_cobble.mouse_wheel_up:key.keyboard.page.up:
+key_key.kubejs.bubble_cobble.mouse_wheel_down:key.keyboard.page.down:
 key_keyinfo.copycats.fill_copycat:key.keyboard.left.alt:
 key_key.crawl:key.keyboard.c:
 key_artifacts.key.helium_flamingo.activate:key.keyboard.unknown:
@@ -224,3 +225,6 @@ key_key.ponder.ponder:key.keyboard.w:
 key_create.keyinfo.toolmenu:key.keyboard.left.alt:
 key_create.keyinfo.toolbelt:key.keyboard.g:SHIFT
 key_create.keyinfo.rotate_menu:key.keyboard.r:
+key_create.keyinfo.shift_modifier:key.keyboard.left.shift:
+key_create.keyinfo.ctrl_modifier:key.keyboard.left.control:
+key_create.keyinfo.alt_modifier:key.keyboard.left.alt:
