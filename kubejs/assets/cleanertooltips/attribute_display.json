@@ -1,0 +1,56 @@
+{
+	"minecraft:generic.armor": {
+		"display_type": "NUMBER",
+		"priority": 0
+	},
+	"minecraft:generic.armor_toughness": {
+		"display_type": "NUMBER",
+		"priority": 0
+	},
+	"minecraft:generic.attack_damage": {
+		"display_type": "NUMBER",
+		"priority": 0
+	},
+	"minecraft:generic.attack_knockback": {
+		"display_type": "DIFFERENCE",
+		"priority": 1
+	},
+	"minecraft:generic.attack_speed": {
+		"display_type": "NUMBER",
+		"priority": 0
+	},
+	"minecraft:generic.gravity": {
+		"display_type": "PERCENTAGE"
+	},
+	"minecraft:generic.knockback_resistance": {
+		"display_type": "PERCENTAGE",
+		"priority": 0
+	},
+	"minecraft:generic.luck": {
+		"display_type": "PERCENTAGE"
+	},
+	"minecraft:generic.max_health": {
+		"display_type": "DIFFERENCE",
+		"priority": 2
+	},
+	"minecraft:generic.movement_speed": {
+		"display_type": "PERCENTAGE"
+	},
+	"minecraft:player.block_interaction_range": {
+		"display_type": "DIFFERENCE",
+		"priority": 2
+	},
+	"minecraft:player.entity_interaction_range": {
+		"display_type": "DIFFERENCE",
+		"priority": 2
+	},
+	"kubejs:dash_jump_count": {
+		"display_type": "DIFFERENCE"
+	},
+	"minecraft:player.submerged_mining_speed": {
+		"display_type": "PERCENTAGE"
+	},
+	"minecraft:generic.scale": {
+		"display_type": "PERCENTAGE"
+	}
+}

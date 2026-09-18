@@ -292,10 +292,10 @@ ItemEvents.modifyTooltips(event => {
 		text.dynamic("add_sophisticated_marker")
 	})
 
-
-	event.modifyAll({advanced: false}, text => {
-		text.dynamic("show_tool_durability")
-	})
+	if (!Platform.isLoaded("cleanertooltips"))
+		event.modifyAll({advanced: false}, text => {
+			text.dynamic("show_tool_durability")
+		})
 
 	event.add(["farmersdelight:skillet"], [subtle("Right-click in inventory to equip")])
 

@@ -1,0 +1,34 @@
+{
+  "iconsEnabled": true,
+  "comparisonEnabled": true,
+  "comparisonArrow": true,
+  "onlyCompareMutual": false,
+  "hintEnabled": true,
+  "customOrder": true,
+  "groupDisplay": "ROWS",
+  "attributeIdBlacklist": [
+    "minecraft:player.entity_interaction_range"
+  ],
+  "modifierIdBlacklist": [
+    "minecraft:enchantment.efficiency/mainhand",
+    "apotheosis:overworld/royalty_modifier_apothic_attributes.head_#"
+  ],
+  "attributeGap": 8,
+  "innerGap": 2,
+  "sharpnessFix": true,
+  "miningSpeed": true,
+  "durabilityEnabled": true,
+  "durabilityMaximum": false,
+  "hideWhenRepaired": true,
+  "durabilityPos": "BELOW",
+  "durabilityStyle": "DEFAULT",
+  "durabilityColor": true,
+  "colorMode": "DEFAULT",
+  "colorsStops": {
+    "100": 5471117,
+    "70": 5471117,
+    "50": 8172502,
+    "15": 10286054,
+    "2": 3365741
+  }
+}
