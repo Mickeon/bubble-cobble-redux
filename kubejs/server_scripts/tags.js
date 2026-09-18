@@ -44,7 +44,6 @@ ServerEvents.tags("item", event => {
 	event.add("c:storage_blocks", "#c:storage_blocks/industrial_iron") // TODO: Report this.
 	event.add("minecraft:piglin_loved", "solonion:golden_lunchbox", "handcrafted:golden_thin_pot", "handcrafted:golden_thick_pot", "handcrafted:golden_wide_pot", "handcrafted:golden_medium_pot") //Reported: https://github.com/terrarium-earth/Handcrafted/issues/152
 	event.add("c:music_discs", "undergroundworlds:music_disc_abbeyence") // TODO: Report this.
-	event.removeAll("minecraft:music_discs") // This tag doesn't exist anymore.
 	if (Platform.isLoaded("copperagebackport")) {
 		event.add("minecraft:buttons", COPPER_BUTTONS)
 		event.remove("create:chain_rideable", COPPER_CHAINS) // They didn't realise this was plainly wrong. Reported: https://github.com/Smallinger/Copper-Age-Backport/issues/87.

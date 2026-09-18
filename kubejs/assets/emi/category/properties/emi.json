@@ -71,13 +71,22 @@
 		"order": 1000
 	},
 	"remi:block_tags": {
-		"order": 1001
+		"order": 1001,
+		"icon": {
+			"texture": "item:cobblemon:cleanse_tag"
+		}
 	},
 	"remi:fluid_tags": {
-		"order": 1002
+		"order": 1002,
+		"icon": {
+			"texture": "kubejs:textures/block/chiseled_mud_bricks.png"
+		}
 	},
 	"remi:entity_type_tags": {
-		"order": 1003
+		"order": 1003,
+		"icon": {
+			"stack": "item:cobblemon:spell_tag"
+		}
 	},
 	"emi:tag": {
 		"order": 1004

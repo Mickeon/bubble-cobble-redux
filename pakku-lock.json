@@ -4698,7 +4698,7 @@
             ]
         },
         {
-            "pakku_id": "105hik0bokb7xkat",
+            "pakku_id": "Uc3s4QToBC6O55pU",
             "type": "MOD",
             "side": "BOTH",
             "slug": {
@@ -4713,7 +4713,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "geckolib-neoforge-1.21.1-4.9.2.jar",
+                    "file_name": "geckolib-neoforge-1.21.1-4.9.3.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -4721,16 +4721,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/8BmcQJ2H/versions/tPkJmim6/geckolib-neoforge-1.21.1-4.9.2.jar",
-                    "id": "tPkJmim6",
+                    "url": "https://cdn.modrinth.com/data/8BmcQJ2H/versions/Grwn5rUB/geckolib-neoforge-1.21.1-4.9.3.jar",
+                    "id": "Grwn5rUB",
                     "parent_id": "8BmcQJ2H",
                     "hashes": {
-                        "sha512": "c91012b16cc40c8f48f69b78cb8e2e5c006486ae2431fbd289dfc01be7a4217294becea22d83a155d6b32b3969450df871352a3695e1452168b84f41355f7b9e",
-                        "sha1": "14c64013cadee7d28f3685f94350f9a4d2ec6d86"
+                        "sha512": "8dfa5f8c57224a5e34e5098367ea9819ca6dc9c11357cd3062c16da3455c8bd1a483098af7383debc4b9ce8e4d7ab3fdc799b415644eb829da83eb72a7335dfd",
+                        "sha1": "5cfe835472a5c5457ae9ac192d9d7b317454d5ac"
                     },
                     "required_dependencies": [],
-                    "size": 630584,
-                    "date_published": "2026-07-01T03:42:04.254010Z"
+                    "size": 634531,
+                    "date_published": "2026-09-16T07:34:19.892008Z"
                 }
             ]
         },
@@ -10442,11 +10442,7 @@
             ]
         },
         {
-            "pakku_id": "vC4Qs2OEN7wtrz2P",
-            "pakku_links": [
-                "hUDG0Hli56hdCyO7",
-                "BEXwO1vXKbzNa3bl"
-            ],
+            "pakku_id": "sCBWBz4oNvxbcSaK",
             "type": "MOD",
             "side": "BOTH",
             "slug": {
@@ -10461,7 +10457,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "waterframes-NEOFORGE-mc1.21.1-v2.1.22.jar",
+                    "file_name": "waterframes-NEOFORGE-mc1.21.1-v2.1.23.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -10469,20 +10465,20 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/eBzFuVTM/versions/p6zqgIqr/waterframes-NEOFORGE-mc1.21.1-v2.1.22.jar",
-                    "id": "p6zqgIqr",
+                    "url": "https://cdn.modrinth.com/data/eBzFuVTM/versions/ygogZrIE/waterframes-NEOFORGE-mc1.21.1-v2.1.23.jar",
+                    "id": "ygogZrIE",
                     "parent_id": "eBzFuVTM",
                     "hashes": {
-                        "sha512": "b619c079c3d520d5894fe4f346545c0f7f1b2951bc2d0f342416dc46544bf196c811e72249e073fdec2af6f177cadd601a01b46a5334898b1e6621f4818856f0",
-                        "sha1": "ac128b9c58a31ff19beda29b1cf1b6d16fffc287"
+                        "sha512": "cd924d55d23dcd8e5ff221a4f3bcc929018e9571f672dc390d000c977e3fba33ede885795d599a80f5ea5faac51258e34904487c2323d1281a6efb2ba54b0702",
+                        "sha1": "855fad475a0a0be7a8ac20d70f2adc2d91ce0d0b"
                     },
                     "required_dependencies": [
                         "OsZiaDHq",
                         "dGGbEGoV",
                         "G922NeHS"
                     ],
-                    "size": 255204,
-                    "date_published": "2025-10-20T12:23:33.283547Z"
+                    "size": 256825,
+                    "date_published": "2026-05-08T08:32:37.834467Z"
                 }
             ]
         },

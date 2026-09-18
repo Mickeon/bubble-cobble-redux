@@ -3,6 +3,9 @@
         "prunoideae.probejs",
         "grant.mc-color-updated",
         "misodee.vscode-nbt",
-        "typescriptteam.native-preview"
+        "typescriptteam.native-preview",
+        "ms-vscode.vscode-typescript-next",
+        "usernamehw.errorlens",
+        "minecraftcommands.syntax-mcfunction"
     ]
 }

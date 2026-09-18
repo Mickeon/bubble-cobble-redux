@@ -2,12 +2,17 @@
 	"allowDefaultAsync": null,
 	"defaultDisableDuplicatePlugins": false,
 	"typeOverrides": {
-		"mendingrework:jei_plugin": "DISABLED"
+		"brewinandchewin:jei_plugin": "DISABLED",
+		"farmersdelight:jei_plugin": "DISABLED",
+		"clutternomore:jei": "DISABLED",
+		"mendingrework:jei_plugin": "DISABLED",
+		"inv_move:jei_plugin": "DISABLED",
+		"kubejs:jei": "DISABLED"
 	},
 	"defaultPhaseOverrides": {
-	
+
 	},
 	"pluginPhaseOverrides": {
-	
+
 	}
 }
