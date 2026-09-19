@@ -37,14 +37,15 @@ ServerEvents.tags("item", event => {
 	event.add("cobblemon:shiny_stone_ores", "mega_showdown:mega_meteorid_shiny_ore")
 	event.add("cobblemon:sun_stone_ores", "mega_showdown:mega_meteorid_sun_ore")
 	event.add("cobblemon:thunder_stone_ores", "mega_showdown:mega_meteorid_thunder_ore")
-	if (Item.exists("minecraft:copper_nugget")) {
-		event.add("c:nuggets", "minecraft:copper_nugget")
-	}
 	event.add("c:tools/spear", "#minecraft:spears") // Reported, but marked as "Won't fix": https://github.com/Unknowneth/Backported-Spears/issues/60.
 	event.add("c:storage_blocks", "#c:storage_blocks/industrial_iron") // TODO: Report this.
-	event.add("minecraft:piglin_loved", "solonion:golden_lunchbox", "handcrafted:golden_thin_pot", "handcrafted:golden_thick_pot", "handcrafted:golden_wide_pot", "handcrafted:golden_medium_pot") //Reported: https://github.com/terrarium-earth/Handcrafted/issues/152
+	if (Platform.isLoaded("solonion")) {
+		event.add("minecraft:piglin_loved", "solonion:golden_lunchbox")
+	}
+	event.add("minecraft:piglin_loved", "handcrafted:golden_thin_pot", "handcrafted:golden_thick_pot", "handcrafted:golden_wide_pot", "handcrafted:golden_medium_pot") //Reported: https://github.com/terrarium-earth/Handcrafted/issues/152
 	event.add("c:music_discs", "undergroundworlds:music_disc_abbeyence") // TODO: Report this.
 	if (Platform.isLoaded("copperagebackport")) {
+		event.add("c:nuggets", "minecraft:copper_nugget")
 		event.add("minecraft:buttons", COPPER_BUTTONS)
 		event.remove("create:chain_rideable", COPPER_CHAINS) // They didn't realise this was plainly wrong. Reported: https://github.com/Smallinger/Copper-Age-Backport/issues/87.
 	}

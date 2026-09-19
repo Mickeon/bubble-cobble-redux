@@ -201,7 +201,9 @@ ServerEvents.recipes(event => {
 
 	// Use Canvas for more.
 	event.replaceInput({id: "create:crafting/appliances/clipboard"}, "minecraft:paper", "farmersdelight:canvas")
-	event.replaceInput({id: "solonion:lunchbag"}, "minecraft:paper", "farmersdelight:canvas")
+	if (Platform.isLoaded("solonion")) {
+		event.replaceInput({id: "solonion:lunchbag"}, "minecraft:paper", "farmersdelight:canvas")
+	}
 	event.replaceInput({id: "supplementaries:lunch_basket"}, "minecraft:bamboo", "farmersdelight:canvas")
 	event.replaceInput({id: /^create:crafting.*filter$/}, "minecraft:white_wool", "farmersdelight:canvas")
 	event.replaceInput({id: /^mega_showdown:tera_pouch/}, "minecraft:leather", "farmersdelight:canvas")

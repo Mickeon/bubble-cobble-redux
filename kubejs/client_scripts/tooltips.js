@@ -209,14 +209,16 @@ ItemEvents.modifyTooltips(event => {
 		"    Right-click to eat the chosen food.",
 	])
 
-	event.modify(["solonion:lunchbag", "solonion:lunchbox", "solonion:golden_lunchbox"], text => text.removeText(Text.translate("item.solonion.container.open", Text.keybind("key.sneak"), Text.keybind("key.use"))))
-	add_shift_info(event, ["solonion:lunchbag", "solonion:lunchbox", "solonion:golden_lunchbox"], [
-		"Consume food without worrying much about what food it is!",
-		"More awkward than a Food Basket, but let it choose for you.",
-		"",
-		"Right-click to begin eating.",
-		"Shift-right-click to open the food container.",
-	])
+	if (Platform.isLoaded("solonion")) {
+		event.modify(["solonion:lunchbag", "solonion:lunchbox", "solonion:golden_lunchbox"], text => text.removeText(Text.translate("item.solonion.container.open", Text.keybind("key.sneak"), Text.keybind("key.use"))))
+		add_shift_info(event, ["solonion:lunchbag", "solonion:lunchbox", "solonion:golden_lunchbox"], [
+			"Consume food without worrying much about what food it is!",
+			"More awkward than a Food Basket, but let it choose for you.",
+			"",
+			"Right-click to begin eating.",
+			"Shift-right-click to open the food container.",
+		])
+	}
 
 	/** @param {string | $MutableComponent} text @returns {$MutableComponent} */
 	function subtle(text) {
