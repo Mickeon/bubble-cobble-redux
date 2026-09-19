@@ -39,3 +39,30 @@ ClientEvents.lang("en_us", event => {
 	})
 	event.add("brewinandchewin", "item.brewinandchewin.egg_grog", "§3@Grog§r Is This True?")
 })
+
+const $ScreenEvent$MouseButtonPressed$Pre = Java.loadClass("net.neoforged.neoforge.client.event.ScreenEvent$MouseButtonPressed$Pre")
+NativeEvents.onEvent($ScreenEvent$MouseButtonPressed$Pre, event => {
+	if (!(event.screen instanceof $PauseScreen)
+	|| event.getButton() != 0
+	|| !Client.player.hasEffect("brewinandchewin:tipsy")
+	|| !Utils.random.nextBoolean()
+	) {
+		return
+	}
+
+	const button = event.screen.getChildAt(
+		Client.mouseHandler.getMouseX() / Client.options.guiScale().get(),
+		Client.mouseHandler.getMouseY() / Client.options.guiScale().get()
+	).orElseGet(() => null)
+
+	if (button instanceof $Button) {
+		button.setX(button.getX() + Utils.random.nextInt(-64, 64))
+		button.setY(button.getY() + Utils.random.nextInt(-64, 64))
+		Client.player.playNotifySound("artifacts:item.whoopee_cushion.fart", "master", 0.025, 0.05 + Utils.random.nextFloat() * 0.05)
+
+		Client.scheduleInTicks(Client.isPaused() ? 0 : 10, () => {
+			Client.player.playNotifySound("minecraft:entity.player.burp", "players", 0.025, 0.25 + Utils.random.nextFloat() * 0.75)
+		})
+		event.setCanceled(true)
+	}
+})
