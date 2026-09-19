@@ -1,0 +1,19 @@
+{
+	"__comment": "Generated data. Do not edit manually.",
+	"type": "emi:world_interaction",
+	"left": [
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[],species:\"cobblemon:sudowoodo\"}}"
+	],
+	"right": {
+		"type": "list",
+		"ingredients": [
+			"item:minecraft:golden_helmet{\"minecraft:lore\":['{\"color\":\"green\",\"italic\":false,\"text\":\"Change cosmetic item\"}']}",
+			"item:minecraft:golden_chestplate{\"minecraft:lore\":['{\"color\":\"green\",\"italic\":false,\"text\":\"Change cosmetic item\"}']}",
+			"item:minecraft:golden_leggings{\"minecraft:lore\":['{\"color\":\"green\",\"italic\":false,\"text\":\"Change cosmetic item\"}']}",
+			"item:minecraft:golden_boots{\"minecraft:lore\":['{\"color\":\"green\",\"italic\":false,\"text\":\"Change cosmetic item\"}']}"
+		]
+	},
+	"output": [
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[\"cosmetic_item-gold_armor\"],species:\"cobblemon:sudowoodo\"}}"
+	]
+}

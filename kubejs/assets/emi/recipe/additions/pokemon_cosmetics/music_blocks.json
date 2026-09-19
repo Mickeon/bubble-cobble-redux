@@ -1,0 +1,23 @@
+{
+	"__comment": "Generated data. Do not edit manually.",
+	"type": "emi:world_interaction",
+	"left": [
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[],species:\"cobblemon:pichu\"}}",
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[],species:\"cobblemon:tinkatink\"}}",
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[],species:\"cobblemon:tinkatuff\"}}",
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[],species:\"cobblemon:tinkaton\"}}"
+	],
+	"right": {
+		"type": "list",
+		"ingredients": [
+			"item:minecraft:jukebox{\"minecraft:lore\":['{\"color\":\"green\",\"italic\":false,\"text\":\"Change cosmetic item\"}']}",
+			"item:minecraft:note_block{\"minecraft:lore\":['{\"color\":\"green\",\"italic\":false,\"text\":\"Change cosmetic item\"}']}"
+		]
+	},
+	"output": [
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[\"cosmetic_item-music\"],species:\"cobblemon:pichu\"}}",
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[\"cosmetic_item-music\"],species:\"cobblemon:tinkatink\"}}",
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[\"cosmetic_item-music\"],species:\"cobblemon:tinkatuff\"}}",
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[\"cosmetic_item-music\"],species:\"cobblemon:tinkaton\"}}"
+	]
+}

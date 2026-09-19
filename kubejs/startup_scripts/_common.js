@@ -58,11 +58,16 @@ function is_eligible_for_easter_egg(player, usernames) {
 	return usernames.includes(player.username)
 }
 
+function is_dev() {
+	return Platform.isClientEnvironment() && Platform.isLoaded("probejs")
+}
+
 global.SEC = SEC
 global.MIN = MIN
 global.play_sound_globally = play_sound_globally
 global.remap = remap
 global.is_eligible_for_easter_egg = is_eligible_for_easter_egg
+global.is_dev = is_dev
 
 // TODO: Make a distinction between dev-only and whatnot.
 const DISABLED_KEY_IDS = new Set([

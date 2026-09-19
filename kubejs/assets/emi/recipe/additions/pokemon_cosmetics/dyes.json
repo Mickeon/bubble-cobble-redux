@@ -1,0 +1,41 @@
+{
+	"__comment": "Generated data. Do not edit manually.",
+	"type": "emi:world_interaction",
+	"left": [
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[],species:\"cobblemon:electrode\"}}",
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[],species:\"cobblemon:furfrou\"}}",
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[],species:\"cobblemon:alakazam\"}}",
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[],species:\"cobblemon:gengar\"}}",
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[],species:\"cobblemon:jigglypuff\"}}",
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[],species:\"cobblemon:smeargle\"}}"
+	],
+	"right": {
+		"type": "list",
+		"ingredients": [
+			"item:minecraft:white_dye{\"minecraft:lore\":['{\"color\":\"green\",\"italic\":false,\"text\":\"Change cosmetic item\"}']}",
+			"item:minecraft:orange_dye{\"minecraft:lore\":['{\"color\":\"green\",\"italic\":false,\"text\":\"Change cosmetic item\"}']}",
+			"item:minecraft:magenta_dye{\"minecraft:lore\":['{\"color\":\"green\",\"italic\":false,\"text\":\"Change cosmetic item\"}']}",
+			"item:minecraft:light_blue_dye{\"minecraft:lore\":['{\"color\":\"green\",\"italic\":false,\"text\":\"Change cosmetic item\"}']}",
+			"item:minecraft:yellow_dye{\"minecraft:lore\":['{\"color\":\"green\",\"italic\":false,\"text\":\"Change cosmetic item\"}']}",
+			"item:minecraft:lime_dye{\"minecraft:lore\":['{\"color\":\"green\",\"italic\":false,\"text\":\"Change cosmetic item\"}']}",
+			"item:minecraft:pink_dye{\"minecraft:lore\":['{\"color\":\"green\",\"italic\":false,\"text\":\"Change cosmetic item\"}']}",
+			"item:minecraft:gray_dye{\"minecraft:lore\":['{\"color\":\"green\",\"italic\":false,\"text\":\"Change cosmetic item\"}']}",
+			"item:minecraft:light_gray_dye{\"minecraft:lore\":['{\"color\":\"green\",\"italic\":false,\"text\":\"Change cosmetic item\"}']}",
+			"item:minecraft:cyan_dye{\"minecraft:lore\":['{\"color\":\"green\",\"italic\":false,\"text\":\"Change cosmetic item\"}']}",
+			"item:minecraft:purple_dye{\"minecraft:lore\":['{\"color\":\"green\",\"italic\":false,\"text\":\"Change cosmetic item\"}']}",
+			"item:minecraft:blue_dye{\"minecraft:lore\":['{\"color\":\"green\",\"italic\":false,\"text\":\"Change cosmetic item\"}']}",
+			"item:minecraft:brown_dye{\"minecraft:lore\":['{\"color\":\"green\",\"italic\":false,\"text\":\"Change cosmetic item\"}']}",
+			"item:minecraft:green_dye{\"minecraft:lore\":['{\"color\":\"green\",\"italic\":false,\"text\":\"Change cosmetic item\"}']}",
+			"item:minecraft:red_dye{\"minecraft:lore\":['{\"color\":\"green\",\"italic\":false,\"text\":\"Change cosmetic item\"}']}",
+			"item:minecraft:black_dye{\"minecraft:lore\":['{\"color\":\"green\",\"italic\":false,\"text\":\"Change cosmetic item\"}']}"
+		]
+	},
+	"output": [
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[\"color-white\"],species:\"cobblemon:electrode\"}}",
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[\"color-white\"],species:\"cobblemon:furfrou\"}}",
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[\"color-white\"],species:\"cobblemon:alakazam\"}}",
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[\"color-white\"],species:\"cobblemon:gengar\"}}",
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[\"color-white\"],species:\"cobblemon:jigglypuff\"}}",
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[\"color-white\"],species:\"cobblemon:smeargle\"}}"
+	]
+}

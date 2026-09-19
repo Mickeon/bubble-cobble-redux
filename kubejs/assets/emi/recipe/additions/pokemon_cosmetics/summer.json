@@ -1,0 +1,16 @@
+{
+	"__comment": "Generated data. Do not edit manually.",
+	"type": "emi:world_interaction",
+	"left": [
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[],species:\"cobblemon:glaceon\"}}"
+	],
+	"right": {
+		"type": "list",
+		"ingredients": [
+			"item:minecraft:white_dye{\"minecraft:lore\":['{\"color\":\"green\",\"italic\":false,\"text\":\"Change cosmetic item\"}']}"
+		]
+	},
+	"output": [
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[\"summer\"],species:\"cobblemon:glaceon\"}}"
+	]
+}

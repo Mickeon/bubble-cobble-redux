@@ -12,7 +12,7 @@
  */
 
 /** @import {global} from "./../startup_scripts/_common" */
-const {SEC, MIN, play_sound_globally, remap, is_eligible_for_easter_egg} = global
+const {SEC, MIN, play_sound_globally, remap, is_eligible_for_easter_egg, is_dev} = global
 
 // Object.assign(globalThis, global)
 // /** @typedef {(value: number, min1: number, max1: number, min2: number, max2:) => number} RemapFunction */

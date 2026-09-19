@@ -1,6 +1,6 @@
 {
 	"type": "emi:world_interaction",
-	"left": "item:cobblemon:pokemon_model{'cobblemon:pokemon_item': {species: 'cobblemon:skitty', aspects: ['']}}",
+	"left": "item:cobblemon:pokemon_model{'cobblemon:pokemon_item': {species: 'cobblemon:skitty', aspects: []}}",
 	"right": "item:farmersdelight:hamburger",
-	"output": "item:cobblemon:pokemon_model{'cobblemon:pokemon_item': {species: 'cobblemon:skitty', aspects: ['']}, item_name: 'awesome'}"
+	"output": "item:cobblemon:pokemon_model{'cobblemon:pokemon_item': {species: 'cobblemon:skitty', aspects: [], tint: [1.0, 0.85, 0.9, 1.0]}, item_name: '\"She is pink for an amazing reason\"'}"
 }

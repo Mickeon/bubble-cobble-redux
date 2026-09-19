@@ -1,0 +1,19 @@
+{
+	"__comment": "Generated data. Do not edit manually.",
+	"type": "emi:world_interaction",
+	"left": [
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[],species:\"cobblemon:gurdurr\"}}"
+	],
+	"right": {
+		"type": "list",
+		"ingredients": [
+			"item:minecraft:copper_ingot{\"minecraft:lore\":['{\"color\":\"green\",\"italic\":false,\"text\":\"Change cosmetic item\"}']}",
+			"item:minecraft:iron_ingot{\"minecraft:lore\":['{\"color\":\"green\",\"italic\":false,\"text\":\"Change cosmetic item\"}']}",
+			"item:minecraft:gold_ingot{\"minecraft:lore\":['{\"color\":\"green\",\"italic\":false,\"text\":\"Change cosmetic item\"}']}",
+			"item:minecraft:netherite_ingot{\"minecraft:lore\":['{\"color\":\"green\",\"italic\":false,\"text\":\"Change cosmetic item\"}']}"
+		]
+	},
+	"output": [
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[\"metals-copper\"],species:\"cobblemon:gurdurr\"}}"
+	]
+}

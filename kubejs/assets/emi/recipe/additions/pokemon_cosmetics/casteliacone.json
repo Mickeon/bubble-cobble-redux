@@ -1,0 +1,20 @@
+{
+	"__comment": "Generated data. Do not edit manually.",
+	"type": "emi:world_interaction",
+	"left": [
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[],species:\"cobblemon:pikachu\"}}",
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[],species:\"cobblemon:raichu\"}}",
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[],species:\"cobblemon:pichu\"}}"
+	],
+	"right": {
+		"type": "list",
+		"ingredients": [
+			"item:cobblemon:casteliacone{\"minecraft:lore\":['{\"color\":\"green\",\"italic\":false,\"text\":\"Change cosmetic item\"}']}"
+		]
+	},
+	"output": [
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[\"cosmetic_item-casteliacone\"],species:\"cobblemon:pikachu\"}}",
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[\"cosmetic_item-casteliacone\"],species:\"cobblemon:raichu\"}}",
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[\"cosmetic_item-casteliacone\"],species:\"cobblemon:pichu\"}}"
+	]
+}

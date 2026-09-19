@@ -21,6 +21,12 @@
 		},
 		{
 			"id": "gag:/energized_heartstone_repairing"
+		},
+		{
+			"id": "gag:/hearthstone_energizing"
+		},
+		{
+			"id": "gag:/energized_hearthstone"
 		}
 	]
 }

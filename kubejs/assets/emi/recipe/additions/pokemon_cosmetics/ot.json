@@ -1,0 +1,16 @@
+{
+	"__comment": "Generated data. Do not edit manually.",
+	"type": "emi:world_interaction",
+	"left": [
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[],species:\"cobblemon:gengar\"}}"
+	],
+	"right": {
+		"type": "list",
+		"ingredients": [
+			"item:cobblemon:relic_coin{\"minecraft:lore\":['{\"color\":\"green\",\"italic\":false,\"text\":\"Change cosmetic item\"}']}"
+		]
+	},
+	"output": [
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[\"ot\"],species:\"cobblemon:gengar\"}}"
+	]
+}

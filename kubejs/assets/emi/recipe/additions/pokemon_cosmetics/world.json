@@ -1,0 +1,16 @@
+{
+	"__comment": "Generated data. Do not edit manually.",
+	"type": "emi:world_interaction",
+	"left": [
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[],species:\"cobblemon:pikachu\"}}"
+	],
+	"right": {
+		"type": "list",
+		"ingredients": [
+			"item:cobblemon:star_sweet{\"minecraft:lore\":['{\"color\":\"green\",\"italic\":false,\"text\":\"Change cosmetic item\"}']}"
+		]
+	},
+	"output": [
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[\"world\"],species:\"cobblemon:pikachu\"}}"
+	]
+}
