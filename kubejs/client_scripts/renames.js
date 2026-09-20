@@ -116,7 +116,7 @@ ClientEvents.lang("en_us", event => {
 		"wood_name.sophisticatedstorage.biomesoplenty:jacaranda": "Pale Jacaranda",
 	})
 
-	event.addAll("effectdescriptions", {
+	event.addAll("jeed", {
 		"effect.cobblemon.cleanse_all.desc": "Removes all current effects",
 		"effect.cobblemon.cleanse_negative.desc": "Removes all current negative effects",
 		"effect.cobblemon.mental_restoration.desc": "Delays the player's Insomnia",
