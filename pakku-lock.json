@@ -7121,6 +7121,86 @@
             ]
         },
         {
+            "pakku_id": "KiUQChDOJ4ULSNyd",
+            "pakku_links": [
+                "WWiX8dynol1cESFV"
+            ],
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "modrinth": "packdev-toolkit"
+            },
+            "name": {
+                "modrinth": "Packdev Toolkit"
+            },
+            "id": {
+                "modrinth": "FD6cyuqK"
+            },
+            "export": false,
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "packdev_toolkit-neoforge-1.21.1-1.3.4.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/FD6cyuqK/versions/uTlLLobw/packdev_toolkit-neoforge-1.21.1-1.3.4.jar",
+                    "id": "uTlLLobw",
+                    "parent_id": "FD6cyuqK",
+                    "hashes": {
+                        "sha512": "085a829841f4b6bf85f71383288c01fef2d19266cf7e7a60b328f7e38cf8fa4595d0019941bb39c838492fb1a2a3da1dc9803e927372fe454d18e210cbef2abc",
+                        "sha1": "90e6c41ed71fce0fb3291777037cbcfbf02e0a94"
+                    },
+                    "required_dependencies": [
+                        "1eAoo2KR"
+                    ],
+                    "size": 176759,
+                    "date_published": "2026-08-19T06:13:59.874174Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "vLINBKP46F4JDyb4",
+            "type": "MOD",
+            "side": "CLIENT",
+            "slug": {
+                "modrinth": "panoptic"
+            },
+            "name": {
+                "modrinth": "Panoptic"
+            },
+            "id": {
+                "modrinth": "kLz9tNkz"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "Panoptic-1.08a-NeoForge-1.21.1.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/kLz9tNkz/versions/sycWlGzO/Panoptic-1.08a-NeoForge-1.21.1.jar",
+                    "id": "sycWlGzO",
+                    "parent_id": "kLz9tNkz",
+                    "hashes": {
+                        "sha512": "c77f0b86d6d93936eb75b8800c32391714d89b8b6dc1ae5dd2d13095b3a1731a69751929a659f8a61129f1ef9cd2cb881be7ca39c366545cf55f08667b01e865",
+                        "sha1": "a77ffa771c48d2e8b3a75dddd0b398546050b382"
+                    },
+                    "required_dependencies": [],
+                    "size": 735692,
+                    "date_published": "2026-08-11T09:01:32.740174Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "6iFrSDIEsCLfKxUO",
             "pakku_links": [
                 "xBSOgFa0NS8yAPaO"
@@ -10496,6 +10576,46 @@
                     ],
                     "size": 1252710,
                     "date_published": "2026-08-13T08:41:14.551872Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "b6BPyD0XF8bNWIXn",
+            "type": "MOD",
+            "side": "CLIENT",
+            "slug": {
+                "modrinth": "viewboard"
+            },
+            "name": {
+                "modrinth": "ViewBoard"
+            },
+            "id": {
+                "modrinth": "xf9PORQx"
+            },
+            "export": false,
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "viewboard-neoforge-1.21.1-1.2.3.jar",
+                    "mc_versions": [
+                        "1.21.1",
+                        "1.21.2",
+                        "1.21.3"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/xf9PORQx/versions/HaIX6ul0/viewboard-neoforge-1.21.1-1.2.3.jar",
+                    "id": "HaIX6ul0",
+                    "parent_id": "xf9PORQx",
+                    "hashes": {
+                        "sha512": "3901337d97064c5bcc2625936a005377629580b929317fa9bba127fb8cb075147f978576b63d9b80303d1bfc60bd5442d9707ad83fec5e635f07eb4d3bde4f11",
+                        "sha1": "23b738da5bcc04bf393db6f79ce0dde2cbd014cc"
+                    },
+                    "required_dependencies": [],
+                    "size": 116193,
+                    "date_published": "2026-07-02T04:26:10.384034Z"
                 }
             ]
         },

@@ -1,10 +1,13 @@
 {
   "development_set": {
     "mods": [
-      "resource_explorer",
-      "probejs",
+      "atlasviewer",
       "nbtac",
-      "atlasviewer"
+      "packdev_toolkit",
+      "panoptic",
+      "probejs",
+      "resource_explorer",
+      "viewboard"
     ]
   },
   "emi_set": {

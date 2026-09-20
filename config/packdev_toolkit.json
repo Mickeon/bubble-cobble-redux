@@ -1,0 +1,6 @@
+{
+  "resourcePackExportDirectory": "local/packdev_toolkit_resource_pack",
+  "dataPackExportDirectory": "local/packdev_toolkit_data_pack",
+  "queriesExportDirectory": "local/packdev_toolkit_queries",
+  "openFolderOnExport": true
+}

@@ -71,6 +71,7 @@
 /nicknames.json
 /player_models
 /immersive_furniture
+*panoptic*
 
 # Cache.
 /cache
@@ -104,8 +105,7 @@
 /config/moveslikemafuyu_config.toml
 /config/smartkeyprompts_config.toml
 /config/sourcecubed-common.toml
-/config/waves-common.toml
-/config/waves
+/config/waves*
 /config/parcool*
 /config/presencefootsteps/userconfig.json
 /config/smooth_hover.json
@@ -118,16 +118,12 @@
 /config/ixeris.toml
 /config/item_descriptions.toml
 /config/freecam.json5
-/config/viewboard-client.json
 /config/numismatics*
 /config/the_bumblezone*
-/config/tea_aroma*
 /config/exposure*
 /config/fieldguide*
 /config/better_respawn*
 /config/sophisticatedgui*
-/config/packdev_toolkit.json
 /config/spice_of_life_berry*
 /fieldguide_cache/
 *locomotionmap.json
-*panoptic*

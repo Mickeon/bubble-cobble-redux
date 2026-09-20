@@ -1,6 +1,6 @@
 {
     "name": "Bubble Cobble Redux",
-    "version": "2.0.0-alpha2",
+    "version": "2.0.0-alpha3",
     "description": "A pinch of Cobblemon, Create, Farmer's Delight, and a Bubble Pub aftertaste.",
     "author": "Mickeon",
     "overrides": [
@@ -44,15 +44,19 @@
         "!config/sodium-fingerprint.json",
         "!config/waterframes-client.toml",
 
-        "!**/jsconfig.json",
-        "!*/**.d.ts",
-        "!kubejs/config/probe-settings.json",
-        "!kubejs/config/web_server.json",
         "!config/highly_customizable_damage_numbers/README.txt",
         "!*/**.bak",
-        "!*/**.aseprite",
+
+        "!**/jsconfig.json",
         "!config/nbtac.txt",
         "!config/resource_explorer.json",
+        "!config/packdev_toolkit.json",
+        "!config/viewboard-client.json",
+        "!kubejs/config/probe-settings.json",
+        "!kubejs/config/web_server.json",
+        "!*panoptic*",
+        "!*/**.aseprite",
+        "!*/**.d.ts",
 
         "mods/copperagebackportduplicatematerialfix-neoforge-0.1.jar",
 
@@ -74,10 +78,8 @@
         "!config/ixeris.toml",
         "!config/item_descriptions.toml",
         "!config/freecam.json5",
-        "!config/viewboard-client.json",
         "!config/numismatics*",
         "!config/the_bumblezone*",
-        "!config/tea_aroma*",
         "!config/exposure*",
         "!config/fieldguide*",
         "!config/better_respawn*",
@@ -85,8 +87,7 @@
         "!config/packdev_toolkit.json",
         "!config/spice_of_life_berry*",
         "!fieldguide_cache/",
-        "!*locomotionmap.json",
-        "!*panoptic*"
+        "!*locomotionmap.json"
     ],
     "paths": {
         "resource_packs": "global_packs/resourcepacks",
@@ -94,16 +95,25 @@
         "shader_packs": "shaderpacks_dummy"
     },
     "projects": {
+        "atlasviewer": {
+            "export": false
+        },
         "nbt-autocomplete": {
             "export": false
         },
-        "resource_explorer": {
+        "packdev-toolkit": {
+            "export": false
+        },
+        "panoptic": {
             "export": false
         },
         "probejs": {
             "export": false
         },
-        "atlasviewer": {
+        "resource_explorer": {
+            "export": false
+        },
+        "viewboard": {
             "export": false
         },
 
