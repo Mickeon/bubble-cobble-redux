@@ -7242,6 +7242,48 @@
             ]
         },
         {
+            "pakku_id": "5AK13OHSDhg0lW7i",
+            "pakku_links": [
+                "gtM2xKuLocG4f3IH"
+            ],
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "modrinth": "passable-foliage"
+            },
+            "name": {
+                "modrinth": "Passable Foliage 🌳"
+            },
+            "id": {
+                "modrinth": "uaLW6JVR"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "PassableFoliage-1.21.1-NeoForge-9.3.1.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "beta",
+                    "url": "https://cdn.modrinth.com/data/uaLW6JVR/versions/WX7ZiJxz/PassableFoliage-1.21.1-NeoForge-9.3.1.jar",
+                    "id": "WX7ZiJxz",
+                    "parent_id": "uaLW6JVR",
+                    "hashes": {
+                        "sha512": "9eef704e15d305591e19900d1d0caafee7fd5a126c664b370fb472ffe8899e32b839ccd382951bd4262cd1337ec51b1e6be45663270d2d2285353a2c1b717a0f",
+                        "sha1": "14960a6af72d2dcd6d2058ab01a7e1f75d114f35"
+                    },
+                    "required_dependencies": [
+                        "ufdDoWPd"
+                    ],
+                    "size": 40065,
+                    "date_published": "2026-09-14T11:36:12.188887Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "NJpGzqzZnx7BbFR7",
             "type": "MOD",
             "side": "BOTH",
