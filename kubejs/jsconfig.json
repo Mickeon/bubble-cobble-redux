@@ -12,5 +12,12 @@
             "client_scripts"
         ],
         "target": "ES2015"
-    }
+    },
+    "include": [
+        "../.probe/@package/**/*.d.ts",
+        "../.probe/@side-only/client/**/*.d.ts",
+        "../.probe/@side-only/server/**/*.d.ts",
+        "../.probe/@side-only/startup/**/*.d.ts",
+        "../.probe/@special/**/*.d.ts"
+    ]
 }

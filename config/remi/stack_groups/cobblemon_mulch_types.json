@@ -1,0 +1,14 @@
+{
+  "type": "remi:group",
+  "id": "cobblemon:mulch_types",
+  "contents": [
+    "cobblemon:coarse_mulch",
+    "cobblemon:growth_mulch",
+    "cobblemon:humid_mulch",
+    "cobblemon:loamy_mulch",
+    "cobblemon:peat_mulch",
+    "cobblemon:rich_mulch",
+    "cobblemon:sandy_mulch",
+    "cobblemon:surprise_mulch"
+  ]
+}

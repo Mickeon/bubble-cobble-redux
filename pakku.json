@@ -83,6 +83,7 @@
         "!config/better_respawn*",
         "!config/sophisticatedgui*",
         "!config/packdev_toolkit.json",
+        "!config/spice_of_life_berry*",
         "!fieldguide_cache/",
         "!*locomotionmap.json",
         "!*panoptic*"

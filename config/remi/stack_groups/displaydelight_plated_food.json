@@ -1,0 +1,10 @@
+{
+  "type": "remi:regex",
+  "id": "displaydelight:plated_food",
+  "registry": "minecraft:item",
+  "regex": "^displaydelight:.*",
+  "exclusions": [
+    "displaydelight:food_plate",
+    "displaydelight:small_food_plate"
+  ]
+}

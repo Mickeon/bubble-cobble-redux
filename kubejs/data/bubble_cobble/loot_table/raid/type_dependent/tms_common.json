@@ -1,6 +1,7 @@
 {
-  "__comment1": "There should be entries for all moves divided by type, but for now this will do.",
-  "__comment2": "The current selection is entirely arbitrary",
+  "__comment1": "Somewhat, but not necessarily superseded by cobblemonraiddens:tm_type_function.",
+  "__comment2": "There should be entries for all moves divided by type, but for now this will do.",
+  "__comment3": "The current selection is entirely arbitrary",
   "type": "minecraft:chest",
   "pools": [
     {

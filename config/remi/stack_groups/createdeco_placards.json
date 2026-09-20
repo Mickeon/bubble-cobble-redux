@@ -1,0 +1,7 @@
+{
+  "type": "remi:tag",
+  "id": "createdeco:placards",
+  "tag": "createdeco:placards",
+  "registry": "minecraft:item",
+  "enabled": true
+}

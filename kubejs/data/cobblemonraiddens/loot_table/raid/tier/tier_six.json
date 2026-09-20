@@ -150,8 +150,13 @@
           "weight": 10
         },
         {
-          "type": "minecraft:loot_table",
-          "value": "bubble_cobble:raid/type_dependent/tms_rare",
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "cobblemonraiddens:tm_type_function"
+            }
+          ],
+          "name": "cobblemon:technical_machine",
           "weight": 10
         },
         {
