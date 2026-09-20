@@ -5,5 +5,6 @@
   "keybinds": {},
   "serverSettings": {},
   "titleScreenButton": true,
-  "renderNames": true
+  "renderNames": true,
+  "updateChecker": false
 }

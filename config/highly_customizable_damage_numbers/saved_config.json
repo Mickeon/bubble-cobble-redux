@@ -1,7 +1,7 @@
 {
   "enabled": 2,
   "criticalEnabled": 1,
-  "inGameConfigEnabled": true,
+  "inGameConfigEnabled": false,
   "numberScale": 1.5,
   "numberDuration": 14,
   "numberSeparation": -3,
