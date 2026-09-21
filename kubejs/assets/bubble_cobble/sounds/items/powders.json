@@ -17,7 +17,7 @@
     "cobblemon:charcoal_stick",
     "herbalbrews:herbal_infusion",
     "mynethersdelight:pepper_powder",
-    "rarcompat:mimi_dust"
+    "reliquified_artifacts:mimi_dust"
   ],
   "pitch": 2.0,
   "soundEvent": "minecraft:block.gravel.hit"

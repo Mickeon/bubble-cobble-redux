@@ -194,7 +194,7 @@ const ITEM_TAG_DISPLAY_INFO = [
 	{tag: "mynethersdelight:hot_spice", name: "Hot Spice", textures: ["mynethersdelight:item/bullet_pepper", "mynethersdelight:item/pepper_powder"]},
 	{tag: "mynethersdelight:stove_fire_fuel", name: "Stove Fire Fuel"},
 	{tag: "mynethersdelight:stuffed_hoglin_items", name: "Pieces of Stuffed Hoglin"},
-	{tag: "rarcompat:mimic_loot", name: "Released from Mimic"},
+	{tag: "reliquified_artifacts:mimic_loot", name: "Released from Mimic"},
 
 	{tag: "sophisticatedbackpacks:upgrade", name: "Backpack Upgrades"},
 	{tag: "sophisticatedstorage:all_storage", name: "All Storage"},

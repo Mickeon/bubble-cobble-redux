@@ -1,0 +1,10 @@
+{
+	"match": {
+		"type": [
+			"relics:constellation_star",
+			"relics:glitchy_illusion",
+			"relics:electric_spark"
+		]
+	},
+	"luminance": 5
+}

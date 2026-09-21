@@ -1,0 +1,8 @@
+{
+	"match": {
+		"type": [
+			"relics:falling_star"
+		]
+	},
+	"luminance": 15
+}

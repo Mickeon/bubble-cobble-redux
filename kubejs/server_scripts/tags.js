@@ -113,7 +113,7 @@ ServerEvents.tags("item", event => {
 		"create:powdered_obsidian",
 		"cobblemon:soft_sand",
 		"mynethersdelight:pepper_powder",
-		"rarcompat:mimi_dust",
+		"reliquified_artifacts:mimi_dust",
 	)
 	if (Platform.isLoaded("createmonballsoverhaul")) {
 		event.add("supplementaries:hourglass_dusts",

@@ -1,0 +1,8 @@
+{
+	"match": {
+		"type": [
+			"relics:roller_spark"
+		]
+	},
+	"luminance": 3
+}

@@ -268,7 +268,6 @@ ServerEvents.tags("item", event => {
 		"cobblemon:never_melt_ice",
 		"farmersdelight:glow_berry_custard",
 		"farmersdelight:melon_popsicle",
-		"relics:solid_snowball",
 		"mowziesmobs:ice_crystal",
 		"mynethersdelight:tear_popsicle",
 		"undergroundworlds:freezing_axe",

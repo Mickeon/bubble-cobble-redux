@@ -23,6 +23,6 @@
     }
   },
   "applies": [
-    {"id": "rarcompat:mimi_dust"}
+    {"id": "reliquified_artifacts:mimi_dust"}
   ]
 }

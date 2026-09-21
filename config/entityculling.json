@@ -14,7 +14,8 @@
   "entityWhitelist": [
     "botania:mana_burst",
     "drg_flares:drg_flares",
-    "quark:soul_bead"
+    "quark:soul_bead",
+    "relics:constellation_star"
   ],
   "tracingDistance": 128,
   "debugMode": false,
