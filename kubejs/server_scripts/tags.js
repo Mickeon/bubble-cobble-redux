@@ -111,13 +111,17 @@ ServerEvents.tags("item", event => {
 		"#biomeswevegone:glowcane_powder",
 		"#cobblemon:remedies",
 		"create:powdered_obsidian",
-		"createmonballsoverhaul:black_tumblestone_dust",
-		"createmonballsoverhaul:sky_tumblestone_dust",
-		"createmonballsoverhaul:tumblestone_dust",
 		"cobblemon:soft_sand",
 		"mynethersdelight:pepper_powder",
 		"rarcompat:mimi_dust",
 	)
+	if (Platform.isLoaded("createmonballsoverhaul")) {
+		event.add("supplementaries:hourglass_dusts",
+			"createmonballsoverhaul:black_tumblestone_dust",
+			"createmonballsoverhaul:sky_tumblestone_dust",
+			"createmonballsoverhaul:tumblestone_dust",
+		)
+	}
 	event.add("supplementaries:pancake_syrup", "create:chocolate_bucket")
 	event.add("supplementaries:causes_lightning_when_held", "constructionstick:copper_stick") // Funny.
 	if (Item.exists("minecraft:copper_sword")) {

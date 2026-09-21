@@ -303,51 +303,54 @@ ServerEvents.loaded(event => {
 		Block.getBlock("kubejs:chiseled_mud_bricks").defaultBlockState()
 	))
 
-	/** @typedef {import("@package/net/minecraft/world/level/material").$FluidState} $FluidState */
 
-	const fluid_rand = Utils.getRandom().fork()
+	if (Platform.isLoaded("createmonballsoverhaul")) {
+		/** @typedef {import("@package/net/minecraft/world/level/material").$FluidState} $FluidState */
 
-	$FluidInteractionRegistry.addInteraction(LAVA, new $InteractionInformation["(net.neoforged.neoforge.fluids.FluidType,java.util.function.Function)"](
-		Fluid.getType("createmonballsoverhaul:source_standard_tumblestone_coating").getFluidType(),
-		/** @param {$FluidState} fluid_state */ fluid_state => {
-			const chance = fluid_rand.nextDouble()
-			if (chance > 0.666) {
-				return Blocks.GRANITE.defaultBlockState()
-			}
-			if (chance > 0.333) {
-				return Blocks.DIORITE.defaultBlockState()
-			}
-			return Blocks.ANDESITE.defaultBlockState()
-		}
-	))
+		const fluid_rand = Utils.getRandom().fork()
 
-	$FluidInteractionRegistry.addInteraction(LAVA, new $InteractionInformation["(net.neoforged.neoforge.fluids.FluidType,java.util.function.Function)"](
-		Fluid.getType("createmonballsoverhaul:source_light_tumblestone_coating").getFluidType(),
-		/** @param {$FluidState} fluid_state */ fluid_state => {
-			const chance = fluid_rand.nextDouble()
-			if (chance > 0.666) {
-				return Blocks.CALCITE.defaultBlockState()
+		$FluidInteractionRegistry.addInteraction(LAVA, new $InteractionInformation["(net.neoforged.neoforge.fluids.FluidType,java.util.function.Function)"](
+			Fluid.getType("createmonballsoverhaul:source_standard_tumblestone_coating").getFluidType(),
+			/** @param {$FluidState} fluid_state */ fluid_state => {
+				const chance = fluid_rand.nextDouble()
+				if (chance > 0.666) {
+					return Blocks.GRANITE.defaultBlockState()
+				}
+				if (chance > 0.333) {
+					return Blocks.DIORITE.defaultBlockState()
+				}
+				return Blocks.ANDESITE.defaultBlockState()
 			}
-			if (chance > 0.333) {
-				return Blocks.TUFF.defaultBlockState()
-			}
-			return Block.getBlock("biomeswevegone:dacite").defaultBlockState()
-		}
-	))
+		))
 
-	$FluidInteractionRegistry.addInteraction(LAVA, new $InteractionInformation["(net.neoforged.neoforge.fluids.FluidType,java.util.function.Function)"](
-		Fluid.getType("createmonballsoverhaul:source_dense_tumblestone_coating").getFluidType(),
-		/** @param {$FluidState} fluid_state */ fluid_state => {
-			const chance = fluid_rand.nextDouble()
-			if (chance > 0.666) {
-				return Block.getBlock("arts_and_crafts:soapstone").defaultBlockState()
+		$FluidInteractionRegistry.addInteraction(LAVA, new $InteractionInformation["(net.neoforged.neoforge.fluids.FluidType,java.util.function.Function)"](
+			Fluid.getType("createmonballsoverhaul:source_light_tumblestone_coating").getFluidType(),
+			/** @param {$FluidState} fluid_state */ fluid_state => {
+				const chance = fluid_rand.nextDouble()
+				if (chance > 0.666) {
+					return Blocks.CALCITE.defaultBlockState()
+				}
+				if (chance > 0.333) {
+					return Blocks.TUFF.defaultBlockState()
+				}
+				return Block.getBlock("biomeswevegone:dacite").defaultBlockState()
 			}
-			if (chance > 0.333) {
-				return Block.getBlock("arts_and_crafts:beige_pietraforte").defaultBlockState()
+		))
+
+		$FluidInteractionRegistry.addInteraction(LAVA, new $InteractionInformation["(net.neoforged.neoforge.fluids.FluidType,java.util.function.Function)"](
+			Fluid.getType("createmonballsoverhaul:source_dense_tumblestone_coating").getFluidType(),
+			/** @param {$FluidState} fluid_state */ fluid_state => {
+				const chance = fluid_rand.nextDouble()
+				if (chance > 0.666) {
+					return Block.getBlock("arts_and_crafts:soapstone").defaultBlockState()
+				}
+				if (chance > 0.333) {
+					return Block.getBlock("arts_and_crafts:beige_pietraforte").defaultBlockState()
+				}
+				return Block.getBlock("arts_and_crafts:gypsum").defaultBlockState()
 			}
-			return Block.getBlock("arts_and_crafts:gypsum").defaultBlockState()
-		}
-	))
+		))
+	}
 
 	// console.log(`There are ${interactions.size()} fluids with registered interactions:`)
 	// interactions.forEach((fluid_type, list) => {
