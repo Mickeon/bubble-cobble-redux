@@ -6357,10 +6357,7 @@
             ]
         },
         {
-            "pakku_id": "KphMvbZ04mzJEflD",
-            "pakku_links": [
-                "msCBFrruFRAH4aSI"
-            ],
+            "pakku_id": "2y37EyBntQmzdOlO",
             "type": "MOD",
             "side": "CLIENT",
             "slug": {
@@ -6375,7 +6372,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "mod-sets-2.1.1.jar",
+                    "file_name": "mod-sets-2.1.3.jar",
                     "mc_versions": [
                         "1.20.1",
                         "1.21",
@@ -6397,18 +6394,18 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/b313lC4Y/versions/Dh2cK33k/mod-sets-2.1.1.jar",
-                    "id": "Dh2cK33k",
+                    "url": "https://cdn.modrinth.com/data/b313lC4Y/versions/2GylkeX3/mod-sets-2.1.3.jar",
+                    "id": "2GylkeX3",
                     "parent_id": "b313lC4Y",
                     "hashes": {
-                        "sha512": "f14cbe6619a6dcdbca110d1c2891932d0e474d0b4d3df944e183456979ee116cb2b3b5727b8046dceb9064193f89249dab81307492e01f30f996092d69b18e16",
-                        "sha1": "dcc24f58d13ba298f29c7c8a753d35680e469224"
+                        "sha512": "bac07aea4c63d3716ed1181c72cc78e912237f66b56414f52a8a90c533b08c2cb53761fc814a97e2c587146e220d92c385daea8d49c09d64bb633e63d6e947a6",
+                        "sha1": "7da6bd5c8a667fcd04f38168f5686a72734a4989"
                     },
                     "required_dependencies": [
                         "FFeAJNCx"
                     ],
-                    "size": 214435,
-                    "date_published": "2026-01-27T11:18:33.461843Z"
+                    "size": 213895,
+                    "date_published": "2026-01-28T13:22:38.916199Z"
                 }
             ]
         },
@@ -7860,7 +7857,7 @@
             ]
         },
         {
-            "pakku_id": "msCBFrruFRAH4aSI",
+            "pakku_id": "dextJGOH1DodvjOR",
             "type": "MOD",
             "side": "CLIENT",
             "slug": {
@@ -7875,10 +7872,9 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "preloading-tricks-3.5.1.jar",
+                    "file_name": "preloading-tricks-3.7.3.jar",
                     "mc_versions": [
                         "1.20.1",
-                        "1.21",
                         "1.21.1",
                         "1.21.2",
                         "1.21.3",
@@ -7889,7 +7885,10 @@
                         "1.21.8",
                         "1.21.9",
                         "1.21.10",
-                        "1.21.11"
+                        "1.21.11",
+                        "26.1",
+                        "26.1.1",
+                        "26.1.2"
                     ],
                     "loaders": [
                         "fabric",
@@ -7897,16 +7896,18 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/FFeAJNCx/versions/5z0FLmX7/preloading-tricks-3.5.1.jar",
-                    "id": "5z0FLmX7",
+                    "url": "https://cdn.modrinth.com/data/FFeAJNCx/versions/2XxN0NBv/preloading-tricks-3.7.3.jar",
+                    "id": "2XxN0NBv",
                     "parent_id": "FFeAJNCx",
                     "hashes": {
-                        "sha512": "2ee88b4ec9de1b0dc0eb9c90ef9a1bfb3ee4435295d02392ed391b8eabc6813dc161b6e25d2a30724b9931eaa060b46f9864308343c23d4b3f91361df4b5b159",
-                        "sha1": "42b11645219c02eea0b7ed9d9bf257e8f5274313"
+                        "sha512": "2c6b82a25de6cb12085f3194eab5dfae3f1a3a89fa1b29d66974de1b4fc756de628c86bfcf6b5193104cdc2d1ca993a77491b0169fdca944bcb19d275539b08d",
+                        "sha1": "bc8e412214a676d6c42b98037f01837928e605a8"
                     },
-                    "required_dependencies": [],
-                    "size": 1879304,
-                    "date_published": "2026-01-26T11:27:14.191103Z"
+                    "required_dependencies": [
+                        "P7dR8mSH"
+                    ],
+                    "size": 1759406,
+                    "date_published": "2026-06-29T05:42:32.975573Z"
                 }
             ]
         },
