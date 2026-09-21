@@ -9878,6 +9878,48 @@
             ]
         },
         {
+            "pakku_id": "nNHb5Eg3ZLdwCNsY",
+            "type": "MOD",
+            "side": "CLIENT",
+            "slug": {
+                "modrinth": "spawn-egg-preview"
+            },
+            "name": {
+                "modrinth": "Spawn Egg Preview"
+            },
+            "id": {
+                "modrinth": "T8dZAbPl"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "eggpreview-neoforge-1.21-1.0.jar",
+                    "mc_versions": [
+                        "1.21",
+                        "1.21.1",
+                        "1.21.2",
+                        "1.21.3",
+                        "1.21.4",
+                        "1.21.5"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/T8dZAbPl/versions/N0mXgfhd/eggpreview-neoforge-1.21-1.0.jar",
+                    "id": "N0mXgfhd",
+                    "parent_id": "T8dZAbPl",
+                    "hashes": {
+                        "sha512": "e9412a9a0047476838cfe29cf2f876d309f20e71c680aae2592d5a4f049b7812b43626dbfc0380ac299dc98f660523f72374aecc7f07d36eb632574cc13b7346",
+                        "sha1": "b9f6ba3b68086cff21864926fb9d0f8c01d98ef9"
+                    },
+                    "required_dependencies": [],
+                    "size": 27098,
+                    "date_published": "2025-09-16T11:36:06.497098Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "U35ZwAVmYTnsLR0c",
             "type": "MOD",
             "side": "BOTH",

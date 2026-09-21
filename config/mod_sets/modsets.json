@@ -2,6 +2,7 @@
   "development_set": {
     "mods": [
       "atlasviewer",
+      "eggpreview",
       "nbtac",
       "packdev_toolkit",
       "panoptic",

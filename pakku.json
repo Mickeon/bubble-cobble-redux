@@ -98,6 +98,9 @@
         "atlasviewer": {
             "export": false
         },
+        "eggpreview": {
+            "export": false
+        },
         "nbt-autocomplete": {
             "export": false
         },
