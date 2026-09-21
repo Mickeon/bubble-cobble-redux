@@ -40,7 +40,6 @@ mod_parents = [
 	"!farmersdelight=brewinandchewin, sliceanddice, displaydelight, minersdelight, mynethersdelight, repurposed_structures_farmers_delight_compat",
 	"!mowziesmobs=geckolib",
 	"!relics=curios, reliquified_artifacts",
-	"!ribbits=wanderer_ribbit",
 	"!voicechat=cpmsvcc, voicechat_api",
 	"!sophisticatedbackpacks=accessories, curios, sophisticatedbackpackscreateintegration, sophisticatedcore, sophisticateditemactions, sophisticatedfix, sophisticatedsorter",
 	"!sophisticatedstorage=sophisticatedcore, sophisticateditemactions, sophisticatedstoragecreateintegration, sophisticatedfix, sophisticatedsorter",

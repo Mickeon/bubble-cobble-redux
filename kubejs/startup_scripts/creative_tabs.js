@@ -293,10 +293,6 @@ remove_and_merge_into_tab("bits_n_bobs:bnb_based", "create:base", [
 	"bits_n_bobs:red_chair",
 ])
 
-StartupEvents.modifyCreativeTab("ribbits:general", event => {
-	event.add("wanderer_ribbit:wanderer_ribbit_spawn_egg")
-	event.addAfter("ribbits:maraca", ["wanderer_ribbit:umbrellaleaf", "wanderer_ribbit:ribbit_map"])
-})
 StartupEvents.modifyCreativeTab("minecraft:tools_and_utilities", event => {
 	event.remove("minecraft:bundle") // In case its experimental datapack is enabled.
 	event.add("minecraft:bundle")

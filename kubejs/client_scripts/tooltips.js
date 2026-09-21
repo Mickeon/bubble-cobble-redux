@@ -269,7 +269,6 @@ ItemEvents.modifyTooltips(event => {
 	})
 
 	event.add("#constructionstick:construction_sticks", Text.translate("Press %s to to open the GUI", [Text.keybind("key.constructionstick.open_gui").white()]).color(MASCOT_COLOR_DARK))
-	event.add(["wanderer_ribbit:umbrellaleaf"], [subtle("Weee!")])
 
 	// Fix Sophisticated Backpack's Inventory Interaction Upgrades descriptions being misleading.
 	// They say "sneak right clicked inventory" but it's actually a keybind.

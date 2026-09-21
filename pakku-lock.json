@@ -10794,52 +10794,6 @@
             ]
         },
         {
-            "pakku_id": "y1vdp4uDBWp3JtYJ",
-            "pakku_links": [
-                "2Cn75Uo30hV2uKd7",
-                "11Iu0ReALqttlnNm",
-                "VdaMvMbtfhQQ5wmg"
-            ],
-            "type": "MOD",
-            "side": "BOTH",
-            "slug": {
-                "modrinth": "wandering-ribbit"
-            },
-            "name": {
-                "modrinth": "Wandering Ribbit"
-            },
-            "id": {
-                "modrinth": "qYSYk2ef"
-            },
-            "files": [
-                {
-                    "type": "modrinth",
-                    "file_name": "wandering_ribbit-3.0.0-neoforge-1.21.1.jar",
-                    "mc_versions": [
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/qYSYk2ef/versions/bApJTSYs/wandering_ribbit-3.0.0-neoforge-1.21.1.jar",
-                    "id": "bApJTSYs",
-                    "parent_id": "qYSYk2ef",
-                    "hashes": {
-                        "sha512": "9a5f3c8b13a4613a5a8789e643aaa6d0770fa532a892db2704d64c965329953c67e3aa3299507cb478c9627338326bd38c37c1aa32f8a974c5643243e899fe21",
-                        "sha1": "e40c02ce55cb01378567ba249328dbab212a2597"
-                    },
-                    "required_dependencies": [
-                        "8YcE8y4T",
-                        "8BmcQJ2H",
-                        "Ua7DFN59"
-                    ],
-                    "size": 413386,
-                    "date_published": "2025-10-29T23:57:02.687924Z"
-                }
-            ]
-        },
-        {
             "pakku_id": "PD2X9u5tSaSSD6nW",
             "pakku_links": [
                 "kJibdfMn8kloy8Oq"
