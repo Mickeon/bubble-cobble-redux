@@ -1,0 +1,7 @@
+{
+	"type": "emi:info",
+	"stacks": [
+		{"type": "item", "id": "relics:experience_disperser"}
+	],
+	"text": "Can be found as loot generally anywhere."
+}

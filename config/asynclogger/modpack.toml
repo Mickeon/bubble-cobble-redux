@@ -22,6 +22,9 @@
 		"copycats-neoforge.mixins.json:foundation.copycat.CopycatBlockMixin",
 		# The modpack's aliases are not localized and that's okay.
 		"[EMI] Untranslated alias",
+		# Relics missed some frames of animation, which causes GeckoLib to complain.
+		# Not only that, they're not resolving the path of Artifact's borders properly.
+		"relics:textures/gui/tooltip"
 	]
 	# Messages that match the specified regexes will be filtered out and not logged.
 	regexes = []

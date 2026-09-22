@@ -1,10 +1,8 @@
 {
 	"type": "emi:info",
 	"stacks": [
-		{"type": "item", "id": "relics:amphibian_boot"},
-		{"type": "item", "id": "relics:aqua_walker"},
-		{"type": "item", "id": "relics:drowned_belt"},
-		{"type": "item", "id": "relics:jellyfish_necklace"}
+		{"type": "item", "id": "relics:jellyfish_necklace"},
+		{"type": "item", "id": "relics:cut_glass_boot"}
 	],
-	"text": "Can be found in oceans, beaches, and rivers."
+	"text": "Can be found as loot in oceans, beaches, and similar aquatic places."
 }

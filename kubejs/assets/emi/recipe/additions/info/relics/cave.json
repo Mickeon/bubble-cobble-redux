@@ -1,0 +1,7 @@
+{
+	"type": "emi:info",
+	"stacks": [
+		{"type": "item", "id": "relics:rider_flute"}
+	],
+	"text": "Can be found as loot way down caves, chambers, and similar subterranean places."
+}

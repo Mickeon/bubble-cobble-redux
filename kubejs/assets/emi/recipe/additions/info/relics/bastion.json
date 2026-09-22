@@ -1,7 +1,7 @@
 {
 	"type": "emi:info",
 	"stacks": [
-		{"type": "item", "id": "relics:bastion_ring"}
+		{"type": "item", "id": "relics:piglin_mask"}
 	],
-	"text": "Can be found in Piglin settlements and bastions."
+	"text": "Can be found as loot in Piglin settlements and bastions."
 }

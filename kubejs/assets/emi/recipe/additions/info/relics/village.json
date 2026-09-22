@@ -1,0 +1,9 @@
+{
+	"type": "emi:info",
+	"stacks": [
+		{"type": "item", "id": "relics:hunting_belt"},
+		{"type": "item", "id": "relics:chef_hat"},
+		{"type": "item", "id": "relics:rider_flute"}
+	],
+	"text": "Can be found as loot in villages and Pillager outposts."
+}

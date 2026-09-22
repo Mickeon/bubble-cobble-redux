@@ -1,10 +1,11 @@
 {
 	"type": "emi:info",
 	"stacks": [
-		{"type": "item", "id": "relics:chorus_inhibitor"},
-		{"type": "item", "id": "relics:enders_hand"},
-		{"type": "item", "id": "relics:midnight_robe"},
-		{"type": "item", "id": "relics:shadow_glaive"}
+		{"type": "item", "id": "relics:kinetic_belt"},
+		{"type": "item", "id": "relics:midnight_mantle"},
+		{"type": "item", "id": "relics:chorus_staff"},
+		{"type": "item", "id": "relics:clot_of_time"},
+		{"type": "item", "id": "relics:glitchy_mantle"}
 	],
-	"text": "Can be found in strongholds and the End."
+	"text": "Can be found as loot in the End, strongholds, and similar transcending places."
 }

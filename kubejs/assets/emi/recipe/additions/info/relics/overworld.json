@@ -1,9 +1,7 @@
 {
 	"type": "emi:info",
 	"stacks": [
-		{"type": "item", "id": "relics:hunter_belt"},
-		{"type": "item", "id": "relics:leather_belt"},
-		{"type": "item", "id": "relics:roller_skates"}
+		{"type": "item", "id": "relics:roller_skate"}
 	],
-	"text": "Can be found in any Loot Chest in the Overworld."
+	"text": "Can be found as loot anywhere in the Overworld."
 }

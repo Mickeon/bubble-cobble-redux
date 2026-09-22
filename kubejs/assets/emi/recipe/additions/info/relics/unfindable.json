@@ -1,7 +1,0 @@
-{
-	"type": "emi:info",
-	"stacks": [
-		{"type": "item", "id": "relics:leafy_ring"}
-	],
-	"text": "Cannot normally be found anywhere."
-}
