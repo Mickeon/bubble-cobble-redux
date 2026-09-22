@@ -133,6 +133,7 @@
         "editor.insertSpaces": false
     },
     "search.exclude": {
+        "/.probe/": true,
         "/logs/": true,
         "/emi.json": true,
         "/.vscode/probejs.code-snippets": true,
