@@ -75,10 +75,6 @@
     {
       "structure": "underground_bunkers:minor_structures",
       "factor": 3.0
-    },
-    {
-      "structure": "luistercorp:tiendas",
-      "factor": 4.0
     }
   ]
 }

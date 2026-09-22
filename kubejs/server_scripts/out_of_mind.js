@@ -46,9 +46,7 @@ ServerEvents.generateData("after_mods", event => {
 		"constructionstick:advancement/recipes/misc/template_battery",
 		"constructionstick:advancement/recipes/misc/template_destruction",
 		"constructionstick:advancement/recipes/misc/template_replacement",
-		"constructionstick:advancement/recipes/misc/template_unbreakable",
-		"luistercorp:advancement/troncos/tiendas",
-		"luistercorp:advancement/troncos/troncos",
+		"constructionstick:advancement/recipes/misc/template_unbreakable"
 	]) {
 		event.json(advancement_id, {
 			criteria: {

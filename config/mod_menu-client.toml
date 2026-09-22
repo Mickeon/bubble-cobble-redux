@@ -50,7 +50,7 @@ mod_parents = [
 	"!armorstatues=statuemenus",
 	"-Quality_of_Life=advancements_reloaded, appleskin, armorstatues, betterf3, bridgingmod, carryon, cleanertooltips, clientdoubledoors, clutternomore, constructionstick, controlling, craftingtweaks, crawl, drizzleproof, explorerscompass, extendedhotbar, firespreadtweaks, gag, gravestone, treechop, invmove, jade, justhammers, mendingrework, mousetweaks, naturescompass, nbtedit, notenoughcrashes, one_click_join, persistentcreativeinventory, persistentinventorysearch, polymorph, rrls, searchstats, smalldoubling, sneaky_link, sortedcreativetabs, soulbound, usefulspyglass, via_romana, yo_hooks, easybuilding",
 	"-Visuals_and_Sound=smoothskies, simplefog, advancementplaques, arrowtrails, beb, beautiful_potions, chunksfadein, colorfulhearts, effectdescriptions, emojis, enchdesc, guitween, highly_customizable_damage_numbers, item_interactions_mod, lambdynlights, more_sounds, notenoughanimations, particlerain, particular, seasonalambiance, sound_physics_remastered, sounds, tipsmod",
-	"-World_Generation=awesomedungeon, awesomedungeonocean, biomesoplenty, mr_dungeons_andtaverns, mr_fallen_logs, mr_minecraft_movie_structures, mns, mvs, mss, biomeswevegone, repurposed_structures, sparsestructures, temperaturebands, the_bumblezone, underground_bunkers, undergroundworlds, bettercaves, yungscavebiomes, yungsextras",
+	"-World_Generation=awesomedungeon, awesomedungeonocean, biomesoplenty, mr_dungeons_andtaverns, mns, mvs, mss, biomeswevegone, repurposed_structures, sparsestructures, temperaturebands, the_bumblezone, underground_bunkers, undergroundworlds, bettercaves, yungscavebiomes, yungsextras",
 	"!waterframes=watermedia, watermedia_youtube_plugin, watervision"
 ]
 

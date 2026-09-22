@@ -396,7 +396,6 @@ ServerEvents.tags("worldgen/structure", event => {
 	event.add("supplementaries:road_sign_destinations",
 		"#biomeswevegone:prairie_houses",
 		"ribbits:ribbit_village",
-		"luistercorp:lava_chicken",
 		"mss:white_house", "mss:calcite_house", "mss:diorite_house", "mss:spruce_huts",
 		"mvs:cartographer_tower", "mvs:house", "mvs:tall_house", "mvs:azelea_house", "mvs:warped_house", "mvs:deepslate_house",
 	)
