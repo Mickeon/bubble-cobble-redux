@@ -1,0 +1,92 @@
+{
+  "modifiers": [
+    "bubble_cobble:disable_biome_spawn_settings",
+    {
+      "type": "enhancedcelestials2core:glow_color",
+      "settings": {
+        "color": "#FF99FF",
+        "glow_intensity": 10.0
+      }
+    },
+    {
+      "type": "enhancedcelestials2core:mob_effects",
+      "settings": {
+        "effects": [
+          {
+            "filter": {
+              "type": "corgilib:conditions_pass",
+              "filters": [
+                {
+                  "type": "corgilib:is_type",
+                  "id": "minecraft:player"
+                },
+                {
+                  "type": "corgilib:see_sky_at"
+                }
+              ]
+            },
+            "mob_effect": {
+              "ambient": true,
+              "amplifier": 0,
+              "duration_in_ticks": 300,
+              "effect": "brewinandchewin:sweet_heart",
+              "show_icon": false,
+              "visible": false
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "enhancedcelestials2core:moon_texture",
+      "settings": {
+        "texture_location": "bubble_cobble:textures/environment/pleading_moon.png"
+      }
+    },
+    {
+      "type": "enhancedcelestials2core:name_color",
+      "settings": {
+        "color": "#cccc33"
+      }
+    },
+    {
+      "type": "enhancedcelestials2core:sky_light_color",
+      "settings": {
+        "color": "FFFF22"
+      }
+    },
+    {
+      "type": "enhancedcelestials2core:sound_track",
+      "settings": {
+        "sound_track": {
+          "sound_id": "enhancedcelestials2defaultlunarevents:blue_moon"
+        }
+      }
+    },
+    {
+      "type": "enhancedcelestials2core:text_components",
+      "settings": {
+        "components": {
+          "start_notification": {
+            "component": {
+              "key": "The Moon blazes the night sky with pleading stupor 🥺",
+              "style": {
+                "color": "#bbbb88"
+              }
+            },
+            "type": "CHAT"
+          },
+          "end_notification": {
+            "component": {
+              "key": "I\u0027m going to bed. 😳 Good night, see you tomorrow.",
+              "style": {
+                "color": "#bbbb88"
+              }
+            },
+            "type": "CHAT"
+          }
+        }
+      }
+    }
+  ]
+}

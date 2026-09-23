@@ -1,0 +1,79 @@
+{
+  "modifiers": [
+    {
+      "type": "enhancedcelestials2core:sky_light_color",
+      "settings": {
+        "color": "F2A7EC"
+      }
+    },
+    {
+      "type": "enhancedcelestials2core:moon_size",
+      "settings": {
+        "moon_size": 30.0
+      }
+    },
+    {
+      "type": "enhancedcelestials2core:moon_texture",
+      "settings": {
+        "texture_location": "bubble_cobble:textures/environment/pride_moon.png"
+      }
+    },
+    {
+      "type": "enhancedcelestials2core:mob_effects",
+      "settings": {
+        "effects": [
+          {
+            "filter": {
+              "type": "corgilib:conditions_pass",
+              "filters": [
+                {
+                  "type": "corgilib:is_type",
+                  "id": "minecraft:player"
+                }
+              ]
+            },
+            "mob_effect": {
+              "ambient": true,
+              "amplifier": 0,
+              "duration_in_ticks": 300,
+              "effect": "kubejs:girl_power",
+              "show_icon": true,
+              "visible": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "enhancedcelestials2core:text_components",
+      "settings": {
+        "components": {
+          "start_notification": {
+            "component": {
+              "key": "The Moon comes out of the closet and shows its true colors.\nEveryone can Girl Power Dash!",
+              "style": {
+                "color": "#f2a7ec"
+              }
+            },
+            "type": "CHAT"
+          },
+          "end_notification": {
+            "component": {
+              "key": "Pack it up, it\u0027s July 1st.",
+              "style": {
+                "color": "#f2a7ec"
+              }
+            },
+            "type": "CHAT"
+          }
+        }
+      }
+    },
+    {
+      "type": "enhancedcelestials2core:name_color",
+      "settings": {
+        "color": "#f2a7ec"
+      }
+    }
+  ]
+}

@@ -1,0 +1,268 @@
+{
+  "modifiers": [
+    "bubble_cobble:force_surface_spawning",
+    {
+      "type": "enhancedcelestials2core:sky_light_color",
+      "settings": {
+        "color": "#FFDFDF"
+      }
+    },
+    {
+      "type": "enhancedcelestials2core:moon_texture",
+      "settings": {
+        "texture_location": "bubble_cobble:textures/environment/ghostbusters.png"
+      }
+    },
+    {
+      "type": "enhancedcelestials2core:sound_track",
+      "settings": {
+        "sound_track": {
+          "sound_id": "bubble_cobble:ghostbusters_moon"
+        }
+      }
+    },
+    {
+      "type": "enhancedcelestials2core:mob_spawn_settings",
+      "settings": {
+        "spawn_settings": {
+          "spawn_costs": {
+            "minecraft:enderman": {
+              "energy_budget": 1.0,
+              "charge": 1.0
+            },
+            "minecraft:spider": {
+              "energy_budget": 1.0,
+              "charge": 1.0
+            }
+          },
+          "spawners": {
+            "ambient": [],
+            "axolotls": [],
+            "creature": [],
+            "misc": [],
+            "monster": [
+              {
+                "type": "minecraft:enderman",
+                "weight": 40,
+                "minCount": 1,
+                "maxCount": 3
+              }
+            ],
+            "underground_water_creature": [],
+            "water_ambient": [],
+            "water_creature": []
+          }
+        }
+      }
+    },
+    {
+      "type": "enhancedcelestials2core:mob_effects",
+      "settings": {
+        "effects": [
+          {
+            "filter": {
+              "type": "corgilib:conditions_pass",
+              "filters": [
+                {
+                  "type": "corgilib:is_type",
+                  "id": "minecraft:player"
+                },
+                {
+                  "type": "corgilib:see_sky_at"
+                }
+              ]
+            },
+            "mob_effect": {
+              "ambient": true,
+              "amplifier": 0,
+              "duration_in_ticks": 60,
+              "effect": "minecraft:unluck",
+              "show_icon": false,
+              "visible": true
+            }
+          },
+          {
+            "filter": {
+              "type": "corgilib:conditions_pass",
+              "filters": [
+                {
+                  "type": "corgilib:is_type",
+                  "id": "minecraft:player"
+                },
+                {
+                  "type": "corgilib:see_sky_at"
+                }
+              ]
+            },
+            "mob_effect": {
+              "ambient": false,
+              "amplifier": 1,
+              "duration_in_ticks": 60,
+              "effect": "brewinandchewin:intoxication",
+              "show_icon": false,
+              "visible": true
+            }
+          },
+          {
+            "filter": {
+              "type": "corgilib:any_conditions_passes",
+              "filters": [
+                {
+                  "type": "corgilib:is_type",
+                  "id": "minecraft:player"
+                },
+                {
+                  "type": "corgilib:is_type",
+                  "id": "minecraft:chicken"
+                },
+                {
+                  "type": "corgilib:is_type",
+                  "id": "minecraft:spider"
+                },
+                {
+                  "type": "corgilib:is_type_tag",
+                  "tag": "#minecraft:undead"
+                },
+                {
+                  "type": "corgilib:is_type_tag",
+                  "tag": "#minecraft:illager"
+                }
+              ]
+            },
+            "mob_effect": {
+              "ambient": false,
+              "amplifier": 10,
+              "duration_in_ticks": 100,
+              "effect": "minecraft:infested",
+              "show_icon": false,
+              "visible": true
+            }
+          },
+          {
+            "filter": {
+              "type": "corgilib:conditions_pass",
+              "filters": [
+                {
+                  "type": "corgilib:see_sky_at"
+                }
+              ]
+            },
+            "mob_effect": {
+              "ambient": true,
+              "amplifier": 1,
+              "duration_in_ticks": 100,
+              "effect": "minecraft:resistance",
+              "show_icon": false,
+              "visible": true
+            }
+          },
+          {
+            "filter": {
+              "type": "corgilib:conditions_pass",
+              "filters": [
+                {
+                  "type": "corgilib:is_dead_or_dying"
+                },
+                {
+                  "type": "corgilib:see_sky_at"
+                }
+              ]
+            },
+            "mob_effect": {
+              "ambient": true,
+              "amplifier": 5,
+              "duration_in_ticks": 10,
+              "effect": "minecraft:levitation",
+              "show_icon": false,
+              "visible": true
+            }
+          },
+          {
+            "filter": {
+              "type": "corgilib:conditions_pass",
+              "filters": [
+                {
+                  "type": "corgilib:last_injurer_has",
+                  "conditions_to_apply": [
+                    {
+                      "type": "corgilib:any"
+                    }
+                  ]
+                },
+                {
+                  "type": "corgilib:flipped",
+                  "condition_to_flip": {
+                    "type": "corgilib:is_swimming"
+                  }
+                },
+                {
+                  "type": "corgilib:see_sky_at"
+                },
+                {
+                  "type": "corgilib:any_conditions_passes",
+                  "filters": [
+                    {
+                      "type": "corgilib:is_type",
+                      "id": "minecraft:player"
+                    },
+                    {
+                      "type": "corgilib:is_mob_category",
+                      "mob_category": "creature"
+                    },
+                    {
+                      "type": "corgilib:is_mob_category",
+                      "mob_category": "monster"
+                    },
+                    {
+                      "type": "corgilib:is_type_tag",
+                      "tag": "#minecraft:illager"
+                    }
+                  ]
+                }
+              ]
+            },
+            "mob_effect": {
+              "ambient": true,
+              "amplifier": 0,
+              "duration_in_ticks": 100,
+              "effect": "create_bic_bit:oiled_up",
+              "show_icon": false,
+              "visible": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "enhancedcelestials2core:text_components",
+      "settings": {
+        "components": {
+          "start_notification": {
+            "component": {
+              "key": "I got food poisoned. That made me angry.\nSo I called the ghostbuster:\n\"Hey ghostbuster man, modpack have a ghost in the Overworld. What da fuck. Ow. You tell them! Get down to modpeck, and use the Gun.\". The WORLD HAVE A GHOST-\n*gasp*-",
+              "style": {
+                "color": "#cc6666"
+              }
+            },
+            "type": "CHAT"
+          },
+          "end_notification": {
+            "component": {
+              "key": "I need to get milk, I need milk for my cereal.\nThere is no cow in my freaking world, so I get pissed.\nThis modpack has nothing to do with Ghostbusters.",
+              "style": {
+                "color": "#cc6666"
+              }
+            },
+            "type": "CHAT"
+          }
+        }
+      }
+    },
+    {
+      "type": "enhancedcelestials2core:name_color",
+      "settings": {
+        "color": "#cc6666"
+      }
+    }
+  ]
+}

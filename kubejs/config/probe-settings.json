@@ -12,7 +12,8 @@
         "probejs",
         "lootjs",
         "cobblemon",
-        "create"
+        "create",
+        "enhancedcelestials2core"
     ],
     "probejs.hintsForLLM": false,
     "probejs.reset": false

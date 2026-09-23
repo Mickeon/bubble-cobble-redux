@@ -1,4 +1,4 @@
-// requires: enhancedcelestials
+// requires: enhancedcelestials2core
 
 // Do not ever spawn Slimes or Bats naturally in Flat World.
 const NO_FLAT_WORLD_MOBS = ["minecraft:slime", "minecraft:bat"]
@@ -11,11 +11,11 @@ NO_FLAT_WORLD_MOBS.forEach(entity_type => {
 })
 
 // https://github.com/CorgiTaco-MC/Enhanced-Celestials/blob/1.21.X/Common/src/main/java/dev/corgitaco/enhancedcelestials/lunarevent/EnhancedCelestialsLunarForecastWorldData.java
-let $EnhancedCelestials = Java.loadClass("dev.corgitaco.enhancedcelestials.EnhancedCelestials")
+let $EnhancedCelestials = Java.loadClass("dev.corgitaco.enhancedcelestials2core.EnhancedCelestials")
 
 function is_lunar_event_happening(level) {
 	const forecast = $EnhancedCelestials.lunarForecastWorldData(level).orElse(null)
-	return forecast && forecast.currentLunarEventHolder().is(forecast.getDimensionSettings().defaultEvent())
+	return forecast && !forecast.currentLunarEventHolder().is(forecast.getDimensionSettings().defaultEvent())
 }
 
 // Do not spawn most hostiles naturally under the skylight.
@@ -46,7 +46,7 @@ NO_SKY_LIGHT_MOBS.forEach(entity_type => {
 	EntityEvents.checkSpawn(entity_type, event => {
 		if (event.level.isOverworld() && event.block.getSkyLight() >= 1 && event.type == "NATURAL") {
 			if (event.block.getSkyLight() <= 7 && is_lunar_event_happening(event.level)) {
-				// console.log("Ignoring most sky light spawn rules, there's a Lunar Event happening")
+				// console.log(`Letting ${event.entity.type} spawn, with more sky light: there's a Lunar Event happening`)
 				return
 			}
 			// console.log(`Trying to spawn ${event.entity.type}, but can't under the sky light!`)

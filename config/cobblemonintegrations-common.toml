@@ -8,12 +8,6 @@
 	#Allowed Values: NAME, POKEMON, BOTH
 	pokemonHideMode = "BOTH"
 
-[enhancedcelestials]
-	#Most Enhanced Celestials configuration for Cobblemon Integrations must be done via Datapack.
-	#
-	#Should Lunar Event reward modifiers apply in PvP battles?
-	applyInPvP = false
-
 [jade]
 	#Should Jade show the mimicked block instead of revealing habitat blocks.
 	hideHabitatBlocks = true

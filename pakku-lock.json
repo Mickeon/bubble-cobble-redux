@@ -4146,22 +4146,26 @@
             ]
         },
         {
-            "pakku_id": "2U0AeNP6pjvdJEqV",
+            "pakku_id": "mhZm76WFjJAVmqo7",
+            "pakku_links": [
+                "ods2Z3mv1AS2lsgi",
+                "vgaWWHyWW9rmF3JQ"
+            ],
             "type": "MOD",
             "side": "BOTH",
             "slug": {
-                "modrinth": "enhanced-celestials"
+                "modrinth": "enhanced-celestials-2-core"
             },
             "name": {
-                "modrinth": "Enhanced Celestials"
+                "modrinth": "Enhanced Celestials 2: Core"
             },
             "id": {
-                "modrinth": "2rL16t1O"
+                "modrinth": "ugCWUHV9"
             },
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "Enhanced-Celestials-NeoForge-1.21.1-6.0.2.5.jar",
+                    "file_name": "Enhanced-Celestials-2-Core-NeoForge-1.21.1-2.0.3.3.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -4169,19 +4173,65 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/2rL16t1O/versions/PvmN3OKy/Enhanced-Celestials-NeoForge-1.21.1-6.0.2.5.jar",
-                    "id": "PvmN3OKy",
-                    "parent_id": "2rL16t1O",
+                    "url": "https://cdn.modrinth.com/data/ugCWUHV9/versions/CWaaEX5L/Enhanced-Celestials-2-Core-NeoForge-1.21.1-2.0.3.3.jar",
+                    "id": "CWaaEX5L",
+                    "parent_id": "ugCWUHV9",
                     "hashes": {
-                        "sha512": "9d69f66389d3c8c9a3572854f839b503fee00b67f9c5e8d51fcdc9dd16170448d5ad98abaaccedbb2091ab70ef2b450cbc90e6ff11d9735638bf7672d6f3d5d2",
-                        "sha1": "120a2f2ad8f9fcbefebd087c60592b8057a834fc"
+                        "sha512": "e23e093260ae2fca326ab102325d4a2273da9c5f4d15b00c9e42b3a9d47b3b655920cc3e012350ed1e500284762ed8ca99b840fd2a88f254f9c74f62e96c2a64",
+                        "sha1": "e98332a46972dd89bbb472395687af72ef988c9a"
                     },
                     "required_dependencies": [
                         "ziOp6EO8",
                         "z2XEADmE"
                     ],
-                    "size": 1611531,
-                    "date_published": "2025-10-11T04:40:16.847891Z"
+                    "size": 403227,
+                    "date_published": "2026-09-07T05:31:39.269262Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "giqaA9VP7oRwsVKl",
+            "pakku_links": [
+                "vgaWWHyWW9rmF3JQ",
+                "mhZm76WFjJAVmqo7",
+                "ods2Z3mv1AS2lsgi"
+            ],
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "modrinth": "enhanced-celestials-2-default-lunar-events"
+            },
+            "name": {
+                "modrinth": "Enhanced Celestials 2: Default Lunar Events"
+            },
+            "id": {
+                "modrinth": "19P0GlZk"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "Enhanced-Celestials-2-Default-Lunar-Events-NeoForge-1.21.1-2.0.1.3.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/19P0GlZk/versions/N8kvtLDo/Enhanced-Celestials-2-Default-Lunar-Events-NeoForge-1.21.1-2.0.1.3.jar",
+                    "id": "N8kvtLDo",
+                    "parent_id": "19P0GlZk",
+                    "hashes": {
+                        "sha512": "21d2778c502527ee2f110d00162a4c9f69b5e43fe1b0a5832550eb59ee008f61789dac25903b8f63e2de0580d2106dffea17b87717c6a9fc3384a3ee468c10c1",
+                        "sha1": "6b11db7910353d7f9cec7a6c125ae6199e354567"
+                    },
+                    "required_dependencies": [
+                        "z2XEADmE",
+                        "ugCWUHV9",
+                        "ziOp6EO8"
+                    ],
+                    "size": 1512275,
+                    "date_published": "2026-09-03T07:15:09.413663Z"
                 }
             ]
         },

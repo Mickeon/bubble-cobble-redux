@@ -1,0 +1,53 @@
+{
+  "modifiers": [
+    {
+      "type": "enhancedcelestials2core:moon_size",
+      "settings": {
+        "moon_size": 0.0
+      }
+    },
+    {
+      "type": "enhancedcelestials2core:moon_texture_color",
+      "settings": {
+        "color": "000000"
+      }
+    },
+    {
+      "type": "enhancedcelestials2core:name_color",
+      "settings": {
+        "color": "#bbbbbb"
+      }
+    },
+    {
+      "type": "enhancedcelestials2core:sky_light_color",
+      "settings": {
+        "color": "000000"
+      }
+    },
+    {
+      "type": "enhancedcelestials2core:text_components",
+      "settings": {
+        "components": {
+          "start_notification": {
+            "component": {
+              "key": "Where the fuck is the Moon",
+              "style": {
+                "color": "#bbbbbb"
+              }
+            },
+            "type": "CHAT"
+          },
+          "end_notification": {
+            "component": {
+              "key": "Oh",
+              "style": {
+                "color": "#bbbbbb"
+              }
+            },
+            "type": "CHAT"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,188 @@
+{
+  "modifiers": [
+    "bubble_cobble:force_surface_spawning",
+    {
+      "type": "enhancedcelestials2core:block_item_drop",
+      "settings": {
+        "settings": {
+          "drop_enhancer": [
+            {
+              "minimum_count": 2,
+              "multipliers": {
+                "#c:slime_balls": 0.01
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "enhancedcelestials2core:moon_texture_color",
+      "settings": {
+        "color": "22ff22"
+      }
+    },
+    {
+      "type": "enhancedcelestials2core:sky_light_color",
+      "settings": {
+        "color": "22ff22"
+      }
+    },
+    {
+      "type": "enhancedcelestials2core:moon_size",
+      "settings": {
+        "moon_size": 40.0
+      }
+    },
+    {
+      "type": "enhancedcelestials2core:sound_track",
+      "settings": {
+        "sound_track": {
+          "sound_id": "enhancedcelestials2defaultlunarevents:blood_moon"
+        }
+      }
+    },
+    {
+      "type": "enhancedcelestials2core:mob_spawn_settings",
+      "settings": {
+        "spawn_settings": {
+          "spawn_costs": {
+            "minecraft:slime": {
+              "energy_budget": 0.1,
+              "charge": 1.0
+            }
+          },
+          "spawners": {
+            "ambient": [],
+            "axolotls": [],
+            "creature": [],
+            "misc": [],
+            "monster": [
+              {
+                "type": "minecraft:slime",
+                "weight": 0.1,
+                "minCount": 1,
+                "maxCount": 1
+              }
+            ],
+            "underground_water_creature": [],
+            "water_ambient": [],
+            "water_creature": []
+          }
+        }
+      }
+    },
+    {
+      "type": "enhancedcelestials2core:mob_effects",
+      "settings": {
+        "effects": [
+          {
+            "filter": {
+              "type": "corgilib:conditions_pass",
+              "filters": [
+                {
+                  "type": "corgilib:is_mob_category",
+                  "mob_category": "monster"
+                },
+                {
+                  "type": "corgilib:see_sky_at"
+                },
+                {
+                  "type": "corgilib:flipped",
+                  "condition_to_flip": {
+                    "type": "corgilib:is_swimming"
+                  }
+                }
+              ]
+            },
+            "mob_effect": {
+              "ambient": true,
+              "amplifier": 0,
+              "duration_in_ticks": 300,
+              "effect": "minecraft:oozing",
+              "show_icon": false,
+              "visible": true
+            }
+          },
+          {
+            "filter": {
+              "type": "corgilib:conditions_pass",
+              "filters": [
+                {
+                  "type": "corgilib:is_type",
+                  "id": "minecraft:slime"
+                }
+              ]
+            },
+            "mob_effect": {
+              "ambient": true,
+              "amplifier": 0,
+              "duration_in_ticks": 300,
+              "effect": "minecraft:wind_charged",
+              "show_icon": false,
+              "visible": true
+            }
+          },
+          {
+            "filter": {
+              "type": "corgilib:conditions_pass",
+              "filters": [
+                {
+                  "type": "corgilib:is_type",
+                  "id": "minecraft:slime"
+                }
+              ]
+            },
+            "mob_effect": {
+              "ambient": true,
+              "amplifier": 0,
+              "duration_in_ticks": 300,
+              "effect": "minecraft:slow_falling",
+              "show_icon": false,
+              "visible": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "enhancedcelestials2core:spawn_category_multiplier",
+      "settings": {
+        "multipliers": {
+          "monster": 2.0
+        }
+      }
+    },
+    {
+      "type": "enhancedcelestials2core:text_components",
+      "settings": {
+        "components": {
+          "start_notification": {
+            "component": {
+              "key": "The Glue Moon has risen. Things are feeling oozy.",
+              "style": {
+                "color": "#66ff66"
+              }
+            },
+            "type": "CHAT"
+          },
+          "end_notification": {
+            "component": {
+              "key": "Alright, move along. Go get your Sticky Pistons or funky contraptions going.",
+              "style": {
+                "color": "#66ff66"
+              }
+            },
+            "type": "CHAT"
+          }
+        }
+      }
+    },
+    {
+      "type": "enhancedcelestials2core:name_color",
+      "settings": {
+        "color": "#66ff66"
+      }
+    }
+  ]
+}

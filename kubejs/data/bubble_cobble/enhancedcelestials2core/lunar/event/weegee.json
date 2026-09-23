@@ -1,0 +1,145 @@
+{
+  "modifiers": [
+    "bubble_cobble:disable_biome_spawn_settings",
+    {
+      "type": "enhancedcelestials2core:block_item_drop",
+      "settings": {
+        "settings": {
+          "drop_enhancer": [
+            {
+              "minimum_count": 2,
+              "multipliers": {
+                "#cobblemon:berries": 2,
+                "#cobblemon:berries/colour/green": 3,
+                "#cobblemon:mints": 1.5,
+                "#biomeswevegone:dye/makes_green": 2
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "enhancedcelestials2core:moon_size",
+      "settings": {
+        "moon_size": 64.0
+      }
+    },
+    {
+      "type": "enhancedcelestials2core:moon_texture",
+      "settings": {
+        "texture_location": "bubble_cobble:textures/environment/weegee.png"
+      }
+    },
+    {
+      "type": "enhancedcelestials2core:name_color",
+      "settings": {
+        "color": "#009460"
+      }
+    },
+    {
+      "type": "enhancedcelestials2core:mob_effects",
+      "settings": {
+        "effects": [
+          {
+            "filter": {
+              "type": "corgilib:is_type",
+              "id": "minecraft:player"
+            },
+            "mob_effect": {
+              "ambient": true,
+              "amplifier": 0,
+              "duration_in_ticks": 300,
+              "effect": "minecraft:oozing",
+              "show_icon": true,
+              "visible": true
+            }
+          },
+          {
+            "filter": {
+              "type": "corgilib:is_type",
+              "id": "minecraft:player"
+            },
+            "mob_effect": {
+              "ambient": true,
+              "amplifier": 0,
+              "duration_in_ticks": 300,
+              "effect": "kubejs:girl_power",
+              "show_icon": true,
+              "visible": true
+            }
+          },
+          {
+            "filter": {
+              "type": "corgilib:conditions_pass",
+              "filters": [
+                {
+                  "type": "corgilib:is_mob_category",
+                  "mob_category": "monster"
+                },
+                {
+                  "type": "corgilib:see_sky_at"
+                },
+                {
+                  "type": "corgilib:flipped",
+                  "condition_to_flip": {
+                    "type": "corgilib:is_swimming"
+                  }
+                },
+                {
+                  "type": "corgilib:flipped",
+                  "condition_to_flip": {
+                    "type": "corgilib:has_effect",
+                    "effects": [
+                      "minecraft:wither"
+                    ],
+                    "has_any": false
+                  }
+                }
+              ]
+            },
+            "mob_effect": {
+              "ambient": true,
+              "amplifier": 0,
+              "duration_in_ticks": 300,
+              "effect": "minecraft:wither",
+              "show_icon": false,
+              "visible": true
+            }
+          }
+        ]
+      }
+    },
+        {
+      "type": "enhancedcelestials2core:sky_light_color",
+      "settings": {
+        "color": "99FF77"
+      }
+    },
+    {
+      "type": "enhancedcelestials2core:text_components",
+      "settings": {
+        "components": {
+          "start_notification": {
+            "component": {
+              "key": "\"Squidward!! The sky had a Pokémon from my cereal box! Squiiidward!! Squidward! The sky had a Pokémon!\"",
+              "style": {
+                "color": "#009460"
+              }
+            },
+            "type": "CHAT"
+          },
+          "end_notification": {
+            "component": {
+              "key": "That\u0027s not a Pokémon. That\u0027s a GAY LUIGI. Now, go away.",
+              "style": {
+                "color": "#009460"
+              }
+            },
+            "type": "CHAT"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "type": "enhancedcelestials2core:mob_effects",
+  "settings": {
+    "effects": [
+      {
+        "filter": {
+          "type": "corgilib:conditions_pass",
+          "filters": [
+            {
+              "type": "corgilib:is_type",
+              "id": "minecraft:player"
+            },
+            {
+              "type": "corgilib:see_sky_at"
+            }
+          ]
+        },
+        "mob_effect": {
+          "ambient": true,
+          "amplifier": 0,
+          "duration_in_ticks": 300,
+          "effect": "minecraft:strength",
+          "show_icon": true,
+          "visible": true
+        }
+      },
+      {
+        "filter": {
+          "type": "corgilib:conditions_pass",
+          "filters": [
+            {
+              "type": "corgilib:is_type",
+              "id": "minecraft:player"
+            },
+            {
+              "type": "corgilib:see_sky_at"
+            }
+          ]
+        },
+        "mob_effect": {
+          "ambient": true,
+          "amplifier": 0,
+          "duration_in_ticks": 300,
+          "effect": "brewinandchewin:raging",
+          "show_icon": true,
+          "visible": true
+        }
+      },
+      {
+        "filter": {
+          "type": "corgilib:conditions_pass",
+          "filters": [
+            {
+              "type": "corgilib:is_mob_category",
+              "mob_category": "monster"
+            }
+          ]
+        },
+        "mob_effect": {
+          "ambient": true,
+          "amplifier": 0,
+          "duration_in_ticks": 300,
+          "effect": "minecraft:weakness",
+          "show_icon": false,
+          "visible": true
+        }
+      }
+    ]
+  }
+}

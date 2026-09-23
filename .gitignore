@@ -43,6 +43,8 @@
 /config/cobbreeding/encryption
 /config/chunky/tasks
 /config/chunkyborder/borders.json
+/config/enhancedcelestials2*/translations-cache
+/config/enhancedcelestials2core/workspaces
 /config/mod_sets/disabled_mods.json
 /config/voicechat/category-volumes.properties
 /config/voicechat/player-volumes.properties

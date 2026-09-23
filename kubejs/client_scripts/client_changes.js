@@ -180,7 +180,7 @@ const ITEM_TAG_DISPLAY_INFO = [
 	{tag: "curios:feet", name: "Fits in Curios's Feet slot"},
 	{tag: "curios:head", name: "Fits in Curios's Head slot"},
 	{tag: "curios:necklace", name: "Fits in Curios' Necklace slot"},
-	{tag: "enhancedcelestials:harvest_moon_crops", name: "Crops enhanced by the Harvest Moon"},
+	{tag: "enhancedcelestials2defaultlunarevents:harvest_moon_crops", name: "Crops enhanced by the Harvest Moon"},
 	{tag: "kubejs:wines", name: "Wines"},
 	{tag: "mega_showdown:mega_bracelets", name: "Mega Bracelets"},
 	{tag: "mega_showdown:mega_stone", name: "Mega Stones"},

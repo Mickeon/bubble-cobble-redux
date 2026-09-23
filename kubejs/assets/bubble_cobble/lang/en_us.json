@@ -1,3 +1,9 @@
 {
-	"death.attack.spawner_grab": "%s regrettably craved takeaway monster meat"
+	"death.attack.spawner_grab": "%s regrettably craved takeaway monster meat",
+	"lunar.event.bubble_cobble.ghostbusters": "Super Ghostbusters",
+	"lunar.event.bubble_cobble.glue_moon": "Glue Moon",
+	"lunar.event.bubble_cobble.no": "No",
+	"lunar.event.bubble_cobble.pleading_moon": "Pleading Moon",
+	"lunar.event.bubble_cobble.pride_moon": "Pride Moon",
+	"lunar.event.bubble_cobble.weegee": "Weegee"
 }

@@ -31,11 +31,11 @@ ClientEvents.lang("en_us", event => {
 		"entity.minecraft.wandering_trader": "Free Leash Guy",
 		"key.kubejs.bubble_cobble.dash": "Girl Power Dash",
 	})
-	event.addAll("enhancedcelestials", {
-		"enhancedcelestials.notification.blood_moon.rise": "The \"Blood Moon\" rises... Distant sounds of the undead can be heard...\nAnd that really pisses you off. WHY IS THE SKY RED",
-		"enhancedcelestials.notification.blood_moon.set": "The \"Blood Moon\" sets... The undead begin to burn...",
-		"enhancedcelestials.notification.super_blood_moon.rise": "The \"Super Blood Moon\" rises... Distant sounds of the undead can be heard...\n...\nThis is how Wario must've felt on the Virtual Boy",
-		"enhancedcelestials.notification.super_blood_moon.set": "The \"Super Blood Moon\" sets... The undead begin to burn..."
+	event.addAll("enhancedcelestials2defaultlunarevents", {
+		"enhancedcelestials2defaultlunarevents.notification.blood_moon.rise": "The \"Blood Moon\" rises... Distant sounds of the undead can be heard...\nAnd that really pisses you off. WHY IS THE SKY RED",
+		"enhancedcelestials2defaultlunarevents.notification.blood_moon.set": "The \"Blood Moon\" sets... The undead begin to burn...",
+		"enhancedcelestials2defaultlunarevents.notification.super_blood_moon.rise": "The \"Super Blood Moon\" rises... Distant sounds of the undead can be heard...\n...\nThis is how Wario must've felt on the Virtual Boy",
+		"enhancedcelestials2defaultlunarevents.notification.super_blood_moon.set": "The \"Super Blood Moon\" sets... The undead begin to burn..."
 	})
 	event.add("brewinandchewin", "item.brewinandchewin.egg_grog", "§3@Grog§r Is This True?")
 })
