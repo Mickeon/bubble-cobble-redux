@@ -1,0 +1,35 @@
+{
+  "devMode": false,
+  "showActionBar": true,
+  "hideIncompatible": false,
+  "sort": "VANILLA",
+  "resourcepacks": {
+    "applyOnClose": true,
+    "replaceOriginal": true,
+    "hideIncompatibleWarnings": false,
+    "additionalFolders": [
+      "global_packs/resourcepacks/",
+      "global_packs/datapacks/",
+      "global_packs/overrides/"
+    ],
+    "foldersModuleByDefault": false,
+    "rememberLastViewedProfile": false,
+    "profileOrder": [
+      "Default"
+    ]
+  },
+  "datapacks": {
+    "replaceOriginal": true,
+    "hideIncompatibleWarnings": false,
+    "additionalFolders": [
+      "global_packs/datapacks/",
+      "global_packs/overrides/"
+    ],
+    "foldersModuleByDefault": false,
+    "rememberLastViewedProfile": false,
+    "lastViewedProfile": "Default",
+    "profileOrder": [
+      "Default"
+    ]
+  }
+}

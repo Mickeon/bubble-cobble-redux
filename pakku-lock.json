@@ -4658,44 +4658,6 @@
             ]
         },
         {
-            "pakku_id": "gg7LsCxwTqV1jEeo",
-            "type": "MOD",
-            "side": "BOTH",
-            "slug": {
-                "modrinth": "globalpacks"
-            },
-            "name": {
-                "modrinth": "Global Packs"
-            },
-            "id": {
-                "modrinth": "NRLPy2mk"
-            },
-            "files": [
-                {
-                    "type": "modrinth",
-                    "file_name": "globalpacks-neoforge-1.21.1-21.0.6.jar",
-                    "mc_versions": [
-                        "1.21",
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/NRLPy2mk/versions/FPcUOp35/globalpacks-neoforge-1.21.1-21.0.6.jar",
-                    "id": "FPcUOp35",
-                    "parent_id": "NRLPy2mk",
-                    "hashes": {
-                        "sha512": "5590a9066d84265a53e756fdb5b8872c383ffe069745756f1ff0fe54a315cefb5cc90ee3d0233a95f1dc2a7d68396b1102b9002d8b1aaf3ec476b52c7286c6b8",
-                        "sha1": "55cf667b16b81df9b8f7fead042cf2f732b21b85"
-                    },
-                    "required_dependencies": [],
-                    "size": 27239,
-                    "date_published": "2025-06-09T21:50:29.013170Z"
-                }
-            ]
-        },
-        {
             "pakku_id": "bBVnUwjkjs6TAITi",
             "type": "MOD",
             "side": "BOTH",
@@ -7039,6 +7001,43 @@
                     ],
                     "size": 176759,
                     "date_published": "2026-08-19T06:13:59.874174Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "lIGr2RJD1HrFihbS",
+            "type": "MOD",
+            "side": "CLIENT",
+            "slug": {
+                "modrinth": "packed-packs"
+            },
+            "name": {
+                "modrinth": "Packed Packs"
+            },
+            "id": {
+                "modrinth": "8Pq6Exn2"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "packed_packs-neoforge-2.3.0-beta.1+1.21.1.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "beta",
+                    "url": "https://cdn.modrinth.com/data/8Pq6Exn2/versions/zgiGDSad/packed_packs-neoforge-2.3.0-beta.1+1.21.1.jar",
+                    "id": "zgiGDSad",
+                    "parent_id": "8Pq6Exn2",
+                    "hashes": {
+                        "sha512": "c3aae89fd9fd5df19e99b100fceda5d9627794be7914c37aeab4adba3e2ee9b4ddf317445b9ae78249ed14bf8c1a32af5c05b1fcd7fe3167083a92df1c792819",
+                        "sha1": "ff3124f35af0420cef23744dfcc6267167785486"
+                    },
+                    "required_dependencies": [],
+                    "size": 962879,
+                    "date_published": "2026-09-23T12:15:34.268438Z"
                 }
             ]
         },

@@ -1,0 +1,60 @@
+{
+  "locked": true,
+  "name": "Default",
+  "overrides": {
+    "file/modpack": {
+      "required": true,
+      "position": "TOP"
+    },
+    "file/candle-cobblemon-changes": {
+      "required": true,
+      "position": "TOP"
+    },
+    "file/BubbleCobble-CCC.zip": {
+      "hidden": true,
+      "required": true,
+      "position": "TOP"
+    },
+    "file/Cobblemon Cafe.zip": {
+      "hidden": true,
+      "required": true
+    },
+    "file/PokeCostume v.3.3.zip": {
+      "hidden": true,
+      "required": true
+    },
+    "file/Torterras O\u0027 Plenty v1.1.zip": {
+      "hidden": true,
+      "required": true
+    },
+    "file/CobblemonModdedDrops.zip": {
+      "hidden": true,
+      "required": true
+    },
+    "file/CobblemonRaidDenDesigns-0.6_RELEASE.zip": {
+      "hidden": true,
+      "required": true
+    }
+  },
+  "packIds": [
+    "file/modpack",
+    "file/candle-cobblemon-changes",
+    "file/BubbleCobble-CCC.zip",
+    "file/Cobblemon Cafe.zip",
+    "file/CobblemonModdedDrops.zip",
+    "file/CobblemonRaidDenDesigns-0.6_RELEASE.zip",
+    "file/PokeCostume v.3.3.zip",
+    "file/Torterras O\u0027 Plenty v1.1.zip",
+    "mod/cobblemon:datapacks/repurposedstructurescobblemon",
+    "mod/yungsapi:locate_replacer",
+    "amendments:generated_server_pack",
+    "snowyspirit:generated_pack",
+    "supplementaries:generated_pack",
+    "via_romana:dynamic_tags",
+    "highly_customizable_damage_numbers_resources",
+    "fabric",
+    "mod_data",
+    "vanilla",
+    "create:dynamic_data"
+  ]
+}

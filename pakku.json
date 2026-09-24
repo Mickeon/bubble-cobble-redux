@@ -92,7 +92,6 @@
         "!config/resourcepackpruner.json",
         "!config/nautilus_studio.json",
         "!config/dummmmmmy-*",
-        "!config/packed_packs/",
         "!config/packforge.json",
         "!fieldguide_cache/",
         "!*locomotionmap.json"

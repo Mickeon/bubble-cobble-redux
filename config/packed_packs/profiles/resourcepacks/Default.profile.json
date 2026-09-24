@@ -1,0 +1,143 @@
+{
+  "locked": true,
+  "name": "Default",
+  "overrides": {
+    "file/modpack": {
+      "required": true,
+      "position": "TOP"
+    },
+    "file/candle-cobblemon-changes": {
+      "required": true,
+      "position": "TOP"
+    },
+    "file/VanillaTweaks.zip": {
+      "hidden": true,
+      "required": true,
+      "position": "TOP"
+    },
+    "file/BubbleCobble-CCC.zip": {
+      "hidden": true,
+      "required": true,
+      "position": "TOP"
+    },
+     "file/Cobblemon Cafe.zip": {
+      "hidden": true,
+      "required": true
+    },
+    "file/CobblemonModdedDrops.zip": {
+      "hidden": true,
+      "required": true
+    },
+    "file/CobblemonRaidDenDesigns-0.6_RELEASE.zip": {
+      "hidden": true,
+      "required": true
+    },
+    "file/PokeCostume v.3.3.zip": {
+      "hidden": true,
+      "required": true
+    },
+    "file/Torterras O\u0027 Plenty v1.1.zip": {
+      "hidden": true,
+      "required": true
+    },
+    "file/Construction Sticks Grips.zip": {
+      "hidden": true,
+      "required": true
+    },
+    "file/CreateSophBackpacks.zip": {
+      "hidden": true,
+      "required": true
+    },
+    "file/CreateSophStorage.zip": {
+      "hidden": true,
+      "required": true
+    },
+    "file/Delightful-plaques-v1.1 (1.21).zip": {
+      "hidden": true,
+      "required": true
+    },
+    "file/E19 Cobblemon Minimap Icons.zip": {
+      "hidden": true,
+      "required": true
+    },
+    "file/PixelTwemojiMC-9.zip": {
+      "hidden": true,
+      "required": true
+    },
+    "file/RCT Trainers+ [1.6] v2.1.zip": {
+      "hidden": true,
+      "required": true
+    },
+    "file/Vervada-s-double-slabs.zip": {
+      "hidden": true,
+      "required": true
+    },
+    "pasturefix": {
+      "hidden": true,
+      "required": true
+    },
+    "supplementaries:darker_ropes": {
+      "hidden": true,
+      "required": true
+    },
+    "mod/cobblemon:resourcepacks/gyaradosjump": {
+      "hidden": true,
+      "required": true
+    },
+    "mod/cobblemon:resourcepacks/regionbiasforms": {
+      "hidden": true,
+      "required": true
+    },
+    "mod/cobblemon:resourcepacks/uniqueshinyforms": {
+      "hidden": true,
+      "required": true
+    },
+    "mod/mega_showdown:resourcepacks/gyaradosjumpingmega": {
+      "hidden": true,
+      "required": true
+    },
+    "mod/mega_showdown:resourcepacks/regionbiasmsd": {
+      "hidden": true,
+      "required": true
+    },
+    "mod/item_interactions_mod:resourcepacks/example_gui_particles": {
+      "hidden": true,
+      "required": true
+    },
+    "mod/lootr:resourcepacks/old_textures": {
+      "hidden": true
+    }
+  },
+  "packIds": [
+    "file/modpack",
+    "file/candle-cobblemon-changes",
+    "file/VanillaTweaks.zip",
+    "file/BubbleCobble-CCC.zip",
+    "file/Cobblemon Cafe.zip",
+    "file/CobblemonModdedDrops.zip",
+    "file/CobblemonRaidDenDesigns-0.6_RELEASE.zip",
+    "file/PokeCostume v.3.3.zip",
+    "file/Torterras O\u0027 Plenty v1.1.zip",
+    "file/Construction Sticks Grips.zip",
+    "file/CreateSophBackpacks.zip",
+    "file/CreateSophStorage.zip",
+    "file/Delightful-plaques-v1.1 (1.21).zip",
+    "file/E19 Cobblemon Minimap Icons.zip",
+    "file/PixelTwemojiMC-9.zip",
+    "file/RCT Trainers+ [1.6] v2.1.zip",
+    "file/Vervada-s-double-slabs.zip",
+    "pasturefix",
+    "supplementaries:darker_ropes",
+    "mod/cobblemon:resourcepacks/gyaradosjump",
+    "mod/cobblemon:resourcepacks/regionbiasforms",
+    "mod/cobblemon:resourcepacks/uniqueshinyforms",
+    "mod/mega_showdown:resourcepacks/gyaradosjumpingmega",
+    "mod/mega_showdown:resourcepacks/regionbiasmsd",
+    "mod/item_interactions_mod:resourcepacks/example_gui_particles",
+    "moonlight:merged_pack",
+    "highly_customizable_damage_numbers_resources",
+    "mod_resources",
+    "fabric",
+    "vanilla"
+  ]
+}
