@@ -40,7 +40,7 @@
 		scale = 4.0
 		#Respect vanilla's "hideParticles" flag which prevents a status effect from showing when set via commands.
 		#Default Value: false
-		respect_hide_particles = false
+		respect_hide_particles = true
 		#Exclude certain menus from showing active status effects. Useful when effect icons overlap with other screen elements.
 		#Default Value: [curios:curios_container, tconstruct:*, mekanism:*]
 		menu_blacklist = ["curios:curios_container", "tconstruct:*", "mekanism:*"]

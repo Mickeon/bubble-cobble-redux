@@ -8395,41 +8395,41 @@
             ]
         },
         {
-            "pakku_id": "TWcQvkq104b07fXX",
+            "pakku_id": "duKmTDyK80HVDEWg",
             "type": "MOD",
-            "side": "SERVER",
             "slug": {
-                "modrinth": "resource-world"
+                "curseforge": "resource-world"
             },
             "name": {
-                "modrinth": "Resource World"
+                "curseforge": "Resource World"
             },
             "id": {
-                "modrinth": "ynOPEE9I"
+                "curseforge": "1255178"
             },
             "files": [
                 {
-                    "type": "modrinth",
-                    "file_name": "resource_world-1.5.1-bugfix-1.21.1-neoforge.jar",
+                    "type": "curseforge",
+                    "file_name": "resource_world-2.0-1.21.1-neoforge.jar",
                     "mc_versions": [
+                        "1.21",
                         "1.21.1"
                     ],
                     "loaders": [
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/ynOPEE9I/versions/ZsWmXtOr/resource_world-1.5.1-bugfix-1.21.1-neoforge.jar",
-                    "id": "ZsWmXtOr",
-                    "parent_id": "ynOPEE9I",
+                    "url": "https://edge.forgecdn.net/files/8462/829/resource_world-2.0-1.21.1-neoforge.jar",
+                    "id": "8462829",
+                    "parent_id": "1255178",
                     "hashes": {
-                        "sha512": "61bdce259a79d4753a7e8918b155f0b86cd7c9810109972289e204b58733626a27bf5940fae64a79540a379d999857c3b11d6dcbdd748f498ea929b4c627b215",
-                        "sha1": "a7630eefbc45fd7e56451811d2aeb5909ae0068c"
+                        "sha1": "e3d03c760fe14f9246c324d899a56557b46dc234",
+                        "md5": "47389cd0b565d4053df10d432c19bf43"
                     },
                     "required_dependencies": [
-                        "Cl2eyShu"
+                        "1278793"
                     ],
-                    "size": 139018,
-                    "date_published": "2025-09-25T03:23:37.344123Z"
+                    "size": 156900,
+                    "date_published": "2026-07-19T06:12:37.647Z"
                 }
             ]
         },

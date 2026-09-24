@@ -5,6 +5,7 @@ let $ItemEntity = Java.loadClass("net.minecraft.world.entity.item.ItemEntity")
 
 let $CanContinueSleepingEvent = Java.loadClass("net.neoforged.neoforge.event.entity.player.CanContinueSleepingEvent")
 let $PlayerSetSpawnEvent = Java.loadClass("net.neoforged.neoforge.event.entity.player.PlayerSetSpawnEvent")
+let $CanPlayerSleepEvent = Java.loadClass("net.neoforged.neoforge.event.entity.player.CanPlayerSleepEvent");
 let $EntityTravelToDimensionEvent = Java.loadClass("net.neoforged.neoforge.event.entity.EntityTravelToDimensionEvent")
 
 /**
@@ -127,7 +128,7 @@ const DreamDimension = {
 		let level = this.get()
 		if (!level) {
 			console.log(`Creating new dream dimension`)
-			this.server.runCommand(`resourceworld create ${this.PATH} minecraft:overworld`)
+			this.server.runCommand(`resourceworld create ${this.PATH} type minecraft:overworld`)
 			level = this.get()
 			if (!level) {
 				console.error(`${this.ID} is not ready yet, cannot proceed with setup. This shouldn't happen, and I should wait for it, but I can't be bothered right now.`)
@@ -177,8 +178,8 @@ const DreamDimension = {
 
 	setup(level) {
 		level.runCommandSilent(`resourceworld enable ${this.PATH}`)
-		level.runCommandSilent(`resourceworld settings ${this.PATH} cooldown set 2`)
-		level.runCommandSilent(`resourceworld settings ${this.PATH} allowHomeCommand set false`)
+		level.runCommandSilent(`resourceworld settings ${this.PATH} cooldown 2`)
+		level.runCommandSilent(`resourceworld settings ${this.PATH} allowHomeCommand false`)
 		level.runCommandSilent(`gamerule spawnChunkRadius 0`)
 		level.runCommandSilent(`gamerule playersSleepingPercentage 0`)
 		level.getPersistentData().putLong("expiration_time", $Long.MAX_VALUE)
@@ -321,13 +322,13 @@ const DreamDimension = {
 
 			level.getPlayers().forEach(/** @param {$ServerPlayer} player */ player => {
 				player.attack(new DamageSource("kubejs:dream_wither"), damage_amount)
-				player.addEffect(MobEffectUtil.of("brewinandchewin:intoxication", effect_duration))
-				player.addEffect(MobEffectUtil.of("minecraft:haste", effect_duration, effect_strength))
-				player.addEffect(MobEffectUtil.of("minecraft:speed", effect_duration, effect_strength, false, false, false))
-				player.addEffect(MobEffectUtil.of("minecraft:luck", effect_duration, effect_strength, true, false, false))
-				player.addEffect(MobEffectUtil.of("brewinandchewin:raging", effect_duration, effect_strength, true, false, false))
-				player.addEffect(MobEffectUtil.of("xaerominimap:no_minimap_harmful", effect_duration, 0, false, false, false))
-				player.addEffect(MobEffectUtil.of("xaeroworldmap:no_world_map_harmful", effect_duration, 0, false, false, false))
+				player.addEffect(MobEffectUtil.of("minecraft:haste", effect_duration, effect_strength, true, true, true))
+				player.addEffect(MobEffectUtil.of("minecraft:speed", effect_duration, effect_strength, true, true, true))
+				player.addEffect(MobEffectUtil.of("minecraft:luck", effect_duration, effect_strength, true, true, true))
+				player.addEffect(MobEffectUtil.of("brewinandchewin:raging", effect_duration, effect_strength, true, true, true))
+				player.addEffect(MobEffectUtil.of("brewinandchewin:intoxication", effect_duration, 0, true, true, true))
+				player.addEffect(MobEffectUtil.of("xaerominimap:no_minimap_harmful", effect_duration, 0, true, true, true))
+				player.addEffect(MobEffectUtil.of("xaeroworldmap:no_world_map_harmful", effect_duration, 0, true, true, true))
 
 				if (player.onGround()) {
 					let block_state_on = player.getBlockStateOn()
@@ -364,7 +365,7 @@ const DreamDimension = {
 		level.tell(Text.gray("...experience deep, nightmarish slumbers.").italic())
 
 		// The music should be in beat. Using specific numbers for pitch and frequency here.
-		play_sound_globally(level, new Vec3d(0, 1000, 0), "minecraft:music_disc.precipice", "music", level.worldBorder.absoluteMaxSize, 0.9866)
+		play_sound_globally(level, new Vec3d(0, 1000, 0), "minecraft:music_disc.precipice", "music", level.worldBorder.getAbsoluteMaxSize(), 0.9866)
 		DreamDimension.explode_around_scheduled = this.server.scheduleRepeatingInTicks(18, callback => {
 			if (level.getPlayers().isEmpty() || DreamDimension.explode_around_scheduled != callback) {
 				this.explode_around_stop()
@@ -445,13 +446,23 @@ const DreamDimension = {
 				play_sound_globally(level, block_center, "create:packager", "blocks", 128, 1.75 + 0.25 * Math.random())
 				play_sound_globally(level, block_center, "create:crushing_1", "blocks", 96, 0.65 + 0.1 * Math.random())
 
-				player.addEffect(MobEffectUtil.of("minecraft:slowness", 2, 0, true, false, false))
+				player.addEffect(MobEffectUtil.of("minecraft:slowness", 2, 0, false, false, false))
 
 				if (!pokemon_spawned && time_left <= DreamDimension.TIME_WITHER_TRULY_BEGINS && block_center.distanceTo(player.position()) <= 40) {
 					pokemon_spawned = true
 
-					this.spawn_darkrai(level, block_center.add(0, 2, 0))
-					level.tell(Text.gray("It chases people and Pokémon from its territory...").italic())
+					let darkrai = this.spawn_darkrai(level, block_center.add(0, 2, 0))
+					let look_time_left = 40
+					this.server.scheduleRepeating(1, callback => {
+						look_time_left -= 1
+						if (!(player) || !(darkrai) || look_time_left < 0) {
+							callback.clear()
+							return
+						}
+						player.addEffect(MobEffectUtil.of("minecraft:slowness", 0.5 * SEC, 5, false, false, false))
+						player.lookAt("eyes", darkrai, "eyes")
+						darkrai.lookAt(player, 20, 20)
+					})
 				}
 			})
 		})
@@ -469,12 +480,14 @@ const DreamDimension = {
 		let $Moves = Java.loadClass("com.cobblemon.mod.common.api.moves.Moves")
 		let $Stats = Java.loadClass("com.cobblemon.mod.common.api.pokemon.stats.Stats")
 
+		let p = /** @type {$PokemonEntity}} */ (null)
 		level.spawnEntity("cobblemon:pokemon", entity => {
-			const pokemon_entity = /** @type {$PokemonEntity} */ (entity)
-			const pokemon = pokemon_entity.pokemon
-			pokemon.species = $PokemonSpecies.getByName("darkrai")
-			pokemon.level = 100
-			pokemon.scaleModifier = 2.0
+			const pokemon_entity = /** @type {$PokemonEntity}} */ (entity)
+			const pokemon = pokemon_entity.getPokemon()
+			pokemon.setSpecies($PokemonSpecies.getByName("darkrai"))
+			pokemon.setLevel(100)
+			pokemon.setScaleModifier(2)
+			pokemon.setAlpha(true)
 			pokemon.setEV($Stats.HP, 4)
 			pokemon.setEV($Stats.SPECIAL_ATTACK, 252)
 			pokemon.setEV($Stats.SPEED, 252)
@@ -484,24 +497,18 @@ const DreamDimension = {
 			moveset.setMove(2, $Moves.getByName("nastyplot").create())
 			moveset.setMove(3, $Moves.getByName("thunder").create())
 
-			pokemon_entity.cry()
+			pokemon_entity.cry() // Not that its cry exists, but sure.
 			pokemon_entity.addEffect(MobEffectUtil.of("minecraft:glowing", 2 * MIN))
 			pokemon_entity.setPos(position)
 			pokemon_entity.setInvulnerable(true)
 			pokemon_entity.setPersistenceRequired()
-			level.server.scheduleRepeatingInTicks(1, callback => {
-				if (pokemon_entity.getAttributeBaseValue("minecraft:generic.scale") >= 5) {
-					callback.clear()
-					return
-				}
-				pokemon_entity.setAttributeBaseValue("minecraft:generic.scale", Math.min(pokemon_entity.getAttributeBaseValue("minecraft:generic.scale") + 0.05, 5))
-			})
+			pokemon_entity.setGlowing(true)
+			p = pokemon_entity
 		})
 		console.log("Spawning Pokemon in Dream Dimension")
-		// this.server.runCommand(`execute in ${this.ID} run spawnpokemonat ${block_center.x()} ${block_center.y()} ${block_center.z()} darkrai hp_ev=4 special_attack_ev=252 speed_ev=252 moves=hypnosis,nightmare,nastyplot,thunder level=75 scale_modifier=5.0`)
-		// Its cry doesn't exist anyway, don't bother.
 		play_sound_globally(level, position, "cobblemon:impact.ghost", "hostile", 10000, 0.5)
 		play_sound_globally(level, position, "cobblemon:impact.dark", "hostile", 10000, 0.5)
+		return p
 	},
 
 	// The callback may be useful later.
@@ -548,34 +555,67 @@ const DreamDimension = {
 	},
 }
 
+// This feels super-nasty, but a right-click interaction with every bed would be nasty, too.
+NativeEvents.onEvent($CanPlayerSleepEvent, event => {
+	const entity = /** @type {$Player} */ (event.getEntity())
+	if (entity.level.dimension == DreamDimension.ID) {
+		// For some reason, the scheduling is required here. Otherwise,
+		// the dimension changes correctly, but the player's coordinates remain the same.
+		event.setProblem("not_possible_here")
+		entity.server.scheduleInTicks(1, () => {
+			// May have moved already. Not sure how often "canPlayerSleep" is checked.
+			if (entity.level.dimension == DreamDimension.ID) {
+				console.log(`Trying to let ${entity} out`)
+				DreamDimension.let_out(entity)
+			}
+		})
+	}
+})
+
 NativeEvents.onEvent($CanContinueSleepingEvent, event => {
 	const entity = event.getEntity()
-	if (!entity.isPlayer() || !event.mayContinueSleeping() || !DreamDimension.can_let_in(entity)) {
+	if (!entity.isPlayer()) {
 		return
 	}
 
-	DreamDimension.let_in(entity)
+	// FIXME: This event isn't ever triggered. Is it Sleep Tight's fault?
+	// if (entity.getSleepTimer() > SEC && entity.level.dimension == DreamDimension.ID) {
+	// 	DreamDimension.let_out(entity)
+	// }
+
+	if (event.mayContinueSleeping() && DreamDimension.can_let_in(entity)) {
+		DreamDimension.let_in(entity)
+	}
 })
 
+// FIXME: It no longer seems possible to even try setting your spawn point in a resource world.
+// That is to say, this event isn't triggered.
 NativeEvents.onEvent($PlayerSetSpawnEvent, event => {
 	if (event.getSpawnLevel().getNamespace() != DreamDimension.NAMESPACE) {
 		return
 	}
+	console.log("Attempted to set spawn point in a resource world")
 	event.setCanceled(true)
 	const entity = event.getEntity()
+	console.log(entity)
 	entity.server.scheduleInTicks(1, () => {
 		// For some reason, the scheduling is required here. Otherwise,
 		// the dimension changes correctly, but the player's coordinates remain the same.
+		console.log(`Trying to let ${entity} out`)
 		DreamDimension.let_out(entity)
 	})
 })
 
 NativeEvents.onEvent($EntityTravelToDimensionEvent, event => {
 	if (event.entity.level.dimension == DreamDimension.ID) {
-		if (event.dimension != "minecraft:overworld") {
-			event.entity.setStatusMessage("Nuh-uh.")
-			event.setCanceled(true)
+		if (event.dimension == "minecraft:overworld") {
+			if (event.entity.isPlayer()) {
+				event.entity.getInventory().clear(DreamDimension.is_dream_journal)
+			}
+			return
 		}
+		event.entity.setStatusMessage("Nuh-uh.")
+		event.setCanceled(true)
 	}
 })
 
@@ -609,12 +649,12 @@ EntityEvents.death("minecraft:player", event => {
 })
 
 PlayerEvents.cloned(event => {
+	// FIXME: I believe this even is never called when moving in/out of Dream Dimension.
 	if (event.level.dimension == DreamDimension.ID) {
 		if (!DreamDimension.is_expiring()) {
 			DreamDimension.refresh_expiration_time()
 		}
 	} else {
-		// FIXME: The whole event isn't called when moving out from the Dream Dimension.
 		event.player.getInventory().clear(DreamDimension.is_dream_journal)
 	}
 })
