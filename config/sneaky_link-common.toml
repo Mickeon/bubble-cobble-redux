@@ -12,4 +12,4 @@
 	# Range: 0.0 ~ 8.0
 	"Collection height" = 0.0
 	#Pick up item entities regardless of their cooldown after being dropped from a player's inventory
-	"Ignore pickup delay" = false
+	"Ignore pickup delay" = true

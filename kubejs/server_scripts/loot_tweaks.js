@@ -330,6 +330,36 @@ LootJS.lootTables(event => {
 	// print_simple_block_tables(event)
 })
 
+LootJS.modifiers(event => {
+	// console.log(event.getGlobalModifiers())
+
+	// event.addTableModifier(/.*chest.*/).addAction((context, bucket) => {
+		// if (!context.isType("chest")) {
+		// 	return
+		// }
+		// const block_entity = context.getLevel().getBlockEntity(context.getPosition())
+		// if (block_entity instanceof lootRblockEn)
+	// })
+	// event.addTableModifier("minecraft:chests/igloo_chest")
+	// 	// This condition appears dysfunctional.
+	// 	// .addCondition(LootCondition.matchCustomCondition({
+	// 	// 	condition: "lootr:loot_count",
+	// 	// 	operations: [{
+	// 	// 		type: "equals", # equals, not_equals, less_than, greater_than, less_than_equals, greater_than_equals
+	// 	// 		value: 1
+	// 	// 	}]
+	// 	// }))
+		// .addLoot(LootEntry.of("kubejs:blue_mascot_cat")
+		// 	.addCondition(LootCondition.matchCustomCondition({
+		// 		condition: "lootr:loot_count",
+		// 		operations: [{
+		// 			type: "less_than",
+		// 			value: 2
+		// 		}]})
+		// 	)
+		// )
+})
+
 // The crap we have to go through to show Farmer's Delight's loot modifiers.
 // TODO: Can it even be an ounce of automatable? I currently have to do a lot of copy-pasting and manual work here.
 // Perhaps if I play my cards right, that won't be necessary.
