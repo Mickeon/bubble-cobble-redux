@@ -1,5 +1,8 @@
 import { $TickDuration_ } from "@package/dev/latvian/mods/kubejs/util"
+import { $Optional } from "@package/java/util"
 import { $LocalPlayer } from "@package/net/minecraft/client/player";
+import { $BlockPos } from "@package/net/minecraft/core"
+import { $GlobalPos_ } from "@package/net/minecraft/core"
 import { $MinecraftServer } from "@package/net/minecraft/server"
 import { $ItemStack, $ItemStack_ } from "@package/net/minecraft/world/item"
 import { $Ingredient_ } from "@package/net/minecraft/world/item/crafting"
@@ -11,6 +14,22 @@ declare module "@package/net/minecraft/world/entity" {
 		get y(): number
 		get z(): number
 		get server(): $MinecraftServer
+		mainSupportingBlockPos: $Optional<$BlockPos>
+	}
+
+	export interface $LivingEntity {
+		getSleepingPos(): $Optional<$BlockPos>;
+	}
+}
+
+declare module "@package/net/minecraft/world/entity/player" {
+	export interface $Player {
+		getInventory(): $Inventory;
+		getCraftingGrid(): $Inventory;
+		getLastDeathLocation(): $Optional<$GlobalPos_>
+		get inventory(): $Inventory;
+		get craftingGrid(): $Inventory;
+		get mainSupportingBlockPos(): $Optional<$BlockPos>
 	}
 }
 

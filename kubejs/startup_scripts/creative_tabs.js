@@ -119,11 +119,13 @@ remove_and_merge_into_tab("cobblemonraiddens:raid_den_tab", "cobblemon:utility_i
 	"cobblemonraiddens:catching_charm",
 ])
 
-remove_and_merge_into_tab("rctmod:creative_tab", "cobblemon:utility_item", [
-	"rctmod:trainer_card",
-	"rctmod:trainer_spawner",
-	"rctmod:trainer_repel_rod",
-])
+if (Platform.isLoaded("rctmod")) {
+	remove_and_merge_into_tab("rctmod:creative_tab", "cobblemon:utility_item", [
+		"rctmod:trainer_card",
+		"rctmod:trainer_spawner",
+		"rctmod:trainer_repel_rod",
+	])
+}
 
 remove_and_merge_into_tab("mega_showdown:compi_tab", "mega_showdown:key_tab", [
 	"mega_showdown:booster_energy",
