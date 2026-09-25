@@ -1,18 +1,5 @@
 // priority: 10
 
-const COPPER_BUTTONS = [
-	"copperagebackport:copper_button", "copperagebackport:exposed_copper_button", "copperagebackport:oxidized_copper_button", "copperagebackport:weathered_copper_button",
-	"copperagebackport:waxed_copper_button", "copperagebackport:waxed_exposed_copper_button", "copperagebackport:waxed_oxidized_copper_button",  "copperagebackport:waxed_weathered_copper_button"
-]
-const COPPER_CHAINS = [
-	"minecraft:copper_chain", "minecraft:exposed_copper_chain", "minecraft:weathered_copper_chain", "minecraft:oxidized_copper_chain",
-	"minecraft:waxed_copper_chain", "minecraft:waxed_exposed_copper_chain", "minecraft:waxed_weathered_copper_chain", "minecraft:waxed_oxidized_copper_chain"
-]
-const COPPER_CHESTS = [
-	"minecraft:copper_chest", "minecraft:exposed_copper_chest", "minecraft:weathered_copper_chest", "minecraft:oxidized_copper_chest",
-	"minecraft:waxed_copper_chest", "minecraft:waxed_exposed_copper_chest", "minecraft:waxed_oxidized_copper_chest", "minecraft:waxed_weathered_copper_chest",
-]
-
 ServerEvents.tags("item", event => {
 	// Accidental omissions from the mod creators.
 	// Some of these mods add them in the block tags, but not the item tags.
@@ -44,12 +31,6 @@ ServerEvents.tags("item", event => {
 	}
 	event.add("minecraft:piglin_loved", "handcrafted:golden_thin_pot", "handcrafted:golden_thick_pot", "handcrafted:golden_wide_pot", "handcrafted:golden_medium_pot") //Reported: https://github.com/terrarium-earth/Handcrafted/issues/152
 	event.add("c:music_discs", "undergroundworlds:music_disc_abbeyence") // TODO: Report this.
-	if (Platform.isLoaded("copperagebackport")) {
-		event.add("c:nuggets", "minecraft:copper_nugget")
-		event.add("minecraft:buttons", COPPER_BUTTONS)
-		event.remove("create:chain_rideable", COPPER_CHAINS) // They didn't realise this was plainly wrong. Reported: https://github.com/Smallinger/Copper-Age-Backport/issues/87.
-	}
-	event.add("c:chests", COPPER_CHESTS) // Reported: https://github.com/Smallinger/Copper-Age-Backport/issues/86.
 	event.add("mega_showdown:mega_stone", /zamega:/).remove("zamega:ange") // TODO: Report this.
 
 	// More compatibility.
@@ -188,15 +169,10 @@ ServerEvents.tags("item", event => {
 
 ServerEvents.tags("block", event => {
 	// Accidental omissions from the mod creators.
-	event.add("c:chests", "#minecraft:copper_chests")
 	event.add("minecraft:all_signs", "supplementaries:way_sign_wall") // https://github.com/MehVahdJukaar/Supplementaries/pull/1921
 	event.add("minecraft:enchantment_power_provider", "#handcrafted:shelves") // https://github.com/terrarium-earth/Handcrafted/issues/136
 	event.add("minecraft:guarded_by_piglins", "handcrafted:golden_thin_pot", "handcrafted:golden_thick_pot", "handcrafted:golden_wide_pot", "handcrafted:golden_medium_pot") // Reported: https://github.com/terrarium-earth/Handcrafted/issues/152
 	// event.add("create:single_block_inventories", "supplementaries:sack", "supplementaries:safe", "supplementaries:pulley_block") // Doesn't seem to be useful for us?
-	if (Platform.isLoaded("copperagebackport")) {
-		event.add("minecraft:buttons", COPPER_BUTTONS)
-		event.add("minecraft:mineable/pickaxe", COPPER_BUTTONS)
-	}
 	event.add("farmersdelight:mineable/knife", "#c:ropes") // Just to include Supplementaries's rope. Probably should be reported.
 	event.add("minecraft:combination_step_sound_blocks",
 		"#bubble_cobble:coinstacks",
@@ -214,7 +190,7 @@ ServerEvents.tags("block", event => {
 
 	// Other omissions that make sense.
 	event.add("create:windmill_sails", "#supplementaries:flags")
-	event.add("create:fan_transparent", "#supplementaries:buntings", "supplementaries:wind_vane", /^minecraft:.*copper_(bars|trapdoor)$/, /ladder$/, "cobblemon:water_stone_block", "cobblemon:fire_stone_block") // Fun.
+	event.add("create:fan_transparent", "#supplementaries:buntings", "supplementaries:wind_vane", "cobblemon:water_stone_block", "cobblemon:fire_stone_block") // Fun.
 	event.add("create:fan_processing_catalysts/splashing", "cobblemon:water_stone_block")
 	event.add("create:fan_processing_catalysts/smoking", "cobblemon:campfire")
 	event.add("create:fan_processing_catalysts/blasting", "mynethersdelight:magma_cake_block", "cobblemon:fire_stone_block")
@@ -275,11 +251,6 @@ ServerEvents.tags("fluid", event => {
 ServerEvents.tags("entity_type", event => {
 	event.add("supplementaries:urn_spawn", "minecraft:tropical_fish", "minecraft:rabbit") // Funny.
 	// event.add("supplementaries:ash_blacklist", "minecraft:allay", "") // TODO: Report this. No mob seems to drop ash for some reason?
-	// Tee-hee.
-	if (Platform.isLoaded("copperagebackport")) {
-		event.add("supplementaries:cage_catchable", "minecraft:copper_golem")
-		event.add("supplementaries:flute_pet", "minecraft:copper_golem")
-	}
 	event.add("supplementaries:flute_pet", "minecraft:iron_golem", "minecraft:snow_golem", "minecraft:player", "minecraft:turtle")
 	event.add("artifacts:creepers", "undergroundworlds:icy_creeper")
 	event.add("create:ignore_seat", "minecraft:bee")

@@ -105,5 +105,15 @@
 			"bubble_cobble:stuart_onion_3"
 		],
 		"subtitle": "subtitles.entity.llama.spit"
+	},
+	"item.armor.equip_copper": {
+		"subtitle": "subtitles.item.armor.equip",
+		"sounds": [
+			"minecraft:item/armor/equip_copper1",
+			"minecraft:item/armor/equip_copper2",
+			"minecraft:item/armor/equip_copper3",
+			"minecraft:item/armor/equip_copper4",
+			"minecraft:item/armor/equip_copper5"
+		]
 	}
 }

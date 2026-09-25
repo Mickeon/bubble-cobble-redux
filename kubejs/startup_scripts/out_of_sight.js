@@ -42,7 +42,7 @@ const DISABLED_ITEMS = [
 	// "artifacts:crystal_heart", // Needs balancing. Too many hearts at max.
 	// "artifacts:helium_flamingo", // Needs balancing. Ridiculous air time at max. Also kind of broken due to crawling keybind?
 ]
-if (Platform.isLoaded("copperagebackport")) {
+if (Item.exists("minecraft:copper_nugget")) {
 	// In favour of Minecraft's own Copper Nugget.
 	DISABLED_ITEMS.push("create:copper_nugget")
 }
