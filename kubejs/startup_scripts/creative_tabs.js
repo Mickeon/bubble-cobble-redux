@@ -301,9 +301,6 @@ StartupEvents.modifyCreativeTab("minecraft:tools_and_utilities", event => {
 	// event.removeFromParent(Ingredient.of("#minecraft:boats").except(/oak/))
 	// event.remove(Ingredient.of("#snowyspirit:sleds")) // This does nothing. They're persistent for some reason.
 })
-StartupEvents.modifyCreativeTab("minecraft:redstone_blocks", event => {
-	event.removeFromParent("@copperagebackport")
-})
 
 remove_tab("artifacts:main") // Items also exist in "Relics" tab. Well, except the mimic.
 StartupEvents.modifyCreativeTab("relics:relics", event => {

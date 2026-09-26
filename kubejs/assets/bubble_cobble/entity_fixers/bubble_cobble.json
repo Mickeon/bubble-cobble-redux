@@ -1,7 +1,4 @@
 {
-	"minecraft:copper_golem": {
-		"offset": -3
-	},
 	"minecraft:magma_cube": {
 		"scale": 0.333
 	},

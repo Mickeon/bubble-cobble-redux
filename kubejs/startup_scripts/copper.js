@@ -1,5 +1,3 @@
-if (!Platform.isLoaded("copperagebackport")) {
-
 StartupEvents.registry("armor_material", event => {
 	const $ArmorMaterial$Layer = Java.loadClass("net.minecraft.world.item.ArmorMaterial$Layer")
 
@@ -168,23 +166,3 @@ StartupEvents.registry('particle_type', e => {
 	e.create('special')
 })
 */
-
-} else {
-
-ItemEvents.modification(event => {
-	/** @param {$Item} item  @param {number} max_damage */
-	function set_max_damage(item, max_damage) {
-		event.modify(item, modified => {
-			modified.maxDamage = max_damage
-			modified.damage = 0
-		})
-	}
-
-	// Fix Copper Armor having no durability.
-	set_max_damage("minecraft:copper_helmet", 121)
-	set_max_damage("minecraft:copper_chestplate", 176)
-	set_max_damage("minecraft:copper_leggings", 165)
-	set_max_damage("minecraft:copper_boots", 143)
-})
-
-}
