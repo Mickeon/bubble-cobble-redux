@@ -60,8 +60,6 @@
         "!*/**.aseprite",
         "!*/**.d.ts",
 
-        "mods/copperagebackportduplicatematerialfix-neoforge-0.1.jar",
-
         "!config/ali",
         "!config/moveslikemafuyu_config.toml",
         "!config/smartkeyprompts_config.toml",
