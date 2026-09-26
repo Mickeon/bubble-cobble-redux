@@ -6,8 +6,21 @@
 		"farmersdelight:jei_plugin": "DISABLED",
 		"clutternomore:jei": "DISABLED",
 		"mendingrework:jei_plugin": "DISABLED",
-		"inv_move:jei_plugin": "DISABLED",
-		"kubejs:jei": "DISABLED"
+		"invmove:jei_plugin": "DISABLED",
+		"kubejs:jei": "DISABLED",
+		"sidekick:sidekick": "DISABLED",
+		"sophisticatedstoragecreateintegration:default": "DISABLED",
+		"sophisticatedbackpackscreateintegration:default": "DISABLED",
+		"sophisticateditemactions:default": "DISABLED",
+		"sophisticatedcore:default": "DISABLED",
+		"sophisticatedbackpacks:default": "DISABLED",
+		"sophisticatedstorage:default": "DISABLED",
+		"constructionstick:constructionstick": "DISABLED",
+		"curios:curios": "DISABLED",
+		"accessories:main": "DISABLED",
+		"copycats:jei_plugin": "DISABLED",
+		"kiwi:customization": "DISABLED",
+		"cobblemonraiddens:jei": "DISABLED"
 	},
 	"defaultPhaseOverrides": {
 	
