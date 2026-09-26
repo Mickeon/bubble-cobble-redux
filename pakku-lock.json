@@ -10036,6 +10036,44 @@
             ]
         },
         {
+            "pakku_id": "Io3xTFFfZunhTXhy",
+            "type": "MOD",
+            "side": "SERVER",
+            "slug": {
+                "modrinth": "too-fast"
+            },
+            "name": {
+                "modrinth": "Too Fast"
+            },
+            "id": {
+                "modrinth": "w6JSkKSH"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "toofast-1.21.0-0.4.3.5.jar",
+                    "mc_versions": [
+                        "1.21",
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/w6JSkKSH/versions/pDkjMI8q/toofast-1.21.0-0.4.3.5.jar",
+                    "id": "pDkjMI8q",
+                    "parent_id": "w6JSkKSH",
+                    "hashes": {
+                        "sha512": "4108ff7d3ca21c4392f99df510bdcc5ca968def79ed0a855c8e77be91b583b4f435ee643b952a8238369db3bdcda3725c2efc84ca105fd0978b76c803ea250ec",
+                        "sha1": "7940d2516a492ff687696dfc0f8b66a6c628baad"
+                    },
+                    "required_dependencies": [],
+                    "size": 3352,
+                    "date_published": "2025-02-02T01:32:06.269912Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "QU8SDFo2NDyu5RY7",
             "type": "MOD",
             "side": "CLIENT",
