@@ -307,7 +307,7 @@ ServerEvents.loaded(event => {
 	if (Platform.isLoaded("createmonballsoverhaul")) {
 		/** @typedef {import("@package/net/minecraft/world/level/material").$FluidState} $FluidState */
 
-		const fluid_rand = Utils.getRandom().fork()
+		let fluid_rand = Utils.getRandom().fork()
 
 		$FluidInteractionRegistry.addInteraction(LAVA, new $InteractionInformation["(net.neoforged.neoforge.fluids.FluidType,java.util.function.Function)"](
 			Fluid.getType("createmonballsoverhaul:source_standard_tumblestone_coating").getFluidType(),

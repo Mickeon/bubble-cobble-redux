@@ -8,7 +8,7 @@
 		# Display Delight logs a warning for every food item missing from mods we don't have.
 		"com.jkvin114.displaydelight.DisplayDelight",
 		# Yes, we know what mods are on.
-		"net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN"
+		"loading.moddiscovery.ModDiscoverer/SCAN"
 	]
 	# Messages containing the specified substrings will be filtered out and not logged.
 	strings = [
