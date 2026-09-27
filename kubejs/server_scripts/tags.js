@@ -179,6 +179,10 @@ ServerEvents.tags("item", event => {
 	event.add("crittersandcompanions:stag_beetle_tempt_items", "#c:foods/berry")
 	event.add("crittersandcompanions:snail_food", "#c:foods/cabbage", "#cobblemon:mint_leaves", "herbalbrews:yerba_mate_leaf", "herbalbrews:rooibos_leaf", "biomeswevegone:leaf_pile")
 	event.add("crittersandcompanions:snail_tempt_items", "#crittersandcompanions:snail_food")
+
+	if (Platform.isLoaded("connectiblechains")) {
+		event.add("connectiblechains:hangable_items", "#bubble_cobble:lanterns", "urban_decor:stainless_steel_lantern", "urban_decor:stainless_steel_soul_lantern")
+	}
 })
 
 ServerEvents.tags("block", event => {

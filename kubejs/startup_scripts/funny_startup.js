@@ -183,6 +183,7 @@ StartupEvents.registry("sound_event", event => {
 	event.create("bubble_cobble:crate_jump")
 	event.create("bubble_cobble:fruit_collected")
 	event.create("bubble_cobble:life_got")
+	event.create("bubble_cobble:sniper_apple")
 	event.create("kubejs:item.bearded_dragon_chirp")
 	event.create("kubejs:entity.enderman.bones_cracking")
 })

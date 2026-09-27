@@ -362,6 +362,26 @@ ItemEvents.modifyTooltips(event => {
 	event.add(Ingredient.of("@immersive_furniture").or("@sleep_tight").or("@crittersandcompanions"), [
 		Text.yellow("Experimental").append(Text.of(` 🧊`).white()),
 	])
+
+	event.modify("#connectiblechains:catenary_items", {shift: false}, text => {
+		text.removeText(Text.translate("message.connectiblechains.connectible_chain"))
+		text.insert(1, Text.join(
+			`Catenary`,
+			Text.of(` ℹ`).darkGray(),
+		).color(MASCOT_COLOR_DARK))
+	})
+	event.modify("#connectiblechains:catenary_items", {shift: true}, text => {
+		text.removeText(Text.translate("message.connectiblechains.connectible_chain_detailed"))
+		text.insert(1, Text.join(
+			Text.of(`Use`).color(MASCOT_COLOR),
+			` on fences, walls, or bars to create a `,
+			Text.of(`catenary`).color(MASCOT_COLOR),
+			`!`
+		).color(MASCOT_COLOR_DARK))
+	})
+	event.modify("#connectiblechains:hangable_items", {shift: false}, text => {
+		text.insert(1, Text.join(`Hangable on catenary`).color(MASCOT_COLOR_DARK))
+	})
 })
 
 ItemEvents.dynamicTooltips("sue_banana_mayo_sandwich", event => {

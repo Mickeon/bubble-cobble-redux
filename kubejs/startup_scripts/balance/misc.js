@@ -122,3 +122,17 @@ global.on_hatch_egg_pre = $CobblemonEvents.HATCH_EGG_PRE.subscribe(event => {
 	}
 })
 
+// Pokemon funny sound when Leftovers are dropped.
+if (global.on_leftovers_created) {
+	global.on_leftovers_created.unsubscribe()
+}
+global.on_leftovers_created = $CobblemonEvents.LEFTOVERS_CREATED.subscribe(event => {
+	const player = event.playerEntity
+	if (!player) {
+		return
+	}
+
+	player.playNotifySound("minecraft:block.sniffer_egg.hatch", "voice", 0.5, 1.0)
+	player.playNotifySound("bubble_cobble:sniper_apple", "neutral", 1.0, player.getRandom().triangle(1.0, 0.2))
+})
+

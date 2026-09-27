@@ -166,5 +166,10 @@
 		"sounds": [
 			"bubble_cobble:light_fire"
 		]
+	},
+	"sniper_apple": {
+		"sounds": [
+			"bubble_cobble:sniper_apple"
+		]
 	}
 }
