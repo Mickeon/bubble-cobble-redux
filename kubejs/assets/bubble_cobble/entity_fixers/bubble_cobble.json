@@ -50,6 +50,9 @@
 	"mowziesmobs:umvuthi": {
 		"offset": 3
 	},
+	"sleep_tight:bedbug": {
+		"offset": -12
+	},
 	"snowyspirit:gingerbread_golem": {
 		"offset": -4
 	},

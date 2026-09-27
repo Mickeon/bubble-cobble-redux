@@ -59,11 +59,11 @@
 			#Whether fireflies can spawn in rain
 			canSpawnInRain = false
 			#Biomes where fireflies always spawn (bypasses temperature check). Example: "minecraft:swamp"
-			biomes = []
+			biomes = ["biomesoplenty:bayou", "biomeswevegone:cypress_swamplands", "biomesoplenty:field"]
 			#Extra blocks that spawn fireflies. Example: "tfc:plant/cattail"
-			spawnBlocks = ["biomesoplenty:cattail", "biomeswevegone:cattail", "biomeswevegone:fluorescent_cattail", "biomeswevegone:cattail_thatch", "biomeswevegone:cattail_thatch_slab", "biomeswevegone:cattail_thatch_stairs", "biomeswevegone:cattail_thatch_carpet"]
+			spawnBlocks = ["biomesoplenty:cattail", "biomeswevegone:cattail", "biomeswevegone:fluorescent_cattail", "biomeswevegone:cattail_thatch", "biomeswevegone:cattail_thatch_slab", "biomeswevegone:cattail_thatch_stairs", "biomeswevegone:cattail_thatch_carpet", "minecraft:podzol"]
 			#Per-biome firefly RGB hex tints. Format: "biomeId|RRGGBB". Example: "minecraft:swamp|FFD27F". Takes priority over fireflyColorPool.
-			biomeColors = []
+			biomeColors = ["biomeswevegone:temperate_grove|FFFF00", "biomeswevegone:allium_shrubland|9569A3", "biomeswevegone:cypress_swamplands|B0EB84", "biomesoplenty:mystic_grove|9BD1FF", "biomesoplenty:ominous_woods|181048", "biomesoplenty:redwood_forest|A76E3F", "biomeswevegone:orchard|F1E0F1", "biomeswevegone:coconino_meadow|F1E0F1", "biomeswevegone:aspen_boreal|CDCB79", "biomeswevegone:amaranth_grassland|94C1D9", "biomeswevegone:prairie|666045", "minecraft:dark_forest|274625", "biomesoplenty:shrubland|A9D487", "biomesoplenty:bayou|475645", "biomesoplenty:field|5EAF8D"]
 			#Random RGB hex colors picked per firefly when no biomeColors entry matches. Empty = use built-in yellow/blue/red mix. Format: "RRGGBB".
 			colorPool = []
 
@@ -73,7 +73,7 @@
 				#Frequency modifier for grass
 				# Default: 0.16666666666666666
 				# Range: 0.0 ~ 1.0
-				grass = 0.16666666666666666
+				grass = 0.01
 				#Frequency modifier for tall grass
 				# Default: 0.08333333333333333
 				# Range: 0.0 ~ 1.0

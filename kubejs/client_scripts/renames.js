@@ -107,6 +107,7 @@ ClientEvents.lang("en_us", event => {
 	event.add("farmersdelight", "farmersdelight.tooltip.dog_food.when_feeding", "When fed to a tamed pet:")
 
 	// UK term this time. It just feels better.
+	event.add("minecraft", "item.minecraft.lead", "Leash")
 	event.add("crittersandcompanions", "item.crittersandcompanions.silk_lead", "Silk Leash")
 
 	// These are accidentally unnamed, which...

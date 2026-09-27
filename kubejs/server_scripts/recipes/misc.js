@@ -367,7 +367,6 @@ ServerEvents.recipes(event => {
 	// event.replaceInput({id: "create_deepfried:deep_frying/calamari"}, "minecraft:ink_sac", "#c:foods/raw_squid")
 
 	// Allow Way Signs to be crafted by cutting Signs with a saw.
-	// Due to a bug this happens to be the only way to craft them, actually.
 	for (const way_sign_id of Ingredient.of("#supplementaries:way_signs").itemIds) {
 		let path = ID.path(way_sign_id)
 		let wood_type = path.split("way_sign_")[1]

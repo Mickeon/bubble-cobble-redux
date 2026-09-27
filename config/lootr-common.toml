@@ -28,11 +28,11 @@
 	convert_item_frames = true
 	#determines when lootr saves data files for containers. 'always' will always save them, which may result in more files than expected; 'when_opened' will only save them the first time they have been opened; 'smart' defaults to 'always' but switches to 'when_opened' for aternos and exaroton
 	#Allowed Values: ALWAYS, SMART, WHEN_OPENED
-	save_mode = "SMART"
+	save_mode = "WHEN_OPENED"
 	#the default delay between ticks. the higher this value, the slower it takes for containers to determine they should refresh, decay, or start refreshing or decaying
 	# Default: 20
 	# Range: > 0
-	tick_delay = 20
+	tick_delay = 100
 
 [whitelist]
 	#configuration for specific whitelisting and blacklisting of dimensions, loot tables and modids
@@ -45,7 +45,7 @@
 	modid_dimension_blacklist = []
 	#list of dimensions by modid that loot chest should be replaced in (default: blank, allowing all modids, format e.g., ["minecraft
 	#othermod"])
-	modid_dimension_whitelist = []
+	modid_dimension_whitelist = ["resource_world"]
 	#list of loot tables which shouldn't be converted (in the format of ["modid:loot_table", "othermodid:other_loot_table"])
 	loot_table_blacklist = []
 	#list of modids whose loot tables shouldn't be converted (in the format of ["modid", "other_modid"])

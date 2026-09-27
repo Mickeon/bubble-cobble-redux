@@ -89,7 +89,9 @@
         "!config/nautilus_studio.json",
         "!config/dummmmmmy-*",
         "!config/packforge.json",
+        "!config/grassiergrass-client.toml",
         "!fieldguide_cache/",
+        "!*lightspeed*",
         "!*locomotionmap.json"
     ],
     "paths": {

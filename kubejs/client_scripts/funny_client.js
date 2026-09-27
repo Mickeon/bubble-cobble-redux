@@ -16,7 +16,6 @@ ClientEvents.lang("en_us", event => {
 	event.addAll({
 		"advancement.create.hand_crank_000": "Cranking it",
 		"item.minecraft.rabbit_stew": "Mimiga Stew",
-		"item.minecraft.lead": "Leash",
 		"item.minecraft.lingering_potion.effect.begone": "Lingering Potion of Begone",
 		"item.minecraft.lingering_potion.effect.girl_power": "Lingering Potion of Girl Power",
 		"item.minecraft.potion.effect.begone": "Potion of Begone",
