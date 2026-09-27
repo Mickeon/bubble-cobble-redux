@@ -55,7 +55,9 @@
         "relics:relic_experience_orb",
         "sleep_tight:dreamer_essence_dummy",
         "supplementaries:cannonball",
-        "yo_hooks:hook_entity"
+        "yo_hooks:hook_entity",
+        "crittersandcompanions:grappling_hook",
+        "crittersandcompanions:mud_ball"
       ],
       "includeListInSuperCategory": true,
       "excludeMode": "ONLY",

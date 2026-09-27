@@ -13,6 +13,17 @@
 		"offset": -17,
 		"z": -90.0
 	},
+	"crittersandcompanions:koi_fish": {
+		"offset": -17,
+		"z": -90.0
+	},
+	"crittersandcompanions:shima_enaga": {
+		"offset": -16,
+		"z": -5.0
+	},
+	"crittersandcompanions:jumping_spider": {
+		"offset": -12
+	},
 	"biomeswevegone:man_o_war": {
 		"offset": -16,
 		"z": -5.0

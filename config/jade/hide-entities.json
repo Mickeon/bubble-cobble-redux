@@ -14,6 +14,8 @@
     "yo_hooks:hook_entity",
     "minecraft:experience_orb",
     "relics:relic_experience_orb",
-    "sleep_tight:dreamer_essence_dummy"
+    "sleep_tight:dreamer_essence_dummy",
+    "crittersandcompanions:grappling_hook",
+    "crittersandcompanions:mud_ball"
   ]
 }

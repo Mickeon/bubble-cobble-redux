@@ -3,7 +3,9 @@
     "cobblemon:air_balloon",
     "sophisticatedstorage:packing_tape",
     "sophisticatedstorage:super_packing_tape",
-    "minecraft:lead"
+    "minecraft:lead",
+    "crittersandcompanions:silk_lead",
+    "crittersandcompanions:grappling_hook"
   ],
   "pitch": 1.5,
   "soundEvent": "supplementaries:block.rope.hit",

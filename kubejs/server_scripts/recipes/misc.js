@@ -377,6 +377,17 @@ ServerEvents.recipes(event => {
 		event.recipes.create.cutting(CreateItem.of(Item.of(way_sign_id, 2)), Ingredient.of(original_sign_id))
 	}
 
+	if (Platform.isLoaded("crittersandcompanions")) {
+		event.remove({id: "crittersandcompanions:grappling_hook"})
+		event.shaped("crittersandcompanions:grappling_hook", [" SS", " IS", "S  "], {S: "crittersandcompanions:silk", I: "#c:slimeballs"})
+		event.remove({id: "crittersandcompanions:silk_lead"})
+		event.shaped("crittersandcompanions:silk_lead", ["SS ", "SS ", "  S"], {S: "crittersandcompanions:silk"})
+
+		event.replaceInput({id: "cobblemon:silk_scarf"}, "#minecraft:wool", "crittersandcompanions:silk")
+		event.shaped(Item.of("biomesoplenty:webbing", 4), ["SS", "SS"], {S: "crittersandcompanions:silk"})
+		event.shaped(Item.of("biomesoplenty:hanging_cobweb", 3), ["SS", "SS", "SS"], {S: "crittersandcompanions:silk"})
+	}
+
 	// TODO: Add recipes for (this modpack's) Pale Jacaranda and Redder Wood.
 	// event.shaped("biomesoplenty:stripped_jacaranda_log", ["DAD", "ADA", "DAD"], {D: "minecraft:white_dye", A: "biomeswevegone:stripped_jacaranda_log"})
 	// event.shaped("biomesoplenty:stripped_redwood_log", ["DAD", "ADA", "DAD"], {D: "minecraft:red_dye", A: "biomeswevegone:stripped_redwood_log"})

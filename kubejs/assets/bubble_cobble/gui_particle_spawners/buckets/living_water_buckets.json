@@ -3,6 +3,9 @@
 
   "applies": [
     {"id": "create_bic_bit:herring_bucket"},
-    {"id": "biomeswevegone:man_o_war_bucket"}
+    {"id": "biomeswevegone:man_o_war_bucket"},
+    {"id": "crittersandcompanions:koi_fish_bucket"},
+    {"id": "crittersandcompanions:dumbo_octopus_bucket"},
+    {"id": "crittersandcompanions:sea_bunny_bucket"}
   ]
 }

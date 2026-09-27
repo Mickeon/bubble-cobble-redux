@@ -90,6 +90,11 @@ ItemEvents.modification(event => {
 	change_hook_values("yo_hooks:diamond_grappling_hook", 144, 21)
 	change_hook_values("yo_hooks:netherite_grappling_hook", 216, 26)
 
+	// Bring it in line with the other grappling hooks.
+	event.modify(["crittersandcompanions:grappling_hook"], modified => {
+		modified.maxDamage = 96 // Defaults to 256.
+	})
+
 	// TODO: Embed Fortune/Looting II into Golden tools (This is derived from Quark).
 	// Enchantments are not registered at this stage, so it's not possible like this.
 	// event.modify(["minecraft:golden_pickaxe", "minecraft:golden_axe", "minecraft:golden_shovel", "minecraft:golden_hoe", "minecraft:golden_sword", "farmersdelight:golden_knife"], /** @param {$ItemModifications} modified */ modified => {

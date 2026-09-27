@@ -228,6 +228,7 @@ ServerEvents.tags("item", event => {
 		"cobblemon:ability_patch",
 		"cobblemon:link_cable",
 		"create_bic_bit:crushed_nether_wart",
+		"crittersandcompanions:silk",
 		"farmersdelight:canvas",
 		"farmersdelight:cooked_rice",
 		"farmersdelight:fried_rice",

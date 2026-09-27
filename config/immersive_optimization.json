@@ -33,6 +33,7 @@
     "yo_hooks:hook_entity": false,
     "cobblemon:poke_bobber": false,
     "cobblemon:empty_pokeball": false,
+    "crittersandcompanions:grappling_hook": false,
     "*": true
   },
   "cullProjectiles": false,

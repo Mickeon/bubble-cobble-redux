@@ -359,7 +359,7 @@ ItemEvents.modifyTooltips(event => {
 		event.add(["urban_decor:towel_bar"], [subtle("Can contain").append(Text.gold(" any towel"))])
 	}
 
-	event.add(Ingredient.of("@immersive_furniture").or("@sleep_tight"), [
+	event.add(Ingredient.of("@immersive_furniture").or("@sleep_tight").or("@crittersandcompanions"), [
 		Text.yellow("Experimental").append(Text.of(` 🧊`).white()),
 	])
 })

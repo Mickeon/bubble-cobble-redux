@@ -99,9 +99,15 @@ ClientEvents.lang("en_us", event => {
 	// Both Biomes We've Gone and and Snowy Spirit have Wreaths.
 	event.add("snowyspirit", "block.snowyspirit.wreath", "Jolly Wreath")
 
+	// Both Yo Hooks and Critters and Companions have Grappling Hooks.
+	event.add("crittersandcompanions", "item.crittersandcompanions.grappling_hook" , "Hurdling Hook")
+
 	// As Dog Food now works on Pokemon, too.
 	event.add("farmersdelight", "item.farmersdelight.dog_food", "Pet Food")
 	event.add("farmersdelight", "farmersdelight.tooltip.dog_food.when_feeding", "When fed to a tamed pet:")
+
+	// UK term this time. It just feels better.
+	event.add("crittersandcompanions", "item.crittersandcompanions.silk_lead", "Silk Leash")
 
 	// These are accidentally unnamed, which...
 	// TODO: Should probably be reported.
