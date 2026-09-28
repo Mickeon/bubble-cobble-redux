@@ -16,7 +16,7 @@ ServerEvents.tags("item", event => {
 	event.add("bubble_cobble:diamond_tools",
 		"minecraft:diamond_sword", "minecraft:diamond_shovel", "minecraft:diamond_pickaxe",
 		"minecraft:diamond_axe", "minecraft:diamond_hoe", "minecraft:diamond_spear",
-		"farmersdelight:diamond_knife", "constructionstick:diamond_stick", "yo_hooks:diamond_grappling_hook"
+		"farmersdelight:diamond_knife",
 	)
 	event.add("bubble_cobble:diamond_armor",
 		"minecraft:diamond_helmet", "minecraft:diamond_chestplate",
@@ -50,9 +50,9 @@ ServerEvents.recipes(event => {
 	// Recycle diamond tools & armor.
 	event.recipes.create.crushing([
 			CreateItem.of(Item.of("create:experience_nugget", 3)),
-			CreateItem.of(Item.of( "create:experience_nugget", 1), 0.20),
-			CreateItem.of(Item.of( "minecraft:diamond", 1), 0.1),
-			CreateItem.of(Item.of( "minecraft:stick", 1), 0.1),
+			CreateItem.of(Item.of("create:experience_nugget", 1), 0.20),
+			CreateItem.of(Item.of("minecraft:diamond", 1), 0.1),
+			CreateItem.of(Item.of("minecraft:stick", 1), 0.1),
 		],
 		Ingredient.of("#bubble_cobble:diamond_tools"),
 		10 * SEC
@@ -218,6 +218,7 @@ ServerEvents.recipes(event => {
 	change_result_count({id: "create:sequenced_assembly/track"}, 2)
 
 	// See https://modrinth.com/mod/create-copper-zinc.
+	// TODO: Reconsider. People in the past have expressed that the recipes are not worth it.
 	event.recipes.create.mixing(CreateItem.of("create:asurine"), [
 		Item.of("minecraft:clay_ball", 3),
 		Item.of("minecraft:flint", 1),
@@ -259,11 +260,6 @@ ServerEvents.recipes(event => {
 	if (Item.exists("minecraft:pale_oak_shelf")) {
 		event.shaped(Item.of("minecraft:pale_oak_shelf", 6), ["SSS", "   ", "SSS"], {S: "biomesoplenty:stripped_jacaranda_log"})
 	}
-
-	// New recipe for Gadgets Against Grind's Escape Rope.
-	// event.remove({mod: "gag"})
-	event.remove({id: "gag:escape_rope"})
-	event.shapeless("gag:escape_rope", ["yo_hooks:iron_hook_head", Ingredient.of("#c:ropes").withCount(3)])
 
 	// Recipes for Applin evolution items, leftover from when they were unobtainable.
 	event.shaped(Item.of("cobblemon:sweet_apple"), ["SSS", "SAS", "SSS"], {A: "minecraft:apple", S: "minecraft:sweet_berries"})
@@ -359,10 +355,6 @@ ServerEvents.recipes(event => {
 	event.shapeless(Item.of("supplementaries:soap", 6), [Ingredient.of("minecraft:water_bucket"), Ingredient.of("arts_and_crafts:bleachdew", 3)])
 	event.recipes.create.mixing(CreateItem.of(Item.of("supplementaries:soap", 6)), [Fluid.sizedIngredientOf("#c:water", 500), Ingredient.of("arts_and_crafts:bleachdew", 3)])
 
-	// Just kinda makes sense.
-	event.remove({id: "handcrafted:berry_jam_jar"})
-	event.shapeless(Item.of("handcrafted:berry_jam_jar"), Ingredient.of("brewinandchewin:sweet_berry_jam"))
-	event.shapeless(Item.of("brewinandchewin:sweet_berry_jam"), Ingredient.of("handcrafted:berry_jam_jar"))
 	// TODO: This doesn't work. Likely because there's no recipe schema for deepfrying.
 	// event.replaceInput({id: "create_deepfried:deep_frying/calamari"}, "minecraft:ink_sac", "#c:foods/raw_squid")
 

@@ -2,7 +2,6 @@
 
 const GENERAL_FURNITURE = Ingredient.of("@handcrafted").except(/trim/)
 		.or("#farmersdelight:cabinets")
-		.or("#minecraft:wooden_shelves")
 		.or("@shutterup")
 		.or(/urban_decor:.*(box|calendar|piano|grandfather_clock)/)
 		.or(/create:.*window/)

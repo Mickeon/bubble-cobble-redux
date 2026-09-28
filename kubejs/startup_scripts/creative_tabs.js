@@ -14,12 +14,6 @@ function rename_tab(tab_id, to, icon_item_id) {
 		}
 	})
 }
-/** @param {RegistryTypes.CreativeModeTab} tab_id */
-function remove_tab(tab_id) {
-	StartupEvents.modifyCreativeTab(tab_id, event => {
-		event.remove("*")
-	})
-}
 
 /**
  * @param {RegistryTypes.CreativeModeTab} from_id
@@ -73,7 +67,6 @@ rename_tab("minersdelight:minersdelight",     " §eFarmer's Delight: §rMiner's 
 rename_tab("mynethersdelight:main",           " §eFarmer's Delight: §rMy Nether's Delight ")
 rename_tab("displaydelight:displaydelight",   " §eFarmer's Delight: §r§rDisplay Delight ")
 
-remove_tab("constructionstick:tab") // Items also exist in Tools & Utilities tab.
 remove_tab("sophisticatedcore:main") // Only contains "sophisticatedcore:xp_bucket".
 remove_tab("lootr:lootr") // Only contains "lootr:trophy".
 
@@ -306,34 +299,6 @@ remove_tab("artifacts:main") // Items also exist in "Relics" tab. Well, except t
 StartupEvents.modifyCreativeTab("relics:relics", event => {
 	event.add("artifacts:mimic_spawn_egg")
 })
-
-if (Platform.isLoaded("yo_hooks")) {
-	remove_tab("yo_hooks:grappling_hooks") // Rather small and redundant tab.
-	StartupEvents.modifyCreativeTab("minecraft:tools_and_utilities", event => {
-		event.addAfter("minecraft:iron_hoe", "yo_hooks:iron_grappling_hook")
-		event.addAfter("minecraft:golden_hoe", "yo_hooks:gold_grappling_hook")
-		event.addAfter("minecraft:diamond_hoe", "yo_hooks:diamond_grappling_hook")
-		event.addAfter("minecraft:netherite_hoe", "yo_hooks:netherite_grappling_hook")
-	})
-	StartupEvents.modifyCreativeTab("minecraft:ingredients", event => {
-		event.add([
-			"yo_hooks:iron_hook_head",
-			"yo_hooks:gold_hook_head",
-			"yo_hooks:diamond_hook_head",
-			"yo_hooks:netherite_hook_head"
-		])
-	})
-}
-
-if (Platform.isLoaded("gag")) {
-	remove_tab("gag:gag") // A lot of the items here go unused in this modpack.
-	StartupEvents.modifyCreativeTab("minecraft:tools_and_utilities", event => {
-		event.add([
-			"gag:time_sand_pouch",
-			"gag:escape_rope"
-		])
-	})
-}
 
 if (Platform.isLoaded("displaydelight")) {
 	// https://github.com/jkvin114/display-delight-neoforge/blob/main/src/main/java/com/jkvin114/displaydelight/init/BlockAssociations.java

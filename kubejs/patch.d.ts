@@ -105,3 +105,9 @@ declare module "@package/dev/latvian/mods/kubejs/item" {
         onlyHurtBy(damageTypes: $List_<$ResourceKey_<$DamageType>>): this;
 	}
 }
+
+declare module "@package/dev/latvian/mods/kubejs/script" {
+	export interface $PlatformWrapper {
+		static isLoaded(modId: SpecialTypes.ModId | string): boolean;
+	}
+}

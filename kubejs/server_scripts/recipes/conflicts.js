@@ -71,6 +71,7 @@ ServerEvents.recipes(event => {
 	// })
 
 	// Recipe conflict between Minecraft's Chiseled Bookshelf and Urban Decor's calendars.
+	// Note that Minecraft's recipe is changed by Clutter No More.
 	// Put a Clock in the middle.
 	if (Platform.isLoaded("urban_decor")) {
 		let replace_char_at = (str, index, char) => {

@@ -3,7 +3,7 @@
 let $Move = Java.loadClass("com.cobblemon.mod.common.api.moves.Move")
 let $Moves = Java.loadClass("com.cobblemon.mod.common.api.moves.Moves")
 
-/** @import {$MutableComponent} from "net/minecraft/network/chat" */
+/** @import {$MutableComponent} from "@package/net/minecraft/network/chat" */
 
 /** @import {global} from "./../startup_scripts/_common" */
 const {is_eligible_for_easter_egg} = global
@@ -14,302 +14,48 @@ const SHIFT_INFO_COLOR = "#7CB3D6"
 
 const PLACEABLE_TOOLTIP = Text.of(`Placeable`).color(MASCOT_COLOR_DARK)
 const PLACEABLE_SNEAKING_TOOLTIP = PLACEABLE_TOOLTIP.copy().append([" while", Text.of(` sneaking`).color(MASCOT_COLOR)])
-const HAMMER_TOOLTIP = Text.of(`Can be changed with the Handcrafter's Hammer`).color(MASCOT_COLOR_DARK)
-const HANDCRAFTED_ITEMS_WITH_SHIFT_INFO = [
-	"#handcrafted:cushions",
-	"#handcrafted:sheets",
-	"#handcrafted:benches",
-	"#handcrafted:couches",
-	"#handcrafted:chairs",
-	"#handcrafted:tables",
-	"#handcrafted:side_tables",
-	"#handcrafted:desks",
-	"#handcrafted:nightstands",
-	"#handcrafted:tables",
-	"#handcrafted:fancy_beds",
-	"#handcrafted:counters",
-	"#handcrafted:cupboards",
-	"#handcrafted:drawers",
-	"#handcrafted:shelves",
-	"#handcrafted:trims",
-	"handcrafted:hammer"
-]
 
 ItemEvents.modifyTooltips(event => {
-	event.add(["cobblemon:ice_stone"], Text.of(`Emanates a blue mascot cat scent...`).color(MASCOT_COLOR))
-
-	if (Platform.isLoaded("handcrafted")) {
-		// Remove their SHIFT info in favour of ours.
-		event.modify(HANDCRAFTED_ITEMS_WITH_SHIFT_INFO, text => {
-			text.removeText(Text.translate("tooltip.handcrafted.shift_description"))
+	if (Platform.isLoaded("sophisticatedcore")) {
+		// Fix Sophisticated Backpack's Inventory Interaction Upgrades descriptions being misleading.
+		// They say "sneak right clicked inventory" but it's actually a keybind.
+		event.modify(["sophisticatedbackpacks:deposit_upgrade", "sophisticatedbackpacks:advanced_deposit_upgrade"], text => {
+			text.removeLine(1)
+			text.insert(1, Text.translate("Deposits items from backpack when pressing %s on an inventory", [
+				Text.keybind("key.sophisticatedbackpacks.inventory_interaction").white()]).color(MASCOT_COLOR_DARK)
+			)
 		})
-		event.modify(HANDCRAFTED_ITEMS_WITH_SHIFT_INFO, {shift: true}, text => {
-			// They probably run this through a text splitter, so removing by looking up
-			// the translation Text component does not actually work. Cool jank.
-			/** @type {String[]} */
-			// const whole_translated_strings = [
-			// 	Text.translate("tooltip.handcrafted.bed_pillow").string,
-			// 	Text.translate("tooltip.handcrafted.bed_sheet").string,
-			// 	Text.translate("tooltip.handcrafted.counter").string,
-			// 	Text.translate("tooltip.handcrafted.cushion").string,
-			// 	Text.translate("tooltip.handcrafted.hammer_use_look").string,
-			// 	Text.translate("tooltip.handcrafted.hammer_use_look_shift").string,
-			// 	Text.translate("tooltip.handcrafted.hammer_use_shape").string,
-			// 	Text.translate("tooltip.handcrafted.place_on_furniture").string,
-			// 	Text.translate("tooltip.handcrafted.sheet").string,
-			// ]
-			// // FIXME: This doesn't always work
-			// for (let whole_string of whole_translated_strings) {
-			// 	let word_wrapped_string = whole_string.match(/(.{1,40}(\s|$))\s*/g)
-			// 	for (let string of word_wrapped_string) {
-			// 		console.log(string.trim())
-			// 		text.removeText(string.trim())
-			// 	}
-			// }
-
-			// Quite horrid hack to be honest.
-			text.removeText("Right-click with a cushion to change the")
-			text.removeText("Right-click with a sheet to change the")
-			text.removeText("Right-click with a hammer to change the")
-			text.removeText("Right-click with wood or stone to")
-			text.removeText("Right-click with wood or stone to")
-			text.removeText("Shift-right-click with a hammer to")
-			text.removeText("change the block's look.")
-			text.removeText("change the counter surface.")
-			text.removeText("block's look.")
-			text.removeText("block's shape.")
-			text.removeText("bed's pillow color.")
-			text.removeText("bedsheets.")
-			text.removeText("Changes the look of blocks.")
+		event.modify(["sophisticatedbackpacks:restock_upgrade", "sophisticatedbackpacks:advanced_restock_upgrade"], text => {
+			text.removeLine(1)
+			text.insert(1, Text.translate("Restocks items from backpack when pressing %s on an inventory", [
+				Text.keybind("key.sophisticatedbackpacks.inventory_interaction").white()]).color(MASCOT_COLOR_DARK)
+			)
 		})
-		event.add(["#handcrafted:cushions", ], PLACEABLE_TOOLTIP)
-		event.add(["#handcrafted:counters", "#handcrafted:cupboards", "#handcrafted:drawers", "#handcrafted:shelves", "#handcrafted:trims"], HAMMER_TOOLTIP)
-		add_shift_info(event, "#handcrafted:sheets", ["§9Can be put on:", "  §9- §bTables", "  §9- §bSide Tables", "  §9- §bDesks", "  §9- §bNightstands", "  §9- §bFancy Beds"])
-		add_shift_info(event, "#handcrafted:cushions", ["§9Can be put on:", "  §9- §bCouches", "  §9- §bBenches", "  §9- §bChairs", "  §9- §bFancy Beds"])
-		add_shift_info(event, "#handcrafted:counters", [
-				"§9With a §bcalcite§9 counter top. Use these blocks to change its appearance!",
-				"    §bOak§9, §bBirch§9, §bSpruce§9, §bJungle,",
-				"    §bDark Oak§9, §bAcacia§9, §bWarped§9, §bCrimson,",
-				"    §bMangrove§9, §bCherry§9, §bBamboo§9, §bQuartz,",
-				"    §bStone§9, §bAndesite§9, §bGranite§9, §bDiorite,",
-				"    §bBricks§9, §bBlackstone§9, §bSmooth Stone§9, §bDeepslate,",
-				"    §bDripstone§9, §bCalcite.",
-		])
-
-		event.add(["#handcrafted:fancy_beds"],
-				"§9Try putting on a §bCushion §9or §bSheet§9 for some extra colour!")
-		event.add(["#handcrafted:tables", "#handcrafted:side_tables", "#handcrafted:desks", "#handcrafted:nightstands"],
-				"§9Try putting any §bSheet§9 for some extra colour!")
-		event.add(["#handcrafted:couches", "#handcrafted:benches", "#handcrafted:chairs"],
-				"§9Try putting any §bCushion§9 for some extra colour!")
-
-		add_shift_info(event, "handcrafted:hammer", [
-				"§9Allows you to change the shape of",
-				"§bCounters§9, §bCupboards§9, §bDrawers§9, §bShelves§9, §bTrims§9"])
+		// Mitigate confusion between Sophisticated Backpack and Storage upgrades.
+		event.modify([
+			"#sophisticatedbackpacks:upgrade",
+			"#sophisticatedstorage:upgrade",
+			/sophisticated.*upgrade/, // Catch all.
+		], text => {
+			text.dynamic("add_sophisticated_marker")
+		})
 	}
 
-	add_shift_info(event, "minecraft:big_dripleaf", [
-			[Text.of(`It's a bit `), Text.aqua("tipsy"), Text.of(`...`)],
-			"Woooaaah §2 it's going down §9 holy cow"])
-
-
-	add_shift_info(event, "supplementaries:flute", [
-		"Turns anyone into a blocky virtuoso,",
-		"attracting all of your pets right where you're standing.",
-		"",
-		"Right-click on some friends to bind the Flute.",
-		"A bound friend will teleport to you, no matter what!",
-	])
-	add_shift_info(event, "supplementaries:blackboard", [
-		"Express your paltry creativity.",
-		"Try painting with any Dye, Coal,",
-		"Redstone, Apricorns... erm, Chocolate?",
-		"",
-		"Right-click to open the GUI if you fancy painting programs.",
-	])
-	add_shift_info(event, "supplementaries:bellows", [
-		"Emits wind gusts when powered by redstone.",
-		"The stronger the power, the faster the push frequency.",
-		"When next to a Bellow:",
-		"  - Furnaces burn faster",
-		"  - Fire is kept alive",
-		"  - Copper ages faster",
-	])
-	add_shift_info(event, "supplementaries:redstone_illuminator", [
-		"Gives off light that is inversely",
-		"proportional to its redstone power."
-	])
-	add_shift_info(event, "supplementaries:cog_block", [
-		"Propagates its redstone power to adjacent",
-		"Cog Blocks, even vertically. Nifty!"
-	])
-	add_shift_info(event, "supplementaries:crystal_display", [
-		"Displays crystal. Well, a number",
-		"or symbol when powered by redstone.",
-		"Suitable for haters of the Clock Block.",
-	])
-	add_shift_info(event, "supplementaries:antique_ink", [
-		"Can be used on any Sign, Map, Written Book or Globe",
-		"to make it a tad more old-school. Antique, even.",
-	])
-	add_shift_info(event, "supplementaries:turn_table", [
-		"Rotates blocks and entities when powered by redstone.",
-		"The stronger the power, the faster the rotation.",
-		"Right-click on the side to change the spinning direction.",
-		"... And please do not rotate your cat.",
-	])
-	add_shift_info(event, ["supplementaries:bamboo_spikes", "supplementaries:bamboo_spikes_tipped"], [
-		"Slow and damage all entities walking on them.",
-		"Can be infused with Lingering Potions.",
-	])
-	add_shift_info(event, "supplementaries:faucet", [
-		"An extremely powerful wonder of hydraulics.",
-		"Can be attached to any fluid or item container",
-		"to pour its contents below it.",
-		"Works with waterlogged blocks, Cauldrons",
-		"Brewing Stands, even Beehives, and more.",
-	])
-	add_shift_info(event, "supplementaries:hourglass", [
-		"Can be filled with any sand, dust,",
-		"even honey, or anything similar.",
-		"Right-click with an empty hand to to spin the hourglass around.",
-	])
-	add_shift_info(event, "#supplementaries:awnings", [
-		"The latest of dainty, overhanging technology.",
-		"",
-		"Hold Shift while on top to fall through.",
-	])
-	add_shift_info(event, "supplementaries:cannon", [
-		"Can shoot projectiles and blocks,",
-		"at the cost of Gunpowder.",
-		"Right-click to open the Cannon's interface.",
-		"When manually controlling the cannon:",
-		"  - Left-click to fire",
-		"  - Right-click to toggle the trajectory guide",
-		"  - Mouse wheel to change power level",
-		"  - Space Bar to change aiming mode",
-		"  - Shift, E, or Esc to exit",
-	])
-	add_shift_info(event, "supplementaries:wrench", [
-		"Allows you to rotate blocks and some entities around.",
-		"Not for repairing. And most definitely not for machinery!",
-		"",
-		"Right-click to rotate clockwise.",
-		"Shift-right-click to rotate counter-clockwise.",
-	])
-	add_shift_info(event, "supplementaries:lunch_basket", [
-		"Consume food comfortably in the palm of your hand!.",
-		"More nifty than a Foodbag, but you gotta choose.",
-		"Can be dragged in your inventory like a Bundle.",
-		"",
-		"When the Basket is closed:",
-		"    Hold right-click to select the food.",
-		"    Mouse movement, scroll wheel and slot keys are supported.",
-		"When the Basket is open:",
-		"    Right-click to eat the chosen food.",
-	])
-
-	if (Platform.isLoaded("solonion")) {
-		event.modify(["solonion:lunchbag", "solonion:lunchbox", "solonion:golden_lunchbox"], text => text.removeText(Text.translate("item.solonion.container.open", Text.keybind("key.sneak"), Text.keybind("key.use"))))
-		add_shift_info(event, ["solonion:lunchbag", "solonion:lunchbox", "solonion:golden_lunchbox"], [
-			"Consume food without worrying much about what food it is!",
-			"More awkward than a Food Basket, but let it choose for you.",
-			"",
-			"Right-click to begin eating.",
-			"Shift-right-click to open the food container.",
-		])
+	if (!Platform.isLoaded("cleanertooltips")) {
+		event.modifyAll({advanced: false}, text => {
+			text.dynamic("show_tool_durability")
+		})
 	}
-
-	/** @param {string | $MutableComponent} text @returns {$MutableComponent} */
-	function subtle(text) {
-		return Text.of(text).color(MASCOT_COLOR_DARK).italic()
-	}
-
-	event.add(["supplementaries:sconce_lever"], subtle("Not so cunning when you can read this, huh?"))
-	event.add(["supplementaries:feather_block"], subtle("Negates all fall damage."))
-	event.add(["supplementaries:goblet"], subtle("Can hold and display any liquid."))
-	event.add(["supplementaries:sugar_cube"], subtle("Dissolves when touching water."))
-	event.add(["supplementaries:soap_block"], subtle("Quite slippery when stepped on!"))
-	event.add(["supplementaries:enderman_head"], subtle("Emits redstone power the more you look at it."))
-	event.add(["supplementaries:flint_block"], [subtle("Scraped against Iron lights a ").append(Text.gold("spark")).append("...")])
-	event.add(["supplementaries:doormat"], [subtle("Could there be ").append(Text.gold("something")).append(" underneath it?")])
-	event.add(["supplementaries:confetti_popper"], [subtle("Makes for a nice ").append(Text.gold("hat")).append(". Creepers like it too!")])
-	// event.add(["#supplementaries:buntings"], [subtle("Can be placed on ").append(Text.gold("Ropes"))]) // Redundant, the mod has its own tooltip.
-	event.add(["supplementaries:gravel_bricks"], [subtle("It's frail under your feet")])
-	event.add(["supplementaries:lumisene_bucket"], [subtle("Bewildering, perhaps ").append(Text.gold("flammable")).append("?")])
-	event.add(["supplementaries:sack"], [subtle("This can store stuff, by the way")])
-	event.add(["supplementaries:flower_box"], [subtle("Can only contain ").append(Text.gold("tall flowers"))])
-	event.add(["supplementaries:pulley_block"], [subtle("").append(Text.gold("Ropes")).append(" and ").append(Text.gold("chains")).append(" in here!")])
 
 	event.modify([
 		"#c:foods/edible_when_placed",
-		"minecraft:pumpkin_pie", // Odd edge-case. It can also be placed on Food Plates.
-		"supplementaries:lunch_basket",
-		"supplementaries:cannonball"
+		"minecraft:pumpkin_pie", // Odd edge-case. It can also be placed on Display Delight's Food Plates.
 	], text => {
 		text.removeText(Text.translate("tooltip.farmersdelight.placeable")) // If it exists, replace with our tooltip. TODO: Report this. Can it be a config?
 		text.insert(1, PLACEABLE_TOOLTIP)
 	})
 
-	event.modify("kubejs:banana_mayo_sandwich", text => {
-		text.dynamic("sue_banana_mayo_sandwich")
-	})
-	event.modify([
-		"create:chocolate_bucket",
-		"create:honey_bucket",
-		"create_bic_bit:mayonnaise_bucket",
-		"create_bic_bit:ketchup_bucket",
-		"create:bound_cardboard_block",
-		"sophisticatedbackpacks:advanced_feeding_upgrade",
-		"sophisticatedbackpacks:feeding_upgrade",
-		"sophisticatedstorage:advanced_feeding_upgrade",
-		"sophisticatedstorage:feeding_upgrade",
-	], text => {
-		text.dynamic("add_pelad")
-	})
-
-	event.add("#constructionstick:construction_sticks", Text.translate("Press %s to to open the GUI", [Text.keybind("key.constructionstick.open_gui").white()]).color(MASCOT_COLOR_DARK))
-
-	// Fix Sophisticated Backpack's Inventory Interaction Upgrades descriptions being misleading.
-	// They say "sneak right clicked inventory" but it's actually a keybind.
-	event.modify(["sophisticatedbackpacks:deposit_upgrade", "sophisticatedbackpacks:advanced_deposit_upgrade"], text => {
-		text.removeLine(1)
-		text.insert(1, Text.translate("Deposits items from backpack when pressing %s on an inventory", [
-			Text.keybind("key.sophisticatedbackpacks.inventory_interaction").white()]).color(MASCOT_COLOR_DARK)
-		)
-	})
-	event.modify(["sophisticatedbackpacks:restock_upgrade", "sophisticatedbackpacks:advanced_restock_upgrade"], text => {
-		text.removeLine(1)
-		text.insert(1, Text.translate("Restocks items from backpack when pressing %s on an inventory", [
-			Text.keybind("key.sophisticatedbackpacks.inventory_interaction").white()]).color(MASCOT_COLOR_DARK)
-		)
-	})
-	// Mitigate confusion between Sophisticated Backpack and Storage upgrades.
-	event.modify([
-		"#sophisticatedbackpacks:upgrade",
-		"#sophisticatedstorage:upgrade",
-		/sophisticated.*upgrade/, // Catch all.
-	], text => {
-		text.dynamic("add_sophisticated_marker")
-	})
-
-	if (!Platform.isLoaded("cleanertooltips"))
-		event.modifyAll({advanced: false}, text => {
-			text.dynamic("show_tool_durability")
-		})
-
-	event.add(["farmersdelight:skillet"], [subtle("Right-click in inventory to equip")])
-
-	event.add([
-		"#cobblemon:potions",
-		"#cobblemon:restores",
-		"#cobblemon:ethers",
-		"#cobblemon:battle_items",
-		"cobblemon:cleanse_tag",
-		"cobblemon:spell_tag",
-		"cobblemon:weakness_policy",
-		"cobblemon:blunder_policy",
-	], PLACEABLE_TOOLTIP)
+	event.add("#cobblemon:item_blocks", PLACEABLE_TOOLTIP)
 
 	event.add(["farmersdelight:tree_bark"], [subtle("Use on stripped wood to defy logic")])
 
@@ -359,42 +105,64 @@ ItemEvents.modifyTooltips(event => {
 		event.add(["urban_decor:towel_bar"], [subtle("Can contain").append(Text.gold(" any towel"))])
 	}
 
+	if (Platform.isLoaded("connectiblechains")) {
+		event.modify("#connectiblechains:catenary_items", {shift: false}, text => {
+			text.removeText(Text.translate("message.connectiblechains.connectible_chain"))
+			text.insert(1, Text.join(
+				`Catenary`,
+				Text.of(` ℹ`).darkGray(),
+			).color(MASCOT_COLOR_DARK))
+		})
+		event.modify("#connectiblechains:catenary_items", {shift: true}, text => {
+			text.removeText(Text.translate("message.connectiblechains.connectible_chain_detailed"))
+			text.insert(1, Text.join(
+				Text.of(`Use`).color(MASCOT_COLOR),
+				` on fences, walls, or bars to create a `,
+				Text.of(`catenary`).color(MASCOT_COLOR),
+				`!`
+			).color(MASCOT_COLOR_DARK))
+		})
+		event.modify("#connectiblechains:hangable_items", {shift: false}, text => {
+			text.insert(1, Text.join(`Hangable on catenary`).color(MASCOT_COLOR_DARK))
+		})
+	}
+
+	//#region These mostly existed as tests, but they're relatively innocuous.
+	event.modify("minecraft:skeleton_skull", text => {
+		text.dynamic("skeleton_skull")
+	})
+	event.modify("minecraft:player_head", text => {
+		text.dynamic("show_player_head_owner")
+	})
+
+	event.modify("minecraft:beacon", { shift: false }, text => {
+		text.add(Text.gold("Hold ").append(Text.yellow("Shift ")).append("to see more info"))
+	})
+
+	event.modify("minecraft:beacon", { shift: true }, text => {
+		text.insert(1, Text.green("Gives positive effects to players in a range").bold(true))
+		text.insert(2, Text.red("Requires a base built out of precious metals or gems to function!"))
+		text.insert(3,
+			Text.white("Iron, ").append(
+			Text.aqua("Diamonds, ")).append(
+			Text.gold("Gold ")).append(
+			Text.white("or even ")).append(
+			Text.green("Emeralds ")).append(
+			Text.white("are valid base blocks!"))
+		)
+	})
+	add_shift_info(event, "minecraft:big_dripleaf", [
+			[Text.of(`It's a bit `), Text.aqua("tipsy"), Text.of(`...`)],
+			"Woooaaah §2 it's going down §9 holy cow"])
+	//#endregion
+
 	event.add(Ingredient.of("@immersive_furniture").or("@sleep_tight").or("@crittersandcompanions"), [
 		Text.yellow("Experimental").append(Text.of(` 🧊`).white()),
 	])
 
-	event.modify("#connectiblechains:catenary_items", {shift: false}, text => {
-		text.removeText(Text.translate("message.connectiblechains.connectible_chain"))
-		text.insert(1, Text.join(
-			`Catenary`,
-			Text.of(` ℹ`).darkGray(),
-		).color(MASCOT_COLOR_DARK))
+	event.modifyAll({ alt: true, ctrl: true, advanced: true }, text => {
+		text.dynamic("show_modpack_debug_stuff")
 	})
-	event.modify("#connectiblechains:catenary_items", {shift: true}, text => {
-		text.removeText(Text.translate("message.connectiblechains.connectible_chain_detailed"))
-		text.insert(1, Text.join(
-			Text.of(`Use`).color(MASCOT_COLOR),
-			` on fences, walls, or bars to create a `,
-			Text.of(`catenary`).color(MASCOT_COLOR),
-			`!`
-		).color(MASCOT_COLOR_DARK))
-	})
-	event.modify("#connectiblechains:hangable_items", {shift: false}, text => {
-		text.insert(1, Text.join(`Hangable on catenary`).color(MASCOT_COLOR_DARK))
-	})
-})
-
-ItemEvents.dynamicTooltips("sue_banana_mayo_sandwich", event => {
-	if (is_eligible_for_easter_egg(Client.player, "SueTheMimiga")) {
-		event.lines[0] = Text.of(`Banana Mayo Delicacy 😳`) // Funny :)
-	}
-})
-
-const GOURMANDS = ["AceNil_", "SniperZee", "CantieLabs", "SueTheMimiga", "ButteryInkling"]
-ItemEvents.dynamicTooltips("add_pelad", event => {
-	if (is_eligible_for_easter_egg(Client.player, GOURMANDS)) {
-		event.lines[0] = Text.of(event.lines[0]).append(Utils.getSystemTime() % 3000 > 1000 ? " 😳" : " 🥺")
-	}
 })
 
 ItemEvents.dynamicTooltips("add_sophisticated_marker", event => {
@@ -428,6 +196,42 @@ ItemEvents.dynamicTooltips("show_tool_durability", event => {
 		]).darkGray()
 	])
 })
+
+ItemEvents.dynamicTooltips("skeleton_skull", event => {
+	event.add(Text.gray("Could this have been ").append(Client.player.name).append("'s head?"))
+})
+
+
+ItemEvents.dynamicTooltips("show_player_head_owner", event => {
+	/** @import {$ResolvableProfile} from "@package/net/minecraft/world/item/component"*/
+	const profile = /** @type {$ResolvableProfile?} */ (event.item.components.get("minecraft:profile"))
+	const player_name = profile && profile.isResolved() && profile.name().get()
+	if (player_name) {
+		event.lines.add(1, Text.translateWithFallback("", "Looks like %s's head...", [Text.aqua(player_name)]).darkGray())
+	}
+})
+
+ItemEvents.dynamicTooltips("show_modpack_debug_stuff", event => {
+	event.add(Text.gray(["🏴 ", Text.darkGray(event.item.getDescriptionId() ?? "none")]))
+
+	if (Platform.isLoaded("sounds")) {
+		/** @type {import {"@package/imb11/sounds/sound/context"}.$ItemStackSoundContext} */
+		let $ItemStackSoundContext = Java.tryLoadClass("dev.imb11.sounds.sound.context.ItemStackSoundContext")
+		if ($ItemStackSoundContext) {
+			let sound_context = new $ItemStackSoundContext()
+			/** @type {import("@package/net/minecraft/client/resources/sounds").$SoundInstance} */
+			let sound_instance = sound_context.handleContext(event.item, ID.of("minecraft:intentionally_empty", false), 1.0, 1.0)
+			event.add(Text.gray("🔊 ").append(Text.darkGray(sound_instance.getLocation())))
+		}
+	}
+
+	const block = event.item.block
+	if (block) {
+		let sound_type = block.invokeGetSoundType(block.defaultBlockState())
+		event.add(Text.gray("⏹ ").append(Text.darkGray(sound_type.placeSound.getLocation())))
+	}
+})
+
 
 let $RenderTooltipEvent$Color = Java.loadClass("net.neoforged.neoforge.client.event.RenderTooltipEvent$Color")
 NativeEvents.onEvent("highest", $RenderTooltipEvent$Color, event => {
@@ -565,6 +369,11 @@ NativeEvents.onEvent("highest", $RenderTooltipEvent$Color, event => {
 	// event.setBackground(Color.rgba(8, 21, 95, 1).getArgb())
 	// event.setBackgroundStart(Color.rgba(26, 50, 184, 1).getArgb())
 })
+
+/** @param {string | $MutableComponent} text @returns {$MutableComponent} */
+function subtle(text) {
+	return Text.of(text).color(MASCOT_COLOR_DARK).italic()
+}
 
 /**
  * @import {$TextActionBuilder} from "@package/dev/latvian/mods/kubejs/text/action"

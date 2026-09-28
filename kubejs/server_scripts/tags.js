@@ -6,13 +6,11 @@ ServerEvents.tags("item", event => {
 	event.add("minecraft:rails", "create:controller_rail") // Reported. Accepted, but not fixed? https://github.com/Creators-of-Create/Create/pull/9684
 	event.add("c:foods/raw_fish", "minersdelight:squid", "minersdelight:glow_squid", "minersdelight:tentacles") // We only really use this ourselves (+ Bitterballen) for haunting Zinc. Perhaps these definitions should be removed.
 	event.add("c:foods", "crittersandcompanions:koi_fish")
-	event.add("c:foods/safe_raw_fish", "crittersandcompanions:koi_fish")
 	event.add("c:foods/food_poisoning", "minersdelight:copper_carrot", "minersdelight:bat_wing", "minersdelight:arthropod", "minersdelight:squid", "mynethersdelight:ghasta", "mynethersdelight:ghast_dough")
 	event.add("c:buckets",
 		"biomesoplenty:blood_bucket", "biomesoplenty:liquid_null_bucket", // Reported: https://github.com/Glitchfiend/BiomesOPlenty/issues/2440.
 		"sophisticatedcore:xp_bucket", // Reported: http://github.com/P3pp3rF1y/SophisticatedCore/issues/449.
 	)
-	event.add("c:buckets/entity_water", "crittersandcompanions:koi_fish_bucket", "crittersandcompanions:sea_bunny_bucket", "crittersandcompanions:dumbo_octopus_bucket")
 	event.add("c:drinks", "#c:drinks/tea")
 	event.add("c:drinks/tea", "herbalbrews:green_tea", "herbalbrews:black_tea", "herbalbrews:hibiscus_tea", "herbalbrews:lavender_tea", "herbalbrews:rooibos_tea", "herbalbrews:oolong_tea", "herbalbrews:yerba_mate_tea") // TODO: Report this.
 	event.add("c:drinks/juice", "kubejs:berry_juice_soda", "biomeswevegone:aloe_vera_juice")
@@ -29,10 +27,6 @@ ServerEvents.tags("item", event => {
 	event.add("cobblemon:thunder_stone_ores", "mega_showdown:mega_meteorid_thunder_ore")
 	event.add("c:tools/spear", "#minecraft:spears") // Reported, but marked as "Won't fix": https://github.com/Unknowneth/Backported-Spears/issues/60.
 	event.add("c:storage_blocks", "#c:storage_blocks/industrial_iron") // TODO: Report this.
-	if (Platform.isLoaded("solonion")) {
-		event.add("minecraft:piglin_loved", "solonion:golden_lunchbox")
-	}
-	event.add("minecraft:piglin_loved", "handcrafted:golden_thin_pot", "handcrafted:golden_thick_pot", "handcrafted:golden_wide_pot", "handcrafted:golden_medium_pot") //Reported: https://github.com/terrarium-earth/Handcrafted/issues/152
 	event.add("c:music_discs", "undergroundworlds:music_disc_abbeyence") // TODO: Report this.
 	event.add("mega_showdown:mega_stone", /zamega:/).remove("zamega:ange") // TODO: Report this.
 
@@ -43,10 +37,9 @@ ServerEvents.tags("item", event => {
 	event.add("cobblemon:pokedex_screen", "mowziesmobs:glowing_jelly")
 	event.add("supplementaries:pedestal_downright", "#c:tools/spear")
 	event.add("supplementaries:pedestal_upright", "#c:tools/knives", "mega_showdown:rusted_sword")
-	event.add("supplementaries:statue_tools", "#yo_hooks:hooks", "#constructionstick:construction_sticks", "minecraft:mace", "kubejs:trowel", "kubejs:ruler")
+	event.add("supplementaries:statue_tools", "minecraft:mace", "kubejs:trowel", "kubejs:ruler")
 
 	// Makes sense.
-	event.add("c:tools", "#constructionstick:construction_sticks", "#yo_hooks:hooks")
 	event.add("c:eggs", "undergroundworlds:spider_egg", "sleep_tight:bedbug_eggs")
 	event.add("c:mushrooms", "ribbits:toadstool") // No, it doesn't make sense?
 	event.add("create:pulpifiable", "biomeswevegone:shrub", "biomeswevegone:firecracker_flower_bush", "cobblemon:medicinal_leek")
@@ -68,6 +61,7 @@ ServerEvents.tags("item", event => {
 
 	// Shared in a bunch of places.
 	event.add("bubble_cobble:coinstacks", /^createdeco:.*coinstack$/)
+	event.add("bubble_cobble:lanterns", "minecraft:lantern", "minecraft:soul_lantern", "ribbits:swamp_lantern", "#biomeswevegone:glow_bottle")
 	event.add("bubble_cobble:pokenavs", "#cobblenav:pokenav", "cobblenav:pokenav_item_gholdengo", "cobblenav:pokenav_item_wanderer")
 
 	event.add("bubble_cobble:emi/chest_loot_icon","minecraft:chest", "minecraft:barrel", "lootr:lootr_barrel", "lootr:lootr_chest", "lootr:lootr_shulker", "lootr:decorated_pot", "lootrmon:gilded_chest", "cobblemonraiddens:raid_pouch")
@@ -107,18 +101,10 @@ ServerEvents.tags("item", event => {
 		)
 	}
 	event.add("supplementaries:pancake_syrup", "create:chocolate_bucket")
-	event.add("supplementaries:causes_lightning_when_held", "constructionstick:copper_stick") // Funny.
 	if (Item.exists("minecraft:copper_sword")) {
 		event.add("supplementaries:causes_lightning_when_held", "minecraft:copper_sword", "minecraft:copper_axe")
 	}
 	event.add("supplementaries:overencumbering", "#create:toolboxes", "#create:packages", /sophisticatedstorage:.*shulker_box/)
-
-	// Make Construction sticks enchantable with Mending and Unbreaking.
-	event.add("minecraft:enchantable/durability", "#constructionstick:construction_sticks")
-
-	// Allow Netherite Grappling Hook to be repaired with Diamond and Netherite Scrap
-	// This is part of the Mending Rework rebalance.
-	event.add("yo_hooks:netherite_repairable", "minecraft:diamond", "minecraft:netherite_scrap")
 
 	// We reserve Accessories for Mega Showdown, and use Curios for Backpacks/Artifacts.
 	event.removeAll("accessories:back")
@@ -169,16 +155,20 @@ ServerEvents.tags("item", event => {
 		event.add("c:ingots", "urban_decor:stainless_steel_ingot")
 	}
 
-	event.add("crittersandcompanions:ferret_food", "#c:foods/raw_chicken")
-	event.add("crittersandcompanions:ferret_tempt_items", "#c:foods/raw_meat")
-	event.add("crittersandcompanions:sea_bunny_food", "minecraft:seagrass")
-	event.add("crittersandcompanions:sea_bunny_tempt_items", "#crittersandcompanions:sea_bunny_food")
-	event.add("crittersandcompanions:dragonfly_food", "crittersandcompanions:dragonfly_wing")
-	event.add("crittersandcompanions:dragonfly_tempt_items", "#crittersandcompanions:dragonfly_food")
-	event.add("crittersandcompanions:red_panda_tempt_items", "#c:foods/berry")
-	event.add("crittersandcompanions:stag_beetle_tempt_items", "#c:foods/berry")
-	event.add("crittersandcompanions:snail_food", "#c:foods/cabbage", "#cobblemon:mint_leaves", "herbalbrews:yerba_mate_leaf", "herbalbrews:rooibos_leaf", "biomeswevegone:leaf_pile")
-	event.add("crittersandcompanions:snail_tempt_items", "#crittersandcompanions:snail_food")
+	if (Platform.isLoaded("crittersandcompanions")) {
+		event.add("c:foods/safe_raw_fish", "crittersandcompanions:koi_fish")
+		event.add("c:buckets/entity_water", "crittersandcompanions:koi_fish_bucket", "crittersandcompanions:sea_bunny_bucket", "crittersandcompanions:dumbo_octopus_bucket")
+		event.add("crittersandcompanions:ferret_food", "#c:foods/raw_chicken")
+		event.add("crittersandcompanions:ferret_tempt_items", "#c:foods/raw_meat")
+		event.add("crittersandcompanions:sea_bunny_food", "minecraft:seagrass")
+		event.add("crittersandcompanions:sea_bunny_tempt_items", "#crittersandcompanions:sea_bunny_food")
+		event.add("crittersandcompanions:dragonfly_food", "crittersandcompanions:dragonfly_wing")
+		event.add("crittersandcompanions:dragonfly_tempt_items", "#crittersandcompanions:dragonfly_food")
+		event.add("crittersandcompanions:red_panda_tempt_items", "#c:foods/berry")
+		event.add("crittersandcompanions:stag_beetle_tempt_items", "#c:foods/berry")
+		event.add("crittersandcompanions:snail_food", "#c:foods/cabbage", "#cobblemon:mint_leaves", "herbalbrews:yerba_mate_leaf", "herbalbrews:rooibos_leaf", "biomeswevegone:leaf_pile")
+		event.add("crittersandcompanions:snail_tempt_items", "#crittersandcompanions:snail_food")
+	}
 
 	if (Platform.isLoaded("connectiblechains")) {
 		event.add("connectiblechains:hangable_items", "#bubble_cobble:lanterns", "urban_decor:stainless_steel_lantern", "urban_decor:stainless_steel_soul_lantern")
@@ -188,8 +178,6 @@ ServerEvents.tags("item", event => {
 ServerEvents.tags("block", event => {
 	// Accidental omissions from the mod creators.
 	event.add("minecraft:all_signs", "supplementaries:way_sign_wall") // https://github.com/MehVahdJukaar/Supplementaries/pull/1921
-	event.add("minecraft:enchantment_power_provider", "#handcrafted:shelves") // https://github.com/terrarium-earth/Handcrafted/issues/136
-	event.add("minecraft:guarded_by_piglins", "handcrafted:golden_thin_pot", "handcrafted:golden_thick_pot", "handcrafted:golden_wide_pot", "handcrafted:golden_medium_pot") // Reported: https://github.com/terrarium-earth/Handcrafted/issues/152
 	// event.add("create:single_block_inventories", "supplementaries:sack", "supplementaries:safe", "supplementaries:pulley_block") // Doesn't seem to be useful for us?
 	event.add("farmersdelight:mineable/knife", "#c:ropes") // Just to include Supplementaries's rope. Probably should be reported.
 	event.add("minecraft:combination_step_sound_blocks",
@@ -221,8 +209,7 @@ ServerEvents.tags("block", event => {
 	// Shared in a bunch of places.
 	event.add("bubble_cobble:coinstacks", /^createdeco:.*coinstack$/)
 
-	// Bugged. See also https://github.com/terrarium-earth/Handcrafted/issues/132.
-	event.add("c:relocation_not_supported",	"#handcrafted:nightstands", "#handcrafted:desks", "#handcrafted:counters", "#handcrafted:tables", "#handcrafted:benches", "#handcrafted:couches", "immersive_furniture:furniture_proxy")
+	event.add("c:relocation_not_supported",	"immersive_furniture:furniture_proxy")
 
 	// Weird, and bugged.
 	event.add("supplementaries:un_rotatable", "#c:relocation_not_supported", "#lootr:containers")

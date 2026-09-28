@@ -1,7 +1,6 @@
 
 
 ClientEvents.lang("en_us", event => {
-	event.add("item.handcrafted.hammer", "Handcrafter's Hammer")
 	event.add("item.supplementaries.wrench", "Rotation Wrench")
 	event.add("block.supplementaries.crank", "Redstone Crank")
 	event.add("block.urban_decor.toolbox", "Furniture Toolbox")

@@ -149,29 +149,6 @@ ItemEvents.foodEaten(event => {
 	player.addItemCooldown(stack, MINECRAFT_EAT_TIME_TICKS - eat_time_ticks)
 })
 
-if (Platform.isLoaded("handcrafted")) {
-	// Custom sound when opening HandCrafted's containers.
-	// TODO: Expand to include more generic containers?
-	ServerEvents.tags("block", event => {
-		event.add("bubble_cobble:handcrafted_containers",
-			"#handcrafted:cupboards",
-			"#handcrafted:drawers",
-			"#handcrafted:desks",
-			"#handcrafted:side_tables",
-			"#handcrafted:nightstands" ,
-			"#handcrafted:counters",
-			"#handcrafted:shelves",
-		)
-	})
-
-	PlayerEvents.chestOpened("minecraft:generic_9x3", event => {
-		if (event.block && event.block.hasTag("bubble_cobble:handcrafted_containers")) {
-			// event.player.playNotifySound("relics:ability_locked", "players", 1, 1)
-			event.player.playNotifySound("create:blaze_munch", "players", 0.25, 2.0)
-		}
-	})
-}
-
 // Turn links in chat into embedded ones, as far as the Discord Chat integration is concerned.
 // https://email-files.fangamer.com/list_48/campaign_15/queen_shimmying-tOYeHM9diwN8AaSH.gif
 if (Platform.isLoaded("discord_chat_mod")) {
@@ -186,52 +163,6 @@ if (Platform.isLoaded("discord_chat_mod")) {
 		}
 	})
 }
-
-// Some items don't abide by the Mending Reworked balance. Let's have them to, albeit jankily.
-// Use Diamonds instead of Netherite Ingots to repair Netherite tools.
-// Use Rope to repair Escape Rope.
-ServerEvents.tags("item", event => {
-	event.add("bubble_cobble:netherite_diamond_repairable",
-		"constructionstick:netherite_stick",
-	)
-})
-
-let $AnvilUpdateEvent  = Java.loadClass("net.neoforged.neoforge.event.AnvilUpdateEvent")
-NativeEvents.onEvent($AnvilUpdateEvent, event => {
-	const { left, right } = event
-
-	if (left.id == "gag:escape_rope" && right.hasTag("c:ropes")) {
-		const repair_per_material = left.maxDamage * 0.5
-		const repair_amount = Math.min(repair_per_material * right.count, left.maxDamage)
-		const new_damage = Math.max(left.damageValue - repair_amount, 0)
-		event.cost = 1
-		event.materialCost = Math.ceil(repair_amount / repair_per_material)
-		event.output = left.copy()
-		event.output.damageValue = new_damage
-		return
-	}
-
-	if (left.hasTag("bubble_cobble:netherite_diamond_repairable") && right.id == "minecraft:netherite_ingot") {
-		event.setCanceled(true)
-	}
-
-	if (left.hasTag("bubble_cobble:netherite_diamond_repairable") &&
-		(right.id == "minecraft:diamond"
-		|| right.id == "minecraft:netherite_scrap")
-	) {
-		if (left.damageValue <= 0) {
-			event.setCanceled(true)
-		}
-		const output = left.copy()
-		const repair_amount = Math.floor(output.maxDamage * 0.33)
-		const new_damage = Math.max(output.damageValue - repair_amount, 0)
-		output.damageValue = new_damage
-		event.cost = 1
-		event.materialCost = 1
-		event.output = output
-	}
-})
-
 
 ServerEvents.basicCommand("currentstructure", event => {
 	/** @type {import("@package/net/minecraft/server/level").$ServerLevel} */
