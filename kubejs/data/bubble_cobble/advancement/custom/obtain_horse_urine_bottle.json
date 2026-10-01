@@ -1,0 +1,22 @@
+{
+  "parent": "minecraft:adventure/root",
+  "display": {
+    "icon": {
+      "id": "bubble_cobble:horse_urine_bottle"
+    },
+    "title": "dude",
+    "description": "...Milk... a Horse..."
+  },
+  "criteria": {
+    "horse_urine_bottle": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "bubble_cobble:horse_urine_bottle"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -321,7 +321,7 @@ const DreamDimension = {
 			const effect_duration = 5 * SEC
 
 			level.getPlayers().forEach(/** @param {$ServerPlayer} player */ player => {
-				player.attack(new DamageSource("kubejs:dream_wither"), damage_amount)
+				player.attack(new DamageSource("bubble_cobble:dream_wither"), damage_amount)
 				player.addEffect(MobEffectUtil.of("minecraft:haste", effect_duration, effect_strength, true, true, true))
 				player.addEffect(MobEffectUtil.of("minecraft:speed", effect_duration, effect_strength, true, true, true))
 				player.addEffect(MobEffectUtil.of("minecraft:luck", effect_duration, effect_strength, true, true, true))
@@ -703,18 +703,18 @@ ServerEvents.tick(event => {
 })
 
 ServerEvents.registry("damage_type", event => {
-	event.createCustom("kubejs:dream_wither", () => new $DamageType("wither", "never", 0.5, "drowning", "default"))
+	event.createCustom("bubble_cobble:dream_wither", () => new $DamageType("wither", "never", 0.5, "drowning", "default"))
 })
 
 ServerEvents.tags("damage_type", event => {
-	event.add("minecraft:bypasses_armor", "kubejs:dream_wither")
-	event.add("minecraft:bypasses_cooldown", "kubejs:dream_wither")
-	event.add("minecraft:bypasses_resistance", "kubejs:dream_wither")
-	event.add("minecraft:panic_environmental_causes", "kubejs:dream_wither")
-	event.add("minecraft:no_impact", "kubejs:dream_wither")
-	event.add("minecraft:no_knockback", "kubejs:dream_wither")
-	event.add("neoforge:is_environment", "kubejs:dream_wither")
-	event.add("neoforge:no_flinch", "kubejs:dream_wither")
+	event.add("minecraft:bypasses_armor", "bubble_cobble:dream_wither")
+	event.add("minecraft:bypasses_cooldown", "bubble_cobble:dream_wither")
+	event.add("minecraft:bypasses_resistance", "bubble_cobble:dream_wither")
+	event.add("minecraft:panic_environmental_causes", "bubble_cobble:dream_wither")
+	event.add("minecraft:no_impact", "bubble_cobble:dream_wither")
+	event.add("minecraft:no_knockback", "bubble_cobble:dream_wither")
+	event.add("neoforge:is_environment", "bubble_cobble:dream_wither")
+	event.add("neoforge:no_flinch", "bubble_cobble:dream_wither")
 })
 
 BlockEvents.rightClicked("cobblemonraiddens:raid_crystal_block", event => {

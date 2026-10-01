@@ -1,8 +1,8 @@
 {
 	"match": {
 		"items": [
-			"kubejs:bearded_dragon_bowl",
-			"kubejs:blue_mascot_cat"
+			"bubble_cobble:bearded_dragon_bowl",
+			"bubble_cobble:blue_mascot_cat"
 		]
 	},
 	"luminance": 10

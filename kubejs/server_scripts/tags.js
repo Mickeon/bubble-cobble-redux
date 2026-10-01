@@ -13,7 +13,7 @@ ServerEvents.tags("item", event => {
 	)
 	event.add("c:drinks", "#c:drinks/tea")
 	event.add("c:drinks/tea", "herbalbrews:green_tea", "herbalbrews:black_tea", "herbalbrews:hibiscus_tea", "herbalbrews:lavender_tea", "herbalbrews:rooibos_tea", "herbalbrews:oolong_tea", "herbalbrews:yerba_mate_tea") // TODO: Report this.
-	event.add("c:drinks/juice", "kubejs:berry_juice_soda", "biomeswevegone:aloe_vera_juice")
+	event.add("c:drinks/juice", "bubble_cobble:berry_juice_soda", "biomeswevegone:aloe_vera_juice")
 	event.add("supplementaries:statue_swords", "#minecraft:swords", "#minecraft:spears")
 	event.add("cobblemon:water_stone_ores", "mega_showdown:mega_meteorid_water_ore") // Reported: https://github.com/yajatkaul/CobblemonMegaShowdown/issues/144
 	event.add("cobblemon:dawn_stone_ores", "mega_showdown:mega_meteorid_dawn_ore")
@@ -37,7 +37,7 @@ ServerEvents.tags("item", event => {
 	event.add("cobblemon:pokedex_screen", "mowziesmobs:glowing_jelly")
 	event.add("supplementaries:pedestal_downright", "#c:tools/spear")
 	event.add("supplementaries:pedestal_upright", "#c:tools/knives", "mega_showdown:rusted_sword")
-	event.add("supplementaries:statue_tools", "minecraft:mace", "kubejs:trowel", "kubejs:ruler")
+	event.add("supplementaries:statue_tools", "minecraft:mace", "bubble_cobble:trowel", "bubble_cobble:ruler")
 
 	// Makes sense.
 	event.add("c:eggs", "undergroundworlds:spider_egg", "sleep_tight:bedbug_eggs")
@@ -45,7 +45,7 @@ ServerEvents.tags("item", event => {
 	event.add("create:pulpifiable", "biomeswevegone:shrub", "biomeswevegone:firecracker_flower_bush", "cobblemon:medicinal_leek")
 	event.add("soulbound:enchantable", "#c:tools")
 	event.add("create:blaze_burner_fuel/regular", "cobblemon:charcoal_stick", "cobblemon:fire_stone", "mega_showdown:fire_tera_shard", "mynethersdelight:bullet_pepper", "mynethersdelight:pepper_powder" )
-	event.add("create:blaze_burner_fuel/special", "cobblemon:fire_gem", "cobblemon:fire_stone_block", "mega_showdown:firium_z", "kubejs:firebomb_whiskey",
+	event.add("create:blaze_burner_fuel/special", "cobblemon:fire_gem", "cobblemon:fire_stone_block", "mega_showdown:firium_z", "bubble_cobble:firebomb_whiskey",
 		"mynethersdelight:chilidog", "mynethersdelight:hot_cream", "mynethersdelight:hot_cream_cone",
 		"mynethersdelight:spicy_hoglin_stew", "mynethersdelight:hot_wings", "mynethersdelight:hot_wings_bucket",
 		"mynethersdelight:spicy_curry", "mynethersdelight:rock_soup", "minersdelight:rock_soup_cup",
@@ -137,7 +137,7 @@ ServerEvents.tags("item", event => {
 		"create:builders_tea",
 		"farmersdelight:hot_cocoa",
 		"farmersdelight:milk_bottle",
-		"kubejs:blue_mascot_cat",
+		"bubble_cobble:blue_mascot_cat",
 		"minersdelight:milk_cup",
 		"supplementaries:soap",
 	)

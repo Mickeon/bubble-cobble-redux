@@ -387,6 +387,6 @@ ServerEvents.recipes(event => {
 	// event.shaped("minecraft:music_disc_blocks", ["DAD", "AMA", "DAD"], {M: "minecraft:music_disc_13", A: "minecraft:copper_ingot", D: "create:sturdy_sheet"})
 
 	// Cooking recipe schema test.
-	// event.recipes.farmersdelight.cooking("kubejs:blue_mascot_cat", ["cobblemon:red_apricorn", "cobblemon:blue_apricorn"], "minecraft:bowl")
+	// event.recipes.farmersdelight.cooking("bubble_cobble:blue_mascot_cat", ["cobblemon:red_apricorn", "cobblemon:blue_apricorn"], "minecraft:bowl")
 })
 

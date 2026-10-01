@@ -1,0 +1,28 @@
+{
+  "parent": "minecraft:story/smelt_iron",
+  "display": {
+    "icon": {
+      "id": "bubble_cobble:blue_mascot_cat"
+    },
+    "title": "One dingler to rule them all",
+    "description": "Obtain a crafted Sopping Wet Thing",
+    "frame": "goal"
+  },
+  "criteria": {
+    "blue_mascot_cat": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "bubble_cobble:blue_mascot_cat",
+            "components": {
+              "minecraft:custom_data": {
+                "crafted": true
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

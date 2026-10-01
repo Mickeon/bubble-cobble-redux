@@ -9,7 +9,7 @@ ClientEvents.lang("en_us", event => {
 		"item.minecraft.splash_potion.effect.girl_power": "Splash Potion of Girl Power",
 		"item.minecraft.tipped_arrow.effect.begone": "Arrow of Begone",
 		"item.minecraft.tipped_arrow.effect.girl_power": "Arrow of Girl Power",
-		"effect.kubejs.begone.description": "Teleports players to their spawn point",
-		"effect.kubejs.girl_power.description": "Gives access to the \"Girl Power Dash\" by pressing a keybind in mid-air (Mouse Button 4 by default)",
+		"effect.bubble_cobble.begone.description": "Teleports players to their spawn point",
+		"effect.bubble_cobble.girl_power.description": "Gives access to the \"Girl Power Dash\" by pressing a keybind in mid-air (Mouse Button 4 by default)",
 	})
 })

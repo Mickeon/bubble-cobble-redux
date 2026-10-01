@@ -68,8 +68,8 @@ EntityEvents.beforeHurt("minecraft:player", event => {
 		player.playNotifySound("minecraft:enchant.thorns.hit", "players", 0.5, 1.0)
 		player.addEffect(MobEffectUtil.of("minecraft:darkness", 5 * SEC, 200))
 		player.giveExperienceLevels(-5)
-		if (!player.isAdvancementDone("kubejs:bad_dream")) {
-			player.unlockAdvancement("kubejs:bad_dream")
+		if (!player.isAdvancementDone("bubble_cobble:custom/bad_dream")) {
+			player.unlockAdvancement("bubble_cobble:custom/bad_dream")
 		}
 
 		/** @type {import("@package/net/minecraft/world/entity/monster/warden").$Warden} */
@@ -97,7 +97,7 @@ NativeEvents.onEvent($ProjectileImpactEvent, event => {
 			fireball.playSound("cobblemon:item.berry.eat.full", 1.0, 1.0)
 			first_collided_player.give("minecraft:fire_charge")
 			if (Math.random() < 0.25) {
-				fireball.playSound("kubejs:advancement.mint_chewed", 1.0, 1.0)
+				fireball.playSound("bubble_cobble:advancement.mint_chewed", 1.0, 1.0)
 			}
 		}
 
@@ -151,7 +151,7 @@ NativeEvents.onEvent($EntityMobGriefingEvent, event => {
 		enderman.setAttributeBaseValue("minecraft:generic.max_health",
 			Math.max(enderman.getAttributeBaseValue("minecraft:generic.max_health") - 1, 8)
 		)
-		enderman.playSound("kubejs:entity.enderman.bones_cracking", 1.0, 1.0)
+		enderman.playSound("bubble_cobble:entity.enderman.bones_cracking", 1.0, 1.0)
 		enderman.carriedBlock = "minecraft:cave_air"
 
 		let height_scale_data = enderman.pehkui_getScaleData($ScaleTypes.MODEL_HEIGHT)

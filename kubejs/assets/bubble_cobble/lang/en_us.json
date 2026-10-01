@@ -1,5 +1,6 @@
 {
 	"death.attack.spawner_grab": "%s regrettably craved takeaway monster meat",
+	"death.attack.pokemon_greeting": "%s said \"hi\" to a wild %s",
 	"lunar.event.bubble_cobble.ghostbusters": "Super Ghostbusters",
 	"lunar.event.bubble_cobble.glue_moon": "Glue Moon",
 	"lunar.event.bubble_cobble.no": "No",

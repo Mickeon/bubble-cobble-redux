@@ -1,6 +1,6 @@
 {
   "keys": [
-    "#kubejs:wines"
+    "#bubble_cobble:wines"
   ],
   "pitch": 1.25,
   "soundEvent": "minecraft:item.bottle.fill",

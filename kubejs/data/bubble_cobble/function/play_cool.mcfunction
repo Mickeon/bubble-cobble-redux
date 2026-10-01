@@ -1,0 +1,1 @@
+playsound bubble_cobble:advancement.cool player @s

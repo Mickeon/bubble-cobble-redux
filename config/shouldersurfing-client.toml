@@ -394,7 +394,7 @@
 	#Items that when held, trigger the dynamic crosshair in adaptive mode. This config option supports regular expressions. Example: 'minecraft:.*sword' matches 'minecraft:wooden_sword' and 'minecraft:netherite_sword'.
 	adaptive_crosshair_hold_items = ["minecraft:snowball", "minecraft:egg", "minecraft:experience_bottle", "minecraft:ender_pearl", "minecraft:splash_potion", "minecraft:fishing_rod", "minecraft:lingering_potion", "minecraft:wind_charge", "minecraft:brick", "minecraft:nether_brick", "supplementaries:ash_brick", "minecraft:slime_ball", "supplementaries:bomb", "supplementaries:blue_bomb", "amendments:dragon_charge", "mowziesmobs:sculptor_staff", "relics:relic_experience_bottle", "relics:chorus_staff", "create:potato_cannon", "create:handheld_worldshaper"]
 	#Items that when used, trigger the dynamic crosshair in adaptive mode. This config option supports regular expressions. Example: 'minecraft:.*sword' matches 'minecraft:wooden_sword' and 'minecraft:netherite_sword'.
-	adaptive_crosshair_use_items = ["gag:escape_rope", "mowziesmobs:blowgun", "kubejs:firebomb_whiskey"]
+	adaptive_crosshair_use_items = ["gag:escape_rope", "mowziesmobs:blowgun", "bubble_cobble:firebomb_whiskey"]
 	#Item properties of an item, that when held, trigger the dynamic crosshair in adaptive mode.
 	adaptive_crosshair_hold_item_properties = ["minecraft:charged"]
 	#Item properties of an item, that when used, trigger the dynamic crosshair in adaptive mode.

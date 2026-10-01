@@ -1,0 +1,15 @@
+{
+  "parent": "minecraft:husbandry/root",
+  "display": {
+    "icon": {
+      "id": "bubble_cobble:ruler"
+    },
+    "title": "That Was When I Ruled the Land",
+    "description": "Get yourself a Ruler and start taking measures."
+  },
+  "criteria": {
+    "ruler": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

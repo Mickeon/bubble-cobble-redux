@@ -1,14 +1,14 @@
 
 StartupEvents.registry("block", event => {
 	// Blocks.MUD_BRICKS
-	event.create("cracked_mud_bricks")
+	event.create("bubble_cobble:cracked_mud_bricks")
 			.copyPropertiesFrom(Blocks.MUD_BRICKS)
-	event.create("chiseled_mud_bricks")
+	event.create("bubble_cobble:chiseled_mud_bricks")
 			.copyPropertiesFrom(Blocks.MUD_BRICKS)
 			.parentModel("minecraft:block/cube_column")
 			.textures({
-				end: "kubejs:block/mud_pillar_top",
-				side: "kubejs:block/chiseled_mud_bricks"
+				end: "bubble_cobble:block/mud_pillar_top",
+				side: "bubble_cobble:block/chiseled_mud_bricks"
 			})
 			.bounciness(0.5)
 			.fallenOn(callback => {
@@ -17,9 +17,9 @@ StartupEvents.registry("block", event => {
 					return
 				}
 
-				callback.level.playLocalSound(callback.block.getCenterX(), callback.block.getCenterY(), callback.block.getCenterZ(), "kubejs:block.chiseled_mud_bricks.fall", "blocks", 0.2, 0.9, false)
+				callback.level.playLocalSound(callback.block.getCenterX(), callback.block.getCenterY(), callback.block.getCenterZ(), "bubble_cobble:block.chiseled_mud_bricks.fall", "blocks", 0.2, 0.9, false)
 			})
-	event.create("mud_pillar")
+	event.create("bubble_cobble:mud_pillar")
 			.copyPropertiesFrom(Blocks.MUD_BRICKS)
 			.property(BlockProperties.AXIS)
 			.placementState(callback => {
@@ -28,5 +28,5 @@ StartupEvents.registry("block", event => {
 })
 
 StartupEvents.registry("sound_event", event => {
-	event.create("kubejs:block.chiseled_mud_bricks.fall")
+	event.create("bubble_cobble:block.chiseled_mud_bricks.fall")
 })

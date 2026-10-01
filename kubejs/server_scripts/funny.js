@@ -11,7 +11,7 @@ const $FoodBuilder = Java.loadClass("dev.latvian.mods.kubejs.item.FoodBuilder")
 ServerEvents.recipes(event => {
 	console.log("Changing recipes in funny_server.js")
 	event.recipes.create.mechanical_crafting(
-		Item.of("kubejs:blue_mascot_cat", {"minecraft:custom_data": {crafted: true}}), [
+		Item.of("bubble_cobble:blue_mascot_cat", {"minecraft:custom_data": {crafted: true}}), [
 			" AAA ",
 			"APCPA",
 			"AISIA",
@@ -30,11 +30,11 @@ ServerEvents.recipes(event => {
 			CreateItem.of(Item.of("minecraft:light_blue_dye", 2)),
 			CreateItem.of(Item.of("minecraft:light_blue_dye", 2), 0.5)
 		],
-		"kubejs:blue_mascot_cat"
+		"bubble_cobble:blue_mascot_cat"
 	)
 
-	event.shapeless("kubejs:banana_mayo_sandwich", ["#cobblemon:berries/colour/yellow", "create_bic_bit:mayonnaise_bottle", "minecraft:bread"])
-	event.shapeless(Item.of("kubejs:doublemint_gum", 2), ["#cobblemon:mints", "#c:slime_balls", "#cobblemon:mints", "minecraft:paper"])
+	event.shapeless("bubble_cobble:banana_mayo_sandwich", ["#cobblemon:berries/colour/yellow", "create_bic_bit:mayonnaise_bottle", "minecraft:bread"])
+	event.shapeless(Item.of("bubble_cobble:doublemint_gum", 2), ["#cobblemon:mints", "#c:slime_balls", "#cobblemon:mints", "minecraft:paper"]).id("bubble_cobble:doublemint_gum")
 
 	const cooked_lucky_egg = Item.of("farmersdelight:fried_egg", {"minecraft:custom_data": {was_lucky_egg: true}, "minecraft:rarity": "uncommon"})
 	event.smelting(cooked_lucky_egg, "cobblemon:lucky_egg", 5)
@@ -45,7 +45,7 @@ ServerEvents.recipes(event => {
 	event.smoking(cooked_pokemon_egg, "cobbreeding:pokemon_egg", 2.5)
 	event.campfireCooking(cooked_pokemon_egg, "cobbreeding:pokemon_egg", 5)
 
-	event.shaped("kubejs:super_ghostbusters", [" T ", "TMT", " T "], {T: "mega_showdown:ghost_tera_shard", M: "cobblemon:moon_stone"})
+	event.shaped("bubble_cobble:super_ghostbusters", [" T ", "TMT", " T "], {T: "mega_showdown:ghost_tera_shard", M: "cobblemon:moon_stone"})
 	event.shaped(Item.of("biomeswevegone:rose", 16), ["RR", "RR"], {R: "minecraft:rose_bush"})
 })
 
@@ -56,7 +56,7 @@ ItemEvents.foodEaten("cobblemon:ice_stone", event => {
 	event.entity.setTicksFrozen(300)
 })
 
-ItemEvents.foodEaten("kubejs:banana_mayo_sandwich", event => {
+ItemEvents.foodEaten("bubble_cobble:banana_mayo_sandwich", event => {
 	if (event.level.isClientSide()) {
 		return
 	}
@@ -86,7 +86,7 @@ ItemEvents.foodEaten(["biomesoplenty:cattail", "biomeswevegone:cattail_sprout", 
 		player.drop("minecraft:glowstone_dust", false)
 	}
 })
-ItemEvents.foodEaten("kubejs:super_ghostbusters", event => {
+ItemEvents.foodEaten("bubble_cobble:super_ghostbusters", event => {
 	event.level.runCommandSilent(`enhancedcelestials setLunarEvent bubble_cobble:ghostbusters`)
 	event.player.playNotifySound("supplementaries:block.jar.break", "players", 1, 0.5)
 })
@@ -99,7 +99,7 @@ ItemEvents.entityInteracted("create:wrench",  event => {
 		return
 	}
 	player.addItemCooldown(event.item.getItem(), 120 * SEC)
-	player.give("kubejs:blue_mascot_cat")
+	player.give("bubble_cobble:blue_mascot_cat")
 	const spawn_position = player.server.getOverworld().sharedSpawnPos
 	player.teleportTo("minecraft:overworld", spawn_position.x, spawn_position.y, spawn_position.y, player.yaw, player.pitch)
 })
@@ -114,7 +114,7 @@ ItemEvents.firstRightClicked(["minecraft:raw_copper"], event => {
 })
 
 // #region Bearded Dragon Logic.
-if (Item.exists("kubejs:bearded_dragon_bowl")) {
+if (Item.exists("bubble_cobble:bearded_dragon_bowl")) {
 	/** @readonly */ let BeardedDragon = {
 		Quotes: {
 			USE: [
@@ -142,7 +142,7 @@ if (Item.exists("kubejs:bearded_dragon_bowl")) {
 			to_player.tell([Text.yellow(name + " : "), quote])
 		}
 	}
-	ItemEvents.rightClicked("kubejs:bearded_dragon_bowl", event => {
+	ItemEvents.rightClicked("bubble_cobble:bearded_dragon_bowl", event => {
 		const player = event.player
 		const level = event.level
 		const item_stack = event.item
@@ -153,19 +153,19 @@ if (Item.exists("kubejs:bearded_dragon_bowl")) {
 		const chosen_quote = pick_random(BeardedDragon.Quotes.USE)
 		BeardedDragon.speak(player, item_stack.displayName, chosen_quote)
 
-		play_sound_at_entity(player, "kubejs:item.bearded_dragon_chirp", "players", 1.0, 1.25 + 0.25 * Math.random())
+		play_sound_at_entity(player, "bubble_cobble:item.bearded_dragon_chirp", "players", 1.0, 1.25 + 0.25 * Math.random())
 		player.addItemCooldown(item_stack.item, 10)
 		player.potionEffects.add("brewinandchewin:sweet_heart", 20, 1)
 	})
 
-	ItemEvents.pickedUp("kubejs:bearded_dragon_bowl", event => {
+	ItemEvents.pickedUp("bubble_cobble:bearded_dragon_bowl", event => {
 		if (!event.entity.isPlayer()) {
 			return
 		}
 		BeardedDragon.speak(event.entity, event.item.displayName, pick_random(BeardedDragon.Quotes.GREETING))
 	})
 
-	ItemEvents.dropped("kubejs:bearded_dragon_bowl", event => {
+	ItemEvents.dropped("bubble_cobble:bearded_dragon_bowl", event => {
 		if (!event.entity.isPlayer()) {
 			return
 		}
@@ -177,7 +177,7 @@ if (Item.exists("kubejs:bearded_dragon_bowl")) {
 				callback.clear()
 				return
 			}
-			item_entity.playSound("kubejs:item.bearded_dragon_chirp", 0.5, 1.25 + 0.25 * Math.random())
+			item_entity.playSound("bubble_cobble:item.bearded_dragon_chirp", 0.5, 1.25 + 0.25 * Math.random())
 			callback.timer = 40 + 40 * Math.random()
 		})
 	})
@@ -188,7 +188,7 @@ if (Item.exists("kubejs:bearded_dragon_bowl")) {
 ItemEvents.entityInteracted("minecraft:name_tag", event => {
 	const target = event.target
 	if (target.type == "minecraft:cat" && event.item.displayName.getString().toLowerCase().includes("pipi")) {
-		target.setVariant("kubejs:pipi")
+		target.setVariant("bubble_cobble:pipi")
 	}
 })
 
@@ -210,20 +210,20 @@ PlayerEvents.decorateChat(event => {
 		if (attacker?.type == "cobblemon:pokemon" && attacker?.nbt.getCompound("Pokemon").get("PokemonOriginalTrainerType") == "NONE") {
 			attacker.cry()
 			attacker.lookAt("eyes", speaker.eyePosition)
-			speaker.attack(new DamageSource("kubejs:pokemon_greeting", attacker, null), 15)
+			speaker.attack(new DamageSource("bubble_cobble:pokemon_greeting", attacker, null), 15)
 		}
 	}
 	else if (message.includes("👍")) {
 		let server = event.server
 		server.getPlayers().forEach(/** @param {$ServerPlayer} victim */ victim => {
-			if ((victim != speaker || server.isSingleplayer()) && victim.inBlockState.hasTag("bubble_cobble:quicksand") && victim.isAdvancementDone("kubejs:step_in_quicksand")) {
-				speaker.unlockAdvancement("kubejs:help_for_quicksand")
+			if ((victim != speaker || server.isSingleplayer()) && victim.inBlockState.hasTag("bubble_cobble:quicksand") && victim.isAdvancementDone("bubble_cobble:custom/quicksand/step_in")) {
+				speaker.unlockAdvancement("bubble_cobble:custom/quicksand/help")
 				victim.motionY = 5
 				victim.hurtMarked = true
 				victim.addEffect(MobEffectUtil.of("minecraft:levitation", 2 * SEC))
 				victim.addEffect(MobEffectUtil.of("minecraft:slow_falling", 30 * SEC))
 				server.scheduleInTicks(3 * MIN, callback => {
-					victim.revokeAdvancement("kubejs:step_in_quicksand")
+					victim.revokeAdvancement("bubble_cobble:custom/quicksand/step_in")
 				})
 			}
 		})
@@ -268,15 +268,15 @@ ServerEvents.basicPublicCommand("suebegone", event => {
 PlayerEvents.loggedIn(event => {
 	const player = /** @type {$ServerPlayer} */ (event.player)
 	if (has_bonus_dash(player)) {
-		player.setAttributeBaseValue("kubejs:dash_jump_count", 1)
+		player.setAttributeBaseValue("bubble_cobble:dash_jump_count", 1)
 	}
 	// I know the consequences of this. If the server restarts, you will lose the leniency.
 	// But I can't be bothered storing dash data on disk.
-	player.removeAttribute("minecraft:generic.safe_fall_distance", "kubejs:dash_leniency")
-	player.removeAttribute("minecraft:generic.safe_fall_distance", "kubejs:powder_snow_leniency")
-	player.removeAttribute("minecraft:generic.gravity", "kubejs:powder_snow_pause")
+	player.removeAttribute("minecraft:generic.safe_fall_distance", "bubble_cobble:dash_leniency")
+	player.removeAttribute("minecraft:generic.safe_fall_distance", "bubble_cobble:powder_snow_leniency")
+	player.removeAttribute("minecraft:generic.gravity", "bubble_cobble:powder_snow_pause")
 
-	player.revokeAdvancement("kubejs:step_in_quicksand")
+	player.revokeAdvancement("bubble_cobble:quicksand/step_in")
 })
 
 // https://discord.com/channels/303440391124942858/303440391124942858/1450918369342521548
@@ -304,14 +304,14 @@ DashDataBuilder.get_or_create = /** @param {string} uuid */ function(uuid) {
 	return this.players_dash_data[uuid]
 }
 
-NetworkEvents.dataReceived("kubejs:dash", event => {
+NetworkEvents.dataReceived("bubble_cobble:dash", event => {
 	const player = event.player
 	const dash = DashDataBuilder.get_or_create(player.uuid)
 
 	if (player.isSwimming()
 	|| player.onGround()
 	|| !player.canSprint()
-	|| dash.jump_count >= player.getAttributeTotalValue("kubejs:dash_jump_count")
+	|| dash.jump_count >= player.getAttributeTotalValue("bubble_cobble:dash_jump_count")
 	|| dash.last_tick_used + DASH_COOLDOWN_TICKS > event.server.tickCount
 	) {
 		return
@@ -341,7 +341,7 @@ NetworkEvents.dataReceived("kubejs:dash", event => {
 		player.x, player.y, player.z,
 		0.1, 0.1, 0.1, 10, 0.05
 	)
-	player.modifyAttribute("minecraft:generic.safe_fall_distance", "kubejs:dash_leniency", 3, "add_value")
+	player.modifyAttribute("minecraft:generic.safe_fall_distance", "bubble_cobble:dash_leniency", 3, "add_value")
 
 	dash.last_tick_used = event.server.tickCount
 	dash.jump_count += 1
@@ -361,7 +361,7 @@ NetworkEvents.dataReceived("kubejs:dash", event => {
 			if (player.fallDistance <= 0.0 && (player.onGround() || player.isSwimming())) {
 				dash.jump_count = 0
 				dash.air_time_ticks = 0
-				player.removeAttribute("minecraft:generic.safe_fall_distance", "kubejs:dash_leniency")
+				player.removeAttribute("minecraft:generic.safe_fall_distance", "bubble_cobble:dash_leniency")
 
 				dash.check_landed.clear()
 				delete dash.check_landed
@@ -403,7 +403,7 @@ ItemEvents.entityInteracted("minecraft:glass_bottle", event => {
 		if (!event.player.isCreative()) {
 			event.item.shrink(1)
 		}
-		event.player.give("kubejs:horse_urine_bottle")
+		event.player.give("bubble_cobble:horse_urine_bottle")
 	}
 })
 
@@ -466,7 +466,7 @@ PlayerEvents.tick(event => {
 	})
 
 	player.setIsInPowderSnow(false)
-	player.modifyAttribute("minecraft:generic.gravity", "kubejs:powder_snow_pause", -player.getAttributeValue("minecraft:generic.gravity"), "add_multiplied_base")
+	player.modifyAttribute("minecraft:generic.gravity", "bubble_cobble:powder_snow_pause", -player.getAttributeValue("minecraft:generic.gravity"), "add_multiplied_base")
 	player.setMotion(0.0, 0.25, 0.0)
 	player.hurtMarked = true
 
@@ -475,8 +475,8 @@ PlayerEvents.tick(event => {
 	if (!powder_snow.delayed_jump) {
 		powder_snow.delayed_jump = level.server.scheduleInTicks(2, () => {
 			play_sound_at_entity(player, "bubble_cobble:crate_jump", "players", 1.0, 0.75 + powder_snow.combo * 0.05)
-			player.removeAttribute("minecraft:generic.gravity", "kubejs:powder_snow_pause")
-			player.modifyAttribute("minecraft:generic.safe_fall_distance", "kubejs:powder_snow_leniency", 5, "add_value")
+			player.removeAttribute("minecraft:generic.gravity", "bubble_cobble:powder_snow_pause")
+			player.modifyAttribute("minecraft:generic.safe_fall_distance", "bubble_cobble:powder_snow_leniency", 5, "add_value")
 			player.setMotionY(1.0)
 			player.hurtMarked = true
 			delete powder_snow.delayed_jump
@@ -510,7 +510,7 @@ PlayerEvents.tick(event => {
 		// Extremely lazy check, it's not that serious.
 		powder_snow.check_landed = level.server.scheduleRepeatingInTicks(40, () => {
 			if (player.onGround() && player.blockStateOn.block != Blocks.POWDER_SNOW) {
-				player.removeAttribute("minecraft:generic.safe_fall_distance", "kubejs:powder_snow_leniency")
+				player.removeAttribute("minecraft:generic.safe_fall_distance", "bubble_cobble:powder_snow_leniency")
 				powder_snow.combo = 0
 				powder_snow.check_landed.clear()
 				delete powder_snow.check_landed

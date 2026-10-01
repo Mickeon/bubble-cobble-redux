@@ -61,7 +61,7 @@ LootJS.lootTables(event => {
 				.jsonFunction({function: "minecraft:set_components", components: {"cobblemon:tm_move": {move: "dig"}}})
 				.withWeight(5))
 			.addEntry(LootEntry.of("cobblemon:blank_tm").withWeight(2))
-			.addEntry(LootEntry.of("kubejs:doublemint_gum").withWeight(1).setCount([1, 2]))
+			.addEntry(LootEntry.of("bubble_cobble:doublemint_gum").withWeight(1).setCount([1, 2]))
 
 		event.getLootTable("supplementaries:loot/urn_loot/epic").firstPool()
 			.addEntry(LootEntry.of("minersdelight:nutritional_bar").withWeight(10).setCount([2, 6]))
@@ -348,7 +348,7 @@ LootJS.modifiers(event => {
 	// 	// 		value: 1
 	// 	// 	}]
 	// 	// }))
-		// .addLoot(LootEntry.of("kubejs:blue_mascot_cat")
+		// .addLoot(LootEntry.of("bubble_cobble:blue_mascot_cat")
 		// 	.addCondition(LootCondition.matchCustomCondition({
 		// 		condition: "lootr:loot_count",
 		// 		operations: [{

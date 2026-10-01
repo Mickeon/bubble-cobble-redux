@@ -18,7 +18,7 @@ global.MUSIC_LIST = MUSIC_LIST
 
 StartupEvents.registry("sound_event", event => {
 	Object.keys(MUSIC_LIST).forEach(key => {
-		event.create(`music.${key}`)
+		event.create(`bubble_cobble:music.${key}`)
 	})
 })
 
@@ -27,11 +27,11 @@ StartupEvents.registry("item", event => {
 		if (MUSIC_LIST[key].no_disc) {
 			return
 		}
-		event.create(`kubejs:music_disc_${key}`)
-			.jukeboxPlayable(`kubejs:${key}`, true)
+		event.create(`bubble_cobble:music_disc_${key}`)
+			.jukeboxPlayable(`bubble_cobble:${key}`, true)
 			.displayName("Music Disc")
 			.rarity("rare")
-			.texture(`kubejs:item/music_disc_${key}`)
+			.texture(`bubble_cobble:item/music_disc_${key}`)
 			.unstackable()
 	})
 })

@@ -1,6 +1,6 @@
 // priority: 1000
 
-Platform.setModName("kubejs", "Bubble Cobble")
+Platform.setModName("kubejs", "KubeJS (Bubble Cobble)")
 Platform.setModName("bubble_cobble", "Bubble Cobble")
 
 let $Player = Java.loadClass("net.minecraft.world.entity.player.Player")
@@ -82,8 +82,8 @@ StartupEvents.registry("sound_event", event => {
 	event.create("bubble_cobble:fruit_collected")
 	event.create("bubble_cobble:life_got")
 	event.create("bubble_cobble:sniper_apple")
-	event.create("kubejs:item.bearded_dragon_chirp")
-	event.create("kubejs:entity.enderman.bones_cracking")
+	event.create("bubble_cobble:item.bearded_dragon_chirp")
+	event.create("bubble_cobble:entity.enderman.bones_cracking")
 })
 
 /** @param {RegistryTypes.CreativeModeTab} tab_id */

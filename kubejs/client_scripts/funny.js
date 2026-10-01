@@ -1,7 +1,7 @@
 
 KeyBindEvents.tick("bubble_cobble.dash", event => {
 	const angle = event.player.lookAngle
-	event.player.sendData("kubejs:dash", {
+	event.player.sendData("bubble_cobble:dash", {
 		angle: {
 			x: angle.x(),
 			y: angle.y(),

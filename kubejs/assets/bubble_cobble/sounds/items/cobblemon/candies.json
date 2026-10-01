@@ -1,7 +1,7 @@
 {
   "keys": [
     "#cobblemon:candies",
-    "kubejs:doublemint_gum"
+    "bubble_cobble:doublemint_gum"
   ],
   "pitch": 1.5,
   "soundEvent": "cobblemon:item.medicine.candy.use",

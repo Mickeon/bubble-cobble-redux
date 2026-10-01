@@ -1,7 +1,7 @@
 {
   "keys": [
     "biomeswevegone:aloe_vera_juice",
-    "kubejs:horse_urine_bottle"
+    "bubble_cobble:horse_urine_bottle"
   ],
   "pitch": 1.75,
   "soundEvent": "minecraft:item.bottle.fill",

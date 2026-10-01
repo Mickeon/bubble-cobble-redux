@@ -35,7 +35,7 @@ BlockEvents.broken(event => {
 	const level = event.level
 	const held_item = player.offHandItem
 	const held_block = held_item.block
-	if (!held_block && held_item.id != "kubejs:trowel") {
+	if (!held_block && held_item.id != "bubble_cobble:trowel") {
 		return
 	}
 
@@ -105,7 +105,7 @@ BlockEvents.broken(event => {
 		}
 
 		let block_hit_result = new $BlockHitResult(player.eyePosition, player.facing, broken_pos, false)
-		if (held_item.id == "kubejs:trowel") {
+		if (held_item.id == "bubble_cobble:trowel") {
 			// Annoying special case. I don't know why the RightClickedEvent isn't fired in useOn().
 			return global.use_trowel_on_block(new $BlockRightClickedKubeEvent(
 				held_item, player, "off_hand", broken_pos, player.facing, block_hit_result

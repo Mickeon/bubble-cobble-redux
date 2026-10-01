@@ -4,7 +4,7 @@
  */
 
 ServerEvents.recipes(event => {
-	event.shaped("kubejs:ruler", ["  B", " BB", "BBA"], {B: "minecraft:bamboo", A: "create:andesite_alloy"})
+	event.shaped("bubble_cobble:ruler", ["  B", " BB", "BBA"], {B: "minecraft:bamboo", A: "create:andesite_alloy"})
 })
 
 // Somewhat shoddy Ruler mechanic. I can only work with particles here.
@@ -30,7 +30,7 @@ RulerData.get_or_create = function(uuid) {
 }
 const players_ruler_data = {}
 BlockEvents.rightClicked(event => {
-	if (event.item.id != "kubejs:ruler") {
+	if (event.item.id != "bubble_cobble:ruler") {
 		return
 	}
 
@@ -171,13 +171,13 @@ BlockEvents.rightClicked(event => {
 
 	player.swing(event.hand, true)
 	player.playNotifySound("create:controller_click", "players", 0.5, 1.0)
-	player.unlockAdvancement("kubejs:use_ruler")
+	player.unlockAdvancement("bubble_cobble:use_ruler")
 
 	event.cancel()
 })
 
 ItemEvents.firstRightClicked(event => {
-	if (event.item.id != "kubejs:ruler") {
+	if (event.item.id != "bubble_cobble:ruler") {
 		return
 	}
 	const {player} = event

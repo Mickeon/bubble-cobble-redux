@@ -36,7 +36,7 @@
               "ambient": true,
               "amplifier": 0,
               "duration_in_ticks": 300,
-              "effect": "kubejs:girl_power",
+              "effect": "bubble_cobble:girl_power",
               "show_icon": true,
               "visible": true
             }

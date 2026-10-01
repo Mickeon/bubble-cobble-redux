@@ -7,7 +7,7 @@
 		},
 		{
 			"type": "item",
-			"id": "kubejs:blue_mascot_cat",
+			"id": "bubble_cobble:blue_mascot_cat",
 			"nbt": "{lore: ['{text:\"Infused in Sinister Tea\", color: \"green\", italic: false}']}"
 		}
 	]

@@ -2,12 +2,12 @@
   "type": "remi:group",
 	"id": "c:fermented_fluids",
   "contents": [
-    "kubejs:berry_juice_soda",
-    "kubejs:firebomb_whiskey",
-    "kubejs:honey_liqueur",
-    "kubejs:sparkling_rose",
-    "kubejs:spumante",
-    "kubejs:sweet_berry_wine"
+    "bubble_cobble:berry_juice_soda",
+    "bubble_cobble:firebomb_whiskey",
+    "bubble_cobble:honey_liqueur",
+    "bubble_cobble:sparkling_rose",
+    "bubble_cobble:spumante",
+    "bubble_cobble:sweet_berry_wine"
   ],
 	"regex": "fluid:brewinandchewin.*"
 }

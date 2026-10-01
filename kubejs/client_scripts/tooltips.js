@@ -244,9 +244,10 @@ NativeEvents.onEvent("highest", $RenderTooltipEvent$Color, event => {
 	const graphics = event.getGraphics()
 
 	switch (item_stack.mod) {
-		case "kubejs": {
-			graphics.renderFakeItem("kubejs:blue_mascot_cat", event.x, event.y - 8)
-			if (item_stack.id == "kubejs:chiseled_mud_bricks") {
+		case "kubejs":
+		case "bubble_cobble": {
+			graphics.renderFakeItem("bubble_cobble:blue_mascot_cat", event.x, event.y - 8)
+			if (item_stack.id == "bubble_cobble:chiseled_mud_bricks") {
 				let tooltip_stretch = 1 + Math.abs(Math.sin(Utils.getSystemTime() * 0.005)) * 0.01
 				let limit = Math.min(item_stack.count, 10)
 				graphics.scale(1.0, tooltip_stretch, 1.0).push()

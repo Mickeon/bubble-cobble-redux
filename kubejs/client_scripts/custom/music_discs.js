@@ -2,10 +2,10 @@
 const MUSIC_LIST = global.MUSIC_LIST
 
 ClientEvents.generateAssets("after_mods", event => {
-	event.sounds("kubejs", s => {
+	event.sounds("bubble_cobble", s => {
 		Object.keys(MUSIC_LIST).forEach(key => {
 			s.addSound(`music.${key}`, g => {
-				g.sound(`kubejs:music/${key}`, sound_instance => {
+				g.sound(`bubble_cobble:music/${key}`, sound_instance => {
 					sound_instance.stream()
 				})
 			})

@@ -15,37 +15,37 @@ let $ItemBuilder = Java.loadClass("dev.latvian.mods.kubejs.item.ItemBuilder")
 
 
 StartupEvents.registry("fluid", event => {
-	event.create("sweet_berry_wine", "kubejs:thin").tint("red").noBucket().displayName("Sweet Berry Wine")
-	event.create("honey_liqueur", "kubejs:thin").tint("brown").noBucket().displayName("honey Liqueur")
-	event.create("spumante", "kubejs:thin").tint("lime").noBucket().displayName("Spumante")
-	event.create("sparkling_rose", "kubejs:thin").tint("yellow").noBucket().displayName("Sparkling Rosé")
-	event.create("berry_juice_soda", "kubejs:thin").tint("light_blue_dye").noBucket().displayName("Berry Juice Soda")
-	event.create("firebomb_whiskey", "kubejs:thin").tint("dark_red").noBucket().displayName("Firebomb Whiskey")
+	event.create("bubble_cobble:sweet_berry_wine", "kubejs:thin").tint("red").noBucket().displayName("Sweet Berry Wine")
+	event.create("bubble_cobble:honey_liqueur", "kubejs:thin").tint("brown").noBucket().displayName("honey Liqueur")
+	event.create("bubble_cobble:spumante", "kubejs:thin").tint("lime").noBucket().displayName("Spumante")
+	event.create("bubble_cobble:sparkling_rose", "kubejs:thin").tint("yellow").noBucket().displayName("Sparkling Rosé")
+	event.create("bubble_cobble:berry_juice_soda", "kubejs:thin").tint("light_blue_dye").noBucket().displayName("Berry Juice Soda")
+	event.create("bubble_cobble:firebomb_whiskey", "kubejs:thin").tint("dark_red").noBucket().displayName("Firebomb Whiskey")
 })
 
 StartupEvents.registry("item", event => {
-	create_wine(event, "sweet_berry_wine", (new $FoodBuilder())
+	create_wine(event, "bubble_cobble:sweet_berry_wine", (new $FoodBuilder())
 			.effect("brewinandchewin:tipsy", 1 * MIN, 0, 1.0)
 			.saturation(3)
 			.nutrition(1)
 	)
-	create_wine(event, "honey_liqueur", (new $FoodBuilder())
+	create_wine(event, "bubble_cobble:honey_liqueur", (new $FoodBuilder())
 			.effect("brewinandchewin:tipsy", 1 * MIN, 0, 1.0)
 			.effect("minecraft:dolphins_grace", 5 * MIN, 2, 1.0)
 			.effect("minecraft:luck", 3 * MIN, 1, 1.0)
 	)
-	create_wine(event, "spumante", (new $FoodBuilder())
+	create_wine(event, "bubble_cobble:spumante", (new $FoodBuilder())
 			.effect("brewinandchewin:tipsy", 3 * MIN, 1, 1.0)
 			.effect("minecraft:water_breathing", 5 * MIN, 0, 1.0)
 			.effect("minecraft:haste", 5 * MIN, 2, 1.0)
 	)
-	create_wine(event, "sparkling_rose", (new $FoodBuilder())
+	create_wine(event, "bubble_cobble:sparkling_rose", (new $FoodBuilder())
 			.effect("brewinandchewin:tipsy", 5 * MIN, 0, 1.0)
 			.effect("minecraft:glowing", 8 * MIN, 1, 1.0)
 			.effect("minecraft:night_vision", 5 * MIN, 1, 1.0)
 	)
 
-	event.create("berry_juice_soda")
+	event.create("bubble_cobble:berry_juice_soda")
 			.displayName("Berry Juice Soda")
 			.tooltip(Text.gray("Clears all negative effects."))
 			.tooltip(Text.green("Rated E for everybody!"))
@@ -71,7 +71,7 @@ StartupEvents.registry("item", event => {
 				// entity.potionEffects.add("alexscaves:stunned", 3 * SEC, 0, false, false)
 				return item_stack
 			})
-	event.create("firebomb_whiskey")
+	event.create("bubble_cobble:firebomb_whiskey")
 			.displayName("Firebomb Whiskey")
 			.tooltip([Text.gray("With an "), Text.gold("fiery"), Text.gray(" aftertaste.")])
 			.useAnimation("bow")
@@ -118,7 +118,7 @@ NativeEvents.onEvent($ProjectileImpactEvent, event => {
 		return
 	}
 
-	if (projectile.item.id != "kubejs:firebomb_whiskey") {
+	if (projectile.item.id != "bubble_cobble:firebomb_whiskey") {
 		return
 	}
 
@@ -160,7 +160,7 @@ global.release_firebomb_whiskey = function(item_stack, level, entity, remaining_
 
 	/**@type {$Projectile} */
 	const projectile = level.createEntity("minecraft:potion")
-	projectile.mergeNbt({Item: Item.of("kubejs:firebomb_whiskey")})
+	projectile.mergeNbt({Item: Item.of("bubble_cobble:firebomb_whiskey")})
 	projectile.x = entity.x
 	projectile.y = entity.eyeY
 	projectile.z = entity.z

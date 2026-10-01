@@ -18,14 +18,14 @@ StartupEvents.registry("item", event => {
 		return {attribute: attribute, slot: slot, modifier: {amount: amount, id: id, operation: operation}}
 	}
 
-	event.create("trowel")
+	event.create("bubble_cobble:trowel")
 			.unstackable()
 			.maxDamage(250)
 			.tooltip(Text.of(`Randomly places blocks from your hotbar`).gray())
 			.component("minecraft:attribute_modifiers", new $ItemAttributeModifiers([
 				modifier("minecraft:generic.attack_speed", -2, "add_value", "minecraft:base_attack_speed", "mainhand"),
-				modifier("minecraft:player.block_interaction_range", 2, "add_value", "kubejs:trowel", "hand"),
-				modifier("minecraft:generic.attack_knockback", 5, "add_value", "kubejs:trowel", "mainhand"),
+				modifier("minecraft:player.block_interaction_range", 2, "add_value", "bubble_cobble:trowel", "hand"),
+				modifier("minecraft:generic.attack_knockback", 5, "add_value", "bubble_cobble:trowel", "mainhand"),
 			], true))
 			.component("minecraft:tool", new $Tool([
 					{ blocks: "#minecraft:incorrect_for_iron_tool", correct_for_drops: false },
@@ -39,7 +39,7 @@ StartupEvents.registry("item", event => {
 })
 
 StartupEvents.modifyCreativeTab("minecraft:tools_and_utilities", event => {
-	event.add("kubejs:trowel")
+	event.add("bubble_cobble:trowel")
 })
 
 // TODO: Should be called on both clients and servers, ideally. Currently only on server.

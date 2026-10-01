@@ -1,1 +1,0 @@
-playsound kubejs:advancement.cool player @s

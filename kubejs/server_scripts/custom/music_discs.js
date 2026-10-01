@@ -5,8 +5,8 @@ ServerEvents.registry("jukebox_song", event => {
 	Object.keys(MUSIC_LIST).forEach((key, index) => {
 		const duration = MUSIC_LIST[key].duration
 		const description = MUSIC_LIST[key].description
-		event.create(`kubejs:${key}`)
-				.song(`kubejs:music.${key}`, duration)
+		event.create(`bubble_cobble:${key}`)
+				.song(`bubble_cobble:music.${key}`, duration)
 				.description(Text.of(description))
 				.comparatorOutput(index + 1)
 	})
@@ -17,6 +17,6 @@ ServerEvents.tags("item", event => {
 		if (MUSIC_LIST[key].no_disc) {
 			return
 		}
-		event.add("c:music_discs", `kubejs:music_disc_${key}`)
+		event.add("c:music_discs", `bubble_cobble:music_disc_${key}`)
 	})
 })

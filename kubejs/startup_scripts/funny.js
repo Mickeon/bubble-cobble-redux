@@ -23,7 +23,7 @@ ItemEvents.modification(event => {
 })
 
 StartupEvents.registry("item", event => {
-	event.create("blue_mascot_cat")
+	event.create("bubble_cobble:blue_mascot_cat")
 			.displayName("Sopping Wet Thing")
 			.rarity("rare")
 			.tooltip(Text.of(`Shake him comedically for some cool noises!`).color("#83BED9"))
@@ -35,7 +35,7 @@ StartupEvents.registry("item", event => {
 				}
 
 				level.server.scheduleRepeatingInTicks(6, callback => {
-					if (player.usingItem && player.useItem.id == "kubejs:blue_mascot_cat") {
+					if (player.usingItem && player.useItem.id == "bubble_cobble:blue_mascot_cat") {
 						let nununu = "Nu" + "nu".repeat(Math.random() * 4) + "!"
 						level.server.runCommandSilent(`title ${player.username} times 1 5 5`)
 						level.server.runCommandSilent(`title ${player.username} actionbar {"text":"${nununu}","color":"aqua"}`)
@@ -76,7 +76,7 @@ StartupEvents.registry("item", event => {
 				return item_stack
 			})
 			.tag("create:upright_on_belt")
-	event.create("bearded_dragon_bowl")
+	event.create("bubble_cobble:bearded_dragon_bowl")
 			.displayName("Bearded Dragon Bowl")
 			.unstackable()
 			.fireResistant()
@@ -84,7 +84,7 @@ StartupEvents.registry("item", event => {
 			.use((level, player, hand) => true)
 			.tag("create:upright_on_belt")
 
-	event.create("banana_mayo_sandwich")
+	event.create("bubble_cobble:banana_mayo_sandwich")
 			.name(stack => {
 				if (Platform.isClientEnvironment()
 				&& Client.player
@@ -97,7 +97,7 @@ StartupEvents.registry("item", event => {
 					.nutrition(8)
 					.saturation(0.25)
 			)
-	event.create("doublemint_gum")
+	event.create("bubble_cobble:doublemint_gum")
 			.displayName("Doublemint™ Gum")
 			.food(f => f
 					.nutrition(1)
@@ -108,8 +108,8 @@ StartupEvents.registry("item", event => {
 			)
 			.maxStackSize(63)
 			.rarity("uncommon")
-			.jukeboxPlayable("kubejs:mint")
-	event.create("horse_urine_bottle")
+			.jukeboxPlayable("bubble_cobble:mint")
+	event.create("bubble_cobble:horse_urine_bottle")
 			.maxStackSize(16)
 			.tooltip(Text.of(`dude`).darkGray().italic())
 			.tag("c:drinks")
@@ -120,11 +120,11 @@ StartupEvents.registry("item", event => {
 					.alwaysEdible()
 					.effect("minecraft:nausea", 5 * SEC, 0, 1.0)
 					.effect("minecraft:nausea", 20 * SEC, 0, 0.75)
-					.effect("kubejs:girl_power", 30 * SEC, 0, 0.5)
+					.effect("bubble_cobble:girl_power", 30 * SEC, 0, 0.5)
 			)
 			.createItemProperties()
 					.craftRemainder("minecraft:glass_bottle")
-	event.create("super_ghostbusters")
+	event.create("bubble_cobble:super_ghostbusters")
 			.displayName("Super Ghostbusters")
 			.unstackable()
 			.rarity("rare")
@@ -145,31 +145,31 @@ StartupEvents.registry("item", event => {
 					.effect("minecraft:levitation", 5 * SEC, 0, 1.0)
 					.effect("brewinandchewin:intoxication", 5 * MIN, 0, 1.0)
 			)
-			.jukeboxPlayable("kubejs:ghostbusters")
+			.jukeboxPlayable("bubble_cobble:ghostbusters")
 })
 
 StartupEvents.modifyCreativeTab("minecraft:food_and_drinks", event => {
 	event.add([
-		Item.of("kubejs:blue_mascot_cat"),
-		Item.of("kubejs:banana_mayo_sandwich"),
+		Item.of("bubble_cobble:blue_mascot_cat"),
+		Item.of("bubble_cobble:banana_mayo_sandwich"),
 		Item.of("create:rose_quartz"),
 		Item.of("create:polished_rose_quartz"),
 		Item.of("biomesoplenty:cattail"),
 		Item.of("biomeswevegone:cattail_sprout"),
 		Item.of("biomeswevegone:fluorescent_cattail_sprout"),
-		Item.of("kubejs:horse_urine_bottle"),
+		Item.of("bubble_cobble:horse_urine_bottle"),
 	])
 })
 
 StartupEvents.modifyCreativeTab("kubejs:tab", event => {
-	event.remove(Item.of("kubejs:bearded_dragon_bowl"))
-	event.add(Item.of("kubejs:bearded_dragon_bowl").withCustomName("Banana"))
-	event.add(Item.of("kubejs:bearded_dragon_bowl").withCustomName("Baby Dandy"))
-	event.remove("kubejs:doublemint_gum") // Sssh.
+	event.remove(Item.of("bubble_cobble:bearded_dragon_bowl"))
+	event.add(Item.of("bubble_cobble:bearded_dragon_bowl").withCustomName("Banana"))
+	event.add(Item.of("bubble_cobble:bearded_dragon_bowl").withCustomName("Baby Dandy"))
+	event.remove("bubble_cobble:doublemint_gum") // Sssh.
 })
 
 StartupEvents.registry("attribute", event => {
-	event.create("kubejs:dash_jump_count")
+	event.create("bubble_cobble:dash_jump_count")
 		.attachToPlayers()
 		.range(0, 0, 128)
 		.sentiment("positive")
@@ -214,7 +214,7 @@ function find_mickeon(server) {
 
 
 StartupEvents.registry("cat_variant", event => {
-	event.createCustom("pipi", () => new $CatVariant("kubejs:textures/entity/cat/pipi.png"))
+	event.createCustom("bubble_cobble:pipi", () => new $CatVariant("bubble_cobble:textures/entity/cat/pipi.png"))
 })
 
 // Put Skillet on your head with some really shoddy code.

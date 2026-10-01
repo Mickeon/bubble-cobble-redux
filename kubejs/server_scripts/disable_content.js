@@ -85,7 +85,7 @@ LootJS.lootTables(event => {
 	// I swear I've tried this in many different ways. These Artifacts are RESILIENT.
 	// event.modifyLootTables(/.*artifact.*/).forEach(table => {
 	// 	console.log(table.location)
-	// 	table.replaceItem("artifacts:villager_hat", "kubejs:blue_mascot_cat")
+	// 	table.replaceItem("artifacts:villager_hat", "bubble_cobble:blue_mascot_cat")
 	// })
 })
 

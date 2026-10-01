@@ -1,0 +1,6 @@
+{
+	"parent": "bubble_cobble:item/wine_bottle",
+	"textures": {
+		"layer0": "bubble_cobble:item/berry_juice_soda"
+	}
+}

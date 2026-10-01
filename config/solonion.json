@@ -8,9 +8,9 @@
       "{id:\"item\",item:\"biomesoplenty:cattail\"}",
       "{id:\"item\",item:\"biomeswevegone:cattail_sprout\"}",
       "{id:\"item\",item:\"biomeswevegone:fluorescent_cattail_sprout\"}",
-      "{id:\"item\",item:\"kubejs:doublemint_gum\"}",
-      "{id:\"item\",item:\"kubejs:horse_urine_bottle\"}",
-      "{id:\"item\",item:\"kubejs:super_ghostbusters\"}",
+      "{id:\"item\",item:\"bubble_cobble:doublemint_gum\"}",
+      "{id:\"item\",item:\"bubble_cobble:horse_urine_bottle\"}",
+      "{id:\"item\",item:\"bubble_cobble:super_ghostbusters\"}",
       "{id:\"item\",item:\"supplementaries:soap\"}",
       "{id:\"itemtag\",tag:\"origins:ignore_diet\"}",
       "{id:\"itemtag\",tag:\"c:drinks/tea\"}"
@@ -71,7 +71,7 @@
       "diversity": 5
     },
     {
-      "ingredient": "{id:\"itemtag\",tag:\"kubejs:wines\"}",
+      "ingredient": "{id:\"itemtag\",tag:\"bubble_cobble:wines\"}",
       "diversity": 3
     },
     {

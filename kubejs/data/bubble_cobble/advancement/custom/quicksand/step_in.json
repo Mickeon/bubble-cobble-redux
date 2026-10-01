@@ -1,0 +1,25 @@
+{
+  "parent": "bubble_cobble:custom/quicksand/help",
+  "display": {
+    "icon": {
+      "id": "biomeswevegone:quicksand"
+    },
+    "title": "HELP = 👍",
+    "description": "Won't someone please HELP ME?",
+    "hidden": true
+  },
+  "criteria": {
+    "quicksand": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "block": {
+              "blocks": "#bubble_cobble:quicksand"
+            }
+          }
+        }
+      }
+    }
+  }
+}

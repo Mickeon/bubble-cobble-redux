@@ -1,5 +1,5 @@
 
-const GIRL_POWER_EFFECT = Registry.of("mob_effect").get("kubejs:girl_power")
+const GIRL_POWER_EFFECT = Registry.of("mob_effect").get("bubble_cobble:girl_power")
 if (GIRL_POWER_EFFECT) {
 let $MobEffectEvent$Added = Java.loadClass("net.neoforged.neoforge.event.entity.living.MobEffectEvent$Added")
 let $MobEffectEvent$Expired = Java.loadClass("net.neoforged.neoforge.event.entity.living.MobEffectEvent$Expired")
@@ -7,19 +7,19 @@ let $MobEffectEvent$Remove = Java.loadClass("net.neoforged.neoforge.event.entity
 
 NativeEvents.onEvent($MobEffectEvent$Added, event => {
 	if (event.effectInstance && event.effectInstance.is(GIRL_POWER_EFFECT)) {
-		event.entity.modifyAttribute("kubejs:dash_jump_count", "kubejs:girl_power_effect", event.effectInstance.amplifier + 1, "add_value")
+		event.entity.modifyAttribute("bubble_cobble:dash_jump_count", "bubble_cobble:girl_power_effect", event.effectInstance.amplifier + 1, "add_value")
 	}
 })
 
 NativeEvents.onEvent($MobEffectEvent$Expired, event => {
 	if (event.effectInstance && event.effectInstance.is(GIRL_POWER_EFFECT)) {
-		event.entity.removeAttribute("kubejs:dash_jump_count", "kubejs:girl_power_effect")
+		event.entity.removeAttribute("bubble_cobble:dash_jump_count", "bubble_cobble:girl_power_effect")
 	}
 })
 
 NativeEvents.onEvent($MobEffectEvent$Remove, event => {
 	if (event.effectInstance && event.effectInstance.is(GIRL_POWER_EFFECT)) {
-		event.entity.removeAttribute("kubejs:dash_jump_count", "kubejs:girl_power_effect")
+		event.entity.removeAttribute("bubble_cobble:dash_jump_count", "bubble_cobble:girl_power_effect")
 	}
 })
 
@@ -34,7 +34,7 @@ ItemEvents.entityInteracted("minecraft:potion", event => {
 	const player = /** @type {$Player} */ (event.entity)
 
 	const current_contents = /** @type {$PotionContents} */ (item.getComponents().get("minecraft:potion_contents"))
-	if (!current_contents.is("kubejs:girl_power")) {
+	if (!current_contents.is("bubble_cobble:girl_power")) {
 		return
 	}
 

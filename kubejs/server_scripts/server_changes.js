@@ -231,7 +231,7 @@ ServerEvents.loaded(event => {
 	// Funny.
 	$FluidInteractionRegistry.addInteraction(Fluid.getType("create_bic_bit:mayonnaise").getFluidType(), new $InteractionInformation(
 		Fluid.getType("create:chocolate").getFluidType(),
-		Block.getBlock("kubejs:chiseled_mud_bricks").defaultBlockState()
+		Block.getBlock("bubble_cobble:chiseled_mud_bricks").defaultBlockState()
 	))
 
 

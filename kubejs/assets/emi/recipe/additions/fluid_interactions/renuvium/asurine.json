@@ -3,11 +3,11 @@
 	"left": {
 		"type": "fluid",
 		"amount": 1000,
-		"id": "kubejs:renuvium",
+		"id": "bubble_cobble:renuvium",
 		"remainder": {
 			"type": "fluid",
 			"amount": 1000,
-			"id": "kubejs:renuvium"
+			"id": "bubble_cobble:renuvium"
 		}
 	},
 	"right": {

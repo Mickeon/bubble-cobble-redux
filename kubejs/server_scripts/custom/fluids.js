@@ -1,6 +1,6 @@
 
 ServerEvents.recipes(event => {
-	event.recipes.create.mixing(Fluid.of("kubejs:renuvium"), [
+	event.recipes.create.mixing(Fluid.of("bubble_cobble:renuvium"), [
 		Fluid.ingredientOf("minecraft:water").withAmount(1000),
 		Ingredient.of("#create:stone_types/crimsite"), // Red.
 		Ingredient.of("arts_and_crafts:gypsum"), // Orange.
@@ -16,8 +16,8 @@ ServerEvents.recipes(event => {
 })
 
 ServerEvents.tags("block", event => {
-	event.add("minecraft:replaceable", "kubejs:renuvium")
-	event.add("minecraft:combination_step_sound_blocks", "kubejs:renuvium")
+	event.add("minecraft:replaceable", "bubble_cobble:renuvium")
+	event.add("minecraft:combination_step_sound_blocks", "bubble_cobble:renuvium")
 })
 
 ServerEvents.loaded(event => {
@@ -25,8 +25,8 @@ ServerEvents.loaded(event => {
 	let $InteractionInformation = Java.loadClass("net.neoforged.neoforge.fluids.FluidInteractionRegistry$InteractionInformation")
 	let $FluidState = Java.loadClass("net.minecraft.world.level.material.FluidState")
 
-	const clone_catalyst_fluid = Fluid.exists("kubejs:renuvium")
-		? Fluid.getType("kubejs:renuvium").getFluidType()
+	const clone_catalyst_fluid = Fluid.exists("bubble_cobble:renuvium")
+		? Fluid.getType("bubble_cobble:renuvium").getFluidType()
 		: Fluid.getType("create:chocolate").getFluidType()
 
 	const interactions = $FluidInteractionRegistry.getInteractions()

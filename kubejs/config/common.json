@@ -12,7 +12,7 @@
   "remove_slot_limit": false,
   "default_max_stack_size": 0,
   "creative_mode_tab_icon": {
-    "id": "kubejs:blue_mascot_cat"
+    "id": "bubble_cobble:blue_mascot_cat"
   },
   "creative_mode_tab_name": {"text": "Bubble Cobble", "color": "#83BED9"}
 }

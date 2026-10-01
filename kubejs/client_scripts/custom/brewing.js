@@ -6,17 +6,17 @@
 // let $MobEffectEvent$Remove  = Java.loadClass("net.neoforged.neoforge.event.entity.living.MobEffectEvent$Remove")
 // let $MobEffectEvent$Added  = Java.loadClass("net.neoforged.neoforge.event.entity.living.MobEffectEvent$Added")
 
-const WINES = ["kubejs:sweet_berry_wine", "kubejs:honey_liqueur", "kubejs:spumante", "kubejs:sparkling_rose", "kubejs:berry_juice_soda", "kubejs:firebomb_whiskey"]
+const WINES = ["bubble_cobble:sweet_berry_wine", "bubble_cobble:honey_liqueur", "bubble_cobble:spumante", "bubble_cobble:sparkling_rose", "bubble_cobble:berry_juice_soda", "bubble_cobble:firebomb_whiskey"]
 
 ItemEvents.modifyTooltips(event => {
-	event.add("kubejs:sweet_berry_wine", Text.gray("Huh? Are these grapes?"))
-	event.add("kubejs:honey_liqueur", Text.gray("Unusually bitter?"))
-	event.add("kubejs:spumante", Text.gray("Bubbly with a pinch of cobbly."))
-	event.add("kubejs:sparkling_rose", Text.gray("See the light with this."))
+	event.add("bubble_cobble:sweet_berry_wine", Text.gray("Huh? Are these grapes?"))
+	event.add("bubble_cobble:honey_liqueur", Text.gray("Unusually bitter?"))
+	event.add("bubble_cobble:spumante", Text.gray("Bubbly with a pinch of cobbly."))
+	event.add("bubble_cobble:sparkling_rose", Text.gray("See the light with this."))
 })
 
 ClientEvents.lang("en_us", event => {
-	event.add("item.kubejs.sparkling_rose", "Sparkling Rosé")
+	event.add("item.bubble_cobble.sparkling_rose", "Sparkling Rosé")
 })
 
 // Generate icons to be displayed inside the Keg in the Pouring and Fermenting recipes.

@@ -1,6 +1,0 @@
-{
-	"parent": "kubejs:item/wine_bottle",
-	"textures": {
-		"layer0": "kubejs:item/sweet_berry_wine"
-	}
-}

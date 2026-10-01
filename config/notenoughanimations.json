@@ -45,7 +45,7 @@
     "create:brass_hand",
     "explorerscompass:explorerscompass",
     "herbalbrews:hibiscus",
-    "kubejs:blue_mascot_cat",
+    "bubble_cobble:blue_mascot_cat",
     "minecraft:allium",
     "minecraft:azure_bluet",
     "minecraft:blue_orchid",
@@ -80,7 +80,7 @@
     "ribbits:swamp_daisy",
     "supplementaries:altimeter",
     "via_romana:charting_map",
-    "kubejs:firebomb_whiskey"
+    "bubble_cobble:firebomb_whiskey"
   ],
   "enableAnimationSmoothing": true,
   "enableInWorldMapRendering": true,

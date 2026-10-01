@@ -12,11 +12,11 @@ StartupEvents.registry("item", event => {
 		return {attribute: attribute, slot: slot, modifier: {amount: amount, id: id, operation: operation}}
 	}
 
-	event.create("ruler")
+	event.create("bubble_cobble:ruler")
 			.unstackable()
 			.tooltip(Text.of(`Right-click on a block to begin measuring`).gray())
 			.component("minecraft:attribute_modifiers", new $ItemAttributeModifiers([
-				modifier("minecraft:player.block_interaction_range", 2, "add_value", "kubejs:ruler", "hand"),
+				modifier("minecraft:player.block_interaction_range", 2, "add_value", "bubble_cobble:ruler", "hand"),
 			], true))
 			.burnTime(50)
 			.parentModel("minecraft:item/handheld")
@@ -24,5 +24,5 @@ StartupEvents.registry("item", event => {
 })
 
 StartupEvents.modifyCreativeTab("minecraft:tools_and_utilities", event => {
-	event.add("kubejs:ruler")
+	event.add("bubble_cobble:ruler")
 })

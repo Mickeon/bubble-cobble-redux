@@ -9,5 +9,5 @@
     "color_end": "#00808080"
   },
 
-  "applies": [{"id": "kubejs:renuvium_bucket"}]
+  "applies": [{"id": "bubble_cobble:renuvium_bucket"}]
 }

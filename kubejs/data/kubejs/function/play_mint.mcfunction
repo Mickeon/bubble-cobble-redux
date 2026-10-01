@@ -1,1 +1,0 @@
-playsound kubejs:advancement.mint_chewed master @s

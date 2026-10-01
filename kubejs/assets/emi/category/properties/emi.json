@@ -79,7 +79,7 @@
 	"remi:fluid_tags": {
 		"order": 1002,
 		"icon": {
-			"texture": "kubejs:textures/block/chiseled_mud_bricks.png"
+			"texture": "bubble_cobble:textures/block/chiseled_mud_bricks.png"
 		}
 	},
 	"remi:entity_type_tags": {

@@ -44,7 +44,7 @@
 		"display_type": "DIFFERENCE",
 		"priority": 2
 	},
-	"kubejs:dash_jump_count": {
+	"bubble_cobble:dash_jump_count": {
 		"display_type": "DIFFERENCE"
 	},
 	"minecraft:player.submerged_mining_speed": {

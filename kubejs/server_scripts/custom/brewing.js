@@ -10,44 +10,44 @@ const Temperature = {
 }
 
 ServerEvents.recipes(event => {
-	fermenting(event, Fluid.of("kubejs:sweet_berry_wine", 1000), Temperature.CHILLY, [
+	fermenting(event, Fluid.of("bubble_cobble:sweet_berry_wine", 1000), Temperature.CHILLY, [
 			Ingredient.of("minecraft:sweet_berries"),
 			Ingredient.of("minecraft:sweet_berries"),
 			Ingredient.of("minecraft:sweet_berries"),
-		], Item.of("kubejs:sweet_berry_wine"), Fluid.sizedIngredientOf("#c:water", 250)
+		], Item.of("bubble_cobble:sweet_berry_wine"), Fluid.sizedIngredientOf("#c:water", 250)
 	)
-	fermenting(event, Fluid.of("kubejs:honey_liqueur", 1000), Temperature.WARM, [
+	fermenting(event, Fluid.of("bubble_cobble:honey_liqueur", 1000), Temperature.WARM, [
 			Ingredient.of("minecraft:sugar"),
 			Ingredient.of("minecraft:apple"),
 			Ingredient.of("minecraft:apple"),
-		], Item.of("kubejs:honey_liqueur"), Fluid.sizedIngredientOf("#c:honey", 250)
+		], Item.of("bubble_cobble:honey_liqueur"), Fluid.sizedIngredientOf("#c:honey", 250)
 	)
-	fermenting(event, Fluid.of("kubejs:spumante", 1000), Temperature.CHILLY, [
+	fermenting(event, Fluid.of("bubble_cobble:spumante", 1000), Temperature.CHILLY, [
 			Ingredient.of("minecraft:sweet_berries"),
 			Ingredient.of("minecraft:white_dye"),
 			Ingredient.of("minecraft:sugar"),
-		], Item.of("kubejs:spumante"), Fluid.sizedIngredientOf("#c:honey", 250)
+		], Item.of("bubble_cobble:spumante"), Fluid.sizedIngredientOf("#c:honey", 250)
 	)
-	fermenting(event, Fluid.of("kubejs:sparkling_rose", 1000), Temperature.CHILLY, [
+	fermenting(event, Fluid.of("bubble_cobble:sparkling_rose", 1000), Temperature.CHILLY, [
 			Ingredient.of("minecraft:glow_berries"),
 			Ingredient.of("minecraft:glow_berries"),
 			Ingredient.of("minecraft:sweet_berries"),
 			Ingredient.of("minecraft:glow_ink_sac"),
-		], Item.of("kubejs:sparkling_rose"), Fluid.sizedIngredientOf("#c:honey", 250)
+		], Item.of("bubble_cobble:sparkling_rose"), Fluid.sizedIngredientOf("#c:honey", 250)
 	)
-	fermenting(event, Fluid.of("kubejs:berry_juice_soda", 1000), Temperature.COLD, [
+	fermenting(event, Fluid.of("bubble_cobble:berry_juice_soda", 1000), Temperature.COLD, [
 			Ingredient.of("#cobblemon:berries"),
 			Ingredient.of("#cobblemon:berries"),
 			Ingredient.of("minecraft:sugar"),
 			Ingredient.of("minecraft:sugar"),
-		], Item.of("kubejs:berry_juice_soda"), Fluid.sizedIngredientOf("#c:honey", 250)
+		], Item.of("bubble_cobble:berry_juice_soda"), Fluid.sizedIngredientOf("#c:honey", 250)
 	)
-	fermenting(event, Fluid.of("kubejs:firebomb_whiskey", 1000), Temperature.HOT, [
+	fermenting(event, Fluid.of("bubble_cobble:firebomb_whiskey", 1000), Temperature.HOT, [
 			Ingredient.of("minecraft:gunpowder"),
 			Ingredient.of("mynethersdelight:bullet_pepper"),
 			Ingredient.of("minecraft:nether_wart"),
 			Ingredient.of("minecraft:glistering_melon_slice"),
-		], Item.of("kubejs:firebomb_whiskey"), Fluid.sizedIngredientOf("#c:honey", 250)
+		], Item.of("bubble_cobble:firebomb_whiskey"), Fluid.sizedIngredientOf("#c:honey", 250)
 	)
 })
 
@@ -88,12 +88,12 @@ function fermenting(event, fluid_result, temperature, ingredients, item_result, 
 }
 
 ServerEvents.tags("item", event => {
-	event.add("kubejs:wines",
-		"kubejs:sweet_berry_wine",
-		"kubejs:honey_liqueur",
-		"kubejs:spumante",
-		"kubejs:sparkling_rose",
-		"kubejs:berry_juice_soda",
-		"kubejs:firebomb_whiskey"
+	event.add("bubble_cobble:wines",
+		"bubble_cobble:sweet_berry_wine",
+		"bubble_cobble:honey_liqueur",
+		"bubble_cobble:spumante",
+		"bubble_cobble:sparkling_rose",
+		"bubble_cobble:berry_juice_soda",
+		"bubble_cobble:firebomb_whiskey"
 	)
 })

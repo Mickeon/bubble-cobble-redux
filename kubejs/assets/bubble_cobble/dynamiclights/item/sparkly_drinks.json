@@ -1,8 +1,8 @@
 {
 	"match": {
 		"items": [
-			"kubejs:sparkling_rose",
-			"kubejs:firebomb_whiskey"
+			"bubble_cobble:sparkling_rose",
+			"bubble_cobble:firebomb_whiskey"
 		]
 	},
 	"luminance": 15

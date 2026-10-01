@@ -2,10 +2,10 @@
 StartupEvents.registry("fluid", event => {
 	// const possible_tints = ["white", "gray", "cyan", "red", "green", "light_purple"]
 
-	const renuvium = event.create("renuvium", "kubejs:thick")
+	const renuvium = event.create("bubble_cobble:renuvium", "kubejs:thick")
 	renuvium
-		.stillTexture("kubejs:block/renuvium_still")
-		.flowingTexture("kubejs:block/renuvium_flow")
+		.stillTexture("bubble_cobble:block/renuvium_still")
+		.flowingTexture("bubble_cobble:block/renuvium_flow")
 		.levelDecreasePerBlock(3)
 		.tickRate(50)
 		.explosionResistance(15)
@@ -46,7 +46,7 @@ StartupEvents.registry("fluid", event => {
 
 
 BlockEvents.modification(event => {
-	event.modify(["kubejs:renuvium"], /** @param {$BlockModifications} modified */ modified => {
+	event.modify(["bubble_cobble:renuvium"], /** @param {$BlockModifications} modified */ modified => {
 		modified.setLightEmission(3)
 		modified.setSpeedFactor(0.8)
 		modified.setFriction(0.01)

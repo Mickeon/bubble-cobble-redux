@@ -9,7 +9,7 @@ EntityEvents.drops("minecraft:player", event => {
 			add_drop(player, Item.of("create:cardboard"), 0.25)
 			add_drop(player, Item.of("create:cardboard_block"), 0.2)
 			add_drop(player, Item.of("create:bound_cardboard_block").withCustomName("Bound Cardboard Block 😳"), 0.2)
-			add_drop(player, Item.of("kubejs:music_disc_void"), 0.1)
+			add_drop(player, Item.of("bubble_cobble:music_disc_void"), 0.1)
 		} break;
 		case "BootlegKaka": {
 			add_drop(player, Item.of("minecraft:black_dye"), 0.75)
@@ -45,17 +45,17 @@ EntityEvents.drops("minecraft:player", event => {
 		case "CandleClockwork": {
 			add_drop(player, Item.of("minecraft:orange_stained_glass"), 0.5)
 			add_drop(player, Item.of("minecraft:orange_stained_glass_pane"), 0.5)
-			add_drop(player, Item.of("kubejs:chiseled_mud_bricks"), 0.25)
+			add_drop(player, Item.of("bubble_cobble:chiseled_mud_bricks"), 0.25)
 			add_drop(player, Item.of("minecraft:orange_candle").withCustomName("Fair enough."), 0.25)
 			add_drop(player, Item.of("supplementaries:candle_holder_orange"), 0.1)
 		} break;
 		case "CantieLabs": {
-			add_drop(player, Item.of("kubejs:chiseled_mud_bricks"), 0.75)
+			add_drop(player, Item.of("bubble_cobble:chiseled_mud_bricks"), 0.75)
 			add_drop(player, Item.of("cobblemon:dragon_scale"), 0.25)
 			add_drop(player, Item.of("create:cogwheel"), 0.5)
 			add_drop(player, Item.of("minecraft:blue_dye"), 0.25)
-			add_drop(player, Item.of("kubejs:bearded_dragon_bowl").withCustomName("Banana"), 0.05)
-			add_drop(player, Item.of("kubejs:bearded_dragon_bowl").withCustomName("Baby Dandy"), 0.05)
+			add_drop(player, Item.of("bubble_cobble:bearded_dragon_bowl").withCustomName("Banana"), 0.05)
+			add_drop(player, Item.of("bubble_cobble:bearded_dragon_bowl").withCustomName("Baby Dandy"), 0.05)
 		} break;
 		case "Chailotl": {
 			add_drop(player, Item.of("minecraft:string"), 0.75)
@@ -130,7 +130,7 @@ EntityEvents.drops("minecraft:player", event => {
 			add_drop(player, Item.of("minecraft:white_wool"), 0.75)
 			add_drop(player, Item.of("biomeswevegone:cattail_sprout"), 0.5)
 			add_drop(player, Item.of("biomesoplenty:cattail"), 0.25)
-			add_drop(player, Item.of("kubejs:music_disc_grapes"), 0.1)
+			add_drop(player, Item.of("bubble_cobble:music_disc_grapes"), 0.1)
 			player.level.spawnParticles("minecraft:dust_color_transition{from_color:[1.0, 1.0, 1.0], to_color:[1.0, 0.9, 0.5], scale: 4.0}", false,
 				player.x, player.y, player.z,
 				0.75, 0.5, 0.75, 50, 0.25
@@ -174,7 +174,7 @@ EntityEvents.drops("minecraft:player", event => {
 			add_drop(player, Item.of("farmersdelight:tomato"), 0.5)
 			add_drop(player, Item.of("farmersdelight:onion"), 0.5)
 			add_drop(player, Item.of("minersdelight:rabbit_stew_cup"), 0.1)
-			add_drop(player, Item.of("splash_potion", {"minecraft:potion_contents": {potion: "kubejs:recall"}}).withLore(Text.red("Get out, get out!")), 0.1)
+			add_drop(player, Item.of("splash_potion", {"minecraft:potion_contents": {potion: "bubble_cobble:begone"}}).withLore(Text.red("Get out, get out!")), 0.1)
 			const killer_player = event.source.player
 			if (killer_player) {
 				add_drop(player, Item.of("minecraft:paper").withCustomName("Ow.").withLore("What better way to send Sue home, than to kill them?"), 1.0)
@@ -208,14 +208,14 @@ EntityEvents.drops("minecraft:player", event => {
 			add_drop(player, get_funny_salmon(), 0.5)
 		} break;
 		case "Mickeon": {
-			add_drop(player, Item.of("kubejs:blue_mascot_cat"), 0.75)
+			add_drop(player, Item.of("bubble_cobble:blue_mascot_cat"), 0.75)
 			add_drop(player, Item.of("cobblemon:ice_stone"), 0.5)
 			add_drop(player, Item.of("minecraft:blue_ice"), 0.25)
 			add_drop(player, Item.of("minecraft:ice"), 0.25)
 		} break;
 	}
 
-	add_drop(player, Item.of("kubejs:music_disc_fool"), 0.01)
+	add_drop(player, Item.of("bubble_cobble:music_disc_fool"), 0.01)
 	handle_head_drop(player)
 })
 
@@ -248,8 +248,8 @@ function handle_head_drop(player) {
 	const head = Item.playerHead(player.username)
 	if (has_bonus_dash(player)) {
 		head.addAttributeModifier(
-			"kubejs:dash_jump_count",
-			{id: "kubejs:dash_head_bonus", amount: 1, operation: "add_value"},
+			"bubble_cobble:dash_jump_count",
+			{id: "bubble_cobble:dash_head_bonus", amount: 1, operation: "add_value"},
 			"any"
 		)
 	}
