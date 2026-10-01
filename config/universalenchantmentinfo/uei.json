@@ -1,0 +1,33 @@
+{
+  "scrollSpeed": 2.0,
+  "textScrollSpeedMultiplier": 1.0,
+  "maxApplicableSlots": 8,
+  "lookupEnchantmentsByItem": true,
+  "useTextForBooleans": false,
+  "showRarity": true,
+  "showMaxLevel": true,
+  "showTreasure": true,
+  "showTradeable": true,
+  "showCurse": false,
+  "showDiscoverable": true,
+  "showEnchantingTable": true,
+  "rarityColorCommon": 16777215,
+  "rarityColorUncommon": 16777045,
+  "rarityColorRare": 5592575,
+  "rarityColorVeryRare": 16755200,
+  "sectionOrder": [
+    "INFO_LINES",
+    "APPLIES_TO",
+    "EXCLUSIVES",
+    "DESCRIPTION"
+  ],
+  "infoOrder": [
+    "RARITY",
+    "MAX_LEVEL",
+    "CURSE",
+    "TREASURE",
+    "DISCOVERABLE",
+    "ENCHANTING_TABLE",
+    "TRADEABLE"
+  ]
+}

@@ -63,7 +63,7 @@
 	"emiffect:status_effect_info": {
 		"order": 960
 	},
-	"emi_enchanting:enchantments": {
+	"uei:ench_info": {
 		"order": 970
 	},
 

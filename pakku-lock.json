@@ -3762,46 +3762,6 @@
             ]
         },
         {
-            "pakku_id": "yLefFdnWvQn74AJX",
-            "type": "MOD",
-            "side": "CLIENT",
-            "slug": {
-                "modrinth": "emi-enchanting"
-            },
-            "name": {
-                "modrinth": "EMI Enchanting"
-            },
-            "id": {
-                "modrinth": "wbWoo11W"
-            },
-            "files": [
-                {
-                    "type": "modrinth",
-                    "file_name": "emi_enchanting-0.1.2+1.21+neoforge.jar",
-                    "mc_versions": [
-                        "1.21",
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/wbWoo11W/versions/ZyJ6TKvh/emi_enchanting-0.1.2+1.21+neoforge.jar",
-                    "id": "ZyJ6TKvh",
-                    "parent_id": "wbWoo11W",
-                    "hashes": {
-                        "sha512": "90944c8ff897fa98d0323fe94e4053fb89f43cbaf4fd28d6ad58134cea1469c9398e0c0edd4328a5530e1578ad2286ec5822292bf9c587182e5606dbfff218be",
-                        "sha1": "02ad74769ffcec259fd9bb14a1760593f6182b5c"
-                    },
-                    "required_dependencies": [
-                        "fRiHVvU7"
-                    ],
-                    "size": 15680,
-                    "date_published": "2024-09-18T02:20:17.475071Z"
-                }
-            ]
-        },
-        {
             "pakku_id": "ci2HWccpYDGrLNdO",
             "pakku_links": [
                 "xBSOgFa0NS8yAPaO"
@@ -10343,6 +10303,43 @@
                     "required_dependencies": [],
                     "size": 1583972,
                     "date_published": "2026-03-03T01:37:56.459523Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "XHiGGcpCc0rCmhQa",
+            "type": "MOD",
+            "side": "CLIENT",
+            "slug": {
+                "modrinth": "uei"
+            },
+            "name": {
+                "modrinth": "Universal Enchantment Info (JEI/REI/EMI/RRV)"
+            },
+            "id": {
+                "modrinth": "c39iXKSf"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "UniversalEnchantmentInfo-1.21.1-neoforge-1.4.0.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/c39iXKSf/versions/pgeqAmM1/UniversalEnchantmentInfo-1.21.1-neoforge-1.4.0.jar",
+                    "id": "pgeqAmM1",
+                    "parent_id": "c39iXKSf",
+                    "hashes": {
+                        "sha512": "40ad6082dfc94b75e011580fcbd4e0af23ea0b8e6726e52f61c684adb6b69a4bb4482de286a123c1f2bebcb49d32b16769f45083ff6bd12fa63bbcfbd5676a45",
+                        "sha1": "e8eb3adbf4328761692ace80e430ef37e77f1940"
+                    },
+                    "required_dependencies": [],
+                    "size": 123925,
+                    "date_published": "2026-09-27T04:07:25.102920Z"
                 }
             ]
         },
