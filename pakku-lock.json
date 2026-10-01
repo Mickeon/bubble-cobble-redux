@@ -3762,6 +3762,48 @@
             ]
         },
         {
+            "pakku_id": "xi1WigBYbEWjchT4",
+            "pakku_links": [
+                "vqYPIgcIU332HHHj"
+            ],
+            "type": "MOD",
+            "side": "CLIENT",
+            "slug": {
+                "modrinth": "emi-hide-enchantment-books"
+            },
+            "name": {
+                "modrinth": "EMI - Hide Enchantment Books"
+            },
+            "id": {
+                "modrinth": "6EJdcSHo"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "emihideenchantmentfromrepairtab-1.0.0.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/6EJdcSHo/versions/BQwuuKO5/emihideenchantmentfromrepairtab-1.0.0.jar",
+                    "id": "BQwuuKO5",
+                    "parent_id": "6EJdcSHo",
+                    "hashes": {
+                        "sha512": "46d8969fb7ca9e438b52e988faf171e80eb57c3b8fe1a703c1ba4649ef21cf7fb654010f8b7948285014071142cae0c33352f8e5ec4312e12bfabf9831a1099e",
+                        "sha1": "889bc7c75c14d2f81fc27efedf6f0ca1de217ba8"
+                    },
+                    "required_dependencies": [
+                        "fRiHVvU7"
+                    ],
+                    "size": 6726,
+                    "date_published": "2026-08-18T12:54:35.627745Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "ci2HWccpYDGrLNdO",
             "pakku_links": [
                 "xBSOgFa0NS8yAPaO"
