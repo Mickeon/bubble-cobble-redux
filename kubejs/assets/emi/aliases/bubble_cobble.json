@@ -378,6 +378,15 @@
 			"text": [
 				"Sleeping Bag"
 			]
+		},
+		{
+			"stacks":[
+				"#item:cobblemon:poke_balls"
+			],
+			"text": [
+				"Poke ball",
+				"Pokeball"
+			]
 		}
 	]
 }

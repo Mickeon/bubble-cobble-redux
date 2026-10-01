@@ -7,7 +7,13 @@
             "fileMatch": [
                 "/recipe_schema/*.json"
             ],
-            "url": "./.vscode/recipe.json"
+            "url": "./.vscode/schemas/recipe.json"
+        },
+        {
+            "fileMatch": [
+                "/recipe_components/*.json"
+            ],
+            "url": "./.vscode/schemas/recipe_components.json"
         },
         {
             "fileMatch": [

@@ -67,8 +67,8 @@ StartupEvents.registry("item", event => {
 				if (!level.isClientSide()) {
 					const mickeon = find_mickeon(level.server)
 					if (mickeon) {
-						level.runCommandSilent(`execute at ${mickeon.uuid} run playsound minecraft:entity.enderman.teleport player @a`)
-						level.runCommandSilent(`execute at ${entity.uuid} run playsound minecraft:entity.enderman.teleport player @a`)
+						play_sound_globally(level, mickeon.position(), "minecraft:entity.enderman.teleport", "players")
+						play_sound_globally(level, entity.position(), "minecraft:entity.enderman.teleport", "players")
 						mickeon.potionEffects.add("minecraft:slow_falling", 3 * SEC, 3, true, false)
 						mickeon.teleportTo(level.dimension, entity.x, entity.y, entity.z, mickeon.yaw, mickeon.pitch)
 					}
@@ -85,7 +85,14 @@ StartupEvents.registry("item", event => {
 			.tag("create:upright_on_belt")
 
 	event.create("banana_mayo_sandwich")
-			.displayName("Banana and Mayo Sandwich")
+			.name(stack => {
+				if (Platform.isClientEnvironment()
+				&& Client.player
+				&& is_eligible_for_easter_egg(Client.player, "SueTheMimiga")) {
+					return Text.of(`Banana Mayo Delicacy 😳`)
+				}
+				return "Banana and Mayo Sandwich"
+			})
 			.food(f => f
 					.nutrition(8)
 					.saturation(0.25)

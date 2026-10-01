@@ -54,6 +54,8 @@ EntityEvents.drops("minecraft:player", event => {
 			add_drop(player, Item.of("cobblemon:dragon_scale"), 0.25)
 			add_drop(player, Item.of("create:cogwheel"), 0.5)
 			add_drop(player, Item.of("minecraft:blue_dye"), 0.25)
+			add_drop(player, Item.of("kubejs:bearded_dragon_bowl").withCustomName("Banana"), 0.05)
+			add_drop(player, Item.of("kubejs:bearded_dragon_bowl").withCustomName("Baby Dandy"), 0.05)
 		} break;
 		case "Chailotl": {
 			add_drop(player, Item.of("minecraft:string"), 0.75)
@@ -188,10 +190,12 @@ EntityEvents.drops("minecraft:player", event => {
 			add_drop(player, Item.of("minecraft:slime_block"), 0.05)
 		} break;
 		case "UnkemptMoss": {
+			const boar_head_id = "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3Rle"
+				+ "HR1cmUvMTViNzcwMzMxNzUzMjY4ZGYwYWY0YmMzOTk5ZDVlOTE5YjY1YTJmNTRjODUzMjdkMjNiYTZlODA3YzU2ZWIifX19"
 			add_drop(player, Item.of("minecraft:bread"), 0.75)
 			add_drop(player, Item.of("minecraft:moss_block").withCustomName("Kept Moss"), 0.5)
 			add_drop(player, Item.of("mynethersdelight:boiled_egg"), 0.5)
-			// TODO: Add boar head.
+			add_drop(player, Item.playerHeadFromBase64(boar_head_id), 0.25)
 		} break;
 		case "WaiGee": {
 			add_drop(player, Item.of("create:cut_calcite_bricks"), 0.75)

@@ -14,9 +14,6 @@ KeyBindEvents.tick("bubble_cobble.dash", event => {
 ItemEvents.modifyTooltips(event => {
 	event.add(["cobblemon:ice_stone"], Text.of(`Emanates a blue mascot cat scent...`).color(MASCOT_COLOR))
 	event.add(["farmersdelight:skillet"], [subtle("Right-click in inventory to equip")])
-	event.modify("kubejs:banana_mayo_sandwich", text => {
-		text.dynamic("sue_banana_mayo_sandwich")
-	})
 	event.modify([
 		"create:chocolate_bucket",
 		"create:honey_bucket",
@@ -30,12 +27,6 @@ ItemEvents.modifyTooltips(event => {
 	], text => {
 		text.dynamic("add_pelad")
 	})
-})
-
-ItemEvents.dynamicTooltips("sue_banana_mayo_sandwich", event => {
-	if (is_eligible_for_easter_egg(Client.player, "SueTheMimiga")) {
-		event.lines[0] = Text.of(`Banana Mayo Delicacy 😳`) // Funny :)
-	}
 })
 
 const GOURMANDS = ["AceNil_", "SniperZee", "CantieLabs", "SueTheMimiga", "ButteryInkling"]

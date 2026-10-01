@@ -113,7 +113,13 @@ ItemEvents.modifyTooltips(event => {
 	event.add(["supplementaries:flower_box"], [subtle("Can only contain ").append(Text.gold("tall flowers"))])
 	event.add(["supplementaries:pulley_block"], [subtle("").append(Text.gold("Ropes")).append(" and ").append(Text.gold("chains")).append(" in here!")])
 
-	event.modify(["supplementaries:lunch_basket", "supplementaries:cannonball"], text => {
+	event.modify([
+		"supplementaries:lunch_basket",
+		"supplementaries:cannonball",
+		"minecraft:stick",
+		"minecraft:blaze_rod",
+		"minecraft:breeze_rod",
+	], text => {
 		text.insert(1, PLACEABLE_TOOLTIP)
 	})
 })

@@ -1,0 +1,604 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "properties": {
+    "parent": {
+      "type": "string"
+    },
+    "override_type": {
+      "type": "string"
+    },
+    "recipe_factory": {
+      "type": "string"
+    },
+    "keys": {
+      "items": {
+        "properties": {
+          "kubejstweaks:version_range": {
+            "type": "string"
+          },
+          "role": {
+            "type": "string",
+            "enum": [
+              "input",
+              "output",
+              "other"
+            ]
+          },
+          "name": {
+            "type": "string"
+          },
+          "optional": {},
+          "type": {
+            "$ref": "#/definitions/components"
+          },
+          "alternative_names": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "excluded": {
+            "type": "boolean"
+          },
+          "function_names": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "allow_empty": {
+            "type": "boolean"
+          },
+          "always_write": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "name",
+          "type"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "constructors": {
+      "items": {
+        "properties": {
+          "keys": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "overrides": {
+            "type": "object",
+            "properties": {}
+          }
+        },
+        "requires": [],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "functions": {
+      "$ref": "#/definitions/functions"
+    },
+    "override_keys": {
+      "type": "object"
+    },
+    "hidden": {
+      "type": "boolean"
+    },
+    "mappings": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "unique": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "post_processors": {
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type":"string"
+          }
+        },
+        "required": ["type"]
+      },
+      "type": "array"
+    },
+    "merge": {
+      "type": "object",
+      "properties": {
+        "keys": {
+          "type": "boolean"
+        },
+        "constructors": {
+          "type": "boolean"
+        },
+        "unique": {
+          "type": "boolean"
+        },
+        "post_processors": {
+          "type": "boolean"
+        }
+      }
+    }
+  },
+  "requires": [],
+  "type": "object",
+  "definitions": {
+    "components": {
+      "oneOf": [
+        {
+          "type": "string",
+          "enum": [
+            "block",
+            "optional_block",
+            "block_state",
+            "block_state_string",
+            "optional_block_state",
+            "optional_block_state_string",
+            "crafting_book_category",
+            "cooking_book_category",
+            "boolean",
+            "character",
+            "fluid_ingredient",
+            "optional_fluid_ingredient",
+            "fluid_stack",
+            "optional_fluid_stack",
+            "ignore",
+            "ingredient",
+            "optional_ingredient",
+            "item_stack",
+            "optional_item_stack",
+            "nested_recipe",
+            "non_negative_int",
+            "non_negative_float",
+            "non_negative_double",
+            "non_negative_long",
+            "positive_double",
+            "positive_int",
+            "positive_long",
+            "positive_float",
+            "dimension_resource_key",
+            "loot_table_resource_key",
+            "flat_sized_fluid_ingredient",
+            "nested_sized_fluid_ingredient",
+            "optional_flat_sized_fluid_ingredient",
+            "optional_nested_sized_fluid_ingredient",
+            "sized_ingredient",
+            "optional_sized_ingredient",
+            "flat_sized_ingredient",
+            "optional_flat_sized_ingredient",
+            "string",
+            "optional_string",
+            "id",
+            "block_tag",
+            "biome_tag",
+            "item_tag",
+            "fluid_tag",
+            "entity_type_tag",
+            "hashed_block_tag",
+            "hashed_fluid_tag",
+            "hashed_item_tag",
+            "hashed_entity_type_tag",
+            "hashed_biome_tag",
+            "ticks",
+            "minutes",
+            "seconds",
+            "hours",
+            "int",
+            "long",
+            "float",
+            "double"
+          ]
+        },
+        {
+          "allOf": [
+            {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "custom_object",
+                    "either",
+                    "enum",
+                    "filtered_item_stack",
+                    "list",
+                    "map",
+                    "pattern",
+                    "int",
+                    "long",
+                    "double",
+                    "float",
+                    "registry_element",
+                    "resource_key",
+                    "tag",
+                    "kubejstweaks:codec"
+                  ]
+                }
+              },
+              "required": [
+                "type"
+              ]
+            },
+            {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "enum": [
+                        "int",
+                        "double",
+                        "float",
+                        "long"
+                      ]
+                    },
+                    "min": {
+                      "type": "number"
+                    },
+                    "max": {
+                      "type": "number"
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "enum": [
+                        "list"
+                      ]
+                    },
+                    "component": {
+                      "$ref": "#/definitions/components"
+                    },
+                    "can_write_self": {
+                      "type": "boolean"
+                    },
+                    "conditional": {
+                      "type": "boolean"
+                    },
+                    "min": {
+                      "type": "number"
+                    },
+                    "max": {
+                      "type": "number"
+                    },
+                    "spread": {
+                      "$ref": "#/definitions/components"
+                    }
+                  },
+                  "required": [
+                    "component"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "enum": [
+                        "registry_element",
+                        "resource_key"
+                      ]
+                    },
+                    "registry": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "registry"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "enum": [
+                        "custom_object"
+                      ]
+                    },
+                    "keys": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": "string"
+                          },
+                          "component": {
+                            "$ref": "#/definitions/components"
+                          },
+                          "optional": {
+                            "type": "boolean"
+                          },
+                          "always_write": {
+                            "type": "boolean"
+                          }
+                        },
+                        "required": [
+                          "name",
+                          "component"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "keys"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "enum": [
+                        "enum"
+                      ]
+                    },
+                    "enum": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "enum"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "enum": [
+                        "either"
+                      ]
+                    },
+                    "left": {
+                      "$ref": "#/definitions/components"
+                    },
+                    "right": {
+                      "$ref": "#/definitions/components"
+                    }
+                  },
+                  "required": [
+                    "left",
+                    "right"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "enum": [
+                        "filtered_item_stack"
+                      ]
+                    },
+                    "allow_empty": {
+                      "type": "boolean"
+                    },
+                    "filter": {}
+                  }
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "enum": [
+                        "map"
+                      ]
+                    },
+                    "key": {
+                      "type": "string"
+                    },
+                    "component": {
+                      "$ref": "#/definitions/components"
+                    },
+                    "min": {
+                      "type": "number"
+                    },
+                    "max": {
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "key",
+                    "component"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "enum": [
+                        "pattern"
+                      ]
+                    },
+                    "component": {
+                      "$ref": "#/definitions/components"
+                    },
+                    "min": {
+                      "type": "number"
+                    },
+                    "max": {
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "component"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "enum": [
+                        "tag"
+                      ]
+                    },
+                    "registry": {
+                      "type": "string"
+                    },
+                    "hashed": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "registry"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "enum": [
+                        "kubejstweaks:codec"
+                      ]
+                    },
+                    "class": {
+                      "type": "string"
+                    },
+                    "generic": {
+                      "type": "string"
+                    },
+                    "field": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "class"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "string",
+          "pattern": "^[a-z0-9_.-]+:[a-z0-9_/.-]+$"
+        }
+      ]
+    },
+    "functions": {
+      "patternProperties": {
+        "^.*$": {
+          "allOf": [
+            {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "set",
+                    "add_to_list",
+                    "bundle",
+                    "custom"
+                  ]
+                }
+              },
+              "required": [
+                "type"
+              ]
+            },
+            {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "enum": [
+                        "set"
+                      ]
+                    },
+                    "key": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "key"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "enum": [
+                        "add_to_list"
+                      ]
+                    },
+                    "key": {
+                      "type": "string"
+                    },
+                    "value": {}
+                  },
+                  "required": [
+                    "key",
+                    "value"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "enum": [
+                        "bundle"
+                      ]
+                    },
+                    "functions": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/definitions/functions"
+                      }
+                    }
+                  },
+                  "required": [
+                    "functions"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "enum": [
+                        "custom"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "requires": [],
+      "type": "object"
+    }
+  }
+}

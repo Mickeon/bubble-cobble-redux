@@ -46,6 +46,8 @@
 		# Default: 0.025
 		# Range: -1.7976931348623157E308 ~ 1.7976931348623157E308
 		step_size = 0.025
+		#Whether to ignore block pillars, such as tree trunks, when calculating camera offsets. This improves overall immersion at the cost of block targeting accessibility.
+		ignore_block_pillars = true
 
 		[camera.offset.presets]
 			#A list of x-offset presets that can be toggled via the 'Toggle X-Offset Presets' keybind. WARNING: Duplicate entries can result in undefined behavior!
@@ -278,13 +280,13 @@
 	#Whether to remember the last perspective used.
 	remember_last_perspective = false
 	#Whether to replace the default third person perspective.
-	replace_default_perspective = false
+	replace_default_perspective = true
 	#Whether the first person perspective is enabled.
 	first_person_enabled = true
 	#Whether the third person front perspective is enabled.
-	third_person_front_enabled = false
+	third_person_front_enabled = true
 	#Whether the third person back perspective is enabled.
-	third_person_back_enabled = true
+	third_person_back_enabled = false
 
 	[perspective.temporary_first_person_in_constrained_spaces]
 		#Whether to switch to first person temporarily when space constrained.
@@ -369,6 +371,8 @@
 	custom_raytrace_distance = 400.0
 	#Whether to use the custom raytrace distance used for the dynamic crosshair.
 	use_custom_raytrace_distance = true
+	#The list of invisible entities to ignore while picking. This config option supports regular expressions. Example: 'minecraft:oak_.*' matches 'minecraft:oak_boat' and 'minecraft:oak_chest_boat'.
+	unpickable_invisible_entities = ["minecraft:armor_stand", "minecraft:block_display", "minecraft:item_display", "minecraft:text_display", "supplementaries:slimeball_projectile"]
 
 	[object_picker.pick_origin]
 		#The origin where the entity pick starts when using the static crosshair.
@@ -386,15 +390,15 @@
 [crosshair]
 	#Crosshair type to use for shoulder surfing.
 	#Allowed Values: ADAPTIVE, DYNAMIC, STATIC, STATIC_WITH_1PP, DYNAMIC_WITH_1PP
-	crosshair_type = "STATIC"
+	crosshair_type = "ADAPTIVE"
 	#Items that when held, trigger the dynamic crosshair in adaptive mode. This config option supports regular expressions. Example: 'minecraft:.*sword' matches 'minecraft:wooden_sword' and 'minecraft:netherite_sword'.
-	adaptive_crosshair_hold_items = ["minecraft:snowball", "minecraft:egg", "minecraft:experience_bottle", "minecraft:ender_pearl", "minecraft:splash_potion", "minecraft:fishing_rod", "minecraft:lingering_potion", "minecraft:wind_charge"]
+	adaptive_crosshair_hold_items = ["minecraft:snowball", "minecraft:egg", "minecraft:experience_bottle", "minecraft:ender_pearl", "minecraft:splash_potion", "minecraft:fishing_rod", "minecraft:lingering_potion", "minecraft:wind_charge", "minecraft:brick", "minecraft:nether_brick", "supplementaries:ash_brick", "minecraft:slime_ball", "supplementaries:bomb", "supplementaries:blue_bomb", "amendments:dragon_charge", "mowziesmobs:sculptor_staff", "relics:relic_experience_bottle", "relics:chorus_staff", "create:potato_cannon", "create:handheld_worldshaper"]
 	#Items that when used, trigger the dynamic crosshair in adaptive mode. This config option supports regular expressions. Example: 'minecraft:.*sword' matches 'minecraft:wooden_sword' and 'minecraft:netherite_sword'.
-	adaptive_crosshair_use_items = []
+	adaptive_crosshair_use_items = ["gag:escape_rope", "mowziesmobs:blowgun", "kubejs:firebomb_whiskey"]
 	#Item properties of an item, that when held, trigger the dynamic crosshair in adaptive mode.
 	adaptive_crosshair_hold_item_properties = ["minecraft:charged"]
 	#Item properties of an item, that when used, trigger the dynamic crosshair in adaptive mode.
-	adaptive_crosshair_use_item_properties = ["minecraft:pull", "minecraft:throwing"]
+	adaptive_crosshair_use_item_properties = ["minecraft:pull", "minecraft:throwing", "supplementaries:pulling"]
 
 	[crosshair.obstruction]
 		#Only show the obstruction indicator when using items that would trigger the adaptive crosshair.
