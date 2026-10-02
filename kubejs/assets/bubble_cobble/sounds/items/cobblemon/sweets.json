@@ -4,6 +4,6 @@
     "#cobblemon:sweets"
   ],
   "pitch": 2.0,
-  "soundEvent": "bubble_cobble:grab_whimsy",
+  "soundEvent": "bubble_cobble:item.grab.whimsy",
   "volume": 0.1
 }

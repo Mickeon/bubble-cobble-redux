@@ -3,6 +3,6 @@
     "#cobblemon:apples"
   ],
   "pitch": 1.0,
-  "soundEvent": "bubble_cobble:fruit_collected",
+  "soundEvent": "bubble_cobble:crash.fruit_got",
   "volume": 0.1
 }

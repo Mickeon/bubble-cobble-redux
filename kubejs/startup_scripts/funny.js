@@ -133,7 +133,7 @@ StartupEvents.registry("item", event => {
 			.useDuration(item_stack => 30)
 			.use((level, player, hand) => {
 				if (level.isDay() || player.potionEffects.isActive("minecraft:infested")) {
-					player.playNotifySound("bubble_cobble:buzz", "players", 1, 0.1)
+					player.playNotifySound("bubble_cobble:ui.buzz", "players", 1, 0.1)
 					player.addItemCooldown(player.getItemInHand(hand), 40)
 					return false
 				}

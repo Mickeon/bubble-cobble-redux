@@ -63,7 +63,7 @@ global.use_trowel_on_block = function (event) {
 	)
 	const interaction_result = chosen_item.useOn(block_place_context)
 	if (interaction_result == "fail") {
-		player.playNotifySound("bubble_cobble:buzz", "blocks", 0.5, 1.0)
+		player.playNotifySound("bubble_cobble:ui.buzz", "blocks", 0.5, 1.0)
 		return false
 	}
 	if (interaction_result.consumesAction()) {

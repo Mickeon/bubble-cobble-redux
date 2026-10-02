@@ -75,13 +75,13 @@ if (Platform.isClientEnvironment()) {
 }
 
 StartupEvents.registry("sound_event", event => {
-	event.create("bubble_cobble:buzz")
+	event.create("bubble_cobble:ui.buzz")
 	event.create("bubble_cobble:dash")
-	event.create("bubble_cobble:recharged")
-	event.create("bubble_cobble:crate_jump")
-	event.create("bubble_cobble:fruit_collected")
-	event.create("bubble_cobble:life_got")
-	event.create("bubble_cobble:sniper_apple")
+	event.create("bubble_cobble:ui.recharged")
+	event.create("bubble_cobble:crash.crate_jump")
+	event.create("bubble_cobble:crash.fruit_got")
+	event.create("bubble_cobble:crash.life_got")
+	event.create("bubble_cobble:voice.sniper_apple")
 	event.create("bubble_cobble:item.bearded_dragon_chirp")
 	event.create("bubble_cobble:entity.enderman.bones_cracking")
 })

@@ -88,7 +88,7 @@ for (const fence of FENCES) {
 		const is_west_face_sturdy = state_west.isFaceSturdy(level, pos, Direction.WEST.opposite, "full")
 		if (!is_north_face_sturdy && !is_south_face_sturdy && !is_east_face_sturdy && !is_west_face_sturdy) {
 			player.swing("main_hand")
-			play_sound_globally(level, pos.getCenter(), "bubble_cobble:buzz", "players", 0.25)
+			play_sound_globally(level, pos.getCenter(), "bubble_cobble:ui.buzz", "players", 0.25)
 			return // Nothing to do, there's only fences here, maybe.
 		}
 

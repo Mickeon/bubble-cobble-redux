@@ -3,6 +3,6 @@
     "#cobblemon:type_gems"
   ],
   "pitch": 1.0,
-  "soundEvent": "bubble_cobble:grab_type_gem",
+  "soundEvent": "bubble_cobble:item.grab.type_gem",
   "volume": 0.25
 }

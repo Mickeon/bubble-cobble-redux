@@ -4,6 +4,6 @@
     "#c:music_discs"
   ],
   "pitch": 0.9,
-  "soundEvent": "bubble_cobble:grab_disc",
+  "soundEvent": "bubble_cobble:item.grab.disc",
   "volume": 0.1
 }

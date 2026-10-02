@@ -1,4 +1,4 @@
-playsound bubble_cobble:no_breathing player @s
+playsound bubble_cobble:voice.no_breathing player @s
 damage @s 4 bubble_cobble:spawner_grab
 title @s actionbar "No breathing!"
 title @s subtitle {"text":"\u263a"}

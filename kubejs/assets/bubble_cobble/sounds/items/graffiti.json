@@ -4,6 +4,6 @@
     "immersive_paintings:glow_graffiti"
   ],
   "pitch": 1.25,
-  "soundEvent": "bubble_cobble:spray_can",
+  "soundEvent": "bubble_cobble:item.grab.spray_can",
   "volume": 0.25
 }

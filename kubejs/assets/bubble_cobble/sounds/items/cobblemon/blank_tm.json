@@ -3,6 +3,6 @@
     "cobblemon:blank_tm"
   ],
   "pitch": 1.0,
-  "soundEvent": "bubble_cobble:grab_disc",
+  "soundEvent": "bubble_cobble:item.grab.disc",
   "volume": 0.1
 }

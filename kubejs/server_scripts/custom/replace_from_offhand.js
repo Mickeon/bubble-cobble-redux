@@ -153,7 +153,7 @@ BlockEvents.broken(event => {
 			if (!player.cooldowns.isOnCooldown(held_item)) {
 				// Hacky earrape prevention.
 				player.addItemCooldown(held_item, 5)
-				player.playNotifySound("bubble_cobble:buzz", "players", 1.0, 1.0)
+				player.playNotifySound("bubble_cobble:ui.buzz", "players", 1.0, 1.0)
 			}
 		}
 	})

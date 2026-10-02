@@ -43,7 +43,7 @@ ItemEvents.entityInteracted("minecraft:potion", event => {
 	pokemon.gender = pokemon.gender == "female" ? "male" : "female"
 	if (pokemon.gender == previous_gender) {
 		// Either genderless or limited. Either way, nothing changed.
-		player.playNotifySound("bubble_cobble:buzz", "players", 1.0, 1.0)
+		player.playNotifySound("bubble_cobble:ui.buzz", "players", 1.0, 1.0)
 		return
 	}
 
@@ -51,7 +51,7 @@ ItemEvents.entityInteracted("minecraft:potion", event => {
 		item.consume(1, pokemon_entity)
 	}
 
-	pokemon_entity.playSound("bubble_cobble:life_got", 0.25, 1.0)
+	pokemon_entity.playSound("bubble_cobble:crash.life_got", 0.25, 1.0)
 	pokemon_entity.playAmbientSound()
 
 	const is_male_to_female = pokemon.gender == "female"

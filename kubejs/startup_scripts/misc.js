@@ -106,6 +106,6 @@ global.on_leftovers_created = $CobblemonEvents.LEFTOVERS_CREATED.subscribe(event
 	}
 
 	player.playNotifySound("minecraft:block.sniffer_egg.hatch", "voice", 0.5, 1.0)
-	player.playNotifySound("bubble_cobble:sniper_apple", "neutral", 1.0, player.getRandom().triangle(1.0, 0.2))
+	player.playNotifySound("bubble_cobble:voice.sniper_apple", "neutral", 1.0, player.getRandom().triangle(1.0, 0.2))
 })
 

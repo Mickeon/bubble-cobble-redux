@@ -377,7 +377,7 @@ NetworkEvents.dataReceived("bubble_cobble:dash", event => {
 		dash.lower_tiredness = event.server.scheduleRepeatingInTicks(5, () => {
 			if (dash.strength_multiplier >= 1.0) {
 				if (!player.isCreative()) {
-					player.playNotifySound("bubble_cobble:recharged", "players", 0.25, 1.0)
+					player.playNotifySound("bubble_cobble:ui.recharged", "players", 0.25, 1.0)
 				}
 				// dash.bonus_restoration = 0.0
 
@@ -474,7 +474,7 @@ PlayerEvents.tick(event => {
 	powder_snow.combo += 1
 	if (!powder_snow.delayed_jump) {
 		powder_snow.delayed_jump = level.server.scheduleInTicks(2, () => {
-			play_sound_at_entity(player, "bubble_cobble:crate_jump", "players", 1.0, 0.75 + powder_snow.combo * 0.05)
+			play_sound_at_entity(player, "bubble_cobble:crash.crate_jump", "players", 1.0, 0.75 + powder_snow.combo * 0.05)
 			player.removeAttribute("minecraft:generic.gravity", "bubble_cobble:powder_snow_pause")
 			player.modifyAttribute("minecraft:generic.safe_fall_distance", "bubble_cobble:powder_snow_leniency", 5, "add_value")
 			player.setMotionY(1.0)
@@ -497,10 +497,10 @@ PlayerEvents.tick(event => {
 					if (maxed_out_snow_balls_slot != -1) {
 						player.inventory.getStackInSlot(maxed_out_snow_balls_slot).shrink(99)
 						player.give("minecraft:totem_of_undying")
-						player.playNotifySound("bubble_cobble:life_got", "players", 0.2, 1.0)
+						player.playNotifySound("bubble_cobble:crash.life_got", "players", 0.2, 1.0)
 					} else {
 						player.give(snow_ball)
-						player.playNotifySound("bubble_cobble:fruit_collected", "blocks", 0.2, 1.0)
+						player.playNotifySound("bubble_cobble:crash.fruit_got", "blocks", 0.2, 1.0)
 					}
 				})
 			}

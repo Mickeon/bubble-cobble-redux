@@ -3,37 +3,37 @@
 		"replace": true,
 		"sounds": [
 			{
-				"name": "bubble_cobble:ui_select",
+				"name": "bubble_cobble:ui/select",
 				"pitch": 1.1,
 				"volume": 0.5,
 				"weight": 8
 			},
 			{
-				"name": "bubble_cobble:ui_select",
+				"name": "bubble_cobble:ui/select",
 				"pitch": 1.075,
 				"volume": 0.5,
 				"weight": 6
 			},
 			{
-				"name": "bubble_cobble:ui_select",
+				"name": "bubble_cobble:ui/select",
 				"pitch": 1.05,
 				"volume": 0.5,
 				"weight": 4
 			},
 			{
-				"name": "bubble_cobble:ui_select",
+				"name": "bubble_cobble:ui/select",
 				"pitch": 1.025,
 				"volume": 0.5,
 				"weight": 3
 			},
 			{
-				"name": "bubble_cobble:ui_select",
+				"name": "bubble_cobble:ui/select",
 				"pitch": 1.0,
 				"volume": 0.5,
 				"weight": 2
 			},
 			{
-				"name": "bubble_cobble:ui_select",
+				"name": "bubble_cobble:ui/select",
 				"pitch": 0.95,
 				"volume": 0.5,
 				"weight": 1
@@ -44,7 +44,7 @@
 		"replace": true,
 		"sounds": [
 			{
-				"name": "bubble_cobble:mission_clear",
+				"name": "bubble_cobble:ui/mission_clear",
 				"volume": 0.5,
 				"weight": 1
 			}
@@ -53,7 +53,7 @@
 	"ui.toast.in": {
 		"replace": false,
 		"sounds": [{
-			"name": "bubble_cobble:woosh_in",
+			"name": "bubble_cobble:ui/woosh_in",
 			"pitch": 0.75,
 			"volume": 0.05
 		}]
@@ -61,7 +61,7 @@
 	"ui.toast.out": {
 		"replace": false,
 		"sounds": [{
-			"name": "bubble_cobble:woosh_out",
+			"name": "bubble_cobble:ui/woosh_out",
 			"pitch": 0.75,
 			"volume": 0.05
 		}]
@@ -69,7 +69,7 @@
 	"item.totem.use": {
 		"replace": true,
 		"sounds": [{
-			"name": "bubble_cobble:aku_aku_hurt",
+			"name": "bubble_cobble:misc/crash/aku_aku_hurt",
 			"pitch": 0.8,
 			"volume": 0.75
 		}]
@@ -100,9 +100,9 @@
 	},
 	"entity.llama.spit": {
 		"sounds": [
-			"bubble_cobble:stuart_onion_1",
-			"bubble_cobble:stuart_onion_2",
-			"bubble_cobble:stuart_onion_3"
+			"bubble_cobble:voice/stuart_onion_1",
+			"bubble_cobble:voice/stuart_onion_2",
+			"bubble_cobble:voice/stuart_onion_3"
 		],
 		"subtitle": "subtitles.entity.llama.spit"
 	},

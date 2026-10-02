@@ -3,7 +3,7 @@
 // There's similar server-side code, too.
 BlockEvents.rightClicked(event => {
 	if (event.hand == "OFF_HAND" && event.item.hasTag("bubble_cobble:lanterns") && !event.player.shiftKeyDown) {
-		event.player.playNotifySound("bubble_cobble:buzz", "players", 0.5, 1.0)
+		event.player.playNotifySound("bubble_cobble:ui.buzz", "players", 0.5, 1.0)
 		event.cancel()
 	}
 })
