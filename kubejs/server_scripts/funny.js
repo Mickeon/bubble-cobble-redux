@@ -296,7 +296,7 @@ function DashDataBuilder() {
 const DASH_FORCE = 1.0
 const DASH_COOLDOWN_TICKS = 10
 const DASH_BASE_RESTORATION = 0.0125
-DashDataBuilder.players_dash_data = /** @type {Object<string, DashData>} */ ({})
+DashDataBuilder.players_dash_data = /** @type {Record<string, DashData>} */ ({})
 DashDataBuilder.get_or_create = /** @param {string} uuid */ function(uuid) {
 	if (!this.players_dash_data[uuid]) {
 		this.players_dash_data[uuid] = DashDataBuilder()
@@ -418,7 +418,7 @@ function PowderSnowDataBuilder() {
 		reward_loop: /** @type {$ScheduledEvents$ScheduledEvent?} */ (null)
 	}
 }
-PowderSnowDataBuilder.players_powder_snow_data = /** @type {Object<string, PowderSnowData>} */ ({})
+PowderSnowDataBuilder.players_powder_snow_data = /** @type {Record<string, PowderSnowData>} */ ({})
 PowderSnowDataBuilder.get_or_create = /** @param {string} uuid */ function(uuid) {
 	if (!this.players_powder_snow_data[uuid]) {
 		this.players_powder_snow_data[uuid] = PowderSnowDataBuilder()

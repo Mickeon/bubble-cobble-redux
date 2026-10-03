@@ -167,7 +167,7 @@ mod_parents = [
 	#Hides links of the mod
 	hide_mod_links = false
 	#Hides mod's license
-	hide_mod_license = false
+	hide_mod_license = true
 	#Hides mod's badges
 	hide_badges = false
 	#Add id of the badge to hide it

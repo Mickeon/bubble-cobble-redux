@@ -59,7 +59,7 @@ ServerEvents.recipes(event => {
  * @param {$RecipesKubeEvent} event
  * @param {import("@package/net/neoforged/neoforge/fluids").$FluidStack} fluid_result
  * @param {Temperature} temperature
- * @param {$Ingredient[]} ingredients
+ * @param {Array<$Ingredient>} ingredients
  * @param {import("@package/net/minecraft/world/item").$ItemStack} item_result
  * @param {import("@package/net/neoforged/neoforge/fluids/crafting").$SizedFluidIngredient} fluid_base
  */

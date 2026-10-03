@@ -5,7 +5,7 @@ let $BuildCreativeModeTabContentsEvent  = Java.loadClass("net.neoforged.neoforge
 // - Are removed from all tags
 // - Are hidden from recipe viewers
 // - Are hidden from Creative tabs
-/** @type {RegistryTypes.Item[]} */
+/** @type {Array<RegistryTypes.Item>} */
 const DISABLED_ITEMS = [
 	// Unused.
 	/^libraryferret/,
@@ -28,10 +28,9 @@ const DISABLED_ITEMS = [
 	// Keeping only a few items from this mod, for now.
 	/^gag/,
 
-	// I don't need to do anything, they're hidden by default now?
-	// "artifacts:eternal_steak",
-	// "artifacts:everlasting_beef",
-	// "artifacts:umbrella", // People love it but it is ridiculous how much it trivializes movement.
+	"artifacts:eternal_steak",
+	"artifacts:everlasting_beef",
+	"artifacts:umbrella", // People love it but it is ridiculous how much it trivializes movement.
 	// Disabling these here is not enough, remember to also disable them in their respective Relics configs!
 	// These are worth revisiting later, as their effects were rebalanced across updates.
 	"artifacts:aqua_dashers", // In favour of Relics's Cut Glass Boot.
@@ -47,7 +46,7 @@ if (Item.exists("minecraft:copper_nugget")) {
 	DISABLED_ITEMS.push("create:copper_nugget")
 }
 
-/** @type {RegistryTypes.Item[]} */
+/** @type {Array<RegistryTypes.Item>} */
 const DISABLED_ITEM_EXCEPTIONS = [
 	"cobbreeding:pokemon_egg",
 	"justhammers:stone_hammer",
@@ -63,12 +62,12 @@ global.get_disabled_ingredient = exports.get_disabled_ingredient = function () {
 	return Utils.expiringLazy(() => Ingredient.of(DISABLED_ITEMS).except(DISABLED_ITEM_EXCEPTIONS),	SECOND).get()
 }
 
-/** @type {RegistryTypes.Fluid[]} */
+/** @type {Array<RegistryTypes.Fluid>} */
 global.DISABLED_FLUIDS = exports.DISABLED_FLUIDS = [
 	"create_bic_bit:curdled_milk"
 ]
 
-/** @type {RegistryTypes.MobEffect[] | RegExp} */
+/** @type {Array<RegistryTypes.MobEffect> | RegExp} */
 global.HIDDEN_MOB_EFFECTS = exports.HIDDEN_MOB_EFFECTS = [
 	// Unused.
 	/^runiclib/, // Many neat effects are a byproduct of this library.

@@ -21,7 +21,7 @@ function is_lunar_event_happening(level) {
 // Do not spawn most hostiles naturally under the skylight.
 // Allow them to spawn with a bit of skylight during a Lunar Event.
 
-/** @type {RegistryTypes.EntityType[]} */
+/** @type {Array<RegistryTypes.EntityType>} */
 const NO_SKY_LIGHT_MOBS = [
 	// Basically all undead.
 	"minecraft:bogged",

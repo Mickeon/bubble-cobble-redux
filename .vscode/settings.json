@@ -130,7 +130,33 @@
                     }
                 }
             ]
-        }
+        },
+        "textMateRules": [
+            {
+                "scope": "comment.block.documentation.js",
+                "settings": {
+                    "foreground": "#FFFFFF23"
+                }
+            },
+            {
+                "scope": "storage.type.class.jsdoc",
+                "settings": {
+                    "foreground": "#e9e9f123"
+                }
+            },
+            {
+                "scope": "entity.name.type.instance.jsdoc",
+                "settings": {
+                    "foreground": "#ffffff40"
+                }
+            },
+            {
+                "scope": "variable.other.jsdoc",
+                "settings": {
+                    "foreground": "#FFFFFF23"
+                }
+            }
+        ]
     },
     "[yaml]": {
         "files.trimTrailingWhitespace": false
@@ -140,11 +166,10 @@
     },
     "search.exclude": {
         "/.probe/": true,
-        "/logs/": true,
         "/emi.json": true,
         "/.vscode/probejs.code-snippets": true,
-        "/saves/**/stats/*.json": true,
-        "/saves/**/advancements/*.json": true
+        "/saves/**": true,
+        "crash-reports/": true
     },
     "editor.wordSeparators": "`~!@#%^&*()-=+[{]}\\|;:'\",.<>/?",
     "files.watcherExclude": {
@@ -163,6 +188,9 @@
     },
     "explorer.autoRevealExclude": {
         ".probe": true,
-        "local/kubejs": true
+        "local/kubejs": true,
+        "logs/": true,
+        "config/": true,
+        "crash-reports/": true
     },
 }

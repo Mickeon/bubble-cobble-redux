@@ -18,7 +18,7 @@ function rename_tab(tab_id, to, icon_item_id) {
 /**
  * @param {RegistryTypes.CreativeModeTab} from_id
  * @param {RegistryTypes.CreativeModeTab} to_id
- * @param {RegistryTypes.Item[]} items
+ * @param {Array<RegistryTypes.Item>} items
  */
 function remove_and_merge_into_tab(from_id, to_id, items) {
 	StartupEvents.modifyCreativeTab(from_id, event => {

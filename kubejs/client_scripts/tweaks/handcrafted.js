@@ -33,7 +33,7 @@ ItemEvents.modifyTooltips(event => {
 	event.modify(HANDCRAFTED_ITEMS_WITH_SHIFT_INFO, {shift: true}, text => {
 		// They probably run this through a text splitter, so removing by looking up
 		// the translation Text component does not actually work. Cool jank.
-		/** @type {String[]} */
+		/** @type {Array<String>} */
 		// const whole_translated_strings = [
 		// 	Text.translate("tooltip.handcrafted.bed_pillow").string,
 		// 	Text.translate("tooltip.handcrafted.bed_sheet").string,

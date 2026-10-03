@@ -377,12 +377,12 @@ function subtle(text) {
  * @import {$TextActionBuilder} from "@package/dev/latvian/mods/kubejs/text/action"
  * @import {$ModifyItemTooltipsKubeEvent} from "@package/dev/latvian/mods/kubejs/item"
  * @import {$Ingredient} from "@package/net/minecraft/world/item/crafting"
- * */
+ */
 
 /**
  * @param {$ModifyItemTooltipsKubeEvent} event
  * @param {$Ingredient} item
- * @param {string[] | string} info
+ * @param {Array<string> | string} info
  */
 function add_shift_info(event, item, info) {
 	event.modify(item, { shift: false }, /** @param {$TextActionBuilder} text */ text => {

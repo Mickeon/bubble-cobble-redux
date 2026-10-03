@@ -6,7 +6,7 @@
  * @property {boolean=} no_disc
  */
 
-/** @type {Object.<string, MusicData>} */
+/** @type {Record<string, MusicData>} */
 const MUSIC_LIST = {
 	grapes: {duration: 180, description: "SolUrsidae - Can't Make Wine Without a Few Bit-crushed Grapes"},
 	void: {duration: 168.25, description: "Box Dragon - Void (Low Health)"},

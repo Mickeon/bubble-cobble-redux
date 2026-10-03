@@ -114,12 +114,17 @@ ItemEvents.modifyTooltips(event => {
 	event.add(["supplementaries:pulley_block"], [subtle("").append(Text.gold("Ropes")).append(" and ").append(Text.gold("chains")).append(" in here!")])
 
 	event.modify([
-		"supplementaries:lunch_basket",
 		"supplementaries:cannonball",
 		"minecraft:stick",
 		"minecraft:blaze_rod",
 		"minecraft:breeze_rod",
 	], text => {
 		text.insert(1, PLACEABLE_TOOLTIP)
+	})
+	event.modify("supplementaries:lunch_basket", text => {
+		text.insert(1, PLACEABLE_TOOLTIP)
+		text.removeText(Text.translate("message.supplementaries.lunch_box.tooltip", Client.options.keyAttack.getTranslatedKeyMessage()))
+		text.removeText(Text.translate("message.supplementaries.lunch_box.tooltip.closed"))
+		text.removeText(Text.translate("message.supplementaries.lunch_box.tooltip.open"))
 	})
 })

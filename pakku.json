@@ -90,6 +90,8 @@
         "!config/dummmmmmy-*",
         "!config/packforge.json",
         "!config/grassiergrass-client.toml",
+        "!config/shadowdrop.json",
+        "!config/schrumbohud.json",
         "!fieldguide_cache/",
         "!*lightspeed*",
         "!*locomotionmap.json"

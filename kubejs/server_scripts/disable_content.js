@@ -64,9 +64,9 @@ ServerEvents.generateData("last", event => {
 	// I've been trying so hard to do it more automatically in LootJS, to no avail. Fine.
 	console.log("Removing disabled artifacts from loot tables")
 	for (const loot_table_id of [
-		// "artifacts:loot_table/items/eternal_steak",
-		// "artifacts:loot_table/items/everlasting_beef",
-		// "artifacts:loot_table/items/umbrella",
+		"artifacts:loot_table/items/eternal_steak",
+		"artifacts:loot_table/items/everlasting_beef",
+		"artifacts:loot_table/items/umbrella",
 		"artifacts:loot_table/items/aqua_dashers",
 		"artifacts:loot_table/items/strider_shoes",
 		"artifacts:loot_table/items/villager_hat",

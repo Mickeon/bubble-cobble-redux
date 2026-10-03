@@ -98,6 +98,10 @@ StartupEvents.modifyCreativeTab("minecraft:tools_and_utilities", event => {
 	event.addAfter("minecraft:stone_hoe", ["minecraft:copper_shovel", "minecraft:copper_pickaxe", "minecraft:copper_axe", "minecraft:copper_hoe"])
 })
 
+StartupEvents.modifyCreativeTab("minecraft:ingredients", event => {
+	event.addAfter("minecraft:iron_nugget", ["minecraft:copper_nugget"])
+})
+
 
 // No point if I can't get the particles to work.
 // StartupEvents.registry("particle_type", event => {
