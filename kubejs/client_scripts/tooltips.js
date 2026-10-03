@@ -56,25 +56,6 @@ ItemEvents.modifyTooltips(event => {
 
 	event.add(["farmersdelight:tree_bark"], [subtle("Use on stripped wood to defy logic")])
 
-	if (Platform.isLoaded("displaydelight")) {
-		event.modify("#displaydelight:displayable", text => {
-			text.insert(1, PLACEABLE_SNEAKING_TOOLTIP)
-		})
-
-		let plate_displayable = Ingredient.of("#displaydelight:plate_displayable")
-		let small_plate_displayable = Ingredient.of("#displaydelight:small_plate_displayable")
-
-		event.modify(plate_displayable.or(small_plate_displayable), text => {
-			text.insert(1, PLACEABLE_TOOLTIP.copy().append(" on:"))
-		})
-		event.modify(small_plate_displayable, text => {
-			text.insert(2, Text.of(["• ", Text.translate("block.displaydelight.small_food_plate").color(MASCOT_COLOR)]).color(MASCOT_COLOR_DARK))
-		})
-		event.modify(plate_displayable, text => {
-			text.insert(2, Text.of(["• ", Text.translate("block.displaydelight.food_plate").color(MASCOT_COLOR)]).color(MASCOT_COLOR_DARK))
-		})
-	}
-
 	if (Platform.isLoaded("sleep_tight")) {
 		event.add(["#sleep_tight:hammocks"], [Text.of([`Placeable between `, Text.of(`3 blocks`).color(MASCOT_COLOR), ` or `, Text.of(`2 fences`).color(MASCOT_COLOR)]).color(MASCOT_COLOR_DARK)])
 		event.add(["sleep_tight:dreamer_essence"], [subtle("Keeps Bedbugs at bay, attracts Phantoms,"), subtle("    and is rather soothing...")])

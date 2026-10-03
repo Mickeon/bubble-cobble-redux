@@ -3458,7 +3458,7 @@
             ]
         },
         {
-            "pakku_id": "nXxD9p2gFp5ZGNZ7",
+            "pakku_id": "eCP4baIYDbDMHajv",
             "type": "MOD",
             "side": "BOTH",
             "slug": {
@@ -3473,24 +3473,25 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "displaydelight-1.6.0.jar",
+                    "file_name": "displaydelight-1.7.0.jar",
                     "mc_versions": [
+                        "1.21",
                         "1.21.1"
                     ],
                     "loaders": [
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/yXepZhp8/versions/LhcOrDyJ/displaydelight-1.6.0.jar",
-                    "id": "LhcOrDyJ",
+                    "url": "https://cdn.modrinth.com/data/yXepZhp8/versions/xiS3GrrW/displaydelight-1.7.0.jar",
+                    "id": "xiS3GrrW",
                     "parent_id": "yXepZhp8",
                     "hashes": {
-                        "sha512": "217ea855795936973d7f4d689b9397e7edc1ffea179fb6483037e87b64e129fe65ca3b2f37846a0696d1df91856837d5fb238e27f2d8c0fd1504581697161d5a",
-                        "sha1": "a53384fc7e66b1ed25f34fe8b168ba8174b69b2f"
+                        "sha512": "6409537fe29b483998aff0f24920936ca72c2840f6d7ba887e0da9f303cd4f6a6c88917ea0874fc7180dca6f5beb74d5af5d54be9d383b7e7b12dd667178ffe3",
+                        "sha1": "0d2040a348a1d42907561babff9ac983c466b825"
                     },
                     "required_dependencies": [],
-                    "size": 1050007,
-                    "date_published": "2026-05-07T13:49:45.463462Z"
+                    "size": 1144367,
+                    "date_published": "2026-06-13T17:02:48.919864Z"
                 }
             ]
         },

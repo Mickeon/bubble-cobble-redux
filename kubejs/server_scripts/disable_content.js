@@ -99,18 +99,3 @@ ItemEvents.foodEaten(["artifacts:everlasting_beef", "artifacts:eternal_steak"], 
 	}
 	player.addEffect(MobEffectUtil.of("minecraft:hunger", 5 * SEC, 255))
 })
-
-if (Platform.isLoaded("displaydelight")) {
-	let $BlockAssociations = Java.loadClass("com.jkvin114.displaydelight.init.BlockAssociations")
-	let $AbstractItemBlock = Java.loadClass("com.jkvin114.displaydelight.block.AbstractItemBlock")
-
-	// Gotta do it manually, I guess. I want these to only show up when looking them up in the Creative Tabs.
-	ServerEvents.tags("item", event => {
-		Ingredient.of("@displaydelight").getItemStream().forEach(item => {
-			if (item.block instanceof $AbstractItemBlock
-			&& (item.block.getStackFor().isEmpty() || $BlockAssociations.getItemFor(item.block) == Items.AIR)) {
-				event.add("c:hidden_from_recipe_viewers", item)
-			}
-		})
-	})
-}
