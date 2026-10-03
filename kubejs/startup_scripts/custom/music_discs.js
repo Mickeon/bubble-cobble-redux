@@ -14,7 +14,7 @@ const MUSIC_LIST = {
 	mint: {duration: 131, description: "Shadownade - Double Mint Refreshed", no_disc: true},
 	ghostbusters: {duration: 162, description: "Joel - Super Ghostbusters", no_disc: true}
 }
-global.MUSIC_LIST = MUSIC_LIST
+global.MUSIC_LIST = exports.MUSIC_LIST = MUSIC_LIST
 
 StartupEvents.registry("sound_event", event => {
 	Object.keys(MUSIC_LIST).forEach(key => {

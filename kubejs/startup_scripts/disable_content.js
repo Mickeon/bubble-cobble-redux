@@ -58,18 +58,18 @@ const DISABLED_ITEM_EXCEPTIONS = [
 	"gag:time_sand_pouch"
 ]
 
-global.get_disabled_ingredient = function () {
+global.get_disabled_ingredient = exports.get_disabled_ingredient = function () {
 	// Bit of a cache.
 	return Utils.expiringLazy(() => Ingredient.of(DISABLED_ITEMS).except(DISABLED_ITEM_EXCEPTIONS),	SECOND).get()
 }
 
 /** @type {RegistryTypes.Fluid[]} */
-global.DISABLED_FLUIDS = [
+global.DISABLED_FLUIDS = exports.DISABLED_FLUIDS = [
 	"create_bic_bit:curdled_milk"
 ]
 
 /** @type {RegistryTypes.MobEffect[] | RegExp} */
-global.HIDDEN_MOB_EFFECTS = [
+global.HIDDEN_MOB_EFFECTS = exports.HIDDEN_MOB_EFFECTS = [
 	// Unused.
 	/^runiclib/, // Many neat effects are a byproduct of this library.
 	"gag:repelling",

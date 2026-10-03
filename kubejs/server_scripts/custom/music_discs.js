@@ -1,5 +1,5 @@
-/** @import {global} from "../../startup_scripts/custom/music_discs" */
-const MUSIC_LIST = global.MUSIC_LIST
+/** @import {MUSIC_LIST} from "../../startup_scripts/custom/music_discs" */
+this.MUSIC_LIST = global.MUSIC_LIST
 
 ServerEvents.registry("jukebox_song", event => {
 	Object.keys(MUSIC_LIST).forEach((key, index) => {

@@ -62,13 +62,6 @@ function is_dev() {
 	return Platform.isClientEnvironment() && Platform.isLoaded("probejs")
 }
 
-global.SEC = SEC
-global.MIN = MIN
-global.play_sound_globally = play_sound_globally
-global.remap = remap
-global.is_eligible_for_easter_egg = is_eligible_for_easter_egg
-global.is_dev = is_dev
-
 // Kind of a test.
 if (Platform.isClientEnvironment()) {
 	Color.createMapped("#F2C891", "bleachdew", "bleachdew_dye")
@@ -92,3 +85,20 @@ function remove_tab(tab_id) {
 		event.remove("*")
 	})
 }
+
+// Primordial for TS autocompletion of `global`.
+// This lets us pretend scripts are modules by assigning to `exports` in startup scripts,
+// then `/** @import {} from "..." */` in server/client scripts.
+// We don't do it in this script because we want to "export" almost everything.
+// See https://discord.com/channels/303440391124942858/1300462173855678534/1555898235879559312.
+let exports = {}
+// let exports = global
+// global.SEC = exports.SEC = SEC
+// Object.assign(exports, global)
+
+global.SEC = SEC
+global.MIN = MIN
+global.remap = remap
+global.play_sound_globally = play_sound_globally
+global.is_eligible_for_easter_egg = is_eligible_for_easter_egg
+global.is_dev = is_dev

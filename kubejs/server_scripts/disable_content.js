@@ -1,4 +1,6 @@
-/** @import {global} from "../startup_scripts/disable_content" */
+/** @import {get_disabled_ingredient, HIDDEN_MOB_EFFECTS} from "../startup_scripts/disable_content" */
+this.get_disabled_ingredient = global.get_disabled_ingredient
+this.HIDDEN_MOB_EFFECTS = global.HIDDEN_MOB_EFFECTS
 
 // DO NOT USE the { output: } filter unless Brewin' and Chewin' recipes are filtered out, because on a dedicated server the script fails with this:
 // UnknownKubeRecipe.java#64: Error in 'ServerEvents.recipes': java.lang.NullPointerException:
@@ -9,7 +11,7 @@
 // replaceOutput() also seems to be causing problems?
 
 ServerEvents.recipes(event => {
-	console.log("Changing recipes in out_of_mind.js")
+	console.log("Removing recipes that include disabled items.")
 
 	// Gotta do this manually I guess.
 	event.remove({id: "create_bic_bit:mixing/curdled_milk" })
@@ -21,17 +23,17 @@ ServerEvents.recipes(event => {
 		event.replaceOutput({output: "create:copper_nugget", not: {type: "brewinandchewin:fermenting"}}, "create:copper_nugget", "minecraft:copper_nugget")
 	}
 
-	event.remove({input: global.get_disabled_ingredient().stackArray, not: {type: "brewinandchewin:fermenting"}}) // Doesn't seem to do much of anything?
-	event.remove({output: global.get_disabled_ingredient().stackArray, not: {type: "brewinandchewin:fermenting"}})
+	event.remove({input: get_disabled_ingredient(), not: {type: "brewinandchewin:fermenting"}}) // Doesn't seem to do much of anything?
+	event.remove({output: get_disabled_ingredient().stackArray, not: {type: "brewinandchewin:fermenting"}})
 })
 
 ServerEvents.tags("item", event => {
-	event.removeAllTagsFrom(global.get_disabled_ingredient().itemIds)
-	event.add("c:hidden_from_recipe_viewers", global.get_disabled_ingredient().itemIds)
+	event.removeAllTagsFrom(get_disabled_ingredient().itemIds)
+	event.add("c:hidden_from_recipe_viewers", get_disabled_ingredient().itemIds)
 })
 
 ServerEvents.tags("mob_effect", event => {
-	event.add("c:hidden_from_recipe_viewers", global.HIDDEN_MOB_EFFECTS)
+	event.add("c:hidden_from_recipe_viewers", HIDDEN_MOB_EFFECTS)
 })
 
 // Hide advancements.
@@ -80,7 +82,7 @@ ServerEvents.generateData("last", event => {
 
 LootJS.lootTables(event => {
 	console.log("Removing disabled items from loot tables")
-	event.modifyLootTables(/.*chest.*/).removeItem(global.get_disabled_ingredient())
+	event.modifyLootTables(/.*chest.*/).removeItem(get_disabled_ingredient())
 
 	// I swear I've tried this in many different ways. These Artifacts are RESILIENT.
 	// event.modifyLootTables(/.*artifact.*/).forEach(table => {

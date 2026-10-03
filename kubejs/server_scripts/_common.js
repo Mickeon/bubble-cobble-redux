@@ -11,12 +11,14 @@
  * @import {$SoundEvent_, $SoundSource_} from "@package/net/minecraft/sounds"
  */
 
-/** @import {global} from "./../startup_scripts/_common" */
-const {SEC, MIN, play_sound_globally, remap, is_eligible_for_easter_egg, is_dev} = global
-
+/** @import {} from "../startup_scripts/_common" */
+this.SEC = global.SEC
+this.MIN = global.MIN
+this.play_sound_globally = global.play_sound_globally
+this.remap = global.remap
+this.is_eligible_for_easter_egg = global.is_eligible_for_easter_egg
+this.is_dev = global.is_dev
 // Object.assign(globalThis, global)
-// /** @typedef {(value: number, min1: number, max1: number, min2: number, max2:) => number} RemapFunction */
-// const remap = /** @type {RemapFunction} */ (global.remap)
 
 /** @param {number} value @param {number} min @param {number} max */
 function clamp(value, min, max) {

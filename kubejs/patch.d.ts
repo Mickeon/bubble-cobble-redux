@@ -111,3 +111,20 @@ declare module "@package/dev/latvian/mods/kubejs/script" {
 		static isLoaded(modId: SpecialTypes.ModId | string): boolean;
 	}
 }
+
+// declare global {
+// 	let global: {
+//         on_hatch_egg_pre: $ObservableSubscription<$HatchEggEvent$Pre>
+//         on_leftovers_created: $ObservableSubscription<$LeftoversCreatedEvent>
+//     };
+// }
+
+
+// declare global {
+//   interface KubeJSGlobal {
+//     SEC: number;
+//     MIN: number;
+//   }
+
+//   const global: KubeJSGlobal;
+// }

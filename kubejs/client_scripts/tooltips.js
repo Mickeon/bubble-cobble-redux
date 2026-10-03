@@ -5,9 +5,6 @@ let $Moves = Java.loadClass("com.cobblemon.mod.common.api.moves.Moves")
 
 /** @import {$MutableComponent} from "@package/net/minecraft/network/chat" */
 
-/** @import {global} from "./../startup_scripts/_common" */
-const {is_eligible_for_easter_egg} = global
-
 const MASCOT_COLOR = "#83BED9"
 const MASCOT_COLOR_DARK = "#537B8D"
 const SHIFT_INFO_COLOR = "#7CB3D6"
