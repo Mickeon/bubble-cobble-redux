@@ -1,3 +1,5 @@
+/** @import {} from "../startup_scripts/_common" */
+this.is_eligible_for_easter_egg = global.is_eligible_for_easter_egg
 
 KeyBindEvents.tick("bubble_cobble.dash", event => {
 	const angle = event.player.lookAngle

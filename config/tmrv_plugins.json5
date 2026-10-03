@@ -3,6 +3,7 @@
 	"defaultDisableDuplicatePlugins": false,
 	"typeOverrides": {
 		"cobblemonraiddens:jei": "DISABLED",
+		"uei:ench_info": "DISABLED",
 		"accessories:main": "DISABLED",
 		"clutternomore:jei": "DISABLED",
 		"mendingrework:jei_plugin": "DISABLED",
