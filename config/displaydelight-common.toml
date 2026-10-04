@@ -15,7 +15,7 @@
 	#Should creative tab items disabled? Try turning this on if this mod's items take too much space in JEI
 	DisableCreativeTabItems = false
 	#Should shift right-click interation to place all items be disabled?
-	DisablePlaceAllInteratction = false
+	DisablePlaceAllInteratction = true
 	#Should shift right-click interation to take all items be disabled?
 	DisableTakeAllInteratction = false
 	#Should axe right-click interation to hide plates disabled?
