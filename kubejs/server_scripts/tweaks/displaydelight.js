@@ -6,9 +6,18 @@ let $AbstractItemBlock = Java.loadClass("com.jkvin114.displaydelight.block.Abstr
 // I want these to only show up when looking them up in the Creative Tabs.
 ServerEvents.tags("item", event => {
 	Ingredient.of("@displaydelight").getItemStream().forEach(item => {
-		if (item.block instanceof $AbstractItemBlock
-		&& (item.block.getStackFor().isEmpty() || $BlockAssociations.getItemFor(item.block) == Items.AIR)) {
-			event.add("c:hidden_from_recipe_viewers", item)
+		const block = item.block
+		if (block instanceof $AbstractItemBlock) {
+			if (block.getStackFor().isEmpty()) {
+				// The display item's original food item does not exist in the modpack.
+				event.add("c:hidden_from_recipe_viewers", item)
+			}
+
+			if ($BlockAssociations.getItemFor(block) != Items.AIR) {
+				// The display item has an exact food item corresponding to it.
+				// Showing it is redundant because the item can easily be placed and is properly documented.
+				event.add("c:hidden_from_recipe_viewers", item)
+			}
 		}
 	})
 })

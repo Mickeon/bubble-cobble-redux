@@ -92,6 +92,11 @@
         "!config/grassiergrass-client.toml",
         "!config/shadowdrop.json",
         "!config/schrumbohud.json",
+        "!config/starcatcher-*",
+        "!config/selling_bin-*",
+        "!config/tinymultiblocklib-*",
+        "!config/libtooltips-*",
+        "!config/fancytabsections-*",
         "!fieldguide_cache/",
         "!*lightspeed*",
         "!*locomotionmap.json"

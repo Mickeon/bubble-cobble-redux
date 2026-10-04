@@ -77,7 +77,7 @@ ServerEvents.recipes(event => {
 		let replace_char_at = (str, index, char) => {
 			return str.substring(0, index) + char + str.substring(index + 1)
 		}
-		event.forEachRecipe({id: /urban_decor:.*_calendar/}, recipe => {
+		event.forEachRecipe({mod: "urban_decor", id: /_calendar/}, recipe => {
 			const json = JSON.parse(recipe.json)
 			json.pattern[1] = replace_char_at(json.pattern[1], 1, "C")
 			json.key.C = Ingredient.of("minecraft:clock")

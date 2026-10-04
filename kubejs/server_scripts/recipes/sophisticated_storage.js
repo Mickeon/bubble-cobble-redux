@@ -9,9 +9,9 @@ ServerEvents.recipes(event => {
 	event.replaceInput({id: "sophisticatedstorage:controller" }, "minecraft:stone", "minecraft:andesite" )
 	event.replaceInput({id: "sophisticatedstorage:controller" }, "minecraft:oak_planks", "create:zinc_block" )
 	event.replaceInput({id: "sophisticatedstorage:storage_link" }, "minecraft:stone", "minecraft:andesite" )
-	event.replaceInput({id: /sophisticatedstorage:storage_(i|o|io)/  }, "minecraft:stone", "minecraft:andesite" )
-	event.replaceInput({id: /sophisticatedstorage:storage_(i|o|io)/  }, "minecraft:oak_planks", "create:zinc_block" )
-	event.replaceInput({id: /sophisticatedstorage:storage_(i|o|io)/ }, "minecraft:gold_ingot", "minecraft:diamond" )
+	event.replaceInput({id: /^sophisticatedstorage:storage_(i|o|io)/  }, "minecraft:stone", "minecraft:andesite" )
+	event.replaceInput({id: /^sophisticatedstorage:storage_(i|o|io)/  }, "minecraft:oak_planks", "create:zinc_block" )
+	event.replaceInput({id: /^sophisticatedstorage:storage_(i|o|io)/ }, "minecraft:gold_ingot", "minecraft:diamond" )
 
 	// Make Basic Tier Upgrade require Zinc nuggets.
 	event.shaped("sophisticatedstorage:basic_tier_upgrade", [

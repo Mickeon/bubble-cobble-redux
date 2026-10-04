@@ -28,7 +28,7 @@ ServerEvents.tags("item", event => {
 	event.add("c:tools/spear", "#minecraft:spears") // Reported, but marked as "Won't fix": https://github.com/Unknowneth/Backported-Spears/issues/60.
 	event.add("c:storage_blocks", "#c:storage_blocks/industrial_iron") // TODO: Report this.
 	event.add("c:music_discs", "undergroundworlds:music_disc_abbeyence") // TODO: Report this.
-	event.add("mega_showdown:mega_stone", /zamega:/).remove("zamega:ange") // TODO: Report this.
+	event.add("mega_showdown:mega_stone", /^zamega:/).remove("zamega:ange") // TODO: Report this.
 
 	// More compatibility.
 	event.add("cobblemon:held/leaves_leftover", "biomeswevegone:green_apple")
@@ -104,7 +104,7 @@ ServerEvents.tags("item", event => {
 	if (Item.exists("minecraft:copper_sword")) {
 		event.add("supplementaries:causes_lightning_when_held", "minecraft:copper_sword", "minecraft:copper_axe")
 	}
-	event.add("supplementaries:overencumbering", "#create:toolboxes", "#create:packages", /sophisticatedstorage:.*shulker_box/)
+	event.add("supplementaries:overencumbering", "#create:toolboxes", "#create:packages", /^sophisticatedstorage:.*shulker_box/)
 
 	// We reserve Accessories for Mega Showdown, and use Curios for Backpacks/Artifacts.
 	event.removeAll("accessories:back")
@@ -218,7 +218,7 @@ ServerEvents.tags("block", event => {
 	event.add("supplementaries:lights_gunpowder", "#bubble_cobble:very_hot") // This has weird consequences (e.g. Campfire lights up Gunpowder)
 	event.add("create:passive_boiler_heaters", "#bubble_cobble:very_hot")
 	event.add("minecraft:strider_warm_blocks", "#bubble_cobble:very_hot")
-	event.add("bubble_cobble:very_cold", "#biomeswevegone:black_ice", "#biomeswevegone:borealis_ice", "minecraft:frosted_ice", "cobblemon:ice_stone_block", "yungscavebiomes:rare_ice", /undergroundworlds:ice_/, "yungscavebiomes:frost_lily", "yungscavebiomes:ice_sheet", "yungscavebiomes:icicle")
+	event.add("bubble_cobble:very_cold", "#biomeswevegone:black_ice", "#biomeswevegone:borealis_ice", "minecraft:frosted_ice", "cobblemon:ice_stone_block", "yungscavebiomes:rare_ice", /^undergroundworlds:ice_/, "yungscavebiomes:frost_lily", "yungscavebiomes:ice_sheet", "yungscavebiomes:icicle")
 	event.add("brewinandchewin:freeze_sources", "#bubble_cobble:very_cold")
 
 	// Normally these can't be chopped, yet they essentially make up some trees.

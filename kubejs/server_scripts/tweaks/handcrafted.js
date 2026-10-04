@@ -22,6 +22,21 @@ ServerEvents.tags("block", event => {
 		"#handcrafted:counters",
 		"#handcrafted:shelves",
 	)
+
+	// Allows sitting on them on Create contraptions.
+	// Should be moved to another script later.
+	event.add("create:seats",
+		"#handcrafted:benches",
+		"#handcrafted:chairs",
+		"#handcrafted:couches",
+		"urban_decor:plastic_chair",
+		"urban_decor:stainless_steel_chair",
+		"urban_decor:booth",
+		"urban_decor:toilet",
+		"urban_decor:dark_toilet",
+		"urban_decor:bathtub",
+		"urban_decor:dark_bathtub",
+	)
 })
 
 ServerEvents.recipes(event => {

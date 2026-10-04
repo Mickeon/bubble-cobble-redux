@@ -23,7 +23,7 @@ ServerEvents.recipes(event => {
 		event.replaceOutput({output: "create:copper_nugget", not: {type: "brewinandchewin:fermenting"}}, "create:copper_nugget", "minecraft:copper_nugget")
 	}
 
-	event.remove({input: get_disabled_ingredient(), not: {type: "brewinandchewin:fermenting"}}) // Doesn't seem to do much of anything?
+	event.remove({input: get_disabled_ingredient(), not: {type: "brewinandchewin:fermenting"}})
 	event.remove({output: get_disabled_ingredient().stackArray, not: {type: "brewinandchewin:fermenting"}})
 })
 

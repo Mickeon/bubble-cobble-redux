@@ -24,7 +24,7 @@ BlockEvents.rightClicked(["minecraft:note_block"], event => {
 
 ServerEvents.tags("block", event => {
 	event.add("bubble_cobble:no_fast_travel_when_carrying",
-		/sophisticatedstorage:.*(chest|barrel)/,
+		/^sophisticatedstorage:.*(chest|barrel)/,
 		"#lootr:containers",
 		"gravestone:gravestone"
 	)

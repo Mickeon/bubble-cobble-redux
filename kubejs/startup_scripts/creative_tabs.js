@@ -288,6 +288,24 @@ remove_and_merge_into_tab("bits_n_bobs:bnb_based", "create:base", [
 	"bits_n_bobs:red_chair",
 ])
 
+remove_and_merge_into_tab("copycats:functional", "copycats:main", [
+	"copycats:copycat_door",
+	"copycats:copycat_iron_door",
+	"copycats:copycat_folding_door",
+	"copycats:copycat_sliding_door",
+	"copycats:copycat_trapdoor",
+	"copycats:copycat_iron_trapdoor",
+	"copycats:copycat_wooden_button",
+	"copycats:copycat_stone_button",
+	"copycats:copycat_wooden_pressure_plate",
+	"copycats:copycat_light_weighted_pressure_plate",
+	"copycats:copycat_ladder",
+	"copycats:copycat_fluid_pipe",
+	"copycats:copycat_shaft",
+	"copycats:copycat_cogwheel",
+	"copycats:copycat_large_cogwheel",
+])
+
 StartupEvents.modifyCreativeTab("minecraft:tools_and_utilities", event => {
 	event.remove("minecraft:bundle") // In case its experimental datapack is enabled.
 	event.add("minecraft:bundle")

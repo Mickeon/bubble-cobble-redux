@@ -32,7 +32,7 @@ ItemEvents.modifyTooltips(event => {
 		event.modify([
 			"#sophisticatedbackpacks:upgrade",
 			"#sophisticatedstorage:upgrade",
-			/sophisticated.*upgrade/, // Catch all.
+			/^sophisticated.*upgrade/, // Catch all.
 		], text => {
 			text.dynamic("add_sophisticated_marker")
 		})
