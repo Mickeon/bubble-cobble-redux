@@ -1,11 +1,8 @@
-// @ts-check-
 // requires: probejs
 // requires: cobblemon
 // requires: emi
 
-if (global.is_dev()) {
-
-ServerEvents.basicCommand("datagen", event => {
+global.datagen_functions.pokemon_cosmetics = function() {
 	// Using EMI Stacks and PokemonItem directly is way more verbose and inefficient,
 	// But hey, it's more robust, and I could reuse this knowledge.
 	const $EmiStack = Java.loadClass("dev.emi.emi.api.stack.EmiStack")
@@ -68,7 +65,7 @@ ServerEvents.basicCommand("datagen", event => {
 			let species = $PokemonSpecies.getByName(species_name)
 			recipe.left.push(to_emi_stack($PokemonItem.from(species)))
 			recipe.output.push(to_emi_stack($PokemonItem.from(species, aspect)))
-			console.log($PokemonItem.from(species, aspect).get("cobblemon:pokemon_item"))
+			// console.log($PokemonItem.from(species, aspect).get("cobblemon:pokemon_item"))
 			// recipe.output.push(to_emi_stack(Item.of("cobblemon:pokemon_model", {"cobblemon:pokemon_item": {species: "cobblemon:" + pokemon.getSpecies(), aspects: aspects}})))
 			// recipe.output.push(`item:cobblemon:pokemon_model{'cobblemon:pokemon_item': {species: 'cobblemon:${species}', aspects: ['${aspect}']}}`)
 		}
@@ -81,6 +78,4 @@ ServerEvents.basicCommand("datagen", event => {
 		JsonIO.write(`${PATH}/${assignment.getId().getPath()}.json`, recipe)
 		// console.log(JSON.stringify(recipe, null, "\t"))
 	})
-})
-
 }
