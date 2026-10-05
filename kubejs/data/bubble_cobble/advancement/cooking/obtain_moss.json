@@ -1,0 +1,25 @@
+{
+  "parent": "farmersdelight:main/root",
+  "display": {
+    "icon": {
+      "id": "minersdelight:moss"
+    },
+    "title": ["",{"color":"white","text":"You found the "},{"color":"green","text":"[Moss]"},{"color":"white","text":"!"}],
+    "description": "Your title was upgraded to [Moss Finder]."
+  },
+  "criteria": {
+    "moss": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minersdelight:moss"
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+		"function": "bubble_cobble:play_moss"
+	}
+}

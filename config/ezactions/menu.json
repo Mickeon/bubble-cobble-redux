@@ -103,18 +103,6 @@
         }
       },
       {
-        "id": "cmd_19bd27f622c",
-        "title": "Infobox when staring at things",
-        "icon": "supplementaries:altimeter",
-        "note": "Jade",
-        "action": {
-          "type": "COMMAND",
-          "command": "/jadec config",
-          "delayTicks": 0,
-          "cycleCommands": false
-        }
-      },
-      {
         "id": "cmd_1a09797e912",
         "title": "Battle UI",
         "icon": "cobblemon:master_ball",
@@ -122,28 +110,6 @@
         "action": {
           "type": "COMMAND",
           "command": "/moonlight config cobblemon_battle_extras",
-          "delayTicks": 0,
-          "cycleCommands": false
-        }
-      },
-      {
-        "id": "cmd_19b12ea7f3b",
-        "title": "Accessories",
-        "icon": "mega_showdown:mega_bracelet_red",
-        "action": {
-          "type": "COMMAND",
-          "command": "/owo-config accessories",
-          "delayTicks": 0,
-          "cycleCommands": false
-        }
-      },
-      {
-        "id": "cmd_19b12eaf3de",
-        "title": "Particle Rain",
-        "icon": "minecraft:ghast_tear",
-        "action": {
-          "type": "COMMAND",
-          "command": "/particlerain",
           "delayTicks": 0,
           "cycleCommands": false
         }
@@ -160,6 +126,18 @@
         }
       },
       {
+        "id": "cmd_1a10d0036d2",
+        "title": "Shape Selector",
+        "icon": "minecraft:birch_stairs",
+        "note": "Opens Clutter No More",
+        "action": {
+          "type": "COMMAND",
+          "command": "/moonlight config clutternomore",
+          "delayTicks": 0,
+          "cycleCommands": false
+        }
+      },
+      {
         "id": "key_19b61a2722f",
         "title": "Voice Chat",
         "icon": "supplementaries:speaker_block",
@@ -168,6 +146,18 @@
           "name": "key.voice_chat",
           "toggle": false,
           "mode": "AUTO"
+        }
+      },
+      {
+        "id": "cmd_19b12933e7e",
+        "title": "General",
+        "icon": "minecraft:knowledge_book",
+        "note": "Opens MoonlightLib for configs",
+        "action": {
+          "type": "COMMAND",
+          "command": "/moonlight config",
+          "delayTicks": 0,
+          "cycleCommands": false
         }
       },
       {
@@ -205,18 +195,6 @@
             "action": {
               "type": "COMMAND",
               "command": "/configure emi_loot emi_loot_config",
-              "delayTicks": 0,
-              "cycleCommands": false
-            }
-          },
-          {
-            "id": "cmd_19b12933e7e",
-            "title": "General",
-            "icon": "minecraft:knowledge_book",
-            "note": "Opens Create\u0027s API for configs",
-            "action": {
-              "type": "COMMAND",
-              "command": "/catnip config",
               "delayTicks": 0,
               "cycleCommands": false
             }
@@ -273,6 +251,40 @@
             "action": {
               "type": "COMMAND",
               "command": "/configure particle_core particle_core_config",
+              "delayTicks": 0,
+              "cycleCommands": false
+            }
+          },
+          {
+            "id": "cmd_19b12ea7f3b",
+            "title": "Accessories",
+            "icon": "mega_showdown:mega_bracelet_red",
+            "action": {
+              "type": "COMMAND",
+              "command": "/owo-config accessories",
+              "delayTicks": 0,
+              "cycleCommands": false
+            }
+          },
+          {
+            "id": "cmd_19bd27f622c",
+            "title": "Infobox when staring at things",
+            "icon": "supplementaries:altimeter",
+            "note": "Jade",
+            "action": {
+              "type": "COMMAND",
+              "command": "/jadec config",
+              "delayTicks": 0,
+              "cycleCommands": false
+            }
+          },
+          {
+            "id": "cmd_19b12eaf3de",
+            "title": "Particle Rain",
+            "icon": "minecraft:ghast_tear",
+            "action": {
+              "type": "COMMAND",
+              "command": "/particlerain",
               "delayTicks": 0,
               "cycleCommands": false
             }

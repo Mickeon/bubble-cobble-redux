@@ -6,5 +6,10 @@
 	"lunar.event.bubble_cobble.no": "No",
 	"lunar.event.bubble_cobble.pleading_moon": "Pleading Moon",
 	"lunar.event.bubble_cobble.pride_moon": "Pride Moon",
-	"lunar.event.bubble_cobble.weegee": "Weegee"
+	"lunar.event.bubble_cobble.weegee": "Weegee",
+	"key.ezactions.bundle.advanced...": "Radial Menu: Advanced...",
+	"key.ezactions.bundle.configs...": "Radial Menu: Configs...",
+	"key.ezactions.bundle.map...": "Radial Menu: Map...",
+	"key.ezactions.bundle.storage...": "Radial Menu: Storage...",
+	"key.ezactions.bundle.toggles...": "Radial Menu: Toggles..."
 }

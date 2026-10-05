@@ -54,3 +54,7 @@ ClientEvents.lang("en_us", event => {
 	})
 	event.add("brewinandchewin", "item.brewinandchewin.egg_grog", "§3@Grog§r Is This True?")
 })
+
+ItemEvents.foodEaten("minersdelight:moss", event => {
+	event.player.playNotifySound("bubble_cobble:heal", "players", 1.0, 1.0)
+})

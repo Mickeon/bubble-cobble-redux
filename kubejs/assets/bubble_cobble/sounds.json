@@ -14,6 +14,11 @@
 			"bubble_cobble:advancement/cool"
 		]
 	},
+	"advancement.moss": {
+		"sounds": [
+			"bubble_cobble:advancement/moss"
+		]
+	},
 	"block.chiseled_mud_bricks.break": {
 		"sounds": [
 			{
@@ -302,6 +307,11 @@
 	"light_fire": {
 		"sounds": [
 			"bubble_cobble:light_fire"
+		]
+	},
+	"heal": {
+		"sounds": [
+			"bubble_cobble:heal"
 		]
 	}
 }

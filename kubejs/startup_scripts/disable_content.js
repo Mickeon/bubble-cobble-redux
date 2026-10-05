@@ -1,4 +1,4 @@
-let $BuildCreativeModeTabContentsEvent  = Java.loadClass("net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent")
+let $BuildCreativeModeTabContentsEvent = Java.loadClass("net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent")
 
 // Items in this list:
 // - Cannot be crafted
@@ -90,20 +90,15 @@ NativeEvents.onEvent("lowest", $BuildCreativeModeTabContentsEvent, event => {
 	}
 })
 
-if (Platform.isClientEnvironment()) {
+if (Platform.isClientEnvironment() && !is_dev()) {
 	// Keybinds are not available in a dedicated server.
-	// TODO: Make a distinction between dev-only and whatnot.
+	// FIXME: Despite being hidden, keybinds may still be bound by default.
 	let DISABLED_KEY_IDS = new Set([
 		"chunksfadein.keybinds.toggleMod",
-		// "iris.keybind.wireframe",
-		// "key.modernfix.config",
 		"gui.xaero_toggle_pac_chunk_claims",
-		// "treechop.key.toggle_chopping",
-		// "treechop.key.cycle_sneak_behavior",
-		// "treechop.key.open_settings_overlay",
-		"placebo.toggleTrails",
-		"placebo.toggleWings",
-		"key.jade.config",
+		"placebo.toggleTrails", // Defaults to Keypad 9.
+		"placebo.toggleWings", // Defaults to Keypad 8.
+		"key.jade.config", // Defaults to Keypad 0
 		"key.craftpresence.config_keycode.name",
 		"keybind.invmove.toggleMove",
 		"key.entityculling.toggle",
@@ -121,6 +116,15 @@ if (Platform.isClientEnvironment()) {
 		"key.cpm.qa_16",
 		"key.sophisticatedsorter.sort",
 		"key.sophisticatedsorter.disable",
+		"iris.keybind.wireframe",
+		"key.modernfix.config",
+		"key.kubejs.kubedex",
+		// "treechop.key.toggle_chopping",
+		// "treechop.key.cycle_sneak_behavior",
+		// "treechop.key.open_settings_overlay", // Defaults to N.
+		"lambdynlights.key.toggle_fps_dynamic_lighting",
+		"key.dynamic_fps.toggle_forced",
+		"key.dynamic_fps.toggle_disabled",
 	])
 
 	StartupEvents.postInit(event => {

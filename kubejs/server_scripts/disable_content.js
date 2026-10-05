@@ -27,6 +27,8 @@ ServerEvents.recipes(event => {
 	event.remove({output: get_disabled_ingredient().stackArray, not: {type: "brewinandchewin:fermenting"}})
 })
 
+if (!is_dev()) {
+
 ServerEvents.tags("item", event => {
 	event.removeAllTagsFrom(get_disabled_ingredient().itemIds)
 	event.add("c:hidden_from_recipe_viewers", get_disabled_ingredient().itemIds)
@@ -35,6 +37,8 @@ ServerEvents.tags("item", event => {
 ServerEvents.tags("mob_effect", event => {
 	event.add("c:hidden_from_recipe_viewers", HIDDEN_MOB_EFFECTS)
 })
+
+}
 
 // Hide advancements.
 ServerEvents.generateData("after_mods", event => {

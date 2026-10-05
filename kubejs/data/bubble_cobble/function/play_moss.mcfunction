@@ -1,0 +1,1 @@
+playsound bubble_cobble:advancement.moss player @s

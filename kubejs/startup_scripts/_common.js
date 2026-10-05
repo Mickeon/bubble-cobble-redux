@@ -77,6 +77,7 @@ StartupEvents.registry("sound_event", event => {
 	event.create("bubble_cobble:voice.sniper_apple")
 	event.create("bubble_cobble:item.bearded_dragon_chirp")
 	event.create("bubble_cobble:entity.enderman.bones_cracking")
+	event.create("bubble_cobble:heal")
 })
 
 /** @param {RegistryTypes.CreativeModeTab} tab_id */

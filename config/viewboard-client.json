@@ -1,6 +1,8 @@
 {
   "selectedLayout": "QWERTY",
   "controlsListWidthMode": "DEFAULT",
-  "ignoredBindings": [],
+  "ignoredBindings": [
+    "key.ponder.ponder"
+  ],
   "groups": []
 }

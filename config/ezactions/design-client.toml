@@ -21,11 +21,11 @@ scalePerItem = 6
 #ARGB color as int (0xAARRGGBB). Signed 32-bit; negatives are normal for opaque colors.
 # Default: -1442840576
 # Range: > -2147483648
-ringColor = -301989856
+ringColor = -15461267
 #Hover ARGB color as int (0xAARRGGBB).
 # Default: -260781
 # Range: > -2147483648
-hoverColor = -9584396
+hoverColor = -865222412
 #Design style: SOLID, SEGMENTED, OUTLINE, GLASS.
 designStyle = "GLASS"
 #Gap between slices in degrees (0..12).
@@ -35,8 +35,8 @@ sliceGapDeg = 0
 #Border ARGB color as int (0xAARRGGBB).
 # Default: 1728053247
 # Range: > -2147483648
-borderColor = 1716377599
+borderColor = -11675649
 #Center text ARGB color as int (0xAARRGGBB).
 # Default: -1
 # Range: > -2147483648
-textColor = -1
+textColor = -1048582

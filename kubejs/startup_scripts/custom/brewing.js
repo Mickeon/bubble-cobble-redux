@@ -44,6 +44,7 @@ StartupEvents.registry("item", event => {
 			.effect("minecraft:glowing", 8 * MIN, 1, 1.0)
 			.effect("minecraft:night_vision", 5 * MIN, 1, 1.0)
 	)
+			.displayName("Sparkling Rosé")
 
 	event.create("bubble_cobble:berry_juice_soda")
 			.displayName("Berry Juice Soda")
@@ -60,8 +61,7 @@ StartupEvents.registry("item", event => {
 					.usingConvertsTo(Item.of("minecraft:glass_bottle"))
 			)
 			.finishUsing((item_stack, level, entity) => {
-				entity.activeEffectsMap.forEach(
-					(effect, effect_instance) => {
+				entity.activeEffectsMap.forEach((effect, effect_instance) => {
 					if (!effect.value().beneficial) {
 						effect_instance.duration = 1
 					}
@@ -71,11 +71,13 @@ StartupEvents.registry("item", event => {
 				// entity.potionEffects.add("alexscaves:stunned", 3 * SEC, 0, false, false)
 				return item_stack
 			})
+			.tag("bubble_cobble:wines")
 	event.create("bubble_cobble:firebomb_whiskey")
 			.displayName("Firebomb Whiskey")
-			.tooltip([Text.gray("With an "), Text.gold("fiery"), Text.gray(" aftertaste.")])
-			.useAnimation("bow")
+			.tooltip(Text.join("With an ", Text.gold("fiery"), " aftertaste.").gray())
+			.useAnimation("spear")
 			.maxStackSize(16)
+			.burnTime(200 * SEC)
 			.food(f => f
 					.nutrition(2)
 					.saturation(0.5)
@@ -86,6 +88,8 @@ StartupEvents.registry("item", event => {
 			.use((level, player, hand) => true)
 			.releaseUsing((item_stack, level, entity, tick) => global.release_firebomb_whiskey(item_stack, level, entity, tick))
 			.finishUsing((item_stack, level, entity) => global.finish_using_firebomb_whiskey(item_stack, level, entity))
+			.barWidth((item_stack) => global.bar_width_firebomb_whiskey(item_stack))
+			.tag("bubble_cobble:wines")
 
 })
 
@@ -97,7 +101,7 @@ StartupEvents.registry("item", event => {
  */
 function create_wine(event, id, f) {
 	f.alwaysEdible()
-	event.createCustom(id, () =>
+	return event.createCustom(id, () =>
 		new $BoozeItem(
 			() => Fluid.getType("minecraft:water"), // TODO: Weird. What was this for again?
 			new $Item$Properties()
@@ -106,6 +110,7 @@ function create_wine(event, id, f) {
 					.food(f.build())
 		)
 	)
+		.tag("bubble_cobble:wines")
 }
 
 
@@ -128,8 +133,6 @@ NativeEvents.onEvent($ProjectileImpactEvent, event => {
 	const hit_point = event.getRayTraceResult().getLocation()
 	const hit_block = projectile.level.getBlock(hit_point)
 
-	let aabb = AABB.CUBE.move(hit_point.x(), hit_point.y(), hit_point.z()).inflate(3)
-
 	const explosion = hit_block.explode({
 		causesFire: true,
 		mode: "none",
@@ -139,6 +142,7 @@ NativeEvents.onEvent($ProjectileImpactEvent, event => {
 		source: projectile.owner
 	})
 
+	const aabb = AABB.CUBE.move(hit_point.x(), hit_point.y(), hit_point.z()).inflate(3)
 	const entities_in_range = projectile.level.getEntitiesWithin(aabb)
 	entities_in_range.forEach(entity => {
 		entity.attack(new DamageSource("minecraft:on_fire", projectile, projectile.owner), 2)
@@ -197,3 +201,11 @@ global.finish_using_firebomb_whiskey = function(item_stack, level, entity) {
 	return entity.eat(level, item_stack)
 }
 
+/** @param {$ItemStack} item_stack @returns {number} */
+global.bar_width_firebomb_whiskey = function(item_stack) {
+	if (!Client.player || Client.player.getUseItem() != item_stack) {
+		return 14 // No bar at all.
+	}
+
+	return remap(Client.player.getUseItemRemainingTicks(), 0, item_stack.getUseDuration(Client.player), 0, 13)
+}

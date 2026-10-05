@@ -15,10 +15,6 @@ ItemEvents.modifyTooltips(event => {
 	event.add("bubble_cobble:sparkling_rose", Text.gray("See the light with this."))
 })
 
-ClientEvents.lang("en_us", event => {
-	event.add("item.bubble_cobble.sparkling_rose", "Sparkling Rosé")
-})
-
 // Generate icons to be displayed inside the Keg in the Pouring and Fermenting recipes.
 ClientEvents.generateAssets("after_mods", event => {
 	// The key is the fluid ID, and the value is a corresponding item ID, or similar. In our case they are the same ID.
@@ -78,10 +74,10 @@ NativeEvents.onEvent($ScreenEvent$MouseButtonPressed$Pre, event => {
 	if (button instanceof $Button) {
 		button.setX(button.getX() + Utils.random.nextInt(-64, 64))
 		button.setY(button.getY() + Utils.random.nextInt(-64, 64))
-		Client.player.playNotifySound("artifacts:item.whoopee_cushion.fart", "master", 0.025, 0.05 + Utils.random.nextFloat() * 0.05)
+		Client.player.playNotifySound("artifacts:item.whoopee_cushion.fart", "master", 0.05, 0.05 + Utils.random.nextFloat() * 0.05)
 
 		Client.scheduleInTicks(Client.isPaused() ? 0 : 10, () => {
-			Client.player.playNotifySound("minecraft:entity.player.burp", "players", 0.025, 0.25 + Utils.random.nextFloat() * 0.75)
+			Client.player.playNotifySound("minecraft:entity.player.burp", "players", 0.05, 0.25 + Utils.random.nextFloat() * 0.75)
 		})
 		event.setCanceled(true)
 	}

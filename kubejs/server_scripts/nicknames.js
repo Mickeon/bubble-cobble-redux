@@ -7,8 +7,8 @@
  */
 
 
-let $PlayerEvent$TabListNameFormat  = Java.loadClass("net.neoforged.neoforge.event.entity.player.PlayerEvent$TabListNameFormat")
-let $PlayerEvent$NameFormat  = Java.loadClass("net.neoforged.neoforge.event.entity.player.PlayerEvent$NameFormat")
+let $PlayerEvent$TabListNameFormat = Java.loadClass("net.neoforged.neoforge.event.entity.player.PlayerEvent$TabListNameFormat")
+let $PlayerEvent$NameFormat = Java.loadClass("net.neoforged.neoforge.event.entity.player.PlayerEvent$NameFormat")
 
 const NICKNAME_JSON_PATH = "nicknames.json"
 const NICKNAME_MAX_STRING_LENGTH = 48
@@ -17,11 +17,11 @@ const SUCCESS = 1
 const FAILURE = 0
 let nicknames = try_read_and_parse_json(NICKNAME_JSON_PATH) ?? {}
 
-const TEXT_NICKNAME_HINT = Text.of([
-	Text.of(" 🧊 If you don't know what you're doing, make yourself a nice nickname by clicking on "),
-	Text.of("this website").aqua().underlined().clickOpenUrl("https://text.datapackhub.net/").hover("https://text.datapackhub.net/"),
-	Text.of(" On the bottom-left, click on \"1.21.9+\" and set it to \"pre-1.21.5\". Write something down, then click on the Copy icon on the bottom-left."),
-]).color("#83BED9")
+const TEXT_NICKNAME_HINT = Text.join(
+	Text.of(` 🧊 If you don't know what you're doing, make yourself a nice nickname by clicking on `),
+	Text.of(`this website`).aqua().underlined().clickOpenUrl("https://text.datapackhub.net/").hover("https://text.datapackhub.net/"),
+	Text.of(` On the bottom-left, click on "1.21.9+" and set it to "pre-1.21.5". Write something down, then click on the Copy icon on the bottom-left.`),
+).color("#83BED9")
 
 // ServerEvents.loaded(event => {
 // 	nicknames = try_read_and_parse_json(NICKNAME_JSON_PATH) ?? {}

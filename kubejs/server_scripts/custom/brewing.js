@@ -88,12 +88,6 @@ function fermenting(event, fluid_result, temperature, ingredients, item_result, 
 }
 
 ServerEvents.tags("item", event => {
-	event.add("bubble_cobble:wines",
-		"bubble_cobble:sweet_berry_wine",
-		"bubble_cobble:honey_liqueur",
-		"bubble_cobble:spumante",
-		"bubble_cobble:sparkling_rose",
-		"bubble_cobble:berry_juice_soda",
-		"bubble_cobble:firebomb_whiskey"
-	)
+	event.add("c:drinks/juice", "bubble_cobble:berry_juice_soda")
+	event.add("create:blaze_burner_fuel/special", "bubble_cobble:firebomb_whiskey")
 })
