@@ -11,5 +11,7 @@
 	"key.ezactions.bundle.configs...": "Radial Menu: Configs...",
 	"key.ezactions.bundle.map...": "Radial Menu: Map...",
 	"key.ezactions.bundle.storage...": "Radial Menu: Storage...",
-	"key.ezactions.bundle.toggles...": "Radial Menu: Toggles..."
+	"key.ezactions.bundle.toggles...": "Radial Menu: Toggles...",
+	"enchantment.bubble_cobble.pattern.description": "Blocks are placed in a consistent, grid-like pattern.",
+	"enchantment.bubble_cobble.sequence.description": "Blocks are placed in the order they appear in the hotbar."
 }

@@ -9,3 +9,9 @@ BlockEvents.rightClicked(event => {
 		}
 	}
 })
+
+ServerEvents.tags("enchantment", event => {
+	event.add("bubble_cobble:exclusive_set/trowel", "bubble_cobble:sequence", "bubble_cobble:pattern")
+	event.add("minecraft:in_enchanting_table", "#bubble_cobble:exclusive_set/trowel")
+	event.add("minecraft:on_random_loot", "#bubble_cobble:exclusive_set/trowel")
+})
