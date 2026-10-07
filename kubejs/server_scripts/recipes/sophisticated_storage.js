@@ -123,6 +123,11 @@ ServerEvents.recipes(event => {
 	// Too expensive. Needs more complex replacement.
 	// event.replaceInput({id: /^sophisticated.*magnet_upgrade$/}, "minecraft:iron_ingot", "cobblemon:magnet")
 
+	// Change recipe of Paintbrush (use Brush as a base)
+	event.shapeless("sophisticatedstorage:paintbrush",
+		["minecraft:brush", "sophisticatedstorage:upgrade_base"]
+	).id("sophisticatedstorage:paintbrush")
+
 	add_sophisticated_storage_recipes_for_modded_wood_types(event)
 })
 

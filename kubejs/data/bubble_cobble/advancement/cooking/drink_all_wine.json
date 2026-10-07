@@ -1,5 +1,5 @@
 {
-  "parent": "bubble_cobble:drink_wine",
+  "parent": "bubble_cobble:cooking/drink_wine",
   "display": {
     "icon": {
       "id": "bubble_cobble:spumante"

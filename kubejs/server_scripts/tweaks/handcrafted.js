@@ -29,6 +29,7 @@ ServerEvents.tags("block", event => {
 		"#handcrafted:benches",
 		"#handcrafted:chairs",
 		"#handcrafted:couches",
+		"#handcrafted:dining_benches",
 		"urban_decor:plastic_chair",
 		"urban_decor:stainless_steel_chair",
 		"urban_decor:booth",

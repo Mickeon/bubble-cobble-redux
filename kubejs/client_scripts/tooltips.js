@@ -181,8 +181,7 @@ ItemEvents.dynamicTooltips("skeleton_skull", event => {
 
 
 ItemEvents.dynamicTooltips("show_player_head_owner", event => {
-	/** @import {$ResolvableProfile} from "@package/net/minecraft/world/item/component"*/
-	const profile = /** @type {$ResolvableProfile?} */ (event.item.components.get("minecraft:profile"))
+	const profile = event.item.get("minecraft:profile")
 	const player_name = profile && profile.isResolved() && profile.name().get()
 	if (player_name) {
 		event.lines.add(1, Text.translateWithFallback("", "Looks like %s's head...", [Text.aqua(player_name)]).darkGray())

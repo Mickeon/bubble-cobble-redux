@@ -161,7 +161,7 @@ key_key.craftingtweaks.transfer_stack:key.keyboard.unknown:
 key_key.cobblemonraiddens.mouse:key.keyboard.left.alt:
 key_key.cobblemonraiddens.accept:key.keyboard.unknown:
 key_key.cobblemonraiddens.deny:key.keyboard.n:
-key_key.cleanertooltips.hide_tooltip:key.keyboard.left.shift:
+key_key.cleanertooltips.show_default:key.keyboard.left.alt:
 key_key.sophisticatedcore.sort:key.keyboard.unknown:
 key_key.sophisticatedcore.transfer_to_storage:key.keyboard.unknown:
 key_key.sophisticatedcore.transfer_to_inventory:key.keyboard.unknown:
@@ -181,7 +181,7 @@ key_key.sophisticatedbackpacks.toggle_upgrade_2:key.keyboard.keypad.2:
 key_key.sophisticatedbackpacks.toggle_upgrade_1:key.keyboard.keypad.1:
 key_key.sophisticatedbackpacks.toggle_upgrade_5:key.keyboard.unknown:
 key_key.relics.active_abilities_list:key.keyboard.left.alt:
-key_key.relics.research_relic:key.keyboard.left.shift:
+key_key.relics.research_relic:key.keyboard.w:
 key_key.carry.desc:key.keyboard.unknown:
 key_key.extendedhotbar.switch:key.keyboard.x:
 key_key.extendedhotbar.toggle:key.keyboard.f8:

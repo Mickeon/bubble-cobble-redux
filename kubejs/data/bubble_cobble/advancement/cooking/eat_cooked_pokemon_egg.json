@@ -1,5 +1,5 @@
 {
-  "parent": "bubble_cobble:eat_cooked_lucky_egg",
+  "parent": "bubble_cobble:cooking/eat_cooked_lucky_egg",
   "display": {
     "icon": {
       "id": "cobbreeding:pokemon_egg"

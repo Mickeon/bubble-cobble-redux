@@ -21,6 +21,7 @@
 		"sophisticatedbackpacks:default": "DISABLED",
 		"farmersdelight:jei_plugin": "DISABLED",
 		"copycats:jei_plugin": "DISABLED",
+		"stylisheffects:main": "DISABLED",
 		"curios:curios": "DISABLED"
 	},
 	"defaultPhaseOverrides": {
