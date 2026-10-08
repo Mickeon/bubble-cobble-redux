@@ -1,0 +1,32 @@
+{
+	"__comment": "Generated data. Do not edit manually.",
+	"type": "remi:group",
+	"id": "biomeswevegone:wood_sets/cika",
+	"name": "§bCika§r Wood Set",
+	"contents": [
+		"item:biomeswevegone:cika_boat",
+		"item:biomeswevegone:cika_bookshelf",
+		"item:biomeswevegone:cika_button",
+		"item:biomeswevegone:cika_chest_boat",
+		"item:biomeswevegone:cika_crafting_table",
+		"item:biomeswevegone:cika_door",
+		"item:biomeswevegone:cika_fence",
+		"item:biomeswevegone:cika_fence_gate",
+		"item:biomeswevegone:cika_hanging_sign",
+		"item:biomeswevegone:cika_leaves",
+		"item:biomeswevegone:cika_log",
+		"item:biomeswevegone:cika_planks",
+		"item:biomeswevegone:cika_pressure_plate",
+		"item:biomeswevegone:cika_sapling",
+		"item:biomeswevegone:cika_sign",
+		"item:biomeswevegone:cika_slab",
+		"item:biomeswevegone:cika_stairs",
+		"item:biomeswevegone:cika_trapdoor",
+		"item:biomeswevegone:cika_wood",
+		"item:biomeswevegone:stripped_cika_log",
+		"item:biomeswevegone:stripped_cika_wood",
+		"item:snowyspirit:biomeswevegone/sled_cika",
+		"item:supplementaries:biomeswevegone/cannon_boat_cika",
+		"item:supplementaries:biomeswevegone/way_sign_cika"
+	]
+}

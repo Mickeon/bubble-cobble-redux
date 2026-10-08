@@ -1,0 +1,30 @@
+{
+	"__comment": "Generated data. Do not edit manually.",
+	"type": "remi:group",
+	"id": "biomesoplenty:wood_sets/hellbark",
+	"name": "§bHellbark§r Wood Set",
+	"contents": [
+		"item:biomesoplenty:hellbark_boat",
+		"item:biomesoplenty:hellbark_button",
+		"item:biomesoplenty:hellbark_chest_boat",
+		"item:biomesoplenty:hellbark_door",
+		"item:biomesoplenty:hellbark_fence",
+		"item:biomesoplenty:hellbark_fence_gate",
+		"item:biomesoplenty:hellbark_hanging_sign",
+		"item:biomesoplenty:hellbark_leaves",
+		"item:biomesoplenty:hellbark_log",
+		"item:biomesoplenty:hellbark_planks",
+		"item:biomesoplenty:hellbark_pressure_plate",
+		"item:biomesoplenty:hellbark_sapling",
+		"item:biomesoplenty:hellbark_sign",
+		"item:biomesoplenty:hellbark_slab",
+		"item:biomesoplenty:hellbark_stairs",
+		"item:biomesoplenty:hellbark_trapdoor",
+		"item:biomesoplenty:hellbark_wood",
+		"item:biomesoplenty:potted_hellbark_sapling",
+		"item:biomesoplenty:stripped_hellbark_log",
+		"item:biomesoplenty:stripped_hellbark_wood",
+		"item:supplementaries:biomesoplenty/cannon_boat_hellbark",
+		"item:supplementaries:biomesoplenty/way_sign_hellbark"
+	]
+}

@@ -1,0 +1,32 @@
+{
+	"__comment": "Generated data. Do not edit manually.",
+	"type": "remi:group",
+	"id": "biomesoplenty:wood_sets/pine",
+	"name": "§bPine§r Wood Set",
+	"contents": [
+		"item:biomesoplenty:blackstone_spines",
+		"item:biomesoplenty:pine_boat",
+		"item:biomesoplenty:pine_button",
+		"item:biomesoplenty:pine_chest_boat",
+		"item:biomesoplenty:pine_door",
+		"item:biomesoplenty:pine_fence",
+		"item:biomesoplenty:pine_fence_gate",
+		"item:biomesoplenty:pine_hanging_sign",
+		"item:biomesoplenty:pine_leaves",
+		"item:biomesoplenty:pine_log",
+		"item:biomesoplenty:pine_planks",
+		"item:biomesoplenty:pine_pressure_plate",
+		"item:biomesoplenty:pine_sapling",
+		"item:biomesoplenty:pine_sign",
+		"item:biomesoplenty:pine_slab",
+		"item:biomesoplenty:pine_stairs",
+		"item:biomesoplenty:pine_trapdoor",
+		"item:biomesoplenty:pine_wood",
+		"item:biomesoplenty:potted_pine_sapling",
+		"item:biomesoplenty:stripped_pine_log",
+		"item:biomesoplenty:stripped_pine_wood",
+		"item:snowyspirit:biomesoplenty/sled_pine",
+		"item:supplementaries:biomesoplenty/cannon_boat_pine",
+		"item:supplementaries:biomesoplenty/way_sign_pine"
+	]
+}

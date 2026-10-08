@@ -1,0 +1,31 @@
+{
+	"__comment": "Generated data. Do not edit manually.",
+	"type": "remi:group",
+	"id": "biomesoplenty:wood_sets/redwood",
+	"name": "§bRedwood§r Wood Set",
+	"contents": [
+		"item:biomesoplenty:potted_redwood_sapling",
+		"item:biomesoplenty:redwood_boat",
+		"item:biomesoplenty:redwood_button",
+		"item:biomesoplenty:redwood_chest_boat",
+		"item:biomesoplenty:redwood_door",
+		"item:biomesoplenty:redwood_fence",
+		"item:biomesoplenty:redwood_fence_gate",
+		"item:biomesoplenty:redwood_hanging_sign",
+		"item:biomesoplenty:redwood_leaves",
+		"item:biomesoplenty:redwood_log",
+		"item:biomesoplenty:redwood_planks",
+		"item:biomesoplenty:redwood_pressure_plate",
+		"item:biomesoplenty:redwood_sapling",
+		"item:biomesoplenty:redwood_sign",
+		"item:biomesoplenty:redwood_slab",
+		"item:biomesoplenty:redwood_stairs",
+		"item:biomesoplenty:redwood_trapdoor",
+		"item:biomesoplenty:redwood_wood",
+		"item:biomesoplenty:stripped_redwood_log",
+		"item:biomesoplenty:stripped_redwood_wood",
+		"item:snowyspirit:biomesoplenty/sled_redwood",
+		"item:supplementaries:biomesoplenty/cannon_boat_redwood",
+		"item:supplementaries:biomesoplenty/way_sign_redwood"
+	]
+}

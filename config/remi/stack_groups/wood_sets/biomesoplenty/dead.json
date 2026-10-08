@@ -1,0 +1,33 @@
+{
+	"__comment": "Generated data. Do not edit manually.",
+	"type": "remi:group",
+	"id": "biomesoplenty:wood_sets/dead",
+	"name": "§bDead§r Wood Set",
+	"contents": [
+		"item:biomesoplenty:dead_boat",
+		"item:biomesoplenty:dead_branch",
+		"item:biomesoplenty:dead_button",
+		"item:biomesoplenty:dead_chest_boat",
+		"item:biomesoplenty:dead_door",
+		"item:biomesoplenty:dead_fence",
+		"item:biomesoplenty:dead_fence_gate",
+		"item:biomesoplenty:dead_grass",
+		"item:biomesoplenty:dead_hanging_sign",
+		"item:biomesoplenty:dead_leaves",
+		"item:biomesoplenty:dead_log",
+		"item:biomesoplenty:dead_planks",
+		"item:biomesoplenty:dead_pressure_plate",
+		"item:biomesoplenty:dead_sapling",
+		"item:biomesoplenty:dead_sign",
+		"item:biomesoplenty:dead_slab",
+		"item:biomesoplenty:dead_stairs",
+		"item:biomesoplenty:dead_trapdoor",
+		"item:biomesoplenty:dead_wood",
+		"item:biomesoplenty:potted_dead_sapling",
+		"item:biomesoplenty:stripped_dead_log",
+		"item:biomesoplenty:stripped_dead_wood",
+		"item:snowyspirit:biomesoplenty/sled_dead",
+		"item:supplementaries:biomesoplenty/cannon_boat_dead",
+		"item:supplementaries:biomesoplenty/way_sign_dead"
+	]
+}

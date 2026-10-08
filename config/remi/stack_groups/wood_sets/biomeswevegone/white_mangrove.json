@@ -1,0 +1,30 @@
+{
+	"__comment": "Generated data. Do not edit manually.",
+	"type": "remi:group",
+	"id": "biomeswevegone:wood_sets/white_mangrove",
+	"name": "§bWhite Mangrove§r Wood Set",
+	"contents": [
+		"item:biomeswevegone:stripped_white_mangrove_log",
+		"item:biomeswevegone:stripped_white_mangrove_wood",
+		"item:biomeswevegone:white_mangrove_boat",
+		"item:biomeswevegone:white_mangrove_bookshelf",
+		"item:biomeswevegone:white_mangrove_button",
+		"item:biomeswevegone:white_mangrove_chest_boat",
+		"item:biomeswevegone:white_mangrove_crafting_table",
+		"item:biomeswevegone:white_mangrove_door",
+		"item:biomeswevegone:white_mangrove_fence",
+		"item:biomeswevegone:white_mangrove_fence_gate",
+		"item:biomeswevegone:white_mangrove_hanging_sign",
+		"item:biomeswevegone:white_mangrove_leaves",
+		"item:biomeswevegone:white_mangrove_log",
+		"item:biomeswevegone:white_mangrove_planks",
+		"item:biomeswevegone:white_mangrove_pressure_plate",
+		"item:biomeswevegone:white_mangrove_sapling",
+		"item:biomeswevegone:white_mangrove_sign",
+		"item:biomeswevegone:white_mangrove_stairs",
+		"item:biomeswevegone:white_mangrove_trapdoor",
+		"item:snowyspirit:biomeswevegone/sled_white_mangrove",
+		"item:supplementaries:biomeswevegone/cannon_boat_white_mangrove",
+		"item:supplementaries:biomeswevegone/way_sign_white_mangrove"
+	]
+}

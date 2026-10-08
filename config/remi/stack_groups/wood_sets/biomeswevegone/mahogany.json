@@ -1,0 +1,31 @@
+{
+	"__comment": "Generated data. Do not edit manually.",
+	"type": "remi:group",
+	"id": "biomeswevegone:wood_sets/mahogany",
+	"name": "§bMahogany§r Wood Set",
+	"contents": [
+		"item:biomeswevegone:mahogany_boat",
+		"item:biomeswevegone:mahogany_bookshelf",
+		"item:biomeswevegone:mahogany_button",
+		"item:biomeswevegone:mahogany_chest_boat",
+		"item:biomeswevegone:mahogany_crafting_table",
+		"item:biomeswevegone:mahogany_door",
+		"item:biomeswevegone:mahogany_fence",
+		"item:biomeswevegone:mahogany_fence_gate",
+		"item:biomeswevegone:mahogany_hanging_sign",
+		"item:biomeswevegone:mahogany_leaves",
+		"item:biomeswevegone:mahogany_log",
+		"item:biomeswevegone:mahogany_planks",
+		"item:biomeswevegone:mahogany_pressure_plate",
+		"item:biomeswevegone:mahogany_sapling",
+		"item:biomeswevegone:mahogany_sign",
+		"item:biomeswevegone:mahogany_slab",
+		"item:biomeswevegone:mahogany_trapdoor",
+		"item:biomeswevegone:mahogany_wood",
+		"item:biomeswevegone:stripped_mahogany_log",
+		"item:biomeswevegone:stripped_mahogany_wood",
+		"item:snowyspirit:biomeswevegone/sled_mahogany",
+		"item:supplementaries:biomeswevegone/cannon_boat_mahogany",
+		"item:supplementaries:biomeswevegone/way_sign_mahogany"
+	]
+}

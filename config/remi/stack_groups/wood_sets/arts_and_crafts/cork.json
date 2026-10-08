@@ -1,0 +1,32 @@
+{
+	"__comment": "Generated data. Do not edit manually.",
+	"type": "remi:group",
+	"id": "arts_and_crafts:wood_sets/cork",
+	"name": "§bCork§r Wood Set",
+	"contents": [
+		"item:arts_and_crafts:cork",
+		"item:arts_and_crafts:cork_boat",
+		"item:arts_and_crafts:cork_button",
+		"item:arts_and_crafts:cork_chest_boat",
+		"item:arts_and_crafts:cork_door",
+		"item:arts_and_crafts:cork_fence",
+		"item:arts_and_crafts:cork_fence_gate",
+		"item:arts_and_crafts:cork_hanging_sign",
+		"item:arts_and_crafts:cork_leaves",
+		"item:arts_and_crafts:cork_log",
+		"item:arts_and_crafts:cork_planks",
+		"item:arts_and_crafts:cork_pressure_plate",
+		"item:arts_and_crafts:cork_sapling",
+		"item:arts_and_crafts:cork_sign",
+		"item:arts_and_crafts:cork_slab",
+		"item:arts_and_crafts:cork_stairs",
+		"item:arts_and_crafts:cork_trapdoor",
+		"item:arts_and_crafts:cork_wood",
+		"item:arts_and_crafts:smooth_cork",
+		"item:arts_and_crafts:stripped_cork_log",
+		"item:arts_and_crafts:stripped_cork_wood",
+		"item:snowyspirit:arts_and_crafts/sled_cork",
+		"item:supplementaries:arts_and_crafts/cannon_boat_cork",
+		"item:supplementaries:arts_and_crafts/way_sign_cork"
+	]
+}

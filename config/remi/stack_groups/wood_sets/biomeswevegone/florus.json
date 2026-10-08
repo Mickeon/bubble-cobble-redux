@@ -1,0 +1,30 @@
+{
+	"__comment": "Generated data. Do not edit manually.",
+	"type": "remi:group",
+	"id": "biomeswevegone:wood_sets/florus",
+	"name": "§bFlorus§r Wood Set",
+	"contents": [
+		"item:biomeswevegone:florus_boat",
+		"item:biomeswevegone:florus_bookshelf",
+		"item:biomeswevegone:florus_button",
+		"item:biomeswevegone:florus_chest_boat",
+		"item:biomeswevegone:florus_crafting_table",
+		"item:biomeswevegone:florus_door",
+		"item:biomeswevegone:florus_fence",
+		"item:biomeswevegone:florus_fence_gate",
+		"item:biomeswevegone:florus_hanging_sign",
+		"item:biomeswevegone:florus_planks",
+		"item:biomeswevegone:florus_pressure_plate",
+		"item:biomeswevegone:florus_sign",
+		"item:biomeswevegone:florus_slab",
+		"item:biomeswevegone:florus_stairs",
+		"item:biomeswevegone:florus_stem",
+		"item:biomeswevegone:florus_trapdoor",
+		"item:biomeswevegone:florus_wood",
+		"item:biomeswevegone:stripped_florus_stem",
+		"item:biomeswevegone:stripped_florus_wood",
+		"item:snowyspirit:biomeswevegone/sled_florus",
+		"item:supplementaries:biomeswevegone/cannon_boat_florus",
+		"item:supplementaries:biomeswevegone/way_sign_florus"
+	]
+}

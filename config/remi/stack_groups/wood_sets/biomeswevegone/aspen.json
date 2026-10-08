@@ -1,0 +1,32 @@
+{
+	"__comment": "Generated data. Do not edit manually.",
+	"type": "remi:group",
+	"id": "biomeswevegone:wood_sets/aspen",
+	"name": "§bAspen§r Wood Set",
+	"contents": [
+		"item:biomeswevegone:aspen_boat",
+		"item:biomeswevegone:aspen_bookshelf",
+		"item:biomeswevegone:aspen_button",
+		"item:biomeswevegone:aspen_chest_boat",
+		"item:biomeswevegone:aspen_crafting_table",
+		"item:biomeswevegone:aspen_door",
+		"item:biomeswevegone:aspen_fence",
+		"item:biomeswevegone:aspen_fence_gate",
+		"item:biomeswevegone:aspen_hanging_sign",
+		"item:biomeswevegone:aspen_leaves",
+		"item:biomeswevegone:aspen_log",
+		"item:biomeswevegone:aspen_planks",
+		"item:biomeswevegone:aspen_pressure_plate",
+		"item:biomeswevegone:aspen_sapling",
+		"item:biomeswevegone:aspen_sign",
+		"item:biomeswevegone:aspen_slab",
+		"item:biomeswevegone:aspen_stairs",
+		"item:biomeswevegone:aspen_trapdoor",
+		"item:biomeswevegone:aspen_wood",
+		"item:biomeswevegone:stripped_aspen_log",
+		"item:biomeswevegone:stripped_aspen_wood",
+		"item:snowyspirit:biomeswevegone/sled_aspen",
+		"item:supplementaries:biomeswevegone/cannon_boat_aspen",
+		"item:supplementaries:biomeswevegone/way_sign_aspen"
+	]
+}

@@ -1,0 +1,31 @@
+{
+	"__comment": "Generated data. Do not edit manually.",
+	"type": "remi:group",
+	"id": "biomeswevegone:wood_sets/rainbow_eucalyptus",
+	"name": "§bRainbow Eucalyptus§r Wood Set",
+	"contents": [
+		"item:biomeswevegone:rainbow_eucalyptus_boat",
+		"item:biomeswevegone:rainbow_eucalyptus_bookshelf",
+		"item:biomeswevegone:rainbow_eucalyptus_button",
+		"item:biomeswevegone:rainbow_eucalyptus_chest_boat",
+		"item:biomeswevegone:rainbow_eucalyptus_crafting_table",
+		"item:biomeswevegone:rainbow_eucalyptus_door",
+		"item:biomeswevegone:rainbow_eucalyptus_fence",
+		"item:biomeswevegone:rainbow_eucalyptus_fence_gate",
+		"item:biomeswevegone:rainbow_eucalyptus_hanging_sign",
+		"item:biomeswevegone:rainbow_eucalyptus_leaves",
+		"item:biomeswevegone:rainbow_eucalyptus_log",
+		"item:biomeswevegone:rainbow_eucalyptus_planks",
+		"item:biomeswevegone:rainbow_eucalyptus_pressure_plate",
+		"item:biomeswevegone:rainbow_eucalyptus_sapling",
+		"item:biomeswevegone:rainbow_eucalyptus_sign",
+		"item:biomeswevegone:rainbow_eucalyptus_slab",
+		"item:biomeswevegone:rainbow_eucalyptus_stairs",
+		"item:biomeswevegone:rainbow_eucalyptus_trapdoor",
+		"item:biomeswevegone:rainbow_eucalyptus_wood",
+		"item:biomeswevegone:stripped_rainbow_eucalyptus_wood",
+		"item:snowyspirit:biomeswevegone/sled_rainbow_eucalyptus",
+		"item:supplementaries:biomeswevegone/cannon_boat_rainbow_eucalyptus",
+		"item:supplementaries:biomeswevegone/way_sign_rainbow_eucalyptus"
+	]
+}

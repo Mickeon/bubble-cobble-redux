@@ -1,0 +1,15 @@
+{
+	"__comment": "Generated data. Do not edit manually.",
+	"type": "remi:group",
+	"id": "biomeswevegone:wood_sets/palo_verde",
+	"name": "§bPalo Verde§r Wood Set",
+	"contents": [
+		"item:biomeswevegone:flowering_palo_verde_leaves",
+		"item:biomeswevegone:palo_verde_leaves",
+		"item:biomeswevegone:palo_verde_log",
+		"item:biomeswevegone:palo_verde_sapling",
+		"item:biomeswevegone:palo_verde_wood",
+		"item:biomeswevegone:stripped_palo_verde_log",
+		"item:biomeswevegone:stripped_palo_verde_wood"
+	]
+}

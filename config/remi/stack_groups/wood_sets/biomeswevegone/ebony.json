@@ -1,0 +1,32 @@
+{
+	"__comment": "Generated data. Do not edit manually.",
+	"type": "remi:group",
+	"id": "biomeswevegone:wood_sets/ebony",
+	"name": "§bEbony§r Wood Set",
+	"contents": [
+		"item:biomeswevegone:ebony_boat",
+		"item:biomeswevegone:ebony_bookshelf",
+		"item:biomeswevegone:ebony_button",
+		"item:biomeswevegone:ebony_chest_boat",
+		"item:biomeswevegone:ebony_crafting_table",
+		"item:biomeswevegone:ebony_door",
+		"item:biomeswevegone:ebony_fence",
+		"item:biomeswevegone:ebony_fence_gate",
+		"item:biomeswevegone:ebony_hanging_sign",
+		"item:biomeswevegone:ebony_leaves",
+		"item:biomeswevegone:ebony_log",
+		"item:biomeswevegone:ebony_planks",
+		"item:biomeswevegone:ebony_pressure_plate",
+		"item:biomeswevegone:ebony_sapling",
+		"item:biomeswevegone:ebony_sign",
+		"item:biomeswevegone:ebony_slab",
+		"item:biomeswevegone:ebony_stairs",
+		"item:biomeswevegone:ebony_trapdoor",
+		"item:biomeswevegone:ebony_wood",
+		"item:biomeswevegone:stripped_ebony_log",
+		"item:biomeswevegone:stripped_ebony_wood",
+		"item:snowyspirit:biomeswevegone/sled_ebony",
+		"item:supplementaries:biomeswevegone/cannon_boat_ebony",
+		"item:supplementaries:biomeswevegone/way_sign_ebony"
+	]
+}

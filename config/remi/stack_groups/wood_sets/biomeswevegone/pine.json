@@ -1,0 +1,33 @@
+{
+	"__comment": "Generated data. Do not edit manually.",
+	"type": "remi:group",
+	"id": "biomeswevegone:wood_sets/pine",
+	"name": "§bPine§r Wood Set",
+	"contents": [
+		"item:biomeswevegone:alpine_bellflower",
+		"item:biomeswevegone:golden_spined_cactus",
+		"item:biomeswevegone:pine_boat",
+		"item:biomeswevegone:pine_bookshelf",
+		"item:biomeswevegone:pine_button",
+		"item:biomeswevegone:pine_chest_boat",
+		"item:biomeswevegone:pine_crafting_table",
+		"item:biomeswevegone:pine_door",
+		"item:biomeswevegone:pine_fence",
+		"item:biomeswevegone:pine_fence_gate",
+		"item:biomeswevegone:pine_hanging_sign",
+		"item:biomeswevegone:pine_leaves",
+		"item:biomeswevegone:pine_log",
+		"item:biomeswevegone:pine_planks",
+		"item:biomeswevegone:pine_pressure_plate",
+		"item:biomeswevegone:pine_sapling",
+		"item:biomeswevegone:pine_sign",
+		"item:biomeswevegone:pine_slab",
+		"item:biomeswevegone:pine_stairs",
+		"item:biomeswevegone:pine_trapdoor",
+		"item:biomeswevegone:pine_wood",
+		"item:biomeswevegone:stripped_pine_wood",
+		"item:snowyspirit:biomeswevegone/sled_pine",
+		"item:supplementaries:biomeswevegone/cannon_boat_pine",
+		"item:supplementaries:biomeswevegone/way_sign_pine"
+	]
+}

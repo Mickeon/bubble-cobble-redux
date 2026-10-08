@@ -1,0 +1,31 @@
+{
+	"__comment": "Generated data. Do not edit manually.",
+	"type": "remi:group",
+	"id": "biomeswevegone:wood_sets/redwood",
+	"name": "§bRedwood§r Wood Set",
+	"contents": [
+		"item:biomeswevegone:redwood_boat",
+		"item:biomeswevegone:redwood_bookshelf",
+		"item:biomeswevegone:redwood_button",
+		"item:biomeswevegone:redwood_chest_boat",
+		"item:biomeswevegone:redwood_crafting_table",
+		"item:biomeswevegone:redwood_door",
+		"item:biomeswevegone:redwood_fence",
+		"item:biomeswevegone:redwood_fence_gate",
+		"item:biomeswevegone:redwood_hanging_sign",
+		"item:biomeswevegone:redwood_leaves",
+		"item:biomeswevegone:redwood_log",
+		"item:biomeswevegone:redwood_planks",
+		"item:biomeswevegone:redwood_pressure_plate",
+		"item:biomeswevegone:redwood_sapling",
+		"item:biomeswevegone:redwood_sign",
+		"item:biomeswevegone:redwood_slab",
+		"item:biomeswevegone:redwood_trapdoor",
+		"item:biomeswevegone:redwood_wood",
+		"item:biomeswevegone:stripped_redwood_log",
+		"item:biomeswevegone:stripped_redwood_wood",
+		"item:snowyspirit:biomeswevegone/sled_redwood",
+		"item:supplementaries:biomeswevegone/cannon_boat_redwood",
+		"item:supplementaries:biomeswevegone/way_sign_redwood"
+	]
+}

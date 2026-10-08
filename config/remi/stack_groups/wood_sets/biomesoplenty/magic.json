@@ -1,0 +1,31 @@
+{
+	"__comment": "Generated data. Do not edit manually.",
+	"type": "remi:group",
+	"id": "biomesoplenty:wood_sets/magic",
+	"name": "§bMagic§r Wood Set",
+	"contents": [
+		"item:biomesoplenty:magic_boat",
+		"item:biomesoplenty:magic_button",
+		"item:biomesoplenty:magic_chest_boat",
+		"item:biomesoplenty:magic_door",
+		"item:biomesoplenty:magic_fence",
+		"item:biomesoplenty:magic_fence_gate",
+		"item:biomesoplenty:magic_hanging_sign",
+		"item:biomesoplenty:magic_leaves",
+		"item:biomesoplenty:magic_log",
+		"item:biomesoplenty:magic_planks",
+		"item:biomesoplenty:magic_pressure_plate",
+		"item:biomesoplenty:magic_sapling",
+		"item:biomesoplenty:magic_sign",
+		"item:biomesoplenty:magic_slab",
+		"item:biomesoplenty:magic_stairs",
+		"item:biomesoplenty:magic_trapdoor",
+		"item:biomesoplenty:magic_wood",
+		"item:biomesoplenty:potted_magic_sapling",
+		"item:biomesoplenty:stripped_magic_log",
+		"item:biomesoplenty:stripped_magic_wood",
+		"item:snowyspirit:biomesoplenty/sled_magic",
+		"item:supplementaries:biomesoplenty/cannon_boat_magic",
+		"item:supplementaries:biomesoplenty/way_sign_magic"
+	]
+}

@@ -1,0 +1,33 @@
+{
+	"__comment": "Generated data. Do not edit manually.",
+	"type": "remi:group",
+	"id": "biomeswevegone:wood_sets/ironwood",
+	"name": "§bIronwood§r Wood Set",
+	"contents": [
+		"item:biomeswevegone:flowering_ironwood_leaves",
+		"item:biomeswevegone:ironwood_boat",
+		"item:biomeswevegone:ironwood_bookshelf",
+		"item:biomeswevegone:ironwood_button",
+		"item:biomeswevegone:ironwood_chest_boat",
+		"item:biomeswevegone:ironwood_crafting_table",
+		"item:biomeswevegone:ironwood_door",
+		"item:biomeswevegone:ironwood_fence",
+		"item:biomeswevegone:ironwood_fence_gate",
+		"item:biomeswevegone:ironwood_hanging_sign",
+		"item:biomeswevegone:ironwood_leaves",
+		"item:biomeswevegone:ironwood_log",
+		"item:biomeswevegone:ironwood_planks",
+		"item:biomeswevegone:ironwood_pressure_plate",
+		"item:biomeswevegone:ironwood_sapling",
+		"item:biomeswevegone:ironwood_sign",
+		"item:biomeswevegone:ironwood_slab",
+		"item:biomeswevegone:ironwood_stairs",
+		"item:biomeswevegone:ironwood_trapdoor",
+		"item:biomeswevegone:ironwood_wood",
+		"item:biomeswevegone:stripped_ironwood_log",
+		"item:biomeswevegone:stripped_ironwood_wood",
+		"item:snowyspirit:biomeswevegone/sled_ironwood",
+		"item:supplementaries:biomeswevegone/cannon_boat_ironwood",
+		"item:supplementaries:biomeswevegone/way_sign_ironwood"
+	]
+}

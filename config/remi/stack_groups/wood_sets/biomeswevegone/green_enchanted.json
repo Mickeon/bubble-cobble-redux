@@ -1,0 +1,33 @@
+{
+	"__comment": "Generated data. Do not edit manually.",
+	"type": "remi:group",
+	"id": "biomeswevegone:wood_sets/green_enchanted",
+	"name": "§bGreen Enchanted§r Wood Set",
+	"contents": [
+		"item:biomeswevegone:green_enchanted_boat",
+		"item:biomeswevegone:green_enchanted_bookshelf",
+		"item:biomeswevegone:green_enchanted_button",
+		"item:biomeswevegone:green_enchanted_chest_boat",
+		"item:biomeswevegone:green_enchanted_crafting_table",
+		"item:biomeswevegone:green_enchanted_door",
+		"item:biomeswevegone:green_enchanted_fence",
+		"item:biomeswevegone:green_enchanted_fence_gate",
+		"item:biomeswevegone:green_enchanted_hanging_sign",
+		"item:biomeswevegone:green_enchanted_leaves",
+		"item:biomeswevegone:green_enchanted_log",
+		"item:biomeswevegone:green_enchanted_planks",
+		"item:biomeswevegone:green_enchanted_pressure_plate",
+		"item:biomeswevegone:green_enchanted_sapling",
+		"item:biomeswevegone:green_enchanted_sign",
+		"item:biomeswevegone:green_enchanted_slab",
+		"item:biomeswevegone:green_enchanted_stairs",
+		"item:biomeswevegone:green_enchanted_trapdoor",
+		"item:biomeswevegone:green_enchanted_wood",
+		"item:biomeswevegone:imbued_green_enchanted_wood",
+		"item:biomeswevegone:stripped_green_enchanted_log",
+		"item:biomeswevegone:stripped_green_enchanted_wood",
+		"item:snowyspirit:biomeswevegone/sled_green_enchanted",
+		"item:supplementaries:biomeswevegone/cannon_boat_green_enchanted",
+		"item:supplementaries:biomeswevegone/way_sign_green_enchanted"
+	]
+}

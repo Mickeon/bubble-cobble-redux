@@ -1,0 +1,30 @@
+{
+	"__comment": "Generated data. Do not edit manually.",
+	"type": "remi:group",
+	"id": "biomesoplenty:wood_sets/palm",
+	"name": "§bPalm§r Wood Set",
+	"contents": [
+		"item:biomesoplenty:palm_boat",
+		"item:biomesoplenty:palm_button",
+		"item:biomesoplenty:palm_chest_boat",
+		"item:biomesoplenty:palm_door",
+		"item:biomesoplenty:palm_fence",
+		"item:biomesoplenty:palm_fence_gate",
+		"item:biomesoplenty:palm_hanging_sign",
+		"item:biomesoplenty:palm_leaves",
+		"item:biomesoplenty:palm_log",
+		"item:biomesoplenty:palm_pressure_plate",
+		"item:biomesoplenty:palm_sapling",
+		"item:biomesoplenty:palm_sign",
+		"item:biomesoplenty:palm_slab",
+		"item:biomesoplenty:palm_stairs",
+		"item:biomesoplenty:palm_trapdoor",
+		"item:biomesoplenty:palm_wood",
+		"item:biomesoplenty:potted_palm_sapling",
+		"item:biomesoplenty:stripped_palm_log",
+		"item:biomesoplenty:stripped_palm_wood",
+		"item:snowyspirit:biomesoplenty/sled_palm",
+		"item:supplementaries:biomesoplenty/cannon_boat_palm",
+		"item:supplementaries:biomesoplenty/way_sign_palm"
+	]
+}

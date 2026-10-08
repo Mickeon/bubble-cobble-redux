@@ -1,0 +1,31 @@
+{
+	"__comment": "Generated data. Do not edit manually.",
+	"type": "remi:group",
+	"id": "biomesoplenty:wood_sets/umbran",
+	"name": "§bUmbran§r Wood Set",
+	"contents": [
+		"item:biomesoplenty:potted_umbran_sapling",
+		"item:biomesoplenty:stripped_umbran_log",
+		"item:biomesoplenty:stripped_umbran_wood",
+		"item:biomesoplenty:umbran_boat",
+		"item:biomesoplenty:umbran_button",
+		"item:biomesoplenty:umbran_chest_boat",
+		"item:biomesoplenty:umbran_door",
+		"item:biomesoplenty:umbran_fence",
+		"item:biomesoplenty:umbran_fence_gate",
+		"item:biomesoplenty:umbran_hanging_sign",
+		"item:biomesoplenty:umbran_leaves",
+		"item:biomesoplenty:umbran_log",
+		"item:biomesoplenty:umbran_planks",
+		"item:biomesoplenty:umbran_pressure_plate",
+		"item:biomesoplenty:umbran_sapling",
+		"item:biomesoplenty:umbran_sign",
+		"item:biomesoplenty:umbran_slab",
+		"item:biomesoplenty:umbran_stairs",
+		"item:biomesoplenty:umbran_trapdoor",
+		"item:biomesoplenty:umbran_wood",
+		"item:snowyspirit:biomesoplenty/sled_umbran",
+		"item:supplementaries:biomesoplenty/cannon_boat_umbran",
+		"item:supplementaries:biomesoplenty/way_sign_umbran"
+	]
+}

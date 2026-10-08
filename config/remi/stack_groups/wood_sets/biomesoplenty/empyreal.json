@@ -1,0 +1,31 @@
+{
+	"__comment": "Generated data. Do not edit manually.",
+	"type": "remi:group",
+	"id": "biomesoplenty:wood_sets/empyreal",
+	"name": "§bEmpyreal§r Wood Set",
+	"contents": [
+		"item:biomesoplenty:empyreal_boat",
+		"item:biomesoplenty:empyreal_button",
+		"item:biomesoplenty:empyreal_chest_boat",
+		"item:biomesoplenty:empyreal_door",
+		"item:biomesoplenty:empyreal_fence",
+		"item:biomesoplenty:empyreal_fence_gate",
+		"item:biomesoplenty:empyreal_hanging_sign",
+		"item:biomesoplenty:empyreal_leaves",
+		"item:biomesoplenty:empyreal_log",
+		"item:biomesoplenty:empyreal_planks",
+		"item:biomesoplenty:empyreal_pressure_plate",
+		"item:biomesoplenty:empyreal_sapling",
+		"item:biomesoplenty:empyreal_sign",
+		"item:biomesoplenty:empyreal_slab",
+		"item:biomesoplenty:empyreal_stairs",
+		"item:biomesoplenty:empyreal_trapdoor",
+		"item:biomesoplenty:empyreal_wood",
+		"item:biomesoplenty:potted_empyreal_sapling",
+		"item:biomesoplenty:stripped_empyreal_log",
+		"item:biomesoplenty:stripped_empyreal_wood",
+		"item:snowyspirit:biomesoplenty/sled_empyreal",
+		"item:supplementaries:biomesoplenty/cannon_boat_empyreal",
+		"item:supplementaries:biomesoplenty/way_sign_empyreal"
+	]
+}

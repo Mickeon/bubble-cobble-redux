@@ -1,0 +1,31 @@
+{
+	"__comment": "Generated data. Do not edit manually.",
+	"type": "remi:group",
+	"id": "biomesoplenty:wood_sets/fir",
+	"name": "§bFir§r Wood Set",
+	"contents": [
+		"item:biomesoplenty:fir_boat",
+		"item:biomesoplenty:fir_button",
+		"item:biomesoplenty:fir_chest_boat",
+		"item:biomesoplenty:fir_door",
+		"item:biomesoplenty:fir_fence",
+		"item:biomesoplenty:fir_fence_gate",
+		"item:biomesoplenty:fir_hanging_sign",
+		"item:biomesoplenty:fir_leaves",
+		"item:biomesoplenty:fir_log",
+		"item:biomesoplenty:fir_planks",
+		"item:biomesoplenty:fir_pressure_plate",
+		"item:biomesoplenty:fir_sapling",
+		"item:biomesoplenty:fir_sign",
+		"item:biomesoplenty:fir_slab",
+		"item:biomesoplenty:fir_stairs",
+		"item:biomesoplenty:fir_trapdoor",
+		"item:biomesoplenty:fir_wood",
+		"item:biomesoplenty:potted_fir_sapling",
+		"item:biomesoplenty:stripped_fir_log",
+		"item:biomesoplenty:stripped_fir_wood",
+		"item:snowyspirit:biomesoplenty/sled_fir",
+		"item:supplementaries:biomesoplenty/cannon_boat_fir",
+		"item:supplementaries:biomesoplenty/way_sign_fir"
+	]
+}

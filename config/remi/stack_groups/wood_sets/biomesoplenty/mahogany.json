@@ -1,0 +1,31 @@
+{
+	"__comment": "Generated data. Do not edit manually.",
+	"type": "remi:group",
+	"id": "biomesoplenty:wood_sets/mahogany",
+	"name": "§bMahogany§r Wood Set",
+	"contents": [
+		"item:biomesoplenty:mahogany_boat",
+		"item:biomesoplenty:mahogany_button",
+		"item:biomesoplenty:mahogany_chest_boat",
+		"item:biomesoplenty:mahogany_door",
+		"item:biomesoplenty:mahogany_fence",
+		"item:biomesoplenty:mahogany_fence_gate",
+		"item:biomesoplenty:mahogany_hanging_sign",
+		"item:biomesoplenty:mahogany_leaves",
+		"item:biomesoplenty:mahogany_log",
+		"item:biomesoplenty:mahogany_planks",
+		"item:biomesoplenty:mahogany_pressure_plate",
+		"item:biomesoplenty:mahogany_sapling",
+		"item:biomesoplenty:mahogany_sign",
+		"item:biomesoplenty:mahogany_slab",
+		"item:biomesoplenty:mahogany_stairs",
+		"item:biomesoplenty:mahogany_trapdoor",
+		"item:biomesoplenty:mahogany_wood",
+		"item:biomesoplenty:potted_mahogany_sapling",
+		"item:biomesoplenty:stripped_mahogany_log",
+		"item:biomesoplenty:stripped_mahogany_wood",
+		"item:snowyspirit:biomesoplenty/sled_mahogany",
+		"item:supplementaries:biomesoplenty/cannon_boat_mahogany",
+		"item:supplementaries:biomesoplenty/way_sign_mahogany"
+	]
+}
