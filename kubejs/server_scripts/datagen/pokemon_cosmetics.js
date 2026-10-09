@@ -2,7 +2,7 @@
 // requires: cobblemon
 // requires: emi
 
-global.datagen_functions.pokemon_cosmetics = function() {
+global.datagen.functions.pokemon_cosmetics = function() {
 	// Using EMI Stacks and PokemonItem directly is way more verbose and inefficient,
 	// But hey, it's more robust, and I could reuse this knowledge.
 	const $EmiStack = Java.loadClass("dev.emi.emi.api.stack.EmiStack")

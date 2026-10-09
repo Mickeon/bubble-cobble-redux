@@ -2,7 +2,7 @@
 // requires: emi
 // requires: remi
 
-global.datagen_functions.remi_groups = function() {
+global.datagen.functions.remi_groups = function() {
 	const PATH = "config/remi/stack_groups/wood_sets"
 	const WOOD_TYPES = [
 		"arts_and_crafts:cork",

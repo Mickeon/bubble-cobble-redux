@@ -104,8 +104,9 @@ global.play_sound_globally = play_sound_globally
 global.is_eligible_for_easter_egg = is_eligible_for_easter_egg
 global.is_dev = is_dev
 
-if (Platform.isLoaded("probejs") && !global.datagen_functions) {
-	global.datagen_functions = ({
+if (Platform.isLoaded("probejs") && !global.datagen) {
+	global.datagen = {}
+	global.datagen.functions = ({
 		dummy: function() {}
 	})
 }
