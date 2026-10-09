@@ -74,6 +74,8 @@
 	# Default: 48
 	# Range: 1 ~ 64
 	ambient_max_spawn_radius = 48
+	#Turns off bedbug spawning entirely. Bedbugs will still exist as a mob and can be spawned with eggs
+	enabled = true
 
 [sleep_cooldown]
 	#Time before you can sleep/rest again after you've slept in a hammock
@@ -120,6 +122,8 @@
 	# Default: 5.0
 	# Range: 0.0 ~ 20.0
 	base_value = 2
+	#Applies a cost, like hunger loss, every time you sleep
+	enabled = true
 
 [sleep_requirements]
 	apply_to_beds = true
@@ -131,6 +135,8 @@
 	# Default: 0
 	# Range: 0 ~ 200
 	xp_cost = 0
+	#Conditions that must be met before you are allowed to sleep
+	enabled = true
 
 [home_bed]
 	#Amount of nights needed to make a home bed start increasing levels. Set to -1 to effectively disable home bed leveling
@@ -171,6 +177,8 @@
 	# Default: 1.2
 	# Range: 1.0 ~ 5.0
 	special_bed_nightmare_chance_mult = 1.2
+	#Sleeping too many nights in a row can end in a nightmare, waking you up early
+	enabled = true
 
 [wake_up_encounters]
 	#The game will perform x attempts to spawn a mod around each player every time they sleep.Increases likelihood of finding one. Note that actual value will also depend on local difficulty
@@ -207,3 +215,5 @@
 	# Default: 12000
 	# Range: 0 ~ 1000000
 	insomnia_duration = 12000
+	#Sleeping in an exposed spot can wake you up to a mob that spawned next to you
+	enabled = true

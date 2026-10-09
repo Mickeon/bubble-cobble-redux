@@ -1,0 +1,8 @@
+{
+  "type": "remi:tag",
+  "id": "sophisticatedbackpacks:upgrades",
+  "name": "Backpack Upgrades",
+  "tag": "sophisticatedbackpacks:upgrade",
+  "registry": "minecraft:item",
+  "enabled": true
+}

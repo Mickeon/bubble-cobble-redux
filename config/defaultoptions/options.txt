@@ -18,7 +18,7 @@ gamma:0.5
 graphicsMode:1
 guiScale:2
 maxFps:90
-mipmapLevels:0
+mipmapLevels:1
 narrator:0
 particles:0
 reducedDebugInfo:false
@@ -87,7 +87,7 @@ onlyShowSecureChat:false
 panoramaScrollSpeed:1.0
 telemetryOptInExtra:false
 onboardAccessibility:false
-menuBackgroundBlurriness:1
+menuBackgroundBlurriness:2
 soundCategory_master:0.5033112582781457
 soundCategory_music:0.0528169014084507
 soundCategory_record:1.0

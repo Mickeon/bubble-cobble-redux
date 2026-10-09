@@ -40,7 +40,7 @@ ServerEvents.loaded(event => {
 
 	function below_block_cloning_fluid_interaction(block_state) {
 		$FluidInteractionRegistry.addInteraction(clone_catalyst_fluid, new $InteractionInformation["(net.neoforged.neoforge.fluids.FluidInteractionRegistry$HasFluidInteraction,net.minecraft.world.level.block.state.BlockState)"](
-			/** @type {import("@package/net/neoforged/neoforge/fluids").$FluidInteractionRegistry$HasFluidInteraction} */
+			/** @type {import("@package/net/neoforged/neoforge/fluids").$FluidInteractionRegistry$HasFluidInteraction_} */
 			(level, current_pos, relative_pos, current_state) => {
 				return current_state.getAmount() < $FluidState.AMOUNT_FULL && level.getBlockState(current_pos.below()) == block_state
 			},

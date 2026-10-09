@@ -35,7 +35,6 @@
 	# Default: 0.15
 	# Range: 0.0 ~ 1.0
 	particle_spawn_chance = 0.15
-	24h_time_format = true
 
 [misc]
 	#Show insomnia missing time when laying on a bed
@@ -49,3 +48,5 @@
 	sleeping_villagers_eyes = true
 	#Spawn particles when sleeping. Set to 0 to disable
 	zzz_particles = true
+	#Shows the sleep time in 24h format instead of AM/PM
+	24h_time_format = true

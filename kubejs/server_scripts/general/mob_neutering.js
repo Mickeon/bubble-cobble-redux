@@ -1,16 +1,21 @@
 // requires: pehkui
 
-let $ScaleTypes = Java.loadClass("virtuoel.pehkui.api.ScaleTypes")
+let $Creeper = Java.loadClass("net.minecraft.world.entity.monster.Creeper")
+
 // https://github.com/Virtuoel/Pehkui/blob/neoforge/1.21/src/main/java/virtuoel/pehkui/api/ScaleEasings.java
+let $ScaleTypes = Java.loadClass("virtuoel.pehkui.api.ScaleTypes")
 let $ScaleEasings = Java.loadClass("virtuoel.pehkui.api.ScaleEasings")
+
+/** @param {$Entity} entity */
+function is_creeper(entity) {
+	// return (entity.type == "minecraft:creeper" || entity.type == "undergroundworlds:icy_creeper")
+	return entity instanceof $Creeper
+}
 
 // Creepers explode without destroying blocks. Sometimes they explode in confetti, too!
 LevelEvents.beforeExplosion(event => {
 	const { exploder } = event
-	if (!exploder) {
-		return
-	}
-	if ((exploder.type != "minecraft:creeper" && exploder.type != "undergroundworlds:icy_creeper") || exploder.tags.contains("kubejs.exploding_safely")) {
+	if (!exploder || !is_creeper(exploder) || exploder.tags.contains("kubejs.exploding_safely")) {
 		return
 	}
 	exploder.addTag("kubejs.exploding_safely")
@@ -27,7 +32,7 @@ LevelEvents.beforeExplosion(event => {
 	}),
 	exploder.playSound("minecraft:entity.firework_rocket.blast", 1, 0.75)
 
-	event.server.scheduleInTicks(0.5, c => {
+	event.server.scheduleInTicks(1, c => {
 		level.runCommandSilent(`execute positioned ${x} ${eye_y} ${z} run stopsound @a[distance=0..64] * minecraft:entity.generic.explode`)
 	})
 	level.spawnParticles("minecraft:firework", false, x, eye_y, z, 0.1, 0.1, 0.1, 60, 0.25)
@@ -39,16 +44,12 @@ LevelEvents.beforeExplosion(event => {
 // Creeper chain reaction.
 LevelEvents.afterExplosion(event => {
 	const { exploder } = event
-	if (!exploder) {
+	if (!exploder || !is_creeper(exploder)) {
 		return
 	}
-	if (exploder.type != "minecraft:creeper" && exploder.type != "undergroundworlds:icy_creeper") {
-		return
-	}
-	event.getAffectedEntities().forEach(entity => {
-		if (exploder.type != "minecraft:creeper" && exploder.type != "undergroundworlds:icy_creeper") {
-			return
-		}
+	event.getAffectedEntities().filter(is_creeper).forEach(/** @param {$Creeper} entity */ entity => {
+		// entity.setSwellDir(40)
+		// entity.ignite()
 		entity.mergeNbt({Fuse: 10, ignited: true})
 	})
 })

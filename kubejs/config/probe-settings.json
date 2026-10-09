@@ -12,7 +12,8 @@
         "probejs",
         "lootjs",
         "cobblemon",
-        "create"
+        "create",
+        "emi"
     ],
     "probejs.hintsForLLM": false,
     "probejs.reset": false

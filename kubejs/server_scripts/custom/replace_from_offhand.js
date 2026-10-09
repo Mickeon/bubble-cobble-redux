@@ -13,18 +13,20 @@ ServerEvents.tags("item", event => {
 })
 
 // Replace destroyed blocks with the blocks in your offhand.
-function BlockReplaceData() {
-	this.last_action_tick = 0
-	this.place_delay = 0
-}
-/** @param {$UUID} uuid @returns {BlockReplaceData} */
-BlockReplaceData.get_or_create = function(uuid) {
-	if (!players_block_replace_data[uuid]) {
-		players_block_replace_data[uuid] = new BlockReplaceData()
+/** @typedef {ReturnType<typeof BlockReplaceDataBuilder>} BlockReplaceData */
+function BlockReplaceDataBuilder() {
+	return {
+		last_action_tick: 0,
+		place_delay: 0
 	}
-	return players_block_replace_data[uuid]
 }
-const players_block_replace_data = {}
+BlockReplaceDataBuilder.players_block_replace_data = /** @type {Record<string, BlockReplaceData>} */ ({})
+BlockReplaceDataBuilder.get_or_create = /** @param {string} uuid */ function(uuid) {
+	if (!this.players_block_replace_data[uuid]) {
+		this.players_block_replace_data[uuid] = BlockReplaceDataBuilder()
+	}
+	return this.players_block_replace_data[uuid]
+}
 BlockEvents.broken(event => {
 	const player = /** @type {$ServerPlayer} */ (event.player)
 	if (!player) {
@@ -64,7 +66,7 @@ BlockEvents.broken(event => {
 	}
 
 	// Allow queueing the placement of multiple blocks at once, which will happen one tick after another.
-	const block_replace = BlockReplaceData.get_or_create(player.uuid)
+	const block_replace = BlockReplaceDataBuilder.get_or_create(player.uuid)
 	if (player.tickCount > block_replace.last_action_tick) {
 		block_replace.last_action_tick = player.tickCount
 		block_replace.place_delay = 0

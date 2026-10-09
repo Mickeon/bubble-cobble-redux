@@ -10,5 +10,11 @@
 		"diamond": 21,
 		"iron": 12,
 		"netherite": 26
+	},
+	"damageOverlap": {
+		"gold": 1,
+		"diamond": 2,
+		"iron": 1,
+		"netherite": 2
 	}
 }

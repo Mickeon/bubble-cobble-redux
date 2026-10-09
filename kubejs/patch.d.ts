@@ -18,11 +18,14 @@ declare module "@package/net/minecraft/world/entity" {
 		get y(): number
 		get z(): number
 		get server(): $MinecraftServer
+		get eyePosition(): $Vec3
 		mainSupportingBlockPos: $Optional<$BlockPos>
 	}
 
 	export interface $LivingEntity {
 		getSleepingPos(): $Optional<$BlockPos>;
+		mainHandItem: $ItemStack;
+		offHandItem: $ItemStack;
 	}
 }
 

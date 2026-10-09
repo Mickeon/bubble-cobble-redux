@@ -1,54 +1,5 @@
-//#region More imports than you will ever know what to do with.
 let $DataMapHooks = Java.loadClass("net.neoforged.neoforge.common.DataMapHooks")
-let $ClientPauseChangeEvent$Post = Java.loadClass("net.neoforged.neoforge.client.event.ClientPauseChangeEvent$Post")
-let $ScreenEvent$Init$Post = Java.loadClass("net.neoforged.neoforge.client.event.ScreenEvent$Init$Post")
-let $Tooltip = Java.loadClass("net.minecraft.client.gui.components.Tooltip")
 let $PauseScreen = Java.loadClass("net.minecraft.client.gui.screens.PauseScreen")
-let $TitleScreen = Java.loadClass("net.minecraft.client.gui.screens.TitleScreen")
-let $Button = Java.loadClass("net.minecraft.client.gui.components.Button")
-let $Button$Builder = Java.loadClass("net.minecraft.client.gui.components.Button$Builder")
-let $ModsButton = Java.loadClass("net.neoforged.neoforge.client.gui.widget.ModsButton")
-//#endregion
-
-// Add easily-accessible Mod Sets button.
-if (Platform.isLoaded("mod_sets")) {
-// https://github.com/SettingDust/ModSets/blob/main/src/common/game/main/java/settingdust/mod_sets/game/ModSetsConfigScreenGenerator.java
-let $ModSetsConfigScreenGenerator = Java.loadClass("settingdust.mod_sets.game.ModSetsConfigScreenGenerator")
-NativeEvents.onEvent($ScreenEvent$Init$Post, event => {
-	if (!(event.screen instanceof $PauseScreen || event.screen instanceof $TitleScreen)) {
-		return
-	}
-	const screen = event.screen
-	// HACK: Genuinely horrid way to find the Mods/Links Button.
-	/** @type {import("@package/net/minecraft/client/gui/components").$Button} */
-	let mods_button
-	screen.children().forEach(existing_button => {
-		if (!mods_button && existing_button instanceof $Button) {
-			let message_string = existing_button.getMessage().getString()
-			if (message_string == "Mods" || message_string == "Server Links...") {
-				mods_button = existing_button
-			}
-		}
-	})
-
-	if (!mods_button) {
-		console.warn("Could not find Mods button?")
-		return
-	}
-
-	const modsets_button = new $Button$Builder(Text.translatableWithFallback("", "Sets"), button => {
-			Client.forceSetScreen($ModSetsConfigScreenGenerator.generateScreen(Client.currentScreen))
-		})
-		// .pos(screen.width * 0.5 + 104, screen.height * 0.5 - 24)
-		.pos(mods_button.right, mods_button.getY())
-		.width(32)
-		.tooltip($Tooltip.create(Text.translatableWithFallback("", "Turn off the few\nmods you HATE")))
-		.build()
-
-	screen.addRenderableWidget(modsets_button)
-})
-}
-
 
 // Move EMI buttons away from the bottom-right.
 // Currently disabled as there's no reason to be doing this.
