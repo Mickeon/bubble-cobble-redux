@@ -702,7 +702,7 @@ ServerEvents.tick(event => {
 	// event.server.getPlayers().forEach(p => p.setStatusMessage(`${DreamDimension.is_expiring()} ${DreamDimension.get_expiration_time()}`))
 })
 
-ServerEvents.registry("damage_type", event => {
+ServerEvents.registry("damage_type", /** @param {import("@package/dev/latvian/mods/kubejs/registry").$ServerRegistryKubeEvent} event */ event => {
 	event.createCustom("bubble_cobble:dream_wither", () => new $DamageType("wither", "never", 0.5, "drowning", "default"))
 })
 

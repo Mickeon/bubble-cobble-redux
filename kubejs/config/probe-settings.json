@@ -13,7 +13,9 @@
         "lootjs",
         "cobblemon",
         "create",
-        "emi"
+        "emi",
+        "item_interactions_mod",
+        "resource_world"
     ],
     "probejs.hintsForLLM": false,
     "probejs.reset": false

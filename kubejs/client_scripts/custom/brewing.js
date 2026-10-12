@@ -1,5 +1,6 @@
-
 // requires:brewinandchewin
+
+let $PauseScreen = Java.loadClass("net.minecraft.client.gui.screens.PauseScreen")
 // let $SoundInstance  = Java.loadClass("net.minecraft.client.resources.sounds.SoundInstance")
 // let $MobEffectEvent$Expired  = Java.loadClass("net.neoforged.neoforge.event.entity.living.MobEffectEvent$Expired")
 // let $Player  = Java.loadClass("net.minecraft.world.entity.player.Player")

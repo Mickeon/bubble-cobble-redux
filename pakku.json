@@ -97,6 +97,7 @@
         "!config/tinymultiblocklib-*",
         "!config/libtooltips-*",
         "!config/fancytabsections-*",
+        "!config/animatedhearts-client.toml",
         "!fieldguide_cache/",
         "!*lightspeed*",
         "!*locomotionmap.json"
