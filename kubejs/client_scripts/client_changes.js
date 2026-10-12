@@ -1,5 +1,4 @@
 let $DataMapHooks = Java.loadClass("net.neoforged.neoforge.common.DataMapHooks")
-let $PauseScreen = Java.loadClass("net.minecraft.client.gui.screens.PauseScreen")
 
 // Move EMI buttons away from the bottom-right.
 // Currently disabled as there's no reason to be doing this.
@@ -324,6 +323,52 @@ ClientEvents.highlight(event => {
 // 	// 	return texture.toBytes()
 // 	// }})
 // })
+
+/*
+// I don't understand and I wish I did.
+const { $CreativeModeInventoryScreen } = require("@package/net/minecraft/client/gui/screens/inventory")
+const { $ScreenEvent$MouseDragged$Pre } = require("@package/net/neoforged/neoforge/client/event")
+const { $ScreenEvent$MouseDragged$Post } = require("@package/net/neoforged/neoforge/client/event")
+const { $ScreenEvent$MouseScrolled$Pre } = require("@package/net/neoforged/neoforge/client/event")
+const { $ScreenEvent$MouseScrolled$Post } = require("@package/net/neoforged/neoforge/client/event")
+if (Platform.isLoaded("item_interactions_mod")) {
+	console.log("Hi")
+	let $ScreenEvent$Init$Post = Java.loadClass("net.neoforged.neoforge.client.event.ScreenEvent$Init$Post")
+	NativeEvents.onEvent($ScreenEvent$Init$Post, event => {
+		if (!(event.screen instanceof $CreativeModeInventoryScreen)) {
+			return
+		}
+		try {
+
+		let $GlobalDirt = Java.tryLoadClass("dev.mineland.item_interactions_mod.GlobalDirt")
+		if (!$GlobalDirt) {
+			console.log("Guess I don't know then")
+			return
+		}
+
+		// $GlobalDirt.slotSpawners.set(1, "onIdle")
+		$GlobalDirt.lastMilis += 1000
+		$GlobalDirt.msCounter += 1000
+		$GlobalDirt.particleList.forEach(a => a.shouldDelete = true)
+		$GlobalDirt.particleList.clear()
+		// Client.scheduleInTicks(10, () => {
+			// $GlobalDirt.slotSpawners.clear()
+			// for (let i = 0; i < $GlobalDirt.slotSpawners.size(); i += 1) {
+			// 	$GlobalDirt.slotSpawners.set(i, Utils.emptyList(), "onIdle")
+			// 	// $GlobalDirt.slotSpawners.setState(i, "onIdle")
+			// 	// console.log(i)
+			// }
+			// $GlobalDirt.restore()
+		// })
+		// $GlobalDirt.spawnerTickDelta += 200
+		console.log("HI")
+
+		} catch (e) {
+			console.error(e)
+		}
+	})
+}
+*/
 
 
 if (Platform.isLoaded("smartkeyprompts")) {

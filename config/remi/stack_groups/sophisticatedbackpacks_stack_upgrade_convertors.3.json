@@ -1,0 +1,18 @@
+{
+  "type": "remi:group",
+  "id": "sophisticatedstorage:storage_connectors",
+  "name": "Storage Connectors",
+  "contents": [
+    "sophisticatedstorage:acacia_storage_connector",
+    "sophisticatedstorage:bamboo_storage_connector",
+    "sophisticatedstorage:birch_storage_connector",
+    "sophisticatedstorage:cherry_storage_connector",
+    "sophisticatedstorage:crimson_storage_connector",
+    "sophisticatedstorage:dark_oak_storage_connector",
+    "sophisticatedstorage:jungle_storage_connector",
+    "sophisticatedstorage:mangrove_storage_connector",
+    "sophisticatedstorage:oak_storage_connector",
+    "sophisticatedstorage:spruce_storage_connector",
+    "sophisticatedstorage:warped_storage_connector"
+  ]
+}

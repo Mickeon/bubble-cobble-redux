@@ -32,10 +32,10 @@ function remove_and_merge_into_tab(from_id, to_id, items) {
 
 rename_tab("create:base",                          " §6Create ")
 rename_tab("copycats:main",                        " §6Create: §rCopycats+ ")
-rename_tab("copycats:functional",                  " §6Create: §rCopycats+ | Functional ")
+// rename_tab("copycats:functional",                  " §6Create: §rCopycats+ | Functional ")
 rename_tab("createdeco:bricks_tab",                " §6Create: §rDeco's Bricks ")
 rename_tab("createdeco:props_tab",                 " §6Create: §rDeco's Props ")
-rename_tab("create_deepfried:base",                " §6Create: §rDeepfried ")
+// rename_tab("create_deepfried:base",                " §6Create: §rDeepfried ")
 rename_tab("create_bic_bit:base",                  " §6Create: §r§rBitterballen ")
 // rename_tab("bits_n_bobs:bnb_based",                " §6Create: §rBits 'n' Bobs ")
 rename_tab("create:palettes",                      " §6Create§r's Building Blocks ")
@@ -304,6 +304,49 @@ remove_and_merge_into_tab("copycats:functional", "copycats:main", [
 	"copycats:copycat_shaft",
 	"copycats:copycat_cogwheel",
 	"copycats:copycat_large_cogwheel",
+])
+
+remove_and_merge_into_tab("create_deepfried:base", "create_bic_bit:base", [
+	"create_deepfried:raw_corn_dog",
+	"create_deepfried:corn_dog",
+	"create_deepfried:raw_chicken_nuggets",
+	"create_deepfried:chicken_nuggets",
+	"create_deepfried:yuca",
+	"create_deepfried:yuca_fries",
+	"create_deepfried:cheese_curd",
+	"create_deepfried:raw_springroll",
+	"create_deepfried:springroll",
+	"create_deepfried:raw_tempura",
+	"create_deepfried:tempura",
+	"create_deepfried:calamari",
+	"create_deepfried:raw_donut",
+	"create_deepfried:donut",
+	"create_deepfried:coated_donut",
+	"create_deepfried:honey_glazed_donut",
+	"create_deepfried:chocolate_glazed_donut",
+	"create_deepfried:sweet_berry_honey_glazed_donut",
+	"create_deepfried:sweet_berry_chocolate_glazed_donut",
+	"create_deepfried:glow_berry_honey_glazed_donut",
+	"create_deepfried:glow_berry_chocolate_glazed_donut",
+	"create_deepfried:berliner",
+	"create_deepfried:honey_filled_berliner",
+	"create_deepfried:chocolate_filled_berliner",
+	"create_deepfried:coated_berliner",
+	"create_deepfried:coated_honey_berliner",
+	"create_deepfried:coated_chocolate_berliner",
+	"create_deepfried:apple_slices",
+	"create_deepfried:apfelkuchle",
+	"create_deepfried:deepfried_chocolate_bar",
+	"create_deepfried:fish_and_chips",
+	"create_deepfried:fried_chicken",
+	"create_deepfried:lava_chicken",
+	"create_deepfried:raw_onion_rings",
+	"create_deepfried:onion_rings",
+	"create_deepfried:blooming_onion",
+	"create_deepfried:raw_panzerotto",
+	"create_deepfried:panzerotto",
+	"create_deepfried:raw_arancini",
+	"create_deepfried:arancini",
 ])
 
 StartupEvents.modifyCreativeTab("minecraft:tools_and_utilities", event => {

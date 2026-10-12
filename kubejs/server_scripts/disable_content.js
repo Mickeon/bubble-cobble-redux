@@ -23,8 +23,16 @@ ServerEvents.recipes(event => {
 		event.replaceOutput({output: "create:copper_nugget", not: {type: "brewinandchewin:fermenting"}}, "create:copper_nugget", "minecraft:copper_nugget")
 	}
 
-	event.remove({input: get_disabled_ingredient(), not: {type: "brewinandchewin:fermenting"}})
-	event.remove({output: get_disabled_ingredient().stackArray, not: {type: "brewinandchewin:fermenting"}})
+	// This is too loose. For example, it removes all recipes using cheese because Curdled Cheese (tagged as c:cheese) is disabled.
+	// event.remove({input: get_disabled_ingredient(), not: {type: "brewinandchewin:fermenting"}})
+	const disabled_ingredient = get_disabled_ingredient() // Not caching the result stalls the removal like crazy for some reason.
+	event.remove(cx => {
+		return cx.recipe().hasInput(cx, {match: disabled_ingredient, exact: true})
+			|| cx.recipe().hasOutput(cx, {match: disabled_ingredient})
+			// return cx.recipe().hasOutput(cx, {match: disabled_ingredient})
+	})
+	// event.remove({output: get_disabled_ingredient().stackArray, not: {type: "brewinandchewin:fermenting"}})
+	// event.remove({output: get_disabled_ingredient().stackArray})
 })
 
 if (!is_dev()) {

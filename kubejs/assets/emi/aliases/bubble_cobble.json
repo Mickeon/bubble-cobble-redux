@@ -387,6 +387,20 @@
 				"Poke ball",
 				"Pokeball"
 			]
+		},
+		{
+			"stacks": [
+				{"type": "item", "id": "supplementaries:cog_block"},
+				{"type": "item", "id": "copycats:copycat_cogwheel"},
+				{"type": "item", "id": "copycats:copycat_large_cogwheel"},
+				{"type": "item", "id": "create:cogwheel"},
+				{"type": "item", "id": "create:large_cogwheel"},
+				{"type": "item", "id": "bits_n_bobs:small_flanged_cogwheel"},
+				{"type": "item", "id": "bits_n_bobs:large_flanged_cogwheel"}
+			],
+			"text": [
+				"Gearwheel"
+			]
 		}
 	]
 }
