@@ -542,3 +542,31 @@ NativeEvents.onEvent($PlayerEvent$ItemCraftedEvent, event => {
 		entity.statusMessage = "Ow my hand"
 	}
 })
+
+// Finally found this illusion... (https://www.reddit.com/r/MinecraftMemes/comments/1x4f75u/crazy_illusion/)
+const SKELETON_ITEM = "minecraft:poisonous_potato"
+const $LivingEntity = Java.loadClass("net.minecraft.world.entity.LivingEntity")
+ItemEvents.entityInteracted("minecraft:air", event => {
+	if (!(event.target instanceof $LivingEntity)
+	|| event.target.type != "minecraft:skeleton"
+	|| event.target.getArmorCoverPercentage() > 0.0
+	|| !event.target.isAlive()
+	|| (!event.player.isCreative() && event.player.cooldowns.isOnCooldown("minecraft:skeleton_skull"))
+	) {
+		return
+	}
+	// let nbt = event.target.getNbt()
+	// nbt.putString("id", event.target.type)
+	event.player.giveInHand(Item.of(SKELETON_ITEM, {
+		"minecraft:custom_name": Text.translate("entity.minecraft.skeleton").italic(false),
+		"minecraft:custom_model_data": 1,
+		"minecraft:food": {canAlwaysEat: true, nutrition: 4, saturation: 4, eatSeconds: 1.6},
+		// "minecraft:entity_data": nbt
+	}))
+	event.target.discard()
+
+	if (!event.player.isCreative()) {
+		// HACK: Apply to another item, instead, due to conflicts with the food eating cooldown (from another script).
+		event.player.addItemCooldown("minecraft:skeleton_skull", 1 * MIN)
+	}
+})
