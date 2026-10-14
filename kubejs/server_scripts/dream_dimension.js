@@ -8,10 +8,8 @@ let $PlayerSetSpawnEvent = Java.loadClass("net.neoforged.neoforge.event.entity.p
 let $CanPlayerSleepEvent = Java.loadClass("net.neoforged.neoforge.event.entity.player.CanPlayerSleepEvent");
 let $EntityTravelToDimensionEvent = Java.loadClass("net.neoforged.neoforge.event.entity.EntityTravelToDimensionEvent")
 
-/**
- * @import {$MinecraftServer} from "@package/net/minecraft/server"
- * @import {$ServerLevel} from "@package/net/minecraft/server/level"
- */
+import global from "../startup_scripts/dream_dimension"
+// const CompoundTagWrapperBuilder = global.CompoundTagWrapperBuilder
 
 const DreamDimension = {
 	PATH: "dream_dimension",
@@ -40,7 +38,20 @@ const DreamDimension = {
 
 	attempting_reset: false,
 
-	server: /** @type {$MinecraftServer} */ (null),
+	/** @param {$MinecraftServer} server */
+	initialize(server) {
+		global.persistent.server = server
+		// this.test_variable = CompoundTagWrapperBuilder(server.getPersistentData(), "test_variable", 200)
+		// global.persistent.test_variable = test_variable
+		// console.log(this.test_variable.get())
+		// this.test_variable.set(250)
+		// console.log(this.test_variable.get())
+	},
+
+	deinitialize() {
+		global.persistent.server = null
+		// global.persistent.test_variable = null
+	},
 
 	/** @param {$Player} player */
 	let_in(player) {
@@ -51,7 +62,7 @@ const DreamDimension = {
 		}
 		const spawn_point = level.getSharedSpawnPos()
 		const spawn_angle = level.getSharedSpawnAngle()
-		// const spawn_height = this.server.worldData.isFlatWorld() ? spawn_point.y : level.getMaxBuildHeight()
+		// const spawn_height = global.persistent.server.worldData.isFlatWorld() ? spawn_point.y : level.getMaxBuildHeight()
 
 		player.level.spawnParticles("minecraft:dust_color_transition{from_color:[1.0, 0.2, 0.5], to_color:[0.2, 0.9, 1.0], scale: 3.0}", false,
 			player.x, player.y, player.z,
@@ -60,11 +71,7 @@ const DreamDimension = {
 		player.addEffect(MobEffectUtil.of("minecraft:slow_falling", 30 * SEC))
 		player.addEffect(MobEffectUtil.of("minecraft:speed", 30 * SEC, 3))
 		player.teleportTo(this.ID, spawn_point.x, spawn_point.y, spawn_point.z, spawn_angle, 0)
-		// if (Platform.isLoaded("watervision"))
-		// 	server.runCommandSilent(`playoverlay "${this.A_MIMIR_MP4_URL}" ${player.uuid}`)
-		// else {
 		player.tell(Text.of(`A mimir 🛏💤`).clickOpenUrl(this.A_MIMIR_URL).blue().underlined())
-		// }
 		player.giveInHand(DreamDimension.DREAM_JOURNAL)
 		player.removeEffect("brewinandchewin:tipsy")
 
@@ -121,14 +128,14 @@ const DreamDimension = {
 	},
 
 	get() {
-		return this.server.getLevel(this.ID)
+		return global.persistent.server.getLevel(this.ID)
 	},
 
 	get_or_create() {
 		let level = this.get()
 		if (!level) {
 			console.log(`Creating new dream dimension`)
-			this.server.runCommand(`resourceworld create ${this.PATH} type minecraft:overworld`)
+			global.persistent.server.runCommand(`resourceworld create ${this.PATH} type minecraft:overworld`)
 			level = this.get()
 			if (!level) {
 				console.error(`${this.ID} is not ready yet, cannot proceed with setup. This shouldn't happen, and I should wait for it, but I can't be bothered right now.`)
@@ -159,19 +166,19 @@ const DreamDimension = {
 		})
 
 		// Bit of a buffer just to be sure.
-		this.server.scheduleInTicks(5 * SEC, () => {
+		global.persistent.server.scheduleInTicks(5 * SEC, () => {
 			console.log(`Deleting ${this.ID}`)
 			this.setup(level) // HACK: Nasty way to reset persistent values, as it's not always guaranteed setup is called.
-			this.server.runCommand(`resourceworld delete ${this.PATH}`)
-			this.server.runCommand(`resourceworld delete ${this.PATH}`) // It's needed for confirmation.
+			global.persistent.server.runCommand(`resourceworld delete ${this.PATH}`)
+			global.persistent.server.runCommand(`resourceworld delete ${this.PATH}`) // It's needed for confirmation.
 			if (Platform.isLoaded("chunky")) {
-				this.server.runCommandSilent(`chunky cancel ${this.ID}`)
-				this.server.runCommandSilent(`chunky confirm`)
+				global.persistent.server.runCommandSilent(`chunky cancel ${this.ID}`)
+				global.persistent.server.runCommandSilent(`chunky confirm`)
 			}
 			this.attempting_reset = false
 		})
 		// Let's also already create another dream dimension for later.
-		this.server.scheduleInTicks(10 * SEC, () => {
+		global.persistent.server.scheduleInTicks(10 * SEC, () => {
 			this.get_or_create()
 		})
 	},
@@ -192,7 +199,7 @@ const DreamDimension = {
 			console.error(`Tried to refresh expiration time but there's no dream dimension yet`).
 			return
 		}
-		const new_expiration_time = this.server.getOverworld().time + this.server.getGameRules().getInt(global.GAME_RULES.DREAM_DURATION)
+		const new_expiration_time = global.persistent.server.getOverworld().time + global.persistent.server.getGameRules().getInt(global.GAME_RULES.DREAM_DURATION)
 		level.getPersistentData().putLong("expiration_time", new_expiration_time)
 		console.log(`Refreshed expiration time of ${this.ID} to ${new_expiration_time}`)
 	},
@@ -218,7 +225,7 @@ const DreamDimension = {
 	},
 
 	get_time_left() {
-		return this.get_expiration_time() - this.server.getOverworld().time
+		return this.get_expiration_time() - global.persistent.server.getOverworld().time
 	},
 
 	show_clock_to_players() {
@@ -278,7 +285,7 @@ const DreamDimension = {
 
 	last_hint_time: 0,
 	show_hint() {
-		const current_time = this.server.getOverworld().time
+		const current_time = global.persistent.server.getOverworld().time
 		if ((current_time - this.last_hint_time > 5 * MIN) && !this.attempting_reset && Math.random() < 0.01) {
 			this.last_hint_time = current_time
 			const hint_string = (Math.random() < 0.2
@@ -309,7 +316,7 @@ const DreamDimension = {
 		const level = this.get()
 
 		let is_other_beat = false
-		DreamDimension.wither_players_scheduled = this.server.scheduleRepeatingInTicks(36, () => {
+		DreamDimension.wither_players_scheduled = global.persistent.server.scheduleRepeatingInTicks(36, () => {
 			if (level.getPlayers().isEmpty()) {
 				DreamDimension.wither_players_stop()
 				return
@@ -339,7 +346,7 @@ const DreamDimension = {
 				// let a = player.getBoundingBox().inflate(8, 4, 8)
 				// level.runCommand(`fillbiome ${a.minX} ${a.minY} ${a.minZ} ${a.maxX} ${a.maxY} ${a.maxZ} biomeswevegone:pale_bog`)
 				const biome_to_fill = is_other_beat ? "biomeswevegone:pale_bog" : "minecraft:end_barrens"
-				this.server.runCommandSilent(`execute at ${player.uuid} in ${this.ID} run fillbiome ~-8 ~-4 ~-8 ~8 ~4 ~8 ${biome_to_fill}`)
+				global.persistent.server.runCommandSilent(`execute at ${player.uuid} in ${this.ID} run fillbiome ~-8 ~-4 ~-8 ~8 ~4 ~8 ${biome_to_fill}`)
 			})
 			is_other_beat = !is_other_beat
 		})
@@ -366,7 +373,7 @@ const DreamDimension = {
 
 		// The music should be in beat. Using specific numbers for pitch and frequency here.
 		play_sound_globally(level, new Vec3d(0, 1000, 0), "minecraft:music_disc.precipice", "music", level.worldBorder.getAbsoluteMaxSize(), 0.9866)
-		DreamDimension.explode_around_scheduled = this.server.scheduleRepeatingInTicks(18, callback => {
+		DreamDimension.explode_around_scheduled = global.persistent.server.scheduleRepeatingInTicks(18, callback => {
 			if (level.getPlayers().isEmpty() || DreamDimension.explode_around_scheduled != callback) {
 				this.explode_around_stop()
 				return
@@ -408,7 +415,7 @@ const DreamDimension = {
 							e.kill()
 						}
 					})
-					this.server.runCommandSilent(`execute positioned ${block_pos.getX()} ${block_pos.getY()} ${block_pos.getZ()} in ${this.ID} run fillbiome ~-8 ~-4 ~-8 ~8 ~4 ~8 biomeswevegone:pale_bog`)
+					global.persistent.server.runCommandSilent(`execute positioned ${block_pos.getX()} ${block_pos.getY()} ${block_pos.getZ()} in ${this.ID} run fillbiome ~-8 ~-4 ~-8 ~8 ~4 ~8 biomeswevegone:pale_bog`)
 				} else {
 					// Don't hurt too close.
 					level_block.explode({
@@ -453,7 +460,7 @@ const DreamDimension = {
 
 					let darkrai = this.spawn_darkrai(level, block_center.add(0, 2, 0))
 					let look_time_left = 40
-					this.server.scheduleRepeating(1, callback => {
+					global.persistent.server.scheduleRepeating(1, callback => {
 						look_time_left -= 1
 						if (!(player) || !(darkrai) || look_time_left < 0) {
 							callback.clear()
@@ -524,8 +531,8 @@ const DreamDimension = {
 		}
 
 		if (
-			((this.server.isDedicated() && this.server.getPlayerCount() == 0)
-			|| this.server.averageTickTimeNanos < this.IDEAL_TO_PREPARE_AVERAGE_TICK_TIME_NANOS)
+			((global.persistent.server.isDedicated() && global.persistent.server.getPlayerCount() == 0)
+			|| global.persistent.server.averageTickTimeNanos < this.IDEAL_TO_PREPARE_AVERAGE_TICK_TIME_NANOS)
 		) {
 			this.prepare_chunks()
 		}
@@ -547,10 +554,10 @@ const DreamDimension = {
 		}
 		chunky_size = JavaMath.clamp(chunky_size + 64, 64, 1024)
 		data.putInt("chunky_size", chunky_size)
-		this.server.runCommandSilent(`chunky cancel ${this.ID}`)
-		this.server.runCommandSilent(`chunky confirm`)
-		this.server.runCommandSilent(`chunky start ${this.ID} square 0 0 ${chunky_size} ${chunky_size}`)
-		this.server.runCommandSilent(`chunky confirm`)
+		global.persistent.server.runCommandSilent(`chunky cancel ${this.ID}`)
+		global.persistent.server.runCommandSilent(`chunky confirm`)
+		global.persistent.server.runCommandSilent(`chunky start ${this.ID} square 0 0 ${chunky_size} ${chunky_size}`)
+		global.persistent.server.runCommandSilent(`chunky confirm`)
 		console.log(`Preparing ${chunky_size}x${chunky_size} area in ${this.ID}`)
 	},
 }
@@ -660,7 +667,6 @@ PlayerEvents.cloned(event => {
 })
 
 LevelEvents.tick(DreamDimension.ID, event => {
-	DreamDimension.server = event.server
 	const time_left = DreamDimension.get_time_left()
 	if (event.level.getPlayers().size() > 0) {
 		if (time_left % DreamDimension.get_clock_frequency() == 0) {
@@ -693,14 +699,21 @@ LevelEvents.tick(DreamDimension.ID, event => {
 })
 
 ServerEvents.loaded(event => {
-	DreamDimension.server = event.server
-	event.server.scheduleRepeatingInTicks(10 * MIN, callback => DreamDimension.try_preparing(event.server, callback))
+	DreamDimension.initialize(event.server)
+	event.server.scheduleRepeatingInTicks(10 * MIN, callback => DreamDimension.try_preparing(callback))
 })
 
-ServerEvents.tick(event => {
-	DreamDimension.server = event.server // This really exists just to be safe while debugging and reloading scripts.
-	// event.server.getPlayers().forEach(p => p.setStatusMessage(`${DreamDimension.is_expiring()} ${DreamDimension.get_expiration_time()}`))
+ServerEvents.unloaded(event => {
+	DreamDimension.deinitialize()
 })
+
+// ServerEvents.tick(event => {
+	// if (event.server.tickCount % 20 == 0) {
+	// 	console.log(DreamDimension.server, global.persistent.server)
+	// }
+	// DreamDimension.try_initialize(event.server) // This really exists just to be safe while debugging and reloading scripts.
+	// event.server.getPlayers().forEach(p => p.setStatusMessage(`${DreamDimension.is_expiring()} ${DreamDimension.get_expiration_time()}`))
+// })
 
 ServerEvents.registry("damage_type", /** @param {import("@package/dev/latvian/mods/kubejs/registry").$ServerRegistryKubeEvent} event */ event => {
 	event.createCustom("bubble_cobble:dream_wither", () => new $DamageType("wither", "never", 0.5, "drowning", "default"))
@@ -758,7 +771,6 @@ BlockEvents.rightClicked("cobblemonraiddens:raid_crystal_block", event => {
 
 // More debugging.
 BlockEvents.rightClicked("minecraft:crying_obsidian", event => {
-	DreamDimension.server = event.server
 	const player = /** @type {$ServerPlayer} */ (event.player)
 	if (player.isOp() && !player.swinging) {
 		// DreamDimension.try_preparing(event.server, null)
