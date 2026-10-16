@@ -4,7 +4,7 @@
         "1.21.1"
     ],
     "loaders": {
-        "neoforge": "21.1.250"
+        "neoforge": "21.1.252"
     },
     "projects": [
         {
@@ -84,10 +84,7 @@
             ]
         },
         {
-            "pakku_id": "k1SYIx5irdtwbhAL",
-            "pakku_links": [
-                "UwxnJRUfIQbjhOaA"
-            ],
+            "pakku_id": "PT2dQNcOYfaGYP66",
             "type": "MOD",
             "side": "BOTH",
             "slug": {
@@ -102,26 +99,27 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "accessories-neoforge-1.1.0-beta.53+1.21.1.jar",
+                    "file_name": "accessories-neoforge-1.1.0-beta.54+1.21.1.jar",
                     "mc_versions": [
+                        "1.21",
                         "1.21.1"
                     ],
                     "loaders": [
                         "neoforge"
                     ],
                     "release_type": "beta",
-                    "url": "https://cdn.modrinth.com/data/jtmvUHXj/versions/Fb55Fgjz/accessories-neoforge-1.1.0-beta.53+1.21.1.jar",
-                    "id": "Fb55Fgjz",
+                    "url": "https://cdn.modrinth.com/data/jtmvUHXj/versions/dy9BbDEy/accessories-neoforge-1.1.0-beta.54+1.21.1.jar",
+                    "id": "dy9BbDEy",
                     "parent_id": "jtmvUHXj",
                     "hashes": {
-                        "sha512": "baafa9a5e48c17c243d45b6260095ffef2ad00e4e970aafc5b1ca9ab5f4a542b18b0fb35d4584318791edbaf00a3c44806f62062513d991383192aca4df27a07",
-                        "sha1": "77d75c2e13cfdf56a45cdd29806c1c97c3d250fc"
+                        "sha512": "2ebf453d11892fc8b12520af3b154a49acd9b93fc10c9c9777dcb6afe3b93ad17b0ce019b35ba7935a2ecb306b7094f97fecf056bbcb4dbeeb8477a76cd93f2d",
+                        "sha1": "0d0b07fa319a9f93c82873f9851ad35e100031f6"
                     },
                     "required_dependencies": [
                         "ccKDOlHs"
                     ],
-                    "size": 1078697,
-                    "date_published": "2026-02-06T07:37:51.455441Z"
+                    "size": 1086553,
+                    "date_published": "2026-10-16T22:31:01.782314Z"
                 }
             ]
         },
@@ -2116,7 +2114,7 @@
             ]
         },
         {
-            "pakku_id": "5fOjiP4c95K4bsfG",
+            "pakku_id": "5bgS08d5p9QsM0tr",
             "type": "MOD",
             "side": "BOTH",
             "slug": {
@@ -2131,7 +2129,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "collective-1.21.1-8.42.jar",
+                    "file_name": "collective-1.21.1-8.56.jar",
                     "mc_versions": [
                         "1.21",
                         "1.21.1"
@@ -2143,16 +2141,16 @@
                         "quilt"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/e0M1UDsY/versions/ZHBXubZ4/collective-1.21.1-8.42.jar",
-                    "id": "ZHBXubZ4",
+                    "url": "https://cdn.modrinth.com/data/e0M1UDsY/versions/3rEOrCJf/collective-1.21.1-8.56.jar",
+                    "id": "3rEOrCJf",
                     "parent_id": "e0M1UDsY",
                     "hashes": {
-                        "sha512": "629d6301558ec8dfaddfe42640d37317ae4e83f515b6d6179cc3e164286284948110b2ff15735d919ceaf33d467e7b2dd7d52b6b7297e8a1eddb611a7c844ecd",
-                        "sha1": "b9db90bc675290ad490300b056d3f3f82425f2eb"
+                        "sha512": "bcee4f76ec773d81b0d5bb7a2c9610fc5295f2632e3c56072c4d5018d18665cea67f22363772a705c191a6a6456552238157e5ae834c51ec9181fceac4f33b65",
+                        "sha1": "c1a9a8f7b607df2c28026930f0dca4ddcd388b26"
                     },
                     "required_dependencies": [],
-                    "size": 1061998,
-                    "date_published": "2026-10-04T17:00:15.686621Z"
+                    "size": 1227971,
+                    "date_published": "2026-10-16T21:27:02.854251Z"
                 }
             ]
         },
