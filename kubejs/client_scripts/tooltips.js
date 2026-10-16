@@ -11,6 +11,7 @@ const SHIFT_INFO_COLOR = "#7CB3D6"
 
 const PLACEABLE_TOOLTIP = Text.of(`Placeable`).color(MASCOT_COLOR_DARK)
 const PLACEABLE_SNEAKING_TOOLTIP = PLACEABLE_TOOLTIP.copy().append([" while", Text.of(` sneaking`).color(MASCOT_COLOR)])
+const WEARABLE_TOOLTIP = Text.of(`Wearable`).color(MASCOT_COLOR_DARK)
 
 ItemEvents.modifyTooltips(event => {
 	if (Platform.isLoaded("sophisticatedcore")) {
@@ -52,7 +53,17 @@ ItemEvents.modifyTooltips(event => {
 		text.insert(1, PLACEABLE_TOOLTIP)
 	})
 
-	event.add("#cobblemon:item_blocks", PLACEABLE_TOOLTIP)
+	event.add("cobblemon:bright_powder", Text.translate("Usable like %s", Text.translate("item.minecraft.glow_ink_sac").color(MASCOT_COLOR)).color(MASCOT_COLOR_DARK))
+
+	event.add([
+		"#cobblemon:item_blocks",
+		"#cobblemon:mint_leaves",
+	], PLACEABLE_TOOLTIP)
+
+	event.add([
+		// This just to exclude Banners and future-proofing.
+		Ingredient.of("#cobblemon:held/visibility/hat").or("#cobblemon:held/visibility/face").and(Ingredient.of("#cobblemon:held/is_held_item").or("#cobblemon:evolution_items"))
+	], WEARABLE_TOOLTIP)
 
 	event.add(["farmersdelight:tree_bark"], [subtle("Use on stripped wood to defy logic")])
 

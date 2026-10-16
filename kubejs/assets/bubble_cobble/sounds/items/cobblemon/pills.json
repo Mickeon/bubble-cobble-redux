@@ -5,6 +5,6 @@
     "cobblemon:ability_capsule"
   ],
   "pitch": 1.5,
-  "soundEvent": "cobblemon:item.medicine.pills.use",
+  "soundEvent": "cobblemon:block.item_block.bottle_pills.break",
   "volume": 0.2
 }

@@ -1,0 +1,11 @@
+{
+  "parent": "bubble_cobble:dusts/base",
+  "attributes": {
+    "color_start": "#FFEEEEEE",
+    "color_end": "#666685A9"
+  },
+
+  "applies": [
+    {"id": "cobblemon:silver_powder"}
+  ]
+}

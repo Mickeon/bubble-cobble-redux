@@ -1,0 +1,7 @@
+{
+  "type": "remi:group",
+  "id": "cobblemon:technical_machines",
+  "contents": [
+    "cobblemon:technical_machine"
+  ]
+}

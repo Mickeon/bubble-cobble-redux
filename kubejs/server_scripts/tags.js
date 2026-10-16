@@ -31,7 +31,8 @@ ServerEvents.tags("item", event => {
 	event.add("mega_showdown:mega_stone", /^zamega:/).remove("zamega:ange") // TODO: Report this.
 
 	// More compatibility.
-	event.add("cobblemon:held/leaves_leftover", "biomeswevegone:green_apple")
+	event.add("cobblemon:held/leaves_leftovers", "biomeswevegone:green_apple")
+	event.add("cobblemon:held/visibility/hat", "farmersdelight:skillet", "#supplementaries:flags")
 	event.add("brewinandchewin:raw_meats", "#c:foods/raw_meat")
 	event.add("c:cheese", "#brewinandchewin:foods/cheese_wedge") // Required because we disabled Bitterballen's cheese, but this tag is used in recipes.
 	event.add("cobblemon:pokedex_screen", "mowziesmobs:glowing_jelly")

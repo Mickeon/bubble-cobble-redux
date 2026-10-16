@@ -34,3 +34,4 @@ earlyWindowSquir = false
 	sophisticatedbackpackscreateintegration = ["-jei"]
 	sophisticatedstoragecreateintegration = ["-jei"]
 	sophisticatedcore = ["-jei"]
+	capture_xp = ["-cobblemon"]

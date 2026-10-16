@@ -141,6 +141,12 @@ style = "DEFAULT"
 	# Default: 4.0
 	# Range: 0.0 ~ 1000.0
 	quickCraftDuration = 400.0
+	# Default: 26.0
+	# Range: 1.0 ~ 100.0
+	dragStiffness = 26.0
+	# Default: 0.25
+	# Range: 0.05 ~ 1.0
+	dragDamping = 0.25
 
 [hotbarGroup]
 	enableHoldItem = false
