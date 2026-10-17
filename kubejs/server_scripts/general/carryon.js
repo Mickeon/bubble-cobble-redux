@@ -26,8 +26,10 @@ ServerEvents.tags("block", event => {
 	event.add("bubble_cobble:no_fast_travel_when_carrying",
 		/^sophisticatedstorage:.*(chest|barrel)/,
 		"#lootr:containers",
-		"gravestone:gravestone"
 	)
+	if (Platform.isLoaded("gravestone")) {
+		event.add("bubble_cobble:no_fast_travel_when_carrying", "gravestone:gravestone")
+	}
 })
 
 ServerEvents.tags("entity_type", event => {

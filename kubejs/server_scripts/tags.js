@@ -229,7 +229,9 @@ ServerEvents.tags("block", event => {
 	event.add("drizzleproof:static_blocks", "#c:ropes")
 
 	// Allow Gravestones to replace way more blocks than defined normally.
-	event.add("gravestone:grave_replaceable", "#minecraft:replaceable", "#minecraft:replaceable_by_trees", "#c:ropes")
+	if (Platform.isLoaded("gravestone")) {
+		event.add("gravestone:grave_replaceable", "#minecraft:replaceable", "#minecraft:replaceable_by_trees", "#c:ropes")
+	}
 
 	event.add("create:copycat_allow", "minecraft:beehive", "minecraft:bee_nest", "supplementaries:speaker_block", "supplementaries:notice_board", "supplementaries:turn_table")
 
