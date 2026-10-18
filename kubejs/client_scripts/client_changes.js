@@ -139,7 +139,7 @@ const ITEM_TAG_DISPLAY_INFO = [
 	{tag: "sophisticatedbackpacks:upgrade", name: "Backpack Upgrades"},
 	{tag: "sophisticatedstorage:all_storage", name: "All Storage"},
 	{tag: "sophisticatedstorage:base_tier_wooden_storage", name: "Base Tier Wooden Storage"},
-	{tag: "soulbound:enchantable", name: "Enchantable with Soulbound"},
+	{tag: "bubble_cobble:enchantable/soulbound", name: "Enchantable with Soulbound"},
 
 	{tag: "urban_decor:polyanthous", name: "Any Polyanthous Flower", model_type: "split", textures: ["urban_decor:item/daffodil_polyanthous", "urban_decor:item/spring_polyanthous", "urban_decor:item/mint_polyanthous"]},
 	{tag: "urban_decor:porcelain", name: "Any Porcelain", model_type: "split", textures: ["urban_decor:item/porcelain", "urban_decor:item/dark_porcelain"]},

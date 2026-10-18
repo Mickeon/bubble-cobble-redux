@@ -1,0 +1,20 @@
+{
+	"description": "Soulbound",
+	"exclusive_set": "#bubble_cobble:exclusive_set/soulbound",
+	"supported_items": "#bubble_cobble:enchantable/soulbound",
+	"weight": 5,
+	"max_level": 1,
+	"min_cost": {
+		"base": 5,
+		"per_level_above_first": 5
+	},
+	"max_cost": {
+		"base": 20,
+		"per_level_above_first": 5
+	},
+	"anvil_cost": 3,
+	"slots": [
+		"any"
+	],
+	"effects": {}
+}

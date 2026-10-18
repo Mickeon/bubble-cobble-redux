@@ -44,7 +44,6 @@ ServerEvents.tags("item", event => {
 	event.add("c:eggs", "undergroundworlds:spider_egg", "sleep_tight:bedbug_eggs")
 	event.add("c:mushrooms", "ribbits:toadstool") // No, it doesn't make sense?
 	event.add("create:pulpifiable", "biomeswevegone:shrub", "biomeswevegone:firecracker_flower_bush", "cobblemon:medicinal_leek")
-	event.add("soulbound:enchantable", "#c:tools")
 	event.add("create:blaze_burner_fuel/regular", "cobblemon:charcoal_stick", "cobblemon:fire_stone", "mega_showdown:fire_tera_shard", "mynethersdelight:bullet_pepper", "mynethersdelight:pepper_powder" )
 	event.add("create:blaze_burner_fuel/special", "cobblemon:fire_gem", "cobblemon:fire_stone_block", "mega_showdown:firium_z",
 		"mynethersdelight:chilidog", "mynethersdelight:hot_cream", "mynethersdelight:hot_cream_cone",

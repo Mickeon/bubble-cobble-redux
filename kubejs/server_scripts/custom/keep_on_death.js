@@ -1,7 +1,5 @@
 
-ServerEvents.tags("item", event => {
-	event.add("bubble_cobble:always_keep_on_death", "#c:tools")
-})
+const SOULBOUND_ENCHANTMENT = ID.mc("bubble_cobble:soulbound")
 
 // Keep certain items between deaths.
 EntityEvents.death("minecraft:player", event => {
@@ -64,10 +62,10 @@ function restore_kept_inventory(player) {
 function apply_damage_to_kept_inventory(player, kept_slots) {
 	for (let slot of kept_slots) {
 		let item = player.inventory.getStackInSlot(slot)
-		// Soulbound does its own reduction.
-		if (!player.isCreative() && item.isDamageableItem() && item.getEnchantmentLevel(SOULBOUND_ENCHANTMENT) == 0) {
+		if (!player.isCreative() && item.isDamageableItem()) {
+			let ratio = item.getEnchantmentLevel(SOULBOUND_ENCHANTMENT) == 0 ? 0.25 : 0.1
 			item.setDamageValue(Math.min(
-				item.getDamageValue() + item.getMaxDamage() * 0.25,
+				item.getDamageValue() + item.getMaxDamage() * ratio,
 				item.getMaxDamage() - 1
 			))
 		}
@@ -146,15 +144,73 @@ PlayerEvents.cloned(event => {
 })
 */
 
-const SOULBOUND_ENCHANTMENT = ID.mc("soulbound:soulbound")
 /** @param {$ItemStack} item */
 function is_kept_after_death(item) {
-	if (item.isEmpty()) {
+	if (item.isEmpty() || item.getEnchantmentLevel("minecraft:vanishing_curse") > 0) {
 		return false
 	}
 
 	return item.hasTag("bubble_cobble:always_keep_on_death")
 		// || item.getMaxDamage() > 0
 		|| item.isEnchanted()
-		|| item.getEnchantmentLevel(SOULBOUND_ENCHANTMENT) > 0
+		// || item.getEnchantmentLevel(SOULBOUND_ENCHANTMENT) > 0
 }
+
+ServerEvents.tags("item", event => {
+	event.add("bubble_cobble:always_keep_on_death",
+		"#c:shulker_boxes",
+		// "#c:tools",
+		"#c:buckets/lava",
+		"#c:buckets/water",
+		"#create:pressurized_air_sources", // Backtanks.
+		"#minecraft:beds",
+		"#minecraft:boats",
+		/minecart/,
+		"bubble_cobble:blue_mascot_cat",
+		"cobblemonraiddens:raid_pouch",
+		"create:goggles",
+		"create:linked_controller",
+		"create:schematic",
+		"create:schematic_and_quill",
+		"create:super_glue",
+		"gag:escape_rope",
+		"gag:time_sand_pouch",
+		"minecraft:bundle",
+		"minecraft:compass",
+		"minecraft:lead",
+		"minecraft:recovery_compass",
+		"minecraft:saddle",
+		"minecraft:wind_charge",
+		"supplementaries:key",
+		"supplementaries:lunch_basket",
+		"supplementaries:quiver",
+	)
+	// Roughly matching the prior enchantment's list, plus several more.
+	event.add("bubble_cobble:enchantable/soulbound",
+		"#bubble_cobble:pokenavs",
+		"#c:armors",
+		"#c:music_discs",
+		"#c:tools",
+		"#cobblemon:pokedex",
+		"#cobblenav:pokefinder",
+		"#minecraft:enchantable/durability",
+		"#reliquified_artifacts:mimificable",
+		/^sophisticatedbackpacks:.*backpack$/,
+		"cobblenav:fishingnav_item",
+		"create:wand_of_symmetry",
+		"minecraft:goat_horn",
+		"minecraft:totem_of_undying",
+		"mowziesmobs:earthrend_gauntlet",
+		"mowziesmobs:sand_rake",
+		"mowziesmobs:sculptor_staff",
+	)
+})
+
+ServerEvents.tags("enchantment", event => {
+	event.add("bubble_cobble:exclusive_set/soulbound", "minecraft:vanishing_curse", "minecraft:binding_curse")
+	event.add("minecraft:in_enchanting_table", "bubble_cobble:soulbound")
+	event.add("minecraft:on_random_loot", "bubble_cobble:soulbound")
+	event.add("minecraft:on_traded_equipment", "bubble_cobble:soulbound")
+	event.add("minecraft:tradeable", "bubble_cobble:soulbound")
+	event.add("minecraft:treasure", "bubble_cobble:soulbound")
+})
