@@ -27,6 +27,7 @@
         "!config/lambdynlights.toml",
         "!config/modlistmemory.json",
         "!config/particlerain.json",
+        "!kubejs/config/web_server.json",
 
         "!config/cobbreeding/encryption",
         "!config/chunky/tasks",
@@ -55,7 +56,6 @@
         "!config/packdev_toolkit.json",
         "!config/viewboard-client.json",
         "!kubejs/config/probe-settings.json",
-        "!kubejs/config/web_server.json",
         "!*panoptic*",
         "!*/**.aseprite",
         "!*/**.d.ts",

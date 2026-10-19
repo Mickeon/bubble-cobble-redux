@@ -39,6 +39,7 @@
 /config/iris.properties
 /config/lambdynlights.toml
 /config/particlerain.json
+/kubejs/config/web_server.json
 
 # Personal.
 /config/cobbreeding/encryption
