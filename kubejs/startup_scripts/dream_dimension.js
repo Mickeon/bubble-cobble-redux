@@ -2,6 +2,7 @@
 
 let $GameRules = Java.loadClass("net.minecraft.world.level.GameRules")
 let $GameRules$IntegerValue = Java.loadClass("net.minecraft.world.level.GameRules$IntegerValue")
+let $GameRules$BooleanValue = Java.loadClass("net.minecraft.world.level.GameRules$BooleanValue")
 
 /**
  * @import {$MinecraftServer} from "@package/net/minecraft/server"
@@ -12,6 +13,8 @@ let $GameRules$IntegerValue = Java.loadClass("net.minecraft.world.level.GameRule
 StartupEvents.init(event => {
 	global.GAME_RULES = {}
 	global.GAME_RULES.DREAM_DURATION = $GameRules.register("dream_duration", "misc", $GameRules$IntegerValue.create(60 * MIN))
+	// Shouldn't be here but I am not bothered to refactor now.
+	global.GAME_RULES.ALLOW_FUN_DROPS = $GameRules.register("allow_fun_drops", "player", $GameRules$BooleanValue.create(true))
 })
 
 /**

@@ -6,7 +6,7 @@
     "overrides": [
         "config",
         "configureddefaults",
-        "global_packs/both",
+        "global_packs/overrides",
         "global_packs/desktop.ini",
         "global_packs/icon.ico",
         "kubejs",

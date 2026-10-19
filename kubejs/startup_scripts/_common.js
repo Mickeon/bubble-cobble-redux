@@ -14,6 +14,7 @@ let $ItemAttributeModifiers = Java.loadClass("net.minecraft.world.item.component
  * @import {$Player} from "@package/net/minecraft/world/entity/player"
  * @import {$LivingEntity} from "@package/net/minecraft/world/entity"
  * @import {$SoundEvent_, $SoundSource_} from "@package/net/minecraft/sounds"
+ * @import {$ItemPredicate_} from "@package/dev/latvian/mods/kubejs/item"
  *
  * @typedef {import("@package/dev/latvian/mods/kubejs/item").$ItemModificationKubeEvent$ItemModifications} $ItemModifications
  * @typedef {import("@package/dev/latvian/mods/kubejs/block").$BlockModificationKubeEvent$BlockModifications} $BlockModifications

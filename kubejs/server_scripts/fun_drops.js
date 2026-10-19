@@ -1,6 +1,9 @@
 
 
 EntityEvents.drops("minecraft:player", event => {
+	if (!event.level.gameRules.getBoolean(global.GAME_RULES.ALLOW_FUN_DROPS)) {
+		return
+	}
 	const player = event.player
 	switch (player.username) {
 		case "AceNil_": {

@@ -28,10 +28,6 @@
       "hidden": true,
       "required": true
     },
-    "file/CobblemonRaidDenDesigns-0.6_RELEASE.zip": {
-      "hidden": true,
-      "required": true
-    },
     "file/PokeCostume v.3.3.zip": {
       "hidden": true,
       "required": true
@@ -64,7 +60,7 @@
       "hidden": true,
       "required": true
     },
-    "file/RCT Trainers+ [1.6] v2.1.zip": {
+    "file/RCT Trainers+ [1.7] v2.2.zip": {
       "hidden": true,
       "required": true
     },
@@ -115,7 +111,6 @@
     "file/BubbleCobble-CCC.zip",
     "file/Cobblemon Cafe.zip",
     "file/CobblemonModdedDrops.zip",
-    "file/CobblemonRaidDenDesigns-0.6_RELEASE.zip",
     "file/PokeCostume v.3.3.zip",
     "file/Torterras O\u0027 Plenty v1.1.zip",
     "file/Construction Sticks Grips.zip",
@@ -124,7 +119,7 @@
     "file/Delightful-plaques-v1.1 (1.21).zip",
     "file/E19 Cobblemon Minimap Icons.zip",
     "file/PixelTwemojiMC-9.zip",
-    "file/RCT Trainers+ [1.6] v2.1.zip",
+    "file/RCT Trainers+ [1.7] v2.2.zip",
     "file/Vervada-s-double-slabs.zip",
     "pasturefix",
     "supplementaries:darker_ropes",

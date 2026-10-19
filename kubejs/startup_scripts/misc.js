@@ -56,7 +56,7 @@ ItemEvents.modification(event => {
 		}
 	})
 
-	/** @param {$Item} item  @param {number} max_damage */
+	/** @param {$ItemPredicate_} item  @param {number} max_damage */
 	function set_max_damage(item, max_damage) {
 		event.modify(item, modified => {
 			modified.maxDamage = max_damage
@@ -65,8 +65,7 @@ ItemEvents.modification(event => {
 	}
 
 	// Make Sandpaper last double as much.
-	set_max_damage("create:sand_paper", 16)
-	set_max_damage("create:red_sand_paper", 16)
+	set_max_damage(["create:sand_paper", "create:red_sand_paper"], 16)
 
 	// TODO: Embed Fortune/Looting II into Golden tools (This is derived from Quark).
 	// Enchantments are not registered at this stage, so it's not possible like this.

@@ -208,7 +208,7 @@ ItemEvents.dynamicTooltips("show_modpack_debug_stuff", event => {
 		if ($ItemStackSoundContext) {
 			let sound_context = new $ItemStackSoundContext()
 			/** @type {import("@package/net/minecraft/client/resources/sounds").$SoundInstance} */
-			let sound_instance = sound_context.handleContext(event.item, ID.of("minecraft:intentionally_empty", false), 1.0, 1.0)
+			let sound_instance = sound_context.handleContext(event.item, ID.mc("intentionally_empty"), 1.0, 1.0)
 			event.add(Text.gray("🔊 ").append(Text.darkGray(sound_instance.getLocation())))
 		}
 	}

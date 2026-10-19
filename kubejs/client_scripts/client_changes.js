@@ -99,6 +99,7 @@ const ITEM_TAG_DISPLAY_INFO = [
 	{tag: "c:slime_balls", textures: ["minecraft:item/slime_ball", "mowziesmobs:item/glowing_jelly"]},
 	{tag: "cobblemon:apricorns", model_type: "split", textures: ["cobblemon:item/green_apricorn", "cobblemon:item/white_apricorn", "cobblemon:item/red_apricorn"]},
 	{tag: "cobblemon:berries", textures: ["cobblemon:item/berries/cheri_berry", "cobblemon:item/berries/oran_berry", "cobblemon:item/berries/persim_berry"]},
+	{tag: "cobblemon:evolution_stones", textures: ["cobblemon:item/evolution/dawn_stone", "cobblemon:item/evolution/shiny_stone"]},
 	{tag: "cobblemon:pokedex_screen", textures: ["minecraft:item/glow_ink_sac", "cobblemon:item/held_items/bright_powder"]},
 	{tag: "cobblemon:remedy_berries", textures: ["minecraft:item/sweet_berries", "cobblemon:item/galarica_nuts"]},
 	{tag: "cobblemon:tumblestones", textures: ["cobblemon:item/tumblestone", "cobblemon:item/sky_tumblestone", "cobblemon:item/black_tumblestone"]},

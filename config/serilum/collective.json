@@ -1,5 +1,9 @@
 {
 	"//": "These settings are easier to change in-game! Mod List -> Collective -> Config",
+	"disabledSerilumMods": {
+		"//": "The Serilum mods that are turned off, picked from the ones installed. A mod's own 'Enable' setting follows this list, and the other way round. Takes effect after a restart.",
+		"value": ""
+	},
 	"enableUpdateChecker": {
 		"//": "Whether Collective should show a message in the console if a dependent mod has an update available. Update checks are optional and async.",
 		"value": false

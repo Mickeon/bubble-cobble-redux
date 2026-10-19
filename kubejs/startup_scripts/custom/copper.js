@@ -11,7 +11,7 @@ StartupEvents.registry("armor_material", event => {
 			.equipSound("minecraft:item.armor.equip_copper")
 			.repairIngredient(() => Ingredient.of("minecraft:copper_ingot"))
 			.layers([
-				new $ArmorMaterial$Layer(ID.of("copper", false)),
+				new $ArmorMaterial$Layer(ID.mc("copper")),
 			])
 })
 

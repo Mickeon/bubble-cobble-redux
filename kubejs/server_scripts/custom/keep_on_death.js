@@ -60,17 +60,33 @@ function restore_kept_inventory(player) {
 
 /** @param {$ServerPlayer} player @param {Array<number>} kept_slots  */
 function apply_damage_to_kept_inventory(player, kept_slots) {
+	if (player.isCreative()) {
+		return
+	}
 	for (let slot of kept_slots) {
 		let item = player.inventory.getStackInSlot(slot)
-		if (!player.isCreative() && item.isDamageableItem()) {
-			let ratio = item.getEnchantmentLevel(SOULBOUND_ENCHANTMENT) == 0 ? 0.25 : 0.1
+		let ratio = item.getEnchantmentLevel(SOULBOUND_ENCHANTMENT) == 0 ? 0.25 : 0.1
+		if (item.isDamageableItem()) {
 			item.setDamageValue(Math.min(
 				item.getDamageValue() + item.getMaxDamage() * ratio,
 				item.getMaxDamage() - 1
 			))
 		}
+		if (item.has("supplementaries:charges")) {
+			item.set("supplementaries:charges", Math.max(
+				item.get("supplementaries:charges") - item.get("supplementaries:max_charges") * ratio,
+				1
+			))
+		}
+		if (item.has("create:banktank_air")) {
+			let max_air = Java.loadClass("com.simibubi.create.content.equipment.armor.BacktankUtil").maxAir(item)
+			console.log(item.get("create:banktank_air") - max_air * ratio)
+			item.set("create:banktank_air", Math.max(
+				item.get("create:banktank_air") - max_air * ratio,
+				1
+			))
+		}
 	}
-	return kept_slots
 }
 
 // Debugging.
@@ -80,69 +96,6 @@ function apply_damage_to_kept_inventory(player, kept_slots) {
 // 	const kept = save_kept_inventory(player)
 // 	console.log(player.getPersistentData().get("keep"))
 // })
-
-/*
-let $PlayerDeathEvent = Java.loadClass("de.maxhenkel.gravestone.corelib.death.PlayerDeathEvent")
-NativeEvents.onEvent("highest", $PlayerDeathEvent, event => {
-try {
-	let death = event.getDeath()
-	let dead_player = event.player
-	let death_main_inventory_items = death.getMainInventory()
-	for (let i in death_main_inventory_items) {
-		let item = death_main_inventory_items.get(i)
-		if (is_kept_after_death(item)) {
-			dead_player.getInventory().add(i, item)
-			death_main_inventory_items.set(i, Item.empty)
-		}
-	}
-	let death_offhand_items = death.getOffHandInventory()
-	if (is_kept_after_death(death_offhand_items.getFirst())) {
-		dead_player.setOffHandItem(death_offhand_items.getFirst())
-		death_offhand_items.set(0, Item.empty)
-	}
-	let death_armor_inventory_items = death.getArmorInventory()
-	for (let i in death_armor_inventory_items) {
-		let item = death_armor_inventory_items.get(i)
-		if (is_kept_after_death(item)) {
-			if (i == 0) {
-				dead_player.setFeetArmorItem(item)
-			} else if (i == 1) {
-				dead_player.setLegsArmorItem(item)
-			} else if (i == 2) {
-				dead_player.setChestArmorItem(item)
-			} else if (i == 3) {
-				dead_player.setHeadArmorItem(item)
-			}
-		}
-	}
-} catch (e) {
-	console.error(e)
-}
-})
-
-PlayerEvents.cloned(event => {
-	if (event.keepData || !event.oldPlayer) {
-		return // Not a death.
-	}
-
-	const player = event.player
-	const inventory = event.player.getInventory()
-	const old_inventory = event.oldPlayer.getInventory()
-	for (let i = 0; i < old_inventory.getSlots(); i += 1) {
-		let item = old_inventory.getStackInSlot(i)
-		if (is_kept_after_death(item)) {
-			// Soulbound does its own reduction.
-			if (!player.isCreative() && item.isDamageableItem() && item.getEnchantmentLevel(SOULBOUND_ENCHANTMENT) == 0) {
-				item.setDamageValue(Math.min(
-					item.getDamageValue() + item.getMaxDamage() * 0.25,
-					item.getMaxDamage() - 1
-				))
-			}
-			inventory.add(i, item)
-		}
-	}
-})
-*/
 
 /** @param {$ItemStack} item */
 function is_kept_after_death(item) {

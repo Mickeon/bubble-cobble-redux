@@ -106,7 +106,6 @@ ItemEvents.modifyTooltips(event => {
 	event.add(["supplementaries:flint_block"], [subtle("Scraped against Iron lights a ").append(Text.gold("spark")).append("...")])
 	event.add(["supplementaries:doormat"], [subtle("Could there be ").append(Text.gold("something")).append(" underneath it?")])
 	event.add(["supplementaries:confetti_popper"], [subtle("Makes for a nice ").append(Text.gold("hat")).append(". Creepers like it too!")])
-	// event.add(["#supplementaries:buntings"], [subtle("Can be placed on ").append(Text.gold("Ropes"))]) // Redundant, the mod has its own tooltip.
 	event.add(["supplementaries:gravel_bricks"], [subtle("It's frail under your feet")])
 	event.add(["supplementaries:lumisene_bucket"], [subtle("Bewildering, perhaps ").append(Text.gold("flammable")).append("?")])
 	event.add(["supplementaries:sack"], [subtle("This can store stuff, by the way")])
@@ -126,5 +125,10 @@ ItemEvents.modifyTooltips(event => {
 		text.removeText(Text.translate("message.supplementaries.lunch_box.tooltip", Client.options.keyAttack.getTranslatedKeyMessage()))
 		text.removeText(Text.translate("message.supplementaries.lunch_box.tooltip.closed"))
 		text.removeText(Text.translate("message.supplementaries.lunch_box.tooltip.open"))
+	})
+
+	event.modify(["#supplementaries:buntings", "#snowyspirit:glow_lights"], text => {
+		text.removeText(Text.translate("message.supplementaries.bunting").italic())
+		text.insert(1, PLACEABLE_TOOLTIP.copy().append(" on ").append(Text.of(`Ropes`).color(MASCOT_COLOR)))
 	})
 })
