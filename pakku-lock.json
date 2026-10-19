@@ -1252,48 +1252,6 @@
             ]
         },
         {
-            "pakku_id": "dun1erNpGeGLa25E",
-            "pakku_links": [
-                "zmSPv2AODAIdQ0J6"
-            ],
-            "type": "MOD",
-            "side": "SERVER",
-            "slug": {
-                "modrinth": "cerulean-advancements"
-            },
-            "name": {
-                "modrinth": "Cerulean"
-            },
-            "id": {
-                "modrinth": "dv57xmf9"
-            },
-            "files": [
-                {
-                    "type": "modrinth",
-                    "file_name": "cerulean-neoforge-1.0.0-1.21.1.jar",
-                    "mc_versions": [
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/dv57xmf9/versions/i5PXO3P7/cerulean-neoforge-1.0.0-1.21.1.jar",
-                    "id": "i5PXO3P7",
-                    "parent_id": "dv57xmf9",
-                    "hashes": {
-                        "sha512": "f9808b360746f691765d422b1df512c7d627ef58a1c03ad75bd12f8d847c1f506e164390090fe9fd8d5eaa14f85bb274510db63d1ce27baca4624a1dc2aa3ba7",
-                        "sha1": "f810a8ab7efd707500da4f153a5a64843edf4aac"
-                    },
-                    "required_dependencies": [
-                        "vBbPDuOs"
-                    ],
-                    "size": 340526,
-                    "date_published": "2025-05-03T02:24:36.562210Z"
-                }
-            ]
-        },
-        {
             "pakku_id": "9nab4Ydt0ALdQtHO",
             "type": "MOD",
             "side": "CLIENT",
@@ -10149,43 +10107,6 @@
                     "required_dependencies": [],
                     "size": 755235,
                     "date_published": "2026-08-03T03:48:00.256872Z"
-                }
-            ]
-        },
-        {
-            "pakku_id": "zmSPv2AODAIdQ0J6",
-            "type": "MOD",
-            "side": "BOTH",
-            "slug": {
-                "modrinth": "txnilib"
-            },
-            "name": {
-                "modrinth": "TxniLib"
-            },
-            "id": {
-                "modrinth": "vBbPDuOs"
-            },
-            "files": [
-                {
-                    "type": "modrinth",
-                    "file_name": "txnilib-neoforge-1.0.24-1.21.1.jar",
-                    "mc_versions": [
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/vBbPDuOs/versions/M1CyD3Uu/txnilib-neoforge-1.0.24-1.21.1.jar",
-                    "id": "M1CyD3Uu",
-                    "parent_id": "vBbPDuOs",
-                    "hashes": {
-                        "sha512": "656cd5746fe1b3a2cc7c516619d9f88556f37387e672bb0f362c8aecefc6f1d06705d3a84564c8779856fbbf69fee67b6038a24ffcf46f36f2c478a1aff43a57",
-                        "sha1": "17b1bbb96e922e683a1807a2e7bece603fdc491d"
-                    },
-                    "required_dependencies": [],
-                    "size": 6276522,
-                    "date_published": "2025-05-15T21:54:12.613150Z"
                 }
             ]
         },
