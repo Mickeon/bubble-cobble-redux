@@ -39,7 +39,8 @@
                 "ferritecore",
                 "sodium",
                 "lithium",
-                "asyncparticles"
+                "asyncparticles",
+                "achiopt"
               ]
             }
           },
