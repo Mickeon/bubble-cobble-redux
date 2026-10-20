@@ -1,0 +1,8 @@
+{
+  "type": "remi:tag",
+  "id": "cobblemon:poke_balls",
+  "name": "Poké Balls",
+  "tag": "cobblemon:poke_balls",
+  "registry": "minecraft:item",
+  "enabled": true
+}

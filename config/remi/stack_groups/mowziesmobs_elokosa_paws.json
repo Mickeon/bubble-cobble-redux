@@ -1,0 +1,11 @@
+{
+  "type": "remi:group",
+	"id": "mowziesmobs:elokosa_paws",
+  "contents": [
+    "mowziesmobs:elokosa_paw_full",
+    "mowziesmobs:elokosa_paw_gibbous",
+    "mowziesmobs:elokosa_paw_half",
+    "mowziesmobs:elokosa_paw_crescent",
+    "mowziesmobs:elokosa_paw_new"
+  ]
+}

@@ -1,4 +1,5 @@
 {
+  "__comment": "This doesn't do anything anymore, as I am hiding plated food from EMI. Keeping this, anyway.",
   "type": "remi:regex",
   "id": "displaydelight:plated_food",
   "registry": "minecraft:item",
@@ -6,5 +7,6 @@
   "exclusions": [
     "displaydelight:food_plate",
     "displaydelight:small_food_plate"
-  ]
+  ],
+  "enabled": false
 }

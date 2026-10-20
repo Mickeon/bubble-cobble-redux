@@ -1,0 +1,25 @@
+{
+  "type": "remi:group",
+	"id": "createdeco:copper_decor",
+  "contents": [
+    "createdeco:blue_copper_lamp",
+    "createdeco:green_copper_lamp",
+    "createdeco:locked_copper_door",
+    "createdeco:red_copper_lamp",
+    "createdeco:yellow_copper_lamp",
+    "createdeco:copper_bars",
+    "createdeco:copper_bars_overlay",
+    "createdeco:copper_catwalk",
+    "createdeco:copper_catwalk_railing",
+    "createdeco:copper_catwalk_stairs",
+    "createdeco:copper_coin",
+    "createdeco:copper_coinstack",
+    "createdeco:copper_hull",
+    "createdeco:copper_mesh_fence",
+    "createdeco:copper_sheet_metal",
+    "createdeco:copper_support",
+    "createdeco:copper_support_wedge",
+    "createdeco:copper_window",
+    "createdeco:copper_window_pane"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "type": "remi:group",
+	"id": "createdeco:zinc_decor",
+  "contents": [
+    "createdeco:blue_zinc_lamp",
+    "createdeco:green_zinc_lamp",
+    "createdeco:locked_zinc_door",
+    "createdeco:red_zinc_lamp",
+    "createdeco:yellow_zinc_lamp",
+    "createdeco:zinc_bars",
+    "createdeco:zinc_bars_overlay",
+    "createdeco:zinc_catwalk",
+    "createdeco:zinc_catwalk_railing",
+    "createdeco:zinc_catwalk_stairs",
+    "createdeco:zinc_coin",
+    "createdeco:zinc_coinstack",
+    "createdeco:zinc_door",
+    "createdeco:zinc_hull",
+    "createdeco:zinc_ladder",
+    "createdeco:zinc_mesh_fence",
+    "createdeco:zinc_sheet_metal",
+    "createdeco:zinc_support",
+    "createdeco:zinc_support_wedge",
+    "createdeco:zinc_trapdoor",
+    "createdeco:zinc_window",
+    "createdeco:zinc_window_pane"
+  ]
+}

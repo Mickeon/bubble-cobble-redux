@@ -1,0 +1,7 @@
+{
+  "type": "remi:tag",
+  "id": "arts_and_crafts:paintable/soapstone",
+  "name": "Soapstone",
+  "tag": "arts_and_crafts:paintable/soapstone",
+  "registry": "minecraft:block"
+}

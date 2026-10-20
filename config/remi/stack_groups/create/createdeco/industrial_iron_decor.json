@@ -1,0 +1,28 @@
+{
+  "type": "remi:group",
+	"id": "createdeco:industrial_iron_decor",
+  "contents": [
+    "createdeco:blue_industrial_iron_lamp",
+    "createdeco:green_industrial_iron_lamp",
+    "createdeco:locked_industrial_iron_door",
+    "createdeco:red_industrial_iron_lamp",
+    "createdeco:yellow_industrial_iron_lamp",
+    "createdeco:industrial_iron_bars",
+    "createdeco:industrial_iron_bars_overlay",
+    "createdeco:industrial_iron_catwalk",
+    "createdeco:industrial_iron_catwalk_railing",
+    "createdeco:industrial_iron_catwalk_stairs",
+    "createdeco:industrial_iron_coin",
+    "createdeco:industrial_iron_coinstack",
+    "createdeco:industrial_iron_door",
+    "createdeco:industrial_iron_hull",
+    "createdeco:industrial_iron_ladder",
+    "createdeco:industrial_iron_mesh_fence",
+    "createdeco:industrial_iron_sheet_metal",
+    "createdeco:industrial_iron_support",
+    "createdeco:industrial_iron_support_wedge",
+    "createdeco:industrial_iron_trapdoor",
+    "createdeco:industrial_iron_window",
+    "createdeco:industrial_iron_window_pane"
+  ]
+}

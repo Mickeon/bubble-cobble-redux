@@ -1,0 +1,7 @@
+{
+  "type": "remi:tag",
+  "id": "createdeco:cage_lamps",
+  "priority": 10,
+  "tag": "createdeco:cage_lamps",
+  "registry": "minecraft:block"
+}

@@ -1,0 +1,7 @@
+{
+  "type": "remi:tag",
+  "id": "arts_and_crafts:paintable/mud_bricks",
+  "name": "Mud Bricks",
+  "tag": "arts_and_crafts:paintable/mud_bricks",
+  "registry": "minecraft:block"
+}

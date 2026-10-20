@@ -1,0 +1,24 @@
+{
+  "type": "remi:group",
+	"id": "createdeco:iron_decor",
+  "contents": [
+    "createdeco:blue_iron_lamp",
+    "createdeco:green_iron_lamp",
+    "createdeco:red_iron_lamp",
+    "createdeco:yellow_iron_lamp",
+    "createdeco:iron_bars_overlay",
+    "createdeco:iron_catwalk",
+    "createdeco:iron_catwalk_railing",
+    "createdeco:iron_catwalk_stairs",
+    "createdeco:iron_coin",
+    "createdeco:iron_coinstack",
+    "createdeco:iron_hull",
+    "createdeco:iron_ladder",
+    "createdeco:iron_mesh_fence",
+    "createdeco:iron_sheet_metal",
+    "createdeco:iron_support",
+    "createdeco:iron_support_wedge",
+    "createdeco:iron_window",
+    "createdeco:iron_window_pane"
+  ]
+}

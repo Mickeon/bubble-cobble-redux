@@ -1,0 +1,11 @@
+{
+  "type": "remi:group",
+  "id": "c:buckets",
+  "contents": [
+    "#item:c:buckets"
+  ],
+  "exclusions": [
+    "minecraft:bucket",
+    "minersdelight:milk_cup"
+  ]
+}

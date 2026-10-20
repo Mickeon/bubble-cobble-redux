@@ -401,6 +401,19 @@
 			"text": [
 				"Gearwheel"
 			]
+		},
+		{
+			"stacks": [
+				{"type": "item", "id": "create:pulse_repeater"},
+				{"type": "item", "id": "create:pulse_extender"},
+				{"type": "item", "id": "create:pulse_timer"},
+				{"type": "item", "id": "create:powered_latch"},
+				{"type": "item", "id": "create:powered_toggle_latch"},
+				{"type": "item", "id": "supplementaries:relayer"}
+			],
+			"text": [
+				"Redstone"
+			]
 		}
 	]
 }

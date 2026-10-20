@@ -1,0 +1,28 @@
+{
+  "type": "remi:group",
+	"id": "arts_and_crafts:umber_pietraforte",
+  "contents": [
+    "arts_and_crafts:chiseled_umber_pietraforte",
+    "arts_and_crafts:cobbled_umber_pietraforte",
+    "arts_and_crafts:cobbled_umber_pietraforte_slab",
+    "arts_and_crafts:cobbled_umber_pietraforte_stairs",
+    "arts_and_crafts:cobbled_umber_pietraforte_wall",
+    "arts_and_crafts:cut_umber_pietraforte",
+    "arts_and_crafts:cut_umber_pietraforte_slab",
+    "arts_and_crafts:cut_umber_pietraforte_stairs",
+    "arts_and_crafts:cut_umber_pietraforte_wall",
+    "arts_and_crafts:smooth_umber_pietraforte",
+    "arts_and_crafts:smooth_umber_pietraforte_slab",
+    "arts_and_crafts:smooth_umber_pietraforte_stairs",
+    "arts_and_crafts:smooth_umber_pietraforte_wall",
+    "arts_and_crafts:umber_pietraforte",
+    "arts_and_crafts:umber_pietraforte_brick_slab",
+    "arts_and_crafts:umber_pietraforte_brick_stairs",
+    "arts_and_crafts:umber_pietraforte_brick_wall",
+    "arts_and_crafts:umber_pietraforte_bricks",
+    "arts_and_crafts:umber_pietraforte_pillar",
+    "arts_and_crafts:umber_pietraforte_slab",
+    "arts_and_crafts:umber_pietraforte_stairs",
+    "arts_and_crafts:umber_pietraforte_wall"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "type": "remi:group",
+	"id": "createdeco:andesite_decor",
+  "contents": [
+    "createdeco:blue_andesite_lamp",
+    "createdeco:green_andesite_lamp",
+    "createdeco:locked_andesite_door",
+    "createdeco:red_andesite_lamp",
+    "createdeco:yellow_andesite_lamp",
+    "createdeco:andesite_bars",
+    "createdeco:andesite_bars_overlay",
+    "createdeco:andesite_catwalk",
+    "createdeco:andesite_catwalk_railing",
+    "createdeco:andesite_catwalk_stairs",
+    "createdeco:andesite_door",
+    "createdeco:andesite_hull",
+    "createdeco:andesite_mesh_fence",
+    "createdeco:andesite_sheet_metal",
+    "createdeco:andesite_support",
+    "createdeco:andesite_support_wedge",
+    "createdeco:andesite_trapdoor",
+    "createdeco:andesite_window",
+    "createdeco:andesite_window_pane"
+  ]
+}

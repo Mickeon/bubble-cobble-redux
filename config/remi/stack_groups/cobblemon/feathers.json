@@ -1,0 +1,7 @@
+{
+  "type": "remi:tag",
+  "id": "cobblemon:feathers",
+  "tag": "cobblemon:feathers",
+  "registry": "minecraft:item",
+  "enabled": true
+}

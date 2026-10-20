@@ -1,0 +1,7 @@
+{
+  "type": "remi:group",
+	"id": "minecraft:ominous_potions",
+  "contents": [
+    "minecraft:ominous_potion"
+  ]
+}

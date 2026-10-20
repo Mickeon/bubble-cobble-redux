@@ -123,7 +123,7 @@ const ITEM_TAG_DISPLAY_INFO = [
 	{tag: "curios:necklace", name: "Fits in Curios' Necklace slot"},
 	{tag: "enhancedcelestials2defaultlunarevents:harvest_moon_crops", name: "Crops enhanced by the Harvest Moon"},
 	{tag: "bubble_cobble:wines", name: "Wines"},
-	{tag: "mega_showdown:mega_bracelets", name: "Mega Bracelets"},
+	{tag: "mega_showdown:mega_bracelet", name: "Mega Bracelets"},
 	{tag: "mega_showdown:mega_stone", name: "Mega Stones"},
 	{tag: "mega_showdown:rotom_appliances", name: "Rotom Appliances"},
 	{tag: "mega_showdown:tera_shard", name: "Tera Shards", model_type: "split", textures: ["mega_showdown:item/normal_tera_shard", "mega_showdown:item/fairy_tera_shard", "mega_showdown:item/ghost_tera_shard"]},

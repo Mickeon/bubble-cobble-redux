@@ -1,0 +1,13 @@
+{
+  "type": "remi:group",
+	"id": "bubble_cobble:fermented_fluids",
+  "contents": [
+    "bubble_cobble:berry_juice_soda",
+    "bubble_cobble:firebomb_whiskey",
+    "bubble_cobble:honey_liqueur",
+    "bubble_cobble:sparkling_rose",
+    "bubble_cobble:spumante",
+    "bubble_cobble:sweet_berry_wine"
+  ],
+	"regex": "fluid:brewinandchewin.*"
+}

@@ -1,0 +1,28 @@
+{
+  "type": "remi:group",
+	"id": "createdeco:brass_decor",
+  "contents": [
+    "createdeco:blue_brass_lamp",
+    "createdeco:green_brass_lamp",
+    "createdeco:locked_brass_door",
+    "createdeco:red_brass_lamp",
+    "createdeco:yellow_brass_lamp",
+    "createdeco:brass_bars",
+    "createdeco:brass_bars_overlay",
+    "createdeco:brass_catwalk",
+    "createdeco:brass_catwalk_railing",
+    "createdeco:brass_catwalk_stairs",
+    "createdeco:brass_coin",
+    "createdeco:brass_coinstack",
+    "createdeco:brass_door",
+    "createdeco:brass_hull",
+    "createdeco:brass_ladder",
+    "createdeco:brass_mesh_fence",
+    "createdeco:brass_sheet_metal",
+    "createdeco:brass_support",
+    "createdeco:brass_support_wedge",
+    "createdeco:brass_trapdoor",
+    "createdeco:brass_window",
+    "createdeco:brass_window_pane"
+  ]
+}

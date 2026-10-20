@@ -1,0 +1,7 @@
+{
+  "type": "remi:tag",
+  "id": "lootr:containers",
+  "tag": "lootr:containers",
+  "registry": "minecraft:item",
+  "enabled": true
+}

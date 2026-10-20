@@ -1,0 +1,23 @@
+{
+  "type": "remi:group",
+  "id": "cobblemon:healing_and_status_items",
+  "name": "Healing & Status Items",
+  "contents": [
+    "cobblemon:ether",
+    "cobblemon:max_ether",
+    "cobblemon:elixir",
+    "cobblemon:max_elixir",
+    "cobblemon:potion",
+    "cobblemon:super_potion",
+    "cobblemon:hyper_potion",
+    "cobblemon:max_potion",
+    "cobblemon:full_restore",
+    "cobblemon:antidote",
+    "cobblemon:awakening",
+    "cobblemon:burn_heal",
+    "cobblemon:ice_heal",
+    "cobblemon:paralyze_heal",
+    "cobblemon:full_heal",
+    "cobblemon:full_restore"
+  ]
+}
