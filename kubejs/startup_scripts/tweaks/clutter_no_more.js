@@ -1,7 +1,7 @@
 // requires: clutternomore
 // https://aldak.netlify.app/javadoc/1.21.1-21.1.x/net/minecraft/client/gui/guigraphics
-// https://github.com/Alchemists-Of-Yore/ClutterNoMore/blob/0a5832a75ccfb65c999b207134cf0f43d369ab96/src/main/java/dev/tazer/clutternomore/common/shape_map/ShapeMap.java
-let $ShapeMap = Java.loadClass("dev.tazer.clutternomore.common.shape_map.ShapeMap")
+// https://github.com/Monad-Modding/ClutterNoMore/blob/6a16ad3329be7904af4d351ad5508c44ef2de720/common/src/main/java/dev/tazer/clutternomore/shape/ShapeMap.java
+let $ShapeMap = Java.loadClass("dev.tazer.clutternomore.shape.ShapeMap")
 // https://discord.com/channels/303440391124942858/1421136321824424059/1421862264654401608
 let $RegisterGuiLayersEvent = Java.loadClass("net.neoforged.neoforge.client.event.RegisterGuiLayersEvent")
 

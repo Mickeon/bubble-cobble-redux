@@ -1520,11 +1520,11 @@
             ]
         },
         {
-            "pakku_id": "nNAllv7ItbR1rVAK",
+            "pakku_id": "WOLT6s8sH1bXT7nW",
             "type": "MOD",
             "side": "BOTH",
             "slug": {
-                "modrinth": "clutter-no-more"
+                "modrinth": "clutternomore"
             },
             "name": {
                 "modrinth": "Clutter No More"
@@ -1535,7 +1535,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "clutternomore-2.0.7+1.21.1-neoforge.jar",
+                    "file_name": "clutternomore-neoforge-3.0.3+1.21.1.jar",
                     "mc_versions": [
                         "1.21",
                         "1.21.1"
@@ -1544,16 +1544,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/ewyjbmG4/versions/EaL0l4U1/clutternomore-2.0.7+1.21.1-neoforge.jar",
-                    "id": "EaL0l4U1",
+                    "url": "https://cdn.modrinth.com/data/ewyjbmG4/versions/k1ees6do/clutternomore-neoforge-3.0.3+1.21.1.jar",
+                    "id": "k1ees6do",
                     "parent_id": "ewyjbmG4",
                     "hashes": {
-                        "sha512": "392e17d4fdfd6dc0fc3ea9545c66bb536813f2b8081dbbbf3d4125c49b9bcb64ce666d1c69409ab26f8d5b3d14c7f6c483f6d3c4015fc075a1f6a09c1cf90327",
-                        "sha1": "9d6465e3183eaa4e7244539ee3c722d64fc7225d"
+                        "sha512": "c77277d871aa00c0132647482b67253ada8a1f9e8fdd24fa16d26eeb8ee4b206cff2c7c3e9def1dd070e2f34ed9c9d912e6653162feb1f0d3918c424796ba83a",
+                        "sha1": "b1ed005aa33c9d070fbbcdeb2fb834d004625c1e"
                     },
                     "required_dependencies": [],
-                    "size": 759576,
-                    "date_published": "2026-08-07T15:52:59.126848Z"
+                    "size": 791750,
+                    "date_published": "2026-10-20T10:17:40.474446Z"
                 }
             ]
         },

@@ -5,8 +5,7 @@
  * @import {$List} from "@package/java/util"
  */
 
-// https://github.com/Alchemists-Of-Yore/ClutterNoMore/blob/0a5832a75ccfb65c999b207134cf0f43d369ab96/src/main/java/dev/tazer/clutternomore/common/shape_map/ShapeMap.java
-let $ShapeMap = Java.loadClass("dev.tazer.clutternomore.common.shape_map.ShapeMap")
+let $ShapeMap = Java.loadClass("dev.tazer.clutternomore.shape.ShapeMap")
 
 let shapes = /** @type {$List<$Item>?} */ (null)
 let cached_item = /** @type {$Item?} */ (null)

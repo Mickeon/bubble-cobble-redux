@@ -1,7 +1,8 @@
 // ignored: true
 // requires: clutternomore
 
-// FIXME: With `recipe_fixes` enabled (See config\clutternomore\startup.toml),
+// This has since been addressed, but keeping a note here for historical reasons.
+// With `recipe_fixes` enabled (See config\clutternomore\startup.toml),
 // all recipes that output shapes (slabs, stairs, etc.) are removed.
 // However, this setting also replaces all shape ingredients with the "parent" shape,
 // which causes many, many recipe conflicts. Either:
