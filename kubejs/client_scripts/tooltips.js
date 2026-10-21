@@ -1,9 +1,10 @@
 // priority: 100
-// Run before solonion_tooltip.
+// High priority to run before solonion.js, and because it also contains common constants for tooltips.
+
 let $Move = Java.loadClass("com.cobblemon.mod.common.api.moves.Move")
 let $Moves = Java.loadClass("com.cobblemon.mod.common.api.moves.Moves")
 
-/** @import {$MutableComponent} from "@package/net/minecraft/network/chat" */
+/** @import {$MutableComponent, $MutableComponent_} from "@package/net/minecraft/network/chat" */
 
 const MASCOT_COLOR = "#83BED9"
 const MASCOT_COLOR_DARK = "#537B8D"
@@ -65,10 +66,10 @@ ItemEvents.modifyTooltips(event => {
 		Ingredient.of("#cobblemon:held/visibility/hat").or("#cobblemon:held/visibility/face").and(Ingredient.of("#cobblemon:held/is_held_item").or("#cobblemon:evolution_items"))
 	], WEARABLE_TOOLTIP)
 
-	event.add(["farmersdelight:tree_bark"], [subtle("Use on stripped wood to defy logic")])
+	event.add(["farmersdelight:tree_bark"], subtle("Use on stripped wood to defy logic"))
 
 	if (Platform.isLoaded("sleep_tight")) {
-		event.add(["#sleep_tight:hammocks"], [Text.of([`Placeable between `, Text.of(`3 blocks`).color(MASCOT_COLOR), ` or `, Text.of(`2 fences`).color(MASCOT_COLOR)]).color(MASCOT_COLOR_DARK)])
+		event.add(["#sleep_tight:hammocks"], Text.of([`Placeable between `, Text.of(`3 blocks`).color(MASCOT_COLOR), ` or `, Text.of(`2 fences`).color(MASCOT_COLOR)]).color(MASCOT_COLOR_DARK))
 		event.add(["sleep_tight:dreamer_essence"], [subtle("Keeps Bedbugs at bay, attracts Phantoms,"), subtle("    and is rather soothing...")])
 		event.add(["sleep_tight:bedbug_eggs"], subtle("Use on a bed to infest it."))
 	}
@@ -113,6 +114,22 @@ ItemEvents.modifyTooltips(event => {
 		})
 		event.modify("#connectiblechains:hangable_items", {shift: false}, text => {
 			text.insert(1, Text.join(`Hangable on catenary`).color(MASCOT_COLOR_DARK))
+		})
+	}
+
+	if (Platform.isLoaded("create")) {
+		// I'd love to use block tags here but they're not reliably loaded the first time.
+		event.modify(["minecraft:water_bucket", "cobblemon:water_stone_block"], text => {
+			text.insert(1, Text.translate("Bulk %s catalyst", Text.of(`Washing`).color(MASCOT_COLOR)).color(MASCOT_COLOR_DARK))
+		})
+		event.modify(["minecraft:lava_bucket", "cobblemon:fire_stone_block", "mynethersdelight:magma_cake_block", "create:blaze_burner"], text => {
+			text.insert(1, Text.translate("Bulk %s catalyst", Text.of(`Blasting`).color(MASCOT_COLOR)).color(MASCOT_COLOR_DARK))
+		})
+		event.modify(["minecraft:campfire", "create:blaze_burner", "supplementaries:fire_pit", "supplementaries:lumisene_bucket"], text => {
+			text.insert(1, Text.translate("Bulk %s catalyst", Text.of(`Smoking`).color(MASCOT_COLOR)).color(MASCOT_COLOR_DARK))
+		})
+		event.modify(["minecraft:soul_campfire", "biomesoplenty:liquid_null_bucket", "bubble_cobble:renuvium_bucket"], text => {
+			text.insert(1, Text.translate("Bulk %s catalyst", Text.of(`Haunting`).color(MASCOT_COLOR)).color(MASCOT_COLOR_DARK))
 		})
 	}
 
@@ -220,10 +237,10 @@ ItemEvents.dynamicTooltips("show_modpack_debug_stuff", event => {
 	}
 })
 
-
+const DEFAULT_TOOLTIP_BORDER_START = Color.rgba(26, 108, 184, 1).getArgb()
 let $RenderTooltipEvent$Color = Java.loadClass("net.neoforged.neoforge.client.event.RenderTooltipEvent$Color")
 NativeEvents.onEvent("highest", $RenderTooltipEvent$Color, event => {
-	event.setBorderStart(Color.rgba(26, 108, 184, 1).getArgb())
+	event.setBorderStart(DEFAULT_TOOLTIP_BORDER_START)
 
 	const item_stack = event.getItemStack()
 	if (item_stack.isEmpty()) {
@@ -352,35 +369,33 @@ NativeEvents.onEvent("highest", $RenderTooltipEvent$Color, event => {
 			}
 		}
 		case "urban_decor": {
-			event.setBorderStart(Color.wrap("gray_dye").getArgb())
+			event.setBorderStart(Color.GRAY_DYE.getArgb())
 		}
 	}
 	// event.setBackground(Color.rgba(8, 21, 95, 1).getArgb())
 	// event.setBackgroundStart(Color.rgba(26, 50, 184, 1).getArgb())
 })
 
-/** @param {string | $MutableComponent} text @returns {$MutableComponent} */
+/** @param {$MutableComponent_} text @returns {$MutableComponent} */
 function subtle(text) {
 	return Text.of(text).color(MASCOT_COLOR_DARK).italic()
 }
 
+const SHIFT_INFO_FOLDED_TOOLTIP = Text.translate("Hold [%s] for Summary", Text.white("Shift")).darkGray()
+const SHIFT_INFO_EXPANDED_TOOLTIP = Text.translate("Hold [%s] for Summary", Text.gray("Shift")).darkGray()
 /**
- * @import {$TextActionBuilder} from "@package/dev/latvian/mods/kubejs/text/action"
  * @import {$ModifyItemTooltipsKubeEvent} from "@package/dev/latvian/mods/kubejs/item"
- * @import {$Ingredient} from "@package/net/minecraft/world/item/crafting"
- */
-
-/**
+ * @import {$Ingredient_} from "@package/net/minecraft/world/item/crafting"
  * @param {$ModifyItemTooltipsKubeEvent} event
- * @param {$Ingredient} item
+ * @param {$Ingredient_} item
  * @param {Array<string> | string} info
  */
 function add_shift_info(event, item, info) {
 	event.modify(item, { shift: false }, /** @param {$TextActionBuilder} text */ text => {
-		text.insert(1, Text.darkGray("Hold [").append(Text.white("Shift")).append("] for Summary"))
+		text.insert(1, SHIFT_INFO_FOLDED_TOOLTIP)
 	})
-	event.modify(item, { shift: true }, /** @param {$TextActionBuilder} text */ text => {
-		text.insert(1, Text.darkGray("Hold [").append(Text.gray("Shift")).append("] for Summary"))
+	event.modify(item, { shift: true }, text => {
+		text.insert(1, SHIFT_INFO_EXPANDED_TOOLTIP)
 
 		text.insert(2, Text.empty())
 

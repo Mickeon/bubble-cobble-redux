@@ -164,6 +164,9 @@
     "[json]": {
         "editor.insertSpaces": false
     },
+    "[javascript]": {
+        "files.insertFinalNewline": true,
+    },
     "search.exclude": {
         "/.probe/": true,
         "/emi.json": true,

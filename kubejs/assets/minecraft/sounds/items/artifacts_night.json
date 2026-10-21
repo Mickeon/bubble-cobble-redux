@@ -1,0 +1,8 @@
+{
+  "keys": [
+    "artifacts:night_vision_goggles"
+  ],
+  "soundEvent": "cobblemon:block.evolution_stone_block.step",
+  "volume": 0.2,
+  "pitch": 2.0
+}

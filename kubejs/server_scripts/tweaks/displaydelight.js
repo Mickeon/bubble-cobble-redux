@@ -64,7 +64,8 @@ BlockEvents.rightClicked(event => {
 			placed_level_block.getBlockState(),
 			{plate_hidden: true, stacks: "1"}
 		))
-		play_sound_globally(level, placed_level_block.getPos().getCenter(), display_block.getSoundType().getPlaceSound(), "blocks", 1.0, 1.25)
+		let sound_type = display_block.getSoundType(display_block, level, placed_level_block.getPos(), player)
+		play_sound_globally(level, placed_level_block.getPos().getCenter(), sound_type.getPlaceSound(), "blocks", 1.0, 1.25)
 		// item.consume(1, player) // useOn() does the consumption.
 		player.swing(hand, true)
 		event.success()

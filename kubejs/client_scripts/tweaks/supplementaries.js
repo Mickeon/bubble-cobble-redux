@@ -103,14 +103,14 @@ ItemEvents.modifyTooltips(event => {
 	event.add(["supplementaries:sugar_cube"], subtle("Dissolves when touching water."))
 	event.add(["supplementaries:soap_block"], subtle("Quite slippery when stepped on!"))
 	event.add(["supplementaries:enderman_head"], subtle("Emits redstone power the more you look at it."))
-	event.add(["supplementaries:flint_block"], [subtle("Scraped against Iron lights a ").append(Text.gold("spark")).append("...")])
-	event.add(["supplementaries:doormat"], [subtle("Could there be ").append(Text.gold("something")).append(" underneath it?")])
-	event.add(["supplementaries:confetti_popper"], [subtle("Makes for a nice ").append(Text.gold("hat")).append(". Creepers like it too!")])
-	event.add(["supplementaries:gravel_bricks"], [subtle("It's frail under your feet")])
-	event.add(["supplementaries:lumisene_bucket"], [subtle("Bewildering, perhaps ").append(Text.gold("flammable")).append("?")])
-	event.add(["supplementaries:sack"], [subtle("This can store stuff, by the way")])
-	event.add(["supplementaries:flower_box"], [subtle("Can only contain ").append(Text.gold("tall flowers"))])
-	event.add(["supplementaries:pulley_block"], [subtle("").append(Text.gold("Ropes")).append(" and ").append(Text.gold("chains")).append(" in here!")])
+	event.add(["supplementaries:flint_block"], subtle("Scraped against Iron lights a ").append(Text.of(`spark`).color(MASCOT_COLOR)).append("..."))
+	event.add(["supplementaries:doormat"], subtle("Could there be ").append(Text.of(`something`).color(MASCOT_COLOR)).append(" underneath it?"))
+	event.add(["supplementaries:confetti_popper"], subtle("Makes for a nice ").append(Text.of(`hat`).color(MASCOT_COLOR)).append(". Creepers like it, too!"))
+	event.add(["supplementaries:gravel_bricks"], subtle("It's frail under your feet"))
+	event.add(["supplementaries:lumisene_bucket"], subtle("Bewildering, perhaps ").append(Text.of(`flammable`).color(MASCOT_COLOR)).append("?"))
+	event.add(["supplementaries:sack"], subtle("This can store stuff, by the way"))
+	event.add(["supplementaries:flower_box"], subtle("Can only contain ").append(Text.of(`tall flowers`).color(MASCOT_COLOR)))
+	event.add(["supplementaries:pulley_block"], subtle(Text.translateWithFallback("", "%s and %s in here!", Text.of(`Ropes`).color(MASCOT_COLOR), Text.of(`chains`).color(MASCOT_COLOR))))
 
 	event.modify([
 		"supplementaries:cannonball",

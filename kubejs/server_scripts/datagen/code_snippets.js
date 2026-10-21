@@ -87,7 +87,7 @@ global.datagen.functions.code_snippets = function() {
 	})
 
 	snippet_from_stream("@mod", Platform.getList())
-	snippet_from_stream("@registries", REGISTRY_ACCESS.listRegistries().map(key => key.location()))
+	snippet_from_stream("@registry", REGISTRY_ACCESS.listRegistries().map(key => key.location()))
 	snippet_from_stream("@recipe_id", Client.level.getRecipeManager().getRecipeIds())
 
 	if (Platform.isClientEnvironment()) {
