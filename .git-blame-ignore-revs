@@ -1,0 +1,5 @@
+# Run the following command to always ignore the listed commits in git blame:
+# git config blame.ignoreRevsFile .git-blame-ignore-revs
+
+# Add trailing newline to files
+fbc67678e0dabdf1cfd116a66493fe3b7adda571
