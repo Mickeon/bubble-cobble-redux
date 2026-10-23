@@ -11,7 +11,7 @@
 	},
 	"effects": {
 		"commandPickup" : "",
-		"commandLoop" : "effect give @s minecraft:slow_falling 1 1 true",
+		"commandLoop" : "quiet effect give @s minecraft:slow_falling 1 1 true",
 		"commandPlace" : ""
 	}
 }

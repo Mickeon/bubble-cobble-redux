@@ -87,7 +87,15 @@
 		"minecraft:player": "NEUTRAL",
 		"minecraft:villager": "NEUTRAL",
 		"minecraft:iron_golem": "NEUTRAL",
-		"guardvillagers:guard": "NEUTRAL"
+		"guardvillagers:guard": "NEUTRAL",
+		"biomeswevegone:oddion": "NEUTRAL",
+		"biomeswevegone:pumpkin_warden": "NEUTRAL",
+		"crittersandcompanions:dumbo_octopus": "NEUTRAL",
+		"crittersandcompanions:ferret": "NEUTRAL",
+		"crittersandcompanions:otter": "NEUTRAL",
+		"crittersandcompanions:red_panda": "NEUTRAL",
+		"crittersandcompanions:snail": "NEUTRAL",
+		"ribbits:ribbit": "NEUTRAL"
 	},
 	"player_relation_tags": {
 		"minecraft:undead": "HOSTILE"

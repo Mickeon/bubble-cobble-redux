@@ -9,8 +9,8 @@
 		"rotation" : "y=180"
 	},
 	"effects": {
-		"commandPickup" : "gamerule sendCommandFeedback false",
-		"commandLoop" : "effect give @s brewinandchewin:sweet_heart 1 1 true",
-		"commandPlace" : "gamerule sendCommandFeedback true"
+		"commandPickup" : "",
+		"commandLoop" : "quiet effect give @s brewinandchewin:sweet_heart 5 0 false",
+		"commandPlace" : ""
 	}
 }

@@ -69,3 +69,10 @@ function apply_carrying_penalty(player) {
 		}
 	})
 }
+
+ServerEvents.commandRegistry(event => {
+	event.register(event.commands.literal("quiet")
+		.requires(source => source.hasPermission(event.commands.LEVEL_GAMEMASTERS))
+		.redirect(event.dispatcher.getRoot(), context => context.source.withSuppressedOutput())
+	)
+})
