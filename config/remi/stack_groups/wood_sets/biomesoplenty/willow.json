@@ -2,7 +2,17 @@
 	"__comment": "Generated data. Do not edit manually.",
 	"type": "remi:group",
 	"id": "biomesoplenty:wood_sets/willow",
-	"name": "§bWillow§r Wood Set",
+	"name": {
+		"text": "",
+		"extra": [
+			{
+				"text": "Willow",
+				"color": "#9AC0CD"
+			},
+			" Wood Set"
+		]
+	},
+	"priority": 1,
 	"contents": [
 		"item:biomesoplenty:potted_willow_sapling",
 		"item:biomesoplenty:stripped_willow_log",
@@ -20,6 +30,7 @@
 		"item:biomesoplenty:willow_pressure_plate",
 		"item:biomesoplenty:willow_sapling",
 		"item:biomesoplenty:willow_sign",
+		"item:biomesoplenty:willow_slab",
 		"item:biomesoplenty:willow_stairs",
 		"item:biomesoplenty:willow_trapdoor",
 		"item:biomesoplenty:willow_vine",

@@ -1,0 +1,48 @@
+{
+	"__comment": "Generated data. Do not edit manually.",
+	"type": "remi:group",
+	"id": "cobblemon:dark_gem_stuff",
+	"name": {
+		"text": "",
+		"extra": [
+			{
+				"text": "D",
+				"color": "#465B99"
+			},
+			{
+				"text": "a",
+				"color": "#4A639D"
+			},
+			{
+				"text": "r",
+				"color": "#5272A6"
+			},
+			{
+				"text": "k",
+				"color": "#5A83AF"
+			},
+			{
+				"text": " ",
+				"color": "#6190B7"
+			},
+			{
+				"text": "G",
+				"color": "#6599BC"
+			},
+			{
+				"text": "e",
+				"color": "#679DBE"
+			},
+			{
+				"text": "m",
+				"color": "#689EBE"
+			},
+			" Stuff"
+		]
+	},
+	"contents": [
+		"item:cobblemon:dark_gem",
+		"item:cobblemon:dark_gem_block",
+		"item:cobblemon:dark_gem_cluster"
+	]
+}

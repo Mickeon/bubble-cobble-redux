@@ -2,7 +2,17 @@
 	"__comment": "Generated data. Do not edit manually.",
 	"type": "remi:group",
 	"id": "biomeswevegone:wood_sets/holly",
-	"name": "§bHolly§r Wood Set",
+	"name": {
+		"text": "",
+		"extra": [
+			{
+				"text": "Holly",
+				"color": "#9AC0CD"
+			},
+			" Wood Set"
+		]
+	},
+	"priority": 1,
 	"contents": [
 		"item:biomeswevegone:holly_berry_leaves",
 		"item:biomeswevegone:holly_boat",
@@ -20,10 +30,10 @@
 		"item:biomeswevegone:holly_pressure_plate",
 		"item:biomeswevegone:holly_sapling",
 		"item:biomeswevegone:holly_sign",
+		"item:biomeswevegone:holly_slab",
 		"item:biomeswevegone:holly_stairs",
 		"item:biomeswevegone:holly_trapdoor",
 		"item:biomeswevegone:holly_wood",
-		"item:biomeswevegone:holly_wreath",
 		"item:biomeswevegone:stripped_holly_log",
 		"item:biomeswevegone:stripped_holly_wood",
 		"item:snowyspirit:biomeswevegone/sled_holly",

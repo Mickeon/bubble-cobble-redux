@@ -2,7 +2,17 @@
 	"__comment": "Generated data. Do not edit manually.",
 	"type": "remi:group",
 	"id": "biomesoplenty:wood_sets/dead",
-	"name": "§bDead§r Wood Set",
+	"name": {
+		"text": "",
+		"extra": [
+			{
+				"text": "Dead",
+				"color": "#9AC0CD"
+			},
+			" Wood Set"
+		]
+	},
+	"priority": 1,
 	"contents": [
 		"item:biomesoplenty:dead_boat",
 		"item:biomesoplenty:dead_branch",
@@ -11,7 +21,6 @@
 		"item:biomesoplenty:dead_door",
 		"item:biomesoplenty:dead_fence",
 		"item:biomesoplenty:dead_fence_gate",
-		"item:biomesoplenty:dead_grass",
 		"item:biomesoplenty:dead_hanging_sign",
 		"item:biomesoplenty:dead_leaves",
 		"item:biomesoplenty:dead_log",

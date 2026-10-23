@@ -2,10 +2,18 @@
 	"__comment": "Generated data. Do not edit manually.",
 	"type": "remi:group",
 	"id": "biomeswevegone:wood_sets/pine",
-	"name": "§bPine§r Wood Set",
+	"name": {
+		"text": "",
+		"extra": [
+			{
+				"text": "Pine",
+				"color": "#9AC0CD"
+			},
+			" Wood Set"
+		]
+	},
+	"priority": 1,
 	"contents": [
-		"item:biomeswevegone:alpine_bellflower",
-		"item:biomeswevegone:golden_spined_cactus",
 		"item:biomeswevegone:pine_boat",
 		"item:biomeswevegone:pine_bookshelf",
 		"item:biomeswevegone:pine_button",
@@ -25,6 +33,7 @@
 		"item:biomeswevegone:pine_stairs",
 		"item:biomeswevegone:pine_trapdoor",
 		"item:biomeswevegone:pine_wood",
+		"item:biomeswevegone:stripped_pine_log",
 		"item:biomeswevegone:stripped_pine_wood",
 		"item:snowyspirit:biomeswevegone/sled_pine",
 		"item:supplementaries:biomeswevegone/cannon_boat_pine",

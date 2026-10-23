@@ -1,0 +1,59 @@
+{
+	"__comment": "Generated data. Do not edit manually.",
+	"type": "remi:group",
+	"id": "minecraft:wood_sets/warped",
+	"name": {
+		"text": "",
+		"extra": [
+			{
+				"text": "Warped",
+				"color": "#9AC0CD"
+			},
+			" Wood Set"
+		]
+	},
+	"priority": 1,
+	"contents": [
+		"item:create:warped_window",
+		"item:create:warped_window_pane",
+		"item:farmersdelight:warped_cabinet",
+		"item:handcrafted:warped_bench",
+		"item:handcrafted:warped_chair",
+		"item:handcrafted:warped_corner_trim",
+		"item:handcrafted:warped_couch",
+		"item:handcrafted:warped_counter",
+		"item:handcrafted:warped_cupboard",
+		"item:handcrafted:warped_desk",
+		"item:handcrafted:warped_dining_bench",
+		"item:handcrafted:warped_drawer",
+		"item:handcrafted:warped_fancy_bed",
+		"item:handcrafted:warped_nightstand",
+		"item:handcrafted:warped_pillar_trim",
+		"item:handcrafted:warped_shelf",
+		"item:handcrafted:warped_side_table",
+		"item:handcrafted:warped_table",
+		"item:minecraft:stripped_warped_hyphae",
+		"item:minecraft:stripped_warped_stem",
+		"item:minecraft:warped_button",
+		"item:minecraft:warped_door",
+		"item:minecraft:warped_fence",
+		"item:minecraft:warped_fence_gate",
+		"item:minecraft:warped_hanging_sign",
+		"item:minecraft:warped_hyphae",
+		"item:minecraft:warped_planks",
+		"item:minecraft:warped_pressure_plate",
+		"item:minecraft:warped_sign",
+		"item:minecraft:warped_slab",
+		"item:minecraft:warped_stairs",
+		"item:minecraft:warped_stem",
+		"item:minecraft:warped_trapdoor",
+		"item:minecraft:warped_wart_block",
+		"item:shutterup:warped_shutter",
+		"item:sophisticatedstorage:warped_storage_connector",
+		"item:supplementaries:way_sign_warped",
+		"item:urban_decor:warped_box",
+		"item:urban_decor:warped_calendar",
+		"item:urban_decor:warped_grandfather_clock",
+		"item:urban_decor:warped_piano"
+	]
+}

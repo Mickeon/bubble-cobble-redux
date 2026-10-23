@@ -2,7 +2,17 @@
 	"__comment": "Generated data. Do not edit manually.",
 	"type": "remi:group",
 	"id": "biomeswevegone:wood_sets/blue_enchanted",
-	"name": "§bBlue Enchanted§r Wood Set",
+	"name": {
+		"text": "",
+		"extra": [
+			{
+				"text": "Blue Enchanted",
+				"color": "#9AC0CD"
+			},
+			" Wood Set"
+		]
+	},
+	"priority": 1,
 	"contents": [
 		"item:biomeswevegone:blue_enchanted_boat",
 		"item:biomeswevegone:blue_enchanted_bookshelf",

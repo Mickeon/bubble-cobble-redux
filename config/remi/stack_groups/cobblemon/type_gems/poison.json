@@ -1,0 +1,56 @@
+{
+	"__comment": "Generated data. Do not edit manually.",
+	"type": "remi:group",
+	"id": "cobblemon:poison_gem_stuff",
+	"name": {
+		"text": "",
+		"extra": [
+			{
+				"text": "P",
+				"color": "#7B41DD"
+			},
+			{
+				"text": "o",
+				"color": "#8545DF"
+			},
+			{
+				"text": "i",
+				"color": "#984CE3"
+			},
+			{
+				"text": "s",
+				"color": "#AF55E8"
+			},
+			{
+				"text": "o",
+				"color": "#C55DED"
+			},
+			{
+				"text": "n",
+				"color": "#D563F0"
+			},
+			{
+				"text": " ",
+				"color": "#DE66F2"
+			},
+			{
+				"text": "G",
+				"color": "#E368F3"
+			},
+			{
+				"text": "e",
+				"color": "#E568F3"
+			},
+			{
+				"text": "m",
+				"color": "#E568F3"
+			},
+			" Stuff"
+		]
+	},
+	"contents": [
+		"item:cobblemon:poison_gem",
+		"item:cobblemon:poison_gem_block",
+		"item:cobblemon:poison_gem_cluster"
+	]
+}

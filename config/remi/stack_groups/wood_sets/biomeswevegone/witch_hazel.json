@@ -2,7 +2,17 @@
 	"__comment": "Generated data. Do not edit manually.",
 	"type": "remi:group",
 	"id": "biomeswevegone:wood_sets/witch_hazel",
-	"name": "§bWitch Hazel§r Wood Set",
+	"name": {
+		"text": "",
+		"extra": [
+			{
+				"text": "Witch Hazel",
+				"color": "#9AC0CD"
+			},
+			" Wood Set"
+		]
+	},
+	"priority": 1,
 	"contents": [
 		"item:biomeswevegone:blooming_witch_hazel_leaves",
 		"item:biomeswevegone:stripped_witch_hazel_log",

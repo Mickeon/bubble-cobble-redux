@@ -1,0 +1,44 @@
+{
+	"__comment": "Generated data. Do not edit manually.",
+	"type": "remi:group",
+	"id": "cobblemon:ice_gem_stuff",
+	"name": {
+		"text": "",
+		"extra": [
+			{
+				"text": "I",
+				"color": "#41BAED"
+			},
+			{
+				"text": "c",
+				"color": "#4DC3EE"
+			},
+			{
+				"text": "e",
+				"color": "#60D1F1"
+			},
+			{
+				"text": " ",
+				"color": "#75E0F4"
+			},
+			{
+				"text": "G",
+				"color": "#85ECF7"
+			},
+			{
+				"text": "e",
+				"color": "#8EF2F8"
+			},
+			{
+				"text": "m",
+				"color": "#91F4F8"
+			},
+			" Stuff"
+		]
+	},
+	"contents": [
+		"item:cobblemon:ice_gem",
+		"item:cobblemon:ice_gem_block",
+		"item:cobblemon:ice_gem_cluster"
+	]
+}

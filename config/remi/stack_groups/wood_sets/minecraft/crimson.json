@@ -1,0 +1,58 @@
+{
+	"__comment": "Generated data. Do not edit manually.",
+	"type": "remi:group",
+	"id": "minecraft:wood_sets/crimson",
+	"name": {
+		"text": "",
+		"extra": [
+			{
+				"text": "Crimson",
+				"color": "#9AC0CD"
+			},
+			" Wood Set"
+		]
+	},
+	"priority": 1,
+	"contents": [
+		"item:create:crimson_window",
+		"item:create:crimson_window_pane",
+		"item:farmersdelight:crimson_cabinet",
+		"item:handcrafted:crimson_bench",
+		"item:handcrafted:crimson_chair",
+		"item:handcrafted:crimson_corner_trim",
+		"item:handcrafted:crimson_couch",
+		"item:handcrafted:crimson_counter",
+		"item:handcrafted:crimson_cupboard",
+		"item:handcrafted:crimson_desk",
+		"item:handcrafted:crimson_dining_bench",
+		"item:handcrafted:crimson_drawer",
+		"item:handcrafted:crimson_fancy_bed",
+		"item:handcrafted:crimson_nightstand",
+		"item:handcrafted:crimson_pillar_trim",
+		"item:handcrafted:crimson_shelf",
+		"item:handcrafted:crimson_side_table",
+		"item:handcrafted:crimson_table",
+		"item:minecraft:crimson_button",
+		"item:minecraft:crimson_door",
+		"item:minecraft:crimson_fence",
+		"item:minecraft:crimson_fence_gate",
+		"item:minecraft:crimson_hanging_sign",
+		"item:minecraft:crimson_hyphae",
+		"item:minecraft:crimson_planks",
+		"item:minecraft:crimson_pressure_plate",
+		"item:minecraft:crimson_sign",
+		"item:minecraft:crimson_slab",
+		"item:minecraft:crimson_stairs",
+		"item:minecraft:crimson_stem",
+		"item:minecraft:crimson_trapdoor",
+		"item:minecraft:stripped_crimson_hyphae",
+		"item:minecraft:stripped_crimson_stem",
+		"item:shutterup:crimson_shutter",
+		"item:sophisticatedstorage:crimson_storage_connector",
+		"item:supplementaries:way_sign_crimson",
+		"item:urban_decor:crimson_box",
+		"item:urban_decor:crimson_calendar",
+		"item:urban_decor:crimson_grandfather_clock",
+		"item:urban_decor:crimson_piano"
+	]
+}

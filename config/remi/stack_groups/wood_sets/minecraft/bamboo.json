@@ -1,0 +1,63 @@
+{
+	"__comment": "Generated data. Do not edit manually.",
+	"type": "remi:group",
+	"id": "minecraft:wood_sets/bamboo",
+	"name": {
+		"text": "",
+		"extra": [
+			{
+				"text": "Bamboo",
+				"color": "#9AC0CD"
+			},
+			" Wood Set"
+		]
+	},
+	"priority": 1,
+	"contents": [
+		"item:create:bamboo_window",
+		"item:create:bamboo_window_pane",
+		"item:farmersdelight:bamboo_cabinet",
+		"item:handcrafted:bamboo_bench",
+		"item:handcrafted:bamboo_chair",
+		"item:handcrafted:bamboo_corner_trim",
+		"item:handcrafted:bamboo_couch",
+		"item:handcrafted:bamboo_counter",
+		"item:handcrafted:bamboo_cupboard",
+		"item:handcrafted:bamboo_desk",
+		"item:handcrafted:bamboo_dining_bench",
+		"item:handcrafted:bamboo_drawer",
+		"item:handcrafted:bamboo_fancy_bed",
+		"item:handcrafted:bamboo_nightstand",
+		"item:handcrafted:bamboo_pillar_trim",
+		"item:handcrafted:bamboo_shelf",
+		"item:handcrafted:bamboo_side_table",
+		"item:handcrafted:bamboo_table",
+		"item:minecraft:bamboo_block",
+		"item:minecraft:bamboo_button",
+		"item:minecraft:bamboo_chest_raft",
+		"item:minecraft:bamboo_door",
+		"item:minecraft:bamboo_fence",
+		"item:minecraft:bamboo_fence_gate",
+		"item:minecraft:bamboo_hanging_sign",
+		"item:minecraft:bamboo_mosaic",
+		"item:minecraft:bamboo_mosaic_slab",
+		"item:minecraft:bamboo_mosaic_stairs",
+		"item:minecraft:bamboo_planks",
+		"item:minecraft:bamboo_pressure_plate",
+		"item:minecraft:bamboo_raft",
+		"item:minecraft:bamboo_sign",
+		"item:minecraft:bamboo_slab",
+		"item:minecraft:bamboo_stairs",
+		"item:minecraft:bamboo_trapdoor",
+		"item:minecraft:stripped_bamboo_block",
+		"item:shutterup:bamboo_shutter",
+		"item:snowyspirit:sled_bamboo",
+		"item:sophisticatedstorage:bamboo_storage_connector",
+		"item:supplementaries:cannon_raft_bamboo",
+		"item:supplementaries:way_sign_bamboo",
+		"item:urban_decor:bamboo_box",
+		"item:urban_decor:bamboo_calendar",
+		"item:urban_decor:bamboo_grandfather_clock",
+		"item:urban_decor:bamboo_piano"
+	]
+}

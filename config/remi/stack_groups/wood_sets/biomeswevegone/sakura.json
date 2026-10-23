@@ -2,7 +2,17 @@
 	"__comment": "Generated data. Do not edit manually.",
 	"type": "remi:group",
 	"id": "biomeswevegone:wood_sets/sakura",
-	"name": "§bSakura§r Wood Set",
+	"name": {
+		"text": "",
+		"extra": [
+			{
+				"text": "Sakura",
+				"color": "#9AC0CD"
+			},
+			" Wood Set"
+		]
+	},
+	"priority": 1,
 	"contents": [
 		"item:biomeswevegone:sakura_boat",
 		"item:biomeswevegone:sakura_bookshelf",
@@ -14,6 +24,7 @@
 		"item:biomeswevegone:sakura_fence_gate",
 		"item:biomeswevegone:sakura_hanging_sign",
 		"item:biomeswevegone:sakura_log",
+		"item:biomeswevegone:sakura_planks",
 		"item:biomeswevegone:sakura_pressure_plate",
 		"item:biomeswevegone:sakura_sign",
 		"item:biomeswevegone:sakura_slab",
@@ -23,10 +34,8 @@
 		"item:biomeswevegone:stripped_sakura_log",
 		"item:biomeswevegone:stripped_sakura_wood",
 		"item:biomeswevegone:white_sakura_leaves",
-		"item:biomeswevegone:white_sakura_petals",
 		"item:biomeswevegone:white_sakura_sapling",
 		"item:biomeswevegone:yellow_sakura_leaves",
-		"item:biomeswevegone:yellow_sakura_petals",
 		"item:biomeswevegone:yellow_sakura_sapling",
 		"item:snowyspirit:biomeswevegone/sled_sakura",
 		"item:supplementaries:biomeswevegone/cannon_boat_sakura",

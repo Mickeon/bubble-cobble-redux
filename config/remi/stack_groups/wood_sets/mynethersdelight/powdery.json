@@ -2,7 +2,17 @@
 	"__comment": "Generated data. Do not edit manually.",
 	"type": "remi:group",
 	"id": "mynethersdelight:wood_sets/powdery",
-	"name": "§bPowdery§r Wood Set",
+	"name": {
+		"text": "",
+		"extra": [
+			{
+				"text": "Powdery",
+				"color": "#9AC0CD"
+			},
+			" Wood Set"
+		]
+	},
+	"priority": 1,
 	"contents": [
 		"item:mynethersdelight:powdery_block",
 		"item:mynethersdelight:powdery_button",
@@ -11,13 +21,14 @@
 		"item:mynethersdelight:powdery_fence",
 		"item:mynethersdelight:powdery_fence_gate",
 		"item:mynethersdelight:powdery_hanging_sign",
+		"item:mynethersdelight:powdery_mosaic",
 		"item:mynethersdelight:powdery_mosaic_slab",
 		"item:mynethersdelight:powdery_mosaic_stairs",
+		"item:mynethersdelight:powdery_planks",
 		"item:mynethersdelight:powdery_pressure_plate",
 		"item:mynethersdelight:powdery_sign",
 		"item:mynethersdelight:powdery_slab",
 		"item:mynethersdelight:powdery_stairs",
-		"item:mynethersdelight:powdery_torch",
 		"item:mynethersdelight:powdery_trapdoor",
 		"item:mynethersdelight:stripped_powdery_block",
 		"item:supplementaries:mynethersdelight/way_sign_powdery"

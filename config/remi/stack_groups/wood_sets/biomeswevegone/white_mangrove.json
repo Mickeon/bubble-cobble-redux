@@ -2,7 +2,17 @@
 	"__comment": "Generated data. Do not edit manually.",
 	"type": "remi:group",
 	"id": "biomeswevegone:wood_sets/white_mangrove",
-	"name": "§bWhite Mangrove§r Wood Set",
+	"name": {
+		"text": "",
+		"extra": [
+			{
+				"text": "White Mangrove",
+				"color": "#9AC0CD"
+			},
+			" Wood Set"
+		]
+	},
+	"priority": 1,
 	"contents": [
 		"item:biomeswevegone:stripped_white_mangrove_log",
 		"item:biomeswevegone:stripped_white_mangrove_wood",
@@ -21,8 +31,10 @@
 		"item:biomeswevegone:white_mangrove_pressure_plate",
 		"item:biomeswevegone:white_mangrove_sapling",
 		"item:biomeswevegone:white_mangrove_sign",
+		"item:biomeswevegone:white_mangrove_slab",
 		"item:biomeswevegone:white_mangrove_stairs",
 		"item:biomeswevegone:white_mangrove_trapdoor",
+		"item:biomeswevegone:white_mangrove_wood",
 		"item:snowyspirit:biomeswevegone/sled_white_mangrove",
 		"item:supplementaries:biomeswevegone/cannon_boat_white_mangrove",
 		"item:supplementaries:biomeswevegone/way_sign_white_mangrove"

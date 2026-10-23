@@ -1,0 +1,52 @@
+{
+	"__comment": "Generated data. Do not edit manually.",
+	"type": "remi:group",
+	"id": "cobblemon:fairy_gem_stuff",
+	"name": {
+		"text": "",
+		"extra": [
+			{
+				"text": "F",
+				"color": "#E2678C"
+			},
+			{
+				"text": "a",
+				"color": "#E46E90"
+			},
+			{
+				"text": "i",
+				"color": "#E87B99"
+			},
+			{
+				"text": "r",
+				"color": "#EC8AA3"
+			},
+			{
+				"text": "y",
+				"color": "#F097AB"
+			},
+			{
+				"text": " ",
+				"color": "#F3A0B2"
+			},
+			{
+				"text": "G",
+				"color": "#F4A5B5"
+			},
+			{
+				"text": "e",
+				"color": "#F5A7B6"
+			},
+			{
+				"text": "m",
+				"color": "#F5A7B6"
+			},
+			" Stuff"
+		]
+	},
+	"contents": [
+		"item:cobblemon:fairy_gem",
+		"item:cobblemon:fairy_gem_block",
+		"item:cobblemon:fairy_gem_cluster"
+	]
+}

@@ -2,7 +2,17 @@
 	"__comment": "Generated data. Do not edit manually.",
 	"type": "remi:group",
 	"id": "biomesoplenty:wood_sets/palm",
-	"name": "§bPalm§r Wood Set",
+	"name": {
+		"text": "",
+		"extra": [
+			{
+				"text": "Palm",
+				"color": "#9AC0CD"
+			},
+			" Wood Set"
+		]
+	},
+	"priority": 1,
 	"contents": [
 		"item:biomesoplenty:palm_boat",
 		"item:biomesoplenty:palm_button",
@@ -13,6 +23,7 @@
 		"item:biomesoplenty:palm_hanging_sign",
 		"item:biomesoplenty:palm_leaves",
 		"item:biomesoplenty:palm_log",
+		"item:biomesoplenty:palm_planks",
 		"item:biomesoplenty:palm_pressure_plate",
 		"item:biomesoplenty:palm_sapling",
 		"item:biomesoplenty:palm_sign",

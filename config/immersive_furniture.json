@@ -9,6 +9,9 @@
   "autosaveInterval": 60,
   "maxMipLevel": 2,
   "bakedAtlasSize": 1024,
+  "entityAtlasSize": 0,
+  "scratchAtlasSize": 0,
+  "maxAtlasSize": 0,
   "disableAtlasRefreshes": false,
   "version": 2,
   "name": "immersive_furniture"

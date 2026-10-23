@@ -2,7 +2,17 @@
 	"__comment": "Generated data. Do not edit manually.",
 	"type": "remi:group",
 	"id": "biomesoplenty:wood_sets/fir",
-	"name": "§bFir§r Wood Set",
+	"name": {
+		"text": "",
+		"extra": [
+			{
+				"text": "Fir",
+				"color": "#9AC0CD"
+			},
+			" Wood Set"
+		]
+	},
+	"priority": 1,
 	"contents": [
 		"item:biomesoplenty:fir_boat",
 		"item:biomesoplenty:fir_button",

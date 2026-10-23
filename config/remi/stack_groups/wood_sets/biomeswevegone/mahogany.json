@@ -2,7 +2,17 @@
 	"__comment": "Generated data. Do not edit manually.",
 	"type": "remi:group",
 	"id": "biomeswevegone:wood_sets/mahogany",
-	"name": "§bMahogany§r Wood Set",
+	"name": {
+		"text": "",
+		"extra": [
+			{
+				"text": "Mahogany",
+				"color": "#9AC0CD"
+			},
+			" Wood Set"
+		]
+	},
+	"priority": 1,
 	"contents": [
 		"item:biomeswevegone:mahogany_boat",
 		"item:biomeswevegone:mahogany_bookshelf",
@@ -20,6 +30,7 @@
 		"item:biomeswevegone:mahogany_sapling",
 		"item:biomeswevegone:mahogany_sign",
 		"item:biomeswevegone:mahogany_slab",
+		"item:biomeswevegone:mahogany_stairs",
 		"item:biomeswevegone:mahogany_trapdoor",
 		"item:biomeswevegone:mahogany_wood",
 		"item:biomeswevegone:stripped_mahogany_log",

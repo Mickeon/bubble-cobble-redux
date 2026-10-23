@@ -2,7 +2,17 @@
 	"__comment": "Generated data. Do not edit manually.",
 	"type": "remi:group",
 	"id": "biomeswevegone:wood_sets/willow",
-	"name": "§bWillow§r Wood Set",
+	"name": {
+		"text": "",
+		"extra": [
+			{
+				"text": "Willow",
+				"color": "#9AC0CD"
+			},
+			" Wood Set"
+		]
+	},
+	"priority": 1,
 	"contents": [
 		"item:biomeswevegone:stripped_willow_log",
 		"item:biomeswevegone:stripped_willow_wood",
@@ -24,6 +34,7 @@
 		"item:biomeswevegone:willow_slab",
 		"item:biomeswevegone:willow_stairs",
 		"item:biomeswevegone:willow_trapdoor",
+		"item:biomeswevegone:willow_wood",
 		"item:snowyspirit:biomeswevegone/sled_willow",
 		"item:supplementaries:biomeswevegone/cannon_boat_willow",
 		"item:supplementaries:biomeswevegone/way_sign_willow"

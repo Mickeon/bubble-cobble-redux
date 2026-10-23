@@ -1,0 +1,52 @@
+{
+	"__comment": "Generated data. Do not edit manually.",
+	"type": "remi:group",
+	"id": "cobblemon:ghost_gem_stuff",
+	"name": {
+		"text": "",
+		"extra": [
+			{
+				"text": "G",
+				"color": "#4F57DD"
+			},
+			{
+				"text": "h",
+				"color": "#5C5CDF"
+			},
+			{
+				"text": "o",
+				"color": "#7265E3"
+			},
+			{
+				"text": "s",
+				"color": "#8C6FE7"
+			},
+			{
+				"text": "t",
+				"color": "#A477EB"
+			},
+			{
+				"text": " ",
+				"color": "#B47EEE"
+			},
+			{
+				"text": "G",
+				"color": "#BD81F0"
+			},
+			{
+				"text": "e",
+				"color": "#C082F0"
+			},
+			{
+				"text": "m",
+				"color": "#C182F0"
+			},
+			" Stuff"
+		]
+	},
+	"contents": [
+		"item:cobblemon:ghost_gem",
+		"item:cobblemon:ghost_gem_block",
+		"item:cobblemon:ghost_gem_cluster"
+	]
+}

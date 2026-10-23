@@ -2,7 +2,17 @@
 	"__comment": "Generated data. Do not edit manually.",
 	"type": "remi:group",
 	"id": "cobblemon:wood_sets/apricorn",
-	"name": "§bApricorn§r Wood Set",
+	"name": {
+		"text": "",
+		"extra": [
+			{
+				"text": "Apricorn",
+				"color": "#9AC0CD"
+			},
+			" Wood Set"
+		]
+	},
+	"priority": 1,
 	"contents": [
 		"item:cobblemon:apricorn_boat",
 		"item:cobblemon:apricorn_button",
@@ -20,22 +30,8 @@
 		"item:cobblemon:apricorn_stairs",
 		"item:cobblemon:apricorn_trapdoor",
 		"item:cobblemon:apricorn_wood",
-		"item:cobblemon:black_apricorn",
-		"item:cobblemon:black_apricorn_seed",
-		"item:cobblemon:blue_apricorn",
-		"item:cobblemon:blue_apricorn_seed",
-		"item:cobblemon:green_apricorn",
-		"item:cobblemon:green_apricorn_seed",
-		"item:cobblemon:pink_apricorn",
-		"item:cobblemon:pink_apricorn_seed",
-		"item:cobblemon:red_apricorn",
-		"item:cobblemon:red_apricorn_seed",
 		"item:cobblemon:stripped_apricorn_log",
 		"item:cobblemon:stripped_apricorn_wood",
-		"item:cobblemon:white_apricorn",
-		"item:cobblemon:white_apricorn_seed",
-		"item:cobblemon:yellow_apricorn",
-		"item:cobblemon:yellow_apricorn_seed",
 		"item:supplementaries:cobblemon/cannon_boat_apricorn",
 		"item:supplementaries:cobblemon/way_sign_apricorn"
 	]

@@ -1,0 +1,56 @@
+{
+	"__comment": "Generated data. Do not edit manually.",
+	"type": "remi:group",
+	"id": "cobblemon:dragon_gem_stuff",
+	"name": {
+		"text": "",
+		"extra": [
+			{
+				"text": "D",
+				"color": "#4E68E2"
+			},
+			{
+				"text": "r",
+				"color": "#4D72E4"
+			},
+			{
+				"text": "a",
+				"color": "#4C83E7"
+			},
+			{
+				"text": "g",
+				"color": "#4B98EC"
+			},
+			{
+				"text": "o",
+				"color": "#49ABF0"
+			},
+			{
+				"text": "n",
+				"color": "#48B9F3"
+			},
+			{
+				"text": " ",
+				"color": "#48C2F5"
+			},
+			{
+				"text": "G",
+				"color": "#47C6F6"
+			},
+			{
+				"text": "e",
+				"color": "#47C7F6"
+			},
+			{
+				"text": "m",
+				"color": "#47C7F6"
+			},
+			" Stuff"
+		]
+	},
+	"contents": [
+		"item:cobblemon:dragon_gem",
+		"item:cobblemon:dragon_gem_block",
+		"item:cobblemon:dragon_gem_cluster"
+	]
+}

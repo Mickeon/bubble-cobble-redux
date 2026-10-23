@@ -2,7 +2,17 @@
 	"__comment": "Generated data. Do not edit manually.",
 	"type": "remi:group",
 	"id": "biomeswevegone:wood_sets/maple",
-	"name": "§bMaple§r Wood Set",
+	"name": {
+		"text": "",
+		"extra": [
+			{
+				"text": "Maple",
+				"color": "#9AC0CD"
+			},
+			" Wood Set"
+		]
+	},
+	"priority": 1,
 	"contents": [
 		"item:biomeswevegone:maple_boat",
 		"item:biomeswevegone:maple_bookshelf",
@@ -20,6 +30,7 @@
 		"item:biomeswevegone:maple_sapling",
 		"item:biomeswevegone:maple_sign",
 		"item:biomeswevegone:maple_slab",
+		"item:biomeswevegone:maple_stairs",
 		"item:biomeswevegone:maple_trapdoor",
 		"item:biomeswevegone:maple_wood",
 		"item:biomeswevegone:red_maple_leaves",

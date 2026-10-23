@@ -1,0 +1,52 @@
+{
+	"__comment": "Generated data. Do not edit manually.",
+	"type": "remi:group",
+	"id": "cobblemon:grass_gem_stuff",
+	"name": {
+		"text": "",
+		"extra": [
+			{
+				"text": "G",
+				"color": "#0EAE95"
+			},
+			{
+				"text": "r",
+				"color": "#23B68D"
+			},
+			{
+				"text": "a",
+				"color": "#47C480"
+			},
+			{
+				"text": "s",
+				"color": "#72D471"
+			},
+			{
+				"text": "s",
+				"color": "#97E364"
+			},
+			{
+				"text": " ",
+				"color": "#B1ED5B"
+			},
+			{
+				"text": "G",
+				"color": "#BFF256"
+			},
+			{
+				"text": "e",
+				"color": "#C5F454"
+			},
+			{
+				"text": "m",
+				"color": "#C6F554"
+			},
+			" Stuff"
+		]
+	},
+	"contents": [
+		"item:cobblemon:grass_gem",
+		"item:cobblemon:grass_gem_block",
+		"item:cobblemon:grass_gem_cluster"
+	]
+}

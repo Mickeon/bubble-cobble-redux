@@ -1,7 +1,6 @@
 {
   "keys": [
-    "cobblemon:technical_machine",
-    "#c:music_discs"
+    "#bubble_cobble:sounds/discs"
   ],
   "pitch": 0.9,
   "soundEvent": "bubble_cobble:item.grab.disc",

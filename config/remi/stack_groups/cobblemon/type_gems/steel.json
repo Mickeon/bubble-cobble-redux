@@ -1,0 +1,52 @@
+{
+	"__comment": "Generated data. Do not edit manually.",
+	"type": "remi:group",
+	"id": "cobblemon:steel_gem_stuff",
+	"name": {
+		"text": "",
+		"extra": [
+			{
+				"text": "S",
+				"color": "#628CB9"
+			},
+			{
+				"text": "t",
+				"color": "#6F98BF"
+			},
+			{
+				"text": "e",
+				"color": "#86ADCA"
+			},
+			{
+				"text": "e",
+				"color": "#A1C6D8"
+			},
+			{
+				"text": "l",
+				"color": "#B9DCE4"
+			},
+			{
+				"text": " ",
+				"color": "#C9EBEC"
+			},
+			{
+				"text": "G",
+				"color": "#D2F3F0"
+			},
+			{
+				"text": "e",
+				"color": "#D5F7F2"
+			},
+			{
+				"text": "m",
+				"color": "#D6F7F2"
+			},
+			" Stuff"
+		]
+	},
+	"contents": [
+		"item:cobblemon:steel_gem",
+		"item:cobblemon:steel_gem_block",
+		"item:cobblemon:steel_gem_cluster"
+	]
+}

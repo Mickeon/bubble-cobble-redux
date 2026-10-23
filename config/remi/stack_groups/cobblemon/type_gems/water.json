@@ -1,0 +1,52 @@
+{
+	"__comment": "Generated data. Do not edit manually.",
+	"type": "remi:group",
+	"id": "cobblemon:water_gem_stuff",
+	"name": {
+		"text": "",
+		"extra": [
+			{
+				"text": "W",
+				"color": "#377AF6"
+			},
+			{
+				"text": "a",
+				"color": "#3A85F6"
+			},
+			{
+				"text": "t",
+				"color": "#3F99F6"
+			},
+			{
+				"text": "e",
+				"color": "#45B0F7"
+			},
+			{
+				"text": "r",
+				"color": "#4AC4F8"
+			},
+			{
+				"text": " ",
+				"color": "#4DD2F8"
+			},
+			{
+				"text": "G",
+				"color": "#4FDAF8"
+			},
+			{
+				"text": "e",
+				"color": "#50DDF8"
+			},
+			{
+				"text": "m",
+				"color": "#50DDF8"
+			},
+			" Stuff"
+		]
+	},
+	"contents": [
+		"item:cobblemon:water_gem",
+		"item:cobblemon:water_gem_block",
+		"item:cobblemon:water_gem_cluster"
+	]
+}

@@ -37,6 +37,7 @@
     "minecraft:walls",
     "c:glass_blocks",
     "c:seeds",
+    "minecraft:fence_gates",
     "minecraft:wool",
     "c:ingots",
     "minecraft:stairs",
@@ -51,10 +52,156 @@
     "c:glass_panes",
     "minecraft:slabs",
     "artifacts:artifacts",
+    "minecraft:fences",
     "minecraft:saplings",
     "minecraft:pickaxes"
   ],
-  "stackGroupItemOrder": {},
+  "stackGroupItemOrder": {
+    "cobblemon:grass_gem_stuff": [
+      "cobblemon:grass_gem",
+      "cobblemon:grass_gem_block",
+      "cobblemon:grass_gem_cluster",
+      "cobblemon:grass_gem_cluster",
+      "cobblemon:grass_gem_cluster",
+      "cobblemon:grass_gem_cluster"
+    ],
+    "cobblemon:dark_gem_stuff": [
+      "cobblemon:dark_gem",
+      "cobblemon:dark_gem_block",
+      "cobblemon:dark_gem_cluster",
+      "cobblemon:dark_gem_cluster",
+      "cobblemon:dark_gem_cluster",
+      "cobblemon:dark_gem_cluster"
+    ],
+    "cobblemon:bug_gem_stuff": [
+      "cobblemon:bug_gem",
+      "cobblemon:bug_gem_block",
+      "cobblemon:bug_gem_cluster",
+      "cobblemon:bug_gem_cluster",
+      "cobblemon:bug_gem_cluster",
+      "cobblemon:bug_gem_cluster"
+    ],
+    "cobblemon:ground_gem_stuff": [
+      "cobblemon:ground_gem",
+      "cobblemon:ground_gem_block",
+      "cobblemon:ground_gem_cluster",
+      "cobblemon:ground_gem_cluster",
+      "cobblemon:ground_gem_cluster",
+      "cobblemon:ground_gem_cluster"
+    ],
+    "cobblemon:water_gem_stuff": [
+      "cobblemon:water_gem",
+      "cobblemon:water_gem_block",
+      "cobblemon:water_gem_cluster",
+      "cobblemon:water_gem_cluster",
+      "cobblemon:water_gem_cluster",
+      "cobblemon:water_gem_cluster"
+    ],
+    "cobblemon:poison_gem_stuff": [
+      "cobblemon:poison_gem",
+      "cobblemon:poison_gem_block",
+      "cobblemon:poison_gem_cluster",
+      "cobblemon:poison_gem_cluster",
+      "cobblemon:poison_gem_cluster",
+      "cobblemon:poison_gem_cluster"
+    ],
+    "cobblemon:fire_gem_stuff": [
+      "cobblemon:fire_gem",
+      "cobblemon:fire_gem_block",
+      "cobblemon:fire_gem_cluster",
+      "cobblemon:fire_gem_cluster",
+      "cobblemon:fire_gem_cluster",
+      "cobblemon:fire_gem_cluster"
+    ],
+    "cobblemon:ghost_gem_stuff": [
+      "cobblemon:ghost_gem",
+      "cobblemon:ghost_gem_block",
+      "cobblemon:ghost_gem_cluster",
+      "cobblemon:ghost_gem_cluster",
+      "cobblemon:ghost_gem_cluster",
+      "cobblemon:ghost_gem_cluster"
+    ],
+    "cobblemon:fairy_gem_stuff": [
+      "cobblemon:fairy_gem",
+      "cobblemon:fairy_gem_block",
+      "cobblemon:fairy_gem_cluster",
+      "cobblemon:fairy_gem_cluster",
+      "cobblemon:fairy_gem_cluster",
+      "cobblemon:fairy_gem_cluster"
+    ],
+    "cobblemon:ice_gem_stuff": [
+      "cobblemon:ice_gem",
+      "cobblemon:ice_gem_block",
+      "cobblemon:ice_gem_cluster",
+      "cobblemon:ice_gem_cluster",
+      "cobblemon:ice_gem_cluster",
+      "cobblemon:ice_gem_cluster"
+    ],
+    "cobblemon:rock_gem_stuff": [
+      "cobblemon:rock_gem",
+      "cobblemon:rock_gem_block",
+      "cobblemon:rock_gem_cluster",
+      "cobblemon:rock_gem_cluster",
+      "cobblemon:rock_gem_cluster",
+      "cobblemon:rock_gem_cluster"
+    ],
+    "cobblemon:psychic_gem_stuff": [
+      "cobblemon:psychic_gem",
+      "cobblemon:psychic_gem_block",
+      "cobblemon:psychic_gem_cluster",
+      "cobblemon:psychic_gem_cluster",
+      "cobblemon:psychic_gem_cluster",
+      "cobblemon:psychic_gem_cluster"
+    ],
+    "cobblemon:electric_gem_stuff": [
+      "cobblemon:electric_gem",
+      "cobblemon:electric_gem_block",
+      "cobblemon:electric_gem_cluster",
+      "cobblemon:electric_gem_cluster",
+      "cobblemon:electric_gem_cluster",
+      "cobblemon:electric_gem_cluster"
+    ],
+    "cobblemon:flying_gem_stuff": [
+      "cobblemon:flying_gem",
+      "cobblemon:flying_gem_block",
+      "cobblemon:flying_gem_cluster",
+      "cobblemon:flying_gem_cluster",
+      "cobblemon:flying_gem_cluster",
+      "cobblemon:flying_gem_cluster"
+    ],
+    "cobblemon:fighting_gem_stuff": [
+      "cobblemon:fighting_gem",
+      "cobblemon:fighting_gem_block",
+      "cobblemon:fighting_gem_cluster",
+      "cobblemon:fighting_gem_cluster",
+      "cobblemon:fighting_gem_cluster",
+      "cobblemon:fighting_gem_cluster"
+    ],
+    "cobblemon:dragon_gem_stuff": [
+      "cobblemon:dragon_gem",
+      "cobblemon:dragon_gem_block",
+      "cobblemon:dragon_gem_cluster",
+      "cobblemon:dragon_gem_cluster",
+      "cobblemon:dragon_gem_cluster",
+      "cobblemon:dragon_gem_cluster"
+    ],
+    "cobblemon:normal_gem_stuff": [
+      "cobblemon:normal_gem",
+      "cobblemon:normal_gem_block",
+      "cobblemon:normal_gem_cluster",
+      "cobblemon:normal_gem_cluster",
+      "cobblemon:normal_gem_cluster",
+      "cobblemon:normal_gem_cluster"
+    ],
+    "cobblemon:steel_gem_stuff": [
+      "cobblemon:steel_gem",
+      "cobblemon:steel_gem_block",
+      "cobblemon:steel_gem_cluster",
+      "cobblemon:steel_gem_cluster",
+      "cobblemon:steel_gem_cluster",
+      "cobblemon:steel_gem_cluster"
+    ]
+  },
   "emiOnlyInRecipeBook": false,
   "emiOnlyInRecipeBookState": false,
   "disableEmiGlobalConfig": false,

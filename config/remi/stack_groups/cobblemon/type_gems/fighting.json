@@ -1,0 +1,64 @@
+{
+	"__comment": "Generated data. Do not edit manually.",
+	"type": "remi:group",
+	"id": "cobblemon:fighting_gem_stuff",
+	"name": {
+		"text": "",
+		"extra": [
+			{
+				"text": "F",
+				"color": "#C8356B"
+			},
+			{
+				"text": "i",
+				"color": "#CB3967"
+			},
+			{
+				"text": "g",
+				"color": "#D24160"
+			},
+			{
+				"text": "h",
+				"color": "#DA4B58"
+			},
+			{
+				"text": "t",
+				"color": "#E2564F"
+			},
+			{
+				"text": "i",
+				"color": "#E95E48"
+			},
+			{
+				"text": "n",
+				"color": "#EE6443"
+			},
+			{
+				"text": "g",
+				"color": "#F16741"
+			},
+			{
+				"text": " ",
+				"color": "#F2693F"
+			},
+			{
+				"text": "G",
+				"color": "#F36A3F"
+			},
+			{
+				"text": "e",
+				"color": "#F36A3F"
+			},
+			{
+				"text": "m",
+				"color": "#F36A3F"
+			},
+			" Stuff"
+		]
+	},
+	"contents": [
+		"item:cobblemon:fighting_gem",
+		"item:cobblemon:fighting_gem_block",
+		"item:cobblemon:fighting_gem_cluster"
+	]
+}

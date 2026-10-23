@@ -2,7 +2,17 @@
 	"__comment": "Generated data. Do not edit manually.",
 	"type": "remi:group",
 	"id": "biomeswevegone:wood_sets/palm",
-	"name": "§bPalm§r Wood Set",
+	"name": {
+		"text": "",
+		"extra": [
+			{
+				"text": "Palm",
+				"color": "#9AC0CD"
+			},
+			" Wood Set"
+		]
+	},
+	"priority": 1,
 	"contents": [
 		"item:biomeswevegone:palm_boat",
 		"item:biomeswevegone:palm_bookshelf",
@@ -23,6 +33,7 @@
 		"item:biomeswevegone:palm_stairs",
 		"item:biomeswevegone:palm_trapdoor",
 		"item:biomeswevegone:palm_wood",
+		"item:biomeswevegone:stripped_palm_log",
 		"item:biomeswevegone:stripped_palm_wood",
 		"item:snowyspirit:biomeswevegone/sled_palm",
 		"item:supplementaries:biomeswevegone/cannon_boat_palm",

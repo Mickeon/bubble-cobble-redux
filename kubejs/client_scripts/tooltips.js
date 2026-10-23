@@ -358,7 +358,7 @@ NativeEvents.onEvent("highest", $RenderTooltipEvent$Color, event => {
 			if (item_stack.id == "farmersdelight:hamburger") {
 				graphics.translate(event.getX() * -1.5, 0, 0).scale(2.5, 1, 1)
 			}
-		}
+		} break;
 		case "arts_and_crafts": {
 			if (item_stack.hasTag("arts_and_crafts:paintbrushes")) {
 				// Jank jank jank.
@@ -367,10 +367,10 @@ NativeEvents.onEvent("highest", $RenderTooltipEvent$Color, event => {
 			} else if (item_stack.id == "arts_and_crafts:bleachdew") {
 				event.setBorderStart(Color.wrap("bleachdew_dye").getArgb())
 			}
-		}
+		} break;
 		case "urban_decor": {
 			event.setBorderStart(Color.GRAY_DYE.getArgb())
-		}
+		} break;
 	}
 	// event.setBackground(Color.rgba(8, 21, 95, 1).getArgb())
 	// event.setBackgroundStart(Color.rgba(26, 50, 184, 1).getArgb())

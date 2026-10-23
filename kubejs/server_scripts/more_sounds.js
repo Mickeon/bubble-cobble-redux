@@ -308,4 +308,9 @@ ServerEvents.tags("item", event => {
 		"mynethersdelight:plate_of_ghasta_with_cream",
 		"mynethersdelight:rock_soup"
 	)
+	event.add("bubble_cobble:sounds/discs",
+		"#c:music_discs",
+		"cobblemon:technical_machine",
+		/^mega_showdown:.*_memory/,
+	)
 })

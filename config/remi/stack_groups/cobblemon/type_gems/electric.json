@@ -1,0 +1,64 @@
+{
+	"__comment": "Generated data. Do not edit manually.",
+	"type": "remi:group",
+	"id": "cobblemon:electric_gem_stuff",
+	"name": {
+		"text": "",
+		"extra": [
+			{
+				"text": "E",
+				"color": "#F7AB19"
+			},
+			{
+				"text": "l",
+				"color": "#F8B11E"
+			},
+			{
+				"text": "e",
+				"color": "#F9BB27"
+			},
+			{
+				"text": "c",
+				"color": "#FBC933"
+			},
+			{
+				"text": "t",
+				"color": "#FCD73F"
+			},
+			{
+				"text": "r",
+				"color": "#FEE249"
+			},
+			{
+				"text": "i",
+				"color": "#FFEA50"
+			},
+			{
+				"text": "c",
+				"color": "#FFEF54"
+			},
+			{
+				"text": " ",
+				"color": "#FFF156"
+			},
+			{
+				"text": "G",
+				"color": "#FFF256"
+			},
+			{
+				"text": "e",
+				"color": "#FFF256"
+			},
+			{
+				"text": "m",
+				"color": "#FFF256"
+			},
+			" Stuff"
+		]
+	},
+	"contents": [
+		"item:cobblemon:electric_gem",
+		"item:cobblemon:electric_gem_block",
+		"item:cobblemon:electric_gem_cluster"
+	]
+}

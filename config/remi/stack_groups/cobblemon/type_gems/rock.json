@@ -1,0 +1,48 @@
+{
+	"__comment": "Generated data. Do not edit manually.",
+	"type": "remi:group",
+	"id": "cobblemon:rock_gem_stuff",
+	"name": {
+		"text": "",
+		"extra": [
+			{
+				"text": "R",
+				"color": "#9F814A"
+			},
+			{
+				"text": "o",
+				"color": "#A98A50"
+			},
+			{
+				"text": "c",
+				"color": "#BA9A5A"
+			},
+			{
+				"text": "k",
+				"color": "#CEAD66"
+			},
+			{
+				"text": " ",
+				"color": "#DEBC70"
+			},
+			{
+				"text": "G",
+				"color": "#E8C576"
+			},
+			{
+				"text": "e",
+				"color": "#EDCA79"
+			},
+			{
+				"text": "m",
+				"color": "#EECB79"
+			},
+			" Stuff"
+		]
+	},
+	"contents": [
+		"item:cobblemon:rock_gem",
+		"item:cobblemon:rock_gem_block",
+		"item:cobblemon:rock_gem_cluster"
+	]
+}

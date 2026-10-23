@@ -2,7 +2,17 @@
 	"__comment": "Generated data. Do not edit manually.",
 	"type": "remi:group",
 	"id": "biomeswevegone:wood_sets/redwood",
-	"name": "§bRedwood§r Wood Set",
+	"name": {
+		"text": "",
+		"extra": [
+			{
+				"text": "Redwood",
+				"color": "#9AC0CD"
+			},
+			" Wood Set"
+		]
+	},
+	"priority": 1,
 	"contents": [
 		"item:biomeswevegone:redwood_boat",
 		"item:biomeswevegone:redwood_bookshelf",
@@ -20,6 +30,7 @@
 		"item:biomeswevegone:redwood_sapling",
 		"item:biomeswevegone:redwood_sign",
 		"item:biomeswevegone:redwood_slab",
+		"item:biomeswevegone:redwood_stairs",
 		"item:biomeswevegone:redwood_trapdoor",
 		"item:biomeswevegone:redwood_wood",
 		"item:biomeswevegone:stripped_redwood_log",

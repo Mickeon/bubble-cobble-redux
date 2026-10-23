@@ -1,17 +1,23 @@
 {
   "type": "remi:group",
-  "id": "sophisticatedbackpacks:tier_upgrades",
-  "name": "Tier Upgrades 🎒",
+  "id": "sophisticatedstorage:tier_upgrades",
+  "name": "Tier Upgrades 📦",
   "contents": [
-    "sophisticatedbackpacks:stack_upgrade_starter_tier_to_tier_1_conversion",
-    "sophisticatedbackpacks:stack_upgrade_starter_tier_to_tier_2_conversion",
-    "sophisticatedbackpacks:stack_upgrade_starter_tier_to_tier_3_conversion",
-    "sophisticatedbackpacks:stack_upgrade_starter_tier_to_tier_4_conversion",
-    "sophisticatedbackpacks:stack_upgrade_tier_1_to_tier_2_conversion",
-    "sophisticatedbackpacks:stack_upgrade_tier_1_to_tier_3_conversion",
-    "sophisticatedbackpacks:stack_upgrade_tier_1_to_tier_4_conversion",
-    "sophisticatedbackpacks:stack_upgrade_tier_2_to_tier_3_conversion",
-    "sophisticatedbackpacks:stack_upgrade_tier_2_to_tier_4_conversion",
-    "sophisticatedbackpacks:stack_upgrade_tier_3_to_tier_4_conversion"
+    "sophisticatedstorage:basic_tier_upgrade",
+    "sophisticatedstorage:basic_to_copper_tier_upgrade",
+    "sophisticatedstorage:basic_to_diamond_tier_upgrade",
+    "sophisticatedstorage:basic_to_gold_tier_upgrade",
+    "sophisticatedstorage:basic_to_iron_tier_upgrade",
+    "sophisticatedstorage:basic_to_netherite_tier_upgrade",
+    "sophisticatedstorage:copper_to_diamond_tier_upgrade",
+    "sophisticatedstorage:copper_to_gold_tier_upgrade",
+    "sophisticatedstorage:copper_to_iron_tier_upgrade",
+    "sophisticatedstorage:copper_to_netherite_tier_upgrade",
+    "sophisticatedstorage:diamond_to_netherite_tier_upgrade",
+    "sophisticatedstorage:gold_to_diamond_tier_upgrade",
+    "sophisticatedstorage:gold_to_netherite_tier_upgrade",
+    "sophisticatedstorage:iron_to_diamond_tier_upgrade",
+    "sophisticatedstorage:iron_to_gold_tier_upgrade",
+    "sophisticatedstorage:iron_to_netherite_tier_upgrade"
   ]
 }

@@ -1,0 +1,56 @@
+{
+	"__comment": "Generated data. Do not edit manually.",
+	"type": "remi:group",
+	"id": "cobblemon:normal_gem_stuff",
+	"name": {
+		"text": "",
+		"extra": [
+			{
+				"text": "N",
+				"color": "#8FA689"
+			},
+			{
+				"text": "o",
+				"color": "#9AAF91"
+			},
+			{
+				"text": "r",
+				"color": "#AFBEA1"
+			},
+			{
+				"text": "m",
+				"color": "#C7D0B5"
+			},
+			{
+				"text": "a",
+				"color": "#DEE2C7"
+			},
+			{
+				"text": "l",
+				"color": "#EEEED4"
+			},
+			{
+				"text": " ",
+				"color": "#F9F6DC"
+			},
+			{
+				"text": "G",
+				"color": "#FDFAE0"
+			},
+			{
+				"text": "e",
+				"color": "#FFFBE1"
+			},
+			{
+				"text": "m",
+				"color": "#FFFBE1"
+			},
+			" Stuff"
+		]
+	},
+	"contents": [
+		"item:cobblemon:normal_gem",
+		"item:cobblemon:normal_gem_block",
+		"item:cobblemon:normal_gem_cluster"
+	]
+}

@@ -2,7 +2,17 @@
 	"__comment": "Generated data. Do not edit manually.",
 	"type": "remi:group",
 	"id": "biomesoplenty:wood_sets/umbran",
-	"name": "§bUmbran§r Wood Set",
+	"name": {
+		"text": "",
+		"extra": [
+			{
+				"text": "Umbran",
+				"color": "#9AC0CD"
+			},
+			" Wood Set"
+		]
+	},
+	"priority": 1,
 	"contents": [
 		"item:biomesoplenty:potted_umbran_sapling",
 		"item:biomesoplenty:stripped_umbran_log",

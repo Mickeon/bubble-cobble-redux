@@ -1,0 +1,48 @@
+{
+	"__comment": "Generated data. Do not edit manually.",
+	"type": "remi:group",
+	"id": "cobblemon:fire_gem_stuff",
+	"name": {
+		"text": "",
+		"extra": [
+			{
+				"text": "F",
+				"color": "#F92D2D"
+			},
+			{
+				"text": "i",
+				"color": "#F93A2B"
+			},
+			{
+				"text": "r",
+				"color": "#F95227"
+			},
+			{
+				"text": "e",
+				"color": "#F96E23"
+			},
+			{
+				"text": " ",
+				"color": "#F98420"
+			},
+			{
+				"text": "G",
+				"color": "#F9921E"
+			},
+			{
+				"text": "e",
+				"color": "#F9981D"
+			},
+			{
+				"text": "m",
+				"color": "#F99A1D"
+			},
+			" Stuff"
+		]
+	},
+	"contents": [
+		"item:cobblemon:fire_gem",
+		"item:cobblemon:fire_gem_block",
+		"item:cobblemon:fire_gem_cluster"
+	]
+}

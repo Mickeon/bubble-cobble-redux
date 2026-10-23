@@ -1,0 +1,56 @@
+{
+	"__comment": "Generated data. Do not edit manually.",
+	"type": "remi:group",
+	"id": "cobblemon:flying_gem_stuff",
+	"name": {
+		"text": "",
+		"extra": [
+			{
+				"text": "F",
+				"color": "#6083F6"
+			},
+			{
+				"text": "l",
+				"color": "#6C8BF6"
+			},
+			{
+				"text": "y",
+				"color": "#8198F7"
+			},
+			{
+				"text": "i",
+				"color": "#9AA8F7"
+			},
+			{
+				"text": "n",
+				"color": "#B2B6F8"
+			},
+			{
+				"text": "g",
+				"color": "#C4C1F9"
+			},
+			{
+				"text": " ",
+				"color": "#CEC8F9"
+			},
+			{
+				"text": "G",
+				"color": "#D3CBF9"
+			},
+			{
+				"text": "e",
+				"color": "#D5CCF9"
+			},
+			{
+				"text": "m",
+				"color": "#D5CCF9"
+			},
+			" Stuff"
+		]
+	},
+	"contents": [
+		"item:cobblemon:flying_gem",
+		"item:cobblemon:flying_gem_block",
+		"item:cobblemon:flying_gem_cluster"
+	]
+}

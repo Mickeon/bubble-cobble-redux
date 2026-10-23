@@ -1,0 +1,60 @@
+{
+	"__comment": "Generated data. Do not edit manually.",
+	"type": "remi:group",
+	"id": "cobblemon:psychic_gem_stuff",
+	"name": {
+		"text": "",
+		"extra": [
+			{
+				"text": "P",
+				"color": "#E553CE"
+			},
+			{
+				"text": "s",
+				"color": "#E65ACE"
+			},
+			{
+				"text": "y",
+				"color": "#E966CF"
+			},
+			{
+				"text": "c",
+				"color": "#ED75D1"
+			},
+			{
+				"text": "h",
+				"color": "#F084D2"
+			},
+			{
+				"text": "i",
+				"color": "#F38FD3"
+			},
+			{
+				"text": "c",
+				"color": "#F597D4"
+			},
+			{
+				"text": " ",
+				"color": "#F69BD4"
+			},
+			{
+				"text": "G",
+				"color": "#F69DD4"
+			},
+			{
+				"text": "e",
+				"color": "#F69DD4"
+			},
+			{
+				"text": "m",
+				"color": "#F69DD4"
+			},
+			" Stuff"
+		]
+	},
+	"contents": [
+		"item:cobblemon:psychic_gem",
+		"item:cobblemon:psychic_gem_block",
+		"item:cobblemon:psychic_gem_cluster"
+	]
+}

@@ -2,7 +2,17 @@
 	"__comment": "Generated data. Do not edit manually.",
 	"type": "remi:group",
 	"id": "biomeswevegone:wood_sets/cypress",
-	"name": "§bCypress§r Wood Set",
+	"name": {
+		"text": "",
+		"extra": [
+			{
+				"text": "Cypress",
+				"color": "#9AC0CD"
+			},
+			" Wood Set"
+		]
+	},
+	"priority": 1,
 	"contents": [
 		"item:biomeswevegone:cypress_boat",
 		"item:biomeswevegone:cypress_bookshelf",
@@ -15,6 +25,7 @@
 		"item:biomeswevegone:cypress_hanging_sign",
 		"item:biomeswevegone:cypress_leaves",
 		"item:biomeswevegone:cypress_log",
+		"item:biomeswevegone:cypress_planks",
 		"item:biomeswevegone:cypress_pressure_plate",
 		"item:biomeswevegone:cypress_sapling",
 		"item:biomeswevegone:cypress_sign",

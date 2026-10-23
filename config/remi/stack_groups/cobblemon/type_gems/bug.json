@@ -1,0 +1,44 @@
+{
+	"__comment": "Generated data. Do not edit manually.",
+	"type": "remi:group",
+	"id": "cobblemon:bug_gem_stuff",
+	"name": {
+		"text": "",
+		"extra": [
+			{
+				"text": "B",
+				"color": "#9FBE1B"
+			},
+			{
+				"text": "u",
+				"color": "#AAC624"
+			},
+			{
+				"text": "g",
+				"color": "#BCD533"
+			},
+			{
+				"text": " ",
+				"color": "#D0E544"
+			},
+			{
+				"text": "G",
+				"color": "#DEF251"
+			},
+			{
+				"text": "e",
+				"color": "#E6F858"
+			},
+			{
+				"text": "m",
+				"color": "#E9FA5A"
+			},
+			" Stuff"
+		]
+	},
+	"contents": [
+		"item:cobblemon:bug_gem",
+		"item:cobblemon:bug_gem_block",
+		"item:cobblemon:bug_gem_cluster"
+	]
+}

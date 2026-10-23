@@ -2,7 +2,17 @@
 	"__comment": "Generated data. Do not edit manually.",
 	"type": "remi:group",
 	"id": "biomeswevegone:wood_sets/baobab",
-	"name": "§bBaobab§r Wood Set",
+	"name": {
+		"text": "",
+		"extra": [
+			{
+				"text": "Baobab",
+				"color": "#9AC0CD"
+			},
+			" Wood Set"
+		]
+	},
+	"priority": 1,
 	"contents": [
 		"item:biomeswevegone:baobab_boat",
 		"item:biomeswevegone:baobab_bookshelf",
@@ -12,7 +22,6 @@
 		"item:biomeswevegone:baobab_door",
 		"item:biomeswevegone:baobab_fence",
 		"item:biomeswevegone:baobab_fence_gate",
-		"item:biomeswevegone:baobab_fruit",
 		"item:biomeswevegone:baobab_hanging_sign",
 		"item:biomeswevegone:baobab_leaves",
 		"item:biomeswevegone:baobab_log",
@@ -23,6 +32,7 @@
 		"item:biomeswevegone:baobab_slab",
 		"item:biomeswevegone:baobab_stairs",
 		"item:biomeswevegone:baobab_trapdoor",
+		"item:biomeswevegone:baobab_wood",
 		"item:biomeswevegone:flowering_baobab_leaves",
 		"item:biomeswevegone:ripe_baobab_leaves",
 		"item:biomeswevegone:stripped_baobab_log",

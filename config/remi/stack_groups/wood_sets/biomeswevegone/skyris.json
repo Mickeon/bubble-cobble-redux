@@ -2,7 +2,17 @@
 	"__comment": "Generated data. Do not edit manually.",
 	"type": "remi:group",
 	"id": "biomeswevegone:wood_sets/skyris",
-	"name": "§bSkyris§r Wood Set",
+	"name": {
+		"text": "",
+		"extra": [
+			{
+				"text": "Skyris",
+				"color": "#9AC0CD"
+			},
+			" Wood Set"
+		]
+	},
+	"priority": 1,
 	"contents": [
 		"item:biomeswevegone:flowering_skyris_leaves",
 		"item:biomeswevegone:green_apple_skyris_leaves",
@@ -26,6 +36,7 @@
 		"item:biomeswevegone:skyris_trapdoor",
 		"item:biomeswevegone:skyris_vine",
 		"item:biomeswevegone:skyris_wood",
+		"item:biomeswevegone:stripped_skyris_log",
 		"item:biomeswevegone:stripped_skyris_wood",
 		"item:snowyspirit:biomeswevegone/sled_skyris",
 		"item:supplementaries:biomeswevegone/cannon_boat_skyris",

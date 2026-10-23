@@ -2,7 +2,17 @@
 	"__comment": "Generated data. Do not edit manually.",
 	"type": "remi:group",
 	"id": "biomeswevegone:wood_sets/zelkova",
-	"name": "§bZelkova§r Wood Set",
+	"name": {
+		"text": "",
+		"extra": [
+			{
+				"text": "Zelkova",
+				"color": "#9AC0CD"
+			},
+			" Wood Set"
+		]
+	},
+	"priority": 1,
 	"contents": [
 		"item:biomeswevegone:brown_zelkova_leaves",
 		"item:biomeswevegone:brown_zelkova_sapling",
