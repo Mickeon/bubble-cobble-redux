@@ -1,0 +1,19 @@
+                {
+                  "id": "vegetables",
+                  "enabled": true,
+                  "name": {
+                    "en_us": "Vegetables",
+                    "ru_ru": "Овощи"
+                  },
+                  "description": {
+                    "en_us": "Vegetables and plant-based food.",
+                    "ru_ru": "Овощи и растительная еда."
+                  },
+                  "iconItem": "minecraft:carrot",
+                  "color": "#5EBB5B",
+                  "tags": [
+                    "#c:foods/vegetables",
+                    "#c:vegetables",
+                    "#forge:vegetables"
+                  ]
+                }

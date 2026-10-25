@@ -1,0 +1,19 @@
+                {
+                  "id": "fish",
+                  "enabled": true,
+                  "name": {
+                    "en_us": "Fish Food",
+                    "ru_ru": "Рыбная еда"
+                  },
+                  "description": {
+                    "en_us": "Fish and seafood meals.",
+                    "ru_ru": "Рыба и морская еда."
+                  },
+                  "iconItem": "minecraft:cooked_cod",
+                  "color": "#5AAFC8",
+                  "tags": [
+                    "#c:foods/fishes",
+                    "#c:foods/fish",
+                    "#forge:foods/fish"
+                  ]
+                }

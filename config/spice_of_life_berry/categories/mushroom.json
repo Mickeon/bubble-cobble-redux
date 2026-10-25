@@ -1,0 +1,19 @@
+                {
+                  "id": "mushroom",
+                  "enabled": true,
+                  "name": {
+                    "en_us": "Mushroom Food",
+                    "ru_ru": "Грибная еда"
+                  },
+                  "description": {
+                    "en_us": "Mushroom-based meals.",
+                    "ru_ru": "Еда на основе грибов."
+                  },
+                  "iconItem": "minecraft:mushroom_stew",
+                  "color": "#9B7A58",
+                  "tags": [
+                    "#c:foods/mushroom",
+                    "#c:mushrooms",
+                    "#forge:mushrooms"
+                  ]
+                }

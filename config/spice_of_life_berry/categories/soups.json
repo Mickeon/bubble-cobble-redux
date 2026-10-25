@@ -1,0 +1,19 @@
+                {
+                  "id": "soups",
+                  "enabled": true,
+                  "name": {
+                    "en_us": "Soups",
+                    "ru_ru": "Супы"
+                  },
+                  "description": {
+                    "en_us": "Soup, stew and bowl meals.",
+                    "ru_ru": "Супы, рагу и еда в мисках."
+                  },
+                  "iconItem": "minecraft:mushroom_stew",
+                  "color": "#D18A48",
+                  "tags": [
+                    "#c:foods/soup",
+                    "#c:foods/soups",
+                    "#forge:foods/soup"
+                  ]
+                }

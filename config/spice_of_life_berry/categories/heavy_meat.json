@@ -1,0 +1,24 @@
+{
+  "id": "heavy_meat",
+  "enabled": true,
+  "name": {
+    "en_us": "Heavy Meat",
+    "ru_ru": "Тяжёлая мясная еда"
+  },
+  "description": {
+    "en_us": "Large filling meat meals.",
+    "ru_ru": "Сытная тяжёлая мясная еда."
+  },
+  "iconItem": "minecraft:cooked_beef",
+  "color": "#C45A4A",
+  "eatTimeMultiplier": 1.40,
+  "items": [
+    "minecraft:cooked_beef",
+    "minecraft:cooked_porkchop",
+    "minecraft:cooked_mutton"
+  ],
+  "tags": [
+    "#c:foods/cooked_meat",
+    "#forge:foods/cooked_meat"
+  ]
+}

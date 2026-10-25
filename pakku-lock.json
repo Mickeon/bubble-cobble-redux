@@ -9758,6 +9758,43 @@
             ]
         },
         {
+            "pakku_id": "nNmWrxPKm6oLV4jI",
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "modrinth": "solberry"
+            },
+            "name": {
+                "modrinth": "Spice of life Berry edition"
+            },
+            "id": {
+                "modrinth": "KWQ4ySiH"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "SpiceOfLifeBerry-NeoForge-1.21.1-1.0.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/KWQ4ySiH/versions/vp5NseCQ/SpiceOfLifeBerry-NeoForge-1.21.1-1.0.jar",
+                    "id": "vp5NseCQ",
+                    "parent_id": "KWQ4ySiH",
+                    "hashes": {
+                        "sha512": "ba4b1012309510f8d8c870938acae5ba0bc56eb56d0d78ee6fd1c62b57f0be979d1c1df8eea8c3040db7e14f73342a7863d1eefc99dd628a1e7c8f8c30ce5aab",
+                        "sha1": "a590a7d5035ad76fa56f936b1d655bbfcd6c790e"
+                    },
+                    "required_dependencies": [],
+                    "size": 2518416,
+                    "date_published": "2026-09-22T12:06:28.240859Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "A5vlG1ha58kJS2Ii",
             "pakku_links": [
                 "Bk7wmInKb2yQxAJF"

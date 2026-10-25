@@ -1,0 +1,19 @@
+                {
+                  "id": "sweets",
+                  "enabled": true,
+                  "name": {
+                    "en_us": "Sweet Food",
+                    "ru_ru": "Сладкая еда"
+                  },
+                  "description": {
+                    "en_us": "Sweet food such as cookies, cakes and candies.",
+                    "ru_ru": "Сладкая еда: печенье, торты и конфеты."
+                  },
+                  "iconItem": "minecraft:cookie",
+                  "color": "#E49AD6",
+                  "tags": [
+                    "#c:foods/sweets",
+                    "#c:foods/candy",
+                    "#forge:foods/sweets"
+                  ]
+                }

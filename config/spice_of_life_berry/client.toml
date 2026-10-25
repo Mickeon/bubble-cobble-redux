@@ -1,0 +1,375 @@
+[presets_ui_state]
+	lastAppliedPresetId = "builtin:normal_food_only"
+	presetsIntroSeen = true
+	importedPresetCodes = []
+	firstRunSetupNoticeSeen = true
+	fullResetCeremonyCompleted = false
+
+	[compat.appleskin]
+		compatibilityEnabled = true
+		showSolBerryNutrition = true
+		hideSaturation = true
+
+	[compat.solberry_tooltip]
+		enableSolBerryFoodTooltip = false
+		requireShiftForFoodTooltip = false
+
+	[compat.visuals]
+		enableHudCloud = true
+		enableInventoryCloud = true
+		enableHudItems = true
+		enableInventoryItems = true
+		enableModdedInventoryCloud = true
+		showModdedInventoryCloudCloseButton = false
+		moddedInventoryScreenClassHints = ["curios", "inventorio"]
+		# Default: 6
+		# Range: -10000 ~ 10000
+		hudOffsetX = 18
+		# Default: -24
+		# Range: -10000 ~ 10000
+		hudOffsetY = -45
+		# Default: 0
+		# Range: -10000 ~ 10000
+		inventoryOffsetX = 102
+		# Default: -21
+		# Range: -10000 ~ 10000
+		inventoryOffsetY = -9
+		# Default: 0.85
+		# Range: 0.25 ~ 4.0
+		hudScale = 0.5
+		# Default: 0.85
+		# Range: 0.25 ~ 4.0
+		inventoryScale = 1.0
+		# Default: 1.0
+		# Range: 0.0 ~ 1.0
+		cloudOpacity = 0.9
+		# Default: 14
+		# Range: 4 ~ 32
+		hudIconSizeOne = 16
+		# Default: 13
+		# Range: 4 ~ 32
+		hudIconSizeTwo = 16
+		# Default: 12
+		# Range: 4 ~ 32
+		hudIconSizeThree = 12
+		# Default: 11
+		# Range: 4 ~ 32
+		hudIconSizeFour = 11
+		# Default: 9
+		# Range: 4 ~ 32
+		hudIconSizeFiveOrSix = 9
+		# Default: 8
+		# Range: 4 ~ 32
+		hudIconSizeSevenOrEight = 8
+		inventoryIconSizeOne = 16
+		inventoryIconSizeTwo = 16
+		inventoryIconSizeThree = 17
+		inventoryIconSizeFour = 16
+		inventoryIconSizeFiveOrSix = 14
+		inventoryIconSizeSevenOrEight = 12
+		#Allowed Values: modern, classic
+		textureStyle = "modern"
+
+		[compat.visuals.category_mini_cloud]
+			enableCategoryMiniCloud = true
+			# Default: 60
+			# Range: -10000 ~ 10000
+			hudCategoryOffsetX = -14
+			# Default: -1
+			# Range: -10000 ~ 10000
+			hudCategoryOffsetY = -4
+			# Default: 66
+			# Range: -10000 ~ 10000
+			hudCategoryIconOffsetX = -8
+			# Default: 5
+			# Range: -10000 ~ 10000
+			hudCategoryIconOffsetY = 2
+			# Default: 92
+			# Range: -10000 ~ 10000
+			inventoryCategoryOffsetX = -44
+			# Default: 4
+			# Range: -10000 ~ 10000
+			inventoryCategoryOffsetY = -14
+			# Default: 98
+			# Range: -10000 ~ 10000
+			inventoryCategoryIconOffsetX = -38
+			# Default: 10
+			# Range: -10000 ~ 10000
+			inventoryCategoryIconOffsetY = 9
+			# Default: 1.0
+			# Range: 0.05 ~ 20.0
+			categoryMiniCloudScale = 1.0
+			# Default: 1.0
+			# Range: 0.05 ~ 20.0
+			categoryMiniCloudSizeMultiplier = 1.0
+			# Default: 0.75
+			# Range: 0.05 ~ 20.0
+			categoryMiniIconSizeMultiplier = 1.0
+			# Default: 0.9198519888991677
+			# Range: 0.05 ~ 20.0
+			hudCategoryMiniCloudSizeMultiplier = 0.5
+			# Default: 0.6531544865864941
+			# Range: 0.05 ~ 20.0
+			hudCategoryMiniIconSizeMultiplier = 0.5
+			# Default: 1.2838575393154485
+			# Range: 0.05 ~ 20.0
+			inventoryCategoryMiniCloudSizeMultiplier = 0.5
+			# Default: 1.010481036077706
+			# Range: 0.05 ~ 20.0
+			inventoryCategoryMiniIconSizeMultiplier = 1.0
+			# Default: 1.0
+			# Range: 0.0 ~ 1.0
+			categoryMiniCloudOpacity = 0.9
+			showCategoryMiniCloudBackground = true
+			categoryMiniCloudIdleAnimation = true
+
+		[compat.visuals.cloud_size]
+			# Default: 1.0
+			# Range: 0.05 ~ 20.0
+			hudCloudSizeMultiplier = 1.0
+			# Default: 1.0
+			# Range: 0.05 ~ 20.0
+			inventoryCloudSizeMultiplier = 0.5
+
+		[compat.visuals.icon_layout]
+			hudItemSizeMultiplier = 1.0
+			inventoryItemSizeMultiplier = 1.0
+			# Default: 13
+			# Range: 1 ~ 64
+			baseHudIconSize = 13
+			# Default: 3
+			# Range: 0 ~ 32
+			hudIconSizeReductionPerExtraItem = 3
+			# Default: 7
+			# Range: 1 ~ 64
+			minHudIconSize = 7
+			# Default: 20
+			# Range: 1 ~ 64
+			baseInventoryIconSize = 20
+			# Default: 1
+			# Range: 0 ~ 32
+			inventoryIconSizeReductionPerExtraItem = 1
+			# Default: 12
+			# Range: 1 ~ 64
+			minInventoryIconSize = 12
+			baseHudIconSpacing = 1
+			hudSpacingReductionWhenManyItems = 1
+			minHudIconSpacing = -2
+			baseInventoryIconSpacing = 2
+			inventorySpacingReductionWhenManyItems = 1
+			minInventoryIconSpacing = -2
+			advancedHudIconSizeOverrides = []
+			advancedInventoryIconSizeOverrides = []
+			advancedHudIconSpacingOverrides = []
+			advancedInventoryIconSpacingOverrides = []
+			hudIconSpacing = -2
+			inventoryIconSpacing = 0
+			hudRowSpacing = -3
+			inventoryRowSpacing = -3
+			hudItemsXOffset = -1
+			hudItemsYOffset = 1
+			inventoryItemsXOffset = -20
+			inventoryItemsYOffset = -12
+
+		[compat.visuals.streak_layout]
+			inventoryStreakXOffset = 120
+			inventoryStreakYOffset = 18
+			inventoryStreakSpacing = 3
+			# Default: 0.7395189639222941
+			# Range: 0.05 ~ 20.0
+			inventoryStreakScale = 1.275045020952776
+
+		[compat.visuals.hud_cloud_anchor]
+			anchorToHotbar = true
+			respectVanillaHudBars = true
+			moveAboveAirBar = true
+			moveAboveMountBar = true
+			# Default: 8
+			# Range: 0 ~ 64
+			extraYOffsetWhenBarsVisible = 8
+
+		[compat.visuals.hud_animations]
+			enabled = true
+			idleAnimationEnabled = false
+			# Default: 0.5
+			# Range: 0.0 ~ 8.0
+			idleMoveAmountX = 0.5
+			# Default: 0.75
+			# Range: 0.0 ~ 8.0
+			idleMoveAmountY = 0.75
+			# Default: 0.1
+			# Range: 0.0 ~ 4.0
+			idleSpeed = 0.1
+			iconDisappearAnimationEnabled = true
+			# Default: 8
+			# Range: 0 ~ 80
+			iconDisappearDurationTicks = 8
+			smoothRelayoutEnabled = true
+			# Default: 8
+			# Range: 0 ~ 80
+			relayoutDurationTicks = 8
+			cloudDisappearAnimationEnabled = true
+			# Default: 10
+			# Range: 0 ~ 100
+			cloudDisappearDurationTicks = 10
+			inventoryItemHoverFocusEnabled = true
+
+		[compat.visuals.animations]
+			useEaseInOut = true
+			useSmoothSinCosMotion = true
+
+		[compat.visuals.eating_icon_animation]
+			enabled = true
+			shakeWhileEatingCravingFood = true
+			# Default: 0.35
+			# Range: 0.0 ~ 8.0
+			baseShakeAmplitude = 0.35
+			# Default: 0.85
+			# Range: 0.0 ~ 8.0
+			finalShakeAmplitude = 0.85
+			# Default: 2.0
+			# Range: 0.0 ~ 16.0
+			baseShakeSpeed = 2.0
+			# Default: 4.0
+			# Range: 0.0 ~ 24.0
+			finalShakeSpeed = 4.0
+			allowSlightScalePulse = true
+			# Default: 0.05
+			# Range: 0.0 ~ 0.35
+			scalePulseAmount = 0.05
+			applyToHudCloud = true
+			applyToInventoryCloud = true
+
+		[compat.visuals.craving_particles]
+			enabled = true
+			#Allowed Values: random_safe, gentle_green, hearts, sparkle, meal_complete
+			particleStyle = "random_safe"
+			cravingFoodParticle = "minecraft:happy_villager"
+			quotaCompleteParticle = "minecraft:heart"
+			streakBonusParticle = "minecraft:glow"
+			categoryCravingParticle = "minecraft:composter"
+			# Default: 5
+			# Range: 0 ~ 64
+			particlesForSingleCravingFood = 5
+			# Default: 14
+			# Range: 0 ~ 128
+			particlesForCompletedQuota = 14
+			# Default: 18
+			# Range: 0 ~ 128
+			particlesForStreakBonus = 18
+			# Default: 0.6
+			# Range: 0.1 ~ 4.0
+			particleRadius = 0.6
+
+		[compat.visuals.checkmark_animation]
+			enabled = true
+			flyInFromOffscreen = true
+			useDifferentDirections = true
+			shakeCloudOnLanding = true
+			landingParticlesEnabled = true
+			# Default: 0.3
+			# Range: 0.05 ~ 2.0
+			flyDurationSeconds = 0.3
+			accelerateConsecutiveCheckmarks = true
+			# Default: 0.04
+			# Range: 0.0 ~ 2.0
+			flyDurationReductionPerCheckmark = 0.04
+			# Default: 0.16
+			# Range: 0.01 ~ 2.0
+			minFlyDurationSeconds = 0.16
+			# Default: 0.1
+			# Range: 0.0 ~ 5.0
+			delayReductionPerCheckmark = 0.1
+			# Default: 0.18
+			# Range: 0.0 ~ 5.0
+			minDelayBetweenCheckmarksSeconds = 0.18
+			# Default: 1.75
+			# Range: 0.0 ~ 30.0
+			consecutiveResetSeconds = 1.75
+
+		[compat.visuals.final_checkmark]
+			enabled = true
+			useRandomDirection = true
+			# Default: 0.35
+			# Range: 0.05 ~ 3.0
+			flyDurationSeconds = 0.35
+			# Default: 0.5
+			# Range: 0.0 ~ 10.0
+			holdSeconds = 0.5
+			# Default: 2.0
+			# Range: 0.0 ~ 20.0
+			fadeOutSeconds = 2.0
+			coverWholeCloud = true
+			# Default: 1.6
+			# Range: 0.0 ~ 8.0
+			shakeStrength = 1.6
+			trailEnabled = true
+			# Default: 0.35
+			# Range: 0.0 ~ 4.0
+			trailMultiplier = 0.35
+			# Default: 4
+			# Range: 0 ~ 256
+			minTrailLength = 4
+			# Default: 48
+			# Range: 0 ~ 512
+			maxTrailLength = 48
+			# Default: 0.65
+			# Range: 0.0 ~ 1.0
+			trailFadeStrength = 0.65
+
+		[compat.sounds.craving_sounds]
+			enabled = true
+			quotaCompleteSoundEnabled = true
+			streakBonusSoundEnabled = true
+			#Allowed Values: calm, soft_ui, breeze
+			soundStyle = "calm"
+			# Default: 0.45
+			# Range: 0.0 ~ 2.0
+			volume = 0.45
+			# Default: 1.0
+			# Range: 0.25 ~ 2.0
+			pitch = 1.0
+
+		[compat.sounds.checkmark_animation]
+			enabled = true
+			normalCheckmarkSound = "minecraft:entity.chicken.egg"
+			finalCheckmarkSound = "minecraft:entity.firework_rocket.blast"
+			quotaCompleteSound = "minecraft:block.wool.place"
+			streakBonusSound = "minecraft:block.grass.place"
+			categoryCravingSound = "minecraft:block.amethyst_block.resonate"
+			# Default: 0.45
+			# Range: 0.0 ~ 2.0
+			normalVolume = 0.45
+			# Default: 0.55
+			# Range: 0.0 ~ 2.0
+			finalVolume = 0.55
+			# Default: 1.0
+			# Range: 0.25 ~ 2.0
+			pitch = 1.0
+			# Default: 0.5
+			# Range: 0.0 ~ 10.0
+			delayBetweenCheckmarksSeconds = 0.5
+
+	[compat.craving_reroll]
+		showLever = true
+		# Default: 60
+		# Range: 10 ~ 200
+		animationTicks = 60
+		#Allowed Values: top_to_bottom, bottom_to_top, left_to_right, right_to_left, random_in_place, none, spin, limbo, roulette, arc_impact, black_hole, cloud_spin, random
+		animationStyle = "random"
+		animationStyles = []
+		limboMusicEnabled = true
+
+	[compat.motion_blur]
+		playerEnabled = false
+		# Default: 0.68
+		# Range: 0.0 ~ 1.0
+		playerStrength = 0.68
+		guiEnabled = true
+		# Default: 0.82
+		# Range: 0.0 ~ 1.0
+		guiStrength = 0.82
+
+	[compat.starvation_motion_blur]
+		enabled = false
+		safetyNoticeSeen = true

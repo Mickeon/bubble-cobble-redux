@@ -1,0 +1,19 @@
+                {
+                  "id": "drinks",
+                  "enabled": true,
+                  "name": {
+                    "en_us": "Drinks",
+                    "ru_ru": "Напитки"
+                  },
+                  "description": {
+                    "en_us": "Drinkable foods and bottle-based meals.",
+                    "ru_ru": "Напитки и еда из бутылок."
+                  },
+                  "iconItem": "minecraft:honey_bottle",
+                  "color": "#7EC8D4",
+                  "tags": [
+                    "#c:foods/drink",
+                    "#c:foods/drinks",
+                    "#forge:foods/drink"
+                  ]
+                }

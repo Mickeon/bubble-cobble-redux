@@ -1,0 +1,19 @@
+                {
+                  "id": "dairy",
+                  "enabled": true,
+                  "name": {
+                    "en_us": "Dairy Food",
+                    "ru_ru": "Молочная еда"
+                  },
+                  "description": {
+                    "en_us": "Milk, cheese and other dairy-style foods when tags are available.",
+                    "ru_ru": "Молоко, сыр и другая молочная еда, если в сборке есть подходящие теги."
+                  },
+                  "iconItem": "minecraft:milk_bucket",
+                  "color": "#E8E2C0",
+                  "tags": [
+                    "#c:foods/dairy",
+                    "#c:milk",
+                    "#forge:milk"
+                  ]
+                }

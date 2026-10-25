@@ -1,0 +1,19 @@
+                {
+                  "id": "baked",
+                  "enabled": true,
+                  "name": {
+                    "en_us": "Baked Food",
+                    "ru_ru": "Выпечка"
+                  },
+                  "description": {
+                    "en_us": "Bread, pies and baked meals.",
+                    "ru_ru": "Хлеб, пироги и выпечка."
+                  },
+                  "iconItem": "minecraft:pumpkin_pie",
+                  "color": "#C98F53",
+                  "tags": [
+                    "#c:foods/bread",
+                    "#c:foods/baked",
+                    "#forge:foods/bread"
+                  ]
+                }
