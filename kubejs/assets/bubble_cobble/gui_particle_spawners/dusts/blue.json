@@ -7,8 +7,6 @@
 
   "applies": [
     {"id": "biomeswevegone:blue_glowcane_powder"},
-    {"id": "cobblemon:quick_powder"},
-    {"id": "createmonballsoverhaul:sky_tumblestone_dust"},
-    {"id": "createmonballsoverhaul:black_tumblestone_dust"}
+    {"id": "cobblemon:quick_powder"}
   ]
 }

@@ -11,9 +11,6 @@ const DISABLED_ITEMS = [
 	/^libraryferret/,
 	"urban_decor:sewing_needle",
 
-	// Obsolete.
-	// "createmonballsoverhaul:apricorn_punch",
-
 	// In favour of Brewin' and Chewin's cheese.
 	/^create_bic_bit:(?!.*souffle).*cheese/,
 	"create_bic_bit:curdled_milk_bucket", // Note: Fails on startup if used as an Ingredient.

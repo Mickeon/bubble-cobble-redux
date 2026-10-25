@@ -2974,50 +2974,6 @@
             ]
         },
         {
-            "pakku_id": "qKKilO020JAJZec2",
-            "pakku_links": [
-                "mjse1gMXfneuvrpy",
-                "rcNaZofHJ2yMvMzg"
-            ],
-            "type": "MOD",
-            "side": "BOTH",
-            "slug": {
-                "modrinth": "create-cobblemon-balls-overhaul"
-            },
-            "name": {
-                "modrinth": "Create: Cobblemon Balls Overhaul"
-            },
-            "id": {
-                "modrinth": "aXSKKweV"
-            },
-            "files": [
-                {
-                    "type": "modrinth",
-                    "file_name": "createcobblemonballsoverhaul-0.0.4.jar",
-                    "mc_versions": [
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/aXSKKweV/versions/mEtG7FfP/createcobblemonballsoverhaul-0.0.4.jar",
-                    "id": "mEtG7FfP",
-                    "parent_id": "aXSKKweV",
-                    "hashes": {
-                        "sha512": "1ff64dd3157968aa4c33c6fa2d18422f245fd59885c7c898c6836ff3a3ff9cfc583c5cf26f52ea6d8273569ecc56349703d8b05bc63962b463fcedf8c29fdcb6",
-                        "sha1": "92f9da9d765ef0e0317bbaac690133b07b6f141e"
-                    },
-                    "required_dependencies": [
-                        "MdwFAVRL",
-                        "LNytGWDc"
-                    ],
-                    "size": 334794,
-                    "date_published": "2025-12-17T10:01:05.366405Z"
-                }
-            ]
-        },
-        {
             "pakku_id": "UqOkPH3gxmHYC4eb",
             "type": "MOD",
             "side": "BOTH",

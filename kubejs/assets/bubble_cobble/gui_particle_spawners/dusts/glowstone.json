@@ -7,7 +7,6 @@
 
   "applies": [
     {"id": "minecraft:glowstone_dust"},
-    {"id": "biomeswevegone:yellow_glowcane_powder"},
-    {"id": "createmonballsoverhaul:tumblestone_dust"}
+    {"id": "biomeswevegone:yellow_glowcane_powder"}
   ]
 }

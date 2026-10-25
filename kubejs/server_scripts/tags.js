@@ -93,13 +93,6 @@ ServerEvents.tags("item", event => {
 		"mynethersdelight:pepper_powder",
 		"reliquified_artifacts:mimi_dust",
 	)
-	if (Platform.isLoaded("createmonballsoverhaul")) {
-		event.add("supplementaries:hourglass_dusts",
-			"createmonballsoverhaul:black_tumblestone_dust",
-			"createmonballsoverhaul:sky_tumblestone_dust",
-			"createmonballsoverhaul:tumblestone_dust",
-		)
-	}
 	event.add("supplementaries:pancake_syrup", "create:chocolate_bucket")
 	if (Item.exists("minecraft:copper_sword")) {
 		event.add("supplementaries:causes_lightning_when_held", "minecraft:copper_sword", "minecraft:copper_axe")

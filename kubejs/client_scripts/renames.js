@@ -109,14 +109,6 @@ ClientEvents.lang("en_us", event => {
 	event.add("minecraft", "item.minecraft.lead", "Leash")
 	event.add("crittersandcompanions", "item.crittersandcompanions.silk_lead", "Silk Leash")
 
-	// These are accidentally unnamed, which...
-	// TODO: Should probably be reported.
-	event.addAll("createmonballsoverhaul", {
-		"block.createmonballsoverhaul.dense_tumblestone_coating_block": "Dense Tumblestone Coating",
-		"block.createmonballsoverhaul.light_tumblestone_coating_block": "Light Tumblestone Coating",
-		"block.createmonballsoverhaul.standard_tumblestone_coating_block": "Standard Tumblestone Coating",
-	})
-
 	event.addAll("sophisticatedstorage", {
 		"wood_name.sophisticatedstorage.biomeswevegone:zelkova": "Zelkova",
 		"wood_name.sophisticatedstorage.biomesoplenty:jacaranda": "Pale Jacaranda",
