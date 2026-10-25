@@ -18,7 +18,7 @@
 /moddata
 /showdown
 /config/highly_customizable_damage_numbers/README.txt
-*/**.bak
+*/**/*.bak
 
 # These have defaults defined in the configureddefaults folder.
 # Any file in configureddefaults will be pasted to the root folder at launch,

@@ -48,7 +48,7 @@
         "!config/waterframes-client.toml",
 
         "!config/highly_customizable_damage_numbers/README.txt",
-        "!*/**.bak",
+        "!*/**/*.bak",
 
         "!**/jsconfig.json",
         "!config/nbtac.txt",

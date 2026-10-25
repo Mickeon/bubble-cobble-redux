@@ -63,7 +63,7 @@
     "files.exclude": {
         ".cache": true,
         ".mixin.out": true,
-        "*/**.bak": true,
+        "*/**/*.bak": true,
         "build": true,
         "cache": true,
         "cobble*": true,
@@ -170,7 +170,7 @@
     "search.exclude": {
         "/.probe/": true,
         "/emi.json": true,
-        "/.vscode/probejs.code-snippets": true,
+        "/.vscode/*.code-snippets": true,
         "/saves/**": true,
         "crash-reports/": true
     },
