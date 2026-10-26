@@ -1,19 +1,24 @@
-                {
-                  "id": "vegetables",
-                  "enabled": true,
-                  "name": {
-                    "en_us": "Vegetables",
-                    "ru_ru": "Овощи"
-                  },
-                  "description": {
-                    "en_us": "Vegetables and plant-based food.",
-                    "ru_ru": "Овощи и растительная еда."
-                  },
-                  "iconItem": "minecraft:carrot",
-                  "color": "#5EBB5B",
-                  "tags": [
-                    "#c:foods/vegetables",
-                    "#c:vegetables",
-                    "#forge:vegetables"
-                  ]
-                }
+{
+  "id": "vegetables",
+  "enabled": true,
+  "name": {
+    "en_us": "Vegetables"
+  },
+  "description": {
+    "en_us": "Vegetables and plant-based food."
+  },
+  "iconItem": "minecraft:carrot",
+  "color": "#5EBB5B",
+  "items": [
+    "biomeswevegone:allium_oddion_soup",
+    "biomeswevegone:blooming_oddion",
+    "biomeswevegone:cooked_oddion_bulb",
+    "biomeswevegone:oddion_bulb",
+    "create_bic_bit:stamppot_bowl",
+    "cobblemon:vivichoke_dip",
+    "farmersdelight:ratatouille"
+  ],
+  "tags": [
+    "#c:foods/vegetable"
+  ]
+}

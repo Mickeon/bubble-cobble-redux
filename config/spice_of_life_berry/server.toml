@@ -2,7 +2,7 @@
 	enabled = true
 
 [food_detection]
-	foodDetectionTags = ["c:foods", "c:foods/soup", "c:foods/drink"]
+	foodDetectionTags = ["c:foods", "c:foods/soup", "c:drinks", "brewinandchewin:fermented_drinks", "bubble_cobble:wines"]
 	forcedFoodItems = []
 	manualFoodItemsCanBeEaten = true
 	foodNutritionOverrides = []
@@ -49,7 +49,7 @@
 	# Default: 0.5
 	# Range: 0.0 ~ 10.0
 	beginnerPassiveHungerMultiplier = 0.5
-	enableHungerMovementSlowdown = true
+	enableHungerMovementSlowdown = false
 
 [damage_hunger]
 	enabled = true
@@ -188,7 +188,7 @@
 	# Default: 14
 	# Range: 0 ~ 20
 	minHungerAfterGoodSleep = 14
-	enableSleepDebt = true
+	enableSleepDebt = false
 	# Default: 8.0
 	# Range: 0.0 ~ 100.0
 	sleepDebtPassiveHungerPercentPerPoint = 8.0
@@ -264,7 +264,7 @@
 	cravingRefreshMode = "world_day"
 	# Default: 2
 	# Range: 0 ~ 8
-	cravingFoodCount = 2
+	cravingFoodCount = 3
 	randomDailyCravingCountEnabled = false
 	# Default: 2
 	# Range: 0 ~ 8
@@ -304,7 +304,7 @@
 	# Range: 20 ~ 72000
 	cravingRecipeCacheRefreshTicks = 1200
 	advancementCravingUnlocksEnabled = true
-	advancementCravingUnlockRules = []
+	advancementCravingUnlockRules = ["brewinandchewin:main/place_keg=bubble_cobble:sweet_berry_wine|bubble_cobble:firebomb_whiskey|bubble_cobble:berry_juice_soda", "brewinandchewin:main/cook_fiery_fondue=brewinandchewin:fiery_fondue", "brewinandchewin:main/ferment_cheese=brewinandchewin:flaxen_cheese_wedge|create_bic_bit:raw_cheese_souffle|brewinandchewin:scarlet_cheese_wedge|brewinandchewin:ham_and_cheese_sandwich|brewinandchewin:cheesy_pasta", "create_bic_bit:sweet_dough=create_deepfried:honey_filled_berliner", "create_bic_bit:sinterklaas_kapoentje=create_bic_bit:speculaas", "create_bic_bit:stamppot=create_bic_bit:stamppot_bowl", "herbalbrews:main/let_it_dry=herbalbrews:green_tea", "herbalbrews:main/let_it_dry_2=herbalbrews:black_tea", "herbalbrews:main/place_tea_kettle=herbalbrews:milk_coffee|herbalbrews:coffee|herbalbrews:black_tea|herbalbrews:green_tea|herbalbrews:hibiscus_tea|herbalbrews:lavender_tea|herbalbrews:oolong_tea|herbalbrews:rooibos_tea|herbalbrews:yerba_mate_tea", "herbalbrews:main/find_lavender=herbalbrews:lavender_tea", "farmersdelight:main/craft_knife=minersdelight:baked_squid|farmersdelight:cooked_chicken_cuts|farmersdelight:cooked_cod_slice|farmersdelight:cooked_mutton_chops|farmersdelight:cooked_salmon_slice|farmersdelight:cooked_bacon", "cobblemon:agriculture/place_campfire_pot=cobblemon:casteliacone|cobblemon:big_malasada|cobblemon:ponigiri|cobblemon:pewter_crunchies|cobblemon:open_faced_sandwich|cobblemon:old_gateau|cobblemon:lumiose_galette|cobblemon:potato_mochi|cobblemon:smoked_tail_curry|cobblemon:jubilife_muffin|cobblemon:lava_cookie", "create:chocolate_bucket=create:bar_of_chocolate|create:chocolate_glazed_berries", "biomeswevegone:biomeswevegone/husbandry/granny_smith=biomeswevegone:green_apple_pie", "biomeswevegone:biomeswevegone/husbandry/berrily_alive=biomeswevegone:blueberry_pie"]
 	ftbQuestCravingUnlocksEnabled = true
 	ftbQuestCravingUnlockRules = []
 	requireCookedCravingFood = true
@@ -331,7 +331,7 @@
 	# Range: 0.0 ~ 1.0
 	categoryBonusMultiplierWithOneFoodLeft = 0.65
 	allowEatingCravingFoodWhenFull = true
-	allowEatingCravingCategoryWhenFull = false
+	allowEatingCravingCategoryWhenFull = true
 	# Default: 0.2
 	# Range: 0.0 ~ 10.0
 	cravingRegenBonusForOneFood = 0.2
@@ -473,7 +473,7 @@
 
 [dimension_rules]
 	enabled = true
-	rules = ["minecraft:overworld|hunger=true|cravings=true|preferred=|required=|passive=1.0|sleep=1.0|elytra=1.0|regen=1.0", "minecraft:the_nether|hunger=true|cravings=true|required=watery|preferred=watery|passive=1.25|sleep=1.0|elytra=1.0|regen=1.0", "minecraft:the_end|hunger=true|cravings=true|preferred=|required=|passive=1.5|postDragonPassive=0.45|sleep=1.0|elytra=1.0|regen=1.0"]
+	rules = ["minecraft:overworld|hunger=true|cravings=true|preferred=|required=|passive=1.0|sleep=1.0|elytra=1.0|regen=1.0", "minecraft:the_nether|hunger=true|cravings=true|required=watery|preferred=watery|passive=1.25|sleep=1.0|elytra=1.0|regen=1.0", "minecraft:the_end|hunger=true|cravings=true|preferred=|required=|passive=1.5|postDragonPassive=0.45|sleep=1.0|elytra=1.0|regen=1.0", "cobblemonraiddens:raid_dimension|passive=0.5|regen=2.0"]
 
 	[compat.farmersdelight]
 		compatDebugMode = false
@@ -503,10 +503,10 @@
 		grantOnSleep = 0
 		# Default: 0
 		# Range: 0 ~ 100
-		grantPerCompletedCraving = 0
+		grantPerCompletedCraving = 1
 		# Default: 0
 		# Range: 0 ~ 100
-		grantOnCompletedList = 0
+		grantOnCompletedList = 1
 		# Default: 0
 		# Range: 0 ~ 1000
 		grantEveryNCompletedCravings = 0
@@ -522,18 +522,18 @@
 		jackpotRequiresProgress = false
 		jackpotProgressiveChance = false
 		grantDailyMorningEnabled = true
-		grantOnStreakEnabled = false
+		grantOnStreakEnabled = true
 		grantOnSleepEnabled = false
-		grantPerCompletedCravingEnabled = false
-		grantOnCompletedListEnabled = false
+		grantPerCompletedCravingEnabled = true
+		grantOnCompletedListEnabled = true
 		grantEveryNCompletedCravingsEnabled = false
 		grantOnFirstFoodEatenEnabled = false
 		grantOnFoodDiscoveredEnabled = false
 
 [craving_progress_rewards]
-	enabled = false
+	enabled = true
 	attributeBonuses = ["1|minecraft:generic.movement_speed=0.025:add_multiplied_total", "2|minecraft:generic.movement_speed=0.05:add_multiplied_total"]
-	potionEffects = ["2|minecraft:haste=0"]
+	potionEffects = ["3|minecraft:haste=0"]
 
 [player_eating]
 	enabled = false

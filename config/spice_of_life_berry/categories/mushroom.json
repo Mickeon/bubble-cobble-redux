@@ -1,19 +1,20 @@
-                {
-                  "id": "mushroom",
-                  "enabled": true,
-                  "name": {
-                    "en_us": "Mushroom Food",
-                    "ru_ru": "Грибная еда"
-                  },
-                  "description": {
-                    "en_us": "Mushroom-based meals.",
-                    "ru_ru": "Еда на основе грибов."
-                  },
-                  "iconItem": "minecraft:mushroom_stew",
-                  "color": "#9B7A58",
-                  "tags": [
-                    "#c:foods/mushroom",
-                    "#c:mushrooms",
-                    "#forge:mushrooms"
-                  ]
-                }
+{
+  "id": "mushroom",
+  "enabled": true,
+  "name": {
+    "en_us": "Mushroom Food"
+  },
+  "description": {
+    "en_us": "Mushroom-based meals."
+  },
+  "iconItem": "minecraft:mushroom_stew",
+  "color": "#9B7A58",
+  "item": [
+    "biomeswevegone:cooked_white_puffball_cap",
+    "biomeswevegone:white_puffball_cap",
+    "biomeswevegone:white_puffball_stew"
+  ],
+  "tags": [
+    "#c:foods/mushroom"
+  ]
+}

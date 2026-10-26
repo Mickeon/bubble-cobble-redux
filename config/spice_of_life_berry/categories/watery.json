@@ -2,12 +2,10 @@
   "id": "watery",
   "enabled": true,
   "name": {
-    "en_us": "Watery Food",
-    "ru_ru": "Водная еда"
+    "en_us": "Watery Food"
   },
   "description": {
-    "en_us": "Soups, drinks and other watery meals.",
-    "ru_ru": "Супы, напитки и другая жидкая еда."
+    "en_us": "Soups, drinks and other watery meals."
   },
   "iconItem": "minecraft:water_bucket",
   "color": "#5FA8E8",
@@ -20,9 +18,7 @@
   ],
   "tags": [
     "#c:foods/soup",
-    "#c:foods/drink",
-    "#forge:foods/soup",
-    "#forge:foods/drink"
+    "#c:foods/drink"
   ],
   "matchRules": [
     {
@@ -31,8 +27,7 @@
       "type": "use_animation",
       "value": "DRINK",
       "description": {
-        "en_us": "Automatically includes edible items that use the drink animation.",
-        "ru_ru": "Автоматически включает съедобные предметы с анимацией питья."
+        "en_us": "Automatically includes edible items that use the drink animation."
       }
     },
     {
@@ -41,19 +36,7 @@
       "type": "returns_item",
       "item": "minecraft:glass_bottle",
       "description": {
-        "en_us": "Automatically includes edible items that leave a glass bottle after use.",
-        "ru_ru": "Автоматически включает еду, после которой остаётся стеклянная бутылочка."
-      }
-    },
-    {
-      "id": "example_mod_returns_item",
-      "enabled": false,
-      "type": "mod_returns_item",
-      "mod": "@modid",
-      "item": "minecraft:bowl",
-      "description": {
-        "en_us": "Editable example: food from @modid that leaves minecraft:bowl.",
-        "ru_ru": "Редактируемый пример: еда из @modid, после которой остаётся minecraft:bowl."
+        "en_us": "Automatically includes edible items that leave a glass bottle after use."
       }
     }
   ]

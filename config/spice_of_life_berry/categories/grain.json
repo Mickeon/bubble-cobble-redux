@@ -2,12 +2,10 @@
   "id": "grain",
   "enabled": true,
   "name": {
-    "en_us": "Grain Food",
-    "ru_ru": "Зерновая еда"
+    "en_us": "Grain Food"
   },
   "description": {
-    "en_us": "Bread, baked grain meals and similar food.",
-    "ru_ru": "Хлеб, выпечка и похожая зерновая еда."
+    "en_us": "Bread, baked grain meals and similar food."
   },
   "iconItem": "minecraft:bread",
   "color": "#D8B45A",
@@ -18,7 +16,6 @@
     "minecraft:pumpkin_pie"
   ],
   "tags": [
-    "#c:foods/bread",
-    "#forge:foods/bread"
+    "#c:foods/bread"
   ]
 }

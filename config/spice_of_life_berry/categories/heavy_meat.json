@@ -2,12 +2,10 @@
   "id": "heavy_meat",
   "enabled": true,
   "name": {
-    "en_us": "Heavy Meat",
-    "ru_ru": "Тяжёлая мясная еда"
+    "en_us": "Heavy Meat"
   },
   "description": {
-    "en_us": "Large filling meat meals.",
-    "ru_ru": "Сытная тяжёлая мясная еда."
+    "en_us": "Large filling meat meals."
   },
   "iconItem": "minecraft:cooked_beef",
   "color": "#C45A4A",
@@ -15,10 +13,25 @@
   "items": [
     "minecraft:cooked_beef",
     "minecraft:cooked_porkchop",
-    "minecraft:cooked_mutton"
+    "minecraft:cooked_mutton",
+    "mynethersdelight:hotdog",
+    "mynethersdelight:hotdog_with_mixed_salad",
+    "mynethersdelight:hotdog_with_nether_salad",
+    "mynethersdelight:nether_burger",
+    "mynethersdelight:plate_of_stuffed_hoglin",
+    "mynethersdelight:plate_of_stuffed_hoglin_snout",
+    "mynethersdelight:plate_of_stuffed_hoglin_ham",
+    "mynethersdelight:red_loin_on_a_stick",
+    "mynethersdelight:roast_ear",
+    "mynethersdelight:hot_wings",
+    "mynethersdelight:hot_wings_bucket",
+    "brewinandchewin:kimchi",
+    "cobblemon:smoked_tail_curry",
+    "farmersdelight:chicken_sandwich",
+    "farmersdelight:barbecue_stick"
   ],
   "tags": [
     "#c:foods/cooked_meat",
-    "#forge:foods/cooked_meat"
+    "origins:meat"
   ]
 }

@@ -1,0 +1,56 @@
+{
+  "id": "monster",
+  "enabled": true,
+  "name": {
+    "en_us": "Monster"
+  },
+  "description": {
+    "en_us": "Prepared monster meat, such as from Spiders, Bats, Ghasts"
+  },
+  "iconItem": "minersdelight:insect_sandwich",
+  "items": [
+    "brewinandchewin:horror_lasagna",
+    "minersdelight:bat_cookie",
+    "minersdelight:bat_soup",
+    "minersdelight:bat_rolls",
+    "minersdelight:bat_soup_cup",
+    "minersdelight:crunchy_bar",
+    "minersdelight:golden_nutritional_bar",
+    "minersdelight:improvised_barbecue_stick",
+    "minersdelight:insect_sandwich",
+    "minersdelight:insect_stew",
+    "minersdelight:insect_stew_cup",
+    "minersdelight:insect_wrap",
+    "minersdelight:nutritional_bar",
+    "minersdelight:plate_of_glazed_arachnid_limbs",
+    "minersdelight:seasoned_arthropods",
+    "minersdelight:silverfish_eggs",
+    "minersdelight:smoked_bat_wing",
+    "minersdelight:weird_caviar",
+    "mynethersdelight:bleeding_tartar",
+    "mynethersdelight:crimson_stroganoff",
+    "mynethersdelight:dried_ghast_with_milk",
+    "mynethersdelight:fries_ghasta",
+    "mynethersdelight:ghast_dough",
+    "mynethersdelight:ghast_salad",
+    "mynethersdelight:ghast_sourdough",
+    "mynethersdelight:giant_takoyaki",
+    "mynethersdelight:plate_of_cold_striderloaf",
+    "mynethersdelight:plate_of_ghasta_with_cream",
+    "mynethersdelight:plate_of_striderloaf",
+    "mynethersdelight:sizzling_pudding",
+    "mynethersdelight:slices_of_bread",
+    "mynethersdelight:strider_with_grilled_fungus",
+    "mynethersdelight:strider_stew",
+    "mynethersdelight:spicy_cotton",
+    "mynethersdelight:spicy_noodle_soup",
+    "mynethersdelight:spicy_skewer",
+    "mynethersdelight:tear_popsicle",
+    "mynethersdelight:toasts",
+    "mynethersdelight:twisted_ghasta"
+  ],
+  "tags": [
+    "#minersdelight:cooked_insect_meat"
+  ],
+  "matchRules": []
+}

@@ -30,7 +30,7 @@
 		hudOffsetY = -45
 		# Default: 0
 		# Range: -10000 ~ 10000
-		inventoryOffsetX = 102
+		inventoryOffsetX = 100
 		# Default: -21
 		# Range: -10000 ~ 10000
 		inventoryOffsetY = -9
@@ -63,7 +63,7 @@
 		hudIconSizeSevenOrEight = 8
 		inventoryIconSizeOne = 16
 		inventoryIconSizeTwo = 16
-		inventoryIconSizeThree = 17
+		inventoryIconSizeThree = 16
 		inventoryIconSizeFour = 16
 		inventoryIconSizeFiveOrSix = 14
 		inventoryIconSizeSevenOrEight = 12
@@ -74,28 +74,28 @@
 			enableCategoryMiniCloud = true
 			# Default: 60
 			# Range: -10000 ~ 10000
-			hudCategoryOffsetX = -14
+			hudCategoryOffsetX = -16
 			# Default: -1
 			# Range: -10000 ~ 10000
 			hudCategoryOffsetY = -4
 			# Default: 66
 			# Range: -10000 ~ 10000
-			hudCategoryIconOffsetX = -8
+			hudCategoryIconOffsetX = -10
 			# Default: 5
 			# Range: -10000 ~ 10000
 			hudCategoryIconOffsetY = 2
 			# Default: 92
 			# Range: -10000 ~ 10000
-			inventoryCategoryOffsetX = -44
+			inventoryCategoryOffsetX = 21
 			# Default: 4
 			# Range: -10000 ~ 10000
-			inventoryCategoryOffsetY = -14
+			inventoryCategoryOffsetY = -37
 			# Default: 98
 			# Range: -10000 ~ 10000
-			inventoryCategoryIconOffsetX = -38
+			inventoryCategoryIconOffsetX = 27
 			# Default: 10
 			# Range: -10000 ~ 10000
-			inventoryCategoryIconOffsetY = 9
+			inventoryCategoryIconOffsetY = -13
 			# Default: 1.0
 			# Range: 0.05 ~ 20.0
 			categoryMiniCloudScale = 1.0
@@ -145,7 +145,7 @@
 			minHudIconSize = 7
 			# Default: 20
 			# Range: 1 ~ 64
-			baseInventoryIconSize = 20
+			baseInventoryIconSize = 16
 			# Default: 1
 			# Range: 0 ~ 32
 			inventoryIconSizeReductionPerExtraItem = 1
@@ -155,9 +155,9 @@
 			baseHudIconSpacing = 1
 			hudSpacingReductionWhenManyItems = 1
 			minHudIconSpacing = -2
-			baseInventoryIconSpacing = 2
+			baseInventoryIconSpacing = -3
 			inventorySpacingReductionWhenManyItems = 1
-			minInventoryIconSpacing = -2
+			minInventoryIconSpacing = -3
 			advancedHudIconSizeOverrides = []
 			advancedInventoryIconSizeOverrides = []
 			advancedHudIconSpacingOverrides = []
@@ -172,12 +172,12 @@
 			inventoryItemsYOffset = -12
 
 		[compat.visuals.streak_layout]
-			inventoryStreakXOffset = 120
-			inventoryStreakYOffset = 18
-			inventoryStreakSpacing = 3
+			inventoryStreakXOffset = 104
+			inventoryStreakYOffset = 20
+			inventoryStreakSpacing = 1
 			# Default: 0.7395189639222941
 			# Range: 0.05 ~ 20.0
-			inventoryStreakScale = 1.275045020952776
+			inventoryStreakScale = 1.0
 
 		[compat.visuals.hud_cloud_anchor]
 			anchorToHotbar = true
@@ -189,7 +189,7 @@
 			extraYOffsetWhenBarsVisible = 8
 
 		[compat.visuals.hud_animations]
-			enabled = true
+			enabled = false
 			idleAnimationEnabled = false
 			# Default: 0.5
 			# Range: 0.0 ~ 8.0
