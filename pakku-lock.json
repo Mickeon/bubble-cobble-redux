@@ -9719,45 +9719,6 @@
             ]
         },
         {
-            "pakku_id": "U35ZwAVmYTnsLR0c",
-            "type": "MOD",
-            "side": "BOTH",
-            "slug": {
-                "modrinth": "spice-of-life-onion"
-            },
-            "name": {
-                "modrinth": "Spice of Life Onion"
-            },
-            "id": {
-                "modrinth": "eHGYGKJz"
-            },
-            "files": [
-                {
-                    "type": "modrinth",
-                    "file_name": "Spice of Life Onion_NEOFORGE_v1.5.6_mc1.21.1.jar",
-                    "mc_versions": [
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/eHGYGKJz/versions/4YRKCovn/Spice of Life Onion_NEOFORGE_v1.5.6_mc1.21.1.jar",
-                    "id": "4YRKCovn",
-                    "parent_id": "eHGYGKJz",
-                    "hashes": {
-                        "sha512": "15a08552a68e75e692a13e7ac82586f877991eb1fad2f40b06e1304c5f5d7aa67fa00f704448a80a4113ecba79b262bda131f3c2043851228befeaa0025f8c2f",
-                        "sha1": "93f9d02022ef2804cc24c23fe27fa392c467e99c"
-                    },
-                    "required_dependencies": [
-                        "OsZiaDHq"
-                    ],
-                    "size": 292176,
-                    "date_published": "2026-02-25T07:40:41.140651Z"
-                }
-            ]
-        },
-        {
             "pakku_id": "nNmWrxPKm6oLV4jI",
             "type": "MOD",
             "side": "BOTH",

@@ -87,7 +87,6 @@ ItemEvents.modifyTooltips(event => {
 	])
 	add_shift_info(event, "supplementaries:lunch_basket", [
 		"Consume food comfortably in the palm of your hand!.",
-		"More nifty than a Foodbag, but you gotta choose.",
 		"Can be dragged in your inventory like a Bundle.",
 		"",
 		"When the Basket is closed:",

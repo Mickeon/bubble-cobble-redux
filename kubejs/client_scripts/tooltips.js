@@ -1,5 +1,5 @@
 // priority: 100
-// High priority to run before solonion.js, and because it also contains common constants for tooltips.
+// High priority because it also contains common constants for tooltips.
 
 let $Move = Java.loadClass("com.cobblemon.mod.common.api.moves.Move")
 let $Moves = Java.loadClass("com.cobblemon.mod.common.api.moves.Moves")

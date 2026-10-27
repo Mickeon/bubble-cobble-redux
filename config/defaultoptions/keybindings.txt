@@ -56,7 +56,6 @@ key_key.dynamic_fps.toggle_disabled:key.keyboard.unknown:
 key_key.sophisticateditemactions.item_highlight:key.keyboard.semicolon:
 key_key.sophisticateditemactions.deposit_item:key.keyboard.apostrophe:
 key_key.sophisticateditemactions.restock_item:key.keyboard.backslash:
-key_key.solonion.open_food_book:key.keyboard.unknown:
 key_key.modmenu.open_menu:key.keyboard.insert:
 key_key.push_to_talk:key.keyboard.v:
 key_key.whisper:key.keyboard.tab:

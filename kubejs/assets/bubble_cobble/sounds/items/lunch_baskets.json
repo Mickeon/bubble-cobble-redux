@@ -1,9 +1,6 @@
 {
   "keys": [
-    "supplementaries:lunch_basket",
-    "solonion:golden_lunchbox",
-    "solonion:lunchbag",
-    "solonion:lunchbox"
+    "supplementaries:lunch_basket"
   ],
   "pitch": 1.5,
   "soundEvent": "supplementaries:item.lunch_basket.insert",

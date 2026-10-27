@@ -1,8 +1,7 @@
 {
   "keys": [
     "sophisticatedbackpacks:backpack",
-    "sophisticatedbackpackscreateintegration:mounted_backpack",
-	  "solonion:food_container"
+    "sophisticatedbackpackscreateintegration:mounted_backpack"
   ],
   "soundEvent": "supplementaries:block.sack.open",
   "volume": 0.25,
