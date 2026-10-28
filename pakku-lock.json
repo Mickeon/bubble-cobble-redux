@@ -3636,7 +3636,11 @@
             ]
         },
         {
-            "pakku_id": "g9ZumLTDtBPY05Ys",
+            "pakku_id": "hTkgWS4ALcYxgLKL",
+            "pakku_links": [
+                "R0tCc41VD0zdGop2",
+                "8E69YXG6POqqwTvF"
+            ],
             "type": "RESOURCE_PACK",
             "side": "CLIENT",
             "slug": {
@@ -3660,19 +3664,19 @@
                         "minecraft"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/Va3BanZa/versions/MAumPyhV/E19 Cobblemon Minimap Icons.zip",
-                    "id": "MAumPyhV",
+                    "url": "https://cdn.modrinth.com/data/Va3BanZa/versions/XgQAURDl/E19 Cobblemon Minimap Icons.zip",
+                    "id": "XgQAURDl",
                     "parent_id": "Va3BanZa",
                     "hashes": {
-                        "sha512": "f9eff4c718818a2b030aa7b6b86b73f384f869cb39fe1e4c189c07f8feb7aedd717a33d966face570ae89b67ee0c28c35fb611883b882677eecf0fa041b9088f",
-                        "sha1": "77813d38002b43c9c243d694728479bd3879cf86"
+                        "sha512": "1c420b8b93b21430b228fecbab52129b1f44307d99a38304e22acf25764ad7069d2647f253c19596e251baa477b5b8e87e84415c8b45a837f86a40359818bd42",
+                        "sha1": "070ccf1efe1452d4e59b68c45051a8dcd0e9b5f6"
                     },
                     "required_dependencies": [
                         "1bokaNcj",
                         "MdwFAVRL"
                     ],
-                    "size": 23270833,
-                    "date_published": "2026-10-11T10:52:33.281540Z"
+                    "size": 23411485,
+                    "date_published": "2026-10-25T10:17:46.910306Z"
                 }
             ]
         },
