@@ -198,7 +198,7 @@ ServerEvents.tags("block", event => {
 	event.add("minecraft:mineable/shear", "farmersdelight:rope")
 	event.add("herbalbrews:allows_cooking", "mynethersdelight:nether_stove")
 	event.add("amendments:stairs_carpets", "#bubble_cobble:coinstacks", "cobblemon:tatami_mat", "minecraft:snow", "supplementaries:ash")
-	event.add("amendments:bubble_column_passable", "create:fan_transparent")
+	event.add("amendments:bubble_column_passable", "#create:fan_transparent")
 
 	// Shared in a bunch of places.
 	event.add("bubble_cobble:coinstacks", /^createdeco:.*coinstack$/)
