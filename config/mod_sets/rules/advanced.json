@@ -11,6 +11,14 @@
       }
     },
     {
+      "text": "🗺 Map",
+      "description": ["",{"color":"blue","text":"Xaero's Map","clickEvent":{"action":"open_url","value":"https://modrinth.com/mod/xaeros-world-map"}},", Minimap, and anything to do with it.\n\nDisable if the ",{"color":"dark_aqua","text":"CPU"}," cannot keep up, although I ",{"italic":true,"text":"seriously"}," doubt you'd want to, as ",{"color":"dark_aqua","text":"you won't be able to join the modpack's server"},"!"],
+      "controller": {
+        "type": "boolean",
+        "id": "xaero_map_set"
+      }
+    },
+    {
       "text": {"text": "⚠ Danger Zone ⚠", "color": "red", "bold": true},
       "description": "That sign can't stop me, 'cause I can't read.",
       "controller": {

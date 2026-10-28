@@ -83,14 +83,6 @@
             }
           },
           {
-            "text": "🗺 Map",
-            "description": ["",{"color":"blue","text":"Xaero's Map","clickEvent":{"action":"open_url","value":"https://modrinth.com/mod/xaeros-world-map"}},", Minimap, and anything to do with it.\n\nDisable if the ",{"color":"dark_aqua","text":"CPU"}," cannot keep up, although I ",{"italic":true,"text":"seriously"}," doubt you'd want to."],
-            "controller": {
-              "type": "boolean",
-              "id": "xaero_map_set"
-            }
-          },
-          {
             "text": "🔦 Dynamic Lights",
             "description": ["",{"color":"#76deea","text":"Illuminates"}," the surroundings in many occasions, such as when holding ",{"color":"#76deea","text":"Torches"},".\n\nDisable if the ",{"color":"dark_aqua","text":"CPU"}," cannot keep up.\nRemember, the lighting's quality can be changed in the ",{"color":"#76deea","text":"Video Settings"}," without needing to disable the mod."],
             "controller": {
