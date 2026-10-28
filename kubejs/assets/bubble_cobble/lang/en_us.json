@@ -14,5 +14,12 @@
 	"key.ezactions.bundle.toggles...": "Radial Menu: Toggles...",
 	"enchantment.bubble_cobble.pattern.description": "Blocks are placed in a consistent, grid-like pattern.",
 	"enchantment.bubble_cobble.sequence.description": "Blocks are placed in the order they appear in the hotbar.",
-	"enchantment.bubble_cobble.soulbound.description": "On death, retains the item and reduces how much durability is lost."
+	"enchantment.bubble_cobble.soulbound.description": "On death, retains the item and reduces how much durability is lost.",
+	"modmenu.nameTranslation._decoration": " Decoration",
+	"modmenu.nameTranslation._quality_of_life": " Quality of Life",
+	"modmenu.nameTranslation._visuals_and_sound": " Visuals and Sound",
+	"modmenu.nameTranslation._development": " Development",
+	"modmenu.nameTranslation._world_generation": " World Generation",
+	"modmenu.nameTranslation._optimization": " Optimization",
+	"modmenu.nameTranslation._management": " Management"
 }

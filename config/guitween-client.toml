@@ -202,7 +202,7 @@ style = "DEFAULT"
 	# Default: 0.20000000298023224
 	# Range: 0.0 ~ 1000.0
 	useStrength = 0.1
-	enableSelectMove = true
+	enableSelectMove = false
 	enableArmor = true
 	# Default: 4.0
 	# Range: 0.0 ~ 1000.0

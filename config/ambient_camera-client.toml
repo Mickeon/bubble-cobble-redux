@@ -2,7 +2,7 @@
 	#Master switch for Ambient Camera.
 	enabled = true
 	#Seconds without keyboard or mouse input before the cinematic camera starts.
-	# Default: 30
+	# Default: 300
 	# Range: 5 ~ 3600
 	idleSeconds = 300
 	#Hide the HUD while Ambient Camera is active. The previous HUD state is restored on exit.
@@ -15,8 +15,8 @@
 	shotDurationSeconds = 12.0
 	#Cut instantly to the next camera angle instead of flying across the scene.
 	hardCuts = false
-	#Transition effect between shots: 0 none, 1 fade to black, 2 fade to white, 3 horizontal wipe, 4 vertical wipe, 5 cross dissolve, 6 random vertical wipe, 7 random horizontal wipe.
-	transitionEffect = 5
+	#Single transition effect and fallback for older configurations. The checkmark list uses this value when random transitions are disabled.
+	transitionEffect = 18
 	#Seconds used for each half of the transition: cover and reveal.
 	# Default: 1.0
 	# Range: 0.1 ~ 3.0
@@ -55,3 +55,17 @@
 	# Default: 0.25
 	# Range: 0.05 ~ 1.0
 	collisionPadding = 0.25
+	#Show black cinematic bars at the top and bottom while Ambient Camera is active.
+	showCinematicBars = true
+	#Height of each cinematic bar as a percentage of the screen height. 13 percent approximates 2.39:1 on a 16:9 display.
+	# Default: 13
+	# Range: 0 ~ 25
+	cinematicBarPercent = 3
+	#When enabled, choose one of the checked transition effects at random for each shot change.
+	randomTransitionEffects = true
+	#Internal checkmark selection as a bit mask for transition effects 0 through 18. Zero inherits transitionEffect from an older configuration.
+	# Default: 0
+	# Range: 0 ~ 524287
+	selectedTransitionEffects = 524282
+	#Count inactivity on the pause menu only while connected to a remote multiplayer server. Never start from the pause menu in singleplayer.
+	idleWhileMultiplayerPause = true

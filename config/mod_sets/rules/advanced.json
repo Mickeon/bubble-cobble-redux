@@ -118,6 +118,19 @@
                 "sliceanddice"
               ]
             }
+          },
+          {
+            "text": "KubeJS",
+            "description": "Mods focused purely on playing videos from the game.",
+            "controller": {
+              "type": "mods_group",
+              "ids": [
+                "watervision",
+                "waterframes",
+                "watermedia",
+                "watermedia_youtube_plugin"
+              ]
+            }
           }
         ]
       }

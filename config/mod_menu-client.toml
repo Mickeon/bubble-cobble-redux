@@ -70,7 +70,16 @@ mod_badges = [
 	"ferritecore=client",
 	"yet_another_config_lib_v3=library",
 	"colorwheel=client",
-	"lodestone=library"
+	"lodestone=library",
+	"immersive_furniture=experimental",
+	"sleep_tight=experimental",
+	"crittersandcompanions=experimental",
+	"spice_of_life_berry=experimental",
+	"kiwi=library",
+	"sound_physics_remastered=client",
+	"smoothskies=client",
+	"tipsmod=client",
+	"guitween=client"
 ]
 #Make mods apear under another mod in this format "parenModId=childId1, childId2", add ! at the beginning of parentId to prevent creating a fake parent
 mod_parents = [
@@ -116,14 +125,17 @@ mod_parents = [
 	"!sophisticatedbackpacks=accessories, curios, sophisticatedbackpackscreateintegration, sophisticatedcore, sophisticateditemactions, sophisticatedfix, sophisticatedsorter",
 	"!sophisticatedstorage=sophisticatedcore, sophisticateditemactions, sophisticatedstoragecreateintegration, sophisticatedfix, sophisticatedsorter",
 	"!xaerominimap=maplink, xaerotrainmap, xaeroworldmap, xaerolib",
-	"!copperagebackport=cab_registry_compat",
-	"!emi=emi_create_schematics, uei, emi_loot, emiffect, remi, toomanyrecipeviewers, emirecipesharing, emihideenchantmentfromrepairtab",
+	"!emi=emi_create_schematics, uei, emi_loot, emiffect, remi, toomanyrecipeviewers, emirecipesharing, emihideenchantmentfromrepairtab, jei",
 	"_optimization=achiopt, asynclogger, c2me, dynamic_fps, entityculling, ferritecore, immediatelyfast, immersive_optimization, letmedespawn, lithium, modernfix, particle_core, resourcetrimmer, saturn, servercore, sodium",
 	"!armorstatues=statuemenus",
 	"_quality_of_life=advancements_reloaded, appleskin, armorstatues, betterf3, bridgingmod, carryon, cleanertooltips, clientdoubledoors, clutternomore, constructionstick, controlling, craftingtweaks, crawl, drizzleproof, explorerscompass, extendedhotbar, firespreadtweaks, gag, gravestone, treechop, invmove, jade, justhammers, mendingrework, mousetweaks, naturescompass, nbtedit, notenoughcrashes, one_click_join, persistentcreativeinventory, persistentinventorysearch, polymorph, rrls, searchstats, smalldoubling, sneaky_link, sortedcreativetabs, usefulspyglass, via_romana, yo_hooks, easybuilding",
-	"_visuals_and_sound=smoothskies, simplefog, advancementplaques, arrowtrails, beb, beautiful_potions, chunksfadein, colorfulhearts, effectdescriptions, emojis, enchdesc, guitween, highly_customizable_damage_numbers, item_interactions_mod, lambdynlights, more_sounds, notenoughanimations, particlerain, particular, seasonalambiance, sound_physics_remastered, sounds, tipsmod",
+	"_visuals_and_sound=smoothskies, simplefog, advancementplaques, arrowtrails, beb, beautiful_potions, chunksfadein, colorfulhearts, effectdescriptions, emojis, enchdesc, guitween, highly_customizable_damage_numbers, item_interactions_mod, lambdynlights, more_sounds, notenoughanimations, particlerain, particular, seasonalambiance, sound_physics_remastered, sounds, tipsmod, watut",
 	"_world_generation=awesomedungeon, awesomedungeonocean, biomesoplenty, mr_dungeons_andtaverns, mns, mvs, mss, biomeswevegone, repurposed_structures, sparsestructures, temperaturebands, the_bumblezone, underground_bunkers, undergroundworlds, bettercaves, yungscavebiomes, yungsextras",
-	"!waterframes=watermedia, watermedia_youtube_plugin, watervision"
+	"!waterframes=watermedia, watermedia_youtube_plugin, watervision",
+	"enhancedcelestials2core=enhancedcelestials2defaultlunarevents",
+	"ribbits=yungsapi, geckolib",
+	"controlling=searchables",
+	"mod_menu=preloading_tricks"
 ]
 
 [main]

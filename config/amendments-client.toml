@@ -134,4 +134,10 @@
 	#Makes the selected hotbar slot slide to its new position. Higher is faster, 0 for vanilla behavior
 	# Default: 2.5
 	# Range: 0.0 ~ 5.0
-	hotbar_slot_animation_speed = 2.5
+	hotbar_slot_animation_speed = 3.0
+	#If the hotbar slot animation wraps around the edges
+	hotbar_slot_animation_wrap = true
+
+[buckets]
+	#Axolotl buckets show the color of the axolotl inside
+	axolotl_variants = true

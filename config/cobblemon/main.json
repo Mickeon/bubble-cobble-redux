@@ -1,5 +1,5 @@
 {
-  "lastSavedVersion": "1.8.2",
+  "lastSavedVersion": "1.8.3",
   "maxPokemonLevel": 100,
   "maxPokemonFriendship": 255,
   "announceDropItems": true,
@@ -39,6 +39,7 @@
   "luckyEggMultiplier": 1.5,
   "allowSpectating": true,
   "experienceMultiplier": 2.0,
+  "predationChance": 0.05,
   "pokemonPerChunk": 0.5,
   "pokeSnackPokemonPerChunk": 2.0,
   "passiveStatuses": {
