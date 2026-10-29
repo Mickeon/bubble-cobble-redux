@@ -136,7 +136,6 @@
 /config/libtooltips-*
 /config/fancytabsections-*
 /config/animatedhearts-client.toml
-/config/offgrid/common.toml
 /config/shepard_sound_streaks-client.toml
 /fieldguide_cache/
 *lightspeed*

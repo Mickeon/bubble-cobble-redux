@@ -6774,6 +6774,44 @@
             ]
         },
         {
+            "pakku_id": "wFvCDBSGs0Nx6efZ",
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "modrinth": "offgrid"
+            },
+            "name": {
+                "modrinth": "Offgrid"
+            },
+            "id": {
+                "modrinth": "vvgTqF0n"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "offgrid-neoforge-1.0.3+1.21.1.jar",
+                    "mc_versions": [
+                        "1.21",
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/vvgTqF0n/versions/isuFnzyQ/offgrid-neoforge-1.0.3+1.21.1.jar",
+                    "id": "isuFnzyQ",
+                    "parent_id": "vvgTqF0n",
+                    "hashes": {
+                        "sha512": "a890383387d22270e44d71d011769400b05b5b706c9cb13b515ca804bae9e901a3d093eccd5f75508ac082081f3f64478f59e3c030cd56a16a36324eb3104852",
+                        "sha1": "369b5f1d58bee1d9418f08d1698487042ebc8e6f"
+                    },
+                    "required_dependencies": [],
+                    "size": 776253,
+                    "date_published": "2026-10-27T21:34:26.540442Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "Wfc3ACl6IADVljWm",
             "type": "MOD",
             "side": "BOTH",

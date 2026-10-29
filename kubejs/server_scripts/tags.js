@@ -240,6 +240,156 @@ ServerEvents.tags("block", event => {
 		event.add("minecraft:doors", "urban_decor:stainless_steel_door") // Reported: https://github.com/Yirmiri/Urban-Decor/issues/8.
 		event.add("minecraft:trapdoors", "urban_decor:stainless_steel_trapdoor")
 	}
+
+	if (Platform.isLoaded("offgrid")) {
+		event.add("offgrid:blockloggable",
+			"#arts_and_crafts:paintable/plaster",
+			"urban_decor:bathtub",
+			"urban_decor:dark_bathtub",
+		)
+		event.add("offgrid:can_blocklog",
+			"supplementaries:stick",
+			"supplementaries:blaze_rod",
+			"supplementaries:breeze_rod",
+			"supplementaries:wicker_fence",
+			"urban_decor:steel_pipe",
+		)
+
+		event.add("bubble_cobble:offgrid/carpet_like",
+			"#bubble_cobble:coinstacks",
+			"#cobblemon:mint_leaf_litters",
+			/^urban_decor:.*_towel$/,
+			"cobblemon:tatami_mat",
+		)
+		event.add("bubble_cobble:offgrid/wall_torch_like",
+			"#cobblemon:plaques",
+			"cobblemon:cleanse_tag",
+			"cobblemon:spell_tag",
+			"cobblemon:blunder_policy",
+			"cobblemon:weakness_policy",
+			"cobblemon:ring_target",
+			/^urban_decor:.*picture_frame/, // Only works for wall versions for some reason.
+			/^urban_decor:towel_bar/,
+			"urban_decor:toilet_paper",
+			"urban_decor:wall_clock",
+			"urban_decor:wall_satellite_dish",
+			"urban_decor:shower",
+			"urban_decor:radiator",
+
+			// "urban_decor:faucet", // Does not work.
+			// "urban_decor:wall_microwave", // Does not work properly.
+		)
+		event.add("offgrid:can_overlay",
+			"#bubble_cobble:offgrid/carpet_like",
+			"#bubble_cobble:offgrid/wall_torch_like",
+
+			"#biomeswevegone:glow_bottle",
+
+			"#cobblemon:campfire_pots",
+			"cobblemon:poke_cake",
+
+			"cobblemon:antidote",
+			"cobblemon:awakening",
+			"cobblemon:bright_powder",
+			"cobblemon:burn_heal",
+			"cobblemon:calcium",
+			"cobblemon:carbos",
+			"cobblemon:chipped_pot",
+			"cobblemon:cracked_pot",
+			"cobblemon:damp_rock",
+			"cobblemon:destiny_knot",
+			"cobblemon:dire_hit",
+			"cobblemon:dubious_disc",
+			"cobblemon:electirizer",
+			"cobblemon:elixir",
+			"cobblemon:ether",
+			"cobblemon:flame_orb",
+			"cobblemon:full_heal",
+			"cobblemon:full_restore",
+			"cobblemon:galarica_cuff",
+			"cobblemon:galarica_wreath",
+			"cobblemon:guard_spec",
+			"cobblemon:heat_rock",
+			"cobblemon:hp_up",
+			"cobblemon:hyper_potion",
+			"cobblemon:ice_heal",
+			"cobblemon:icy_rock",
+			"cobblemon:iron",
+			"cobblemon:iron_ball",
+			"cobblemon:kings_rock",
+			"cobblemon:life_orb",
+			"cobblemon:light_ball",
+			"cobblemon:loaded_dice",
+			"cobblemon:luminous_moss",
+			"cobblemon:magmarizer",
+			"cobblemon:magnet",
+			"cobblemon:masterpiece_teacup",
+			"cobblemon:max_elixir",
+			"cobblemon:max_ether",
+			"cobblemon:max_potion",
+			"cobblemon:medicinal_brew",
+			"cobblemon:metal_coat",
+			"cobblemon:metal_powder",
+			"cobblemon:moomoo_milk",
+			"cobblemon:never_melt_ice",
+			"cobblemon:paralyze_heal",
+			"cobblemon:potion",
+			"cobblemon:pp_max",
+			"cobblemon:pp_up",
+			"cobblemon:protein",
+			"cobblemon:quick_powder",
+			"cobblemon:relic_coin_pouch",
+			"cobblemon:sachet",
+			"cobblemon:scope_lens",
+			"cobblemon:smoke_ball",
+			"cobblemon:smooth_rock",
+			"cobblemon:soft_sand",
+			"cobblemon:super_potion",
+			"cobblemon:terrain_extender",
+			"cobblemon:throat_spray",
+			"cobblemon:toxic_orb",
+			"cobblemon:unremarkable_teacup",
+			"cobblemon:upgrade",
+			"cobblemon:wide_lens",
+			"cobblemon:x_accuracy",
+			"cobblemon:x_attack",
+			"cobblemon:x_defence",
+			"cobblemon:x_special_attack",
+			"cobblemon:x_special_defence",
+			"cobblemon:x_speed",
+			"cobblemon:zinc",
+			"cobblemon:zoom_lens",
+
+			"#farmersdelight:feasts",
+			"mynethersdelight:powdery_torch",
+			"snowyspirit:snow_globe",
+
+			"urban_decor:stove",
+			"urban_decor:doll",
+			"urban_decor:cash_register",
+			"urban_decor:dark_cash_register",
+			"urban_decor:stapler",
+			"urban_decor:trash_can",
+			"urban_decor:satellite_dish",
+			"urban_decor:turbine",
+			"urban_decor:air_conditioner",
+			"urban_decor:desk_fan",
+			"urban_decor:toaster",
+
+			// "bits_n_bobs:headlamp", // Crashes the game, can't join world.
+			// "displaydelight:plated_cabbage_rolls", // Technically works, but Display Delight does some mendling.
+			// "urban_decor:sewing_machine", // Does not work properly.
+			// "urban_decor:microwave", // Does not work porperly.
+		)
+		event.add("offgrid:layers",
+			"#bubble_cobble:offgrid/carpet_like",
+		)
+		event.add("offgrid:facing_attaching",
+			"#bubble_cobble:offgrid/wall_torch_like",
+			"mynethersdelight:wall_powdery_torch",
+		)
+	}
+
 })
 
 ServerEvents.tags("fluid", event => {
@@ -256,6 +406,11 @@ ServerEvents.tags("entity_type", event => {
 	event.add("artifacts:creepers", "undergroundworlds:icy_creeper")
 	event.add("create:ignore_seat", "minecraft:bee")
 	event.add("farmersdelight:dog_food_users", "cobblemon:pokemon", "crittersandcompanions:ferret")
+
+	if (Platform.isLoaded("offgrid")) {
+		event.add("offgrid:surface_attaching", "immersive_paintings:glow_graffiti", "immersive_paintings:glow_painting", "immersive_paintings:graffiti", "immersive_paintings:painting", "biomeswevegone:wreath")
+	}
+
 })
 
 ServerEvents.tags("damage_type", event => {
