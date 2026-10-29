@@ -133,7 +133,6 @@
 /config/starcatcher-*
 /config/selling_bin-*
 /config/tinymultiblocklib-*
-/config/libtooltips-*
 /config/fancytabsections-*
 /config/animatedhearts-client.toml
 /config/shepard_sound_streaks-client.toml

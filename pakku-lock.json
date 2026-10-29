@@ -2564,6 +2564,43 @@
             ]
         },
         {
+            "pakku_id": "78yu7y3vUSBUSfgU",
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "modrinth": "cozycafe"
+            },
+            "name": {
+                "modrinth": "Cozy Cafe"
+            },
+            "id": {
+                "modrinth": "iwLuXny2"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "cozycafe-2.3-1.21.1.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/iwLuXny2/versions/MgX9doBX/cozycafe-2.3-1.21.1.jar",
+                    "id": "MgX9doBX",
+                    "parent_id": "iwLuXny2",
+                    "hashes": {
+                        "sha512": "6692cba00b3e74f27570ec57a272efcfe478ade2a92956ee5609e15d802634114aea2cbc9af468eb5c1d7c5d6e2136cdb84e97a337356e96592172d7e3cb779f",
+                        "sha1": "cffce4675757786c4a6d076df472021d932d0f82"
+                    },
+                    "required_dependencies": [],
+                    "size": 484061,
+                    "date_published": "2026-10-09T13:34:34.128444Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "PMuxzr3RIVupwPiV",
             "type": "MOD",
             "side": "CLIENT",

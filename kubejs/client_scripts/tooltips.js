@@ -162,7 +162,7 @@ ItemEvents.modifyTooltips(event => {
 			"Woooaaah §2 it's going down §9 holy cow"])
 	//#endregion
 
-	event.add(Ingredient.of("@immersive_furniture").or("@sleep_tight").or("@crittersandcompanions"), [
+	event.add(Ingredient.of("@immersive_furniture").or("@sleep_tight").or("@crittersandcompanions").or("@cozycafe"), [
 		Text.yellow("Experimental").append(Text.of(` 🧊`).white()),
 	])
 

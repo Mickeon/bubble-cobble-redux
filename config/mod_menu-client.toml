@@ -76,6 +76,7 @@ mod_badges = [
 	"crittersandcompanions=experimental",
 	"spice_of_life_berry=experimental",
 	"offgrid=experimental",
+	"cozycafe=experimental",
 	"kiwi=library",
 	"sound_physics_remastered=client",
 	"smoothskies=client",
@@ -136,7 +137,8 @@ mod_parents = [
 	"enhancedcelestials2core=enhancedcelestials2defaultlunarevents",
 	"ribbits=yungsapi, geckolib",
 	"controlling=searchables",
-	"mod_menu=preloading_tricks"
+	"mod_menu=preloading_tricks",
+	"cozycafe=libtooltips, placebo"
 ]
 
 [main]
