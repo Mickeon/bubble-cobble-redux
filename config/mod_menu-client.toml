@@ -136,6 +136,7 @@ mod_parents = [
 	"!waterframes=watermedia, watermedia_youtube_plugin, watervision",
 	"enhancedcelestials2core=enhancedcelestials2defaultlunarevents",
 	"ribbits=yungsapi, geckolib",
+	"better_modlist=placeholder_api",
 	"controlling=searchables",
 	"mod_menu=preloading_tricks",
 	"cozycafe=libtooltips, placebo"

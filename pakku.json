@@ -1,6 +1,6 @@
 {
     "name": "Bubble Cobble Redux",
-    "version": "2.0.0-alpha4",
+    "version": "2.0.0-alpha5",
     "description": "A pinch of Cobblemon, Create, Farmer's Delight, and a Bubble Pub aftertaste.",
     "author": "Mickeon",
     "overrides": [
@@ -56,6 +56,7 @@
         "!config/packdev_toolkit.json",
         "!config/viewboard-client.json",
         "!kubejs/config/probe-settings.json",
+        "!kubejs/package.json",
         "!*panoptic*",
         "!*/**.aseprite",
         "!*/**.d.ts",
