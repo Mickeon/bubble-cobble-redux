@@ -4384,6 +4384,47 @@
             ]
         },
         {
+            "pakku_id": "1WWKLhYHZZ975QhE",
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "modrinth": "field-guide"
+            },
+            "name": {
+                "modrinth": "Field Guide"
+            },
+            "id": {
+                "modrinth": "72RRCWM6"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "fieldguide-1.23.0+1.21.1-neoforge.jar",
+                    "mc_versions": [
+                        "1.21",
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/72RRCWM6/versions/bc7pQCn1/fieldguide-1.23.0+1.21.1-neoforge.jar",
+                    "id": "bc7pQCn1",
+                    "parent_id": "72RRCWM6",
+                    "hashes": {
+                        "sha512": "13ba6e1c8d9a108b7772e8c886410a0ba90aa1ac917cb970abc0e368aa764787a32ec0b8526380545964daf2dc84746083b06824dc753fb3571cfc08343b7e45",
+                        "sha1": "b566998a89d1609c3871a22a924e2011f973db05"
+                    },
+                    "required_dependencies": [
+                        "PKoLkD98",
+                        "UaizcMKP"
+                    ],
+                    "size": 1316893,
+                    "date_published": "2026-10-29T09:32:11.322161Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "ENtYvkDgyDUa5AUa",
             "type": "MOD",
             "side": "SERVER",
@@ -5166,6 +5207,44 @@
             ]
         },
         {
+            "pakku_id": "Amie7WBAVtR5k0O0",
+            "type": "MOD",
+            "side": "CLIENT",
+            "slug": {
+                "modrinth": "ixeris"
+            },
+            "name": {
+                "modrinth": "Ixeris"
+            },
+            "id": {
+                "modrinth": "p8RJPJIC"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "Ixeris-4.6.10+1.21.1-neoforge.jar",
+                    "mc_versions": [
+                        "1.21",
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/p8RJPJIC/versions/QZHF8QKH/Ixeris-4.6.10+1.21.1-neoforge.jar",
+                    "id": "QZHF8QKH",
+                    "parent_id": "p8RJPJIC",
+                    "hashes": {
+                        "sha512": "333f8e22aa00b9732f3ac4372c637049f444206f10c0baea39ce8477ee3aa7975c5eaba36cf9c04e7c488ffa7125e3870fb28492b42a6132112cdff2fae10f7d",
+                        "sha1": "0635de4635d2d5cd784eaba62a17d2544e1cf4dd"
+                    },
+                    "required_dependencies": [],
+                    "size": 698627,
+                    "date_published": "2026-10-19T09:57:17.348965Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "WMRnOJou59VU9j6N",
             "type": "MOD",
             "side": "BOTH",
@@ -5238,6 +5317,51 @@
                     "required_dependencies": [],
                     "size": 726853,
                     "date_published": "2026-08-06T23:11:55.577664Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "eMXpQZDk7FV08jfU",
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "modrinth": "jasione"
+            },
+            "name": {
+                "modrinth": "Jasione"
+            },
+            "id": {
+                "modrinth": "qlDkBPij"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "jasione-1.0.9+1.21.1-neoforge.jar",
+                    "mc_versions": [
+                        "1.21",
+                        "1.21.1",
+                        "1.21.2",
+                        "1.21.3",
+                        "1.21.4",
+                        "1.21.5",
+                        "1.21.6",
+                        "1.21.7",
+                        "1.21.8"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/qlDkBPij/versions/GsGw7K8F/jasione-1.0.9+1.21.1-neoforge.jar",
+                    "id": "GsGw7K8F",
+                    "parent_id": "qlDkBPij",
+                    "hashes": {
+                        "sha512": "b7ec7703883399517876001ef6dea1e56b0c05af1c44c69d65cf8815fd655b9992a83063a6a77b2b15b6f110384dbe85833fc009be7baf4f60da94ee95fbf2f1",
+                        "sha1": "f732be9c32a896c76934949b891a115d8cd83c73"
+                    },
+                    "required_dependencies": [],
+                    "size": 748132,
+                    "date_published": "2026-10-02T08:54:09.300384Z"
                 }
             ]
         },
@@ -11244,6 +11368,43 @@
                     "required_dependencies": [],
                     "size": 203149,
                     "date_published": "2025-12-28T21:00:18.426451Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "Ziwj3EgTo7yTjRta",
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "modrinth": "quick-pack"
+            },
+            "name": {
+                "modrinth": "quick pack"
+            },
+            "id": {
+                "modrinth": "pSISfJ4O"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "quick-pack-neoforge-1.5.1+1.21.1.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/pSISfJ4O/versions/yXZgoajP/quick-pack-neoforge-1.5.1+1.21.1.jar",
+                    "id": "yXZgoajP",
+                    "parent_id": "pSISfJ4O",
+                    "hashes": {
+                        "sha512": "0021daad4ffd4ff9d7ac29316ef6b8f3fecbdc1b08f793f9333304a5b07a5da48ba0eb60d529404e313258009f76dd56cc0789f5865a32fe440ca1db9ba5db16",
+                        "sha1": "23a1fc2cde064de0d1d3568e8102c4b346a203b3"
+                    },
+                    "required_dependencies": [],
+                    "size": 21758,
+                    "date_published": "2026-09-29T00:33:26.550318Z"
                 }
             ]
         },

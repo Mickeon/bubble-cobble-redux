@@ -86,6 +86,7 @@
 /usercache.json
 /usernamecache.json
 /particular_cache
+/fieldguide_cache/
 
 # Currently useless to push.
 /resourcepacks
@@ -114,15 +115,12 @@
 /config/blockbox-common.toml
 /config/ponderer*
 /config/measurements-client.toml
-/config/ixeris.toml
 /config/item_descriptions.toml
 /config/freecam.json5
 /config/numismatics*
 /config/the_bumblezone*
 /config/exposure*
-/config/fieldguide*
 /config/sophisticatedgui*
-/config/jasione.toml
 /config/resourcepackpruner.json
 /config/nautilus_studio.json
 /config/dummmmmmy-*
@@ -136,6 +134,5 @@
 /config/fancytabsections-*
 /config/animatedhearts-client.toml
 /config/shepard_sound_streaks-client.toml
-/fieldguide_cache/
 *lightspeed*
 *locomotionmap.json
