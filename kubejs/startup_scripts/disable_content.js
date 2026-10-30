@@ -89,7 +89,6 @@ NativeEvents.onEvent("lowest", $BuildCreativeModeTabContentsEvent, event => {
 
 if (Platform.isClientEnvironment() && !is_dev()) {
 	// Keybinds are not available in a dedicated server.
-	// FIXME: Despite being hidden, keybinds may still be bound by default.
 	let DISABLED_KEY_IDS = new Set([
 		"chunksfadein.keybinds.toggleMod",
 		"gui.xaero_toggle_pac_chunk_claims",
@@ -116,20 +115,27 @@ if (Platform.isClientEnvironment() && !is_dev()) {
 		"iris.keybind.wireframe",
 		"key.modernfix.config",
 		"key.kubejs.kubedex",
-		// "treechop.key.toggle_chopping",
-		// "treechop.key.cycle_sneak_behavior",
+		"treechop.key.toggle_chopping",
+		"treechop.key.cycle_sneak_behavior",
 		// "treechop.key.open_settings_overlay", // Defaults to N.
 		"lambdynlights.key.toggle_fps_dynamic_lighting",
 		"key.dynamic_fps.toggle_forced",
 		"key.dynamic_fps.toggle_disabled",
+		"key.spice_of_life_berry.open_editor",
+		"chunksfadein.keybinds.toggleMod",
 	])
 
 	StartupEvents.postInit(event => {
+		let $InputConstants = Java.loadClass("com.mojang.blaze3d.platform.InputConstants")
+
 		Client.options.keyMappings = Client.options.keyMappings.filter(key_mapping => {
-			return !DISABLED_KEY_IDS.has(String(key_mapping.getName())) // `getName()` returns a String object, not primitive. JavaScript beware...
+			// `getName()` returns a String object, not primitive. JavaScript beware...
+			if (DISABLED_KEY_IDS.has(String(key_mapping.getName()))) {
+				// Also unbind the keys.
+				key_mapping.setKey($InputConstants.UNKNOWN)
+				return false
+			}
+			return true
 		})
-		// Client.options.keyMappings.forEach(key_mapping => {
-		// 	console.log(`${key_mapping.getName()} | ${key_mapping.saveString()}}`)
-		// })
 	})
 }
