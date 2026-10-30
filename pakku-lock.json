@@ -124,43 +124,6 @@
             ]
         },
         {
-            "pakku_id": "sPK2tEhuvLNCRJsO",
-            "type": "MOD",
-            "side": "SERVER",
-            "slug": {
-                "modrinth": "achievements-optimizer"
-            },
-            "name": {
-                "modrinth": "Achievements Optimizer"
-            },
-            "id": {
-                "modrinth": "SvXrP8rT"
-            },
-            "files": [
-                {
-                    "type": "modrinth",
-                    "file_name": "AchievementOptimizer-neoforge-1.21.1-2.1.0.jar",
-                    "mc_versions": [
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/SvXrP8rT/versions/qHMtEGz4/AchievementOptimizer-neoforge-1.21.1-2.1.0.jar",
-                    "id": "qHMtEGz4",
-                    "parent_id": "SvXrP8rT",
-                    "hashes": {
-                        "sha512": "534b4ded2849793359afc447a910065f294c69a5a4042ed4b2cb3ab542f2c87ffd667a23565d36677ad443ce1cb5373f2a1ff346eda0869103bb238797555dfd",
-                        "sha1": "691c4686c52c8740cba6beff392cbc3fbface5b0"
-                    },
-                    "required_dependencies": [],
-                    "size": 16156,
-                    "date_published": "2025-08-17T20:19:32.574923Z"
-                }
-            ]
-        },
-        {
             "pakku_id": "auXb7N72SWkV9ngQ",
             "type": "MOD",
             "side": "CLIENT",
@@ -4344,6 +4307,42 @@
                     "required_dependencies": [],
                     "size": 3160490,
                     "date_published": "2026-08-29T23:21:15.190939Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "uazAtmjLk98avNtX",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "fastvancements-forked"
+            },
+            "name": {
+                "curseforge": "Fastvancements (Forked)"
+            },
+            "id": {
+                "curseforge": "1635252"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "fastvancements-1.2.0-neoforge.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/8556/748/fastvancements-1.2.0-neoforge.jar",
+                    "id": "8556748",
+                    "parent_id": "1635252",
+                    "hashes": {
+                        "sha1": "392c9c44aa66d54b63c8fa265a954e50b13987b4",
+                        "md5": "0f24ef5974fd4316b2550028b4a4dc05"
+                    },
+                    "required_dependencies": [],
+                    "size": 23833,
+                    "date_published": "2026-08-01T20:18:36.603Z"
                 }
             ]
         },
