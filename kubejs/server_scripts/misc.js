@@ -16,7 +16,8 @@ EntityEvents.spawned("minecraft:player", event => {
 				return
 			}
 			if (player.y <= -32) {
-				player.level.runCommandSilent(`execute at ${player.username} in minecraft:overworld run tp ~ 400 ~`)
+				let overworld = server.getOverworld()
+				player.teleportToLevel(overworld, player.getX(), overworld.getMaxBuildHeight() + 80, player.getZ(), player.getYaw(), player.getPitch())
 			}
 		})
 	}
