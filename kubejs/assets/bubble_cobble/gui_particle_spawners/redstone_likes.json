@@ -62,6 +62,7 @@
     {"id": "supplementaries:crystal_display"},
     {"id": "supplementaries:cog_block"},
     {"id": "supplementaries:faucet"},
+    {"id": "supplementaries:grouper"},
     {"id": "supplementaries:notice_board"},
     {"id": "supplementaries:redstone_illuminator"},
     {"id": "supplementaries:relayer"},

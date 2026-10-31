@@ -57,6 +57,7 @@ EntityEvents.drops("minecraft:player", event => {
 			add_drop(player, Item.of("cobblemon:dragon_scale"), 0.25)
 			add_drop(player, Item.of("create:cogwheel"), 0.5)
 			add_drop(player, Item.of("minecraft:blue_dye"), 0.25)
+			add_drop(get_funny_flute("Graze the Roof"), 0.25)
 			add_drop(player, Item.of("bubble_cobble:bearded_dragon_bowl").withCustomName("Banana"), 0.05)
 			add_drop(player, Item.of("bubble_cobble:bearded_dragon_bowl").withCustomName("Baby Dandy"), 0.05)
 		} break;
@@ -185,6 +186,7 @@ EntityEvents.drops("minecraft:player", event => {
 		} break;
 		case "SunGlaceon": {
 			add_drop(player, Item.of("farmersdelight:melon_popsicle"), 0.5)
+			add_drop(get_funny_flute("Still Alive"), 0.25)
 			add_drop(player, Item.of("mynethersdelight:tear_popsicle"), 0.1)
 		} break;
 		case "8chazyplays8":

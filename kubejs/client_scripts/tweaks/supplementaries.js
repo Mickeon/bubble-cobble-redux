@@ -71,12 +71,13 @@ ItemEvents.modifyTooltips(event => {
 		"Can shoot projectiles and blocks,",
 		"at the cost of Gunpowder.",
 		"Right-click to open the Cannon's interface.",
+		"Sneak with an empty hand to enter inside!",
 		"When manually controlling the cannon:",
 		"  - Left-click to fire",
 		"  - Right-click to toggle the trajectory guide",
 		"  - Mouse wheel to change power level",
 		"  - Space Bar to change aiming mode",
-		"  - Shift, E, or Esc to exit",
+		"  - Shift, or Esc to exit",
 	])
 	add_shift_info(event, "supplementaries:wrench", [
 		"Allows you to rotate blocks and some entities around.",
@@ -94,6 +95,17 @@ ItemEvents.modifyTooltips(event => {
 		"    Mouse movement, scroll wheel and slot keys are supported.",
 		"When the Basket is open:",
 		"    Right-click to eat the chosen food.",
+	])
+	add_shift_info(event, "supplementaries:pignata", [
+		"Can be punched, hanged to ceilings, tied to a leash.",
+		"Very satisfying to hit. But be kind to it please!",
+		"",
+		"Right-click to fill it with up to 9 item stacks.",
+	])
+	add_shift_info(event, "supplementaries:grouper", [
+		"A block that compares blocks & entities on its sides.",
+		"Gives redstone power the stronger they match.",
+		"Useful for sorting things around!",
 	])
 
 	event.add(["supplementaries:sconce_lever"], subtle("Not so cunning when you can read this, huh?"))
