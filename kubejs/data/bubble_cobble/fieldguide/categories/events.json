@@ -1,0 +1,23 @@
+{
+	"icon": "fieldguide:textures/gui/icons/quill.png",
+	"contents": [
+		{
+			"type": "virtual_entry",
+			"id": "bubble_cobble:raid_den_beat",
+			"virtual_type": "tutorial",
+			"icon": "fieldguide:textures/gui/scanning.png"
+		},
+		{
+			"type": "virtual_entry",
+			"id": "bubble_cobble:dream_dimension_visited",
+			"virtual_type": "tutorial",
+			"icon": "fieldguide:textures/gui/scanning.png"
+		},
+		{
+			"type": "virtual_entry",
+			"id": "bubble_cobble:dream_dimension_withering",
+			"virtual_type": "tutorial",
+			"icon": "fieldguide:textures/gui/scanning.png"
+		}
+	]
+}

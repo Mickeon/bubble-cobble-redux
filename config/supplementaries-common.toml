@@ -226,6 +226,7 @@
 			"create:weathered_iron_block" = "create:industrial_iron_block"
 			"create:weathered_iron_window" = "create:industrial_iron_window"
 			"create:weathered_iron_window_pane" = "create:industrial_iron_window_pane"
+			"#c:glazed_terracottas" = "arts_and_crafts:glazed_terracotta"
 
 	[functional.present]
 		enabled = true

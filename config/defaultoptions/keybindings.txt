@@ -192,8 +192,8 @@ key_key.sophisticatedbackpacks.toggle_upgrade_1:key.keyboard.keypad.1:
 key_key.relics.research_relic:key.keyboard.w:
 key_key.relics.active_abilities_list:key.keyboard.left.alt:
 key_key.carry.desc:key.keyboard.unknown:
-key_key.packdev_toolkit.export:key.keyboard.h:ALT
-key_key.packdev_toolkit.copy_translation_key:key.keyboard.g:ALT
+key_key.packdev_toolkit.export:key.keyboard.unknown:
+key_key.packdev_toolkit.copy_translation_key:key.keyboard.unknown:
 key_key.packdev_toolkit.export_description:key.keyboard.unknown:
 key_key.extendedhotbar.switch:key.keyboard.x:
 key_key.extendedhotbar.toggle:key.keyboard.f8:

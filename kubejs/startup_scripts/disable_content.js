@@ -12,7 +12,7 @@ const DISABLED_ITEMS = [
 	"urban_decor:sewing_needle",
 
 	// In favour of Brewin' and Chewin's cheese.
-	/^create_bic_bit:(?!.*souffle).*cheese/,
+	/^create_bic_bit:.*?cheese(?!_souffle)/,
 	"create_bic_bit:curdled_milk_bucket", // Note: Fails on startup if used as an Ingredient.
 
 	// Overpowered.

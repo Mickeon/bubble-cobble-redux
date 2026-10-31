@@ -1,0 +1,9 @@
+{
+	"icon": "fieldguide:textures/gui/icons/pig.png",
+	"contents": [
+		{
+			"type": "auto_populate",
+			"strategy": "food"
+		}
+	]
+}

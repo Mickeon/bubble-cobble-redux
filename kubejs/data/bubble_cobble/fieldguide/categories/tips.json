@@ -1,0 +1,11 @@
+{
+	"icon": "fieldguide:textures/gui/icons/info.png",
+	"contents": [
+		{
+			"type": "virtual_entry",
+			"id": "bubble_cobble:tip/cheese",
+			"virtual_type": "tutorial",
+			"icon": "fieldguide:textures/gui/scanning.png"
+		}
+	]
+}

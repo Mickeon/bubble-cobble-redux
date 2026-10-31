@@ -117,13 +117,6 @@ ServerEvents.tags("item", event => {
 	// Currently can't do, as no durability is removed from non-knife tools.
 	// event.add("farmersdelight:straw_harvesters", "minecraft:stone_sword", "minecraft:copper_sword", "mowziesmobs:naga_fang_dagger")
 
-	// Entirely redundant and confusing.
-	event.removeAll("c:foods/cooked_meats") // Deprecated version of `c:foods/cooked_meat`
-	event.removeAll("c:foods/fruits") // Deprecated version of `c:foods/fruit`
-	event.removeAll("c:foods/soups") // Deprecated version of `c:foods/soup`
-	event.removeAll("c:foods/cooked_fishes") // Deprecated version of `c:foods/cooked_fish`
-	event.removeAll("c:tools/spears") // Deprecated version of `c:tools/spear`
-
 	// Note that these also require specific definitions in the `seasonings` data folder.
 	event.add("cobblemon:recipe_filters/tea_seasoning",
 		"arts_and_crafts:bleachdew",

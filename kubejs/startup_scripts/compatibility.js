@@ -94,9 +94,9 @@ StartupEvents.postInit(event => {
 		}
 	]
 
-	for (const category of KUBEJS_TO_BUBBLE_COBBLE_REMAPS) {
+	for (let category of KUBEJS_TO_BUBBLE_COBBLE_REMAPS) {
 		let registry = category.registry
-		for (const entry of category.entries) {
+		for (let entry of category.entries) {
 			registry.addAlias(
 					$ResourceLocation.fromNamespaceAndPath("kubejs", entry),
 					$ResourceLocation.fromNamespaceAndPath("bubble_cobble", entry)

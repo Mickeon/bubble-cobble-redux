@@ -202,7 +202,7 @@ ServerEvents.recipes(event => {
 	// Use Canvas for more.
 	event.replaceInput({id: "create:crafting/appliances/clipboard"}, "minecraft:paper", "farmersdelight:canvas")
 	event.replaceInput({id: "supplementaries:lunch_basket"}, "minecraft:bamboo", "farmersdelight:canvas")
-	event.replaceInput({id: /^create:crafting.*filter$/}, "minecraft:white_wool", "farmersdelight:canvas")
+	event.replaceInput({id: /^create:crafting\/kinetics\/.*filter$/}, "minecraft:white_wool", "farmersdelight:canvas")
 	event.replaceInput({id: /^mega_showdown:tera_pouch/}, "minecraft:leather", "farmersdelight:canvas")
 	// event.replaceInput({id: "minecraft:item_frame"}, "minecraft:leather", "farmersdelight:canvas") // Conflicts with alternative Painting recipe.
 	event.remove({id: "minecraft:painting"}) // In favour of Farmer's Delight's which requires Canvas.
