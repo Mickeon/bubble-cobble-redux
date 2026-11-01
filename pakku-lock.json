@@ -8464,6 +8464,43 @@
             ]
         },
         {
+            "pakku_id": "nu5FQAaCgAqeJOD1",
+            "type": "MOD",
+            "side": "CLIENT",
+            "slug": {
+                "modrinth": "o123456789-backport"
+            },
+            "name": {
+                "modrinth": "Reliable Recount"
+            },
+            "id": {
+                "modrinth": "KZ2nVYZL"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "reliable_recount-neoforge-1.21.1-2.0.3.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/KZ2nVYZL/versions/ZRrnmwsV/reliable_recount-neoforge-1.21.1-2.0.3.jar",
+                    "id": "ZRrnmwsV",
+                    "parent_id": "KZ2nVYZL",
+                    "hashes": {
+                        "sha512": "d3bcb3508da6735d4ea073c5178a85407e1f98398a3f139f149e2c32999be2a6b9a13396dc1cdba70de700e4e41e8e5b9d810956aecc047e9517b95b386b8c8c",
+                        "sha1": "b3535e65a2906bd5ff1709765749a641b5f12e08"
+                    },
+                    "required_dependencies": [],
+                    "size": 49785,
+                    "date_published": "2026-05-05T20:16:03.531676Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "YYP7hQJH1Z9AVEZl",
             "type": "MOD",
             "side": "BOTH",
