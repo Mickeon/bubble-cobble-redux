@@ -28,6 +28,14 @@
       }
     },
     {
+      "text": "⬛ Shadow Drop",
+      "description": ["Adds a ",{"color":"#76DEEA","text":"shadow "},"behind items in containers and the inventory.\n\nHas a small performance impact. Disable if the ",{"color":"dark_aqua","text":"GPU"}," cannot keep up, or it's not your style."],
+      "controller": {
+        "type": "boolean",
+        "id": "shadowdrop"
+      }
+    },
+    {
       "text": {"text": "Performance Desperation", "color": "#55a6e4", "bold": true},
       "description": ["",{"color":"white","text":"I believe "},{"color":"#0076b4","bold":true,"underlined":true,"text":"@SueTheMimiga","clickEvent":{"action":"open_url","value":"https://pbs.twimg.com/media/E16spB6XEAU5jCH.jpg"}},{"color":"white","text":" is going to enjoy this 👀"}],
       "controller": {

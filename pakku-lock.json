@@ -9153,6 +9153,44 @@
             ]
         },
         {
+            "pakku_id": "wEViO1OkIoDUoZUj",
+            "type": "MOD",
+            "side": "CLIENT",
+            "slug": {
+                "modrinth": "shadow-drop"
+            },
+            "name": {
+                "modrinth": "Shadow Drop"
+            },
+            "id": {
+                "modrinth": "COZRUliI"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "shadowdrop-3.0.4+1.21.1-neoforge.jar",
+                    "mc_versions": [
+                        "1.21",
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/COZRUliI/versions/pIJm1sTM/shadowdrop-3.0.4+1.21.1-neoforge.jar",
+                    "id": "pIJm1sTM",
+                    "parent_id": "COZRUliI",
+                    "hashes": {
+                        "sha512": "56ea2c35aa36dac7c113eb6c98d0abfedc9a341ba50a6e2a85b5a6680ab95c41390c0aaca83da436a33c16ddcab81f4d95f0830e19ddb4952550d7ec41e194a5",
+                        "sha1": "c8038a3bdf64fd3b070915b961f4afb8bde6149b"
+                    },
+                    "required_dependencies": [],
+                    "size": 58466,
+                    "date_published": "2026-10-17T10:02:02.783080Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "MP87YYuZvqmHP8G1",
             "type": "MOD",
             "side": "CLIENT",
