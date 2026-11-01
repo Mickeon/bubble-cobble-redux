@@ -1978,9 +1978,9 @@
             ]
         },
         {
-            "pakku_id": "4x377iQ3eb182fi7",
+            "pakku_id": "TH3g5sbM12ePjskk",
             "pakku_links": [
-                "9c4a6SKLrSlVPtX8"
+                "8E69YXG6POqqwTvF"
             ],
             "type": "DATA_PACK",
             "side": "BOTH",
@@ -2028,18 +2028,18 @@
                         "datapack"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/469QXqgC/versions/qzaWZweI/Cobblemon Cafe.zip",
-                    "id": "qzaWZweI",
+                    "url": "https://cdn.modrinth.com/data/469QXqgC/versions/ScUxYdzX/Cobblemon Cafe.zip",
+                    "id": "ScUxYdzX",
                     "parent_id": "469QXqgC",
                     "hashes": {
-                        "sha512": "6aef594cbf5a3538d783aba7bcc5deff3caf308dea44e91c15325a6fbed142af1864aca88311351f27bfa90ac867195bb63418ea3d06312f05fe3bd3f4b8f633",
-                        "sha1": "59f01475d9392a7bd7afd079ccfdb6fad0ed20ad"
+                        "sha512": "079cf934d894bfa153da5a3aff3563380622e01760d29545ad40ae8eb420aae210ac424dac97cf991cdaa52f749f4452f5249228882e83bd631f91cfb4df8133",
+                        "sha1": "836fd64c9ff9d22b42b46a8231b85d5051d7b361"
                     },
                     "required_dependencies": [
                         "MdwFAVRL"
                     ],
-                    "size": 2100609,
-                    "date_published": "2026-09-11T10:30:15.625623Z"
+                    "size": 2418624,
+                    "date_published": "2026-11-01T09:02:25.781276Z"
                 }
             ]
         },
@@ -7999,7 +7999,10 @@
             ]
         },
         {
-            "pakku_id": "nGlLwFxuFPg5hZfi",
+            "pakku_id": "7DOVA6sj9KucAFhS",
+            "pakku_links": [
+                "8E69YXG6POqqwTvF"
+            ],
             "type": "DATA_PACK",
             "side": "BOTH",
             "slug": {
@@ -8014,31 +8017,8 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "PokeCostume v.3.3.zip",
+                    "file_name": "PokeCostume v.3.4.zip",
                     "mc_versions": [
-                        "24w12a",
-                        "24w13a",
-                        "24w14a",
-                        "1.20.5-pre1",
-                        "1.20.5-pre2",
-                        "1.20.5-pre3",
-                        "1.20.5-pre4",
-                        "1.20.5-rc1",
-                        "1.20.5-rc2",
-                        "1.20.5-rc3",
-                        "1.20.5",
-                        "1.20.6",
-                        "24w18a",
-                        "24w19a",
-                        "24w19b",
-                        "24w20a",
-                        "24w21a",
-                        "24w21b",
-                        "1.21-pre1",
-                        "1.21-pre2",
-                        "1.21-pre3",
-                        "1.21-pre4",
-                        "1.21-rc1",
                         "1.21",
                         "1.21.1"
                     ],
@@ -8046,16 +8026,18 @@
                         "datapack"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/k1X1bPvt/versions/DEtvGMQW/PokeCostume v.3.3.zip",
-                    "id": "DEtvGMQW",
+                    "url": "https://cdn.modrinth.com/data/k1X1bPvt/versions/VHE4RtY6/PokeCostume v.3.4.zip",
+                    "id": "VHE4RtY6",
                     "parent_id": "k1X1bPvt",
                     "hashes": {
-                        "sha512": "8a7dc97f5598e0a8d6096b54491c20173cd136041b6de99c25f663675451cbe140196aded720cd0b337d5b73b5f384158fdc193b757367d36c7f75bd32bcf1c5",
-                        "sha1": "a46d9dc61d4e911d83ca737320db1d88cb3380e4"
+                        "sha512": "928fdf2f4ccb53ac592cfd9b7052c9539bfe9488f3218fae8e77c49f509c5ab7b0b776599fe3a94184f98e72074490047cb1a74412c4126c426a54a683e053a2",
+                        "sha1": "6513b7af411853dc6b81870596b50d7453c489b5"
                     },
-                    "required_dependencies": [],
-                    "size": 210597,
-                    "date_published": "2026-07-06T11:11:12.110767Z"
+                    "required_dependencies": [
+                        "MdwFAVRL"
+                    ],
+                    "size": 244115,
+                    "date_published": "2026-10-18T13:45:11.701847Z"
                 }
             ]
         },

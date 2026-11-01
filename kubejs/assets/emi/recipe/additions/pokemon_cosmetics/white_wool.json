@@ -22,6 +22,7 @@
 		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[],species:\"cobblemon:fuecoco\"}}",
 		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[],species:\"cobblemon:tinkaton\"}}",
 		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[],species:\"cobblemon:chikorita\"}}",
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[],species:\"cobblemon:lilligant\"}}",
 		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[],species:\"cobblemon:chansey\"}}",
 		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[],species:\"cobblemon:cutiefly\"}}",
 		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[],species:\"cobblemon:chandelure\"}}",
@@ -33,6 +34,7 @@
 		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[],species:\"cobblemon:salamence\"}}",
 		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[],species:\"cobblemon:mew\"}}",
 		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[],species:\"cobblemon:arbok\"}}",
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[],species:\"cobblemon:meowscarada\"}}",
 		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[],species:\"cobblemon:floragato\"}}",
 		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[],species:\"cobblemon:sprigatito\"}}",
 		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[],species:\"cobblemon:milotic\"}}",
@@ -64,7 +66,13 @@
 		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[],species:\"cobblemon:charmander\"}}",
 		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[],species:\"cobblemon:sobble\"}}",
 		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[],species:\"cobblemon:lapras\"}}",
-		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[],species:\"cobblemon:totodile\"}}"
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[],species:\"cobblemon:totodile\"}}",
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[],species:\"cobblemon:gengar\"}}",
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[],species:\"cobblemon:mismagius\"}}",
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[],species:\"cobblemon:espurr\"}}",
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[],species:\"cobblemon:hattrem\"}}",
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[],species:\"cobblemon:ducklett\"}}",
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[],species:\"cobblemon:mimikyu\"}}"
 	],
 	"right": {
 		"type": "list",
@@ -93,6 +101,7 @@
 		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[\"cosmetic_item-white_wool\"],species:\"cobblemon:fuecoco\"}}",
 		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[\"cosmetic_item-white_wool\"],species:\"cobblemon:tinkaton\"}}",
 		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[\"cosmetic_item-white_wool\"],species:\"cobblemon:chikorita\"}}",
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[\"cosmetic_item-white_wool\"],species:\"cobblemon:lilligant\"}}",
 		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[\"cosmetic_item-white_wool\"],species:\"cobblemon:chansey\"}}",
 		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[\"cosmetic_item-white_wool\"],species:\"cobblemon:cutiefly\"}}",
 		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[\"cosmetic_item-white_wool\"],species:\"cobblemon:chandelure\"}}",
@@ -104,6 +113,7 @@
 		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[\"cosmetic_item-white_wool\"],species:\"cobblemon:salamence\"}}",
 		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[\"cosmetic_item-white_wool\"],species:\"cobblemon:mew\"}}",
 		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[\"cosmetic_item-white_wool\"],species:\"cobblemon:arbok\"}}",
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[\"cosmetic_item-white_wool\"],species:\"cobblemon:meowscarada\"}}",
 		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[\"cosmetic_item-white_wool\"],species:\"cobblemon:floragato\"}}",
 		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[\"cosmetic_item-white_wool\"],species:\"cobblemon:sprigatito\"}}",
 		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[\"cosmetic_item-white_wool\"],species:\"cobblemon:milotic\"}}",
@@ -135,6 +145,12 @@
 		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[\"cosmetic_item-white_wool\"],species:\"cobblemon:charmander\"}}",
 		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[\"cosmetic_item-white_wool\"],species:\"cobblemon:sobble\"}}",
 		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[\"cosmetic_item-white_wool\"],species:\"cobblemon:lapras\"}}",
-		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[\"cosmetic_item-white_wool\"],species:\"cobblemon:totodile\"}}"
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[\"cosmetic_item-white_wool\"],species:\"cobblemon:totodile\"}}",
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[\"cosmetic_item-white_wool\"],species:\"cobblemon:gengar\"}}",
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[\"cosmetic_item-white_wool\"],species:\"cobblemon:mismagius\"}}",
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[\"cosmetic_item-white_wool\"],species:\"cobblemon:espurr\"}}",
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[\"cosmetic_item-white_wool\"],species:\"cobblemon:hattrem\"}}",
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[\"cosmetic_item-white_wool\"],species:\"cobblemon:ducklett\"}}",
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[\"cosmetic_item-white_wool\"],species:\"cobblemon:mimikyu\"}}"
 	]
 }

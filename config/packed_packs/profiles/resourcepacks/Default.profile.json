@@ -28,7 +28,7 @@
       "hidden": true,
       "required": true
     },
-    "file/PokeCostume v.3.3.zip": {
+    "file/PokeCostume v.3.4.zip": {
       "hidden": true,
       "required": true
     },
@@ -111,7 +111,7 @@
     "file/BubbleCobble-CCC.zip",
     "file/Cobblemon Cafe.zip",
     "file/CobblemonModdedDrops.zip",
-    "file/PokeCostume v.3.3.zip",
+    "file/PokeCostume v.3.4.zip",
     "file/Torterras O\u0027 Plenty v1.1.zip",
     "file/Construction Sticks Grips.zip",
     "file/CreateSophBackpacks.zip",
@@ -135,7 +135,6 @@
     "moonlight:merged_pack",
     "highly_customizable_damage_numbers_resources",
     "mod_resources",
-    "fabric",
     "vanilla"
   ]
 }

@@ -14,7 +14,22 @@
 		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[],species:\"cobblemon:zebstrika\"}}",
 		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[],species:\"cobblemon:ponyta\"}}",
 		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[],species:\"cobblemon:espeon\"}}",
-		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[],species:\"cobblemon:scolipede\"}}"
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[],species:\"cobblemon:scolipede\"}}",
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[],species:\"cobblemon:braixen\"}}",
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[],species:\"cobblemon:chandelure\"}}",
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[],species:\"cobblemon:flareon\"}}",
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[],species:\"cobblemon:jolteon\"}}",
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[],species:\"cobblemon:vaporeon\"}}",
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[],species:\"cobblemon:espurr\"}}",
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[],species:\"cobblemon:gengar\"}}",
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[],species:\"cobblemon:ducklett\"}}",
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[],species:\"cobblemon:mismagius\"}}",
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[],species:\"cobblemon:hydrapple\"}}",
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[],species:\"cobblemon:hattrem\"}}",
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[],species:\"cobblemon:dratini\"}}",
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[],species:\"cobblemon:litwick\"}}",
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[],species:\"cobblemon:mimikyu\"}}",
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[],species:\"cobblemon:slurpuff\"}}"
 	],
 	"right": {
 		"type": "list",
@@ -35,6 +50,21 @@
 		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[\"cosmetic_item-gold_nugget\"],species:\"cobblemon:zebstrika\"}}",
 		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[\"cosmetic_item-gold_nugget\"],species:\"cobblemon:ponyta\"}}",
 		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[\"cosmetic_item-gold_nugget\"],species:\"cobblemon:espeon\"}}",
-		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[\"cosmetic_item-gold_nugget\"],species:\"cobblemon:scolipede\"}}"
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[\"cosmetic_item-gold_nugget\"],species:\"cobblemon:scolipede\"}}",
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[\"cosmetic_item-gold_nugget\"],species:\"cobblemon:braixen\"}}",
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[\"cosmetic_item-gold_nugget\"],species:\"cobblemon:chandelure\"}}",
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[\"cosmetic_item-gold_nugget\"],species:\"cobblemon:flareon\"}}",
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[\"cosmetic_item-gold_nugget\"],species:\"cobblemon:jolteon\"}}",
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[\"cosmetic_item-gold_nugget\"],species:\"cobblemon:vaporeon\"}}",
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[\"cosmetic_item-gold_nugget\"],species:\"cobblemon:espurr\"}}",
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[\"cosmetic_item-gold_nugget\"],species:\"cobblemon:gengar\"}}",
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[\"cosmetic_item-gold_nugget\"],species:\"cobblemon:ducklett\"}}",
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[\"cosmetic_item-gold_nugget\"],species:\"cobblemon:mismagius\"}}",
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[\"cosmetic_item-gold_nugget\"],species:\"cobblemon:hydrapple\"}}",
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[\"cosmetic_item-gold_nugget\"],species:\"cobblemon:hattrem\"}}",
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[\"cosmetic_item-gold_nugget\"],species:\"cobblemon:dratini\"}}",
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[\"cosmetic_item-gold_nugget\"],species:\"cobblemon:litwick\"}}",
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[\"cosmetic_item-gold_nugget\"],species:\"cobblemon:mimikyu\"}}",
+		"item:cobblemon:pokemon_model{\"cobblemon:pokemon_item\":{aspects:[\"cosmetic_item-gold_nugget\"],species:\"cobblemon:slurpuff\"}}"
 	]
 }
