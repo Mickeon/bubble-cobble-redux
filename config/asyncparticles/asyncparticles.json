@@ -47,6 +47,12 @@
   "sable": {
     "fixParticleLights": true
   },
+  "polytone": {
+    "takeover": true,
+    "asyncTick": true,
+    "gpuOnlyAsyncTick": false,
+    "gpuRendering": true
+  },
   "create": {
     "rainEffect": "STATIONARY",
     "tickRainBlockingRange": 32

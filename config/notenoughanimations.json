@@ -1,5 +1,5 @@
 {
-  "configVersion": 11,
+  "configVersion": 12,
   "animationSmoothingSpeed": 0.2,
   "holdingItems": [
     "biomesoplenty:burning_blossom",
@@ -80,7 +80,9 @@
     "ribbits:swamp_daisy",
     "supplementaries:altimeter",
     "via_romana:charting_map",
-    "bubble_cobble:firebomb_whiskey"
+    "bubble_cobble:firebomb_whiskey",
+    "cobblemon:lobaila",
+    "cobblemon:wide_lens"
   ],
   "enableAnimationSmoothing": true,
   "enableInWorldMapRendering": true,
@@ -99,6 +101,7 @@
   "freezeArmsInBed": true,
   "rotationLock": "NONE",
   "limitRotationLockToFP": true,
+  "applyRotationLockToEveryone": false,
   "showLastUsedSword": false,
   "sheathSwords": [
     "minecraft:golden_sword",
@@ -127,8 +130,19 @@
   "clampCrossbowAnimations": false,
   "burningAnimation": true,
   "hideItemsForTheseBows": [],
-  "mapHolding": [
-    "minecraft:filled_map",
-    "create:linked_controller"
-  ]
+  "animateLanterns": true,
+  "lanternItems": [
+    "minecraft:waxed_copper_lantern",
+    "minecraft:waxed_exposed_copper_lantern",
+    "minecraft:soul_lantern",
+    "minecraft:waxed_oxidized_copper_lantern",
+    "minecraft:exposed_copper_lantern",
+    "minecraft:lantern",
+    "minecraft:waxed_weathered_copper_lantern",
+    "minecraft:weathered_copper_lantern",
+    "minecraft:oxidized_copper_lantern",
+    "minecraft:copper_lantern"
+  ],
+  "maxBlockingAngle": 15.0,
+  "maxNormalAngle": 50.0
 }

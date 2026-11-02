@@ -226,6 +226,7 @@ NativeEvents.onEvent($ItemStackedOnOtherEvent, event => {
 	) {
 		event.player.inventory.insertItem(event.player.getEquipment("head").copyAndClear(), false)
 		event.player.setEquipment("head", event.stackedOnItem.copyAndClear())
+		event.player.playNotifySound("minecraft:block.lantern.place", "master", 1.0, 1.0)
 		event.setCanceled(true)
 	}
 	if (event.carriedItem.id == "farmersdelight:skillet" && event.slot.getSlotIndex() == 39) {

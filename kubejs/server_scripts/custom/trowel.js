@@ -1,6 +1,6 @@
 
 ServerEvents.recipes(event => {
-	event.shaped("bubble_cobble:trowel", ["II", "SI"], {I: "minecraft:iron_ingot", S: "minecraft:stick"})
+	event.shaped("bubble_cobble:trowel", ["NI", "SN"], {I: "minecraft:iron_ingot", N: "minecraft:iron_nugget", S: "minecraft:stick"})
 })
 BlockEvents.rightClicked(event => {
 	if (event.item.id == "bubble_cobble:trowel") {

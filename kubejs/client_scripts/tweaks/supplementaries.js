@@ -138,8 +138,20 @@ ItemEvents.modifyTooltips(event => {
 		text.removeText(Text.translate("message.supplementaries.lunch_box.tooltip.open"))
 	})
 
-	event.modify(["#supplementaries:buntings", "#snowyspirit:glow_lights"], text => {
+	event.modify(["#supplementaries:buntings"], text => {
 		text.removeText(Text.translate("message.supplementaries.bunting").italic())
-		text.insert(1, PLACEABLE_TOOLTIP.copy().append(" on ").append(Text.of(`Ropes`).color(MASCOT_COLOR)))
+		text.insert(1, PLACEABLE_TOOLTIP.copy()
+			.append(" on ").append(Text.of(`Ropes`).color(MASCOT_COLOR))
+			.append(", ").append(Text.of(`Walls`).color(MASCOT_COLOR))
+			.append(", and ").append(Text.of(`Ceilings`).color(MASCOT_COLOR))
+		)
+	})
+	event.modify(["#snowyspirit:glow_lights"], text => {
+		text.removeText(Text.translate("message.supplementaries.bunting").italic())
+		text.insert(1, PLACEABLE_TOOLTIP.copy()
+			.append(" on ").append(Text.of(`Ropes`).color(MASCOT_COLOR))
+			.append(", ").append(Text.of(`Walls`).color(MASCOT_COLOR))
+			.append(", and ").append(Text.of(`Leaves`).color(MASCOT_COLOR))
+		)
 	})
 })

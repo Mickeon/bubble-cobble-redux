@@ -53,6 +53,10 @@ ItemEvents.modifyTooltips(event => {
 		text.removeText(Text.translate("tooltip.farmersdelight.placeable")) // If it exists, replace with our tooltip. TODO: Report this. Can it be a config?
 		text.insert(1, PLACEABLE_TOOLTIP)
 	})
+	event.modify("farmersdelight:skillet", text => {
+		text.removeText(Text.translate("tooltip.farmersdelight.placeable_sneaking"))
+		text.insert(1, PLACEABLE_SNEAKING_TOOLTIP)
+	})
 
 	event.add("cobblemon:bright_powder", Text.translate("Usable like %s", Text.translate("item.minecraft.glow_ink_sac").color(MASCOT_COLOR)).color(MASCOT_COLOR_DARK))
 

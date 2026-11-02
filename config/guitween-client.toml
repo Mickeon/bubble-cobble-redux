@@ -109,13 +109,13 @@ style = "DEFAULT"
 	sameItemDelay = 10.0
 	# Default: 1.5
 	# Range: 0.0 ~ 1000.0
-	sameItemShakeStrength = 0.15
+	sameItemShakeStrength = 0.5
 	# Default: 8.0
 	# Range: 0.0 ~ 1000.0
-	sameItemShakeDuration = 15.0
+	sameItemShakeDuration = 10.0
 	# Default: 1.0
 	# Range: 0.0 ~ 1000.0
-	sameItemShakeFrequency = 0.5
+	sameItemShakeFrequency = 4.0
 	# Default: 20.0
 	# Range: 0.0 ~ 1000.0
 	sameItemShakeWaitDuration = 10.0
@@ -125,13 +125,13 @@ style = "DEFAULT"
 	moveDuration = 1.0
 	#Allowed Values: LINEAR, IN_QUAD, OUT_QUAD, IN_OUT_QUAD, IN_CUBIC, OUT_CUBIC, IN_OUT_CUBIC, IN_QUART, OUT_QUART, IN_OUT_QUART, IN_QUINT, OUT_QUINT, IN_OUT_QUINT, IN_SINE, OUT_SINE, IN_OUT_SINE, IN_EXPO, OUT_EXPO, IN_OUT_EXPO, IN_CIRC, OUT_CIRC, IN_OUT_CIRC, IN_BACK, OUT_BACK, IN_OUT_BACK, IN_ELASTIC, OUT_ELASTIC, IN_OUT_ELASTIC, IN_BOUNCE, OUT_BOUNCE, IN_OUT_BOUNCE
 	moveEase = "OUT_SINE"
-	enableFinish = false
+	enableFinish = true
 	# Default: 0.2
 	# Range: 0.0 ~ 1000.0
-	finishPunchStrength = 0.2
+	finishPunchStrength = 0.1
 	# Default: 6.0
 	# Range: 0.0 ~ 1000.0
-	finishDuration = 6.0
+	finishDuration = 2.0
 	enablePickup = true
 	# Default: 4.0
 	# Range: 0.0 ~ 1000.0

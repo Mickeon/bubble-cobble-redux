@@ -3,7 +3,9 @@
 ServerEvents.tags("item", event => {
 	// Accidental omissions from the mod creators.
 	// Some of these mods add them in the block tags, but not the item tags.
-	event.add("minecraft:rails", "create:controller_rail") // Reported. Accepted, but not fixed? https://github.com/Creators-of-Create/Create/pull/9684
+	event.add("minecraft:rails", "create:controller_rail") // Reported: https://github.com/Creators-of-Create/Create/pull/9685
+	event.add("minecraft:fences", "farmersdelight:rope_fence") // Reported: https://github.com/vectorwing/FarmersDelight/issues/1412
+	event.add("minecraft:fence_gates", "farmersdelight:rope_fence_gate") // Reported: https://github.com/vectorwing/FarmersDelight/issues/1412,
 	event.add("c:foods/raw_fish", "minersdelight:squid", "minersdelight:glow_squid", "minersdelight:tentacles") // We only really use this ourselves (+ Bitterballen) for haunting Zinc. Perhaps these definitions should be removed.
 	event.add("c:foods", "crittersandcompanions:koi_fish")
 	event.add("c:foods/food_poisoning", "minersdelight:copper_carrot", "minersdelight:bat_wing", "minersdelight:arthropod", "minersdelight:squid", "mynethersdelight:ghasta", "mynethersdelight:ghast_dough")
@@ -26,8 +28,9 @@ ServerEvents.tags("item", event => {
 	event.add("cobblemon:sun_stone_ores", "mega_showdown:mega_meteorid_sun_ore")
 	event.add("cobblemon:thunder_stone_ores", "mega_showdown:mega_meteorid_thunder_ore")
 	event.add("c:tools/spear", "#minecraft:spears") // Reported, but marked as "Won't fix": https://github.com/Unknowneth/Backported-Spears/issues/60.
-	event.add("c:storage_blocks", "#c:storage_blocks/industrial_iron") // TODO: Report this.
-	event.add("c:music_discs", "undergroundworlds:music_disc_abbeyence") // TODO: Report this.
+	event.add("c:storage_blocks", "#c:storage_blocks/industrial_iron") // Reported: https://github.com/talrey/CreateDeco/issues/303
+	event.add("c:glass_panes", "createdeco:iron_window_pane", "createdeco:zinc_window_pane", "createdeco:brass_window_pane", "createdeco:copper_window_pane", "createdeco:andesite_window_pane", "createdeco:industrial_iron_window_pane") // Reported: https://github.com/talrey/CreateDeco/issues/302
+	event.add("c:music_discs", "undergroundworlds:music_disc_abbeyence") // Reported: https://codeberg.org/HexagonNico/UndergroundWorlds/issues/16
 	event.add("mega_showdown:mega_stone", /^zamega:/).remove("zamega:ange") // TODO: Report this.
 
 	// More compatibility.
@@ -165,7 +168,7 @@ ServerEvents.tags("block", event => {
 	// Accidental omissions from the mod creators.
 	event.add("minecraft:all_signs", "supplementaries:way_sign_wall") // https://github.com/MehVahdJukaar/Supplementaries/pull/1921
 	// event.add("create:single_block_inventories", "supplementaries:sack", "supplementaries:safe", "supplementaries:pulley_block") // Doesn't seem to be useful for us?
-	event.add("farmersdelight:mineable/knife", "#c:ropes") // Just to include Supplementaries's rope. Probably should be reported.
+	event.add("farmersdelight:mineable/knife", "#c:ropes") // Also includes Supplementaries's rope. Reported: https://github.com/vectorwing/FarmersDelight/discussions/1413
 	event.add("minecraft:combination_step_sound_blocks",
 		"#bubble_cobble:coinstacks",
 		"#snowyspirit:gumdrops",
@@ -173,8 +176,7 @@ ServerEvents.tags("block", event => {
 		"yungscavebiomes:ice_sheet"
 	)
 	event.add("create:brittle", // Allows these blocks to be assembled/unassembled in contraptions without destroying themselves.
-		"#brewinandchewin:cheese_wheels/unripe", "#brewinandchewin:cheese_wheels/ripe", "brewinandchewin:coaster", "brewinandchewin:pizza", "brewinandchewin:quiche",
-		"supplementaries:gunpowder", // I forgot to report here: https://github.com/MehVahdJukaar/Supplementaries/pull/1933.
+		"#brewinandchewin:cheese_wheels/unripe", "#brewinandchewin:cheese_wheels/ripe", "brewinandchewin:coaster", "brewinandchewin:pizza", "brewinandchewin:quiche", // Reported: https://discord.com/channels/1176287189752102973/1548344948003442828/1566769004784259193
 		"cobblemon:cleanse_tag", "cobblemon:spell_tag", "cobblemon:weakness_policy", "cobblemon:blunder_policy",
 	)
 	event.add("minecraft:doors", "copycats:copycat_iron_door") // Reported: https://github.com/copycats-plus/copycats/issues/377.
@@ -186,7 +188,7 @@ ServerEvents.tags("block", event => {
 	event.add("create:fan_processing_catalysts/splashing", "cobblemon:water_stone_block")
 	event.add("create:fan_processing_catalysts/smoking", "cobblemon:campfire")
 	event.add("create:fan_processing_catalysts/blasting", "mynethersdelight:magma_cake_block", "cobblemon:fire_stone_block")
-	event.add("create:wrench_pickup", "supplementaries:bellows", "supplementaries:crank", "supplementaries:cog_block", "supplementaries:crystal_display", "supplementaries:faucet", "supplementaries:gunpowder", "supplementaries:relayer", "supplementaries:redstone_illuminator", "create:turntable", "supplementaries:spring_launcher", "supplementaries:gunpowder", "supplementaries:sconce_lever") // TODO: Report this.
+	event.add("create:wrench_pickup", "supplementaries:bellows", "supplementaries:crank", "supplementaries:cog_block", "supplementaries:crystal_display", "supplementaries:faucet", "supplementaries:gunpowder", "supplementaries:relayer", "supplementaries:redstone_illuminator", "create:turntable", "supplementaries:spring_launcher", "supplementaries:gunpowder", "supplementaries:sconce_lever", "supplementaries:turn_table", "supplementaries:grouper", "supplementaries:cannon", "supplementaries:pulley_block", "supplementaries:speaker_block", "supplementaries:wind_vane") // TODO: Report this.
 	event.add("supplementaries:water_holder", "minersdelight:sticky_basket") // TODO: Report this? Supplementaries can't account for everyone, can it?
 	event.add("minecraft:mineable/shear", "farmersdelight:rope")
 	event.add("herbalbrews:allows_cooking", "mynethersdelight:nether_stove")
