@@ -26,7 +26,6 @@
         "!config/iris.properties",
         "!config/lambdynlights.toml",
         "!config/modlistmemory.json",
-        "!config/particlerain.json",
         "!kubejs/config/web_server.json",
 
         "!config/cobbreeding/encryption",
@@ -181,9 +180,6 @@
         },
 
         "sodium-core-shader-support": {
-            "export": false
-        },
-        "asyncparticles": {
             "export": false
         }
     },

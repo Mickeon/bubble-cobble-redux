@@ -7452,10 +7452,7 @@
             ]
         },
         {
-            "pakku_id": "OBDWNiIBdBhsyFfF",
-            "pakku_links": [
-                "WWiX8dynol1cESFV"
-            ],
+            "pakku_id": "FTMpSM0Wa5C1ACgZ",
             "type": "MOD",
             "side": "CLIENT",
             "slug": {
@@ -7470,24 +7467,24 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "particlerain-4.0.0-beta.5+1.21.1-neoforge.jar",
+                    "file_name": "particlerain-4.0.2+1.21.1-neoforge.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
                     "loaders": [
                         "neoforge"
                     ],
-                    "release_type": "beta",
-                    "url": "https://cdn.modrinth.com/data/nrikgvxm/versions/b2Zkt9Q2/particlerain-4.0.0-beta.5+1.21.1-neoforge.jar",
-                    "id": "b2Zkt9Q2",
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/nrikgvxm/versions/RxfaR4ud/particlerain-4.0.2+1.21.1-neoforge.jar",
+                    "id": "RxfaR4ud",
                     "parent_id": "nrikgvxm",
                     "hashes": {
-                        "sha512": "423f837855b66814b1d74965f2d3639ed0e1e0a67aa8633de0b0481b175e75c0ae774232b0f4b77c6c1ba3cb2580eec59a8a443f230b8e0b88e4460acd47b54d",
-                        "sha1": "be3ffc30f87963c21fc43827931cde33a3439590"
+                        "sha512": "dc5fd6224dbd58079d9c82ef318ba2b945e5aa58f3476daea371ca86bb9ce976db5f4893a7093a990c0c1a8ddb7716089b24cced176f30cb253c2696b0cfd5b2",
+                        "sha1": "444c6f221e57cca8e433702b18c4643faa82545a"
                     },
                     "required_dependencies": [],
-                    "size": 591834,
-                    "date_published": "2025-12-26T00:42:44.846531Z"
+                    "size": 623257,
+                    "date_published": "2026-10-10T01:09:55.312130Z"
                 }
             ]
         },

@@ -1,0 +1,39 @@
+{
+  "rain": {
+    "density": 0.5,
+    "opacity": 0.5
+  },
+  "vertical_fog_after_rain": {
+    "density": 0.2,
+    "opacity": 0.25
+  },
+  "splatter": {},
+  "skittering_dust": {},
+  "smoke": {
+    "blockList": {
+      "entries": [
+        "#minecraft:strider_warm_blocks",
+        "#minecraft:infiniburn_overworld",
+        "supplementaries:lumisene"
+      ],
+      "isWhitelist": true
+    }
+  },
+  "heavy_snow": {},
+  "vertical_fog": {},
+  "streak": {},
+  "fog_after_rain": {},
+  "shrub": {},
+  "ripple": {
+    "density": 0.5,
+    "opacity": 0.8
+  },
+  "snow": {},
+  "heavy_rain": {
+    "density": 0.5,
+    "opacity": 0.5
+  },
+  "dust": {},
+  "dust_haze": {},
+  "fog": {}
+}
