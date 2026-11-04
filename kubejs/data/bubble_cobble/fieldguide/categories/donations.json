@@ -1,0 +1,25 @@
+{
+	"icon": "fieldguide:textures/gui/icons/info.png",
+	"contents": [
+		{
+			"type": "entry",
+			"id": "minecraft:red_dye"
+		},
+		{
+			"type": "entry",
+			"id": "minecraft:tuff"
+		},
+		{
+			"type": "virtual_entry",
+			"id": "bubble_cobble:cheese",
+			"virtual_type": "tutorial",
+			"icon": "brewinandchewin:textures/item/flaxen_cheese_wheel.png"
+		},
+		{
+			"type": "virtual_entry",
+			"id": "bubble_cobble:create/encased_fan",
+			"virtual_type": "tutorial",
+			"icon": "fieldguide:textures/gui/scanning.png"
+		}
+	]
+}

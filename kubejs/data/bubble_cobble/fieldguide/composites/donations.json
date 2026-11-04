@@ -1,0 +1,52 @@
+{
+	"values": [
+		{
+			"id": "bubble_cobble:tuff",
+			"display": "minecraft:tuff",
+			"render": [
+				"0,0,0|minecraft:tuff",
+				"0,1,0|minecraft:tuff_bricks",
+				"0,2,0|minecraft:polished_tuff",
+				"-1,0,0|minecraft:chiseled_tuff",
+				"-1,1,0|minecraft:chiseled_tuff_bricks",
+				"-1,2,0|create:cut_tuff",
+				"-2,0,0|create:polished_cut_tuff",
+				"-2,1,0|create:cut_tuff_bricks",
+				"-2,2,0|create:small_tuff_bricks",
+				"-3,0,0|create:layered_tuff_bricks",
+				"-3,1,0|create:tuff_pillar",
+				"-3,2,0|create:tuff_tiles"
+			],
+			"components": [
+				"minecraft:tuff"
+			]
+		},
+		{
+			"__comment": "For testing purposes",
+			"id": "bubble_cobble:wool",
+			"display": "minecraft:blue_wool",
+			"components": [
+				"minecraft:red_wool",
+				"minecraft:white_wool",
+				"minecraft:green_wool"
+			],
+			"visual_variants": [
+				{
+					"variant_id": "red_wool",
+					"display_name": "Red Wool",
+					"item": "minecraft:red_wool"
+				},
+				{
+					"variant_id": "white_wool",
+					"display_name": "White Wool",
+					"item": "minecraft:white_wool"
+				},
+				{
+					"variant_id": "green_wool",
+					"display_name": "Green Wool",
+					"item": "minecraft:green_wool"
+				}
+			]
+		}
+	]
+}

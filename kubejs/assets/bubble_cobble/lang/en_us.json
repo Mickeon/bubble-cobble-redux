@@ -21,5 +21,12 @@
 	"modmenu.nameTranslation._development": " Development",
 	"modmenu.nameTranslation._world_generation": " World Generation",
 	"modmenu.nameTranslation._optimization": " Optimization",
-	"modmenu.nameTranslation._management": " Management"
+	"modmenu.nameTranslation._management": " Management",
+
+	"category.bubble_cobble.fieldguide.donations": "Donations",
+	"fieldguide.name.bubble_cobble.tuff": "Tufffffff",
+	"fieldguide.bubble_cobble.tuff.description": "You gotta say it like you're chewing on a big, scrumptious apple.",
+	"fieldguide.minecraft.tuff.description": "You gotta say it like you're chewing on a big apple.",
+	"fieldguide.minecraft.polished_tuff.description": "You gotta say it like you're chewing on a big apple.",
+	"fieldguide.bubble_cobble.tuff.hint": "Donate."
 }

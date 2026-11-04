@@ -1,0 +1,59 @@
+{
+	"shop_id": "donation_rewarder",
+	"name": {
+		"translate": "Reap what you sow"
+	},
+	"display_type": "default",
+	"texture": "bubble_cobble:textures/item/blue_mascot_cat",
+	"block_tag": "c:glazed_terracottas",
+	"trades": [
+		{
+			"offer": {
+				"id": "minecraft:red_dye",
+				"count": 32
+			},
+			"request": {
+				"id": "minecraft:emerald",
+				"count": 1
+			},
+			"trade_id": "donation_red_dye",
+			"stage_required": "donated.red_dye"
+		},
+		{
+			"offer": {
+				"id": "minecraft:tuff",
+				"count": 32
+			},
+			"request": {
+				"id": "minecraft:emerald",
+				"count": 1
+			},
+			"trade_id": "donation_tuff",
+			"stage_required": "donated.tuff"
+		},
+		{
+			"offer": {
+				"id": "minecraft:tuff_bricks",
+				"count": 32
+			},
+			"request": {
+				"id": "minecraft:emerald",
+				"count": 1
+			},
+			"trade_id": "donation_tuff_bricks",
+			"stage_required": "donated.tuff"
+		},
+		{
+			"offer": {
+				"id": "minecraft:polished_tuff",
+				"count": 32
+			},
+			"request": {
+				"id": "minecraft:emerald",
+				"count": 1
+			},
+			"trade_id": "donation_polished_tuff",
+			"stage_required": "donated.tuff"
+		}
+	]
+}
