@@ -7666,51 +7666,7 @@
             ]
         },
         {
-            "pakku_id": "oZU6V1MYxK3Tzb59",
-            "type": "MOD",
-            "side": "CLIENT",
-            "slug": {
-                "modrinth": "persistent-creative-inventory"
-            },
-            "name": {
-                "modrinth": "Persistent Creative Inventory"
-            },
-            "id": {
-                "modrinth": "b6Drmxwj"
-            },
-            "files": [
-                {
-                    "type": "modrinth",
-                    "file_name": "PersistentCreativeInventory-1.0.1.jar",
-                    "mc_versions": [
-                        "1.21.1",
-                        "26.1",
-                        "26.1.1",
-                        "26.1.2"
-                    ],
-                    "loaders": [
-                        "fabric",
-                        "neoforge",
-                        "quilt"
-                    ],
-                    "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/b6Drmxwj/versions/RM2Z7TIm/PersistentCreativeInventory-1.0.1.jar",
-                    "id": "RM2Z7TIm",
-                    "parent_id": "b6Drmxwj",
-                    "hashes": {
-                        "sha512": "4989372250a507b5148894a4c098af25a63294f83a2c6fa7a3bd5f76b9425f10acc142a0b2fb1d1f620acd802c10a2ca9b8f908eea14995e70de438da20f25b6",
-                        "sha1": "7c42649d95c46e94a47c480a1810cff1f4cba28c"
-                    },
-                    "required_dependencies": [
-                        "ufdDoWPd"
-                    ],
-                    "size": 1451,
-                    "date_published": "2025-04-26T04:39:04.242579Z"
-                }
-            ]
-        },
-        {
-            "pakku_id": "bXXd0ZHnlp17h6Rg",
+            "pakku_id": "AM3SST5jbmwWlR92",
             "type": "MOD",
             "side": "CLIENT",
             "slug": {
@@ -7725,7 +7681,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "persistentinventorysearch-1.21.1-1.7.jar",
+                    "file_name": "persistentinventorysearch-1.21.1-2.0.jar",
                     "mc_versions": [
                         "1.21",
                         "1.21.1"
@@ -7737,18 +7693,18 @@
                         "quilt"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/KYSUUp57/versions/xLmBBa4y/persistentinventorysearch-1.21.1-1.7.jar",
-                    "id": "xLmBBa4y",
+                    "url": "https://cdn.modrinth.com/data/KYSUUp57/versions/MB42YS3u/persistentinventorysearch-1.21.1-2.0.jar",
+                    "id": "MB42YS3u",
                     "parent_id": "KYSUUp57",
                     "hashes": {
-                        "sha512": "99b7d6fb2b54534c2b75c59341243db27cf02e0f994e7b98cf47d9ef692ff83cb05db57023737470b1e6923558d8ac3c5036345ec4dccf4780f2fc6783d541f6",
-                        "sha1": "00ceccdb183192693b8f27529b777b3ee7005e19"
+                        "sha512": "ac4f731d1ff543040210e676013c4d8c9f6477c7a8bc61e6b4a270314820390327195f945a1e7b312a38484bb3df82ea8dc5264bfaba463b3e5c1bc5612c65a9",
+                        "sha1": "3a9f33806cbb489e7b9ee7f9ff1dd4b6f4ea2fed"
                     },
                     "required_dependencies": [
                         "e0M1UDsY"
                     ],
-                    "size": 20295,
-                    "date_published": "2026-10-02T01:49:13.839319Z"
+                    "size": 32416,
+                    "date_published": "2026-11-04T11:37:28.003544Z"
                 }
             ]
         },
