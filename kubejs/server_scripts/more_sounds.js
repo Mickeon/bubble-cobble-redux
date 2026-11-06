@@ -104,6 +104,9 @@ ServerEvents.tags("block", event => {
 ServerEvents.tags("item", event => {
 	event.add("more_sounds:papers", "via_romana:charting_map", "cobblemon:blunder_policy", "cobblemon:cleanse_tag", "cobblemon:red_card", "cobblemon:spell_tag", "cobblemon:weakness_policy")
 	event.add("more_sounds:plates", "create:schedule", "cobblemonraiddens:raid_shard")
+	if (Platform.isLoaded("numismatics")) {
+		event.add("more_sounds:plates", "#numismatics:cards", "#numismatics:id_cards", "#numismatics:authorized_cards", "numismatics:banking_guide")
+	}
 
 	// For the Sounds mod, using a single tag is currently considerably more performance-efficient, especially for so many individual item entries.
 	event.add("bubble_cobble:sounds/sticky_sturdy",

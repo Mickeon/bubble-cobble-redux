@@ -116,7 +116,6 @@
 /config/measurements-client.toml
 /config/item_descriptions.toml
 /config/freecam.json5
-/config/numismatics*
 /config/the_bumblezone*
 /config/exposure*
 /config/sophisticatedgui*

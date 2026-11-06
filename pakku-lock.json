@@ -3194,6 +3194,48 @@
             ]
         },
         {
+            "pakku_id": "KStgqIFfTO5xYfKK",
+            "pakku_links": [
+                "bYqPXoDKOvTQoqxu"
+            ],
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "modrinth": "numismatics"
+            },
+            "name": {
+                "modrinth": "Create: Numismatics"
+            },
+            "id": {
+                "modrinth": "Jdbbtt0i"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "CreateNumismatics-1.1.0+neoforge-mc1.21.1.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/Jdbbtt0i/versions/kVi3TESX/CreateNumismatics-1.1.0+neoforge-mc1.21.1.jar",
+                    "id": "kVi3TESX",
+                    "parent_id": "Jdbbtt0i",
+                    "hashes": {
+                        "sha512": "f0a8e65828f4a36c500f4f2cad99dce89f4899711f3ebe4b8a691bf26a8be9ac8f83386507f87aaead712ab8c5f8a847cd06befb1927cb1f81de95f6cb6b7754",
+                        "sha1": "5cd4817442ae95f886a2d31534166e9883ed4bb2"
+                    },
+                    "required_dependencies": [
+                        "LNytGWDc"
+                    ],
+                    "size": 1894517,
+                    "date_published": "2026-08-27T09:37:54.534466Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "qm51FyLQum9DpLLD",
             "type": "MOD",
             "side": "BOTH",
@@ -9662,6 +9704,48 @@
                     ],
                     "size": 5463871,
                     "date_published": "2026-10-17T09:04:24.504897Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "U6XKhxrk9bTwMp0i",
+            "pakku_links": [
+                "FRH8x7aM7qqa72Vz"
+            ],
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "modrinth": "society-trading"
+            },
+            "name": {
+                "modrinth": "Society Trading"
+            },
+            "id": {
+                "modrinth": "rFRQxRZI"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "society_trading-1.2.12-1.21.1.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/rFRQxRZI/versions/HU3fexng/society_trading-1.2.12-1.21.1.jar",
+                    "id": "HU3fexng",
+                    "parent_id": "rFRQxRZI",
+                    "hashes": {
+                        "sha512": "6129e2c8d26402a469c8468f5b3ab0202b814f86fb58a90bc82ce5c31cb87a37c3427539157d57d3f07fccb41a2513028791454d83ead08427b73e5e7ba921ea",
+                        "sha1": "5eeac49d71565ce3aab8619a318f8edb77430b5e"
+                    },
+                    "required_dependencies": [
+                        "tCkE8p2N"
+                    ],
+                    "size": 220396,
+                    "date_published": "2026-10-19T00:43:43.176276Z"
                 }
             ]
         },

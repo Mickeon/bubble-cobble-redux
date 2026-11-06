@@ -1,5 +1,7 @@
 {
+  "_comment": "Bigger Numismatics coins definitely shouldn't sound like this, but for now it's okay.",
   "keys": [
+    "#numismatics:coins",
     "createdeco:brass_coin",
     "createdeco:copper_coin",
     "createdeco:gold_coin",
