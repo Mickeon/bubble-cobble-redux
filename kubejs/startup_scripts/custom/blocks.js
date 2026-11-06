@@ -1,6 +1,5 @@
 
 StartupEvents.registry("block", event => {
-	// Blocks.MUD_BRICKS
 	event.create("bubble_cobble:cracked_mud_bricks")
 			.copyPropertiesFrom(Blocks.MUD_BRICKS)
 	event.create("bubble_cobble:chiseled_mud_bricks")

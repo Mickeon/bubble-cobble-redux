@@ -414,6 +414,39 @@
 			"text": [
 				"Redstone"
 			]
+		},
+		{
+			"stacks": [
+				{"type": "item", "id": "minecraft:jukebox"},
+				{"type": "item", "id": "sophisticatedstorage:jukebox_upgrade"},
+				{"type": "item", "id": "sophisticatedstorage:advanced_jukebox_upgrade"},
+				{"type": "item", "id": "sophisticatedbackpacks:jukebox_upgrade"},
+				{"type": "item", "id": "sophisticatedbackpacks:advanced_jukebox_upgrade"}
+			],
+			"text": [
+				"Music Player"
+			]
+		},
+		{
+			"stacks": [
+				"#item:numismatics:coins"
+			],
+			"text": [
+				"Coin",
+				"Money",
+				"Currency",
+				"Cog"
+			]
+		},
+		{
+			"stacks": [
+				"#item:numismatics:cards",
+				"#item:numismatics:id_cards",
+				"#item:numismatics:authorized_cards"
+			],
+			"text": [
+				"Credit Card"
+			]
 		}
 	]
 }

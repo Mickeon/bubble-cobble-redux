@@ -94,6 +94,7 @@
 	# Range: 0.0 ~ 5.0
 	maxRegenMultiplierAtFullHunger = 1.0
 	disableNaturalRegenAtZeroHunger = true
+	vanillaNaturalRegeneration = true
 
 	[regeneration.post_eating_regeneration]
 		enabled = true
@@ -369,6 +370,7 @@
 	attributeBonuses = ["minecraft:generic.movement_speed=0.05:add_multiplied_total"]
 	potionEffects = ["minecraft:haste=0"]
 	requireAllExactCravings = true
+	commands = []
 
 [food_stack_limits]
 	enableFoodStackLimits = true
@@ -530,10 +532,19 @@
 		grantOnFirstFoodEatenEnabled = false
 		grantOnFoodDiscoveredEnabled = false
 
+	[compat.raven_abilities]
+		# Default: 1.0
+		# Range: 0.0 ~ 20.0
+		hungerMultiplier = 1.0
+		# Default: 3.0
+		# Range: 1.0 ~ 10.0
+		sugarSacrificeMaxDamageMultiplier = 3.0
+
 [craving_progress_rewards]
 	enabled = true
 	attributeBonuses = ["1|minecraft:generic.movement_speed=0.025:add_multiplied_total", "2|minecraft:generic.movement_speed=0.05:add_multiplied_total"]
 	potionEffects = ["3|minecraft:haste=0"]
+	commands = []
 
 [player_eating]
 	enabled = false
@@ -558,3 +569,459 @@
 	# Range: 1.0 ~ 12.0
 	range = 3.0
 	dropPlayerHead = false
+
+[seasonal_events]
+	# Default: 10
+	# Range: 1 ~ 100
+	emeraldEchoDelayTicks = 10
+	# Default: 0.75
+	# Range: 0.0 ~ 20.0
+	emeraldEchoMaxDamage = 0.75
+	# Default: 16.0
+	# Range: 3.0 ~ 32.0
+	emeraldEchoRange = 16.0
+	# Default: 0.04
+	# Range: 0.001 ~ 0.2
+	creeperAcceleration = 0.04
+	# Default: 2
+	# Range: 1 ~ 40
+	creeperTrailIntervalTicks = 2
+	# Default: 0.35
+	# Range: 0.0 ~ 2.0
+	creeperJumpVolume = 0.35
+	# Default: 0.5
+	# Range: 0.0 ~ 20.0
+	creeperJumpCost = 0.5
+	# Default: 1.0
+	# Range: 0.0 ~ 3.0
+	slingshotMeleeKnockback = 1.0
+	# Default: 0.85
+	# Range: 0.0 ~ 1.0
+	slingshotResistance = 0.85
+	# Default: 2.4
+	# Range: 0.6 ~ 8.0
+	slingshotSlimeSpacing = 2.4
+	# Default: 0.75
+	# Range: 0.0 ~ 20.0
+	slingshotHungerCost = 0.75
+	# Default: 0.16
+	# Range: 0.03 ~ 0.5
+	spiderWalkSpeed = 0.16
+	spiderCameraRotation = true
+	# Default: 20
+	# Range: 1 ~ 200
+	dreamEntryFastTicks = 20
+	# Default: 50
+	# Range: 1 ~ 200
+	dreamEntrySlowTicks = 50
+	# Default: 20
+	# Range: 1 ~ 200
+	dreamExitTicks = 20
+	# Default: 100
+	# Range: 1 ~ 12000
+	dreamMinStayTicks = 100
+	# Default: 200
+	# Range: 1 ~ 12000
+	dreamMaxStayTicks = 200
+	# Default: 2.0
+	# Range: 0.0 ~ 20.0
+	dreamHeal = 2.0
+	# Default: 1.0
+	# Range: 0.0 ~ 3.0
+	dreamParticleDensity = 1.0
+	# Default: 0.55
+	# Range: 0.0 ~ 2.0
+	dreamExitVolume = 0.55
+	# Default: 0.7
+	# Range: 0.0 ~ 1.0
+	bagCandyChance = 0.7
+	# Default: 0.35
+	# Range: 0.0 ~ 2.0
+	candyHungerCostScale = 0.35
+	# Default: 0.04
+	# Range: 0.0 ~ 1.0
+	parryDamageHunger = 0.04
+	# Default: 0.03
+	# Range: 0.0 ~ 5.0
+	parryRaiseCost = 0.03
+	# Default: 12.0
+	# Range: 3.0 ~ 32.0
+	swarmRange = 12.0
+	# Default: 8
+	# Range: 1 ~ 60
+	swarmGazeTicks = 8
+	# Default: 80
+	# Range: 20 ~ 200
+	swarmHoldTicks = 80
+	# Default: 2.0
+	# Range: 0.1 ~ 10.0
+	swarmBiteDamage = 2.0
+	# Default: 1.0
+	# Range: 0.0 ~ 20.0
+	swarmAttackCost = 1.0
+	# Default: 0.5
+	# Range: 0.0 ~ 20.0
+	swarmCollectCost = 0.5
+	# Default: 0.5
+	# Range: 0.0 ~ 20.0
+	swarmTransportCost = 0.5
+	# Default: 0.12
+	# Range: 0.0 ~ 20.0
+	swarmFormCostPerSecond = 0.12
+	# Default: 0.22
+	# Range: 0.05 ~ 0.5
+	swarmFormSpeed = 0.22
+	# Default: 0.46
+	# Range: 0.0 ~ 0.8
+	swarmFormJump = 0.46
+	# Default: 40.0
+	# Range: 4.0 ~ 96.0
+	swarmCollectRadius = 40.0
+	# Default: 24.0
+	# Range: 4.0 ~ 48.0
+	swarmTransportRange = 24.0
+	# Default: 120
+	# Range: 0 ~ 72000
+	swarmCooldownTicks = 120
+	# Default: 16.0
+	# Range: 4.0 ~ 32.0
+	riftRange = 16.0
+	# Default: 3.0
+	# Range: 1.0 ~ 8.0
+	riftRadius = 3.0
+	# Default: 4
+	# Range: 1 ~ 8
+	riftMaxTargets = 4
+	# Default: 200
+	# Range: 20 ~ 600
+	riftDurationTicks = 200
+	# Default: 1800
+	# Range: 0 ~ 72000
+	riftCooldownTicks = 1800
+	# Default: 6.0
+	# Range: 0.0 ~ 20.0
+	riftCost = 6.0
+	# Default: 4.0
+	# Range: 0.0 ~ 40.0
+	riftPlayerDamage = 4.0
+	# Default: 20.0
+	# Range: 0.0 ~ 100.0
+	riftMobDamageCap = 20.0
+	# Default: 3.0
+	# Range: 0.0 ~ 6.0
+	riftReach = 3.0
+	# Default: 16.0
+	# Range: 2.0 ~ 32.0
+	enderSwapRange = 16.0
+	# Default: 0.25
+	# Range: 0.0 ~ 10.0
+	enderSwapCost = 0.25
+	# Default: 0.15
+	# Range: 0.0 ~ 10.0
+	webGrenadeCost = 0.15
+	# Default: 2.75
+	# Range: 1.0 ~ 6.0
+	webGrenadeRadius = 2.75
+	# Default: 100
+	# Range: 20 ~ 400
+	webGrenadeDurationTicks = 100
+	webGrenadePvpEnabled = true
+	# Default: 2.0
+	# Range: 0.0 ~ 20.0
+	headBiteDamage = 2.0
+	# Default: 10
+	# Range: 1 ~ 100
+	headBiteIntervalTicks = 10
+	# Default: 16.0
+	# Range: 1.0 ~ 24.0
+	headBiteRange = 16.0
+	# Default: 40.0
+	# Range: 5.0 ~ 85.0
+	headBiteAimAngle = 40.0
+	# Default: 20
+	# Range: 1 ~ 200
+	headLeapCooldownTicks = 20
+	# Default: 40
+	# Range: 10 ~ 400
+	headMobRetaliationTicks = 40
+	# Default: 0.65
+	# Range: 0.1 ~ 2.0
+	headLeapSpeed = 0.65
+	# Default: 0.7
+	# Range: 0.0 ~ 3.0
+	headLeapHeight = 0.7
+	# Default: 0.03
+	# Range: 0.0 ~ 2.0
+	headBiteCost = 0.03
+	# Default: 600
+	# Range: 0 ~ 72000
+	headCooldownTicks = 600
+	# Default: 300
+	# Range: 20 ~ 12000
+	headDurationTicks = 300
+	# Default: 32.0
+	# Range: 4.0 ~ 128.0
+	headMaxRange = 32.0
+	# Default: 0.25
+	# Range: 0.0 ~ 0.75
+	headBodyReduction = 0.25
+	# Default: 5.0
+	# Range: 0.0 ~ 40.0
+	headExplosionDamage = 5.0
+	# Default: 4.0
+	# Range: 1.0 ~ 12.0
+	headExplosionRadius = 4.0
+	# Default: 0.22
+	# Range: 0.04 ~ 0.6
+	headMoveSpeed = 0.22
+	# Default: 0.48
+	# Range: 0.1 ~ 1.5
+	headJumpSpeed = 0.48
+	# Default: 0.5
+	# Range: 0.0 ~ 20.0
+	headActivationCost = 0.5
+	headPvpEnabled = true
+	# Default: 32
+	# Range: 1 ~ 128
+	swarmCollectMaxItems = 32
+	danceAfterCandyEnabled = true
+	# Default: 18
+	# Range: 0 ~ 100
+	creeperWaterSplashes = 18
+	# Default: 5
+	# Range: 0 ~ 40
+	creeperWaterSmoke = 5
+	# Default: 6
+	# Range: 1 ~ 60
+	creeperWaterSoundInterval = 6
+	# Default: 0.45
+	# Range: 0.0 ~ 2.0
+	creeperWaterVolume = 0.45
+	# Default: 0.16
+	# Range: 0.03 ~ 1.0
+	slingshotFollowSeconds = 0.16
+	# Default: 0.23
+	# Range: 0.08 ~ 0.6
+	slingshotBandWidth = 0.23
+	# Default: 1.25
+	# Range: 0.3 ~ 3.0
+	headCameraHeight = 1.25
+	# Default: 3.5
+	# Range: 1.0 ~ 8.0
+	headCameraDistance = 3.5
+	# Default: 0.35
+	# Range: 0.0 ~ 20.0
+	copperActivationCost = 0.35
+	# Default: 2
+	# Range: 1 ~ 12
+	copperAxeLayers = 2
+	# Default: 0.05
+	# Range: 0.0 ~ 5.0
+	emeraldEchoCost = 0.05
+	# Default: 0.15
+	# Range: 0.0 ~ 5.0
+	emeraldTreeCost = 0.15
+	# Default: 0.01
+	# Range: 0.0 ~ 1.0
+	emeraldTreeLogCost = 0.01
+	# Default: 0.1
+	# Range: 0.0 ~ 5.0
+	emeraldHoeCost = 0.1
+	# Default: 0.005
+	# Range: 0.0 ~ 1.0
+	emeraldHoeBlockCost = 0.005
+	# Default: 0.015
+	# Range: 0.0 ~ 1.0
+	emeraldMiningCost = 0.015
+	# Default: 0.1
+	# Range: 0.0 ~ 5.0
+	parrySuccessCost = 0.1
+	# Default: 12
+	# Range: 2 ~ 100
+	headReturnTicks = 12
+	# Default: 0.2
+	# Range: 0.0 ~ 10.0
+	headExplosionCost = 0.2
+	# Default: 0.2
+	# Range: 0.0 ~ 1.0
+	bagNightChance = 0.2
+	# Default: 1200
+	# Range: 20 ~ 72000
+	bagRollIntervalTicks = 1200
+	# Default: 12.0
+	# Range: 3.0 ~ 48.0
+	bagSpawnRadius = 12.0
+	# Default: 80
+	# Range: 1 ~ 12000
+	bagMinSleepTicks = 80
+	# Default: 901
+	# Range: 101 ~ 1231
+	seasonStartMonthDay = 901
+	# Default: 1130
+	# Range: 101 ~ 1231
+	seasonEndMonthDay = 1130
+	# Default: 0.72
+	# Range: 0.0 ~ 2.0
+	danceMusicVolume = 0.72
+	# Default: 24.0
+	# Range: 1.0 ~ 96.0
+	danceHearingRange = 24.0
+	parryMeleeEnabled = true
+	# Default: 4
+	# Range: 0 ~ 20
+	parryCaptureTicks = 4
+	# Default: 12
+	# Range: 2 ~ 40
+	parryWebDurationTicks = 12
+	seasonalEventsEnabled = true
+	# Default: 0.5
+	# Range: 0.0 ~ 20.0
+	dreamActivationCost = 0.5
+	# Default: 80
+	# Range: 0 ~ 12000
+	dreamCooldownTicks = 80
+	halloweenEnabled = true
+	# Default: 24000
+	# Range: 20 ~ 720000
+	candyDurationTicks = 24000
+	# Default: 100
+	# Range: 0 ~ 72000
+	webGrenadeCooldownTicks = 100
+	# Default: 600
+	# Range: 0 ~ 72000
+	copperCooldownTicks = 600
+	# Default: 30
+	# Range: 0 ~ 72000
+	plantRechargeTicks = 30
+	# Default: 40
+	# Range: 0 ~ 72000
+	emeraldCooldownTicks = 40
+	# Default: 120
+	# Range: 0 ~ 72000
+	enderSwapCooldownTicks = 120
+	# Default: 160
+	# Range: 0 ~ 72000
+	ghostCooldownTicks = 160
+	# Default: 20
+	# Range: 0 ~ 72000
+	parryCooldownTicks = 20
+	# Default: 120
+	# Range: 0 ~ 72000
+	creeperCooldownTicks = 120
+	# Default: 120
+	# Range: 20 ~ 1200
+	ghastDurationTicks = 120
+	# Default: 1
+	# Range: 0 ~ 10
+	ghastFreeRescues = 1
+	# Default: 2
+	# Range: 0 ~ 10
+	ghastTotemRescues = 2
+	# Default: 4.0
+	# Range: 1.0 ~ 40.0
+	ghastMinimumHealth = 4.0
+	# Default: 0.25
+	# Range: 0.0 ~ 1.0
+	ghastHealthFraction = 0.25
+	# Default: 12000
+	# Range: 0 ~ 72000
+	ghastCooldownTicks = 12000
+	# Default: 400
+	# Range: 0 ~ 72000
+	slingshotCooldownTicks = 400
+	candyKeepAfterDeath = false
+	# Default: 4
+	# Range: 1 ~ 12
+	copperLayers = 4
+	# Default: 0.65
+	# Range: 0.0 ~ 0.95
+	copperReduction = 0.65
+	# Default: 8.0
+	# Range: 0.0 ~ 100.0
+	plantMaxProtection = 8.0
+	# Default: 0.4
+	# Range: 0.0 ~ 0.85
+	plantDamageReduction = 0.4
+	# Default: 120
+	# Range: 20 ~ 1200
+	cocoonDurationTicks = 120
+	# Default: 500
+	# Range: 20 ~ 72000
+	cocoonCooldownTicks = 500
+	# Default: 16
+	# Range: 1 ~ 64
+	cocoonMaxTargets = 16
+	# Default: 16.0
+	# Range: 1.0 ~ 48.0
+	cocoonRange = 16.0
+	# Default: 4.0
+	# Range: 0.5 ~ 12.0
+	cocoonRadius = 4.0
+	# Default: 1.0
+	# Range: 0.0 ~ 20.0
+	cocoonSelfHealPerSecond = 1.0
+	# Default: 0.6
+	# Range: 0.0 ~ 10.0
+	cocoonHungerCost = 0.6
+	# Default: 0.1
+	# Range: 0.0 ~ 10.0
+	plantHungerPerHealth = 0.1
+	# Default: 0.8
+	# Range: 0.0 ~ 2.0
+	emeraldMiningPerCopy = 0.8
+	# Default: 0.12
+	# Range: 0.0 ~ 1.0
+	emeraldEchoShare = 0.12
+	# Default: 10
+	# Range: 1 ~ 40
+	parryShieldWindowTicks = 10
+	# Default: 60.0
+	# Range: 1.0 ~ 90.0
+	parryShieldAngleDegrees = 60.0
+	# Default: 0.25
+	# Range: 0.0 ~ 0.95
+	parryProtection = 0.25
+	parryHoldEnabled = false
+	# Default: 1.15
+	# Range: 0.0 ~ 3.0
+	creeperSprintBoost = 1.15
+	# Default: 8.0
+	# Range: 2.0 ~ 16.0
+	slingshotMaxPull = 8.0
+	# Default: 3.6
+	# Range: 0.5 ~ 3.8
+	slingshotLaunchSpeed = 3.6
+	dreamCancelOnMove = true
+	# Default: 1.15
+	# Range: 0.5 ~ 2.0
+	creeperJumpStrength = 1.15
+	# Default: 4.0
+	# Range: 0.0 ~ 40.0
+	creeperBlastDamage = 4.0
+	# Default: 3.0
+	# Range: 0.5 ~ 8.0
+	creeperBlastRadius = 3.0
+	# Default: 0.05
+	# Range: 0.0 ~ 1.0
+	copperLightningChance = 0.05
+	# Default: 100
+	# Range: 0 ~ 12000
+	copperLightningCooldownTicks = 100
+	# Default: 5.0
+	# Range: 0.0 ~ 40.0
+	copperLightningDamage = 5.0
+	# Default: 0.25
+	# Range: 0.0 ~ 20.0
+	copperLightningCost = 0.25
+	spider_sweet = true
+	copper_slab_chocolate = true
+	earth_brownie = true
+	emerald_candy = true
+	ender_eye_candy = true
+	ghost_sweet = true
+	jelly_spider_eye = true
+	creeper_candy = true
+	marshmallow_ghast = true
+	munchroom = true
+	pump_sweet = true
+	slime_jelly = true

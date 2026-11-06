@@ -69,6 +69,66 @@
 		inventoryIconSizeSevenOrEight = 12
 		#Allowed Values: modern, classic
 		textureStyle = "modern"
+		inventoryCloudAutoHideEnabled = true
+		autoHideInventoryCloud = false
+		#Allowed Values: slide_behind, shrink, slide_up, slide_side
+		inventoryCloudAutoHideAnimation = "slide_behind"
+		#Allowed Values: shift_left, shrink, off
+		inventoryCloudEffectAvoidance = "shift_left"
+		candyShadersEnabled = true
+		candyArachnophobiaEnabled = false
+		# Default: 0.72
+		# Range: 0.0 ~ 2.0
+		danceMusicVolume = 0.72
+		# Default: 24.0
+		# Range: 1.0 ~ 96.0
+		danceHearingRange = 24.0
+		# Default: 0.12
+		# Range: 0.03 ~ 0.5
+		candyEffectSmoothingSeconds = 0.12
+		# Default: 0.68
+		# Range: 0.1 ~ 0.95
+		slimeMembraneOpacity = 0.68
+		# Default: 0.35
+		# Range: 0.0 ~ 0.9
+		ghostTransparency = 0.35
+		# Default: 0.5
+		# Range: 0.0 ~ 0.95
+		swarmIdlePauseChance = 0.5
+		# Default: 40
+		# Range: 4 ~ 96
+		swarmCarrySpiders = 40
+		# Default: 2
+		# Range: 1 ~ 12
+		candyPixelSize = 2
+		# Default: 16
+		# Range: 1 ~ 24
+		slimePixelGridSize = 16
+		# Default: 0.16
+		# Range: 0.0 ~ 0.6
+		dreamOverlayOpacity = 0.16
+		# Default: 0.35
+		# Range: 0.0 ~ 2.0
+		headBiteShakeStrength = 0.35
+		# Default: 0.25
+		# Range: 0.0 ~ 1.0
+		dreamSoundVolume = 0.25
+		candyHudEnabled = false
+		candyInventoryEnabled = true
+		candyCooldownHudEnabled = true
+		candyCooldownInventoryEnabled = true
+		# Default: 0
+		# Range: -10000 ~ 10000
+		candyHudOffsetX = 0
+		# Default: 0
+		# Range: -10000 ~ 10000
+		candyHudOffsetY = 0
+		# Default: 0
+		# Range: -10000 ~ 10000
+		candyInventoryOffsetX = 0
+		# Default: 0
+		# Range: -10000 ~ 10000
+		candyInventoryOffsetY = 0
 
 		[compat.visuals.category_mini_cloud]
 			enableCategoryMiniCloud = true
@@ -189,7 +249,7 @@
 			extraYOffsetWhenBarsVisible = 8
 
 		[compat.visuals.hud_animations]
-			enabled = false
+			enabled = true
 			idleAnimationEnabled = false
 			# Default: 0.5
 			# Range: 0.0 ~ 8.0
@@ -213,6 +273,8 @@
 			# Range: 0 ~ 100
 			cloudDisappearDurationTicks = 10
 			inventoryItemHoverFocusEnabled = true
+			inventoryHideWhenNotHovered = false
+			inventoryItemAppearAnimationEnabled = false
 
 		[compat.visuals.animations]
 			useEaseInOut = true
@@ -359,6 +421,7 @@
 		animationStyle = "random"
 		animationStyles = []
 		limboMusicEnabled = true
+		cravingRerollLeverAnimationEnabled = true
 
 	[compat.motion_blur]
 		playerEnabled = false

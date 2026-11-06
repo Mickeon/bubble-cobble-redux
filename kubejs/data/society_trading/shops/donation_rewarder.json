@@ -16,8 +16,9 @@
 				"id": "minecraft:emerald",
 				"count": 1
 			},
-			"trade_id": "donation_red_dye",
-			"stage_required": "donated.red_dye"
+			"numismatics_cost": 16,
+			"stage_required": "donated.red_dye",
+			"trade_id": "donation_red_dye"
 		},
 		{
 			"offer": {
@@ -28,8 +29,9 @@
 				"id": "minecraft:emerald",
 				"count": 1
 			},
-			"trade_id": "donation_tuff",
-			"stage_required": "donated.tuff"
+			"numismatics_cost": 64,
+			"stage_required": "donated.tuff",
+			"trade_id": "donation_tuff"
 		},
 		{
 			"offer": {
@@ -40,8 +42,9 @@
 				"id": "minecraft:emerald",
 				"count": 1
 			},
-			"trade_id": "donation_tuff_bricks",
-			"stage_required": "donated.tuff"
+			"numismatics_cost": 128,
+			"stage_required": "donated.tuff",
+			"trade_id": "donation_tuff_bricks"
 		},
 		{
 			"offer": {
@@ -52,8 +55,9 @@
 				"id": "minecraft:emerald",
 				"count": 1
 			},
-			"trade_id": "donation_polished_tuff",
-			"stage_required": "donated.tuff"
+			"numismatics_cost": 512,
+			"stage_required": "donated.tuff",
+			"trade_id": "donation_polished_tuff"
 		}
 	]
 }

@@ -1,11 +1,13 @@
 {
   "iconsEnabled": true,
+  "hideDefaultAttributes": true,
+  "hideIfDisplayable": true,
+  "attributeGap": 8,
+  "innerGap": 2,
   "comparisonEnabled": true,
   "comparisonArrow": true,
   "onlyCompareMutual": false,
   "hintEnabled": true,
-  "customOrder": true,
-  "groupDisplay": "ROWS",
   "attributeIdBlacklist": [
     "minecraft:player.entity_interaction_range"
   ],
@@ -13,8 +15,8 @@
     "minecraft:enchantment.efficiency/mainhand",
     "apotheosis:overworld/royalty_modifier_apothic_attributes.head_#"
   ],
-  "attributeGap": 8,
-  "innerGap": 2,
+  "customOrder": true,
+  "groupDisplay": "ROWS",
   "sharpnessFix": true,
   "miningSpeed": true,
   "durabilityEnabled": true,

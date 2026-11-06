@@ -23,7 +23,9 @@
 		"[EMI] Untranslated alias",
 		# Relics missed some frames of animation, which causes GeckoLib to complain.
 		# Not only that, they're not resolving the path of Artifact's borders properly.
-		"relics:textures/gui/tooltip"
+		"relics:textures/gui/tooltip",
+		# Appears every pause and it's frankly unneded.
+		"Saving chunks for level"
 	]
 	# Messages that match the specified regexes will be filtered out and not logged.
 	regexes = []

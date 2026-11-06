@@ -57,7 +57,9 @@
         "supplementaries:cannonball",
         "yo_hooks:hook_entity",
         "crittersandcompanions:grappling_hook",
-        "crittersandcompanions:mud_ball"
+        "crittersandcompanions:mud_ball",
+        "mowziesmobs:axe_attack",
+        "mowziesmobs:falling_block"
       ],
       "includeListInSuperCategory": true,
       "excludeMode": "ONLY",
