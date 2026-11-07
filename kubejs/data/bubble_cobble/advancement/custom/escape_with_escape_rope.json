@@ -1,0 +1,19 @@
+{
+  "criteria": {
+    "escape_with_escape_rope": {
+      "trigger": "minecraft:item_durability_changed",
+      "conditions": {
+        "delta": {
+          "min": -1000,
+          "max": -1
+        },
+        "item": {
+          "items": "gag:escape_rope"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "bubble_cobble:destroy_held_escape_rope"
+  }
+}

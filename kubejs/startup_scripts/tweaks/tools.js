@@ -31,6 +31,14 @@ ItemEvents.modification(event => {
 			modified.maxDamage = 96 // Defaults to 256.
 		})
 	}
+
+	event.modify("gag:escape_rope", modified => {
+		// Interestingly, `finishUsing`, `use`, and `useAnimation`, do not work. `releaseUsing` works.
+		// https://github.com/MaxNeedsSnacks/gag/blob/1.21.1/src/main/java/ky/someone/mods/gag/item/EscapeRopeItem.java
+		// Those methods happen to have been overridden in the Escape Rope class, is that why?
+		modified.barColor(item_stack => global.bar_color_escape_rope(item_stack))
+		modified.barWidth(item_stack => global.bar_width_escape_rope(item_stack))
+	})
 })
 
 StartupEvents.modifyCreativeTab("kubejs:tab", event => {
@@ -74,3 +82,23 @@ StartupEvents.modifyCreativeTab("minecraft:tools_and_utilities", event => {
 		"gag:escape_rope"
 	])
 })
+
+/** @param {$ItemStack} item_stack */
+global.bar_color_escape_rope = function(item_stack) {
+	if (Client.player && Client.player.getUseItem() == item_stack) {
+		let $Mth = Java.loadClass("net.minecraft.util.Mth")
+		let value = remap(Client.player.getUseItemRemainingTicks(), 0, item_stack.getUseDuration(Client.player), 0.25, 1.0)
+		return Color.wrap($Mth.hsvToRgb(0.6, 0.73, value))
+	}
+
+	return Color.BROWN_DYE
+}
+
+/** @param {$ItemStack} item_stack @returns {number} */
+global.bar_width_escape_rope = function(item_stack) {
+	if (Client.player && Client.player.getUseItem() == item_stack) {
+		return remap(Client.player.getUseItemRemainingTicks(), 0, item_stack.getUseDuration(Client.player), 0, 13)
+	}
+
+	return 13 // No bar at all.
+}

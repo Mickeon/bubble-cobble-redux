@@ -4,6 +4,10 @@
 
 ItemEvents.modifyTooltips(event => {
 	event.add("#constructionstick:construction_sticks", Text.translate("Press %s to to open the GUI", [Text.keybind("key.constructionstick.open_gui").white()]).color(MASCOT_COLOR_DARK))
+
+	event.modify("gag:escape_rope", {shift: true}, text => {
+		text.removeText(Text.translate("info.gag.supports_unbreaking")) // It doesn't here.
+	})
 })
 
 // Imitate what it does here on the JEI side, but not EMI's for some reaosn.
