@@ -123,6 +123,7 @@ if (Platform.isClientEnvironment() && !is_dev()) {
 		"key.dynamic_fps.toggle_disabled",
 		"key.spice_of_life_berry.open_editor",
 		"chunksfadein.keybinds.toggleMod",
+		"key.dungeonconfig.open", // Defaults to CTRL + K.
 	])
 
 	StartupEvents.postInit(event => {

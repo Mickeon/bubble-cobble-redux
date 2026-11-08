@@ -143,7 +143,8 @@ mod_parents = [
 	"better_modlist=placeholder_api",
 	"controlling=searchables",
 	"mod_menu=preloading_tricks",
-	"cozycafe=libtooltips, placebo"
+	"cozycafe=libtooltips, placebo",
+	"watut=coroutil"
 ]
 
 [main]

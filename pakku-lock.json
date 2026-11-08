@@ -4,7 +4,7 @@
         "1.21.1"
     ],
     "loaders": {
-        "neoforge": "21.1.252"
+        "neoforge": "21.1.262"
     },
     "projects": [
         {
@@ -299,7 +299,7 @@
             ]
         },
         {
-            "pakku_id": "KXYdJ7zpCPLSxyxc",
+            "pakku_id": "7F5C14aIEvL3DfJ5",
             "type": "MOD",
             "side": "SERVER",
             "slug": {
@@ -314,25 +314,24 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "Almanac-1.21.1-2-neoforge-1.5.2.jar",
+                    "file_name": "almanac-neoforge-1.21.1-1.26.11.1.jar",
                     "mc_versions": [
-                        "1.21.1",
-                        "1.21.2"
+                        "1.21.1"
                     ],
                     "loaders": [
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/Gi02250Z/versions/cHGan9fQ/Almanac-1.21.1-2-neoforge-1.5.2.jar",
-                    "id": "cHGan9fQ",
+                    "url": "https://cdn.modrinth.com/data/Gi02250Z/versions/hvOxynOa/almanac-neoforge-1.21.1-1.26.11.1.jar",
+                    "id": "hvOxynOa",
                     "parent_id": "Gi02250Z",
                     "hashes": {
-                        "sha512": "b8c87ce784d1afee68cf8943dd64be899d9a25d111aeec1d72f1c80431cacaf71c1b4d6eb16bdaaaa36bdfd3cd4df653e8575cb567f5cdbecdefc581ad187177",
-                        "sha1": "d613dbc38ca5bcc718408db432385c2e67ac763f"
+                        "sha512": "f7928461882dfa3ebc1d75021b44d75fd9327e2bbc92863a9638907c0d58acdab2413cd6246a31f2e590dfb8731e5f5b326f5083983d01b894c4df439d27141c",
+                        "sha1": "b5c46d36aebc046f8f57ffef430dfe3aeb805320"
                     },
                     "required_dependencies": [],
-                    "size": 25593,
-                    "date_published": "2026-01-19T16:14:18.825148Z"
+                    "size": 430991,
+                    "date_published": "2026-11-03T08:38:57.246942Z"
                 }
             ]
         },
@@ -5828,10 +5827,7 @@
             ]
         },
         {
-            "pakku_id": "OK4EhbELV8nuO9YQ",
-            "pakku_links": [
-                "KXYdJ7zpCPLSxyxc"
-            ],
+            "pakku_id": "R9HJ8KVi518TpTq1",
             "type": "MOD",
             "side": "SERVER",
             "slug": {
@@ -5846,32 +5842,26 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "letmedespawn-1.21.x-neoforge-1.5.0.jar",
+                    "file_name": "letmedespawn-neoforge-1.21.1-1.26.11.1.jar",
                     "mc_versions": [
-                        "1.21",
-                        "1.21.1",
-                        "1.21.2",
-                        "1.21.3",
-                        "1.21.4",
-                        "1.21.5-pre1",
-                        "1.21.5-pre2"
+                        "1.21.1"
                     ],
                     "loaders": [
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/vE2FN5qn/versions/fgcMDg9B/letmedespawn-1.21.x-neoforge-1.5.0.jar",
-                    "id": "fgcMDg9B",
+                    "url": "https://cdn.modrinth.com/data/vE2FN5qn/versions/83U4ROV4/letmedespawn-neoforge-1.21.1-1.26.11.1.jar",
+                    "id": "83U4ROV4",
                     "parent_id": "vE2FN5qn",
                     "hashes": {
-                        "sha512": "e6c892bb621a9382728c6f5735922736283cd54ec4f5a5d4d7d0745dedbe39851e21a69abcdf7af783fbacf8c700789b6ef9278dc09782ad1cd63ec004bc7a35",
-                        "sha1": "576fe2edaa96e7e71015287457bd52f87646d968"
+                        "sha512": "559e21f3d00d7a1c8a1505fb7716149d54c0ade9e4009778ea42752b89e3482e443f81541d09801c6f89bdf0858f8c3f220be87b7b9cba8eb0ca0c5e6d2c202a",
+                        "sha1": "59f0390eb44ccb90a7d188143125b4d64a96b7e5"
                     },
                     "required_dependencies": [
                         "Gi02250Z"
                     ],
-                    "size": 14911,
-                    "date_published": "2025-03-16T11:41:33.382566Z"
+                    "size": 29590,
+                    "date_published": "2026-11-03T08:39:17.318177Z"
                 }
             ]
         },
@@ -11618,7 +11608,7 @@
             ]
         },
         {
-            "pakku_id": "UwxnJRUfIQbjhOaA",
+            "pakku_id": "amxQHNjOUMOtogIH",
             "type": "MOD",
             "side": "BOTH",
             "slug": {
@@ -11633,24 +11623,25 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "owo-lib-neoforge-0.12.15.5-beta.1+1.21.jar",
+                    "file_name": "owo-lib-neoforge-0.12.15.6-beta.1+1.21.jar",
                     "mc_versions": [
+                        "1.21",
                         "1.21.1"
                     ],
                     "loaders": [
                         "neoforge"
                     ],
                     "release_type": "beta",
-                    "url": "https://cdn.modrinth.com/data/ccKDOlHs/versions/NMCHU6DZ/owo-lib-neoforge-0.12.15.5-beta.1+1.21.jar",
-                    "id": "NMCHU6DZ",
+                    "url": "https://cdn.modrinth.com/data/ccKDOlHs/versions/wbdHEItB/owo-lib-neoforge-0.12.15.6-beta.1+1.21.jar",
+                    "id": "wbdHEItB",
                     "parent_id": "ccKDOlHs",
                     "hashes": {
-                        "sha512": "4de5c5d52139244b8c5260d641087664d992624b822599a32e03c08eb133be854a2f413667dbca1e55772445b04a70210c17b3bc13e3c88e425e7d928104b9fa",
-                        "sha1": "48dda11a6710591cf162bdbedf982ea21dd1f2ed"
+                        "sha512": "fc843ef350c4af6748d9fd6ecd3c28f96262cf46d46a8329029f49ea4f9eb87238113a8a415e8bba2c4f346c718bf450194f6f5823dfbf1ae7312529a81c3e5c",
+                        "sha1": "3a7f843ce3a4d24f8765a74bc5dde914b316b992"
                     },
                     "required_dependencies": [],
-                    "size": 1221583,
-                    "date_published": "2025-07-19T00:45:19.909132Z"
+                    "size": 1223197,
+                    "date_published": "2026-10-16T21:20:40.706385Z"
                 }
             ]
         },
