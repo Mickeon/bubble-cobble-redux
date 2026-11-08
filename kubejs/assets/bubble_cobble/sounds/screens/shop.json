@@ -1,0 +1,11 @@
+{
+  "keys": [
+    "society_trading:shop_menu",
+    "society_trading:thin_shop_menu",
+    "society_trading:image_shop_menu",
+    "society_trading:selector_menu"
+  ],
+  "soundEvent": "supplementaries:item.lunch_basket.insert",
+  "volume": 0.5,
+  "pitch": 0.9
+}

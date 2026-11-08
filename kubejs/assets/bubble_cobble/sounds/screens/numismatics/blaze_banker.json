@@ -1,0 +1,8 @@
+{
+  "keys": [
+    "numismatics:blaze_banker"
+  ],
+  "soundEvent": "minecraft:entity.blaze.hurt",
+  "volume": 0.1,
+  "pitch": 0.5
+}

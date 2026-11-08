@@ -276,7 +276,7 @@ PlayerEvents.loggedIn(event => {
 	player.removeAttribute("minecraft:generic.safe_fall_distance", "bubble_cobble:powder_snow_leniency")
 	player.removeAttribute("minecraft:generic.gravity", "bubble_cobble:powder_snow_pause")
 
-	player.revokeAdvancement("bubble_cobble:quicksand/step_in")
+	player.revokeAdvancement("bubble_cobble:custom/quicksand/step_in")
 })
 
 // https://discord.com/channels/303440391124942858/303440391124942858/1450918369342521548

@@ -1,0 +1,8 @@
+{
+  "keys": [
+    "society_trading:auto_trader_selector_menu"
+  ],
+  "soundEvent": "supplementaries:item.lunch_basket.insert",
+  "volume": 0.5,
+  "pitch": 0.65
+}

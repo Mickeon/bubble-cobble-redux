@@ -44,6 +44,8 @@
     {"id": "mega_showdown:sparkling_stone_dark"},
     {"id": "mega_showdown:sparkling_stone_light"},
     {"id": "mega_showdown:wishing_star"},
-    {"id": "mega_showdown:zygarde_cube"}
+    {"id": "mega_showdown:zygarde_cube"},
+    {"id": "numismatics:creative_vendor"},
+    {"id": "numismatics:sun"}
   ]
 }

@@ -35,6 +35,7 @@
   "applies": [
     {"id": "create:blaze_burner"},
     {"id": "create:blaze_cake"},
-    {"id": "create:creative_blaze_cake"}
+    {"id": "create:creative_blaze_cake"},
+    {"id": "numismatics:blaze_banker"}
   ]
 }

@@ -1,0 +1,7 @@
+{
+  "keys": [
+    "numismatics:bank"
+  ],
+  "soundEvent": "cobblemon:block.display_case.step",
+  "pitch": 0.75
+}

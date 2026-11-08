@@ -1,7 +1,8 @@
 {
   "keys": [
-    "minecraft:merchant",
-	  "supplementaries:red_merchant"
+    "minecraft:merchant"
   ],
-  "soundEvent": "supplementaries:block.sack.open"
+  "soundEvent": "artifacts:item.whoopee_cushion.fart",
+  "volume": 0.05,
+  "pitch": 0.5
 }

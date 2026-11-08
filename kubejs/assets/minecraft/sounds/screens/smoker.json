@@ -3,6 +3,6 @@
     "minecraft:smoker"
   ],
   "soundEvent": "bubble_cobble:light_fire",
-  "volume": 0.5,
-  "pitch": 1.25
+  "volume": 0.25,
+  "pitch": 1.45
 }

@@ -179,12 +179,10 @@ ServerEvents.tags("block", event => {
 		"#brewinandchewin:cheese_wheels/unripe", "#brewinandchewin:cheese_wheels/ripe", "brewinandchewin:coaster", "brewinandchewin:pizza", "brewinandchewin:quiche", // Reported: https://discord.com/channels/1176287189752102973/1548344948003442828/1566769004784259193
 		"cobblemon:cleanse_tag", "cobblemon:spell_tag", "cobblemon:weakness_policy", "cobblemon:blunder_policy",
 	)
-	event.add("minecraft:doors", "copycats:copycat_iron_door") // Reported: https://github.com/copycats-plus/copycats/issues/377.
-	event.add("minecraft:trapdoors", "copycats:copycat_trapdoor", "copycats:copycat_iron_trapdoor")
 
 	// Other omissions that make sense.
 	event.add("create:windmill_sails", "#supplementaries:flags")
-	event.add("create:fan_transparent", "#supplementaries:buntings", "supplementaries:wind_vane", "cobblemon:water_stone_block", "cobblemon:fire_stone_block") // Fun.
+	event.add("create:fan_transparent", "supplementaries:wind_vane", "supplementaries:gold_bars", "supplementaries:globe", "supplementaries:globe_sepia", "cobblemon:water_stone_block", "cobblemon:fire_stone_block") // Fun.
 	event.add("create:fan_processing_catalysts/splashing", "cobblemon:water_stone_block")
 	event.add("create:fan_processing_catalysts/smoking", "cobblemon:campfire")
 	event.add("create:fan_processing_catalysts/blasting", "mynethersdelight:magma_cake_block", "cobblemon:fire_stone_block")
@@ -472,7 +470,6 @@ ServerEvents.tags("worldgen/biome", event => {
 	event.add("awesomedungeonocean:has_structure/ocean_warn_temple_biomes", "biomeswevegone:dead_sea", "biomeswevegone:lush_stacks") // They're is hot like Warm Ocean.
 
 	event.add("supplementaries:has_basalt_ash", "biomesoplenty:volcanic_plains", "biomesoplenty:volcano")
-	event.add("snowyspirit:has_gingerbread_house", "#c:is_snowy") // TODO: Report this.
 
 	// Potentially worth reporting some of these?
 	event.add("arts_and_crafts:gypsum_can_generate_in", "#c:is_desert")

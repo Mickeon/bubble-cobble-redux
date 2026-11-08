@@ -39,6 +39,7 @@ rename_tab("createdeco:props_tab",                 " §6Create: §rDeco's Props 
 rename_tab("create_bic_bit:base",                  " §6Create: §r§rBitterballen ")
 // rename_tab("bits_n_bobs:bnb_based",                " §6Create: §rBits 'n' Bobs ")
 rename_tab("create:palettes",                      " §6Create§r's Building Blocks ")
+rename_tab("numismatics:main",                     " §6Create:§r Numismatics ")
 
 rename_tab("cobblemon:agriculture",        " §cCobblemon: §rAgriculture ",     "cobblemon:red_apricorn")
 rename_tab("cobblemon:archaeology",        " §cCobblemon: §rArchaeology ")
@@ -70,6 +71,7 @@ rename_tab("displaydelight:displaydelight",   " §eFarmer's Delight: §r§rDispl
 
 remove_tab("sophisticatedcore:main") // Only contains "sophisticatedcore:xp_bucket".
 remove_tab("lootr:lootr") // Only contains "lootr:trophy".
+remove_tab("society_trading:tab") // Only contains "society_trading:auto_trader".
 
 // I need to do this to have the items appear in a proper order. Annoyingly manual.
 remove_and_merge_into_tab("cobblenav:cobblenav", "cobblemon:utility_item", [

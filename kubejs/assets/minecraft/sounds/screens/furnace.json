@@ -1,9 +1,8 @@
 {
   "keys": [
-    "minecraft:blast_furnace",
     "minecraft:furnace"
   ],
   "soundEvent": "bubble_cobble:light_fire",
-  "volume": 0.5,
+  "volume": 0.25,
   "pitch": 1.25
 }

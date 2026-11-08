@@ -1,9 +1,8 @@
 {
-  "configVersion": 7,
+  "configVersion": 8,
   "perf": {
-    "maxParticleAmount": 1500,
-    "particleDensity": 75,
-    "particleStormDensity": 100,
+    "particleAmount": 1500,
+    "particleStormDensity": 1.5,
     "particleDistance": 16,
     "surfaceRange": 96
   },
@@ -19,7 +18,8 @@
     "yLevelAdjustment": true
   },
   "compat": {
-    "renderDefaultWeather": false,
+    "renderDefaultRain": false,
+    "renderDefaultSnow": false,
     "doDefaultSplashing": false,
     "waterTint": true,
     "tintMix": 0.6,
@@ -37,7 +37,7 @@
     },
     "doSpawnHeightLimit": false,
     "spawnHeightLimit": 0,
-    "rippleRes": 16,
+    "rippleRes": 8,
     "rippleUsePackRes": true
   },
   "streak": {

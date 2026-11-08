@@ -1,0 +1,8 @@
+{
+  "keys": [
+	  "supplementaries:red_merchant"
+  ],
+  "soundEvent": "mowziesmobs:sculptor.hm",
+  "volume": 0.25,
+  "pitch": 0.75
+}

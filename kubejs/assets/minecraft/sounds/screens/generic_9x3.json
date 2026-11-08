@@ -2,5 +2,6 @@
   "keys": [
     "minecraft:generic_3x3"
   ],
-  "soundEvent": "create:blaze_munch"
+  "soundEvent": "cobblemon:block.tm_machine.open",
+  "pitch": 0.75
 }

@@ -218,7 +218,11 @@ NativeEvents.onEvent($RenderTooltipEvent$Pre, event => {
 	let tooltip_width = Math.min(items.size(), COLUMNS) * SLOT_WIDTH
 	let tooltip_height = Math.min(Math.ceil(items.size() / COLUMNS), 3) * SLOT_HEIGHT
 
-	let position = event.getTooltipPositioner().positionTooltip(
+	let tooltip_positioner = event.getTooltipPositioner()
+	if (!tooltip_positioner) {
+		return // There was a time with Numinastics that TooltipPositioner was null, for some reason.
+	}
+	let position = tooltip_positioner.positionTooltip(
 		event.getScreenWidth(), event.getScreenHeight(), event.getX(), event.getY(), tooltip_width, tooltip_height
 	)
 

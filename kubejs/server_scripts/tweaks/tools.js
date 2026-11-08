@@ -60,9 +60,9 @@ NativeEvents.onEvent($AnvilUpdateEvent, event => {
 
 // This event do not trigger for advancements that are not displayed.
 // The NeoForge docs say nothing on the matter, which leads me to believe some mod is doing this.
-PlayerEvents.advancement(event => {
-	console.log("MEOW", event.player, event.advancement.id)
-})
+// PlayerEvents.advancement(event => {
+// 	console.log("MEOW", event.player, event.advancement.id)
+// })
 // PlayerEvents.advancement("bubble_cobble:custom/escape_with_escape_rope", event => {
 // 	const player = /** @type {$ServerPlayer} */ (event.player)
 // 	player.revokeAdvancement("bubble_cobble:custom/escape_with_escape_rope")

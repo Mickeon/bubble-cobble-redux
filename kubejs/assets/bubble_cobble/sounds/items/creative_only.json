@@ -10,7 +10,8 @@
     "create:creative_motor",
     "create:creative_blaze_cake",
     "create:handheld_worldshaper",
-    "cobblemon:pokemon_model"
+    "cobblemon:pokemon_model",
+    "numismatics:creative_vendor"
   ],
   "pitch": 1.0,
   "soundEvent": "create:worldshaper_place",

@@ -447,6 +447,17 @@
 			"text": [
 				"Credit Card"
 			]
+		},
+		{
+			"stacks": [
+				{"type": "item", "id": "cobblemon:blank_tm"},
+				{"type": "item", "id": "cobblemon:technical_machine"},
+				{"type": "item", "id": "cobblemon:tm_machine"}
+			],
+			"text": [
+				"TM",
+				"Technical Machine"
+			]
 		}
 	]
 }
