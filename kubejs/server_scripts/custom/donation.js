@@ -6,15 +6,16 @@
  * @import {$KubeBlockEntity, $InventoryAttachment$Wrapped} from "@package/dev/latvian/mods/kubejs/block/entity"
  */
 
-/** @import {can_donate, get_remaining_amount_to_donate, get_donation_ids} from "../../startup_scripts/custom/donation" */
-this.can_donate = global.can_donate
-this.get_remaining_amount_to_donate = global.get_remaining_amount_to_donate
-this.get_donation_ids = global.get_donation_ids
+/** @import {DonationManager} from "../../startup_scripts/custom/donation" */
+this.DonationManager = global.DonationManager
 
 // There's no other way, I need to know which players are interacting with what station.
 //#region Acknowledging interacted stations.
 let opened_donation_station_blocks = /** @type {Record<string, $LevelBlock>} */ ({})
 BlockEvents.rightClicked("bubble_cobble:donation_station", event => {
+	// if (!event.item.isEmpty() && event.player.mayUseItemAt(event.block.pos, event.facing, event.item)) {
+	// 	return
+	// }
 	// FIXME: Right-clicking to place a block on the side also triggers this.
 	let uuid = event.player.getStringUuid()
 	let level_block = event.block
@@ -43,15 +44,15 @@ PlayerEvents.inventoryClosed("kubejs:menu", event => {
 
 NetworkEvents.dataReceived("bubble_cobble:donate", event => {
 	let player = event.player
-	let block_pos = opened_donation_station_blocks[player.getStringUuid()].pos
-	if (event.level.getBlockState(block_pos).id != "bubble_cobble:donation_station") {
-		console.warn(`No Donation Station at %s, aborting.`)
+	let block_pos = opened_donation_station_blocks[player.getStringUuid()]?.pos
+	if (!block_pos || event.level.getBlockState(block_pos).id != "bubble_cobble:donation_station") {
+		console.warn(`No Donation Station at ${block_pos}, aborting.`)
 		return // Just in case.
 	}
 
 	let slot = /** @type {$InventoryKJSSlot} */ (player.containerMenu.getSlot(0))
 	let item_stack = slot.getItem()
-	if (can_donate(player, item_stack)) {
+	if (DonationManager.can_donate(player, item_stack)) {
 		let copied_stack = item_stack.copy() // Hack: Copy item stack. It may have become empty in donate().
 		donate(player, item_stack)
 		play_sound_globally(event.level, block_pos.center, "bubble_cobble:crash.fruit_got", "blocks", 0.5)
@@ -68,9 +69,10 @@ function donate(player, item_stack) {
 	if (!data.contains("donations_left")) {
 		data.put("donations_left", {})
 	}
-	let donating_amount_left = get_remaining_amount_to_donate(player, item_stack)
+	let id = DonationManager.get_entry_id_for_item(item_stack)
+	let donating_amount_left = DonationManager.get_remaining_amount_to_donate(player, id)
 	let donating_amount = Math.min(item_stack.getCount(), donating_amount_left)
-	data.getCompound("donations_left").putInt(item_stack.id, donating_amount_left - donating_amount)
+	data.getCompound("donations_left").putInt(id, donating_amount_left - donating_amount)
 
 	item_stack.shrink(donating_amount)
 }
@@ -82,10 +84,12 @@ function reset_donations(player) {
 
 /** @param {$Player} player @param {$ItemStack=} specific_item @param {import("@package/net/minecraft/core").$BlockPos=} station_block_pos  */
 function update_donation_progress(player, specific_item, station_block_pos) {
-	let what_to_update = specific_item ? [specific_item] : get_donation_ids().map(s => Item.of(s))
-	for (let item_stack of what_to_update) {
-		// let entry_id = "bubble_cobble:" + item_stack.idLocation.namespace + "/" + item_stack.idLocation.path
-		if (get_remaining_amount_to_donate(player, item_stack) <= 0) {
+	let what_to_update = specific_item ? [DonationManager.get_entry_id_for_item(specific_item)] : DonationManager.get_donation_ids()
+	for (let id of what_to_update) {
+		// let field_guide_id = "bubble_cobble:" + id
+		let field_guide_id = "block:bubble_cobble/" + id // TL:DR: Prefixing "block" lets the Toast notification appear.
+		let stage = "donated." + id
+		if (DonationManager.get_remaining_amount_to_donate(player, id) <= 0) {
 			if (station_block_pos) {
 				player.level.spawnFireworks(station_block_pos.center.x(), station_block_pos.center.y(), station_block_pos.center.z(), {
 					flightDuration: 2,
@@ -94,35 +98,49 @@ function update_donation_progress(player, specific_item, station_block_pos) {
 					]}, 2
 				)
 			}
-			FieldGuide.unlock(player, "bubble_cobble:" + item_stack.idLocation.path)
-			player.stages.add("donated." + item_stack.idLocation.path)
+			FieldGuide.unlock(player, field_guide_id)
+			player.stages.add(stage)
 		} else {
-			FieldGuide.revoke(player, "bubble_cobble:" + item_stack.idLocation.path)
-			player.stages.remove("donated." + item_stack.idLocation.path)
+			FieldGuide.revoke(player, field_guide_id)
+			player.stages.remove(stage)
 		}
 	}
 	player.sendData("bubble_cobble:update_donation_progress", player.getPersistentData().getCompound("donations_left"))
 }
 
 //#region Debugging.
+if (is_dev()) {
+	BlockEvents.leftClicked("bubble_cobble:donation_station", event => {
+		const player = event.player
+		const block_entity = /** @type {$KubeBlockEntity} */ (event.block.getEntity())
+		const inventory = /** @type {$InventoryAttachment$Wrapped} */ (block_entity.attachments.get("inventory"))
 
-BlockEvents.leftClicked("bubble_cobble:donation_station", event => {
-	const player = event.player
-	const block_entity = /** @type {$KubeBlockEntity} */ (event.block.getEntity())
-	const inventory = /** @type {$InventoryAttachment$Wrapped} */ (block_entity.attachments.get("inventory"))
+		event.block.setBlockState(Block.withProperties(event.block.getBlockState(), {lit: !inventory.isEmpty()}))
 
-	event.block.setBlockState(Block.withProperties(event.block.getBlockState(), {lit: !inventory.isEmpty()}))
+		// console.log(`${player.swinging} ${player.getCurrentSwingDuration()} ${player.swingTime}`)
+		let click_released = player.swinging
+		if (click_released && player.isShiftKeyDown()) {
+			reset_donations(player)
+		}
 
-	if (player.isShiftKeyDown()) {
-		reset_donations(player)
-	}
+		// if (!inventory.isEmpty()) {
+		//     return
+		// }
+		// let item_stack = inventory.getStackInSlot(0)
+	})
+	// BlockEvents.rightClicked("minecraft:grass_block", event => {
+	// 	const player = event.player
 
-	// if (!inventory.isEmpty()) {
-	//     return
-	// }
-	// let item_stack = inventory.getStackInSlot(0)
-})
-
+	// 	if (player.isCrouching()) {
+	// 		// FieldGuide.unlock(player, "bubble_cobble:red_dye")
+	// 		FieldGuide.unlock(player, "block:bubble_cobble/red_dye")
+	// 	} else {
+	// 		// FieldGuide.revoke(player, "bubble_cobble:red_dye")
+	// 		FieldGuide.revoke(player, "block:bubble_cobble/red_dye")
+	// 	}
+	// 	player.statusMessage = FieldGuide.getCanonicalEntryId("block:bubble_cobble/red_dye")
+	// })
+}
 //#endregion
 
 // BlockEvents.blockEntityTick("bubble_cobble:donation_station", event => {

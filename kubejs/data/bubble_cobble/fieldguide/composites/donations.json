@@ -1,6 +1,13 @@
 {
 	"values": [
 		{
+			"id": "bubble_cobble:red_dye",
+			"display": "minecraft:red_dye",
+			"components": [
+				"minecraft:red_dye"
+			]
+		},
+		{
 			"id": "bubble_cobble:tuff",
 			"display": "minecraft:tuff",
 			"render": [
@@ -13,9 +20,9 @@
 				"-2,0,0|create:polished_cut_tuff",
 				"-2,1,0|create:cut_tuff_bricks",
 				"-2,2,0|create:small_tuff_bricks",
-				"-3,0,0|create:layered_tuff_bricks",
+				"-3,0,0|create:layered_tuff",
 				"-3,1,0|create:tuff_pillar",
-				"-3,2,0|create:tuff_tiles"
+				"-3,2,0|bits_n_bobs:tuff_tiles"
 			],
 			"components": [
 				"minecraft:tuff"

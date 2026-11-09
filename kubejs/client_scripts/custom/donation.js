@@ -8,6 +8,10 @@ let $ScreenEvent$Init$Post = Java.loadClass("net.neoforged.neoforge.client.event
  * @import {$KubeJSMenu, $InventoryKJSSlot} from "@package/dev/latvian/mods/kubejs/gui"
  */
 
+/** @import {DonationManager} from "../../startup_scripts/custom/donation" */
+this.DonationManager = global.DonationManager
+
+
 NativeEvents.onEvent($ScreenEvent$Init$Post, event => {
 	if (!(event.screen instanceof $KubeJSScreen)) {
 		return
@@ -35,17 +39,20 @@ NativeEvents.onEvent($ScreenEvent$Init$Post, event => {
 			return
 		}
 
-		if (item_stack != slot.getItem()) { // Bit of an optimization.
-			item_stack = slot.getItem()
-			let donating_amount_left = global.get_remaining_amount_to_donate(Client.player, item_stack)
-			let donating_amount_required = global.get_donation_requirement(item_stack)
-
-			donate_button.active = global.can_donate(Client.player, item_stack)
-			donate_button.setTooltip($Tooltip.create(donate_button.active
-				? Text.translateWithFallback("", `%s/%s to go!`, (donating_amount_required - donating_amount_left).toFixed(), donating_amount_required.toFixed())
-				: Text.of(`You cannot donate this.`)
-			))
+		if (item_stack == slot.getItem()) {
+			return // Bit of an optimization.
 		}
+		item_stack = slot.getItem().copy() // Item reference is cleared when grabbed out of the slot.
+
+		let id = DonationManager.get_entry_id_for_item(item_stack)
+		let donating_amount_left = DonationManager.get_remaining_amount_to_donate(Client.player, id)
+		let donating_amount_required = DonationManager.get_donation_requirement(id)
+
+		donate_button.active = DonationManager.can_donate(Client.player, item_stack)
+		donate_button.setTooltip($Tooltip.create(donate_button.active
+			? Text.translateWithFallback("", `%s/%s to go!`, (donating_amount_required - donating_amount_left).toFixed(), donating_amount_required.toFixed())
+			: Text.of(`You cannot donate this.`)
+		))
 
 		// donate_button.setX(donate_button.getX() + 1)
 	})
