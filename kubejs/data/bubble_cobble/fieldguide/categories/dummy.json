@@ -3,11 +3,11 @@
 	"contents": [
 		{
 			"type": "entry",
-			"id": "minecraft:red_dye"
+			"id": "minecraft:green_wool"
 		},
 		{
 			"type": "entry",
-			"id": "minecraft:tuff"
+			"id": "minecraft:orange_wool"
 		},
 		{
 			"type": "virtual_entry",

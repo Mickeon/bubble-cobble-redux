@@ -143,6 +143,75 @@ if (is_dev()) {
 }
 //#endregion
 
+//#region Data generation.
+ServerEvents.generateData("last", event => {
+	let time_start = Utils.getSystemTime()
+
+	let field_guide_category = {
+		icon: "fieldguide:textures/gui/icons/info.png",
+		contents: [],
+	}
+	let field_guide_composites = {
+		values: [],
+	}
+
+	let society_trading_shop = {
+		shop_id: "donation_rewarder",
+		name: {
+			translate: "Reap what you sow"
+		},
+		display_type: "default",
+		texture: "bubble_cobble:textures/item/blue_mascot_cat",
+		block_tag: "c:glazed_terracottas",
+		trades: []
+	}
+
+	for (let id in DonationManager.donation_entries) {
+		let entry = DonationManager.donation_entries[id]
+		let item_ids = entry.unlocks.map(u => u.item?.id || u.item)
+		let first_item_id = item_ids[0]
+
+		field_guide_category.contents.push({
+			type: "entry",
+			id: first_item_id
+		})
+
+		field_guide_composites.values.push({
+			id: "bubble_cobble:" + id,
+			display: first_item_id,
+			components: item_ids
+			// components: [first_item_id]
+		})
+
+		for (let unlock of entry.unlocks) {
+			let item = Item.of(unlock.item)
+			society_trading_shop.trades.push({
+				offer: item,
+				request: {
+					id: "minecraft:emerald",
+					count: 1
+				},
+				numismatics_cost: unlock.price,
+				stage_required: "donated." + id,
+				trade_id: "donation_" + item.id
+			})
+		}
+	}
+
+	console.log(field_guide_category)
+	event.json("bubble_cobble:fieldguide/categories/donations", field_guide_category)
+
+	console.log(field_guide_composites)
+	event.json("bubble_cobble:fieldguide/composites/donations", field_guide_composites)
+
+	console.log(society_trading_shop)
+	event.json("society_trading:shops/donation_rewarder", society_trading_shop)
+
+	console.log(`Generated auxiliary donation data in ${((Utils.getSystemTime() - time_start) / 1000).toFixed(3)} s`)
+})
+
+//#endregion
+
 // BlockEvents.blockEntityTick("bubble_cobble:donation_station", event => {
 // 	const block_entity = /** @type {$KubeBlockEntity} */ (event.block.getEntity())
 // 	const inventory = /** @type {$InventoryAttachment$Wrapped} */ (block_entity.attachments.get("inventory"))

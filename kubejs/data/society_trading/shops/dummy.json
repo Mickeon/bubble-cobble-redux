@@ -1,11 +1,11 @@
 {
-	"shop_id": "donation_rewarder",
+	"shop_id": "dummy_rewarder",
 	"name": {
 		"translate": "Reap what you sow"
 	},
 	"display_type": "default",
 	"texture": "bubble_cobble:textures/item/blue_mascot_cat",
-	"block_tag": "c:glazed_terracottas",
+	"block_tag": "c:netherracks",
 	"trades": [
 		{
 			"offer": {
@@ -17,8 +17,8 @@
 				"count": 1
 			},
 			"numismatics_cost": 16,
-			"stage_required": "donated.red_dye",
-			"trade_id": "donation_red_dye"
+			"stage_required": "dummy.red_dye",
+			"trade_id": "dummy_red_dye"
 		},
 		{
 			"offer": {
@@ -31,7 +31,7 @@
 			},
 			"numismatics_cost": 64,
 			"stage_required": "donated.tuff",
-			"trade_id": "donation_tuff"
+			"trade_id": "dummy_tuff"
 		},
 		{
 			"offer": {
@@ -44,7 +44,7 @@
 			},
 			"numismatics_cost": 128,
 			"stage_required": "donated.tuff",
-			"trade_id": "donation_tuff_bricks"
+			"trade_id": "dummy_tuff_bricks"
 		},
 		{
 			"offer": {
@@ -57,7 +57,7 @@
 			},
 			"numismatics_cost": 512,
 			"stage_required": "donated.tuff",
-			"trade_id": "donation_polished_tuff"
+			"trade_id": "dummy_polished_tuff"
 		}
 	]
 }

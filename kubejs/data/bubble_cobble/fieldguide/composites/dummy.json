@@ -1,15 +1,18 @@
 {
 	"values": [
 		{
-			"id": "bubble_cobble:red_dye",
-			"display": "minecraft:red_dye",
+			"id": "bubble_cobble:dummy/green_wool",
+			"display": "minecraft:green_wool",
 			"components": [
-				"minecraft:red_dye"
+				"minecraft:green_wool"
 			]
 		},
 		{
-			"id": "bubble_cobble:tuff",
-			"display": "minecraft:tuff",
+			"id": "bubble_cobble:dummy/orange_wool",
+			"display": "minecraft:orange_wool",
+			"components": [
+				"minecraft:orange_wool"
+			],
 			"render": [
 				"0,0,0|minecraft:tuff",
 				"0,1,0|minecraft:tuff_bricks",
@@ -23,14 +26,11 @@
 				"-3,0,0|create:layered_tuff",
 				"-3,1,0|create:tuff_pillar",
 				"-3,2,0|bits_n_bobs:tuff_tiles"
-			],
-			"components": [
-				"minecraft:tuff"
 			]
 		},
 		{
 			"__comment": "For testing purposes",
-			"id": "bubble_cobble:wool",
+			"id": "bubble_cobble:dummy/wool",
 			"display": "minecraft:blue_wool",
 			"components": [
 				"minecraft:red_wool",
