@@ -26,7 +26,15 @@
 	"category.bubble_cobble.fieldguide.donations": "Donations",
 	"fieldguide.name.bubble_cobble.tuff": "Tufffffff",
 	"fieldguide.bubble_cobble.tuff.description": "You gotta say it like you're chewing on a big, scrumptious apple.",
-	"fieldguide.minecraft.tuff.description": "You gotta say it like you're chewing on a big apple.",
-	"fieldguide.minecraft.polished_tuff.description": "You gotta say it like you're chewing on a big apple.",
-	"fieldguide.bubble_cobble.tuff.hint": "Donate."
+	"fieldguide.bubble_cobble.tuff.hint": "Donate.",
+
+	"fieldguide.minecraft.allay.description": "Grouping it among the \"animals\" is exactly what the Illagers would do. I mean, if you get to know them, they're pretty cute.",
+	"fieldguide.minecraft.horse.description": "What is the point\nI mean, like- You can quite literally ride Scolipede. What more can you ask for?",
+	"fieldguide.minecraft.polar_bear.description": "What's goooood? My man-!\n\n    why are you white",
+	"fieldguide.minecraft.rabbit.description": "bnnuy",
+	"fieldguide.minecraft.sheep.white.description": "Do we really need an entry for each single color? Why, yes. Yes, we do.",
+	"fieldguide.minecraft.bee.description": "Last season's hardest worker, really. Comprised 75% of that world's population. I wonder why? Was it for aesthetics, or to lower the odds of one getting stuck on some leaves?",
+	"fieldguide.ribbits.ribbit.description": "Yip.",
+	"fieldguide.create_bic_bit.herring.description": "Carpe Diem.\n\n\n   Shoot- that's the wrong one.",
+	"fieldguide.biomesvewegone.oddion.description": "It looks quite evenion to me. Ordinarion, even."
 }

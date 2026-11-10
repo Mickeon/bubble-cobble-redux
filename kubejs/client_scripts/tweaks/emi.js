@@ -24,6 +24,7 @@ const ITEM_TAG_DISPLAY_INFO = [
 	{tag: "brewinandchewin:cheese_wheels/ripe", textures: ["brewinandchewin:item/flaxen_cheese_wheel", "brewinandchewin:item/scarlet_cheese_wheel"]},
 	{tag: "brewinandchewin:cheese_wheels/unripe", textures: ["brewinandchewin:item/unripe_flaxen_cheese_wheel", "brewinandchewin:item/unripe_scarlet_cheese_wheel"]},
 	{tag: "bubble_cobble:cattails", name: "Cattails", textures: ["biomeswevegone:item/cattails", "biomesoplenty:item/cattail"]},
+	{tag: "bubble_cobble:donatable", name: "Donatable"},
 	{tag: "c:crops/cabbage", textures: ["farmersdelight:item/cabbage", "farmersdelight:item/cabbage_leaf"]},
 	{tag: "c:crops/grain", textures: ["minecraft:item/wheat", "farmersdelight:item/rice"]},
 	{tag: "c:crops/rice", textures: ["farmersdelight:item/rice", "cobblemon:item/hearty_grains"]},
@@ -117,6 +118,8 @@ const ITEM_TAG_DISPLAY_INFO = [
 // We could use resource packs for this,
 // but that would massively bloat the folders around the place.
 ClientEvents.generateAssets("after_mods", event => {
+	let time_start = Utils.getSystemTime()
+
 	/** @param {RegistryTypes.ItemTag} item_tag @param {Array<string>} texture_paths */
 	function split_model(item_tag, texture_paths) {
 		const [first, second, third, fourth] = texture_paths
@@ -175,6 +178,7 @@ ClientEvents.generateAssets("after_mods", event => {
 		}
 	}
 	// event.json("c:models/tag/item/chests", {parent: "item/chest"}) // Does not work, chests have a special rendering method.
+	console.log(`Generated EMI tag models in ${((Utils.getSystemTime() - time_start) / 1000).toFixed(3)} s`)
 })
 
 // Proper localization strings to some tags shown in EMI, including the above.

@@ -237,6 +237,11 @@
 			"bubble_cobble:ui/recharged"
 		]
 	},
+	"ui.research_complete": {
+		"sounds": [
+			"bubble_cobble:ui/research_complete"
+		]
+	},
 	"ui.tm_machine": {
 		"sounds": [{
 			"name": "bubble_cobble:ui/tm_machine",

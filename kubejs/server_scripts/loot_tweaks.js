@@ -363,6 +363,8 @@ LootJS.modifiers(event => {
 // TODO: Can it even be an ounce of automatable? I currently have to do a lot of copy-pasting and manual work here.
 // Perhaps if I play my cards right, that won't be necessary.
 ServerEvents.generateData("last", event => {
+	let time_start = Utils.getSystemTime()
+
 	function straw_harvesting(block, properties, chance) {
 		const conditions = [
 			{
@@ -503,6 +505,7 @@ ServerEvents.generateData("last", event => {
 			}],
 		}]
 	})
+	console.log(`Generated extra EMI loot data in ${((Utils.getSystemTime() - time_start) / 1000).toFixed(3)} s`)
 })
 
 // By "simple blocks" we should include any block that:

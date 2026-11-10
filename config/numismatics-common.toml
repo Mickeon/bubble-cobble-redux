@@ -4,4 +4,4 @@
 	#.
 	#The reference coin to be used in UI related displays
 	#Allowed Values: SPUR, BEVEL, SPROCKET, COG, CROWN, SUN
-	defaultCoin = "COG"
+	defaultCoin = "SPUR"

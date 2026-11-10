@@ -1,11 +1,11 @@
 {
-	"shop_id": "dummy_rewarder",
+	"shop_id": "dummy",
 	"name": {
-		"translate": "Reap what you sow"
+		"translate": "Dummy test"
 	},
 	"display_type": "default",
 	"texture": "bubble_cobble:textures/item/blue_mascot_cat",
-	"block_tag": "c:netherracks",
+	"block_tag": "bubble_cobble:dummy_shops",
 	"trades": [
 		{
 			"offer": {

@@ -11,7 +11,7 @@ this.HIDDEN_MOB_EFFECTS = global.HIDDEN_MOB_EFFECTS
 // replaceOutput() also seems to be causing problems?
 
 ServerEvents.recipes(event => {
-	console.log("Removing recipes that include disabled items.")
+	let time_start = Utils.getSystemTime()
 
 	// Gotta do this manually I guess.
 	event.remove({id: "create_bic_bit:mixing/curdled_milk" })
@@ -33,13 +33,18 @@ ServerEvents.recipes(event => {
 	})
 	// event.remove({output: get_disabled_ingredient().stackArray, not: {type: "brewinandchewin:fermenting"}})
 	// event.remove({output: get_disabled_ingredient().stackArray})
+	console.log(`Removed recipes that include disabled items in ${((Utils.getSystemTime() - time_start) / 1000).toFixed(3)} s`)
 })
 
 if (!is_dev()) {
 
 ServerEvents.tags("item", event => {
-	event.removeAllTagsFrom(get_disabled_ingredient().itemIds)
-	event.add("c:hidden_from_recipe_viewers", get_disabled_ingredient().itemIds)
+	let item_ids = get_disabled_ingredient().itemIds
+	event.removeAllTagsFrom(item_ids)
+	event.add("c:hidden_from_recipe_viewers", item_ids)
+	if (Platform.isLoaded("fieldguide")) {
+		event.add("fieldguide:blacklisted", item_ids)
+	}
 })
 
 ServerEvents.tags("mob_effect", event => {
@@ -70,9 +75,7 @@ ServerEvents.generateData("after_mods", event => {
 			}
 		})
 	}
-})
 
-ServerEvents.generateData("last", event => {
 	// I've been trying so hard to do it more automatically in LootJS, to no avail. Fine.
 	console.log("Removing disabled artifacts from loot tables")
 	for (const loot_table_id of [

@@ -408,6 +408,13 @@ ServerEvents.tags("entity_type", event => {
 		event.add("offgrid:surface_attaching", "immersive_paintings:glow_graffiti", "immersive_paintings:glow_painting", "immersive_paintings:graffiti", "immersive_paintings:painting", "biomeswevegone:wreath")
 	}
 
+	if (Platform.isLoaded("fieldguide")) {
+		event.add("fieldguide:blacklisted", "gravestone:player_ghost", "artifacts:mimic")
+		event.add("fieldguide:passive", "mowziesmobs:grottol") // It runs away from you.
+		if (Platform.isLoaded("cozycafe")) {
+			event.add("fieldguide:blacklisted", "cozycafe:customer")
+		}
+	}
 })
 
 ServerEvents.tags("damage_type", event => {

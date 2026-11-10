@@ -94,6 +94,10 @@ global.datagen.functions.code_snippets = function() {
 		snippet_from_stream("@texture", Client.getModelManager().getAtlas("minecraft:textures/atlas/blocks.png").texturesByName.keySet())
 		snippet_from_stream("@advancement", Client.getSingleplayerServer().getAdvancements().getAllAdvancements(), "minecraft$$advancement")
 
+		// "ByPath" is private. AtlasViewer exposes it, but who knows, it may fail someday.
+		let $TextureAtlas = Java.loadClass("net.minecraft.client.renderer.texture.TextureAtlas")
+		snippet_from_stream("@texture_atlas", Client.getTextureManager()["byPath"].entrySet().stream().filter(e => e.getValue() instanceof $TextureAtlas).map(e => e.getKey()))
+
 		// Language Keys, Translation/Localization strings.
 		let $ClientLanguage = Java.loadClass("net.minecraft.client.resources.language.ClientLanguage")
 		let $Language = Java.loadClass("net.minecraft.locale.Language")
