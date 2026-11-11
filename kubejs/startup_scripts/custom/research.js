@@ -242,7 +242,7 @@ const ResearchManager = global.ResearchManager = exports.ResearchManager = {
 				}
 				FieldGuide.unlock(player, field_guide_id)
 				player.stages.add(stage)
-				player.playNotifySound("bubble_cobble:ui.research_complete", "records", 0.5, 1.0)
+				player.playNotifySound("bubble_cobble:ui.research_complete", "records", 1.0, 1.0)
 			} else {
 				FieldGuide.revoke(player, field_guide_id)
 				player.stages.remove(stage)

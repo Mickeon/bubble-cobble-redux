@@ -90,11 +90,16 @@ NetworkEvents.dataReceived("bubble_cobble:update_donation_progress", event => {
 	// $Language.getInstance().getLanguageData().clear() This actually works. Keep it in mind for debugging purposes.
 })
 
+NetworkEvents.dataReceived("bubble_cobble:update_research_entries", event => {
+	ResearchManager.research_entries = JSON.parse(NBT.toJson(event.data))
+	ResearchManager.item_to_research_table.forget()
+})
+
 ClientEvents.lang("en_us", event => {
 	event.addAll("society_trading", {
-		"gui.society_trading.price": "%s",
-		"gui.society_trading.hover_price_one": "Price: %s",
-		"gui.society_trading.balance": "%f",
-		"jei.society_trading.price": "%s"
+		"gui.society_trading.price": "%s \u00a4 ",
+		"gui.society_trading.hover_price_one": "Price: %s\u00a4",
+		"gui.society_trading.balance": "\uf014 %f",
+		"jei.society_trading.price": "%s\u00a4"
 	})
 })

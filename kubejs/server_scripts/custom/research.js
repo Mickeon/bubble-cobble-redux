@@ -2,6 +2,8 @@
 // requires: society_trading
 // requires: numismatics
 
+let $OnDatapackSyncEvent = Java.loadClass("net.neoforged.neoforge.event.OnDatapackSyncEvent")
+
 /**
  * @import {$LevelBlock} from "@package/dev/latvian/mods/kubejs/level"
  * @import {$KubeJSMenu, $InventoryKJSSlot} from "@package/dev/latvian/mods/kubejs/gui"
@@ -55,6 +57,13 @@ PlayerEvents.inventoryClosed("kubejs:menu", event => {
 
 PlayerEvents.loggedIn(event => {
 	event.player.sendData("bubble_cobble:update_donation_progress", event.player.getPersistentData().getCompound("donations_left"))
+	// event.player.sendData("bubble_cobble:update_research_entries", NBT.compoundTag(ResearchManager.research_entries))
+})
+
+NativeEvents.onEvent($OnDatapackSyncEvent, event => {
+	event.getRelevantPlayers().forEach(player => {
+		player.sendData("bubble_cobble:update_research_entries", NBT.toTag(ResearchManager.research_entries))
+	})
 })
 
 NetworkEvents.dataReceived("bubble_cobble:donate", event => {
@@ -105,7 +114,8 @@ if (is_dev()) {
 					player.statusMessage = "Reset all research progress for you."
 				}
 			} else {
-				console.log(JSON.stringify(ResearchManager.make_render_for_field_composites(ResearchManager.research_entries["tuff"]), null, "\t"))
+				player.sendData("bubble_cobble:update_research_entries", NBT.toTag(ResearchManager.research_entries))
+				// console.log(JSON.stringify(ResearchManager.make_render_for_field_composites(ResearchManager.research_entries["tuff"]), null, "\t"))
 			}
 		}
 
