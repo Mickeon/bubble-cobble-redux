@@ -25,7 +25,8 @@
 		"sophisticatedstorage:gold_shulker_box",
 		"sophisticatedstorage:copper_shulker_box",
 		"sophisticatedstorage:diamond_shulker_box",
-		"sophisticatedstorage:netherite_shulker_box"
+		"sophisticatedstorage:netherite_shulker_box",
+		"bubble_cobble:research_station"
 	]
 	#Determines if container items (those that override canFitInsideContainerItems to false) are able to fit in backpacks
 	containerItemsDisallowed = false

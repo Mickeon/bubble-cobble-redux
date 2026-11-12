@@ -6,10 +6,12 @@ StartupEvents.registry("block", event => {
 			.property(BlockProperties.LIT)
 			.soundType(SoundType.NETHERITE_BLOCK)
 			.hardness(5)
-			.placementState(callback => {
-				callback.set(BlockProperties.HORIZONTAL_FACING, callback.getHorizontalDirection().getOpposite())
+			.defaultState(callback => {
 				callback.set(BlockProperties.OPEN, false)
 				callback.set(BlockProperties.LIT, false)
+			})
+			.placementState(callback => {
+				callback.set(BlockProperties.HORIZONTAL_FACING, callback.getHorizontalDirection().getOpposite())
 			})
 			.blockEntity(info => {
 				info.inventory("inventory", ["up", "east", "north", "south", "west"], 1, 1, /** @param {$ItemStack} item */ (item) => item.hasTag("bubble_cobble:researchable"))
@@ -21,6 +23,13 @@ StartupEvents.registry("block", event => {
 			.tagBlock([
 				"minecraft:mineable/pickaxe",
 			])
+			.item(item => {
+				item.unstackable()
+				item.fireResistant()
+				item.tag([
+					"supplementaries:overencumbering"
+				])
+			})
 })
 
 StartupEvents.registry("sound_event", event => {
@@ -108,7 +117,7 @@ const ResearchManager = global.ResearchManager = exports.ResearchManager = {
 	research_entries: {
 		"red_dye": {
 			unlocks: [{item: {id: "minecraft:red_dye", count: 32}, price: 32}],
-			required: 16,
+			required: 32,
 		},
 		"encased_fan":  {
 			unlocks: [{item: {id: "create:encased_fan", count: 4}, price: 32}],
@@ -148,17 +157,25 @@ const ResearchManager = global.ResearchManager = exports.ResearchManager = {
 		},
 		"clay_bricks":  {
 			unlocks: [
-				// {item: "minecraft:brick", price: 16},
-				{item: "minecraft:bricks", price: 64},
+				{item: "minecraft:bricks"},
+				{item: "createdeco:short_red_bricks"},
+				{item: "createdeco:tiled_red_bricks"},
+				{item: "createdeco:long_red_bricks"},
+				{item: "createdeco:corner_red_bricks"},
+				{item: "createdeco:cracked_red_bricks"},
+				{item: "createdeco:mossy_red_bricks"},
 			],
 			default_count: 32,
+			default_price: 64,
 			required: 16,
 		},
 		"bleachdew":  {
-			unlocks: [
-				{item: {id: "arts_and_crafts:bleachdew", count: 32}, price: 40},
-			],
+			unlocks: [{item: {id: "arts_and_crafts:bleachdew", count: 32}, price: 40}],
 			required: 64,
+		},
+		"white_dye":  {
+			unlocks: [{item: {id: "minecraft:white_dye", count: 32}, price: 32}],
+			required: 32,
 		},
 	},
 

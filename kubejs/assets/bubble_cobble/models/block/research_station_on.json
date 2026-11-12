@@ -1,8 +1,36 @@
 {
-  "parent": "minecraft:block/orientable",
+  "parent": "block/block",
+  "format_version": "1.21.11",
+  "credit": "Made with Blockbench",
   "textures": {
-    "front": "minecraft:block/furnace_front_on",
-    "side": "minecraft:block/furnace_side",
-    "top": "minecraft:block/furnace_top"
-  }
+    "front": "bubble_cobble:block/research_station_front_on",
+    "side": "bubble_cobble:block/research_station_side",
+    "top": "bubble_cobble:block/research_station_top",
+    "table_side": "minecraft:block/enchanting_table_side",
+    "table_bottom": "minecraft:block/enchanting_table_bottom"
+  },
+  "elements": [
+    {
+      "from": [0, 8, 0],
+      "to": [16, 16, 16],
+      "faces": {
+        "north": {"uv": [0, 0, 16, 8], "texture": "#front", "cullface": "north"},
+        "east": {"uv": [0, 0, 16, 8], "texture": "#side", "cullface": "east"},
+        "south": {"uv": [0, 0, 16, 8], "texture": "#side", "cullface": "south"},
+        "west": {"uv": [0, 0, 16, 8], "texture": "#side", "cullface": "west"},
+        "up": {"uv": [0, 0, 16, 16], "texture": "#top", "cullface": "up"}
+      }
+    },
+    {
+      "from": [0, 0, 0],
+      "to": [16, 8, 16],
+      "faces": {
+        "north": {"uv": [0, 8, 16, 16], "texture": "#table_side", "cullface": "north"},
+        "east": {"uv": [0, 8, 16, 16], "texture": "#table_side", "cullface": "east"},
+        "south": {"uv": [0, 8, 16, 16], "texture": "#table_side", "cullface": "south"},
+        "west": {"uv": [0, 8, 16, 16], "texture": "#table_side", "cullface": "west"},
+        "down": {"uv": [0, 0, 16, 16], "texture": "#table_bottom", "cullface": "down"}
+      }
+    }
+  ]
 }

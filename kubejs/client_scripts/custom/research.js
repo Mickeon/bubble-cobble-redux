@@ -69,7 +69,7 @@ NativeEvents.onEvent($ScreenEvent$Init$Post, event => {
 			return
 		}
 
-		if (item_stack == slot.getItem()) {
+		if (item_stack.areItemsEqual(slot.getItem()) && item_stack.getCount() == slot.getItem().getCount()) {
 			return // Bit of an optimization.
 		}
 		item_stack = slot.getItem().copy() // Item reference is cleared when grabbed out of the slot.
@@ -105,6 +105,6 @@ ClientEvents.lang("en_us", event => {
 
 	for (let id in ResearchManager.research_entries) {
 		let entry = ResearchManager.research_entries[id]
-		event.add(`fieldguide.${ResearchManager.field_for(id).replace(":", ".")}.hint`, `Research ${entry.required} of this item for more.`)
+		event.add(`fieldguide.${ResearchManager.field_for(id).replace(":", ".")}.hint`, `Research ${entry.required} of these items for more.`)
 	}
 })

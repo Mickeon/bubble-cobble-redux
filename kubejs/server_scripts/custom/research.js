@@ -4,6 +4,7 @@
 
 let $OnDatapackSyncEvent = Java.loadClass("net.neoforged.neoforge.event.OnDatapackSyncEvent")
 let $ItemParticleOption = Java.loadClass("net.minecraft.core.particles.ItemParticleOption")
+let $UseOnContext = Java.loadClass("net.minecraft.world.item.context.UseOnContext")
 
 /**
  * @import {$LevelBlock} from "@package/dev/latvian/mods/kubejs/level"
@@ -27,6 +28,11 @@ BlockEvents.rightClicked("bubble_cobble:research_station", event => {
 	}
 
 	if (player.isShiftKeyDown()) {
+		let result = event.item.useOn(new $UseOnContext(player, event.hand, event.hitResult))
+		if (result.indicateItemUse()) {
+			event.cancel()
+			return
+		}
 		ResearchManager.open_research_shop(player)
 		event.cancel()
 		return
@@ -53,6 +59,7 @@ BlockEvents.rightClicked("bubble_cobble:research_station", event => {
 			player.closeMenu()
 		}
 	})
+	event.cancel()
 })
 
 PlayerEvents.inventoryClosed("kubejs:menu", event => {
@@ -100,6 +107,7 @@ NetworkEvents.dataReceived("bubble_cobble:donate", event => {
 	}
 
 	block_entity.persistentData.putUUID("activator", player.uuid)
+	block_entity.block.setBlockState(Block.withProperties(block_entity.getBlockState(), {lit: true}))
 	play_sound_globally(event.level, block_pos.center, "create:confirm", "blocks", 0.75, 0.2)
 })
 
@@ -165,6 +173,7 @@ BlockEvents.blockEntityTick("bubble_cobble:research_station", event => {
 		}
 	} else {
 		block_entity.persistentData.remove("activator")
+		block_entity.block.setBlockState(Block.withProperties(block_entity.getBlockState(), {lit: false}))
 		block_entity.level.spawnParticles(`minecraft:dust_plume`, false,
 			spawn_pos.x(), spawn_pos.y(), spawn_pos.z(),
 			facing.getX() * 0.1, 0.2, facing.getZ() * 0.1,
