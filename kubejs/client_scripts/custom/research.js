@@ -84,7 +84,7 @@ NetworkEvents.dataReceived("bubble_cobble:update_donation_progress", event => {
 	let updated_donations_left = event.data
 	// TODO: Allow updating individual entries in pieces rather than always overriding.
 	data.put("donations_left", updated_donations_left)
-	console.log(updated_donations_left)
+	// console.log(updated_donations_left)
 
 	// let $Language = Java.loadClass("net.minecraft.locale.Language")
 	// $Language.getInstance().getLanguageData().clear() This actually works. Keep it in mind for debugging purposes.
@@ -102,4 +102,9 @@ ClientEvents.lang("en_us", event => {
 		"gui.society_trading.balance": "\uf014 %f",
 		"jei.society_trading.price": "%s\u00a4"
 	})
+
+	for (let id in ResearchManager.research_entries) {
+		let entry = ResearchManager.research_entries[id]
+		event.add(`fieldguide.${ResearchManager.field_for(id).replace(":", ".")}.hint`, `Research ${entry.required} of this item for more.`)
+	}
 })

@@ -1,33 +1,33 @@
 {
   "variants": {
-    "facing=east,open=false": {
-      "model": "minecraft:block/furnace",
+    "facing=east,lit=false": {
+      "model": "minecraft:block/research_station",
       "y": 90
     },
-    "facing=east,open=true": {
-      "model": "minecraft:block/furnace_on",
+    "facing=east,lit=true": {
+      "model": "minecraft:block/research_station_on",
       "y": 90
     },
-    "facing=north,open=false": {
-      "model": "minecraft:block/furnace"
+    "facing=north,lit=false": {
+      "model": "minecraft:block/research_station"
     },
-    "facing=north,open=true": {
-      "model": "minecraft:block/furnace_on"
+    "facing=north,lit=true": {
+      "model": "minecraft:block/research_station_on"
     },
-    "facing=south,open=false": {
-      "model": "minecraft:block/furnace",
+    "facing=south,lit=false": {
+      "model": "minecraft:block/research_station",
       "y": 180
     },
-    "facing=south,open=true": {
-      "model": "minecraft:block/furnace_on",
+    "facing=south,lit=true": {
+      "model": "minecraft:block/research_station_on",
       "y": 180
     },
-    "facing=west,open=false": {
-      "model": "minecraft:block/furnace",
+    "facing=west,lit=false": {
+      "model": "minecraft:block/research_station",
       "y": 270
     },
-    "facing=west,open=true": {
-      "model": "minecraft:block/furnace_on",
+    "facing=west,lit=true": {
+      "model": "minecraft:block/research_station_on",
       "y": 270
     }
   }

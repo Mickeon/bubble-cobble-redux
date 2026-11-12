@@ -24,9 +24,9 @@
 	"modmenu.nameTranslation._management": " Management",
 
 	"category.bubble_cobble.fieldguide.donations": "Donations",
-	"fieldguide.name.bubble_cobble.tuff": "Tufffffff",
-	"fieldguide.bubble_cobble.tuff.description": "You gotta say it like you're chewing on a big, scrumptious apple.",
-	"fieldguide.bubble_cobble.tuff.hint": "Donate.",
+	"fieldguide.name.bubble_cobble.research/tuff": "Tufffffff",
+	"fieldguide.bubble_cobble.research/tuff.description": "You gotta say it like you're chewing on a big, scrumptious apple.",
+	"fieldguide.bubble_cobble.research/tuff.hint": "Research.",
 
 	"fieldguide.minecraft.allay.description": "Grouping it among the \"animals\" is exactly what the Illagers would do. I mean, if you get to know them, they're pretty cute.",
 	"fieldguide.minecraft.horse.description": "What is the point\nI mean, like- You can quite literally ride Scolipede. What more can you ask for?",

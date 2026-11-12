@@ -3,15 +3,20 @@ StartupEvents.registry("block", event => {
 	event.create("bubble_cobble:research_station")
 			.property(BlockProperties.HORIZONTAL_FACING)
 			.property(BlockProperties.OPEN)
+			.property(BlockProperties.LIT)
 			.soundType(SoundType.NETHERITE_BLOCK)
 			.hardness(5)
 			.placementState(callback => {
 				callback.set(BlockProperties.HORIZONTAL_FACING, callback.getHorizontalDirection().getOpposite())
 				callback.set(BlockProperties.OPEN, false)
+				callback.set(BlockProperties.LIT, false)
 			})
 			.blockEntity(info => {
 				info.inventory("inventory", ["up", "east", "north", "south", "west"], 1, 1, /** @param {$ItemStack} item */ (item) => item.hasTag("bubble_cobble:researchable"))
 				// info.rightClickOpensInventory("inventory")
+				info.ticking()
+				info.serverTicking()
+				info.tickFrequency(SEC)
 			})
 			.tagBlock([
 				"minecraft:mineable/pickaxe",
@@ -34,19 +39,20 @@ const ResearchManager = global.ResearchManager = exports.ResearchManager = {
 		return this.get_remaining_amount(player, id) > 0
 	},
 
-	/** @param {$Player} player @param {$ItemStack} item_stack  */
-	donate: function(player, item_stack) {
+	/** @param {$Player} player @param {$ItemStack} item_stack @param {number} limit */
+	donate: function(player, item_stack, limit) {
 		if (!this.can_donate(player, item_stack)) {
 			return false
 		}
 
+		limit = limit || 99
 		let data = player.getPersistentData()
 		if (!data.contains("donations_left")) {
 			data.put("donations_left", {})
 		}
 		let id = ResearchManager.get_entry_id_for_item(item_stack)
 		let donating_amount_left = ResearchManager.get_remaining_amount(player, id)
-		let donating_amount = Math.min(item_stack.getCount(), donating_amount_left)
+		let donating_amount = Math.min(item_stack.getCount(), donating_amount_left, limit)
 		data.getCompound("donations_left").putInt(id, donating_amount_left - donating_amount)
 
 		item_stack.shrink(donating_amount)
@@ -138,7 +144,7 @@ const ResearchManager = global.ResearchManager = exports.ResearchManager = {
 			],
 			default_count: 32,
 			default_price: 64,
-			required: 16,
+			required: 128,
 		},
 		"clay_bricks":  {
 			unlocks: [
@@ -147,6 +153,12 @@ const ResearchManager = global.ResearchManager = exports.ResearchManager = {
 			],
 			default_count: 32,
 			required: 16,
+		},
+		"bleachdew":  {
+			unlocks: [
+				{item: {id: "arts_and_crafts:bleachdew", count: 32}, price: 40},
+			],
+			required: 64,
 		},
 	},
 

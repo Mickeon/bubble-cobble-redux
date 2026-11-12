@@ -3,6 +3,7 @@
 // requires: numismatics
 
 let $OnDatapackSyncEvent = Java.loadClass("net.neoforged.neoforge.event.OnDatapackSyncEvent")
+let $ItemParticleOption = Java.loadClass("net.minecraft.core.particles.ItemParticleOption")
 
 /**
  * @import {$LevelBlock} from "@package/dev/latvian/mods/kubejs/level"
@@ -42,6 +43,16 @@ BlockEvents.rightClicked("bubble_cobble:research_station", event => {
 	// FIXME: Right-clicking to place a block on the side also triggers this.
 	const inventory = /** @type {$InventoryAttachment$Wrapped} */ (block_entity.attachments.get("inventory"))
 	player.openInventoryGUI(inventory, block_entity.block.block.name)
+
+	event.server.scheduleRepeatingInTicks(1, callback => {
+		if (player.isRemoved() || !player_to_station_table.containsKey(player)) {
+			callback.clear()
+			return
+		}
+		if (block_entity.isRemoved()) {
+			player.closeMenu()
+		}
+	})
 })
 
 PlayerEvents.inventoryClosed("kubejs:menu", event => {
@@ -74,16 +85,22 @@ NetworkEvents.dataReceived("bubble_cobble:donate", event => {
 		return
 	}
 	let block_pos = block_entity.blockPos
-	let slot = /** @type {$InventoryKJSSlot} */ (player.containerMenu.getSlot(0))
-	let item_stack = slot.getItem()
-	let copied_stack = item_stack.copy() // Hack: Copy item stack. It may become empty after successful donate().
-	if (ResearchManager.donate(player, item_stack)) {
-		play_sound_globally(event.level, block_pos.center, "bubble_cobble:crash.fruit_got", "blocks", 0.5)
-		play_sound_globally(event.level, block_pos.center, "minecraft:entity.allay.item_thrown", "blocks", 0.5)
-		ResearchManager.update_donation_progress(player, copied_stack, block_pos)
-	} else {
-		play_sound_globally(event.level, block_pos.center, "bubble_cobble:ui.buzz", "blocks", 0.25)
+	if (player.isCreative()) {
+		let slot = /** @type {$InventoryKJSSlot} */ (player.containerMenu.getSlot(0))
+		let item_stack = slot.getItem()
+		let copied_stack = item_stack.copy() // Hack: Copy item stack. It may become empty after successful donate().
+		if (ResearchManager.donate(player, item_stack)) {
+			play_sound_globally(event.level, block_pos.center, "bubble_cobble:crash.fruit_got", "blocks", 0.5)
+			play_sound_globally(event.level, block_pos.center, "minecraft:entity.allay.item_thrown", "blocks", 0.5)
+			ResearchManager.update_donation_progress(player, copied_stack, block_pos)
+		} else {
+			play_sound_globally(event.level, block_pos.center, "bubble_cobble:ui.buzz", "blocks", 0.25)
+		}
+		return
 	}
+
+	block_entity.persistentData.putUUID("activator", player.uuid)
+	play_sound_globally(event.level, block_pos.center, "create:confirm", "blocks", 0.75, 0.2)
 })
 
 NetworkEvents.dataReceived("bubble_cobble:open_research_shop", event => {
@@ -94,6 +111,67 @@ NetworkEvents.dataReceived("bubble_cobble:open_research_shop", event => {
 		return
 	}
 	ResearchManager.open_research_shop(player)
+})
+
+
+BlockEvents.blockEntityTick("bubble_cobble:research_station", event => {
+	const block_entity = /** @type {$KubeBlockEntity} */ (event.block.getEntity())
+	if (!block_entity.persistentData.hasUUID("activator")) {
+		return
+	}
+	const player = /** @type {$Player} */ (event.server.getEntityByUUID(block_entity.persistentData.getUUID("activator")))
+	if (!player) {
+		play_sound_globally(event.level, block_pos.center, "bubble_cobble:ui.buzz", "blocks", 0.25)
+		return
+	}
+	const block_pos = block_entity.blockPos
+	const facing = block_entity.getBlockState().getValue(BlockProperties.HORIZONTAL_FACING)
+	const spawn_pos = block_pos.center.relative(facing, 0.55)
+
+	const inventory = /** @type {$InventoryAttachment$Wrapped} */ (block_entity.attachments.get("inventory"))
+	const item_stack = inventory.getStackInSlot(0)
+	const copied_stack = item_stack.copy() // Hack: Copy item stack. It may become empty after successful donate().
+	if (ResearchManager.donate(player, item_stack, 1)) {
+		ResearchManager.update_donation_progress(player, copied_stack, block_pos)
+
+		let id = ResearchManager.get_entry_id_for_item(item_stack)
+		let pitch = remap(ResearchManager.get_remaining_amount(player, id), 0, ResearchManager.get_required_amount(id), 2.0, 0.75)
+		play_sound_globally(event.level, block_pos.center, "create:crushing_1", "blocks", 0.75, 1.0)
+		play_sound_globally(event.level, block_pos.center, "bubble_cobble:crash.fruit_got", "blocks", 0.15, pitch)
+
+		block_entity.level.spawnParticles(new $ItemParticleOption("minecraft:item", copied_stack), false,
+			spawn_pos.x(), spawn_pos.y(), spawn_pos.z(),
+			facing.getX() * 0.2, 0.2, facing.getZ() * 0.2,
+			10, 0.1
+		)
+
+		let random = block_entity.level.getRandom()
+		event.level.spawnEntity("supplementaries:brick_projectile", /** @param {import("@package/net/minecraft/world/entity/projectile").$ThrowableItemProjectile} */ brick => {
+			brick.setItem(copied_stack)
+			brick.setPos(spawn_pos)
+			let motion = Vec3d.ZERO.relative(facing, 0.05).yRot(random.nextGaussian() * 0.5)
+			brick.setMotion(motion.x(), random.nextFloat() * 0.1, motion.z())
+			brick.setOwner(player)
+			brick.setSilent(true)
+		})
+		let orb_chance = random.nextFloat()
+		if (orb_chance > 0.666) {
+			event.level.spawnEntity("minecraft:experience_orb", /** @param {import("@package/net/minecraft/world/entity").$ExperienceOrb} */ orb => {
+				orb.setPos(block_pos.center.relative(facing, 0.6))
+				let motion = Vec3d.ZERO.relative(facing, 0.05).yRot(random.nextGaussian() * 0.5)
+				orb.addMotion(motion.x(), -0.5, motion.z())
+				orb.value = 1
+			})
+		}
+	} else {
+		block_entity.persistentData.remove("activator")
+		block_entity.level.spawnParticles(`minecraft:dust_plume`, false,
+			spawn_pos.x(), spawn_pos.y(), spawn_pos.z(),
+			facing.getX() * 0.1, 0.2, facing.getZ() * 0.1,
+			10, 0.1
+		)
+		play_sound_globally(event.level, block_pos.center, "create:chiff", "blocks", 0.25, 0.5)
+	}
 })
 
 //#region Debugging.
@@ -145,6 +223,10 @@ ServerEvents.tags("item", event => {
 
 ServerEvents.tags("block", event => {
 	event.add("bubble_cobble:dummy_shops", "minecraft:orange_glazed_terracotta")
+})
+
+ServerEvents.recipes(event => {
+	event.shaped("bubble_cobble:research_station", ["LBL", "RAR", "LGL"], {L: "#minecraft:logs", B: "minecraft:writable_book", R: "minecraft:redstone", A: "minecraft:lectern", G: "create:millstone"})
 })
 
 //#region Data generation.
@@ -232,7 +314,6 @@ ServerEvents.generateData("after_mods", event => {
 
 	console.log(`Generated auxiliary donation data in ${((Utils.getSystemTime() - time_start) / 1000).toFixed(3)} s`)
 })
-//#endregion
 
 const COIN_MAP = [
 	{coin: "numismatics:sun", value: 4096},
@@ -260,16 +341,7 @@ function create_coins_from_value(price, result) {
 		}
 	}
 }
-
-// BlockEvents.blockEntityTick("bubble_cobble:research_station", event => {
-// 	const block_entity = /** @type {$KubeBlockEntity} */ (event.block.getEntity())
-// 	const inventory = /** @type {$InventoryAttachment$Wrapped} */ (block_entity.attachments.get("inventory"))
-
-// 	event.block.setBlockState(Block.withProperties(event.block.getBlockState(), {
-// 		facing: inventory.isEmpty() ? "east" : "west"
-// 	}))
-
-// })
+//#endregion
 
 // PlayerEvents.inventoryOpened("kubejs:menu", event => {
 	// const player = event.player
