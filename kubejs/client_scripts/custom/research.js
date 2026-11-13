@@ -99,7 +99,7 @@ ClientEvents.lang("en_us", event => {
 	event.addAll("society_trading", {
 		"gui.society_trading.price": "%s \u00a4 ",
 		"gui.society_trading.hover_price_one": "Price: %s\u00a4",
-		"gui.society_trading.balance": "\uf014 %f",
+		"gui.society_trading.balance": "%f \uf014",
 		"jei.society_trading.price": "%s\u00a4"
 	})
 
