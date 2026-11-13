@@ -1,5 +1,5 @@
 {
-	"icon": "fieldguide:textures/gui/icons/pig.png",
+	"icon": "farmersdelight:textures/item/hamburger.png",
 	"contents": [
 		{
 			"type": "auto_populate",

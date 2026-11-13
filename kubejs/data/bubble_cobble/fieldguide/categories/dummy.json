@@ -1,13 +1,25 @@
 {
-	"icon": "fieldguide:textures/gui/icons/info.png",
+	"icon": "fieldguide:textures/gui/icons/bee.png",
 	"contents": [
 		{
 			"type": "entry",
-			"id": "minecraft:green_wool"
+			"id": "minecraft:green_wool",
+			"unlock": {
+				"triggers": ["obtain"]
+			}
 		},
 		{
 			"type": "entry",
-			"id": "minecraft:orange_wool"
+			"id": "minecraft:orange_wool",
+			"unlock": {
+				"prerequisites": ["entity:minecraft/warden"],
+				"trigger": ["obtain"]
+			}
+		},
+		{
+			"type": "virtual_entry",
+			"id": "bubble_cobble:dummy/light_blue_wool",
+			"virtual_type": "tutorial"
 		},
 		{
 			"type": "virtual_entry",

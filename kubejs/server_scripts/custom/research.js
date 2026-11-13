@@ -243,7 +243,7 @@ ServerEvents.generateData("after_mods", event => {
 	let time_start = Utils.getSystemTime()
 
 	let field_guide_category = {
-		icon: "fieldguide:textures/gui/icons/info.png",
+		icon: "bubble_cobble:textures/item/blue_mascot_cat.png",
 		contents: [],
 	}
 	let field_guide_composites = {
@@ -260,25 +260,42 @@ ServerEvents.generateData("after_mods", event => {
 		trades: []
 	}
 
+	let i = 0
 	for (let id in ResearchManager.research_entries) {
 		let entry = ResearchManager.research_entries[id]
 		let item_ids = entry.unlocks.map(u => u.item?.id || u.item)
 		let first_item_id = item_ids[0]
+		let field_entry_id = ResearchManager.field_for(id)
 
-		field_guide_category.contents.push({
-			type: "entry",
-			id: first_item_id
-		})
-
+		let new_field_entry = {
+			// Unfortunately, it needs to be a virtual entry with with no blocks in new_composites,
+			// Otherwise it could be unlocked by scanning the blocks, which we don't want.
+			type: "virtual_entry",
+			id: field_entry_id,
+			virtual_type: "tutorial"
+		}
 		let new_composites = {
-			id: ResearchManager.field_for(id),
+			id: field_entry_id,
 			display: first_item_id,
-			components: item_ids,
+			components: [field_entry_id],
 			render: ResearchManager.make_render_for_field_composites(entry)
 		}
 		if (!new_composites.render) {
-			delete new_composites.render
+			// delete new_composites.render
+			// The crap I have to do to make non-placeable items unlockable.
+			// And most of what it does is make these entries unlockable by scanning them,
+			// Which we absolutely don't want. I will have to fix this someday.
+			// new_field_entry = {
+			// 	type: "entry",
+			// 	id: `item:${ID.namespace(first_item_id)}/${ID.path(first_item_id)}`
+			// }
+			// new_composites.components = item_ids
+			// new_field_entry.icon = `item:${ID.namespace(first_item_id)}/${ID.path(first_item_id)}`
+			// new_composites.display = `item:${ID.namespace(first_item_id)}/${ID.path(first_item_id)}`
+			new_composites.render = ["minecraft:dirt"] // I don't know why this works for items but okay.
 		}
+
+		field_guide_category.contents.push(new_field_entry)
 		field_guide_composites.values.push(new_composites)
 
 		let stage = ResearchManager.stage_for(id)
@@ -299,7 +316,7 @@ ServerEvents.generateData("after_mods", event => {
 				request: coins[0],
 				numismatics_cost: price,
 				stage_required: stage,
-				trade_id: "research_" + item.id
+				trade_id: "research/" + item.id
 			}
 			if (coins[1]) {
 				trade.second_request = coins[1]
@@ -310,18 +327,19 @@ ServerEvents.generateData("after_mods", event => {
 
 			society_trading_shop.trades.push(trade)
 		}
+		i += 1
 	}
 
-	// console.log(JSON.stringify(field_guide_category, null, "\t"))
-	event.json("bubble_cobble:fieldguide/categories/donations", field_guide_category)
+	console.log(JSON.stringify(field_guide_category, null, "\t"))
+	event.json("bubble_cobble:fieldguide/categories/researches", field_guide_category)
 
-	// console.log(JSON.stringify(field_guide_composites, null, "\t"))
-	event.json("bubble_cobble:fieldguide/composites/donations", field_guide_composites)
+	console.log(JSON.stringify(field_guide_composites, null, "\t"))
+	event.json("bubble_cobble:fieldguide/composites/researches", field_guide_composites)
 
 	// console.log(JSON.stringify(society_trading_shop, null, "\t"))
 	event.json("society_trading:shops/research_rewarder", society_trading_shop)
 
-	console.log(`Generated auxiliary donation data in ${((Utils.getSystemTime() - time_start) / 1000).toFixed(3)} s`)
+	console.log(`Generated auxiliary research data for ${i} entries in ${((Utils.getSystemTime() - time_start) / 1000).toFixed(3)} s`)
 })
 
 const COIN_MAP = [

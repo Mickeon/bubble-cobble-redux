@@ -24,7 +24,7 @@ const ITEM_TAG_DISPLAY_INFO = [
 	{tag: "brewinandchewin:cheese_wheels/ripe", textures: ["brewinandchewin:item/flaxen_cheese_wheel", "brewinandchewin:item/scarlet_cheese_wheel"]},
 	{tag: "brewinandchewin:cheese_wheels/unripe", textures: ["brewinandchewin:item/unripe_flaxen_cheese_wheel", "brewinandchewin:item/unripe_scarlet_cheese_wheel"]},
 	{tag: "bubble_cobble:cattails", name: "Cattails", textures: ["biomeswevegone:item/cattails", "biomesoplenty:item/cattail"]},
-	{tag: "bubble_cobble:donatable", name: "Donatable"},
+	{tag: "bubble_cobble:researchable", name: "Researchable"},
 	{tag: "c:crops/cabbage", textures: ["farmersdelight:item/cabbage", "farmersdelight:item/cabbage_leaf"]},
 	{tag: "c:crops/grain", textures: ["minecraft:item/wheat", "farmersdelight:item/rice"]},
 	{tag: "c:crops/rice", textures: ["farmersdelight:item/rice", "cobblemon:item/hearty_grains"]},

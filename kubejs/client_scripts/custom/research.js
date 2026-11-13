@@ -105,6 +105,13 @@ ClientEvents.lang("en_us", event => {
 
 	for (let id in ResearchManager.research_entries) {
 		let entry = ResearchManager.research_entries[id]
-		event.add(`fieldguide.${ResearchManager.field_for(id).replace(":", ".")}.hint`, `Research ${entry.required} of these items for more.`)
+		let lang_id = ResearchManager.field_lang_for(id)
+		event.add(`fieldguide.${lang_id}.hint`, `Research §3${entry.required}§r of these items for more.`)
+		if (entry.name) {
+			event.add(`fieldguide.name.${lang_id}`, entry.name)
+		}
+		if (entry.description) {
+			event.add(`fieldguide.${lang_id}.description`, entry.description)
+		}
 	}
 })

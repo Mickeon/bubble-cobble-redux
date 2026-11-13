@@ -9,14 +9,20 @@
     "cobblemon:empty_pokeball",
     "cobblemon:poke_bobber",
     "supplementaries:cannonball",
+    "mowziesmobs:block_swapper",
+    "mowziesmobs:block_swapper_tunneling",
     "mowziesmobs:boulder_platform",
     "mowziesmobs:boulder_platform_crumbling",
+    "mowziesmobs:boulder_projectile",
     "yo_hooks:hook_entity",
     "minecraft:experience_orb",
     "relics:relic_experience_orb",
+    "reliquified_artifacts:spark",
+    "reliquified_artifacts:whoopee_cloud",
     "sleep_tight:dreamer_essence_dummy",
     "crittersandcompanions:grappling_hook",
     "crittersandcompanions:mud_ball",
-    "mowziesmobs:axe_attack"
+    "mowziesmobs:axe_attack",
+    "mowziesmobs:ferrous_wroughtnaut"
   ]
 }

@@ -115,47 +115,134 @@ const ResearchManager = global.ResearchManager = exports.ResearchManager = {
 	 */
 	/** @type {Record<string, ResearchEntry>} */
 	research_entries: {
-		"red_dye": {
-			unlocks: [{item: {id: "minecraft:red_dye", count: 32}, price: 32}],
+		"tuff": {
+			unlocks: [
+				{item: "minecraft:tuff", price: 64},
+				{item: "minecraft:tuff_bricks", price: 64},
+				{item: "minecraft:polished_tuff", price: 64},
+				{item: "minecraft:chiseled_tuff", price: 64},
+				{item: "minecraft:chiseled_tuff_bricks", price: 64},
+				{item: "create:cut_tuff"},
+				{item: "create:polished_cut_tuff"},
+				{item: "create:cut_tuff_bricks"},
+				{item: "create:small_tuff_bricks"},
+				{item: "create:layered_tuff"},
+				{item: "create:tuff_pillar"},
+				{item: "bits_n_bobs:tuff_tiles"}
+			],
+			default_count: 32,
+			default_price: 72,
+			required: 16,
+			description: "You gotta say it like you're chewing on a big, scrumptious apple.",
+		},
+		"veridium": {
+			unlocks: [
+				{item: "create:veridium", price: 64},
+				{item: "create:veridium_pillar"},
+				{item: "create:cut_veridium"},
+				{item: "create:cut_veridium_bricks"},
+				{item: "create:small_veridium_bricks"},
+				{item: "create:layered_veridium"},
+				{item: "create:polished_cut_veridium"},
+				{item: "bits_n_bobs:veridium_tiles"},
+			],
+			default_count: 32,
+			default_price: 72,
+			required: 32,
+			description: "I've seen a random wiki page claiming that Veridium is \"likely named after the Spanish word \"verde\"\". No. Etymology, my baby. It's from the Latin word \"viridis\"",
+		},
+		"asurine": {
+			unlocks: [
+				{item: "create:asurine", price: 64},
+				{item: "create:asurine_pillar"},
+				{item: "create:cut_asurine"},
+				{item: "create:cut_asurine_bricks"},
+				{item: "create:small_asurine_bricks"},
+				{item: "create:layered_asurine"},
+				{item: "create:polished_cut_asurine"},
+				{item: "bits_n_bobs:asurine_tiles"},
+			],
+			default_count: 32,
+			default_price: 72,
 			required: 32,
 		},
-		"encased_fan":  {
-			unlocks: [{item: {id: "create:encased_fan", count: 4}, price: 32}],
-			required: 8,
-		},
-		"tuff":  {
+		"ochrum": {
 			unlocks: [
-				{item: "minecraft:tuff"},
-				{item: "minecraft:tuff_bricks"},
-				{item: "minecraft:polished_tuff"},
-				{item: "minecraft:chiseled_tuff"},
-				{item: "minecraft:chiseled_tuff_bricks"},
-				{item: "create:cut_tuff", price: 96},
-				{item: "create:polished_cut_tuff", price: 96},
-				{item: "create:cut_tuff_bricks", price: 96},
-				{item: "create:small_tuff_bricks", price: 96},
-				{item: "create:layered_tuff", price: 96},
-				{item: "create:tuff_pillar", price: 96},
-				{item: "bits_n_bobs:tuff_tiles", price: 96}
+				{item: "create:ochrum", price: 64},
+				{item: "create:ochrum_pillar"},
+				{item: "create:cut_ochrum"},
+				{item: "create:cut_ochrum_bricks"},
+				{item: "create:small_ochrum_bricks"},
+				{item: "create:layered_ochrum"},
+				{item: "create:polished_cut_ochrum"},
+				{item: "bits_n_bobs:ochrum_tiles"},
 			],
 			default_count: 32,
-			default_price: 64,
-			required: 16,
+			default_price: 72,
+			required: 32,
 		},
-		"netherrack":  {
+		"crimsite": {
 			unlocks: [
-				{item: "minecraft:netherrack", price: 8},
-				{item: "minecraft:nether_brick", price: 16},
-				{item: "minecraft:nether_bricks", price: 64},
-				{item: "minecraft:chiseled_nether_bricks", price: 64},
-				{item: "minecraft:cracked_nether_bricks", price: 64},
-				{item: "minecraft:red_nether_bricks", price: 64},
+				{item: "create:crimsite", price: 64},
+				{item: "create:crimsite_pillar"},
+				{item: "create:cut_crimsite"},
+				{item: "create:cut_crimsite_bricks"},
+				{item: "create:small_crimsite_bricks"},
+				{item: "create:layered_crimsite"},
+				{item: "create:polished_cut_crimsite"},
+				{item: "bits_n_bobs:crimsite_tiles"},
 			],
 			default_count: 32,
-			default_price: 64,
-			required: 128,
+			default_price: 72,
+			required: 32,
 		},
-		"clay_bricks":  {
+		"limestone": {
+			unlocks: [
+				{item: "create:limestone", price: 64},
+				{item: "create:limestone_pillar"},
+				{item: "create:cut_limestone"},
+				{item: "create:cut_limestone_bricks"},
+				{item: "create:small_limestone_bricks"},
+				{item: "create:layered_limestone"},
+				{item: "create:polished_cut_limestone"},
+				{item: "bits_n_bobs:limestone_tiles"},
+			],
+			default_count: 32,
+			default_price: 72,
+			required: 32,
+			description: "\"Candle?\"\n\"hi\"\n\"Completely unrelated, I discovered that in the modpack there's like... 3 Limestones\"\n\"that sucks. get rid of them.\"\n\n\"Ah-AH-EEH. EHM-!? 😖💥\""
+		},
+		"scoria": {
+			unlocks: [
+				{item: "create:scoria", price: 64},
+				{item: "create:scoria_pillar"},
+				{item: "create:cut_scoria"},
+				{item: "create:cut_scoria_bricks"},
+				{item: "create:small_scoria_bricks"},
+				{item: "create:layered_scoria"},
+				{item: "create:polished_cut_scoria"},
+				{item: "bits_n_bobs:scoria_tiles"},
+			],
+			default_count: 32,
+			default_price: 72,
+			required: 32,
+		},
+		"scorchia": {
+			unlocks: [
+				{item: "create:scorchia", price: 64},
+				{item: "create:scorchia_pillar"},
+				{item: "create:cut_scorchia"},
+				{item: "create:cut_scorchia_bricks"},
+				{item: "create:small_scorchia_bricks"},
+				{item: "create:layered_scorchia"},
+				{item: "create:polished_cut_scorchia"},
+				{item: "bits_n_bobs:scorchia_tiles"},
+			],
+			default_count: 32,
+			default_price: 72,
+			required: 32,
+		},
+		"clay_bricks": {
 			unlocks: [
 				{item: "minecraft:bricks"},
 				{item: "createdeco:short_red_bricks"},
@@ -168,15 +255,236 @@ const ResearchManager = global.ResearchManager = exports.ResearchManager = {
 			default_count: 32,
 			default_price: 64,
 			required: 16,
+			description: "I know it makes sense, but why does it take 4 Bricks for... 1 Bricks? You know what I am saying? This roof is gonna take so long, damn it!",
+			name: "Clay Bricks",
 		},
-		"bleachdew":  {
-			unlocks: [{item: {id: "arts_and_crafts:bleachdew", count: 32}, price: 40}],
-			required: 64,
+		"verdant_bricks": {
+			unlocks: [
+				{item: "createdeco:verdant_bricks"},
+				{item: "createdeco:short_verdant_bricks"},
+				{item: "createdeco:tiled_verdant_bricks"},
+				{item: "createdeco:long_verdant_bricks"},
+				{item: "createdeco:corner_verdant_bricks"},
+				{item: "createdeco:cracked_verdant_bricks"},
+				{item: "createdeco:mossy_verdant_bricks"},
+			],
+			default_count: 32,
+			default_price: 76,
+			required: 16,
+			description: "I've seen a random wiki page claiming that Veridium is \"likely named after the Spanish word \"verde\"\". No. Etymology, my baby. It's from the Latin word \"viridis\"",
 		},
-		"white_dye":  {
+		"scarlet_bricks": {
+			unlocks: [
+				{item: "createdeco:scarlet_bricks"},
+				{item: "createdeco:short_scarlet_bricks"},
+				{item: "createdeco:tiled_scarlet_bricks"},
+				{item: "createdeco:long_scarlet_bricks"},
+				{item: "createdeco:corner_scarlet_bricks"},
+				{item: "createdeco:cracked_scarlet_bricks"},
+				{item: "createdeco:mossy_scarlet_bricks"},
+			],
+			default_count: 32,
+			default_price: 76,
+			required: 16,
+			description: "Make from Crimsite, but they're really not *that* \"Crimson\". A bit unusual, really. In fact, they resemble the saturated clay Bricks from all the way back in Classic.",
+		},
+		"blue_bricks": {
+			unlocks: [
+				{item: "createdeco:blue_bricks"},
+				{item: "createdeco:short_blue_bricks"},
+				{item: "createdeco:tiled_blue_bricks"},
+				{item: "createdeco:long_blue_bricks"},
+				{item: "createdeco:corner_blue_bricks"},
+				{item: "createdeco:cracked_blue_bricks"},
+				{item: "createdeco:mossy_blue_bricks"},
+			],
+			default_count: 32,
+			default_price: 76,
+			required: 16,
+			description: "When the people in charge of BLU's side can't be bothered and decide to copy RED's homework.",
+		},
+		"pearl_bricks": {
+			unlocks: [
+				{item: "createdeco:pearl_bricks"},
+				{item: "createdeco:short_pearl_bricks"},
+				{item: "createdeco:tiled_pearl_bricks"},
+				{item: "createdeco:long_pearl_bricks"},
+				{item: "createdeco:corner_pearl_bricks"},
+				{item: "createdeco:cracked_pearl_bricks"},
+				{item: "createdeco:mossy_pearl_bricks"},
+			],
+			default_count: 32,
+			default_price: 76,
+			required: 16,
+			description: "So many white bricks it's enough to withstand at least 2 spicy peppers.",
+		},
+		"netherrack": {
+			unlocks: [
+				{item: "minecraft:netherrack", price: 8},
+				{item: "minecraft:nether_brick", price: 16},
+				{item: "minecraft:nether_bricks", price: 64},
+				{item: "minecraft:chiseled_nether_bricks", price: 64},
+				{item: "minecraft:cracked_nether_bricks", price: 64},
+				{item: "minecraft:red_nether_bricks", price: 64},
+			],
+			default_count: 32,
+			default_price: 64,
+			required: 128,
+			description: "I spent 5 minutes researching red bean rock from Hell and all I got is this lousy shirt.",
+		},
+		"white_dye": {
 			unlocks: [{item: {id: "minecraft:white_dye", count: 32}, price: 32}],
 			required: 32,
+			description: "I cannot make up what it's saying here? Oh no, wait, it's on black ink. We're good.",
 		},
+		"gray_dye": {
+			unlocks: [{item: {id: "minecraft:gray_dye", count: 32}, price: 32}],
+			required: 32,
+			description: "Ten times the dye wasn't strong enough.",
+		},
+		"red_dye": {
+			unlocks: [{item: {id: "minecraft:red_dye", count: 32}, price: 32}],
+			required: 32,
+			description: "They should make a new color that's, like, not bad.",
+		},
+		"orange_dye": {
+			unlocks: [{item: {id: "minecraft:orange_dye", count: 32}, price: 32}],
+			required: 32,
+			description: "The fruit came before.",
+		},
+		"green_dye": {
+			unlocks: [{item: {id: "minecraft:green_dye", count: 32}, price: 32}],
+			required: 32,
+			description: "Sniffer? The Rift? What are you talking about? Come back to your senses, give me all of your Cactus Green and go punch some Sheep.",
+		},
+		"bleachdew": {
+			unlocks: [{item: {id: "arts_and_crafts:bleachdew", count: 32}, price: 40}],
+			required: 64,
+			description: "Highly sought-after dye, popped from plants the ancients kept cramming in their mouths. Pppprobably why they all went exinct!",
+		},
+		"encased_fan": {
+			unlocks: [{item: {id: "create:encased_fan", count: 4}, price: 32}],
+			required: 4,
+		},
+		"windmill_bearing": {
+			unlocks: [{item: {id: "create:windmill_bearing", count: 4}, price: 32}],
+			required: 4,
+			description: "Our project was: Holland! There we were reading: \"My Friend Hands, from Holland.\". And we made... windmills! And stuck blue strips of paper onto white strips of paper. They were... \"canals\". And we kept talking about \"tulips\" and \"cheese\". In the end I thought they... grew cheese, and ate tulips."
+		},
+		"blaze_cake": {
+			unlocks: [{item: "create:blaze_cake", price: 64}],
+			required: 16,
+		},
+		"table_cloth": {
+			unlocks: [
+				{item: "create:red_table_cloth"}, // TODO: Absolutely a way to parse a whole tag. create:dyed_table_cloths.
+				{item: "create:andesite_table_cloth", price: 128},
+				{item: "create:copper_table_cloth", price: 128},
+				{item: "create:brass_table_cloth", price: 256},
+			],
+			default_count: 32,
+			default_price: 64,
+			required: 8,
+			description: "Where does the Andesite go? Does it hold the whole thing in place?",
+		},
+		"flywheel": {
+			unlocks: [{item: {id: "create:flywheel", count: 1}, price: 1024}],
+			required: 1,
+			description: "It's a giant, spinning wheel. Why did you research this? What else do you want to know?",
+		},
+		"industrial_iron": {
+			unlocks: [
+				{item: "create:industrial_iron_block"},
+				{item: "createdeco:industrial_iron_sheet_metal", default_price: 96}
+			],
+			default_count: 32,
+			default_price: 64,
+			required: 32,
+			description:  "It's... Iron? The way it's meant to be. Unlike Minecraft's own idealized standards, this one is meant to look pretty and that's it.",
+		},
+		"towel_block": {
+			unlocks: [
+				{item: "urban_decor:red_towel_block"}, // TODO: A way to parse a regex.
+			],
+			default_count: 32,
+			default_price: 64,
+			required: 32,
+			description: "I am not sure how exactly you're capable of compressing flimsy sheets into relatively sturdy matter with your bare hands. I commend you.",
+		},
+		"porcelain": {
+			unlocks: [
+				{item: "urban_decor:porcelain_block"},
+				{item: "urban_decor:porcelain_bricks"},
+				{item: "urban_decor:porcelain_tiles"},
+			],
+			default_count: 32,
+			default_price: 64,
+			required: 16,
+			description: "Ceramic, clay, same thing... No, not really. Not to be confused with Clay, either. This one is fine china.",
+		},
+		"dark_porcelain": {
+			unlocks: [
+				{item: "urban_decor:dark_porcelain_block"},
+				{item: "urban_decor:dark_porcelain_bricks"},
+				{item: "urban_decor:dark_porcelain_tiles"},
+				{item: "urban_decor:checkered_porcelain_tiles"}, // Ideally should unlock when having both porcelain and dark_porcelain.
+			],
+			default_count: 32,
+			default_price: 64,
+			required: 16,
+			description: "Ceramic, clay, same thing... No, not really. Not to be confused with Clay, either. This one is fine china.",
+		},
+		"cherry_porcelain": {
+			unlocks: [
+				{item: "urban_decor:cherry_wrapped_porcelain_block"},
+				{item: "urban_decor:cherry_wrapped_porcelain_bricks"},
+				{item: "urban_decor:cherry_wrapped_porcelain_tiles"},
+			],
+			default_count: 32,
+			default_price: 96,
+			required: 16,
+			description: "No cherries were harmed in the making of this research. Mostly because I couldn't find any. Trust me, I uprooted all the sakura trees I could find, just to make sure",
+		},
+		"azure_porcelain": {
+			unlocks: [
+				{item: "urban_decor:azure_wrapped_porcelain_block"},
+				{item: "urban_decor:azure_wrapped_porcelain_bricks"},
+				{item: "urban_decor:azure_wrapped_porcelain_tiles"},
+			],
+			default_count: 32,
+			default_price: 96,
+			required: 16,
+			description: "No cherries were harmed in the making of this research project. Mostly because there aren't any.",
+		},
+		"tatami": {
+			unlocks: [
+				{item: {id: "farmersdelight:tatami", count: 32}, price: 64},
+				{item: {id: "farmersdelight:half_tatami_mat", count: 32}, price: 32},
+				{item: {id: "farmersdelight:full_tatami_mat", count: 32}, price: 16},
+			],
+			required: 32,
+			description: "Ah, they connect if you place them on the sides. That's neat.\nCan I get my straw back?",
+			render: [
+				"0,0,0|farmersdelight:tatami",
+				"1,0,0|farmersdelight:half_tatami_mat",
+				"0,0,-1|farmersdelight:full_tatami_mat|facing=east,part=foot",
+				"1,0,-1|farmersdelight:full_tatami_mat|facing=east,part=head",
+			]
+		},
+		"hearthy_tatami": {
+			unlocks: [
+				{item: {id: "cobblemon:tatami_block", count: 32}, price: 64},
+				{item: {id: "cobblemon:tatami_mat", count: 32}, price: 22},
+			],
+			required: 32,
+			description: "Sir, a second Tatami Mat has hit the modpack.\nThey loosely connect, too, if you spin them around.",
+			render: [
+				"0,0,0|cobblemon:tatami_block|facing=east",
+				"1,0,0|cobblemon:tatami_block|facing=west",
+				"0,0,-1|cobblemon:tatami_mat|facing=east",
+				"1,0,-1|cobblemon:tatami_mat|facing=west",
+			]
+		}
 	},
 
 	get_research_ids: function() {
@@ -191,7 +499,11 @@ const ResearchManager = global.ResearchManager = exports.ResearchManager = {
 		return "bubble_cobble:research/" + id
 	},
 
-	hack_field_for: function(id) {
+	field_lang_for: function(id) {
+		return "bubble_cobble.research/" + id
+	},
+
+	field_hack_for: function(id) {
 		// HACK: Lets the Toast notification appear when this ID is used for unlocking/revoking.
 		return "block:bubble_cobble/research/" + id
 	},
@@ -229,13 +541,14 @@ const ResearchManager = global.ResearchManager = exports.ResearchManager = {
 		// 	"-3,2,0|bits_n_bobs:tuff_tiles"
 		// ]
 
+		let height = block_ids.length > 4 ? 3 : 2 // Try forming a square with few blocks.
 		let x = 0
 		let y = 0
 		let render = []
 		for (let i in block_ids) {
 			let id = block_ids[i]
-			x = Math.ceil(i / -3)
-			y = i % 3
+			x = Math.ceil(i / -height)
+			y = i % height
 
 			render.push(`${x.toFixed()},${y.toFixed()},0|${id}`)
 		}
@@ -258,7 +571,7 @@ const ResearchManager = global.ResearchManager = exports.ResearchManager = {
 		let what_to_update = specific_item ? [this.get_entry_id_for_item(specific_item)] : this.get_research_ids()
 		for (let id of what_to_update) {
 			// let field_guide_id = "bubble_cobble:" + id
-			let field_guide_id = this.hack_field_for(id)
+			let field_guide_id = this.field_hack_for(id)
 			let stage = this.stage_for(id)
 			if (this.get_remaining_amount(player, id) <= 0) {
 				if (station_block_pos) {

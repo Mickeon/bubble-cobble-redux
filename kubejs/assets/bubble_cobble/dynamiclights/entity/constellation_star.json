@@ -3,7 +3,9 @@
 		"type": [
 			"relics:constellation_star",
 			"relics:glitchy_illusion",
-			"relics:electric_spark"
+			"relics:electric_spark",
+			"reliquified_artifacts:spark",
+			"reliquified_artifacts:whoopee_cloud"
 		]
 	},
 	"luminance": 5

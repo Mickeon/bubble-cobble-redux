@@ -36,21 +36,22 @@ ServerEvents.recipes(event => {
 	console.log(`Removed recipes that include disabled items in ${((Utils.getSystemTime() - time_start) / 1000).toFixed(3)} s`)
 })
 
-if (!is_dev()) {
 
 ServerEvents.tags("item", event => {
 	let item_ids = get_disabled_ingredient().itemIds
-	event.removeAllTagsFrom(item_ids)
-	event.add("c:hidden_from_recipe_viewers", item_ids)
+	if (!is_dev()) {
+		event.removeAllTagsFrom(item_ids)
+		event.add("c:hidden_from_recipe_viewers", item_ids)
+	}
 	if (Platform.isLoaded("fieldguide")) {
 		event.add("fieldguide:blacklisted", item_ids)
 	}
 })
 
-ServerEvents.tags("mob_effect", event => {
-	event.add("c:hidden_from_recipe_viewers", HIDDEN_MOB_EFFECTS)
-})
-
+if (!is_dev()) {
+	ServerEvents.tags("mob_effect", event => {
+		event.add("c:hidden_from_recipe_viewers", HIDDEN_MOB_EFFECTS)
+	})
 }
 
 // Hide advancements.

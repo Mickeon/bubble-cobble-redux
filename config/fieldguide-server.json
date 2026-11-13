@@ -32,8 +32,9 @@
   "scanSpeed": 1.0,
   "minScanHitboxSize": 1.0,
   "grantXpOnScan": true,
-  "xpAmountOnScan": 5,
+  "xpAmountOnScan": 0,
   "categoryXpAmounts": {
+    "bubble_cobble:researches": 2,
     "fieldguide:bosses": 50,
     "fieldguide:monsters": 7,
     "fieldguide:animals": 5,
