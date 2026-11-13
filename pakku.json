@@ -92,7 +92,7 @@
         "!config/fancytabsections-*",
         "!config/animatedhearts-client.toml",
         "!config/shepard_sound_streaks-client.toml",
-        "!fieldguide_cache/",
+        "!config/cirrus-client.json",
         "!*lightspeed*",
         "!*locomotionmap.json"
     ],

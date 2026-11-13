@@ -30,7 +30,6 @@ ServerEvents.tags("item", event => {
 	event.add("c:tools/spear", "#minecraft:spears") // Reported, but marked as "Won't fix": https://github.com/Unknowneth/Backported-Spears/issues/60.
 	event.add("c:storage_blocks", "#c:storage_blocks/industrial_iron") // Reported: https://github.com/talrey/CreateDeco/issues/303
 	event.add("c:glass_panes", "createdeco:iron_window_pane", "createdeco:zinc_window_pane", "createdeco:brass_window_pane", "createdeco:copper_window_pane", "createdeco:andesite_window_pane", "createdeco:industrial_iron_window_pane") // Reported: https://github.com/talrey/CreateDeco/issues/302
-	event.add("c:music_discs", "undergroundworlds:music_disc_abbeyence") // Reported: https://codeberg.org/HexagonNico/UndergroundWorlds/issues/16
 	event.add("mega_showdown:mega_stone", /^zamega:/).remove("zamega:ange") // TODO: Report this.
 
 	// More compatibility.
