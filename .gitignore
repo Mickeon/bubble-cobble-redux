@@ -53,6 +53,7 @@
 /config/voicechat/voicechat-client.properties
 /config/voicechat/username-cache.json
 /config/aiutd-enduser.json5
+/config/cadeditor-vault.dat
 /config/discord_chat_mod-*
 /config/one-click-join
 /config/sidekick.ini
