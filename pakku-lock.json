@@ -4838,6 +4838,43 @@
             ]
         },
         {
+            "pakku_id": "uENG7nJnaNr7SiUn",
+            "type": "MOD",
+            "side": "SERVER",
+            "slug": {
+                "modrinth": "gamerule-defaults"
+            },
+            "name": {
+                "modrinth": "Gamerule Defaults"
+            },
+            "id": {
+                "modrinth": "4mTA3jIa"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "gamerule_defaults-1.0.2.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/4mTA3jIa/versions/io7hyLMn/gamerule_defaults-1.0.2.jar",
+                    "id": "io7hyLMn",
+                    "parent_id": "4mTA3jIa",
+                    "hashes": {
+                        "sha512": "a9976e16e00860f420c48db5304ad00729bddc070fd258e63f870daf3ac875c7c2417d63109a986141c13ddbaa82a89363a9450e4ea8d4ac149079637de7c9ab",
+                        "sha1": "c173c8c72fc7e0843ca1c4e2e82db29f8a2c082a"
+                    },
+                    "required_dependencies": [],
+                    "size": 171646,
+                    "date_published": "2026-10-02T12:34:47.547770Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "Uc3s4QToBC6O55pU",
             "type": "MOD",
             "side": "BOTH",
