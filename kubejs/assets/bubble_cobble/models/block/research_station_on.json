@@ -7,7 +7,8 @@
     "side": "bubble_cobble:block/research_station_side",
     "top": "bubble_cobble:block/research_station_top",
     "table_side": "minecraft:block/enchanting_table_side",
-    "table_bottom": "minecraft:block/enchanting_table_bottom"
+    "table_bottom": "minecraft:block/enchanting_table_bottom",
+		"particle": "#side"
   },
   "elements": [
     {

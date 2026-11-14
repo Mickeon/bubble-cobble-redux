@@ -503,11 +503,6 @@ const ResearchManager = global.ResearchManager = exports.ResearchManager = {
 		return "bubble_cobble.research/" + id
 	},
 
-	field_hack_for: function(id) {
-		// HACK: Lets the Toast notification appear when this ID is used for unlocking/revoking.
-		return "block:bubble_cobble/research/" + id
-	},
-
 	make_render_for_field_composites: function(entry) {
 		if (entry.render) {
 			return entry.render // In case it's personalized.
@@ -570,8 +565,7 @@ const ResearchManager = global.ResearchManager = exports.ResearchManager = {
 	update_donation_progress: function(player, specific_item, station_block_pos) {
 		let what_to_update = specific_item ? [this.get_entry_id_for_item(specific_item)] : this.get_research_ids()
 		for (let id of what_to_update) {
-			// let field_guide_id = "bubble_cobble:" + id
-			let field_guide_id = this.field_hack_for(id)
+			let field_guide_id = this.field_for(id)
 			let stage = this.stage_for(id)
 			if (this.get_remaining_amount(player, id) <= 0) {
 				if (station_block_pos) {

@@ -272,7 +272,12 @@ ServerEvents.generateData("after_mods", event => {
 			// Otherwise it could be unlocked by scanning the blocks, which we don't want.
 			type: "virtual_entry",
 			id: field_entry_id,
-			virtual_type: "tutorial"
+			virtual_type: "tutorial",
+			unlock: {
+				// An impossible goal so this cannot be unlocked, ever.
+				prerequisites: ["entity:minecraft/warden"],
+				trigger: ["eat"]
+			}
 		}
 		let new_composites = {
 			id: field_entry_id,
@@ -330,10 +335,10 @@ ServerEvents.generateData("after_mods", event => {
 		i += 1
 	}
 
-	console.log(JSON.stringify(field_guide_category, null, "\t"))
+	// console.log(JSON.stringify(field_guide_category, null, "\t"))
 	event.json("bubble_cobble:fieldguide/categories/researches", field_guide_category)
 
-	console.log(JSON.stringify(field_guide_composites, null, "\t"))
+	// console.log(JSON.stringify(field_guide_composites, null, "\t"))
 	event.json("bubble_cobble:fieldguide/composites/researches", field_guide_composites)
 
 	// console.log(JSON.stringify(society_trading_shop, null, "\t"))

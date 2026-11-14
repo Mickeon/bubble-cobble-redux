@@ -63,7 +63,7 @@ ServerEvents.tags("item", event => {
 
 	// Shared in a bunch of places.
 	event.add("bubble_cobble:coinstacks", /^createdeco:.*coinstack$/)
-	event.add("bubble_cobble:lanterns", "minecraft:lantern", "minecraft:soul_lantern", "ribbits:swamp_lantern", "#biomeswevegone:glow_bottle")
+	event.add("bubble_cobble:lanterns", "minecraft:lantern", "minecraft:soul_lantern", "ribbits:swamp_lantern", "supplementaries:redstone_lantern", "#biomeswevegone:glow_bottle")
 	event.add("bubble_cobble:pokenavs", "#cobblenav:pokenav", "cobblenav:pokenav_item_gholdengo", "cobblenav:pokenav_item_wanderer")
 
 	event.add("bubble_cobble:emi/chest_loot_icon","minecraft:chest", "minecraft:barrel", "lootr:lootr_barrel", "lootr:lootr_chest", "lootr:lootr_shulker", "lootr:decorated_pot", "lootrmon:gilded_chest", "cobblemonraiddens:raid_pouch")

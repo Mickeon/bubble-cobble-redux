@@ -13,13 +13,17 @@
 			"id": "minecraft:orange_wool",
 			"unlock": {
 				"prerequisites": ["entity:minecraft/warden"],
-				"trigger": ["obtain"]
+				"trigger": ["kill"]
 			}
 		},
 		{
 			"type": "virtual_entry",
 			"id": "bubble_cobble:dummy/light_blue_wool",
-			"virtual_type": "tutorial"
+			"virtual_type": "tutorial",
+			"unlock": {
+				"prerequisites": ["entity:minecraft/warden"],
+				"trigger": ["eat"]
+			}
 		},
 		{
 			"type": "virtual_entry",
