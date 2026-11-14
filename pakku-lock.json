@@ -9483,43 +9483,6 @@
             ]
         },
         {
-            "pakku_id": "bsiTRiILBkC95eQq",
-            "type": "MOD",
-            "side": "SERVER",
-            "slug": {
-                "modrinth": "smart-item-deleter-v2"
-            },
-            "name": {
-                "modrinth": "Smart item deleter V2"
-            },
-            "id": {
-                "modrinth": "bhzgSHHz"
-            },
-            "files": [
-                {
-                    "type": "modrinth",
-                    "file_name": "smart_item_deleter_v2-0.4.9-neoforged.jar",
-                    "mc_versions": [
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/bhzgSHHz/versions/MzB9lM9V/smart_item_deleter_v2-0.4.9-neoforged.jar",
-                    "id": "MzB9lM9V",
-                    "parent_id": "bhzgSHHz",
-                    "hashes": {
-                        "sha512": "5a54498741a246e6795c3b8812bfde7ec690660235f4b47a6358160ee15ddefd2fc2a9e58cca443a82abe69c98bfeba9ce884ba8a2ac880ceb0687353f341361",
-                        "sha1": "90ccc510cd4438b9ab8922670b3474b870f06f7c"
-                    },
-                    "required_dependencies": [],
-                    "size": 70965,
-                    "date_published": "2026-01-19T21:11:01.690953Z"
-                }
-            ]
-        },
-        {
             "pakku_id": "zWdECNBLLstRkxXT",
             "pakku_links": [
                 "WWiX8dynol1cESFV"
