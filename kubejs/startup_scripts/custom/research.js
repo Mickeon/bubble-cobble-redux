@@ -271,7 +271,7 @@ const ResearchManager = global.ResearchManager = exports.ResearchManager = {
 				{item: "createdeco:mossy_verdant_bricks"},
 			],
 			default_count: 32,
-			default_price: 76,
+			default_price: 80,
 			required: 16,
 			description: "I've seen a random wiki page claiming that Veridium is \"likely named after the Spanish word \"verde\"\". No. Etymology, my baby. It's from the Latin word \"viridis\"",
 		},
@@ -286,7 +286,7 @@ const ResearchManager = global.ResearchManager = exports.ResearchManager = {
 				{item: "createdeco:mossy_scarlet_bricks"},
 			],
 			default_count: 32,
-			default_price: 76,
+			default_price: 80,
 			required: 16,
 			description: "Make from Crimsite, but they're really not *that* \"Crimson\". A bit unusual, really. In fact, they resemble the saturated clay Bricks from all the way back in Classic.",
 		},
@@ -301,7 +301,7 @@ const ResearchManager = global.ResearchManager = exports.ResearchManager = {
 				{item: "createdeco:mossy_blue_bricks"},
 			],
 			default_count: 32,
-			default_price: 76,
+			default_price: 80,
 			required: 16,
 			description: "When the people in charge of BLU's side can't be bothered and decide to copy RED's homework.",
 		},
@@ -316,7 +316,7 @@ const ResearchManager = global.ResearchManager = exports.ResearchManager = {
 				{item: "createdeco:mossy_pearl_bricks"},
 			],
 			default_count: 32,
-			default_price: 76,
+			default_price: 80,
 			required: 16,
 			description: "So many white bricks it's enough to withstand at least 2 spicy peppers.",
 		},
@@ -563,6 +563,7 @@ const ResearchManager = global.ResearchManager = exports.ResearchManager = {
 	/** @param {$Player} player */
 	open_research_shop: function(player) {
 		player.server.runCommandSilent(`execute as ${player.uuid} run openshop @s research_rewarder`)
+		play_sound_globally(player.level, player.position(), "create:stock_ticker_request", "blocks", 0.25, 1.8)
 	},
 
 	/** @param {$Player} player */

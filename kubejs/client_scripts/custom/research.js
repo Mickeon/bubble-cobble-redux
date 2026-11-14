@@ -23,7 +23,7 @@ NativeEvents.onEvent($ScreenEvent$Init$Post, event => {
 	let item_stack = Item.getEmpty()
 	slot.setBackground("minecraft:textures/atlas/blocks.png", "minecraft:item/empty_slot_quartz")
 
-	const research_button = new $Button$Builder(Text.translatableWithFallback("", "Research"), button => {
+	const research_button = new $Button$Builder(Text.translateWithFallback("", "Research"), button => {
 			Client.player.sendData("bubble_cobble:donate")
 			item_stack = Item.getEmpty() // Refresh cache.
 		})
@@ -31,25 +31,38 @@ NativeEvents.onEvent($ScreenEvent$Init$Post, event => {
 		.width(56)
 		.build()
 	event.addListener(research_button)
-	const open_shop_button = new $Button$Builder(Text.translatableWithFallback("", "Shop"), button => {
+	const open_shop_button = new $Button$Builder(Text.translateWithFallback("", "Shop"), button => {
 			Client.player.sendData("bubble_cobble:open_research_shop")
 		})
+		// .tooltip($Tooltip.create(Text.translateWithFallback("", "").color(MASCOT_COLOR_DARK)))
 		.pos(screen.x + slot.x - 64, screen.y + slot.y - 2)
 		.width(56)
 		.build()
 	event.addListener(open_shop_button)
 
+	// Without proper tracking of opened stations on clients, this is currently buggy.
+	// const field_guide_button = new $Button$Builder(Text.translatableWithFallback("", "g"), button => {
+	// 		let $FieldGuideCategoryScreen = Java.tryLoadClass("com.evandev.fieldguide.client.gui.screens.FieldGuideCategoryScreen")
+	// 		if ($FieldGuideCategoryScreen) {
+	// 			Client.setScreen(new $FieldGuideCategoryScreen("research", screen))
+	// 		}
+	// 	})
+	// 	.pos(screen.x + slot.x + 64, screen.y + slot.y - 2)
+	// 	.width(24)
+	// 	.build()
+	// event.addListener(field_guide_button)
+
 	function update_menu() {
 		if (item_stack.isEmpty()) {
 			research_button.active = false
-			research_button.setTooltip($Tooltip.create(Text.of(`Put enough items here and purchase them later if you got credit.`)))
+			research_button.setTooltip($Tooltip.create(Text.translateWithFallback("", "Put items in the %s and click here to begin researching them.\nOnce fully researched, you may enjoy your rewards in the %s.", Text.of("Research Station").color(MASCOT_COLOR), Text.of("Shop").color(MASCOT_COLOR)).color(MASCOT_COLOR_DARK)))
 			return
 		}
 
 		let id = ResearchManager.get_entry_id_for_item(item_stack)
 		if (!id) {
 			research_button.active = false
-			research_button.setTooltip($Tooltip.create(Text.of(`You cannot research this.`)))
+			research_button.setTooltip($Tooltip.create(Text.translateWithFallback("", "You cannot research this.").color(MASCOT_COLOR_DARK)))
 			return
 		}
 		let amount_left = ResearchManager.get_remaining_amount(Client.player, id)
@@ -57,8 +70,8 @@ NativeEvents.onEvent($ScreenEvent$Init$Post, event => {
 
 		research_button.active = ResearchManager.can_donate(Client.player, item_stack)
 		research_button.setTooltip($Tooltip.create(research_button.active
-			? Text.translateWithFallback("", `%s/%s to go!`, (amount_required - amount_left).toFixed(), amount_required.toFixed())
-			: Text.translatableWithFallback("", `You researched plenty.\nEnjoy your reward at the %s!`, Text.aqua("Shop"))
+			? Text.translateWithFallback("", `%s/%s to go!`, Text.of((amount_required - amount_left).toFixed()).color(MASCOT_COLOR), amount_required.toFixed()).color(MASCOT_COLOR_DARK)
+			: Text.translateWithFallback("", `You researched plenty.\nEnjoy your rewards in the %s!`, Text.of("Shop").color(MASCOT_COLOR)).color(MASCOT_COLOR_DARK)
 		))
 	}
 	update_menu()

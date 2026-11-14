@@ -55,7 +55,7 @@ BlockEvents.rightClicked("bubble_cobble:research_station", event => {
 			callback.clear()
 			return
 		}
-		if (block_entity.isRemoved()) {
+		if (block_entity.isRemoved() || player.distanceToBlock(block_entity.blockPos) > player.blockInteractionRange() * 1.5) {
 			player.closeMenu()
 		}
 	})
@@ -252,9 +252,18 @@ ServerEvents.generateData("after_mods", event => {
 
 	let society_trading_shop = {
 		shop_id: "research_rewarder",
-		name: {
-			translate: "Rewards"
-		},
+		name: ["",
+			{"color":"#73A8FF","text":"R"},
+			{"color":"#75AAFF","text":"e"},
+			{"color":"#77ABFF","text":"s"},
+			{"color":"#79ADFF","text":"e"},
+			{"color":"#6EA2F7","text":"a"},
+			{"color":"#6498EF","text":"r"},
+			{"color":"#598DE7","text":"c"},
+			{"color":"#5079E5","text":"h"},
+			{"color":"#4866E2","text":"e"},
+			{"color":"#3F52E0","text":"s"}
+		],
 		display_type: "default",
 		texture: "bubble_cobble:textures/item/blue_mascot_cat",
 		trades: []
