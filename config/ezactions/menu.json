@@ -288,6 +288,17 @@
               "delayTicks": 0,
               "cycleCommands": false
             }
+          },
+          {
+            "id": "key_1a1db05351a",
+            "title": "Afterburner",
+            "icon": "minecraft:soul_campfire",
+            "action": {
+              "type": "KEY",
+              "name": "key.afterburner.settings",
+              "toggle": false,
+              "mode": "AUTO"
+            }
           }
         ]
       }

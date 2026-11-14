@@ -263,6 +263,43 @@
             ]
         },
         {
+            "pakku_id": "3k7j44UQcgq6zzaC",
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "modrinth": "afterburner"
+            },
+            "name": {
+                "modrinth": "Afterburner"
+            },
+            "id": {
+                "modrinth": "o0kOtaIS"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "afterburner-0.2.6+1.21.1-neoforge.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/o0kOtaIS/versions/kUfVHAH1/afterburner-0.2.6+1.21.1-neoforge.jar",
+                    "id": "kUfVHAH1",
+                    "parent_id": "o0kOtaIS",
+                    "hashes": {
+                        "sha512": "231cfe4833938be6d206209906ebd3101e4b5ecdb1f04c7c28537ef88e2c5d6fcaa41cbe8af2e709e84e6667edd94e52c48e701181cee7545a2a7f27528af478",
+                        "sha1": "0624cf428ad37d0ebb86ec918611fbd0521d854f"
+                    },
+                    "required_dependencies": [],
+                    "size": 1333218,
+                    "date_published": "2026-11-03T17:43:03.025084Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "MTW6J1rGIdhvz1i7",
             "type": "MOD",
             "slug": {
