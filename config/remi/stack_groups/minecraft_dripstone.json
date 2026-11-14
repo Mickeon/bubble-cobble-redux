@@ -1,0 +1,10 @@
+{
+  "type": "remi:group",
+	"id": "minecraft:dripstone_set",
+  "contents": [
+    "#create:stone_types/dripstone",
+    "minecraft:pointed_dripstone",
+    "handcrafted:dripstone_pillar_trim",
+    "handcrafted:dripstone_corner_trim"
+  ]
+}

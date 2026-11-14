@@ -1,0 +1,10 @@
+{
+  "type": "remi:group",
+	"id": "minecraft:granite_set",
+  "contents": [
+    "#create:stone_types/granite",
+    "minecraft:polished_granite",
+    "handcrafted:granite_pillar_trim",
+    "handcrafted:granite_corner_trim"
+  ]
+}

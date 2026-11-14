@@ -1,8 +1,0 @@
-{
-  "type": "remi:tag",
-  "id": "sophisticatedstorage:upgrade",
-  "name": "Upgrades 📦",
-  "tag": "sophisticatedstorage:upgrade",
-  "registry": "minecraft:item",
-  "enabled": true
-}

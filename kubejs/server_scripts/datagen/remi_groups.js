@@ -15,7 +15,7 @@ global.datagen.functions.remi_groups = function() {
 		{id: "cherry", exclude: [/urban_decor:.*(wrap|polyanthous)/]},
 		{id: "bamboo", exclude: ["farmersdelight:bamboo_basket", "minecraft:bamboo", "supplementaries:bamboo_spikes", "supplementaries:bamboo_spikes_tipped"]},
 		{id: "crimson", exclude: ["minecraft:crimson_fungus", "minecraft:crimson_roots", "minecraft:crimson_nylium", "@mynethersdelight"]},
-		{id: "warped", exclude: ["minecraft:warped_fungus", "minecraft:warped_roots", "minecraft:warped_nylium", "minecraft:warped_fungus_on_a_stick", "@mynethersdelight"]},
+		{id: "warped", exclude: ["minecraft:warped_fungus", "minecraft:warped_roots", "minecraft:warped_nylium", "minecraft:warped_fungus_on_a_stick", "minecraft:warped_wart_block", "@mynethersdelight"]},
 		"arts_and_crafts:cork",
 		{id: "cobblemon:apricorn", exclude: ["#cobblemon:apricorns", "#cobblemon:apricorn_sprouts"]},
 		"cobblemon:saccharine",

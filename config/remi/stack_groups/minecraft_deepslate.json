@@ -1,0 +1,24 @@
+{
+  "type": "remi:group",
+	"id": "minecraft:deepslate_set",
+  "contents": [
+    "minecraft:deepslate",
+    "minecraft:cobbled_deepslate",
+    "minecraft:chiseled_deepslate",
+    "minecraft:polished_deepslate",
+    "minecraft:deepslate_bricks",
+    "minecraft:cracked_deepslate_bricks",
+    "minecraft:cracked_deepslate_tiles",
+    "minecraft:deepslate_tiles",
+    "supplementaries:deepslate_lamp",
+    "handcrafted:deepslate_pillar_trim",
+    "handcrafted:deepslate_corner_trim",
+    "create:cut_deepslate",
+    "create:polished_cut_deepslate",
+    "create:cut_deepslate_bricks",
+    "create:small_deepslate_bricks",
+    "create:layered_deepslate",
+    "create:deepslate_pillar",
+    "bits_n_bobs:deepslate_tiles"
+  ]
+}

@@ -23,6 +23,9 @@ ServerEvents.tags("item", event => {
 		"minecraft:diamond_leggings", "minecraft:diamond_boots",
 	)
 	event.add("bubble_cobble:cattails", "biomesoplenty:cattail", "biomeswevegone:cattail_sprout")
+	if (Platform.isLoaded("crittersandcompanions")) {
+		event.add("bubble_cobble:diamond_armor", "crittersandcompanions:diamond_dragonfly_armor")
+	}
 })
 
 ServerEvents.recipes(event => {

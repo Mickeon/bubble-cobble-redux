@@ -104,6 +104,38 @@
 			}
 		]
 	},
+	"block.research_station.open": {
+		"sounds": [
+			{
+				"name": "cobblemon:poke_ball/poke_ball_open_ancient",
+				"pitch": 0.5
+			},
+			{
+				"name": "cobblemon:poke_ball/poke_ball_open_ancient",
+				"pitch": 0.55
+			},
+			{
+				"name": "cobblemon:poke_ball/poke_ball_open_ancient",
+				"pitch": 0.55
+			}
+		]
+	},
+	"block.research_station.close": {
+		"sounds": [
+			{
+				"name": "cobblemon:poke_ball/poke_ball_shut_ancient",
+				"pitch": 0.5
+			},
+			{
+				"name": "cobblemon:poke_ball/poke_ball_shut_ancient",
+				"pitch": 0.55
+			},
+			{
+				"name": "cobblemon:poke_ball/poke_ball_shut_ancient",
+				"pitch": 0.55
+			}
+		]
+	},
 	"entity.enderman.bones_cracking": {
 		"sounds": [
 			{

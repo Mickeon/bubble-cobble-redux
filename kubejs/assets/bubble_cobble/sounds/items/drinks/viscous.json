@@ -8,7 +8,9 @@
     "minersdelight:water_cup",
     "minersdelight:milk_cup",
     "snowyspirit:eggnog",
-    "supplementaries:lumisene_bottle"
+    "supplementaries:lumisene_bottle",
+    "crittersandcompanions:sea_bunny_slime_bottle",
+    "crittersandcompanions:snail_slime_bottle"
   ],
   "pitch": 1.25,
   "soundEvent": "more_sounds:item.bottled_viscous.slosh",

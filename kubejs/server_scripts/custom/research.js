@@ -42,7 +42,7 @@ BlockEvents.rightClicked("bubble_cobble:research_station", event => {
 	if (!player_to_station_table.containsValue(block_entity)) {
 		// First player accessing the station.
 		block_entity.block.setBlockState(Block.withProperties(block_entity.getBlockState(), {open: true}))
-		play_sound_globally(block_entity.level, block_entity.blockPos.center, "farmersdelight:block.cabinet.open", "blocks", 0.5)
+		play_sound_globally(block_entity.level, block_entity.blockPos.center, "bubble_cobble:block.research_station.open", "blocks", 0.5)
 	}
 	player_to_station_table.putIfAbsent(player, block_entity)
 
@@ -67,7 +67,7 @@ PlayerEvents.inventoryClosed("kubejs:menu", event => {
 	if (!player_to_station_table.containsValue(block_entity) && !block_entity.isRemoved()) {
 		// No one else is accessing the station.
 		block_entity.block.setBlockState(Block.withProperties(block_entity.getBlockState(), {open: false}))
-		play_sound_globally(block_entity.level, block_entity.blockPos.center, "farmersdelight:block.cabinet.close", "blocks", 0.5)
+		play_sound_globally(block_entity.level, block_entity.blockPos.center, "bubble_cobble:block.research_station.close", "blocks", 0.5)
 	}
 })
 
@@ -235,7 +235,7 @@ ServerEvents.tags("block", event => {
 })
 
 ServerEvents.recipes(event => {
-	event.shaped("bubble_cobble:research_station", ["LBL", "RAR", "LGL"], {L: "#minecraft:logs", B: "minecraft:writable_book", R: "minecraft:redstone", A: "minecraft:lectern", G: "create:millstone"})
+	event.shaped("bubble_cobble:research_station", ["LBL", "RAR", "OGO"], {L: "#minecraft:logs", B: "minecraft:writable_book", R: "minecraft:cobbled_deepslate", A: "minecraft:lectern", O: "#c:obsidians", G: "create:millstone"})
 })
 
 //#region Data generation.
@@ -275,7 +275,7 @@ ServerEvents.generateData("after_mods", event => {
 			virtual_type: "tutorial",
 			unlock: {
 				// An impossible goal so this cannot be unlocked, ever.
-				prerequisites: ["entity:minecraft/warden"],
+				prerequisites: ["entity:minecraft/area_effect_cloud"],
 				trigger: ["eat"]
 			}
 		}
@@ -286,7 +286,7 @@ ServerEvents.generateData("after_mods", event => {
 			render: ResearchManager.make_render_for_field_composites(entry)
 		}
 		if (!new_composites.render) {
-			// delete new_composites.render
+			delete new_composites.render
 			// The crap I have to do to make non-placeable items unlockable.
 			// And most of what it does is make these entries unlockable by scanning them,
 			// Which we absolutely don't want. I will have to fix this someday.
@@ -297,7 +297,17 @@ ServerEvents.generateData("after_mods", event => {
 			// new_composites.components = item_ids
 			// new_field_entry.icon = `item:${ID.namespace(first_item_id)}/${ID.path(first_item_id)}`
 			// new_composites.display = `item:${ID.namespace(first_item_id)}/${ID.path(first_item_id)}`
-			new_composites.render = ["minecraft:dirt"] // I don't know why this works for items but okay.
+			// new_composites.render = ["minecraft:dirt"] // I don't know why this works for items but okay.
+			// With this, e.g. Windmill Bearing can be unlocked by scanning, but Red Dye can't be unlocked by obtaining.
+			new_field_entry = {
+				type: "entry",
+				id: first_item_id,
+				unlock: {
+					prerequisites: ["entity:minecraft/area_effect_cloud"],
+					trigger: ["eat"]
+				}
+			}
+			new_composites.components = item_ids
 		}
 
 		field_guide_category.contents.push(new_field_entry)

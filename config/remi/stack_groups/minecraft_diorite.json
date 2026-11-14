@@ -1,0 +1,10 @@
+{
+  "type": "remi:group",
+	"id": "minecraft:diorite_set",
+  "contents": [
+    "#create:stone_types/diorite",
+    "minecraft:polished_diorite",
+    "handcrafted:diorite_pillar_trim",
+    "handcrafted:diorite_corner_trim"
+  ]
+}

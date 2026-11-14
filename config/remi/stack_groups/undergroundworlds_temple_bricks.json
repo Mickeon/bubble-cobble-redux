@@ -1,0 +1,11 @@
+{
+  "type": "remi:group",
+	"id": "undergroundworlds:temple_bricks",
+  "contents": [
+    "undergroundworlds:temple_bricks",
+    "undergroundworlds:cracked_temple_bricks",
+    "undergroundworlds:mossy_temple_bricks",
+    "undergroundworlds:chiseled_temple_bricks",
+    "undergroundworlds:temple_brick_tiles"
+  ]
+}

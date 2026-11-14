@@ -117,7 +117,7 @@ ItemEvents.modifyTooltips(event => {
 	event.add(["supplementaries:flint_block"], subtle("Scraped against Iron lights a ").append(Text.of(`spark`).color(MASCOT_COLOR)).append("..."))
 	event.add(["supplementaries:doormat"], subtle("Could there be ").append(Text.of(`something`).color(MASCOT_COLOR)).append(" underneath it?"))
 	event.add(["supplementaries:confetti_popper"], subtle("Makes for a nice ").append(Text.of(`hat`).color(MASCOT_COLOR)).append(". Creepers like it, too!"))
-	event.add(["supplementaries:gravel_bricks"], subtle("It's frail under your feet"))
+	// event.add(["supplementaries:gravel_bricks"], subtle("It's frail under your feet")) // Feature disabled.
 	event.add(["supplementaries:lumisene_bucket"], subtle("Bewildering, perhaps ").append(Text.of(`flammable`).color(MASCOT_COLOR)).append("?"))
 	event.add(["supplementaries:sack"], subtle("This can store stuff, by the way"))
 	event.add(["supplementaries:flower_box"], subtle("Can only contain ").append(Text.of(`tall flowers`).color(MASCOT_COLOR)))

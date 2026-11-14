@@ -342,6 +342,7 @@ NativeEvents.onEvent("highest", $RenderTooltipEvent$Color, event => {
 		case "createdeco":
 		case "create_deepfried":
 		case "create_bic_bit":
+		case "numismatics":
 		case "bits_n_bobs": {
 			event.setBorderStart(item_stack.getRarity() == "epic"
 				? Color.rgba(184, 26, 176, 1).getArgb()

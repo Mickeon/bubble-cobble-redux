@@ -1,0 +1,10 @@
+{
+  "type": "remi:group",
+	"id": "minecraft:andesite_set",
+  "contents": [
+    "#create:stone_types/andesite",
+    "minecraft:polished_andesite",
+    "handcrafted:andesite_pillar_trim",
+    "handcrafted:andesite_corner_trim"
+  ]
+}

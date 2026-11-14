@@ -233,7 +233,6 @@ ServerEvents.tags("item", event => {
 		"cobblemon:ability_patch",
 		"cobblemon:link_cable",
 		"create_bic_bit:crushed_nether_wart",
-		"crittersandcompanions:silk",
 		"farmersdelight:canvas",
 		"farmersdelight:cooked_rice",
 		"farmersdelight:fried_rice",
@@ -318,4 +317,10 @@ ServerEvents.tags("item", event => {
 		"cobblemon:technical_machine",
 		/^mega_showdown:.*_memory/,
 	)
+
+	if (Platform.isLoaded("")) {
+		event.add("bubble_cobble:sounds/grass_crunchy", "crittersandcompanions:silk")
+		event.add("bubble_cobble:sounds/sticky_sturdy", "crittersandcompanions:koi_fish")
+		event.add("more_sounds:equipment", /^crittersandcompanions:.*dragonfly_armor/)
+	}
 })

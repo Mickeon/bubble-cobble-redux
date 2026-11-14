@@ -33,6 +33,8 @@ StartupEvents.registry("block", event => {
 })
 
 StartupEvents.registry("sound_event", event => {
+	event.create("bubble_cobble:block.research_station.open")
+	event.create("bubble_cobble:block.research_station.close")
 	event.create("bubble_cobble:ui.research_complete")
 })
 
@@ -363,7 +365,15 @@ const ResearchManager = global.ResearchManager = exports.ResearchManager = {
 			description: "Highly sought-after dye, popped from plants the ancients kept cramming in their mouths. Pppprobably why they all went exinct!",
 		},
 		"encased_fan": {
-			unlocks: [{item: {id: "create:encased_fan", count: 4}, price: 32}],
+			unlocks: [{item: {id: "create:encased_fan", count: 4}, price: 64}],
+			required: 4,
+		},
+		"mechanical_press": {
+			unlocks: [{item: {id: "create:mechanical_press", count: 4}, price: 64}],
+			required: 4,
+		},
+		"mechanical_mixer": {
+			unlocks: [{item: {id: "create:mechanical_mixer", count: 4}, price: 64}],
 			required: 4,
 		},
 		"windmill_bearing": {
