@@ -177,10 +177,6 @@
 
         "spark": {
             "side": "SERVER"
-        },
-
-        "sodium-core-shader-support": {
-            "export": false
         }
     },
     "export_server_side_projects_to_client": true
