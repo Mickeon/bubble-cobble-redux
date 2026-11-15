@@ -276,7 +276,7 @@ ServerEvents.recipes(event => {
 
 	if (Platform.isLoaded("waterframes")) {
 		event.remove({mod: "waterframes"})
-		let copper_bulbs = Ingredient.of(/minecraft:.*copper_bulb/)
+		let copper_bulbs = Ingredient.of(/^minecraft:.*copper_bulb/)
 		event.shaped("waterframes:remote", ["ZCZ", "ZTZ", "BBB"], {Z: "createdeco:zinc_sheet", C: "minecraft:copper_block", T: "create:transmitter", B: "#minecraft:stone_buttons"})
 		event.shaped("waterframes:frame", ["ZCZ", "STS", "ZRZ"], {Z: "createdeco:zinc_sheet", C: copper_bulbs, T: "minecraft:tinted_glass", S: "supplementaries:speaker_block", R: "waterframes:remote"})
 		event.shaped("waterframes:projector", ["ZZA", "SCS", "ZRZ"], {Z: "create:zinc_block", C: copper_bulbs, A: "minecraft:amethyst_shard", S: "supplementaries:speaker_block", R: "waterframes:remote"})

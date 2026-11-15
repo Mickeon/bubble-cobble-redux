@@ -250,6 +250,16 @@ NativeEvents.onEvent($RenderTooltipEvent$Pre, event => {
 })
 }
 
+// Does not work nicely.
+// ClientEvents.generateAssets("last", event => {
+// 	let categories = $EmiApi.getRecipeManager().getCategories()
+// 	console.log(categories)
+// 	let category = /** @type {$EmiRecipeCategory?} */ (categories.stream().filter(c => c.id == "minecraft:blasting").findFirst().orElse(null))
+// 	console.log("Huiii")
+// 	console.log(category?.id)
+// 	$EmiRecipes.addWorkstation(category, $EmiIngredient["of(net.minecraft.world.item.crafting.Ingredient)"](Ingredient.of("minersdelight:copper_pot")))
+// })
+
 
 // Move EMI buttons away from the bottom-right.
 // Currently disabled as there's no reason to be doing this.

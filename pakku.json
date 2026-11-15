@@ -10,6 +10,7 @@
         "global_packs/desktop.ini",
         "global_packs/icon.ico",
         "kubejs",
+        "resourceworld",
 
         "!config/immersive_paintings/client_config.toml",
         "!config/jade/jade.json",

@@ -3,6 +3,7 @@
   "showActionBar": true,
   "hideIncompatible": false,
   "sort": "VANILLA",
+  "maxWidth": 0,
   "resourcepacks": {
     "applyOnClose": true,
     "replaceOriginal": true,
@@ -13,6 +14,7 @@
       "global_packs/overrides/"
     ],
     "foldersModuleByDefault": false,
+    "swapFolderActions": "NO",
     "rememberLastViewedProfile": false,
     "profileOrder": [
       "Default"
@@ -26,8 +28,8 @@
       "global_packs/overrides/"
     ],
     "foldersModuleByDefault": false,
+    "swapFolderActions": "NO",
     "rememberLastViewedProfile": false,
-    "lastViewedProfile": "Default",
     "profileOrder": [
       "Default"
     ]

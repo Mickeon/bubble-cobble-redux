@@ -1,6 +1,7 @@
 {
   "locked": true,
   "name": "Default",
+  "description": "",
   "overrides": {
     "file/modpack": {
       "required": true,
