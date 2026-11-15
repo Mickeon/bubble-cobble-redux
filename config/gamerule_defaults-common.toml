@@ -1,3 +1,3 @@
 #A list of gamerule defaults to apply, formatted as "gameRuleName=value".
 #Examples: "keepInventory=true", "randomTickSpeed=5", "doDaylightCycle=false"
-defaults = ["spawnChunkRadius=0", "accessories.keepAccessoryInventory=true", "disableElytraMovementCheck=true", "doInsomnia=true", "maxEntityCramming=8", "snowAccumulationHeight=2"]
+defaults = ["spawnChunkRadius=0", "disableElytraMovementCheck=true", "doInsomnia=true", "maxEntityCramming=8", "snowAccumulationHeight=2"]

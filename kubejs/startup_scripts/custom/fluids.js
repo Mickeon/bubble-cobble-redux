@@ -19,8 +19,10 @@ StartupEvents.registry("fluid", event => {
 			Utils.getRandom().nextInt(128, 255),
 			255
 		).getRgb())
-		.tag("create:bottomless/allow")
-		.tag("create:fan_processing_catalysts/haunting")
+		.tag([
+			"create:bottomless/allow",
+			"create:fan_processing_catalysts/haunting",
+		])
 		.displayName(Text.red("Renuvium"))
 
 	renuvium.fluidType
@@ -32,6 +34,9 @@ StartupEvents.registry("fluid", event => {
 		.canPushEntity(true)
 		.motionScale(-0.01)
 		.fallDistanceModifier(0.5)
+		.pathType("damage_cautious")
+		.screenOverlayTexture("bubble_cobble:item/blue_mascot_cat")
+		.blockOverlayTexture("bubble_cobble:block/chiseled_mud_bricks")
 
 	// Does not work unfortunately, due to a KubeJS bug.
 	// renuvium.block

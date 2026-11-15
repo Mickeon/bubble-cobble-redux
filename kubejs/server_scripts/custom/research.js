@@ -46,7 +46,6 @@ BlockEvents.rightClicked("bubble_cobble:research_station", event => {
 	}
 	player_to_station_table.putIfAbsent(player, block_entity)
 
-	// FIXME: Right-clicking to place a block on the side also triggers this.
 	const inventory = /** @type {$InventoryAttachment$Wrapped} */ (block_entity.attachments.get("inventory"))
 	player.openInventoryGUI(inventory, block_entity.block.block.name)
 
