@@ -2,13 +2,6 @@
   "_comment": "Bigger Numismatics coins definitely shouldn't sound like this, but for now it's okay.",
   "keys": [
     "#numismatics:coins",
-    "createdeco:brass_coin",
-    "createdeco:copper_coin",
-    "createdeco:gold_coin",
-    "createdeco:industrial_iron_coin",
-    "createdeco:iron_coin",
-    "createdeco:netherite_coin",
-    "createdeco:zinc_coin",
     "cobblemon:relic_coin"
   ],
   "pitch": 1.0,

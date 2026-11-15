@@ -15,6 +15,9 @@ const DISABLED_ITEMS = [
 	/^create_bic_bit:.*?cheese(?!_souffle)/,
 	"create_bic_bit:curdled_milk_bucket", // Note: Fails on startup if used as an Ingredient.
 
+	// Annoying extra step for coinstacks. Plus it gets confusing with Numismatics.
+	/^createdeco:.*coin$/,
+
 	// Overpowered.
 	/^constructionstick:template/,
 

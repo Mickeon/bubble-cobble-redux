@@ -28,8 +28,6 @@ ServerEvents.tags("item", event => {
 	event.add("cobblemon:sun_stone_ores", "mega_showdown:mega_meteorid_sun_ore")
 	event.add("cobblemon:thunder_stone_ores", "mega_showdown:mega_meteorid_thunder_ore")
 	event.add("c:tools/spear", "#minecraft:spears") // Reported, but marked as "Won't fix": https://github.com/Unknowneth/Backported-Spears/issues/60.
-	event.add("c:storage_blocks", "#c:storage_blocks/industrial_iron") // Reported: https://github.com/talrey/CreateDeco/issues/303
-	event.add("c:glass_panes", "createdeco:iron_window_pane", "createdeco:zinc_window_pane", "createdeco:brass_window_pane", "createdeco:copper_window_pane", "createdeco:andesite_window_pane", "createdeco:industrial_iron_window_pane") // Reported: https://github.com/talrey/CreateDeco/issues/302
 	event.add("mega_showdown:mega_stone", /^zamega:/).remove("zamega:ange") // TODO: Report this.
 
 	// More compatibility.
@@ -62,7 +60,6 @@ ServerEvents.tags("item", event => {
 	)
 
 	// Shared in a bunch of places.
-	event.add("bubble_cobble:coinstacks", /^createdeco:.*coinstack$/)
 	event.add("bubble_cobble:lanterns", "minecraft:lantern", "minecraft:soul_lantern", "ribbits:swamp_lantern", "supplementaries:redstone_lantern", "#biomeswevegone:glow_bottle")
 	event.add("bubble_cobble:pokenavs", "#cobblenav:pokenav", "cobblenav:pokenav_item_gholdengo", "cobblenav:pokenav_item_wanderer")
 
@@ -191,9 +188,6 @@ ServerEvents.tags("block", event => {
 	event.add("herbalbrews:allows_cooking", "mynethersdelight:nether_stove")
 	event.add("amendments:stairs_carpets", "#bubble_cobble:coinstacks", "cobblemon:tatami_mat", "minecraft:snow", "supplementaries:ash")
 	event.add("amendments:bubble_column_passable", "#create:fan_transparent")
-
-	// Shared in a bunch of places.
-	event.add("bubble_cobble:coinstacks", /^createdeco:.*coinstack$/)
 
 	event.add("c:relocation_not_supported",	"immersive_furniture:furniture_proxy")
 

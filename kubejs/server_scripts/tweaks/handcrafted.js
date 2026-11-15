@@ -1,4 +1,5 @@
 // requires: handcrafted
+// requires: urban_decor
 
 ServerEvents.tags("item", event => {
 	event.add("minecraft:piglin_loved", "handcrafted:golden_thin_pot", "handcrafted:golden_thick_pot", "handcrafted:golden_wide_pot", "handcrafted:golden_medium_pot") //Reported: https://github.com/terrarium-earth/Handcrafted/issues/152

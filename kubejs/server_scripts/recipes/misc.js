@@ -148,12 +148,6 @@ ServerEvents.recipes(event => {
 		"cobblemon:malicious_armor"
 	)
 
-	// Make Create Deco's industrial Iron compatible with Create: Dreams & Desires's.
-	// We don't even have the mod anymore, but this is innocuous.
-	event.replaceInput({mod: "createdeco"}, "createdeco:industrial_iron_nugget", "#c:nuggets/industrial_iron")
-	event.replaceInput({mod: "createdeco"}, "createdeco:industrial_iron_ingot", "#c:ingots/industrial_iron")
-
-
 	// Haunt all seafood for Zinc nuggets.
 	event.recipes.create.haunting([
 			CreateItem.of(Item.of("create:zinc_nugget", 3)),
@@ -289,11 +283,6 @@ ServerEvents.recipes(event => {
 		event.shaped("waterframes:tv", ["ZTZ", "SCS", "ZRZ"], {Z: "create:zinc_ingot", C: copper_bulbs, T: "minecraft:tinted_glass", S: "supplementaries:speaker_block", R: "waterframes:remote"})
 		event.shaped("waterframes:big_tv", [" T ", "TRT", " T "], {T: "minecraft:tinted_glass", R: "waterframes:tv"})
 		event.shapeless("waterframes:tv_box", [Ingredient.of("minecraft:note_block").or("create:cardboard_block"), "waterframes:frame"])
-	}
-
-	// All of the other types require differently colored torches, because Copper Torches didn't exist.
-	if (Item.exists("minecraft:copper_torch")) {
-		event.replaceInput({id: /createdeco:green_.*lamp/}, "minecraft:glow_berries", "minecraft:copper_torch")
 	}
 
 	event.shaped("mega_showdown:sparkling_stone_light", ["AAA", "ASA", "AAA"], {A: "minecraft:white_dye", S: "mega_showdown:sparkling_stone_dark"})
