@@ -5,8 +5,6 @@
  * @import {$Collection} from "@package/java/util"
  */
 
-let $Collection = Java.loadClass("java.util.Collection")
-
 // Quite overly structured in hindsight, isn't it?
 /** @typedef {ReturnType<typeof SnippetBuilder>} Snippet */
 function SnippetBuilder() {
@@ -41,7 +39,7 @@ SnippetBuilder.from_choices = function(choices) {
 }
 /** @param {$Stream | $Collection} c @returns {Array<string>} */
 function to_string_array(c) {
-	const stream = (c instanceof $Collection ? c.stream() : c)
+	const stream = (c instanceof Java.loadClass("java.util.Collection") ? c.stream() : c)
 	return stream
 			.map((a) => String(a))
 			.sorted()
@@ -93,6 +91,8 @@ global.datagen.functions.code_snippets = function() {
 	if (Platform.isClientEnvironment()) {
 		snippet_from_stream("@texture", Client.getModelManager().getAtlas("minecraft:textures/atlas/blocks.png").texturesByName.keySet())
 		snippet_from_stream("@advancement", Client.getSingleplayerServer().getAdvancements().getAllAdvancements(), "minecraft$$advancement")
+		snippet_from_stream("@loot_table", Client.getSingleplayerServer().reloadableRegistries().getKeys("minecraft:loot_table"), "minecraft$$loot_table")
+		// snippet_from_stream("@reloadable_registries", Client.getSingleplayerServer().reloadableRegistries().get().listRegistries().map(r => r.location()))
 
 		// "ByPath" is private. AtlasViewer exposes it, but who knows, it may fail someday.
 		let $TextureAtlas = Java.loadClass("net.minecraft.client.renderer.texture.TextureAtlas")
