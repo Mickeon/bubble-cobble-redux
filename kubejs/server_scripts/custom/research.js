@@ -15,63 +15,6 @@ let $UseOnContext = Java.loadClass("net.minecraft.world.item.context.UseOnContex
 /** @import {ResearchManager} from "../../startup_scripts/custom/research" */
 this.ResearchManager = global.ResearchManager
 
-// There's no other way, I need to know which players are interacting with what station.
-//#region Acknowledging interacted stations.
-let player_to_station_table = /** @type {import("@package/java/util").$Map<$ServerPlayer, $KubeBlockEntity>} */ (Utils.newMap())
-BlockEvents.rightClicked("bubble_cobble:research_station", event => {
-	let player = /** @type {$ServerPlayer} */ (event.player)
-	// if (!event.item.isEmpty() && player.mayUseItemAt(event.block.pos, event.facing, event.item)) {
-	// 	return
-	// }
-	if (player.hasContainerOpen()) {
-		return // Event also triggers on click release, at which point we should already have an inventory open.
-	}
-
-	if (player.isShiftKeyDown()) {
-		let result = event.item.useOn(new $UseOnContext(player, event.hand, event.hitResult))
-		if (result.indicateItemUse()) {
-			event.cancel()
-			return
-		}
-		ResearchManager.open_research_shop(player)
-		event.cancel()
-		return
-	}
-
-	const block_entity = /** @type {$KubeBlockEntity} */ (event.block.getEntity())
-	if (!player_to_station_table.containsValue(block_entity)) {
-		// First player accessing the station.
-		block_entity.block.setBlockState(Block.withProperties(block_entity.getBlockState(), {open: true}))
-		play_sound_globally(block_entity.level, block_entity.blockPos.center, "bubble_cobble:block.research_station.open", "blocks", 0.5)
-	}
-	player_to_station_table.putIfAbsent(player, block_entity)
-
-	const inventory = /** @type {$InventoryAttachment$Wrapped} */ (block_entity.attachments.get("inventory"))
-	player.openInventoryGUI(inventory, block_entity.block.block.name)
-
-	event.server.scheduleRepeatingInTicks(1, callback => {
-		if (player.isRemoved() || !player_to_station_table.containsKey(player)) {
-			callback.clear()
-			return
-		}
-		if (block_entity.isRemoved() || player.distanceToBlock(block_entity.blockPos) > player.blockInteractionRange() * 1.5) {
-			player.closeMenu()
-		}
-	})
-	event.cancel()
-})
-
-PlayerEvents.inventoryClosed("kubejs:menu", event => {
-	let block_entity = player_to_station_table.remove(event.player)
-	if (!player_to_station_table.containsValue(block_entity) && !block_entity.isRemoved()) {
-		// No one else is accessing the station.
-		block_entity.block.setBlockState(Block.withProperties(block_entity.getBlockState(), {open: false}))
-		play_sound_globally(block_entity.level, block_entity.blockPos.center, "bubble_cobble:block.research_station.close", "blocks", 0.5)
-	}
-})
-
-//#endregion
-
 PlayerEvents.loggedIn(event => {
 	event.player.sendData("bubble_cobble:update_donation_progress", event.player.getPersistentData().getCompound("donations_left"))
 	// event.player.sendData("bubble_cobble:update_research_entries", NBT.compoundTag(ResearchManager.research_entries))
@@ -85,12 +28,11 @@ NativeEvents.onEvent($OnDatapackSyncEvent, event => {
 
 NetworkEvents.dataReceived("bubble_cobble:donate", event => {
 	let player = event.player
-	let block_entity = player_to_station_table.get(player)
-	if (block_entity.isRemoved()) {
-		console.warn(`Opened non-existent Research Station at ${block_entity.blockPos}, aborting donation attempt for ${player.username}`)
+	let station = ResearchManager.Station.get_accessed_by(player)
+	if (!station) {
 		return
 	}
-	let block_pos = block_entity.blockPos
+	let block_pos = station.blockPos
 	if (player.isCreative()) {
 		let slot = /** @type {$InventoryKJSSlot} */ (player.containerMenu.getSlot(0))
 		let item_stack = slot.getItem()
@@ -105,16 +47,15 @@ NetworkEvents.dataReceived("bubble_cobble:donate", event => {
 		return
 	}
 
-	block_entity.persistentData.putUUID("activator", player.uuid)
-	block_entity.block.setBlockState(Block.withProperties(block_entity.getBlockState(), {lit: true}))
+	station.persistentData.putUUID("activator", player.uuid)
+	station.block.setBlockState(Block.withProperties(station.getBlockState(), {lit: true}))
 	play_sound_globally(event.level, block_pos.center, "create:confirm", "blocks", 0.75, 0.2)
 })
 
 NetworkEvents.dataReceived("bubble_cobble:open_research_shop", event => {
 	let player = event.player
-	let block_entity = player_to_station_table.get(player)
-	if (block_entity.isRemoved()) {
-		console.warn(`Opened non-existent Research Station at ${block_entity.blockPos}, aborting shop opening attempt for ${player.username}`)
+	let station = ResearchManager.Station.get_accessed_by(player)
+	if (!station) {
 		return
 	}
 	ResearchManager.open_research_shop(player)

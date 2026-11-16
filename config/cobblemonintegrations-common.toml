@@ -6,7 +6,7 @@
 	#What info should be hidden in JEI?
 	#This only takes effect if "pokedexHideLevel" is not "UNREGISTERED".
 	#Allowed Values: NAME, POKEMON, BOTH
-	pokemonHideMode = "BOTH"
+	pokemonHideMode = "POKEMON"
 
 [jade]
 	#Should Jade show the mimicked block instead of revealing habitat blocks.

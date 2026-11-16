@@ -108,12 +108,33 @@ NetworkEvents.dataReceived("bubble_cobble:update_research_entries", event => {
 	ResearchManager.item_to_research_table.forget()
 })
 
+ItemEvents.modifyTooltips(event => {
+	event.modify("#bubble_cobble:researchable", text => text.dynamic("research_progress"))
+})
+
+ItemEvents.dynamicTooltips("research_progress", event => {
+	if (!(Client.screen instanceof $KubeJSScreen)) {
+		return
+	}
+
+	let id = ResearchManager.get_entry_id_for_item(event.item)
+	let amount_left = ResearchManager.get_remaining_amount(Client.player, id)
+	let amount_required = ResearchManager.get_required_amount(id)
+	event.lines.set(0, Text.of(event.lines.getFirst()).append(Text.translatableWithFallback("", " (%s/%s)", Text.of((amount_required - amount_left).toFixed()).color(MASCOT_COLOR), amount_required.toFixed()).color(MASCOT_COLOR_DARK)))
+	if (event.advanced) {
+		event.add(Text.of(id).color(MASCOT_COLOR_DARK))
+	}
+})
+
 ClientEvents.lang("en_us", event => {
 	event.addAll("society_trading", {
 		"gui.society_trading.price": "%s \u00a4 ",
 		"gui.society_trading.hover_price_one": "Price: %s\u00a4",
 		"gui.society_trading.balance": "%f \uf014",
 		"jei.society_trading.price": "%s\u00a4"
+	})
+	event.addAll("fieldguide", {
+		"fieldguide.toast.discovered": "Discovered [H]"
 	})
 
 	for (let id in ResearchManager.research_entries) {

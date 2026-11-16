@@ -1,3 +1,7 @@
+/**
+ * @import {$KubeJSMenu, $InventoryKJSSlot} from "@package/dev/latvian/mods/kubejs/gui"
+ * @import {$KubeBlockEntity, $InventoryAttachment$Wrapped} from "@package/dev/latvian/mods/kubejs/block/entity"
+ */
 
 StartupEvents.registry("block", event => {
 	event.create("bubble_cobble:research_station")
@@ -20,6 +24,7 @@ StartupEvents.registry("block", event => {
 				info.serverTicking()
 				info.tickFrequency(SEC)
 			})
+			.rightClick(callback => global.research_station_on_right_click(callback))
 			.tagBlock([
 				"minecraft:mineable/pickaxe",
 			])
@@ -38,8 +43,84 @@ StartupEvents.registry("sound_event", event => {
 	event.create("bubble_cobble:ui.research_complete")
 })
 
+/** @param {import("@package/dev/latvian/mods/kubejs/block").$BlockRightClickedKubeEvent} */
+global.research_station_on_right_click = function(event) {
+	let player = event.player
+
+	if (player.isShiftKeyDown()) {
+		let result = event.item.useOn(new $UseOnContext(player, event.hand, event.hitResult))
+		if (result.indicateItemUse()) {
+			return
+		}
+		ResearchManager.open_research_shop(player)
+		return
+	}
+	ResearchManager.Station.open(player, event.block.entity)
+}
 
 const ResearchManager = global.ResearchManager = exports.ResearchManager = {
+	Station: {
+		// There's no other way, I need to know which players are interacting with what station.
+		/** @type {import("@package/java/util").$Map<$Player, $KubeBlockEntity>} */
+		player_to_station_table: Utils.newMap(),
+
+		/** @param {$Player} @returns {$KubeBlockEntity?} */
+		get_accessed_by: function(player) {
+			let station = this.player_to_station_table.get(player)
+			if (!station || station.isRemoved()) {
+				console.warn(`Attempted to access non-existent Research Station at ${station?.blockPos} for ${player.username}`)
+				return null
+			}
+			return station
+		},
+
+		/** @param {$Player} player @param {$KubeBlockEntity} station */
+		open: function(player, station) {
+			let inventory = /** @type {$InventoryAttachment$Wrapped} */ (station.attachments.get("inventory"))
+			player.openInventoryGUI(inventory, station.block.block.name)
+			let menu = /** @type {$KubeJSMenu} */ (player.containerMenu)
+
+			if (!this.player_to_station_table.containsValue(station)) {
+				// First player accessing the station.
+				station.block.setBlockState(Block.withProperties(station.getBlockState(), {open: true}))
+				play_sound_globally(station.level, station.blockPos.center, "bubble_cobble:block.research_station.open", "blocks", 0.5)
+			}
+			this.player_to_station_table.putIfAbsent(player, station)
+
+			player.server.scheduleRepeatingInTicks(1, callback => {
+				if (!player || !this.player_to_station_table.containsKey(player)) {
+					callback.clear()
+					return
+				}
+
+				if (player.isRemoved()
+				|| station.isRemoved()
+				|| player.containerMenu != menu
+				|| player.distanceToBlock(station.blockPos) > player.blockInteractionRange() * 1.5
+				) {
+					this.close(player, station, menu)
+					callback.clear()
+					return
+				}
+			})
+		},
+
+		/** @param {$Player} player @param {$KubeBlockEntity} station @param {$KubeJSMenu} menu */
+		close: function(player, station, menu) {
+			this.player_to_station_table.remove(player)
+
+			if (player.containerMenu == menu) {
+				player.closeMenu()
+			}
+
+			if (!this.player_to_station_table.containsValue(station) && !station.isRemoved()) {
+				// No one else is accessing the station.
+				station.block.setBlockState(Block.withProperties(station.getBlockState(), {open: false}))
+				play_sound_globally(station.level, station.blockPos.center, "bubble_cobble:block.research_station.close", "blocks", 0.5)
+			}
+		},
+	},
+
 	/** @param {$Player} player @param {$ItemStack} item_stack  */
 	can_donate: function(player, item_stack) {
 		if (item_stack.isEmpty()) {
