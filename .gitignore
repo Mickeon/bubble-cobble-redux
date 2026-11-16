@@ -97,8 +97,9 @@
 /mods/*
 /build
 /.pakku
-/global_packs/datapacks
-/global_packs/resourcepacks
+/global_packs/datapacks/*
+/global_packs/resourcepacks/*
+!/global_packs/resourcepacks/coffee-gui
 
 # Mods being tested.
 /config/ali

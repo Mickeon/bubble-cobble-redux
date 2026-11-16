@@ -6,6 +6,7 @@
     "overrides": [
         "config",
         "configureddefaults",
+        "global_packs/resourcepacks/coffee-gui",
         "global_packs/overrides",
         "global_packs/desktop.ini",
         "global_packs/icon.ico",

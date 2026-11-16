@@ -1,0 +1,7 @@
+{
+	"pack": {
+		"description": "Coffee GUI tweaks and additions for the modpack.",
+		"pack_format": 16,
+		"supported_formats": [16, 80]
+	}
+}

@@ -1,0 +1,9 @@
+{
+  "module": true,
+  "packIds": [
+    "file/modpack-coffee-gui",
+    "file/ModdedCoffeeGUI_Release_v1.16.0.zip",
+    "file/CoffeeGUI_1.20.2-26.2_release_v2.2.1.zip",
+    "file/Serified Font v1.2.zip"
+  ]
+}

@@ -1,5 +1,5 @@
 {
-  "locked": true,
+  "locked": false,
   "name": "Default",
   "description": "",
   "overrides": {
@@ -103,6 +103,9 @@
     },
     "mod/lootr:resourcepacks/old_textures": {
       "hidden": true
+    },
+    "file/CobblemonRaidDenDesigns-0.7_RELEASE.zip": {
+      "hidden": true
     }
   },
   "packIds": [
@@ -123,6 +126,7 @@
     "file/RCT Trainers+ [1.7] v2.2.zip",
     "file/Vervada-s-double-slabs.zip",
     "pasturefix",
+    "file/coffee-gui",
     "supplementaries:darker_ropes",
     "mod/cobblemon:resourcepacks/gyaradosjump",
     "mod/cobblemon:resourcepacks/regionbiasforms",
@@ -130,9 +134,6 @@
     "mod/mega_showdown:resourcepacks/gyaradosjumpingmega",
     "mod/mega_showdown:resourcepacks/regionbiasmsd",
     "mod/item_interactions_mod:resourcepacks/example_gui_particles",
-    "file/Serified Font v1.2.zip",
-    "file/ModdedCoffeeGUI_Release_v1.16.0.zip",
-    "file/CoffeeGUI_1.20.2-26.2_release_v2.2.1.zip",
     "moonlight:merged_pack",
     "highly_customizable_damage_numbers_resources",
     "mod_resources",
