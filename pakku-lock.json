@@ -10655,44 +10655,6 @@
             ]
         },
         {
-            "pakku_id": "yNW1NRjm7oTha4i6",
-            "type": "MOD",
-            "side": "SERVER",
-            "slug": {
-                "modrinth": "underground-bunkers"
-            },
-            "name": {
-                "modrinth": "Underground Bunkers"
-            },
-            "id": {
-                "modrinth": "MRK4tULJ"
-            },
-            "files": [
-                {
-                    "type": "modrinth",
-                    "file_name": "UndergroundBunkers-1.0.4-1.21.x-neoforge.jar",
-                    "mc_versions": [
-                        "1.21",
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/MRK4tULJ/versions/zcaE2RVm/UndergroundBunkers-1.0.4-1.21.x-neoforge.jar",
-                    "id": "zcaE2RVm",
-                    "parent_id": "MRK4tULJ",
-                    "hashes": {
-                        "sha512": "04775162e8bd18a907fc4ae67e05b650b6aeb44e0825c6208ce6f4948152e84c21bac5f5970b6fd2a548add707b907c6b0155aaf9ee6a4d741bead2e79060b40",
-                        "sha1": "b5cd6262266042c5b05521bdf75b8fd3cb69ca3f"
-                    },
-                    "required_dependencies": [],
-                    "size": 591113,
-                    "date_published": "2024-09-04T04:54:49.640857Z"
-                }
-            ]
-        },
-        {
             "pakku_id": "rBJeLVBr3rqwdrT1",
             "type": "MOD",
             "side": "BOTH",

@@ -71,10 +71,6 @@
     {
       "structure": "repurposed_structures:mansions_mangrove",
       "factor": 0.75
-    },
-    {
-      "structure": "underground_bunkers:minor_structures",
-      "factor": 3.0
     }
   ]
 }
