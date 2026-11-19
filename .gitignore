@@ -9,6 +9,7 @@
 /logs
 /debug
 /crash-reports
+/atlasviewer
 
 # Regenerated anyway.
 /.mixin.out

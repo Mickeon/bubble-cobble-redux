@@ -157,6 +157,7 @@ ServerEvents.tags("item", event => {
 
 	if (Platform.isLoaded("connectiblechains")) {
 		event.add("connectiblechains:hangable_items", "#bubble_cobble:lanterns", "urban_decor:stainless_steel_lantern", "urban_decor:stainless_steel_soul_lantern")
+		event.add("connectiblechains:catenary_items", "biomesoplenty:spanish_moss", "biomesoplenty:webbing", "biomeswevegone:skyris_vine", "minecraft:twisting_vines", "minecraft:weeping_vines")
 	}
 })
 

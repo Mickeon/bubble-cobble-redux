@@ -6,6 +6,7 @@ StartupEvents.registry("item", event => {
 			.releaseUsing((item_stack, level, entity, tick) => global.release_using_wowozela(item_stack, level, entity, tick))
 			.useDuration(item_stack => 100000)
 			.glow(true)
+			.rarity("rare")
 			.useAnimation("toot_horn")
 			.tooltip(Text.of(`Eye-pitch-based instrument`).gray())
 			.texture("minecraft:item/bamboo")

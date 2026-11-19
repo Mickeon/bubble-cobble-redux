@@ -124,11 +124,17 @@ ItemEvents.modifyTooltips(event => {
 	event.add(["supplementaries:pulley_block"], subtle(Text.translateWithFallback("", "%s and %s in here!", Text.of(`Ropes`).color(MASCOT_COLOR), Text.of(`chains`).color(MASCOT_COLOR))))
 
 	event.modify([
+		"#supplementaries:placeable_books",
 		"supplementaries:cannonball",
 		"minecraft:stick",
 		"minecraft:blaze_rod",
 		"minecraft:breeze_rod",
+		"minecraft:book",
+		"minecraft:gunpowder",
+		"minecraft:writable_book",
+		"minecraft:written_book",
 	], text => {
+		text.removeText(Text.translate("message.supplementaries.placeable")) // If it exists.
 		text.insert(1, PLACEABLE_TOOLTIP)
 	})
 	event.modify("supplementaries:lunch_basket", text => {

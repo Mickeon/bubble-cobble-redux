@@ -1,0 +1,13 @@
+{
+  "textures": {
+    "chain": "minecraft:block/twisting_vines_plant",
+    "knot": "minecraft:block/twisting_vines_plant"
+  },
+  "model": "connectiblechains:square",
+  "uv": [
+    7,
+    9,
+    7,
+    9
+  ]
+}

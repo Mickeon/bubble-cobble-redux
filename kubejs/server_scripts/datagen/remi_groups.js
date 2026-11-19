@@ -67,11 +67,14 @@ global.datagen.functions.remi_groups = function() {
 		const name = ID.path(id)
 		const display_name = wood_type.display_name || StringUtils.snakeCaseToTitleCase(name)
 
+		const planks = Block.getBlock(id + "_planks")
+		const text_color = planks ? planks.defaultMapColor().col : "light_blue_dye"
+
 		const group = {
 			__comment: "Generated data. Do not edit manually.",
 			type: "remi:group",
 			id: `${namespace}:wood_sets/${name}`,
-			name: Text.join(Text.of(display_name).color("light_blue_dye"), ` Wood Set`),
+			name: Text.join(Text.of(display_name).color(text_color), ` Wood Set`),
 			priority: 1,
 			contents: []
 		}
