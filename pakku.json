@@ -183,10 +183,6 @@
 
         "spark": {
             "side": "SERVER"
-        },
-
-        "cobblemon-journey-mounts": {
-            "export": false
         }
     },
     "export_server_side_projects_to_client": true
