@@ -170,10 +170,6 @@ ServerEvents.tags("item", event => {
 	event.add("bubble_cobble:researchable", ResearchManager.get_researchable_item_ids())
 })
 
-ServerEvents.tags("block", event => {
-	event.add("bubble_cobble:dummy_shops", "minecraft:orange_glazed_terracotta")
-})
-
 ServerEvents.recipes(event => {
 	event.shaped("bubble_cobble:research_station", ["LBL", "RAR", "OGO"], {L: "#minecraft:logs", B: "minecraft:writable_book", R: "minecraft:cobbled_deepslate", A: "minecraft:lectern", O: "#c:obsidians", G: "create:millstone"})
 })

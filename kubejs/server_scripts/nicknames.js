@@ -160,7 +160,11 @@ function get_nickname(player) {
 
 function try_read_and_parse_json(path) {
 	try {
-		return JSON.parse(JsonIO.readJson(path).toString())
+		let file = JsonIO.readJson(path)
+		if (!file) {
+			return null
+		}
+		return JSON.parse(file.toString())
 	} catch (error) {
 		console.error(error)
 		return null

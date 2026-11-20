@@ -1,6 +1,6 @@
-// requires: sounds
-// requires: more_sounds
-// NOTE: Sounds's block definitions refresh after a full restart.
+// We actually do not want to forcefully require both Sounds and More Sounds for these.
+// Otherwise this code doesn't run on dedicated servers.
+// Note that Sounds's block definitions only refresh after a full restart.
 
 ServerEvents.tags("block", event => {
 	/**

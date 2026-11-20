@@ -34,7 +34,7 @@ ItemEvents.entityInteracted("minecraft:potion", event => {
 	const player = /** @type {$Player} */ (event.entity)
 
 	const current_contents = /** @type {$PotionContents} */ (item.getComponents().get("minecraft:potion_contents"))
-	if (!current_contents.is("bubble_cobble:girl_power")) {
+	if (!current_contents.is("bubble_cobble:girl_power") || player.cooldowns.isOnCooldown(item)) {
 		return
 	}
 
@@ -47,6 +47,12 @@ ItemEvents.entityInteracted("minecraft:potion", event => {
 		return
 	}
 
+	// Do not try drinking the potion after successful use.
+	player.server.scheduleInTicks(2, () => {
+		player.stopUsingItem(),
+		player.addItemCooldown(item, 10)
+	})
+	player.swing(event.hand, true)
 	if (!player.isCreative()) {
 		item.consume(1, pokemon_entity)
 	}

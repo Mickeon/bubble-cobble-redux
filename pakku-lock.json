@@ -1828,6 +1828,7 @@
             "id": {
                 "modrinth": "Vn5WCYr6"
             },
+            "export": false,
             "files": [
                 {
                     "type": "modrinth",
@@ -3647,6 +3648,7 @@
             "id": {
                 "modrinth": "yIWYj2mo"
             },
+            "export": false,
             "files": [
                 {
                     "type": "modrinth",
@@ -3942,7 +3944,7 @@
         {
             "pakku_id": "vqYPIgcIU332HHHj",
             "type": "MOD",
-            "side": "CLIENT",
+            "side": "BOTH",
             "slug": {
                 "modrinth": "emi"
             },
@@ -9755,7 +9757,7 @@
             ]
         },
         {
-            "pakku_id": "HwLHQc8UcFAVc4ZP",
+            "pakku_id": "w1qj74HGgkvA60kH",
             "type": "MOD",
             "side": "BOTH",
             "slug": {
@@ -9770,7 +9772,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "sophisticatedbackpacks-1.21.1-3.26.21.2249.jar",
+                    "file_name": "sophisticatedbackpacks-1.21.1-3.26.22.2257.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -9778,18 +9780,18 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/TyCTlI4b/versions/tJnK2DE1/sophisticatedbackpacks-1.21.1-3.26.21.2249.jar",
-                    "id": "tJnK2DE1",
+                    "url": "https://cdn.modrinth.com/data/TyCTlI4b/versions/CbYrTzNh/sophisticatedbackpacks-1.21.1-3.26.22.2257.jar",
+                    "id": "CbYrTzNh",
                     "parent_id": "TyCTlI4b",
                     "hashes": {
-                        "sha512": "1373f5cdf9093e9613c82d429b6670538bf0fa1a397f5cc1e5e807fca0debd77139de67764c111bc369eea4cc1a395bbd790ec337413353fd1c987b7d9376249",
-                        "sha1": "940e93e9eaaf7db50c308c2a849a471830f6c1ea"
+                        "sha512": "19718945b6db0bbd25ca80ef6ec8c76b50c214c80663297a08321dd3252c5a9780f94c1caffb618fc87bf8eec1bf0afceefcdeede9fa121d81407b6d4dd1d69c",
+                        "sha1": "098cd62db8b38b937ca821d1de8511b9ed2c7142"
                     },
                     "required_dependencies": [
                         "nmoqTijg"
                     ],
-                    "size": 1265683,
-                    "date_published": "2026-11-09T10:53:17.831369Z"
+                    "size": 1266183,
+                    "date_published": "2026-11-18T23:01:26.137390Z"
                 }
             ]
         },
@@ -9835,7 +9837,7 @@
             ]
         },
         {
-            "pakku_id": "F0PiPQAN0fv9odHS",
+            "pakku_id": "8SjwhExljpA2I5VP",
             "type": "MOD",
             "side": "BOTH",
             "slug": {
@@ -9850,7 +9852,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "sophisticatedcore-1.21.1-1.5.38.2484.jar",
+                    "file_name": "sophisticatedcore-1.21.1-1.5.39.2489.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -9858,21 +9860,21 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/nmoqTijg/versions/hhok4NTk/sophisticatedcore-1.21.1-1.5.38.2484.jar",
-                    "id": "hhok4NTk",
+                    "url": "https://cdn.modrinth.com/data/nmoqTijg/versions/9e7VbbdS/sophisticatedcore-1.21.1-1.5.39.2489.jar",
+                    "id": "9e7VbbdS",
                     "parent_id": "nmoqTijg",
                     "hashes": {
-                        "sha512": "cb3db5eca2a381507f3d1f9c3b14d5dab123252c602ffbe4fefe01d2daf3710309dc65c301b8ce20bda979f38bde4938d4d22946961090b7b37a40c1fa844615",
-                        "sha1": "d03c42d2f00ddec0bf999b3525afe85dba6c6e46"
+                        "sha512": "eb11155bbebd1e84957ccd3207ab54a0f9c47f09796bd8fdcc23aeaa16def26661c070e30846bb9eae752e08c0ee510eb2cd4c790bf2e4575212907fef9cde1d",
+                        "sha1": "27d19713fec2c1b1e8e8158b2c7e285d6153778b"
                     },
                     "required_dependencies": [],
-                    "size": 1855171,
-                    "date_published": "2026-11-16T17:22:25.938750Z"
+                    "size": 1855442,
+                    "date_published": "2026-11-18T22:59:39.373286Z"
                 }
             ]
         },
         {
-            "pakku_id": "HvoavRpL7rF0EYEc",
+            "pakku_id": "Ay84p6sckW3Sf9ZW",
             "type": "MOD",
             "side": "BOTH",
             "slug": {
@@ -9887,7 +9889,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "sophisticateditemactions-1.21.1-0.5.19.446.jar",
+                    "file_name": "sophisticateditemactions-1.21.1-0.5.20.451.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -9895,18 +9897,18 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/RMW7bKVL/versions/dFNMPYp7/sophisticateditemactions-1.21.1-0.5.19.446.jar",
-                    "id": "dFNMPYp7",
+                    "url": "https://cdn.modrinth.com/data/RMW7bKVL/versions/qMLBuAHH/sophisticateditemactions-1.21.1-0.5.20.451.jar",
+                    "id": "qMLBuAHH",
                     "parent_id": "RMW7bKVL",
                     "hashes": {
-                        "sha512": "62b0966d1eed8a570cb154f9666b9b8e5e330af2aad180051ca486d5275d869398d801cebd0de8bc32a8245e73305ae1a355b9617e44684a4dbe954bb3a7b035",
-                        "sha1": "fb405ab067dcd87168e6c76d5132678e567b6c26"
+                        "sha512": "4a4ee46edf1f4f1900079ea166ad9cd03badcfa450e45ddc462ea4959351e83c44f99ca8a4817b34dc30e7187370f73957ffbb914a484fe1a5f6f0fccc58219e",
+                        "sha1": "e2991c84344fa1febe97797b49d09fc38f7d1cc5"
                     },
                     "required_dependencies": [
                         "nmoqTijg"
                     ],
-                    "size": 424356,
-                    "date_published": "2026-10-30T15:02:49.914454Z"
+                    "size": 424355,
+                    "date_published": "2026-11-18T23:03:31.727238Z"
                 }
             ]
         },
@@ -9948,7 +9950,7 @@
             ]
         },
         {
-            "pakku_id": "wQwBfdvB5DUDcNHU",
+            "pakku_id": "mOzjo7P8ofwpsHXU",
             "type": "MOD",
             "side": "BOTH",
             "slug": {
@@ -9963,7 +9965,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "sophisticatedstorage-1.21.1-1.6.19.2234.jar",
+                    "file_name": "sophisticatedstorage-1.21.1-1.6.20.2239.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -9971,18 +9973,18 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/hMlaZH8f/versions/acJAaBrG/sophisticatedstorage-1.21.1-1.6.19.2234.jar",
-                    "id": "acJAaBrG",
+                    "url": "https://cdn.modrinth.com/data/hMlaZH8f/versions/t9QwDIi8/sophisticatedstorage-1.21.1-1.6.20.2239.jar",
+                    "id": "t9QwDIi8",
                     "parent_id": "hMlaZH8f",
                     "hashes": {
-                        "sha512": "ff24a1ec11cb4a9734e2dbd7e91a2fe44b54bfaee2d9899e9181f9eb33a37f29dd5156e0954f8d5cc14e405d5e61a4b01998611cfcbeb0a64ab8c665d16f5ae7",
-                        "sha1": "c0ed6343dd6aba82921ae704daf65c5b15eec4d7"
+                        "sha512": "df3a1d6f5483d8de792f127c0106c7d935497d468cf7330c65b1a1d3796069ade21367f49e4a283c2d2aa3e1244e454d36c896ba825accf3efed029c5f8e9fd5",
+                        "sha1": "13b863fa5fa12896caaece3a1b4e5f9475c7f591"
                     },
                     "required_dependencies": [
                         "nmoqTijg"
                     ],
-                    "size": 2097594,
-                    "date_published": "2026-11-16T17:27:14.763524Z"
+                    "size": 2100126,
+                    "date_published": "2026-11-18T22:57:24.682560Z"
                 }
             ]
         },

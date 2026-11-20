@@ -4,7 +4,7 @@
 	#Seconds without keyboard or mouse input before the cinematic camera starts.
 	# Default: 300
 	# Range: 5 ~ 3600
-	idleSeconds = 300
+	idleSeconds = 120
 	#Hide the HUD while Ambient Camera is active. The previous HUD state is restored on exit.
 	hideHud = true
 	#Show a short action-bar message when the automatic camera starts or stops.

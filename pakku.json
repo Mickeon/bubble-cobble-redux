@@ -1,6 +1,6 @@
 {
     "name": "Bubble Cobble Redux",
-    "version": "2.0.0-alpha6",
+    "version": "2.0.0-alpha7",
     "description": "A pinch of Cobblemon, Create, Farmer's Delight, and a Bubble Pub aftertaste.",
     "author": "Mickeon",
     "overrides": [
@@ -143,7 +143,8 @@
             "side": "BOTH"
         },
         "discord-chat-connect": {
-            "side": "BOTH"
+            "side": "BOTH",
+            "export": false
         },
         "simple-voice-chat": {
             "side": "BOTH"
@@ -155,6 +156,9 @@
             "side": "BOTH"
         },
         "sophisticated-sorter": {
+            "side": "BOTH"
+        },
+        "emi": {
             "side": "BOTH"
         },
         "cobble-caf-forms": {
@@ -179,6 +183,10 @@
 
         "spark": {
             "side": "SERVER"
+        },
+
+        "cobblemon-journey-mounts": {
+            "export": false
         }
     },
     "export_server_side_projects_to_client": true

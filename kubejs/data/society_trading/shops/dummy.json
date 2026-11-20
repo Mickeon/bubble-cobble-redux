@@ -5,7 +5,7 @@
 	},
 	"display_type": "default",
 	"texture": "bubble_cobble:textures/item/blue_mascot_cat",
-	"block_tag": "bubble_cobble:dummy_shops",
+	"block_tag": "bubble_cobble:shops/dummy",
 	"trades": [
 		{
 			"offer": {
@@ -58,6 +58,17 @@
 			"numismatics_cost": 512,
 			"stage_required": "donated.tuff",
 			"trade_id": "dummy_polished_tuff"
+		},
+		{
+			"offer": {
+				"id": "numismatics:spur",
+				"count": 32
+			},
+			"request": {
+				"id": "minecraft:lantern",
+				"count": 1
+			},
+			"trade_id": "dummy_lantern"
 		}
 	]
 }

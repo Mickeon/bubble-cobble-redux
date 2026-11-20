@@ -5,9 +5,9 @@
   },
   "model": "connectiblechains:square",
   "uv": [
-    9,
     12,
-    3,
-    4
+    15,
+    12,
+    9
   ]
 }

@@ -1,0 +1,79 @@
+{
+	"shop_id": "gadgets",
+	"name": "gadgets",
+	"display_type": "default",
+	"texture": "bubble_cobble:textures/item/blue_mascot_cat",
+	"block_tag": "bubble_cobble:shops/gadgets",
+	"trades": [
+		{
+			"offer": {
+				"id": "numismatics:cog",
+				"count": 1
+			},
+			"request": {
+				"id": "create:builders_tea",
+				"count": 1
+			},
+			"trade_id": "gadgets_buy_1"
+		},
+		{
+			"offer": {
+				"id": "numismatics:cog",
+				"count": 2
+			},
+			"request": {
+				"id": "create:bound_cardboard_block",
+				"count": 1
+			},
+			"trade_id": "gadgets_buy_2"
+		},
+		{
+			"offer": {
+				"id": "create:packager",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:cog",
+				"count": 4
+			},
+			"numismatics_cost": 64,
+			"trade_id": "gadgets_sell_1"
+		},
+		{
+			"offer": {
+				"id": "create:track",
+				"count": 32
+			},
+			"request": {
+				"id": "numismatics:cog",
+				"count": 8
+			},
+			"numismatics_cost": 512,
+			"trade_id": "gadgets_sell_2"
+		},
+		{
+			"offer": {
+				"id": "create:precision_mechanism",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:cog",
+				"count": 8
+			},
+			"numismatics_cost": 512,
+			"trade_id": "gadgets_sell_3"
+		},
+		{
+			"offer": {
+				"id": "create:desk_bell",
+				"count": 1
+			},
+			"request": {
+				"id": "numismatics:cog",
+				"count": 2
+			},
+			"numismatics_cost": 128,
+			"trade_id": "gadgets_sell_4"
+		}
+	]
+}

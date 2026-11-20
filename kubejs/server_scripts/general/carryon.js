@@ -1,9 +1,10 @@
 // requires: carryon
 
 // Allow carrying Noteblocks.
+// FIXME: Does not work, for some reason. Stops working at the "isKeyPressed" check.
 BlockEvents.rightClicked(["minecraft:note_block"], event => {
 	const player = event.player
-	if (player.isHoldingInAnyHand(item => item != Item.getEmpty())) {
+	if (player.isHoldingInAnyHand(item => !item.isEmpty())) {
 		return // Need to be fully empty-handed.
 	}
 

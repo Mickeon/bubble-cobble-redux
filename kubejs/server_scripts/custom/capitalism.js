@@ -25,6 +25,10 @@ ServerEvents.tags("block", event => {
 		"undergroundworlds:jungle_vines",
 		"undergroundworlds:jungle_vines_plant",
 	)
+
+	event.add("bubble_cobble:shops/dummy", "minecraft:orange_glazed_terracotta")
+	event.add("bubble_cobble:shops/gourmet", "minecraft:red_glazed_terracotta")
+	event.add("bubble_cobble:shops/gadgets", "minecraft:yellow_glazed_terracotta")
 })
 
 BlockEvents.rightClicked(event => {
