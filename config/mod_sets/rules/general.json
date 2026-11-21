@@ -103,7 +103,7 @@
             "description": ["",{"color":"#76deea","text":"Illuminates"}," the surroundings in many occasions, such as when holding ",{"color":"#76deea","text":"Torches"},".\n\nDisable if the ",{"color":"dark_aqua","text":"CPU"}," cannot keep up.\nRemember, the lighting's quality can be changed in the ",{"color":"#76deea","text":"Video Settings"}," without needing to disable the mod."],
             "controller": {
               "type": "boolean",
-              "id": "fabric_renderer_api_v1"
+              "id": "dynamic_lights_set"
             }
           },
           {
