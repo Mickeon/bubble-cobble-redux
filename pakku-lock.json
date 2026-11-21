@@ -6964,6 +6964,52 @@
             ]
         },
         {
+            "pakku_id": "Zvkjjxa3Ch3VeC8x",
+            "pakku_links": [
+                "W02TsXmCdzSWJRAw"
+            ],
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "modrinth": "multi-mine"
+            },
+            "name": {
+                "modrinth": "Multi Mine"
+            },
+            "id": {
+                "modrinth": "fJ90SEuf"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "MultiMine-neoforge-1.2.0.jar",
+                    "mc_versions": [
+                        "1.21.1",
+                        "1.21.2",
+                        "1.21.3",
+                        "1.21.4",
+                        "1.21.5"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/fJ90SEuf/versions/GHqvfasB/MultiMine-neoforge-1.2.0.jar",
+                    "id": "GHqvfasB",
+                    "parent_id": "fJ90SEuf",
+                    "hashes": {
+                        "sha512": "7263d769224d37f23209293265b8a8d9bcfe1a90ed2746926487aa87b4b06fe537ea424defcefcd62cf4db05c37ccade48c99d6504c4bf679ee4a3f6647ff5ab",
+                        "sha1": "c29257bebb758311b3288489cb9d015571ff6c00"
+                    },
+                    "required_dependencies": [
+                        "lhGA9TYQ"
+                    ],
+                    "size": 13058,
+                    "date_published": "2025-04-14T04:46:01.978332Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "vVRTVoUS6WmZk5Lm",
             "type": "MOD",
             "side": "BOTH",
