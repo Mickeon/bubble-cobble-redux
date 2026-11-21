@@ -75,6 +75,14 @@
             }
           },
           {
+            "text": "🌥 Sky",
+            "description": ["Improves the look of the ",{"color":"#76DEEA","text":"sky"}," dramatically. The Sun casts light onto the ",{"color":"#76DEEA","text":"clouds"},", the Moon shines along with many more stars.\n\nQuite demanding. Disable if the ",{"color":"dark_aqua","text":"GPU"}," cannot keep up."],
+            "controller": {
+              "type": "boolean",
+              "id": "cirrus"
+            }
+          },
+          {
             "text": "💃 Animation",
             "description": ["Enhances ",{"color":"#76deea","text":"player animations "},"on several occasions. From showing players holding ",{"color":"#76deea","text":"Torches"}," upwards, to rummaging their ",{"color":"#76deea","text":"Inventory"},".\n\nDisable if you believe the ",{"color":"dark_aqua","text":"CPU"}," and ",{"color":"dark_aqua","text":"GPU"}," cannot keep up."],
             "controller": {
