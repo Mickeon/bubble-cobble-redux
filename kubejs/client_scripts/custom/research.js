@@ -13,7 +13,7 @@ this.ResearchManager = global.ResearchManager
 
 
 NativeEvents.onEvent($ScreenEvent$Init$Post, event => {
-	if (!(event.screen instanceof $KubeJSScreen)) {
+	if (!(event.screen instanceof $KubeJSScreen) || event.screen.getTitle().getString() != "Research Station") {
 		return
 	}
 
@@ -113,7 +113,7 @@ ItemEvents.modifyTooltips(event => {
 })
 
 ItemEvents.dynamicTooltips("research_progress", event => {
-	if (!(Client.screen instanceof $KubeJSScreen)) {
+	if (!(Client.screen instanceof $KubeJSScreen) || Client.screen.getTitle().getString() != "Research Station") {
 		return
 	}
 

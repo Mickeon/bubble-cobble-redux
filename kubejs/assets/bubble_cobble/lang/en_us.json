@@ -28,8 +28,21 @@
 	"category.bubble_cobble.fieldguide.tips": "Tips",
 	"category.bubble_cobble.fieldguide.events": "Events",
 
+	"fieldguide.bubble_cobble.tip/catenary.description": "Use a Chain onto a fence to attach it. Use on another fence to create a catenary.\nRopes, vines, and similar, work too!",
+
+	"fieldguide.biomesoplenty.goldenrod.description": "The Move Tutor for Flamethrower, Ice Beam and Thunderbolt can be found standing outside the Casino on Wednesdays and Saturdays. Hope you like gambling!",
+	"fieldguide.biomeswevegone.green_mushroom.description": "Mushroom!\n                Mushroom!\n    Mushroom!\n                   Mushroom!\n\nFOCUS, Team! Leave the damn mushrooms alone!\n \n                Mushroom!\nMushroom!",
 	"fieldguide.biomeswevegone.oddion.description": "It looks quite evenion to me. Ordinarion, even.",
+	"fieldguide.biomeswevegone.rose.description": "My Dyna Tree Hill project took several thousands of these. I had Micky install a dedicated \"Bonemealing Flowers\" mod for it.",
+	"fieldguide.biomeswevegone.winter_cyclamen.description": "I remember that time I got my wife blue orchids! These kind of remind me of them. They weren't available right away before I left the Netherlands, so I had to order them.",
+	"fieldguide.fieldguide.cobblemon.caterpie.description": "Why does Waigee even have a GIF like that?!.",
+	"fieldguide.fieldguide.cobblemon.zangoose_standard.description": "Swords Dance at Level 10, but they still 'round the corner begging for spare change.",
+	"fieldguide.fieldguide.cobblemon.beedrill_standard.Normal.description": "Sì, stobbbennnnee. Ma ci sono I BEEDRILL.",
+	"fieldguide.fieldguide.cobblemon.jigglypuff_standard.description": "Voted the #7 most popular Pokémon, behind Incineroar, Greninja, Lucario, Pokémon Trainer, Mewtwo and Pikachu.",
+	"fieldguide.create_bic_bit.sunflower_seeds.description": "that's that fucker from delted rune",
 	"fieldguide.crittersandcompanions.ferret.description": "It is you! The Poi!\n(Point of Interest)",
+	"fieldguide.crittersandcompanions.otter.description": "Some otters are reported to have over 2 million hairs per square inch of pelt. That makes it the second densest animal on earth, right behind Bedrock players.",
+	"fieldguide.crittersandcompanions.koi_fish.description": "Yaaaayyyy pelleds!!!",
 	"fieldguide.create_bic_bit.herring.description": "Carpe Diem.\n\n\n   Shoot- that's the wrong one.",
 	"fieldguide.minecraft.allay.description": "Grouping it among the \"animals\" is exactly what the Illagers would do. I mean, if you get to know them, they just want to help.",
 	"fieldguide.minecraft.bat.description": "Ow my ears Jesus Christ",
@@ -38,11 +51,15 @@
 	"fieldguide.minecraft.horse.description": "What is the point\nI mean, like- You can quite literally ride Scolipede. What more can you ask for?",
 	"fieldguide.minecraft.iron_golem.description": "You can repair these hunks by using Iron Ingots on them. Not that it matters to you. Into the torture chamber you go.",
 	"fieldguide.minecraft.parrot.red_blue.description": "Hue-hue-hue-hue-hue.",
+	"fieldguide.minecraft.phantom.description": "The 2017 Mob Vote and its consequences.",
 	"fieldguide.minecraft.polar_bear.description": "What's goooood? My man-!\n\n    why are you white",
 	"fieldguide.minecraft.rabbit.description": "bnnuy",
+	"fieldguide.minecraft.wandering_trader.description": "Look at his shit-eating grin. He knows there's nothing you can do to him. He's bullying you and you are HELPLESS.\n\nKill Him.\n\nKill Him NOW.\n\nHe won't see death coming. This is what you came for, wasn't it? A climatic bloodletting, where men are reduced to muscles and fury. These images speak to something gurgling deep within you.",
 	"fieldguide.minecraft.sheep.white.description": "Do we really need an entry for each single color? Why, yes. Yes, we do.",
 	"fieldguide.minecraft.strider.description": "Cute, in a bloody repugnant-sort of way. Much like anyone drinking Aleberry, they too crave the warmth of 300°C bathwater.",
+	"fieldguide.minecraft.villager.plains.description": "One time Candle made a Villager that was exclusively used to buy a stupid amount of Sticks.\n\nOnly legends remember Big Stick Tony.",
 	"fieldguide.minecraft.wither.description": "Oh my God is that the Roaring Knight?",
 	"fieldguide.minecraft.wolf.description": "Not an Arcanine, but it'll do. Unless Lava is involved.",
-	"fieldguide.ribbits.ribbit.description": "Yip."
+	"fieldguide.ribbits.ribbit.description": "Yip.",
+	"fieldguide.urban_decor.daffodil_polyanthous.description": "Polyanthus flowers are the primary component of Polypropylene (the common plastic). \nThey come in various colors and can be turned into vibrant Wraps and neat, urban furniture."
 }

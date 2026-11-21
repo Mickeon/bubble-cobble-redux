@@ -264,6 +264,11 @@
 			"bubble_cobble:ui/chat"
 		]
 	},
+	"ui.entry_get": {
+		"sounds": [
+			"bubble_cobble:ui/entry_get"
+		]
+	},
 	"ui.recharged": {
 		"sounds": [
 			"bubble_cobble:ui/recharged"

@@ -10,7 +10,7 @@
   "scanIconXOffset": 30,
   "showScanIcon": true,
   "playScanningSound": true,
-  "playUnlockSound": true,
+  "playUnlockSound": false,
   "showOutOfRangeOverlay": true,
   "scanOverlayColor": "#F9EED0",
   "scanOverlayAlpha": 0.5,

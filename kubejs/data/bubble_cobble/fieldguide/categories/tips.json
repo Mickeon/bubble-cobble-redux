@@ -6,6 +6,14 @@
 			"id": "bubble_cobble:tip/cheese",
 			"virtual_type": "tutorial",
 			"icon": "fieldguide:textures/gui/scanning.png"
+		},
+		{
+			"type": "virtual_entry",
+			"id": "bubble_cobble:tip/catenary",
+			"virtual_type": "tutorial",
+			"unlock": {
+				"trigger_on": ["minecraft:chain", "supplementaries:rope", "farmersdelight:rope"]
+			}
 		}
 	]
 }

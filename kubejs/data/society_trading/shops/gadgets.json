@@ -7,28 +7,6 @@
 	"trades": [
 		{
 			"offer": {
-				"id": "numismatics:cog",
-				"count": 1
-			},
-			"request": {
-				"id": "create:builders_tea",
-				"count": 1
-			},
-			"trade_id": "gadgets_buy_1"
-		},
-		{
-			"offer": {
-				"id": "numismatics:cog",
-				"count": 2
-			},
-			"request": {
-				"id": "create:bound_cardboard_block",
-				"count": 1
-			},
-			"trade_id": "gadgets_buy_2"
-		},
-		{
-			"offer": {
 				"id": "create:packager",
 				"count": 1
 			},
@@ -37,7 +15,7 @@
 				"count": 4
 			},
 			"numismatics_cost": 64,
-			"trade_id": "gadgets_sell_1"
+			"trade_id": "gadgets/packager"
 		},
 		{
 			"offer": {
@@ -49,7 +27,7 @@
 				"count": 8
 			},
 			"numismatics_cost": 512,
-			"trade_id": "gadgets_sell_2"
+			"trade_id": "gadgets/track"
 		},
 		{
 			"offer": {
@@ -61,7 +39,7 @@
 				"count": 8
 			},
 			"numismatics_cost": 512,
-			"trade_id": "gadgets_sell_3"
+			"trade_id": "gadgets/precision_mechanism"
 		},
 		{
 			"offer": {
@@ -73,7 +51,7 @@
 				"count": 2
 			},
 			"numismatics_cost": 128,
-			"trade_id": "gadgets_sell_4"
+			"trade_id": "gadgets/desk_bell"
 		}
 	]
 }

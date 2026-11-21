@@ -11,6 +11,7 @@
   "enableLensItem": false,
   "requireItemToOpen": false,
   "enableCopyingPages": true,
+  "uncopyableEntries": ["entity:minecraft/wither"],
   "disableObtainUnlocks": false,
   "hideTabsUntilUnlocked": false,
   "enableSpyglassScanning": true,

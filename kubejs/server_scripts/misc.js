@@ -253,3 +253,12 @@ BlockEvents.rightClicked(["minecraft:chipped_anvil", "minecraft:damaged_anvil"],
 
 	event.cancel()
 })
+
+if (Platform.isLoaded("fieldguide")) {
+	FieldGuideEvents.entryUnlocked(event => {
+		if (!event.player.cooldowns.isOnCooldown("fieldguide:page")) {
+			event.player.addItemCooldown("fieldguide:page", 5) // Noise spam prevention.
+			event.player.playNotifySound("bubble_cobble:ui.entry_get", "players", 0.1, 1.0)
+		}
+	})
+}

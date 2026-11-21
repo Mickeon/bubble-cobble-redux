@@ -14,7 +14,7 @@ KeyBindEvents.tick("bubble_cobble.dash", event => {
 })
 
 ItemEvents.modifyTooltips(event => {
-	event.add(["cobblemon:ice_stone"], Text.of(`Emanates a blue mascot cat scent...`).color(MASCOT_COLOR))
+	event.add(["cobblemon:ice_stone"], Text.translateWithFallback("", `Emanates a %s scent...`, Text.of("blue mascot cat").color(MASCOT_COLOR)).color(MASCOT_COLOR_DARK))
 	event.add(["farmersdelight:skillet"], [subtle("Right-click in inventory to equip")])
 	event.modify([
 		"create:chocolate_bucket",
@@ -57,4 +57,20 @@ ClientEvents.lang("en_us", event => {
 
 ItemEvents.foodEaten("minersdelight:moss", event => {
 	event.player.playNotifySound("bubble_cobble:heal", "players", 1.0, 1.0)
+})
+
+ClientEvents.loggedIn(event => {
+	// Minds only the utterly deranged can envision.
+	if (event.client.user.name == "CandleClockwork") {
+		let $InputConstants = Java.loadClass("com.mojang.blaze3d.platform.InputConstants")
+		let enter_key = $InputConstants.getKey($InputConstants.KEY_RETURN, $InputConstants.KEY_RETURN)
+		let options = event.client.options
+		if (options.keyChat.boundKey() == enter_key) {
+			return
+		}
+		options.keyChat.setDefaultKey(enter_key)
+		options.keyChat.setKeyModifierAndCode("none", enter_key)
+		options.setKey(options.keyChat, enter_key)
+		options.save()
+	}
 })

@@ -198,26 +198,26 @@ const ResearchManager = global.ResearchManager = exports.ResearchManager = {
 	 */
 	/** @type {Record<string, ResearchEntry>} */
 	research_entries: {
-		"tuff": {
-			unlocks: [
-				{item: "minecraft:tuff", price: 64},
-				{item: "minecraft:tuff_bricks", price: 64},
-				{item: "minecraft:polished_tuff", price: 64},
-				{item: "minecraft:chiseled_tuff", price: 64},
-				{item: "minecraft:chiseled_tuff_bricks", price: 64},
-				{item: "create:cut_tuff"},
-				{item: "create:polished_cut_tuff"},
-				{item: "create:cut_tuff_bricks"},
-				{item: "create:small_tuff_bricks"},
-				{item: "create:layered_tuff"},
-				{item: "create:tuff_pillar"},
-				{item: "bits_n_bobs:tuff_tiles"}
-			],
-			default_count: 32,
-			default_price: 72,
-			required: 16,
-			description: "You gotta say it like you're chewing on a big, scrumptious apple.",
-		},
+		// "tuff": {
+		// 	unlocks: [
+		// 		{item: "minecraft:tuff", price: 64},
+		// 		{item: "minecraft:tuff_bricks", price: 64},
+		// 		{item: "minecraft:polished_tuff", price: 64},
+		// 		{item: "minecraft:chiseled_tuff", price: 64},
+		// 		{item: "minecraft:chiseled_tuff_bricks", price: 64},
+		// 		{item: "create:cut_tuff"},
+		// 		{item: "create:polished_cut_tuff"},
+		// 		{item: "create:cut_tuff_bricks"},
+		// 		{item: "create:small_tuff_bricks"},
+		// 		{item: "create:layered_tuff"},
+		// 		{item: "create:tuff_pillar"},
+		// 		{item: "bits_n_bobs:tuff_tiles"}
+		// 	],
+		// 	default_count: 32,
+		// 	default_price: 72,
+		// 	required: 16,
+		// 	description: "You gotta say it like you're chewing on a big, scrumptious apple.",
+		// },
 		"veridium": {
 			unlocks: [
 				{item: "create:veridium", price: 64},
@@ -401,20 +401,20 @@ const ResearchManager = global.ResearchManager = exports.ResearchManager = {
 			required: 16,
 			description: "So many white bricks it's enough to withstand at least 2 spicy peppers.",
 		},
-		"netherrack": {
-			unlocks: [
-				{item: "minecraft:netherrack", price: 8},
-				{item: "minecraft:nether_brick", price: 16},
-				{item: "minecraft:nether_bricks", price: 64},
-				{item: "minecraft:chiseled_nether_bricks", price: 64},
-				{item: "minecraft:cracked_nether_bricks", price: 64},
-				{item: "minecraft:red_nether_bricks", price: 64},
-			],
-			default_count: 32,
-			default_price: 64,
-			required: 128,
-			description: "I spent 5 minutes researching red bean rock from Hell and all I got is this lousy shirt.",
-		},
+		// "netherrack": {
+		// 	unlocks: [
+		// 		{item: "minecraft:netherrack", price: 8},
+		// 		{item: "minecraft:nether_brick", price: 16},
+		// 		{item: "minecraft:nether_bricks", price: 64},
+		// 		{item: "minecraft:chiseled_nether_bricks", price: 64},
+		// 		{item: "minecraft:cracked_nether_bricks", price: 64},
+		// 		{item: "minecraft:red_nether_bricks", price: 64},
+		// 	],
+		// 	default_count: 32,
+		// 	default_price: 64,
+		// 	required: 128,
+		// 	description: "I spent 5 minutes researching red bean rock from Hell and all I got is this lousy shirt.",
+		// },
 		"white_dye": {
 			unlocks: [{item: {id: "minecraft:white_dye", count: 32}, price: 32}],
 			required: 32,

@@ -141,9 +141,5 @@ if (Platform.isClientEnvironment() && !is_dev()) {
 			}
 			return true
 		})
-		// Brother.
-		if (Client.user.name == "CandleClockwork") {
-			Client.options.keyChat.setKey($InputConstants.KEY_RETURN)
-		}
 	})
 }

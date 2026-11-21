@@ -71,6 +71,7 @@ if (Platform.isClientEnvironment()) {
 StartupEvents.registry("sound_event", event => {
 	event.create("bubble_cobble:ui.buzz")
 	event.create("bubble_cobble:dash")
+	event.create("bubble_cobble:ui.entry_get")
 	event.create("bubble_cobble:ui.recharged")
 	event.create("bubble_cobble:crash.crate_jump")
 	event.create("bubble_cobble:crash.fruit_got")

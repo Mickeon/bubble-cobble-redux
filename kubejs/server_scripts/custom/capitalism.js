@@ -1,7 +1,11 @@
+let $GameRules = Java.loadClass("net.minecraft.world.level.GameRules")
 
-//#region Anhilate Bone Meal's functionality for the most part.
-const $DispenserBlock = Java.loadClass("net.minecraft.world.level.block.DispenserBlock");
-$DispenserBlock.registerBehavior(Items.BONE_MEAL, new Java.loadClass("net.minecraft.core.dispenser.DefaultDispenseItemBehavior")());
+/**
+ * @import {$KubeBlockEntity, $InventoryAttachment$Wrapped} from "@package/dev/latvian/mods/kubejs/block/entity"
+ */
+
+/** @import {SellingManager} from "../../startup_scripts/custom/capitalism" */
+this.SellingManager = global.SellingManager
 
 ServerEvents.tags("block", event => {
 	// FIXME: This makes Flowering Azalea and Azalea Leaves non-renewable.
@@ -14,7 +18,7 @@ ServerEvents.tags("block", event => {
 		"biomeswevegone:apple_fruit",
 		"biomeswevegone:blueberry_bush",
 		"biomeswevegone:green_apple_fruit",
-		"cobblemon:galarica_nuts",
+		"cobblemon:galarica_nut_bush",
 		"cobblemon:hearty_grains",
 		"create_bic_bit:sunflower_seeds",
 		"farmersdelight:rice",
@@ -29,7 +33,55 @@ ServerEvents.tags("block", event => {
 	event.add("bubble_cobble:shops/dummy", "minecraft:orange_glazed_terracotta")
 	event.add("bubble_cobble:shops/gourmet", "minecraft:red_glazed_terracotta")
 	event.add("bubble_cobble:shops/gadgets", "minecraft:yellow_glazed_terracotta")
+	event.add("bubble_cobble:shops/carpenter", "minecraft:brown_glazed_terracotta")
+	event.add("bubble_cobble:shops/botanist", "minecraft:green_glazed_terracotta")
 })
+
+ServerEvents.tags("item", event => {
+	event.add("bubble_cobble:sellable", Object.keys(SellingManager.item_prices))
+})
+
+ServerEvents.recipes(event => {
+	event.shaped("bubble_cobble:selling_bin", ["T", "C"], {T: "#minecraft:trapdoors", C: "#c:chests/wooden"})
+})
+
+BlockEvents.blockEntityTick("bubble_cobble:selling_bin", event => {
+	const selling_bin = /** @type {$KubeBlockEntity} */ (event.block.entity)
+	if (!event.level.gameRules.getBoolean($GameRules.RULE_DAYLIGHT)) {
+		selling_bin.info.tickFrequency(SEC * 5) // Mostly for debugging purposes.
+	}
+	const inventory = /** @type {$InventoryAttachment$Wrapped} */ (selling_bin.attachments.get("inventory"))
+	let total_price = 0
+	for (let item_stack of inventory.getAllItems()) {
+		let price = SellingManager.get_price(item_stack)
+		if (price == 0) {
+			continue
+		}
+		// console.log(`${item_stack} ---> ${price}$`)
+		total_price += price
+		item_stack.shrink(99)
+	}
+	if (total_price == 0) {
+		return // Optimization.
+	}
+
+	let coins = []
+	create_coins_from_value(total_price, coins) // Currently relying on a method from research.js. I'd want these two to share in the future.
+	for (let coin of coins) {
+		inventory.insertItem(Item.of(coin), false)
+	}
+	if (coins.length == 0) {
+		console.error(`No coins came out from ${selling_bin}. This should never happen.`)
+		play_sound_globally(event.level, event.block.pos.center, "minecraft:block.lava.pop", "blocks", 0.5)
+		return
+	}
+
+	play_sound_globally(event.level, event.block.pos.center, "create:desk_bell", "blocks", 0.25)
+})
+
+//#region Anhilate Bone Meal's functionality for the most part.
+const $DispenserBlock = Java.loadClass("net.minecraft.world.level.block.DispenserBlock");
+$DispenserBlock.registerBehavior(Items.BONE_MEAL, new Java.loadClass("net.minecraft.core.dispenser.DefaultDispenseItemBehavior")());
 
 BlockEvents.rightClicked(event => {
 	if (event.item.item != Items.BONE_MEAL || !event.block.hasTag("bubble_cobble:cannot_bonemeal") || event.player.isCreative()) {
@@ -40,4 +92,3 @@ BlockEvents.rightClicked(event => {
 })
 
 //#endregion
-

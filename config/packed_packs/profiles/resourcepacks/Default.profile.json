@@ -1,5 +1,5 @@
 {
-  "locked": false,
+  "locked": true,
   "name": "Default",
   "description": "",
   "overrides": {
@@ -106,6 +106,9 @@
     },
     "file/CobblemonRaidDenDesigns-0.7_RELEASE.zip": {
       "hidden": true
+    },
+    "file/coffee-gui": {
+      "required": false
     }
   },
   "packIds": [

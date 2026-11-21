@@ -7,28 +7,6 @@
 	"trades": [
 		{
 			"offer": {
-				"id": "numismatics:cog",
-				"count": 1
-			},
-			"request": {
-				"id": "farmersdelight:ratatouille",
-				"count": 1
-			},
-			"trade_id": "gourmet_buy_1"
-		},
-		{
-			"offer": {
-				"id": "numismatics:cog",
-				"count": 1
-			},
-			"request": {
-				"id": "farmersdelight:shepherds_pie",
-				"count": 1
-			},
-			"trade_id": "gourmet_buy_2"
-		},
-		{
-			"offer": {
 				"id": "farmersdelight:skillet",
 				"count": 1
 			},
@@ -37,7 +15,7 @@
 				"count": 2
 			},
 			"numismatics_cost": 128,
-			"trade_id": "gourmet_sell_1"
+			"trade_id": "gourmet/skillet"
 		}
 	]
 }

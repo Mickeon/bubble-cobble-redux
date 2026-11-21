@@ -1,0 +1,135 @@
+{
+	"shop_id": "carpenter",
+	"name": "Carpenter",
+	"display_type": "default",
+	"texture": "bubble_cobble:textures/item/blue_mascot_cat",
+	"block_tag": "bubble_cobble:shops/carpenter",
+	"trades": [
+		{
+			"offer": {"id": "minecraft:dirt", "count": 8},
+			"request": {"id": "numismatics:spur", "count": 4},
+			"numismatics_cost": 4,
+			"trade_id": "carpenter/dirt"
+		},
+		{
+			"offer": {"id": "minecraft:grass_block", "count": 8},
+			"request": {"id": "numismatics:spur", "count": 16},
+			"numismatics_cost": 16,
+			"trade_id": "carpenter/grass_block"
+		},
+		{
+			"offer": {"id": "minecraft:stone", "count": 8},
+			"request": {"id": "numismatics:spur", "count": 8},
+			"numismatics_cost": 8,
+			"trade_id": "carpenter/stone"
+		},
+		{
+			"offer": {"id": "minecraft:gravel", "count": 8},
+			"request": {"id": "numismatics:spur", "count": 8},
+			"numismatics_cost": 8,
+			"trade_id": "carpenter/gravel"
+		},
+		{
+			"offer": {"id": "minecraft:oak_wood", "count": 8},
+			"request": {"id": "numismatics:spur", "count": 4},
+			"numismatics_cost": 4,
+			"trade_id": "carpenter/oak_wood"
+		},
+		{
+			"offer": {"id": "minecraft:spruce_wood", "count": 8},
+			"request": {"id": "numismatics:spur", "count": 4},
+			"numismatics_cost": 4,
+			"trade_id": "carpenter/spruce_wood"
+		},
+		{
+			"offer": {"id": "minecraft:birch_wood", "count": 8},
+			"request": {"id": "numismatics:spur", "count": 4},
+			"numismatics_cost": 4,
+			"trade_id": "carpenter/birch_wood"
+		},
+		{
+			"offer": {"id": "minecraft:jungle_wood", "count": 8},
+			"request": {"id": "numismatics:spur", "count": 8},
+			"numismatics_cost": 4,
+			"trade_id": "carpenter/jungle_wood"
+		},
+		{
+			"offer": {"id": "minecraft:acacia_wood", "count": 8},
+			"request": {"id": "numismatics:spur", "count": 4},
+			"numismatics_cost": 4,
+			"trade_id": "carpenter/acacia_wood"
+		},
+		{
+			"offer": {"id": "minecraft:dark_oak_wood", "count": 8},
+			"request": {"id": "numismatics:spur", "count": 8},
+			"numismatics_cost": 4,
+			"trade_id": "carpenter/dark_oak_wood"
+		},
+		{
+			"offer": {"id": "minecraft:mangrove_wood", "count": 8},
+			"request": {"id": "numismatics:spur", "count": 8},
+			"numismatics_cost": 4,
+			"trade_id": "carpenter/mangrove_wood"
+		},
+		{
+			"offer": {"id": "minecraft:cherry_wood", "count": 8},
+			"request": {"id": "numismatics:spur", "count": 8},
+			"numismatics_cost": 4,
+			"trade_id": "carpenter/cherry_wood"
+		},
+		{
+			"offer": {"id": "minecraft:bamboo_block", "count": 8},
+			"request": {"id": "numismatics:spur", "count": 8},
+			"numismatics_cost": 4,
+			"trade_id": "carpenter/bamboo_block"
+		},
+		{
+			"offer": {"id": "minecraft:crimson_hyphae", "count": 8},
+			"request": {"id": "numismatics:spur", "count": 16},
+			"numismatics_cost": 4,
+			"trade_id": "carpenter/crimson_hyphae"
+		},
+		{
+			"offer": {"id": "minecraft:warped_hyphae", "count": 8},
+			"request": {"id": "numismatics:spur", "count": 16},
+			"numismatics_cost": 4,
+			"trade_id": "carpenter/warped_hyphae"
+		},
+		{
+			"offer": {"id": "minecraft:moss_block", "count": 8},
+			"request": {"id": "numismatics:spur", "count": 8},
+			"numismatics_cost": 8,
+			"trade_id": "carpenter/moss"
+		},
+		{
+			"offer": {"id": "minecraft:netherrack", "count": 8},
+			"request": {"id": "numismatics:spur", "count": 1},
+			"numismatics_cost": 1,
+			"trade_id": "carpenter/netherrack"
+		},
+		{
+			"offer": {"id": "minecraft:cobblestone", "count": 8},
+			"request": {"id": "numismatics:spur", "count": 4},
+			"numismatics_cost": 4,
+			"trade_id": "carpenter/cobblestone"
+		},
+		{
+			"offer": {"id": "minecraft:cobbled_deepslate", "count": 8},
+			"request": {"id": "numismatics:spur", "count": 8},
+			"numismatics_cost": 8,
+			"trade_id": "carpenter/cobbled_deepslate"
+		},
+		{
+			"offer": {"id": "minecraft:clay", "count": 8},
+			"request": {"id": "numismatics:spur", "count": 8},
+			"numismatics_cost": 8,
+			"trade_id": "carpenter/clay"
+		},
+		{
+			"offer": {"id": "minecraft:terracotta", "count": 8},
+			"request": {"id": "numismatics:spur", "count": 16},
+			"numismatics_cost": 16,
+			"trade_id": "carpenter/terracotta"
+		}
+	]
+}
