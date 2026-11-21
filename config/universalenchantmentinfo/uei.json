@@ -3,6 +3,14 @@
   "textScrollSpeedMultiplier": 1.0,
   "maxApplicableSlots": 8,
   "lookupEnchantmentsByItem": true,
+  "lookupItemEnchantments": true,
+  "blacklistedMods": [],
+  "blacklistedEnchantments": [
+    "nova_structures:shulker_miniboss",
+    "nova_structures:shulker_boss",
+    "nova_structures:boss_behaviour"
+  ],
+  "applicableItemSort": "REGISTRY",
   "useTextForBooleans": false,
   "showRarity": true,
   "showMaxLevel": true,
@@ -11,6 +19,8 @@
   "showCurse": false,
   "showDiscoverable": true,
   "showEnchantingTable": true,
+  "showEnchantingPower": true,
+  "showInfoTooltips": true,
   "rarityColorCommon": 16777215,
   "rarityColorUncommon": 16777045,
   "rarityColorRare": 5592575,
@@ -28,6 +38,7 @@
     "TREASURE",
     "DISCOVERABLE",
     "ENCHANTING_TABLE",
+    "ENCHANTING_POWER",
     "TRADEABLE"
   ]
 }

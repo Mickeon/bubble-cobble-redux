@@ -347,7 +347,7 @@ ServerEvents.tags("block", event => {
 			"cobblemon:zinc",
 			"cobblemon:zoom_lens",
 
-			"#farmersdelight:feasts",
+			"#farmersdelight:feasts", // To also include other, non-Farmer's Delight feasts.
 			"mynethersdelight:powdery_torch",
 			"snowyspirit:snow_globe",
 

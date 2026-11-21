@@ -11,6 +11,7 @@
   "syncSelectedCreativeModeTab": false,
   "showCreativeTabNameInSearchbar": true,
   "switchToSearchTabWhenSearching": false,
+  "rememberCreativeTabPosition": true,
   "maxSidebarTabs": 0,
   "disabledCreativeModeTabs": [
     "minecraft:op_blocks"
