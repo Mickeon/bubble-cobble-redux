@@ -70,7 +70,8 @@
     "mods": [
       "iris",
       "colorwheel",
-      "colorwheel_patcher"
+      "colorwheel_patcher",
+      "enhancedcelestials2shaders"
     ]
   },
   "enchanted_retexture_set": {
