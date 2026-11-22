@@ -1,0 +1,41 @@
+{
+	"__comment": "Generated data. Do not edit manually.",
+	"type": "remi:group",
+	"id": "minecraft:wood_sets/pale_oak",
+	"name": {
+		"text": "",
+		"extra": [
+			{
+				"text": "Pale Oak",
+				"color": "#FFFCF5"
+			},
+			" Wood Set"
+		]
+	},
+	"priority": 1,
+	"contents": [
+		"item:minecraft:pale_oak_boat",
+		"item:minecraft:pale_oak_button",
+		"item:minecraft:pale_oak_chest_boat",
+		"item:minecraft:pale_oak_door",
+		"item:minecraft:pale_oak_fence",
+		"item:minecraft:pale_oak_fence_gate",
+		"item:minecraft:pale_oak_hanging_sign",
+		"item:minecraft:pale_oak_leaves",
+		"item:minecraft:pale_oak_log",
+		"item:minecraft:pale_oak_planks",
+		"item:minecraft:pale_oak_pressure_plate",
+		"item:minecraft:pale_oak_sapling",
+		"item:minecraft:pale_oak_shelf",
+		"item:minecraft:pale_oak_sign",
+		"item:minecraft:pale_oak_slab",
+		"item:minecraft:pale_oak_stairs",
+		"item:minecraft:pale_oak_trapdoor",
+		"item:minecraft:pale_oak_wood",
+		"item:minecraft:stripped_pale_oak_log",
+		"item:minecraft:stripped_pale_oak_wood",
+		"item:snowyspirit:sled_pale_oak",
+		"item:supplementaries:cannon_boat_pale_oak",
+		"item:supplementaries:way_sign_pale_oak"
+	]
+}

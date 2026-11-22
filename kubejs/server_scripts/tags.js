@@ -27,7 +27,7 @@ ServerEvents.tags("item", event => {
 	event.add("cobblemon:shiny_stone_ores", "mega_showdown:mega_meteorid_shiny_ore")
 	event.add("cobblemon:sun_stone_ores", "mega_showdown:mega_meteorid_sun_ore")
 	event.add("cobblemon:thunder_stone_ores", "mega_showdown:mega_meteorid_thunder_ore")
-	event.add("c:tools/spear", "#minecraft:spears") // Reported, but marked as "Won't fix. Vanilla Backport also doesn't add it": https://github.com/Unknowneth/Backported-Spears/issues/60.
+	event.add("c:tools/spear", "#minecraft:spears") // Reported on Backported Spears, but marked as "Won't fix:  https://github.com/Unknowneth/Backported-Spears/issues/60. Vanilla Backport also doesn't add it".
 	event.add("mega_showdown:mega_stone", /^zamega:/).remove("zamega:ange") // TODO: Report this.
 
 	// More compatibility.
@@ -162,6 +162,18 @@ ServerEvents.tags("item", event => {
 
 	if (Platform.isLoaded("vanillabackport")) {
 		event.add("amendments:sets_on_fire", "minecraft:copper_torch")
+		event.add("bubble_cobble:lanterns", "#minecraft:lanterns") // For Copper Lanterns.
+		event.add("c:buckets", "minecraft:sulfur_cube_bucket") // TODO: Report this.
+
+		event.add("minecraft:happy_ghast_food", "minecraft:snow_block", "minecraft:snow", "cobblemon:ice_gem", "cobblemon:ice_gem_cluster", "cobblemon:ice_stone") // Funny.
+		event.add("minecraft:happy_ghast_tempt_items", "snowyspirit:snow_globe", "minecraft:powder_snow_bucket", "minersdelight:powder_snow_cup")
+		event.add("minecraft:nautilus_bucket_food", "create_bic_bit:herring_bucket")
+		event.add("minecraft:sulfur_cube_food", "mowziesmobs:glowing_jelly", "minecraft:sulfur_spike")
+		event.add("minecraft:zombie_horse_food", "ribbits:toadstool", "ribbits:red_toadstool", "minecraft:red_mushroom_block", "farmersdelight:red_mushroom_colony")
+		event.add("minecraft:disables_waypoint_tracking", "cobblemon:covert_cloak", "create:cardboard_helmet")
+		if (Platform.isLoaded("crittersandcompanions")) {
+			event.add("minecraft:nautilus_bucket_food",  "crittersandcompanions:koi_fish_bucket", "crittersandcompanions:sea_bunny_bucket", "crittersandcompanions:dumbo_octopus_bucket")
+		}
 	}
 })
 
@@ -386,14 +398,61 @@ ServerEvents.tags("block", event => {
 	}
 
 	if (Platform.isLoaded("vanillabackport")) {
+		event.add("artifacts:rooted_boots_grass", "minecraft:pale_moss_carpet")
+		event.add("create:brittle", "minecraft:pale_moss_carpet")
 		event.add("create:fan_transparent", /^minecraft:.*copper_(bars|trapdoor)$/)
-		// Most of these should also include Copper Lanterns and Copper Sconces but oh my God.
+		event.add("create:tree_attachment", "minecraft:pale_moss_carpet")
+		event.add("create:windmill_sails", "#minecraft:wool_slabs", "#minecraft:wool_stairs")
+		event.add("cobblemon:concrete_blocks", "#minecraft:concrete_slabs", "#minecraft:concrete_stairs")
+		event.add("cobblemon:natural", "minecraft:pale_moss_carpet") // Possibly an oversight from them. Pale Moss is tagged properly.
+		event.add("mowziesmobs:concrete", "#minecraft:concrete_slabs", "#minecraft:concrete_stairs")
+		event.add("farmersdelight:mineable/knife", "#minecraft:wool_slabs", "#minecraft:wool_stairs")
+
+		let copper_lanterns = [
+			"minecraft:copper_lantern",
+			"minecraft:exposed_copper_lantern",
+			"minecraft:oxidized_copper_lantern",
+			"minecraft:waxed_copper_lantern",
+			"minecraft:waxed_exposed_copper_lantern",
+			"minecraft:waxed_oxidized_copper_lantern",
+			"minecraft:waxed_weathered_copper_lantern",
+			"minecraft:weathered_copper_lantern"
+		]
+		let copper_sconces = [
+			"supplementaries:copper_sconce",
+			"supplementaries:exposed_copper_sconce",
+			"supplementaries:oxidized_copper_sconce",
+			"supplementaries:waxed_copper_sconce",
+			"supplementaries:waxed_exposed_copper_sconce",
+			"supplementaries:waxed_oxidized_copper_sconce",
+			"supplementaries:waxed_weathered_copper_sconce",
+			"supplementaries:weathered_copper_sconce",
+		]
+		let copper_wall_sconces = [
+			"supplementaries:copper_wall_sconce",
+			"supplementaries:exposed_copper_wall_sconce",
+			"supplementaries:oxidized_copper_wall_sconce",
+			"supplementaries:waxed_copper_wall_sconce",
+			"supplementaries:waxed_exposed_copper_wall_sconce",
+			"supplementaries:waxed_oxidized_copper_wall_sconce",
+			"supplementaries:waxed_weathered_copper_wall_sconce",
+			"supplementaries:weathered_copper_wall_sconce",
+		]
+
 		if (Platform.isLoaded("offgrid")) {
-			event.add("bubble_cobble:offgrid/wall_torch_like", "minecraft:copper_wall_torch")
-			event.add("offgrid:can_overlay", "minecraft:copper_torch")
+			event.add("bubble_cobble:offgrid/carpet_like", "minecraft:leaf_litter", "minecraft:wildflowers", "minecraft:pale_moss_carpet")
+			event.add("bubble_cobble:offgrid/wall_torch_like", "minecraft:copper_wall_torch", "minecraft:shelf_mushroom", copper_wall_sconces)
+			event.add("offgrid:can_overlay", "minecraft:copper_torch", copper_lanterns, copper_sconces)
 		}
-		event.add("mynethersdelight:letios_flames", "minecraft:copper_torch", "minecraft:copper_wall_torch")
-		event.add("mynethersdelight:showcase_flames", "minecraft:copper_torch", "minecraft:copper_wall_torch")
+		event.add("mynethersdelight:letios_flames", "minecraft:copper_torch", "minecraft:copper_wall_torch", copper_lanterns, copper_sconces, copper_wall_sconces)
+		event.add("mynethersdelight:showcase_flames", "minecraft:copper_torch", "minecraft:copper_wall_torch", copper_lanterns, copper_sconces, copper_wall_sconces)
+
+		event.add("minecraft:speleothems", "undergroundworlds:icicle", "yungscavebiomes:icicle")
+		event.add("minecraft:triggers_ambient_desert_sand_block_sounds", "biomesoplenty:orange_sand", "biomesoplenty:black_sand", "biomesoplenty:mossy_black_sand", "yungscavebiomes:ancient_sand")
+		event.add("minecraft:triggers_ambient_desert_dry_vegetation_block", "biomesoplenty:orange_sand", "biomesoplenty:black_sand", "biomesoplenty:mossy_black_sand", "yungscavebiomes:ancient_sand")
+		event.add("minecraft:support_override_cactus_flower", "biomeswevegone:barrel_cactus", "biomeswevegone:flowering_barrel_cactus", "farmersdelight:rich_soil_farmland")
+		event.add("minecraft:causes_periodic_geyser_eruptions", "#bubble_cobble:very_hot")
+		event.add("minecraft:causes_continuous_geyser_eruptions", "cobblemon:fire_stone_block")
 	}
 })
 
@@ -425,8 +484,12 @@ ServerEvents.tags("entity_type", event => {
 	}
 
 	if (Platform.isLoaded("vanillabackport")) {
-		event.add("supplementaries:cage_catchable", "minecraft:copper_golem")
-		event.add("supplementaries:flute_pet", "minecraft:copper_golem")
+		event.add("supplementaries:cage_catchable", "minecraft:copper_golem", "minecraft:sulfur_cube")
+		event.add("supplementaries:flute_pet", "minecraft:copper_golem", "minecraft:sulfur_cube", "minecraft:happy_ghast", "minecraft:nautilus", "minecraft:zombie_nautilus")
+		event.add("minecraft:followable_friendly_mobs", "cobblemon:pokemon", "supplementaries:pignata", "biomeswevegone:oddion", "biomeswevegone:pumpkin_warden", "cobblemon:npc", "sleep_tight:bedbug", "ribbits:ribbit")
+		if (Platform.isLoaded("crittersandcompanions")) {
+			event.add("minecraft:followable_friendly_mobs", "crittersandcompanions:ferret", "crittersandcompanions:red_panda", "crittersandcompanions:otter", "crittersandcompanions:dumbo_octopus", "crittersandcompanions:snail", "crittersandcompanions:sea_bunny", "crittersandcompanions:roly_poly")
+		}
 	}
 
 })

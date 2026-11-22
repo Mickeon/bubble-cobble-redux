@@ -20,3 +20,10 @@ ServerEvents.tags("block", event => {
 	event.add("minecraft:mineable/pickaxe", "bubble_cobble:cracked_mud_bricks", "bubble_cobble:chiseled_mud_bricks", "bubble_cobble:mud_pillar")
 	event.add("mowziesmobs:bricks", "bubble_cobble:cracked_mud_bricks", "bubble_cobble:chiseled_mud_bricks", "bubble_cobble:mud_pillar")
 })
+
+if (Platform.isLoaded("vanillabackport")) {
+	ServerEvents.tags("item", event => {
+		event.add("minecraft:sulfur_cube_archetype/regular", "bubble_cobble:cracked_mud_bricks", "bubble_cobble:mud_pillar")
+		event.add("minecraft:sulfur_cube_archetype/slow_bouncy", "bubble_cobble:chiseled_mud_bricks")
+	})
+}

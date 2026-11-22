@@ -1,0 +1,7 @@
+{
+  "__comment": "Requires Vanilla Backport.",
+  "keys": [
+    "#minecraft:eggs"
+  ],
+  "soundEvent": "minecraft:block.sniffer_egg.plop"
+}

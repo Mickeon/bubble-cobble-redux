@@ -1,0 +1,43 @@
+{
+	"__comment": "Generated data. Do not edit manually.",
+	"type": "remi:group",
+	"id": "minecraft:wood_sets/poplar",
+	"name": {
+		"text": "",
+		"extra": [
+			{
+				"text": "Poplar",
+				"color": "#999999"
+			},
+			" Wood Set"
+		]
+	},
+	"priority": 1,
+	"contents": [
+		"item:minecraft:orange_poplar_leaves",
+		"item:minecraft:poplar_boat",
+		"item:minecraft:poplar_button",
+		"item:minecraft:poplar_chest_boat",
+		"item:minecraft:poplar_door",
+		"item:minecraft:poplar_fence",
+		"item:minecraft:poplar_fence_gate",
+		"item:minecraft:poplar_hanging_sign",
+		"item:minecraft:poplar_log",
+		"item:minecraft:poplar_planks",
+		"item:minecraft:poplar_pressure_plate",
+		"item:minecraft:poplar_sapling",
+		"item:minecraft:poplar_shelf",
+		"item:minecraft:poplar_sign",
+		"item:minecraft:poplar_slab",
+		"item:minecraft:poplar_stairs",
+		"item:minecraft:poplar_trapdoor",
+		"item:minecraft:poplar_wood",
+		"item:minecraft:red_poplar_leaves",
+		"item:minecraft:stripped_poplar_log",
+		"item:minecraft:stripped_poplar_wood",
+		"item:minecraft:yellow_poplar_leaves",
+		"item:snowyspirit:sled_poplar",
+		"item:supplementaries:cannon_boat_poplar",
+		"item:supplementaries:way_sign_poplar"
+	]
+}

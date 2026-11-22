@@ -323,4 +323,9 @@ ServerEvents.tags("item", event => {
 		event.add("bubble_cobble:sounds/sticky_sturdy", "crittersandcompanions:koi_fish")
 		event.add("more_sounds:equipment", /^crittersandcompanions:.*dragonfly_armor/)
 	}
+
+	if (Platform.isLoaded("vanillabackport")) {
+		event.add("more_sounds:leather_things", "#minecraft:bundles", "#minecraft:harnesses")
+		event.add("bubble_cobble:sounds/sticky_sturdy", "minecraft:resin_brick")
+	}
 })

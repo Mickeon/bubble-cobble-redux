@@ -5,7 +5,7 @@
 global.datagen.functions.remi_groups = function() {
 	const PATH = "config/remi/stack_groups"
 	const WOOD_TYPES = [
-		{id: "oak", exclude: [/(dark_oak|mossy)/]},
+		{id: "oak", exclude: [/(dark_oak|mossy|pale_oak)/]},
 		{id: "spruce"},
 		{id: "birch"},
 		{id: "jungle", exclude: ["@undergroundworlds"]},
@@ -16,6 +16,8 @@ global.datagen.functions.remi_groups = function() {
 		{id: "bamboo", exclude: ["farmersdelight:bamboo_basket", "minecraft:bamboo", "supplementaries:bamboo_spikes", "supplementaries:bamboo_spikes_tipped"]},
 		{id: "crimson", exclude: ["minecraft:crimson_fungus", "minecraft:crimson_roots", "minecraft:crimson_nylium", "@mynethersdelight"]},
 		{id: "warped", exclude: ["minecraft:warped_fungus", "minecraft:warped_roots", "minecraft:warped_nylium", "minecraft:warped_fungus_on_a_stick", "minecraft:warped_wart_block", "@mynethersdelight"]},
+		"pale_oak", // Vanilla Backport.
+		"poplar", // Vanilla Backport.
 		"arts_and_crafts:cork",
 		{id: "cobblemon:apricorn", exclude: ["#cobblemon:apricorns", "#cobblemon:apricorn_sprouts"]},
 		"cobblemon:saccharine",

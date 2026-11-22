@@ -218,6 +218,38 @@ const ResearchManager = global.ResearchManager = exports.ResearchManager = {
 		// 	required: 16,
 		// 	description: "You gotta say it like you're chewing on a big, scrumptious apple.",
 		// },
+		"sulfur": {
+			unlocks: [
+				{item: "minecraft:sulfur", price: 64},
+				{item: "minecraft:chiseled_sulfur"},
+				{item: "minecraft:polished_sulfur"},
+				{item: "minecraft:sulfur_bricks"},
+				{item: {id: "minecraft:potent_sulfur", count: 4}},
+			],
+			default_count: 32,
+			default_price: 72,
+			required: 32,
+		},
+		"cinnabar": {
+			unlocks: [
+				{item: "minecraft:cinnabar", price: 64},
+				{item: "minecraft:chiseled_cinnabar"},
+				{item: "minecraft:polished_cinnabar"},
+				{item: "minecraft:cinnabar_bricks"},
+			],
+			default_count: 32,
+			default_price: 72,
+			required: 32,
+		},
+		"resin_bricks": {
+			unlocks: [
+				{item: "minecraft:resin_bricks", price: 64},
+				{item: "minecraft:chiseled_resin_bricks"},
+			],
+			default_count: 32,
+			default_price: 72,
+			required: 32,
+		},
 		"veridium": {
 			unlocks: [
 				{item: "create:veridium", price: 64},

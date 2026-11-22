@@ -151,7 +151,8 @@ mod_parents = [
 	"watut=coroutil",
 	"sliceanddice=atmosphere, sablecompanion",
 	"packed_packs=packed_packs_api",
-	"letmedespawn=almanac"
+	"letmedespawn=almanac",
+	"vanillabackport=platform"
 ]
 
 [main]

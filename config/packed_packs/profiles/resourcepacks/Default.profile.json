@@ -109,6 +109,10 @@
     },
     "file/coffee-gui": {
       "required": false
+    },
+    "vanillabackport:backported_ost": {
+      "hidden": true,
+      "required": true
     }
   },
   "packIds": [
@@ -130,6 +134,7 @@
     "file/Vervada-s-double-slabs.zip",
     "pasturefix",
     "file/coffee-gui",
+    "vanillabackport:backported_ost",
     "supplementaries:darker_ropes",
     "mod/cobblemon:resourcepacks/gyaradosjump",
     "mod/cobblemon:resourcepacks/regionbiasforms",

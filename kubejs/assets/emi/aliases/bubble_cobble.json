@@ -57,7 +57,8 @@
 		},
 		{
 			"stacks": [
-				"#item:handcrafted:cushions"
+				"#item:handcrafted:cushions",
+				"#item:minecraft:cushions"
 			],
 			"text": [
 				"Pillow"
@@ -457,6 +458,42 @@
 			"text": [
 				"TM",
 				"Technical Machine"
+			]
+		},
+		{
+			"stacks": [
+				"#item:minecraft:harnesses"
+			],
+			"text": [
+				"Ghast Saddle"
+			]
+		},
+		{
+			"stacks": [
+				"#block:minecraft:speleothems"
+			],
+			"text": [
+				"Stalactite",
+				"Stalagmite",
+				"Speleothem"
+			]
+		},
+		{
+			"stacks": [
+				{"type": "item", "id": "minecraft:bush"},
+				{"type": "item", "id": "minecraft:red_shrub"},
+				{"type": "item", "id": "minecraft:dead_bush"},
+				{"type": "item", "id": "minecraft:firefly_bush"},
+				{"type": "item", "id": "biomesoplenty:bush"},
+				{"type": "item", "id": "biomesoplenty:tundra_shrub"},
+				{"type": "item", "id": "farmersdelight:wild_tomatoes"},
+				{"type": "item", "id": "biomeswevegone:hydrangea_bush"},
+				{"type": "item", "id": "biomeswevegone:shrub"},
+				{"type": "item", "id": "biomeswevegone:firecracker_flower_bush"}
+			],
+			"text": [
+				"Shrub",
+				"Bush"
 			]
 		}
 	]
