@@ -11023,7 +11023,7 @@
             ]
         },
         {
-            "pakku_id": "sCBWBz4oNvxbcSaK",
+            "pakku_id": "oJ32buJjtZ4mvy8u",
             "type": "MOD",
             "side": "BOTH",
             "slug": {
@@ -11038,35 +11038,84 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "waterframes-NEOFORGE-mc1.21.1-v2.1.23.jar",
+                    "file_name": "waterframes-NEOFORGE-mc1.21.1-v3.0.0-alpha.1.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
                     "loaders": [
                         "neoforge"
                     ],
-                    "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/eBzFuVTM/versions/ygogZrIE/waterframes-NEOFORGE-mc1.21.1-v2.1.23.jar",
-                    "id": "ygogZrIE",
+                    "release_type": "alpha",
+                    "url": "https://cdn.modrinth.com/data/eBzFuVTM/versions/3q7i6sG3/waterframes-NEOFORGE-mc1.21.1-v3.0.0-alpha.1.jar",
+                    "id": "3q7i6sG3",
                     "parent_id": "eBzFuVTM",
                     "hashes": {
-                        "sha512": "cd924d55d23dcd8e5ff221a4f3bcc929018e9571f672dc390d000c977e3fba33ede885795d599a80f5ea5faac51258e34904487c2323d1281a6efb2ba54b0702",
-                        "sha1": "855fad475a0a0be7a8ac20d70f2adc2d91ce0d0b"
+                        "sha512": "ca827ee89a5861b5cc51c8b8cb4871365d9daf8ac7be993f0bd70f3193e02ebe41a18e4f1435fe8d4e448bc1d867f81ad04ee346ec10b10db0897bca9a8cea0b",
+                        "sha1": "5a2e95aacfb78ef53b7d565e85d0d8101926dbc5"
                     },
                     "required_dependencies": [
-                        "OsZiaDHq",
-                        "dGGbEGoV",
                         "G922NeHS"
                     ],
-                    "size": 256825,
-                    "date_published": "2026-05-08T08:32:37.834467Z"
+                    "size": 549036,
+                    "date_published": "2026-11-03T05:40:57.779710Z"
                 }
             ]
         },
         {
-            "pakku_id": "hUDG0Hli56hdCyO7",
+            "pakku_id": "PedCN19sF2P1eBA9",
             "pakku_links": [
-                "UZNrDhtoCGbibywk"
+                "gOL4QCg8ry8MX1Wm"
+            ],
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "modrinth": "watermedia-binaries"
+            },
+            "name": {
+                "modrinth": "WATERMEDIA: Binaries"
+            },
+            "id": {
+                "modrinth": "4997XcoK"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "watermedia_binaries-3.0.2.jar",
+                    "mc_versions": [
+                        "1.18.2",
+                        "1.19.2",
+                        "1.20.1",
+                        "1.21.1",
+                        "1.21.11",
+                        "26.1.2",
+                        "26.2",
+                        "26.3"
+                    ],
+                    "loaders": [
+                        "fabric",
+                        "forge",
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/4997XcoK/versions/opOgOBSq/watermedia_binaries-3.0.2.jar",
+                    "id": "opOgOBSq",
+                    "parent_id": "4997XcoK",
+                    "hashes": {
+                        "sha512": "46318acf098715f5a82518a26ffddacb1e39817b0363057e61848eadbd149796b73f650abf15d0031398e9153e5fb0b9027bea5ea101736c1babbc9087e3f205",
+                        "sha1": "46d980cdc3705e4695043efe2e65c0b47d5a796d"
+                    },
+                    "required_dependencies": [
+                        "G922NeHS"
+                    ],
+                    "size": 152312971,
+                    "date_published": "2026-11-19T08:47:56.680985Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "gOL4QCg8ry8MX1Wm",
+            "pakku_links": [
+                "PedCN19sF2P1eBA9"
             ],
             "type": "MOD",
             "side": "CLIENT",
@@ -11082,14 +11131,16 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "watermedia-2.1.37.jar",
+                    "file_name": "watermedia-3.0.2.jar",
                     "mc_versions": [
-                        "1.16.5",
                         "1.18.2",
                         "1.19.2",
                         "1.20.1",
                         "1.21.1",
-                        "1.21.5"
+                        "1.21.11",
+                        "26.1.2",
+                        "26.2",
+                        "26.3"
                     ],
                     "loaders": [
                         "fabric",
@@ -11097,102 +11148,18 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/G922NeHS/versions/fB0LmHnR/watermedia-2.1.37.jar",
-                    "id": "fB0LmHnR",
+                    "url": "https://cdn.modrinth.com/data/G922NeHS/versions/ALN6z4Xm/watermedia-3.0.2.jar",
+                    "id": "ALN6z4Xm",
                     "parent_id": "G922NeHS",
                     "hashes": {
-                        "sha512": "d2bdadbb352c415e04aecf130759949f1081f8f410a4019b3b885a4e05a6ce9f6144dfb7c707685dad0f9b26c04e4a26dff5c3897d057b96cf4cec1384a148bb",
-                        "sha1": "4a91d20d9a3aa8d66e01f7962d77c974ad538f4f"
+                        "sha512": "edaa7528c0945b1007d65b8c01cef1542e44fa154199af188b3552e75128e77a8650d9e55c4ed0fae328001c8460c46913fccca67a975666f4549bfdb187f1f4",
+                        "sha1": "e3da77caf5aec816cefc827683e3edcabda9d2aa"
                     },
                     "required_dependencies": [
-                        "P0w3IrnX"
+                        "4997XcoK"
                     ],
-                    "size": 37046674,
-                    "date_published": "2025-12-01T12:46:14.171091Z"
-                }
-            ]
-        },
-        {
-            "pakku_id": "UZNrDhtoCGbibywk",
-            "type": "MOD",
-            "side": "CLIENT",
-            "slug": {
-                "modrinth": "watermedia-yt-plugin"
-            },
-            "name": {
-                "modrinth": "WATERMeDIA: Youtube Plugin"
-            },
-            "id": {
-                "modrinth": "P0w3IrnX"
-            },
-            "files": [
-                {
-                    "type": "modrinth",
-                    "file_name": "watermedia_youtube_plugin-2.1.2.jar",
-                    "mc_versions": [
-                        "1.18.2",
-                        "1.19.2",
-                        "1.20.1",
-                        "1.21.1",
-                        "1.21.5"
-                    ],
-                    "loaders": [
-                        "fabric",
-                        "forge",
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/P0w3IrnX/versions/rDtJujm2/watermedia_youtube_plugin-2.1.2.jar",
-                    "id": "rDtJujm2",
-                    "parent_id": "P0w3IrnX",
-                    "hashes": {
-                        "sha512": "9dd01e3768a10358d5262cd279227a622a7caf5fef67a66ba95d71b336403421cfd8c804b09c4bd0cc8fbac707ce1a403c69c8f46c62ae42534e801a2e235b86",
-                        "sha1": "1f4d208ed9292189dd99147a9dae7c1d4bc95ad5"
-                    },
-                    "required_dependencies": [
-                        "G922NeHS"
-                    ],
-                    "size": 3830072,
-                    "date_published": "2026-01-29T02:51:42.440874Z"
-                }
-            ]
-        },
-        {
-            "pakku_id": "BEXwO1vXKbzNa3bl",
-            "type": "MOD",
-            "side": "BOTH",
-            "slug": {
-                "modrinth": "watervision"
-            },
-            "name": {
-                "modrinth": "WATERViSION: VideoPlayer"
-            },
-            "id": {
-                "modrinth": "dGGbEGoV"
-            },
-            "files": [
-                {
-                    "type": "modrinth",
-                    "file_name": "watervision-NF-mc1.21.1-v0.1.0-alpha.jar",
-                    "mc_versions": [
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/dGGbEGoV/versions/fYHfGRbK/watervision-NF-mc1.21.1-v0.1.0-alpha.jar",
-                    "id": "fYHfGRbK",
-                    "parent_id": "dGGbEGoV",
-                    "hashes": {
-                        "sha512": "747551417e2dcf82671062dda8028b340d4b4ca9ee02de081679e51a1966b996d50ba10a52232ed4e1c4db7d011a2268fbdae14633a485794df529b4c5460be3",
-                        "sha1": "3fc5620a518583b8a7ea293a6d79584861e75335"
-                    },
-                    "required_dependencies": [
-                        "G922NeHS"
-                    ],
-                    "size": 78233,
-                    "date_published": "2025-09-28T18:41:17.418485Z"
+                    "size": 3390417,
+                    "date_published": "2026-11-19T08:49:45.396753Z"
                 }
             ]
         },

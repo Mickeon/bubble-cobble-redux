@@ -129,10 +129,10 @@
             "controller": {
               "type": "mods_group",
               "ids": [
-                "watervision",
                 "waterframes",
                 "watermedia",
-                "watermedia_youtube_plugin"
+                "watermedia_binaries",
+                "waterui"
               ]
             }
           }

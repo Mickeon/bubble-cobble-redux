@@ -26,9 +26,8 @@
 		# Range: 8 ~ 512
 		maxVolumeDistance = 64
 		#Max volume value
-		#values over 100 uses VLC überVolume
 		# Default: 100
-		# Range: 10 ~ 120
+		# Range: 10 ~ 100
 		maxVolume = 100
 		#Makes Minecraft master volume affects waterframes volume
 		masterVolume = true
@@ -36,15 +35,11 @@
 		#In case VS breaks something on their side, this option should stop client/server crashing
 		#Or if the audio isn't working, disable this option should help
 		#(This option is called VSEureka because valkirienskies is too long, and VS may be misleading)
-		vsEurekaCompat = true
+		vsEurekaCompat = false
 		#Enables compatibility with Sable (used by Create: Simulated / Aeronautics contraptions)
 		#Projects sub-level block positions to global space so audio attenuates correctly from contraption-mounted displays
 		#Disable if sable misbehaves or audio stops working while using it
 		sableCompat = true
-
-		[waterframes.multimedia.watermedia]
-			#Enables VLC/FFMPEG usage for multimedia processing like videos and music (support added by WATERMeDIA)
-			enable = true
 
 	#Configuration related to interactions with vanilla and modded features
 	[waterframes.block_behavior]
@@ -53,10 +48,6 @@
 		#Forces light feature on frames while is playing
 		#Requires lightOnPlay be true
 		forceLightOnPlay = false
-		#Enable lag tick time correction
-		#Helps when server is too laggy and playback is regressing in time
-		#Disable if causes problems
-		lagTickCorrection = true
 
 		#Redstone interaction options
 		[waterframes.block_behavior.redstone]
@@ -64,8 +55,6 @@
 			enable = true
 			#Redstone inputs forces paused playback and ignores any other control sources
 			masterMode = false
-			#Experimental playlist mode, this will make the display to play a list of videos
-			experimentalPlaylistMode = false
 
 	#Configuration related to remote control
 	[waterframes.remote_control]
