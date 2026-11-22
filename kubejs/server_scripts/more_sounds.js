@@ -318,7 +318,7 @@ ServerEvents.tags("item", event => {
 		/^mega_showdown:.*_memory/,
 	)
 
-	if (Platform.isLoaded("")) {
+	if (Platform.isLoaded("crittersandcompanions")) {
 		event.add("bubble_cobble:sounds/grass_crunchy", "crittersandcompanions:silk")
 		event.add("bubble_cobble:sounds/sticky_sturdy", "crittersandcompanions:koi_fish")
 		event.add("more_sounds:equipment", /^crittersandcompanions:.*dragonfly_armor/)

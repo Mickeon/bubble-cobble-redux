@@ -394,7 +394,7 @@ ServerEvents.tags("block", event => {
 	}
 
 	if (Platform.isLoaded("cozycafe")) {
-		event.add("cozycafe:cleans_dishes", "minecraft:water_cauldron", "amendments:dye_cauldron", "amendments:liquid_cauldron", "cobblemon:water_stone_block", "supplementaries:soap_block", "urban_decor:sink", "urban_decor:dark_sink", "urban_decor:faucet", "urban_decor:shower")
+		event.add("cozycafe:cleans_dishes", "amendments:dye_cauldron", "amendments:liquid_cauldron", "cobblemon:water_stone_block", "supplementaries:soap_block", "urban_decor:sink", "urban_decor:dark_sink", "urban_decor:faucet", "urban_decor:shower")
 	}
 
 	if (Platform.isLoaded("vanillabackport")) {

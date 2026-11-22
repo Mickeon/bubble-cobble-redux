@@ -462,6 +462,14 @@
 		},
 		{
 			"stacks": [
+				{"type": "item", "id": "minecraft:flint_and_steel"}
+			],
+			"text": [
+				"Fire"
+			]
+		},
+		{
+			"stacks": [
 				"#item:minecraft:harnesses"
 			],
 			"text": [

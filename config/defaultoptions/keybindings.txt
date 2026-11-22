@@ -65,6 +65,7 @@ key_key.sophisticateditemactions.deposit_item:key.keyboard.apostrophe:
 key_key.sophisticateditemactions.restock_item:key.keyboard.backslash:
 key_key.fieldguide.open:key.keyboard.h:
 key_key.fieldguide.scan:key.keyboard.unknown:
+key_key.afterburner.settings:key.keyboard.unknown:
 key_key.better_modlist.open_menu:key.keyboard.insert:
 key_key.push_to_talk:key.keyboard.v:
 key_key.whisper:key.keyboard.tab:
@@ -178,6 +179,13 @@ key_key.sophisticatedcore.sort:key.keyboard.unknown:
 key_key.sophisticatedcore.transfer_to_storage:key.keyboard.unknown:
 key_key.sophisticatedcore.transfer_to_inventory:key.keyboard.unknown:
 key_key.spice_of_life_berry.open_editor:key.keyboard.unknown:
+key_key.spice_of_life_berry.candy_ability:key.keyboard.x:
+key_key.spice_of_life_berry.slingshot:key.keyboard.unknown:
+key_key.spice_of_life_berry.parry:key.keyboard.unknown:
+key_key.spice_of_life_berry.ender:key.keyboard.unknown:
+key_key.spice_of_life_berry.dream:key.keyboard.unknown:
+key_key.spice_of_life_berry.climb:key.keyboard.unknown:
+key_key.spice_of_life_berry.head:key.keyboard.unknown:
 key_gui.xaero_open_map:key.keyboard.m:
 key_gui.xaero_open_settings:key.keyboard.keypad.enter:
 key_gui.xaero_world_map_server_settings:key.keyboard.unknown:

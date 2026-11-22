@@ -70,8 +70,8 @@ const SellingManager = global.SellingManager = exports.SellingManager = {
 
 		// Herbal Brews.
 		"herbalbrews:coffee": 48,
-		"herbalbrews:hazelnut_coffee": 90,
-		"herbalbrews:cinnamon_coffee": 138,
+		// "herbalbrews:hazelnut_coffee": 90,
+		// "herbalbrews:cinnamon_coffee": 138,
 		"herbalbrews:milk_coffee": 112,
 		"herbalbrews:yerba_mate_tea": 12,
 		"herbalbrews:hibiscus_tea": 16,
@@ -79,7 +79,7 @@ const SellingManager = global.SellingManager = exports.SellingManager = {
 		"herbalbrews:lavender_tea": 16,
 		"herbalbrews:green_tea": 144,
 		"herbalbrews:black_tea": 1296,
-		"herbalbrews:chai_tea": 2643,
+		// "herbalbrews:chai_tea": 2643,
 		"herbalbrews:oolong_tea": 3840,
 		"herbalbrews:dried_green_tea": 120,
 		"herbalbrews:dried_black_tea": 1080,
