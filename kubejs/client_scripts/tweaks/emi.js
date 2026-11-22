@@ -26,6 +26,7 @@ const ITEM_TAG_DISPLAY_INFO = [
 	{tag: "bubble_cobble:cattails", name: "Cattails", textures: ["biomeswevegone:item/cattails", "biomesoplenty:item/cattail"]},
 	{tag: "bubble_cobble:researchable", name: "Researchable"},
 	{tag: "bubble_cobble:sellable", name: "Sellable"},
+	{tag: "c:chains", textures: ["minecraft:item/chain", "minecraft:item/copper_chain"]}, // Copper Chain only exists because of Vanilla Backport.
 	{tag: "c:crops/cabbage", textures: ["farmersdelight:item/cabbage", "farmersdelight:item/cabbage_leaf"]},
 	{tag: "c:crops/grain", textures: ["minecraft:item/wheat", "farmersdelight:item/rice"]},
 	{tag: "c:crops/rice", textures: ["farmersdelight:item/rice", "cobblemon:item/hearty_grains"]},

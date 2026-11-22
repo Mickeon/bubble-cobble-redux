@@ -1,3 +1,4 @@
+// ignored: true
 StartupEvents.registry("armor_material", event => {
 	const $ArmorMaterial$Layer = Java.loadClass("net.minecraft.world.item.ArmorMaterial$Layer")
 	event.create("minecraft:copper")

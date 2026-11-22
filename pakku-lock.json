@@ -926,43 +926,6 @@
             ]
         },
         {
-            "pakku_id": "P0wtaxsMLDTxWdKm",
-            "type": "MOD",
-            "side": "BOTH",
-            "slug": {
-                "modrinth": "backported-spears"
-            },
-            "name": {
-                "modrinth": "Backported Spears"
-            },
-            "id": {
-                "modrinth": "rVUtrHuM"
-            },
-            "files": [
-                {
-                    "type": "modrinth",
-                    "file_name": "spear-backport-neoforge-1.8.0-1.21.1.jar",
-                    "mc_versions": [
-                        "1.21.1"
-                    ],
-                    "loaders": [
-                        "neoforge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/rVUtrHuM/versions/FROwtXRs/spear-backport-neoforge-1.8.0-1.21.1.jar",
-                    "id": "FROwtXRs",
-                    "parent_id": "rVUtrHuM",
-                    "hashes": {
-                        "sha512": "fa6e48ad8a8f9649e6fb20558d320c37fe63c48e9105dc21ae58ca8a7df7421909e7cea467f2280b56edbe456356ad4d04b54aad90721c0bfa0ef0dff3011cf8",
-                        "sha1": "944b22a7fa34c1e87e70f4558c9164d950646dd6"
-                    },
-                    "required_dependencies": [],
-                    "size": 421287,
-                    "date_published": "2026-03-07T17:09:56.782855Z"
-                }
-            ]
-        },
-        {
             "pakku_id": "hosyYIBjfxjCuduq",
             "type": "MOD",
             "side": "BOTH",
@@ -8096,6 +8059,43 @@
             ]
         },
         {
+            "pakku_id": "djW1lz5mzAZgTAbw",
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "modrinth": "platform"
+            },
+            "name": {
+                "modrinth": "Platform"
+            },
+            "id": {
+                "modrinth": "i6fiqm5y"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "Platform-neoforge-1.21.1-1.4.2.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/i6fiqm5y/versions/rh4p4ixM/Platform-neoforge-1.21.1-1.4.2.jar",
+                    "id": "rh4p4ixM",
+                    "parent_id": "i6fiqm5y",
+                    "hashes": {
+                        "sha512": "24f9640cc830ffc9b921f89187aaa2ee41aeb9949b36a9ab11b94313c9f4eebb94e5aa7ee3089237f677d3c72aa860bb2bf332c900030c8f7dd5bbcc25ece73a",
+                        "sha1": "38947983b65b08bffdcbbc347949a7bc5c6426e1"
+                    },
+                    "required_dependencies": [],
+                    "size": 550771,
+                    "date_published": "2026-10-25T07:30:06.991043Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "7DOVA6sj9KucAFhS",
             "pakku_links": [
                 "8E69YXG6POqqwTvF"
@@ -10894,6 +10894,48 @@
                     "required_dependencies": [],
                     "size": 72754,
                     "date_published": "2026-06-06T03:03:05.501407Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "OXQd1qYYrKxR89Qx",
+            "pakku_links": [
+                "djW1lz5mzAZgTAbw"
+            ],
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "modrinth": "vanillabackport"
+            },
+            "name": {
+                "modrinth": "Vanilla Backport"
+            },
+            "id": {
+                "modrinth": "6xwxDTgf"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "VanillaBackport-neoforge-1.21.1-1.2.2.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/6xwxDTgf/versions/mGS7BxD4/VanillaBackport-neoforge-1.21.1-1.2.2.jar",
+                    "id": "mGS7BxD4",
+                    "parent_id": "6xwxDTgf",
+                    "hashes": {
+                        "sha512": "89b0fbe66fb26cbc74d8ba55d2e6c76ea9652a0812582a955b1f32604a1d033f2be59f06df7cd4232520b8edba6074ac724525136d5ceaa1cfce88a53ab7d9a0",
+                        "sha1": "12871e5330f8b33df7740a975047fc9a584d0387"
+                    },
+                    "required_dependencies": [
+                        "i6fiqm5y"
+                    ],
+                    "size": 63870495,
+                    "date_published": "2026-10-25T07:32:09.323803Z"
                 }
             ]
         },

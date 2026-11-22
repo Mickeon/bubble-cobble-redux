@@ -1,4 +1,4 @@
-
+// ignored: true
 ServerEvents.recipes(event => {
 	const copper_tool_keys = {C: "minecraft:copper_ingot", S: "minecraft:stick"}
 	event.shaped("minecraft:copper_shovel", ["C", "S", "S"], copper_tool_keys).equipmentCategory()

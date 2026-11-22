@@ -98,11 +98,41 @@
     {"id": "create:waxed_oxidized_copper_tile_slab"},
     {"id": "create:waxed_oxidized_copper_tile_stairs"},
 
+    {"id": "minecraft:waxed_lightning_rod"},
+    {"id": "minecraft:waxed_exposed_lightning_rod"},
+    {"id": "minecraft:waxed_weathered_lightning_rod"},
+    {"id": "minecraft:waxed_oxidized_lightning_rod"},
+    {"id": "minecraft:waxed_copper_chest"},
+    {"id": "minecraft:waxed_exposed_copper_chest"},
+    {"id": "minecraft:waxed_weathered_copper_chest"},
+    {"id": "minecraft:waxed_oxidized_copper_chest"},
+    {"id": "minecraft:waxed_copper_golem_statue"},
+    {"id": "minecraft:waxed_exposed_copper_golem_statue"},
+    {"id": "minecraft:waxed_weathered_copper_golem_statue"},
+    {"id": "minecraft:waxed_oxidized_copper_golem_statue"},
+    {"id": "minecraft:waxed_copper_lantern"},
+    {"id": "minecraft:waxed_exposed_copper_lantern"},
+    {"id": "minecraft:waxed_weathered_copper_lantern"},
+    {"id": "minecraft:waxed_oxidized_copper_lantern"},
+    {"id": "minecraft:waxed_copper_bars"},
+    {"id": "minecraft:waxed_exposed_copper_bars"},
+    {"id": "minecraft:waxed_weathered_copper_bars"},
+    {"id": "minecraft:waxed_oxidized_copper_bars"},
+    {"id": "minecraft:waxed_copper_chain"},
+    {"id": "minecraft:waxed_exposed_copper_chain"},
+    {"id": "minecraft:waxed_weathered_copper_chain"},
+    {"id": "minecraft:waxed_oxidized_copper_chain"},
+
     {"id": "mynethersdelight:waxed_hoglin_trophy"},
 
     {"id": "shutterup:waxed_copper_shutter"},
     {"id": "shutterup:waxed_exposed_copper_shutter"},
     {"id": "shutterup:waxed_weathered_copper_shutter"},
-    {"id": "shutterup:waxed_oxidized_copper_shutter"}
+    {"id": "shutterup:waxed_oxidized_copper_shutter"},
+
+    {"id": "supplementaries:waxed_copper_sconce"},
+    {"id": "supplementaries:waxed_exposed_copper_sconce"},
+    {"id": "supplementaries:waxed_weathered_copper_sconce"},
+    {"id": "supplementaries:waxed_oxidized_copper_sconce"}
   ]
 }

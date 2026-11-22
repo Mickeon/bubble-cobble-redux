@@ -292,12 +292,14 @@ remove_and_merge_into_tab("create_deepfried:base", "create_bic_bit:base", [
 	"create_deepfried:arancini",
 ])
 
+if (!Platform.isLoaded("vanillabackport")) {
 StartupEvents.modifyCreativeTab("minecraft:tools_and_utilities", event => {
 	event.remove("minecraft:bundle") // In case its experimental datapack is enabled.
 	event.add("minecraft:bundle")
 	// event.removeFromParent(Ingredient.of("#minecraft:boats").except(/oak/))
 	// event.remove(Ingredient.of("#snowyspirit:sleds")) // This does nothing. They're persistent for some reason.
 })
+}
 
 remove_tab("artifacts:main") // Items also exist in "Relics" tab. Well, except the mimic.
 StartupEvents.modifyCreativeTab("relics:relics", event => {

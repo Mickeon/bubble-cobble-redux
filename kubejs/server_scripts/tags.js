@@ -27,7 +27,7 @@ ServerEvents.tags("item", event => {
 	event.add("cobblemon:shiny_stone_ores", "mega_showdown:mega_meteorid_shiny_ore")
 	event.add("cobblemon:sun_stone_ores", "mega_showdown:mega_meteorid_sun_ore")
 	event.add("cobblemon:thunder_stone_ores", "mega_showdown:mega_meteorid_thunder_ore")
-	event.add("c:tools/spear", "#minecraft:spears") // Reported, but marked as "Won't fix": https://github.com/Unknowneth/Backported-Spears/issues/60.
+	event.add("c:tools/spear", "#minecraft:spears") // Reported, but marked as "Won't fix. Vanilla Backport also doesn't add it": https://github.com/Unknowneth/Backported-Spears/issues/60.
 	event.add("mega_showdown:mega_stone", /^zamega:/).remove("zamega:ange") // TODO: Report this.
 
 	// More compatibility.
@@ -158,6 +158,10 @@ ServerEvents.tags("item", event => {
 	if (Platform.isLoaded("connectiblechains")) {
 		event.add("connectiblechains:hangable_items", "#bubble_cobble:lanterns", "urban_decor:stainless_steel_lantern", "urban_decor:stainless_steel_soul_lantern")
 		event.add("connectiblechains:catenary_items", "biomesoplenty:spanish_moss", "biomesoplenty:webbing", "biomeswevegone:skyris_vine", "minecraft:twisting_vines", "minecraft:weeping_vines")
+	}
+
+	if (Platform.isLoaded("vanillabackport")) {
+		event.add("amendments:sets_on_fire", "minecraft:copper_torch")
 	}
 })
 
@@ -381,6 +385,16 @@ ServerEvents.tags("block", event => {
 		event.add("cozycafe:cleans_dishes", "minecraft:water_cauldron", "amendments:dye_cauldron", "amendments:liquid_cauldron", "cobblemon:water_stone_block", "supplementaries:soap_block", "urban_decor:sink", "urban_decor:dark_sink", "urban_decor:faucet", "urban_decor:shower")
 	}
 
+	if (Platform.isLoaded("vanillabackport")) {
+		event.add("create:fan_transparent", /^minecraft:.*copper_(bars|trapdoor)$/)
+		// Most of these should also include Copper Lanterns and Copper Sconces but oh my God.
+		if (Platform.isLoaded("offgrid")) {
+			event.add("bubble_cobble:offgrid/wall_torch_like", "minecraft:copper_wall_torch")
+			event.add("offgrid:can_overlay", "minecraft:copper_torch")
+		}
+		event.add("mynethersdelight:letios_flames", "minecraft:copper_torch", "minecraft:copper_wall_torch")
+		event.add("mynethersdelight:showcase_flames", "minecraft:copper_torch", "minecraft:copper_wall_torch")
+	}
 })
 
 ServerEvents.tags("fluid", event => {
@@ -409,6 +423,12 @@ ServerEvents.tags("entity_type", event => {
 			event.add("fieldguide:blacklisted", "cozycafe:customer")
 		}
 	}
+
+	if (Platform.isLoaded("vanillabackport")) {
+		event.add("supplementaries:cage_catchable", "minecraft:copper_golem")
+		event.add("supplementaries:flute_pet", "minecraft:copper_golem")
+	}
+
 })
 
 ServerEvents.tags("damage_type", event => {

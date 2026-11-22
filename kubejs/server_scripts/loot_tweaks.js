@@ -306,11 +306,6 @@ LootJS.lootTables(event => {
 
 	// TODO: Re-implemented Critters n' Crawlers' Headhunter enchantment.
 
-	// This block normally requires Vanilla Backport to be dropped.
-	if (Item.exists("minecraft:pale_oak_shelf")) {
-		event.create("minecraft:blocks/pale_oak_shelf", "block").createPool().when(c => c.survivesExplosion()).addEntry("minecraft:pale_oak_shelf")
-	}
-
 	// Make these flowers accessible in existing worlds (although right now this is merely a workaround).
 	if (Platform.isLoaded("urban_decor")) {
 		event.getLootTable("minecraft:gameplay/sniffer_digging").firstPool().addEntry(LootEntry.tag("urban_decor:polyanthous", true))
