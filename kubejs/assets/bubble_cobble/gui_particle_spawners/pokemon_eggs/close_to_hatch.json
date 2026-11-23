@@ -86,7 +86,7 @@
     {"id": "cobbreeding:pokemon_egg", "components": {"cobbreeding:timer": 260}},
     {"id": "cobbreeding:pokemon_egg", "components": {"cobbreeding:timer": 240}},
     {"id": "cobbreeding:pokemon_egg", "components": {"cobbreeding:timer": 220}},
-    {"id": "cobbreeding:pokemon_egg", "components": {"cobbreeding:timer": 100}},
+    {"id": "cobbreeding:pokemon_egg", "components": {"cobbreeding:timer": 200}},
     {"id": "cobbreeding:pokemon_egg", "components": {"cobbreeding:timer": 180}},
     {"id": "cobbreeding:pokemon_egg", "components": {"cobbreeding:timer": 160}},
     {"id": "cobbreeding:pokemon_egg", "components": {"cobbreeding:timer": 140}},

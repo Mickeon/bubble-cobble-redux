@@ -22,6 +22,7 @@
     {"id": "create:creative_fluid_tank"},
     {"id": "create:creative_motor"},
     {"id": "create:creative_blaze_cake"},
-    {"id": "create:handheld_worldshaper"}
+    {"id": "create:handheld_worldshaper"},
+    {"id": "numismatics:creative_vendor"}
   ]
 }

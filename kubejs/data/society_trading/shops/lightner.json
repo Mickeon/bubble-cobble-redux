@@ -1,0 +1,111 @@
+{
+	"shop_id": "lightner",
+	"name": "lightner",
+	"display_type": "default",
+	"texture": "bubble_cobble:textures/item/blue_mascot_cat",
+	"block_tag": "bubble_cobble:shops/lightner",
+	"trades": [
+		{
+			"offer": {"id": "minecraft:ochre_froglight", "count": 8},
+			"request": {"id": "numismatics:cog", "count": 4},
+			"numismatics_cost": 128,
+			"trade_id": "lightner/ochre_froglight"
+		},
+		{
+			"offer": {"id": "minecraft:verdant_froglight", "count": 8},
+			"request": {"id": "numismatics:cog", "count": 2},
+			"numismatics_cost": 128,
+			"trade_id": "lightner/verdant_froglight"
+		},
+		{
+			"offer": {"id": "minecraft:pearlescent_froglight", "count": 8},
+			"request": {"id": "numismatics:cog", "count": 4},
+			"numismatics_cost": 128,
+			"trade_id": "lightner/pearlescent_froglight"
+		},
+		{
+			"offer": {"id": "supplementaries:sconce", "count": 4},
+			"request": {"id": "numismatics:spur", "count": 32},
+			"numismatics_cost": 64,
+			"trade_id": "lightner/sconce"
+		},
+		{
+			"offer": {"id": "supplementaries:sconce_soul", "count": 8},
+			"request": {"id": "numismatics:spur", "count": 48},
+			"numismatics_cost": 4,
+			"trade_id": "lightner/sconce_soul"
+		},
+		{
+			"offer": {"id": "minecraft:birch_sapling", "count": 8},
+			"request": {"id": "numismatics:spur", "count": 4},
+			"numismatics_cost": 4,
+			"trade_id": "lightner/birch_sapling"
+		},
+		{
+			"offer": {"id": "minecraft:spruce_sapling", "count": 8},
+			"request": {"id": "numismatics:spur", "count": 4},
+			"numismatics_cost": 4,
+			"trade_id": "lightner/spruce_sapling"
+		},
+		{
+			"offer": {"id": "minecraft:melon_seeds", "count": 2},
+			"request": {"id": "numismatics:cog", "count": 1},
+			"numismatics_cost": 64,
+			"trade_id": "lightner/melon_seeds"
+		},
+		{
+			"offer": {"id": "minecraft:pumpkin_seeds", "count": 2},
+			"request": {"id": "numismatics:cog", "count": 1},
+			"numismatics_cost": 64,
+			"trade_id": "lightner/pumpkin_seeds"
+		},
+		{
+			"offer": {"id": "cobblemon:red_apricorn_seed", "count": 2},
+			"request": {"id": "numismatics:cog", "count": 1},
+			"numismatics_cost": 64,
+			"trade_id": "lightner/red_apricorn_seed"
+		},
+		{
+			"offer": {"id": "cobblemon:blue_apricorn_seed", "count": 2},
+			"request": {"id": "numismatics:cog", "count": 1},
+			"numismatics_cost": 64,
+			"trade_id": "lightner/blue_apricorn_seed"
+		},
+		{
+			"offer": {"id": "cobblemon:green_apricorn_seed", "count": 2},
+			"request": {"id": "numismatics:cog", "count": 1},
+			"numismatics_cost": 64,
+			"trade_id": "lightner/green_apricorn_seed"
+		},
+		{
+			"offer": {"id": "cobblemon:yellow_apricorn_seed", "count": 2},
+			"request": {"id": "numismatics:cog", "count": 1},
+			"numismatics_cost": 64,
+			"trade_id": "lightner/yellow_apricorn_seed"
+		},
+		{
+			"offer": {"id": "cobblemon:pink_apricorn_seed", "count": 2},
+			"request": {"id": "numismatics:cog", "count": 1},
+			"numismatics_cost": 64,
+			"trade_id": "lightner/pink_apricorn_seed"
+		},
+		{
+			"offer": {"id": "cobblemon:white_apricorn_seed", "count": 2},
+			"request": {"id": "numismatics:cog", "count": 1},
+			"numismatics_cost": 64,
+			"trade_id": "lightner/white_apricorn_seed"
+		},
+		{
+			"offer": {"id": "cobblemon:black_apricorn_seed", "count": 2},
+			"request": {"id": "numismatics:cog", "count": 1},
+			"numismatics_cost": 64,
+			"trade_id": "lightner/black_apricorn_seed"
+		},
+		{
+			"offer": {"id": "arts_and_crafts:cork_sapling", "count": 2},
+			"request": {"id": "numismatics:cog", "count": 2},
+			"numismatics_cost": 64,
+			"trade_id": "lightner/cork_sapling"
+		}
+	]
+}

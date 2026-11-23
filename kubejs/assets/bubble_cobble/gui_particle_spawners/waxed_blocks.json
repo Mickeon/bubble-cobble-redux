@@ -1,31 +1,44 @@
 {
   "attributes": {
     "x": 0,
-    "y": 0,
-    "color_start": "#DDFFB428",
-    "color_end": "#22FFB428",
-    "duration": 20,
-    "count": 2
+    "y": -1,
+    "accelerationY": -4,
+    "frictionY": 0.2,
+    "color_start": "#FFFFB428",
+    "color_end": "#00FFFFFF",
+    "duration": 10
   },
   "attributes_variance": {
-    "x": 8,
-    "y": 8,
+    "x": 7,
+    "y": 5,
     "color_start": "#44101010",
-    "duration": 10,
-    "count": 1
+    "duration": 5
   },
   "events": {
-    "onCarried": {
-      "interval": 40,
-      "interval_variance": 2,
-      "particles": [{ "id": "minecraft:wax_on" }]
+    "onIdle": {
+      "interval": 60,
+      "interval_variance": 20,
+      "particles": [
+        {
+          "id": "minecraft:falling_water"
+        }
+      ]
     },
 
-    "onIdle": {"use": "onCarried", "interval": 80, "interval_variance": 20},
-
-    "onShake": {
-      "use": "onCarried",
-      "interval": 2
+    "onCarried": {
+      "interval": 30,
+      "interval_variance": 4,
+      "particles": [
+        {
+          "id": "minecraft:wax_on",
+          "accelerationY": -2,
+          "frictionX": 0.99,
+          "frictionY": 0.99,
+          "color_end": "#DDFFD498",
+          "duration": 20,
+          "count": 2
+        }
+      ]
     }
   },
 

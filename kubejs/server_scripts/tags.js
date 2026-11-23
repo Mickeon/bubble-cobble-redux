@@ -487,9 +487,11 @@ ServerEvents.tags("entity_type", event => {
 	}
 
 	if (Platform.isLoaded("vanillabackport")) {
-		event.add("supplementaries:cage_catchable", "minecraft:copper_golem", "minecraft:sulfur_cube")
-		event.add("supplementaries:flute_pet", "minecraft:copper_golem", "minecraft:sulfur_cube", "minecraft:happy_ghast", "minecraft:nautilus", "minecraft:zombie_nautilus")
 		event.add("minecraft:followable_friendly_mobs", "cobblemon:pokemon", "supplementaries:pignata", "biomeswevegone:oddion", "biomeswevegone:pumpkin_warden", "cobblemon:npc", "sleep_tight:bedbug", "ribbits:ribbit")
+		event.add("supplementaries:cage_catchable", "minecraft:copper_golem", "minecraft:sulfur_cube")
+		event.add("supplementaries:can_dismount_boats", "minecraft:creaking")
+		event.add("supplementaries:flute_pet", "minecraft:copper_golem", "minecraft:sulfur_cube", "minecraft:happy_ghast", "minecraft:nautilus", "minecraft:zombie_nautilus")
+		event.add("passablefoliage:no_slowness", "minecraft:creaking")
 		if (Platform.isLoaded("crittersandcompanions")) {
 			event.add("minecraft:followable_friendly_mobs", "crittersandcompanions:ferret", "crittersandcompanions:red_panda", "crittersandcompanions:otter", "crittersandcompanions:dumbo_octopus", "crittersandcompanions:snail", "crittersandcompanions:sea_bunny", "crittersandcompanions:roly_poly")
 		}

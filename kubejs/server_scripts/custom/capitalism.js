@@ -35,6 +35,7 @@ ServerEvents.tags("block", event => {
 	event.add("bubble_cobble:shops/gadgets", "minecraft:yellow_glazed_terracotta")
 	event.add("bubble_cobble:shops/carpenter", "minecraft:brown_glazed_terracotta")
 	event.add("bubble_cobble:shops/botanist", "minecraft:green_glazed_terracotta")
+	event.add("bubble_cobble:shops/lightner", "minecraft:white_glazed_terracotta")
 })
 
 ServerEvents.tags("item", event => {
