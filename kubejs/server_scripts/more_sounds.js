@@ -104,8 +104,10 @@ ServerEvents.tags("block", event => {
 })
 
 ServerEvents.tags("item", event => {
+	event.add("more_sounds:crystal", "cobblemonraiddens:raidite")
+	event.add("more_sounds:interference", "cobblemonraiddens:raid_shard")
 	event.add("more_sounds:papers", "via_romana:charting_map", "cobblemon:blunder_policy", "cobblemon:cleanse_tag", "cobblemon:red_card", "cobblemon:spell_tag", "cobblemon:weakness_policy")
-	event.add("more_sounds:plates", "create:schedule", "cobblemonraiddens:raid_shard")
+	event.add("more_sounds:plates", "create:schedule", "cobblemonraiddens:catching_charm", "cobblemonraiddens:wishing_piece")
 	if (Platform.isLoaded("numismatics")) {
 		event.add("more_sounds:plates", "#numismatics:cards", "#numismatics:id_cards", "#numismatics:authorized_cards", "numismatics:banking_guide")
 	}
@@ -314,8 +316,8 @@ ServerEvents.tags("item", event => {
 	)
 	event.add("bubble_cobble:sounds/discs",
 		"#c:music_discs",
+		"#mega_showdown:silvally_memory",
 		"cobblemon:technical_machine",
-		/^mega_showdown:.*_memory/,
 	)
 
 	if (Platform.isLoaded("crittersandcompanions")) {

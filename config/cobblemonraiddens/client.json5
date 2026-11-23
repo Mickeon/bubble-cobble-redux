@@ -13,6 +13,8 @@
 	"beam_strength_tier_six": 192,
 	// Beacon Beam Strength for Tier Seven Raids
 	"beam_strength_tier_seven": 224,
+	// Beacon Beam Strength for Tier Seven Raids
+	"beam_strength_adventure": 255,
 	// Render the raid crystal particle effects
 	"show_particles": true,
 	// Render the legacy beacon effect

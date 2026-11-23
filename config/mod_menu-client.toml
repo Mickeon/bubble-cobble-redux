@@ -89,7 +89,9 @@ mod_badges = [
 	"cloth_config=library",
 	"enhancedcelestials2shaders=client",
 	"cirrus=client",
-	"waterui=client"
+	"waterui=client",
+	"asymmetricbattles=library",
+	"tim_core=library"
 ]
 #Make mods apear under another mod in this format "parenModId=childId1, childId2", add ! at the beginning of parentId to prevent creating a fake parent
 mod_parents = [
@@ -152,7 +154,8 @@ mod_parents = [
 	"sliceanddice=atmosphere, sablecompanion",
 	"packed_packs=packed_packs_api",
 	"letmedespawn=almanac",
-	"vanillabackport=platform"
+	"vanillabackport=platform",
+	"cobblemonraiddens=asymmetricbattles"
 ]
 
 [main]

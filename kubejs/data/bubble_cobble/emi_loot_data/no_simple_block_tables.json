@@ -2720,6 +2720,8 @@
 		"numismatics:blocks/creative_vendor",
 		"numismatics:blocks/salepoint",
 		"numismatics:blocks/vendor",
+		"rctmod:blocks/trainer_repel_rod",
+		"rctmod:blocks/trainer_spawner",
 		"ribbits:blocks/brown_toadstool",
 		"ribbits:blocks/giant_lilypad",
 		"ribbits:blocks/mossy_oak_door",

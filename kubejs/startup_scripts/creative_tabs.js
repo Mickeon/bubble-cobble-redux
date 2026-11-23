@@ -113,6 +113,11 @@ remove_and_merge_into_tab("cobblemonraiddens:raid_den_tab", "cobblemon:utility_i
 	"cobblemonraiddens:cheer_heal",
 	"cobblemonraiddens:raid_shard",
 	"cobblemonraiddens:catching_charm",
+	 // Not exactly appropriate but I'm tired.
+	"cobblemonraiddens:raidite_ore",
+	"cobblemonraiddens:deepslate_raidite_ore",
+	"cobblemonraiddens:raidite",
+	"cobblemonraiddens:wishing_piece",
 ])
 
 if (Platform.isLoaded("rctmod")) {

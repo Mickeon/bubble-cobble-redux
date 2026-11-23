@@ -1,0 +1,26 @@
+{
+	/* Whether the auto raid generator is enabled.
+	   All raids generated this way will be registered under the namespace "cobblemonraiddens:<species>".
+	   Pokemon with no valid attacking moves in their level learnset will be ignored.
+	*/
+	"enabled": false,
+	/* A list of Pokémon species to whitelist from encounters.
+	   If this list is not empty, all other config filters are ignored.
+	*/
+	"pokemon_whitelist": [],
+	// A list of Pokémon species to blacklist from encounters.
+	"pokemon_blacklist": [],
+	// A list of Pokémon labels to blacklist from encounters.
+	"label_blacklist": [
+		"legendary",
+		"mythical",
+		"ultra_beast",
+		"paradox"
+	],
+	// Tier definitions based on a Pokémon's Base Stat Total.
+	"tier_one_bst_threshold": 0,
+	"tier_two_bst_threshold": 256,
+	"tier_three_bst_threshold": 321,
+	"tier_four_bst_threshold": 421,
+	"tier_five_bst_threshold": 511
+}

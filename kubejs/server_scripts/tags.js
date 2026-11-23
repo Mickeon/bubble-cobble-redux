@@ -29,6 +29,9 @@ ServerEvents.tags("item", event => {
 	event.add("cobblemon:thunder_stone_ores", "mega_showdown:mega_meteorid_thunder_ore")
 	event.add("c:tools/spear", "#minecraft:spears") // Reported on Backported Spears, but marked as "Won't fix:  https://github.com/Unknowneth/Backported-Spears/issues/60. Vanilla Backport also doesn't add it".
 	event.add("mega_showdown:mega_stone", /^zamega:/).remove("zamega:ange") // TODO: Report this.
+	event.add("c:ores", "#cobblemonraiddens:raidite_ores") // TODO: Report this. Also missing in block tag.
+	event.add("c:ores_in_ground/stone", "cobblemonraiddens:raidite_ore") // TODO: Report this. Also missing in block tag.
+	event.add("c:ores_in_ground/deepslate", "cobblemonraiddens:deepslate_raidite_ore") // TODO: Report this. Also missing in block tag.
 
 	// More compatibility.
 	event.add("cobblemon:held/leaves_leftovers", "biomeswevegone:green_apple")

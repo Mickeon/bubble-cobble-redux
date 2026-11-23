@@ -44,5 +44,7 @@
 	// The required damage percentage contribution a player needs to do to get rewards. Default: 0.0
 	"required_damage": 0.0,
 	// The base catch rate of the raid boss. Default: 1.0
-	"catch_rate": 1.0
+	"catch_rate": 1.0,
+	// The battle format for the raid. (Options: SINGLES, DOUBLES, TRIPLES, QUADRUPLES, PENTUPLES, SEXTUPLES, RAID). Default: SINGLES
+	"battle_format": "SINGLES"
 }

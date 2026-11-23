@@ -5,6 +5,22 @@
   "addBucketToData": true,
   "addSpawnCauseToData": true,
   "preventQuickBallSpam": true,
+  "outOfBattleCaptures": {
+    "value": true,
+    "overrides": {}
+  },
+  "outOfBattleCaptureBallBypass": {
+    "value": [
+      "cobblemon:safari_ball",
+      "cobblemon:master_ball"
+    ],
+    "overrides": {}
+  },
+  "noCatchOnFull": false,
+  "onlyDropInBattle": {
+    "value": false,
+    "overrides": {}
+  },
   "spawnBlacklist": [],
   "spawnWhitelist": [],
   "pokemonEntitiesAreInvulnerable": false,
@@ -21,5 +37,6 @@
   "unknownBucketKey": "tim_core.buckets.unknown",
   "successKey": "tim_core.result.success",
   "failureKey": "tim_core.result.failure",
+  "notCatchOnFullKey": "tim_core.pc_and_party_full",
   "debug": false
 }

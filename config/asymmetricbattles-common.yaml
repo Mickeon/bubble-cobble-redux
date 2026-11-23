@@ -1,0 +1,5 @@
+# Whether Quadruple, Pentuple and Sextuple Battles are available in the Player Battle Challenge screen. This does not disable the battle formats themselves.
+ENABLE_PVP_CHALLENGES: true
+
+# Log showdown inputs and outputs for debugging.
+ENABLE_DEBUG: false
