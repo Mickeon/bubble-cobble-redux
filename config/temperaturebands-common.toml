@@ -54,7 +54,7 @@
 	#   do this you should probably keep it around 5% of whatever your bandSize is - otherwise you might see some weirdness.
 	# Default: 0.05
 	# Range: 0.0 ~ 1000.0
-	noiseFactor = 0.0131
+	noiseFactor = 0.075
 	#
 	#[distanceFunction] provides a choice in algorithm for calculating distances (currently only used by the default/advanced humidity stuff).
 	# - A value of 3 is the "Optimal" or "Euclidean Fast" distance, which uses square root. It is reasonably fast and very accurate, and the current default.
@@ -73,7 +73,7 @@
 	# - Separate with commas. Trailing comma doesn't matter.
 	# - Default excludes the_nether and the_end.
 	# - Adding minecraft:overworld won't do anything, it is always whitelisted.
-	dimBlacklist = "minecraft:the_nether,minecraft:the_end,cobblemonraiddens:raid_dimension,"
+	dimBlacklist = "minecraft:the_nether,minecraft:the_end,cobblemonraiddens:raid_dimension,minecraft:server_faucet_test_level,"
 	#
 	#[dimBlacklistAsWhitelist] will, when true, use the above blacklist as a whitelist instead.
 	# - Adding minecraft:overworld is not necessary, it is always whitelisted.
@@ -107,7 +107,7 @@
 	# - If you want to maintain as much performance as possible, keep this as a power of two.
 	# Default: 32
 	# Range: 0 ~ 16384
-	bandVariance = 32
+	bandVariance = 64
 	#
 	#[algo1bandVarianceSteepness] is the "steepness" of band variance.
 	# - Unit is arbitrary, you'll want to experiment and test if you change it. Probably best left alone, though.
@@ -133,7 +133,7 @@
 	# - Relevant for client only. Servers will need to manually recreate their worlds (e.g. set the same seed/settings in server config and delete old world).
 	# - WARNING: If true, and your Stronghold config settings in the source world are different to the Stronghold settings in this config, the recreated world
 	#   might use whatever setting is specified in this config file anyway (rather than the source world). To avoid this, restart the game client.
-	copyConfigOnRecreateWorld = true
+	copyConfigOnRecreateWorld = false
 	#
 	#[ignoreDimensionFailures] is a list of dimensions to ignore logging errors about when replacing their temperature/humidity functions fail.
 	# - Separate with commas. Trailing comma doesn't matter.
@@ -184,7 +184,7 @@
 	# - Setting to 0.0 will disable this function, which may result in a *tiny* performance improvement.
 	# Default: 0.4
 	# Range: 0.0 ~ 1.0
-	humidityTempWeight = 0.4
+	humidityTempWeight = 0.6
 
 [humidity-algorithm1]
 	#[humidity-algorithm1] are world-specific settings for the 'simple' banding humidity algorithm, i.e. humidity bands that run perpendicular to temperature.

@@ -190,7 +190,7 @@ threadPoolPriorityPreset = "default"
 	# This option will attempt to aggressively unload unused chunks.
 	# Only applies when useLegacyScheduling is disabled.
 	# 
-	lowMemoryMode = "default"
+	lowMemoryMode = true
 	# ================================================================
 	# (Default: true) Whether to delay full chunk events to after full chunk future have been completed
 	# This restores the buggy behavior in NeoForge that the ecosystem have been relying on
@@ -253,7 +253,7 @@ threadPoolPriorityPreset = "default"
 		# (Default: true) Whether to modify maximum view distance
 		enabled = "default"
 		# ================================================================
-		# (Default: 50) Max render distance allowed in game options
+		# (Default: 55) Max render distance allowed in game options
 		maxViewDistance = "default"
 		# ================================================================
 		# (Default: true) Enable client-side support for extended render distance protocol (c2me:ext_render_distance_v1)
