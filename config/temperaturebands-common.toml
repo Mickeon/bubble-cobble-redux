@@ -73,7 +73,7 @@
 	# - Separate with commas. Trailing comma doesn't matter.
 	# - Default excludes the_nether and the_end.
 	# - Adding minecraft:overworld won't do anything, it is always whitelisted.
-	dimBlacklist = "minecraft:the_nether,minecraft:the_end,cobblemonraiddens:raid_dimension,minecraft:server_faucet_test_level,"
+	dimBlacklist = "minecraft:the_nether,minecraft:the_end,cobblemonraiddens:raid_dimension,minecraft:server_faucet_test_level,minecraft:server_projectile_test_level"
 	#
 	#[dimBlacklistAsWhitelist] will, when true, use the above blacklist as a whitelist instead.
 	# - Adding minecraft:overworld is not necessary, it is always whitelisted.

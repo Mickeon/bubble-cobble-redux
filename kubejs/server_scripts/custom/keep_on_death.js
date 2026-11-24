@@ -118,6 +118,8 @@ ServerEvents.tags("item", event => {
 		"#create:pressurized_air_sources", // Backtanks.
 		"#minecraft:beds",
 		"#minecraft:boats",
+		"#numismatics:coins",
+		"#numismatics:cards",
 		/minecart/,
 		"bubble_cobble:blue_mascot_cat",
 		"cobblemonraiddens:raid_pouch",

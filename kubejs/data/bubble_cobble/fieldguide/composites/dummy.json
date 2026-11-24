@@ -65,6 +65,32 @@
 				"-3,1,0|minecraft:light_blue_wool",
 				"-3,2,0|minecraft:light_blue_wool"
 			]
+		},
+		{
+			"id": "bubble_cobble:dummy/tvs",
+			"display": "waterframes:tv",
+			"visual_variants": [
+				{
+					"variant_id": "tv",
+					"display_name": "Television",
+					"block": "waterframes:tv"
+				},
+				{
+					"variant_id": "tv_box",
+					"display_name": "Box Television",
+					"block": "waterframes:tv_box"
+				},
+				{
+					"variant_id": "big_tv",
+					"display_name": "Big Television",
+					"block": "waterframes:big_tv"
+				},
+				{
+					"variant_id": "frame",
+					"display_name": "Frame",
+					"block": "waterframes:frame"
+				}
+			]
 		}
 	]
 }

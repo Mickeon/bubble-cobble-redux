@@ -5194,7 +5194,7 @@
             ]
         },
         {
-            "pakku_id": "JrRF6y4aFlkIwhZk",
+            "pakku_id": "10SmviH9rTtMIb4w",
             "type": "MOD",
             "side": "BOTH",
             "slug": {
@@ -5209,7 +5209,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "immersive_furniture-neoforge-0.4.1+1.21.1.jar",
+                    "file_name": "immersive_furniture-neoforge-0.5.0+1.21.1.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -5217,21 +5217,21 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/SvN6UGeF/versions/oa8FVOtg/immersive_furniture-neoforge-0.4.1+1.21.1.jar",
-                    "id": "oa8FVOtg",
+                    "url": "https://cdn.modrinth.com/data/SvN6UGeF/versions/iPF8j9Wj/immersive_furniture-neoforge-0.5.0+1.21.1.jar",
+                    "id": "iPF8j9Wj",
                     "parent_id": "SvN6UGeF",
                     "hashes": {
-                        "sha512": "a88a211a97a317c9db39fd9419b23b771bf14710f09cece513f63e1b02beb0013ded0bf0b1ddf54ff0ad3e5e98da0277bfed9b81aee3a8347c5631cccd9d79d0",
-                        "sha1": "042b0340ed255f6eff38c9cd5ac46cf01f75b4c3"
+                        "sha512": "6ef8b664874057d7d847607c32efb3df5d2708679511439f1f530d92f1fede088eb664ac2fcadb52d4a67549fe3b33e022c6a7c9247a9c8d291ae4e55ea6cf63",
+                        "sha1": "c9daf4c065d53bd3555e82297b84cd415c6d7456"
                     },
                     "required_dependencies": [],
-                    "size": 1090408,
-                    "date_published": "2026-11-05T19:27:58.690314Z"
+                    "size": 1100382,
+                    "date_published": "2026-11-23T18:16:14.840825Z"
                 }
             ]
         },
         {
-            "pakku_id": "m9fBajxGMt5I9doi",
+            "pakku_id": "Xz7JYvAVhMzjECnt",
             "type": "MOD",
             "side": "SERVER",
             "slug": {
@@ -5246,7 +5246,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "immersive_optimization-neoforge-1.21.1-0.2.0.jar",
+                    "file_name": "immersive_optimization-neoforge-1.21.1-0.3.0.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -5254,21 +5254,21 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/vNZgQmjg/versions/h2tTmurt/immersive_optimization-neoforge-1.21.1-0.2.0.jar",
-                    "id": "h2tTmurt",
+                    "url": "https://cdn.modrinth.com/data/vNZgQmjg/versions/8pYXaw9M/immersive_optimization-neoforge-1.21.1-0.3.0.jar",
+                    "id": "8pYXaw9M",
                     "parent_id": "vNZgQmjg",
                     "hashes": {
-                        "sha512": "5c631cb5e65ad0230b0927e3c0cbe0ae476f50513136a9616e1518064c5af55b70db2740a7bf0188a381ee7509b874676abd72c1e71ded244ca1b0d10dc21613",
-                        "sha1": "7e6693dae264f9185b8b12cf99e8407e7e532041"
+                        "sha512": "6f5e1ba9563ba95dca4b888e26e8392f6f35678082b0cbca1fc4f688658d1f7af3127b8a88b0bde8f0545bd2ccdd6f30e0df1d0ffbf0b8462c9d3656aeca7ffd",
+                        "sha1": "57d6e83625189af7b84f429dc22f71183f803e0c"
                     },
                     "required_dependencies": [],
-                    "size": 56122,
-                    "date_published": "2026-07-14T07:26:32.324946Z"
+                    "size": 57981,
+                    "date_published": "2026-11-23T20:23:02.824681Z"
                 }
             ]
         },
         {
-            "pakku_id": "hi13YUA6fwPyZk8z",
+            "pakku_id": "OgThWLTZJ4XNgWGe",
             "type": "MOD",
             "side": "BOTH",
             "slug": {
@@ -5283,7 +5283,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "immersive_paintings-neoforge-1.21.1-0.8.0.jar",
+                    "file_name": "immersive_paintings-neoforge-1.21.1-0.8.1.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -5291,18 +5291,18 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/6txNkua3/versions/pWBBXq0j/immersive_paintings-neoforge-1.21.1-0.8.0.jar",
-                    "id": "pWBBXq0j",
+                    "url": "https://cdn.modrinth.com/data/6txNkua3/versions/N6FSewpt/immersive_paintings-neoforge-1.21.1-0.8.1.jar",
+                    "id": "N6FSewpt",
                     "parent_id": "6txNkua3",
                     "hashes": {
-                        "sha512": "4f50735fae4f07c8574352def88e685039d6aaf495f7da97a70cc062059caa058d11d1df503220d24ce218701c895d4808204e7387186fe5def968f0fff253a2",
-                        "sha1": "c7c2f876d306823dfccaa30339057dc467e43cb2"
+                        "sha512": "ac957e6c58e28c74464589d81c1793d05ee6ebf226d5c7fb08bed351ea0e17ff597cc620560fc112abeeff30e3c7f40141e62bd8a7e121c7310f0de808c792cf",
+                        "sha1": "0fdbe2cbe7557a9da035c7302a8e317a0214b516"
                     },
                     "required_dependencies": [
                         "hYykXjDp"
                     ],
-                    "size": 5548915,
-                    "date_published": "2026-10-24T21:18:13.518755Z"
+                    "size": 5549111,
+                    "date_published": "2026-11-23T18:57:21.468611Z"
                 }
             ]
         },
@@ -6807,7 +6807,7 @@
             ]
         },
         {
-            "pakku_id": "pT9neAd8iHfD08pJ",
+            "pakku_id": "qhKiPAx5nZwJ9hwZ",
             "type": "MOD",
             "side": "BOTH",
             "slug": {
@@ -6822,7 +6822,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "moonlight-1.21.1-3.8.3-neoforge.jar",
+                    "file_name": "moonlight-1.21.1-3.8.5-neoforge.jar",
                     "mc_versions": [
                         "1.21.1"
                     ],
@@ -6830,16 +6830,16 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/twkfQtEc/versions/yBea1yLM/moonlight-1.21.1-3.8.3-neoforge.jar",
-                    "id": "yBea1yLM",
+                    "url": "https://cdn.modrinth.com/data/twkfQtEc/versions/FhoIf5nd/moonlight-1.21.1-3.8.5-neoforge.jar",
+                    "id": "FhoIf5nd",
                     "parent_id": "twkfQtEc",
                     "hashes": {
-                        "sha512": "7b6479af8052419080bb1f5d28742daeef38a62bf33f2b47b70a1dafb01a06afd485cbc22e9f95c210e72b62364b96f539257dc8e03f5631a586ee9c4b5121bf",
-                        "sha1": "046821d548a1269164c792bab46d55798085c285"
+                        "sha512": "5c54bee4fd84f13e8ebaaf3c86985b37dd45da39cd4c4fc126108105db49c7345541f5941d5d8422b31fd3c8738cee94f31df90c6cff376ffa760e40b6f6c67b",
+                        "sha1": "81ba27c2eb618870937ecb6b344e16931617914b"
                     },
                     "required_dependencies": [],
-                    "size": 2327347,
-                    "date_published": "2026-11-09T00:29:34.326332Z"
+                    "size": 2332727,
+                    "date_published": "2026-11-23T21:11:23.065793Z"
                 }
             ]
         },
@@ -11149,7 +11149,7 @@
                 "gOL4QCg8ry8MX1Wm"
             ],
             "type": "MOD",
-            "side": "BOTH",
+            "side": "CLIENT",
             "slug": {
                 "modrinth": "watermedia-binaries"
             },
@@ -11200,7 +11200,7 @@
                 "PedCN19sF2P1eBA9"
             ],
             "type": "MOD",
-            "side": "CLIENT",
+            "side": "BOTH",
             "slug": {
                 "modrinth": "watermedia"
             },

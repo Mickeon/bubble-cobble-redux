@@ -6,14 +6,8 @@
 	"block_tag": "bubble_cobble:shops/gourmet",
 	"trades": [
 		{
-			"offer": {
-				"id": "farmersdelight:skillet",
-				"count": 1
-			},
-			"request": {
-				"id": "numismatics:cog",
-				"count": 2
-			},
+			"offer": {"id": "farmersdelight:skillet", "count": 1},
+			"request": {"id": "numismatics:cog", "count": 2},
 			"numismatics_cost": 128,
 			"trade_id": "gourmet/skillet"
 		}

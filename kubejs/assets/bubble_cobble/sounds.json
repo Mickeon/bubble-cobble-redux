@@ -136,6 +136,71 @@
 			}
 		]
 	},
+	"block.selling_bin.open_money": {
+		"sounds": [
+			{
+				"name": "bubble_cobble:block/selling_bin/open_money",
+				"weight": 25
+			},
+			{
+				"name": "bubble_cobble:block/selling_bin/open_money",
+				"pitch": 1.05,
+				"weight": 10
+			},
+			{
+				"name": "bubble_cobble:block/selling_bin/open_money",
+				"pitch": 1.1,
+				"weight": 5
+			},
+			{
+				"name": "bubble_cobble:block/selling_bin/open_money_rare",
+				"weight": 1
+			}
+		]
+	},
+	"block.selling_bin.open_nothing": {
+		"sounds": [
+			{
+				"name": "bubble_cobble:block/selling_bin/open_nothing",
+				"volume": 0.5,
+				"weight": 25
+			},
+			{
+				"name": "bubble_cobble:block/selling_bin/open_nothing",
+				"volume": 0.5,
+				"pitch": 1.1,
+				"weight": 10
+			},
+			{
+				"name": "bubble_cobble:block/selling_bin/open_nothing",
+				"pitch": 1.15,
+				"volume": 0.5,
+				"weight": 5
+			},
+			{
+				"name": "bubble_cobble:block/selling_bin/open_nothing_rare",
+				"weight": 1
+			}
+		]
+	},
+	"block.selling_bin.sell": {
+		"sounds": [
+			{
+				"name": "bubble_cobble:block/selling_bin/sell",
+				"weight": 25
+			},
+			{
+				"name": "bubble_cobble:block/selling_bin/sell",
+				"pitch": 1.05,
+				"weight": 10
+			},
+			{
+				"name": "bubble_cobble:block/selling_bin/sell",
+				"pitch": 1.1,
+				"weight": 5
+			}
+		]
+	},
 	"entity.enderman.bones_cracking": {
 		"sounds": [
 			{

@@ -1,0 +1,18 @@
+{
+  "parent": "fieldguide:root",
+  "display": {
+    "icon": {
+      "id": "waterframes:tv"
+    },
+    "title": "Lost Media Found",
+    "description": "Scan any television. Doesn't matter what channel."
+  },
+  "criteria": {
+    "tv": {
+      "trigger": "fieldguide:entry_unlocked",
+      "conditions": {
+        "entry": "bubble_cobble:dummy/tvs"
+      }
+    }
+  }
+}

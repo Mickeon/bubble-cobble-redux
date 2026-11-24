@@ -60,52 +60,16 @@
 			"trade_id": "botanist/pumpkin_seeds"
 		},
 		{
-			"offer": {"id": "cobblemon:red_apricorn_seed", "count": 2},
-			"request": {"id": "numismatics:cog", "count": 1},
-			"numismatics_cost": 64,
-			"trade_id": "botanist/red_apricorn_seed"
-		},
-		{
-			"offer": {"id": "cobblemon:blue_apricorn_seed", "count": 2},
-			"request": {"id": "numismatics:cog", "count": 1},
-			"numismatics_cost": 64,
-			"trade_id": "botanist/blue_apricorn_seed"
-		},
-		{
-			"offer": {"id": "cobblemon:green_apricorn_seed", "count": 2},
-			"request": {"id": "numismatics:cog", "count": 1},
-			"numismatics_cost": 64,
-			"trade_id": "botanist/green_apricorn_seed"
-		},
-		{
-			"offer": {"id": "cobblemon:yellow_apricorn_seed", "count": 2},
-			"request": {"id": "numismatics:cog", "count": 1},
-			"numismatics_cost": 64,
-			"trade_id": "botanist/yellow_apricorn_seed"
-		},
-		{
-			"offer": {"id": "cobblemon:pink_apricorn_seed", "count": 2},
-			"request": {"id": "numismatics:cog", "count": 1},
-			"numismatics_cost": 64,
-			"trade_id": "botanist/pink_apricorn_seed"
-		},
-		{
-			"offer": {"id": "cobblemon:white_apricorn_seed", "count": 2},
-			"request": {"id": "numismatics:cog", "count": 1},
-			"numismatics_cost": 64,
-			"trade_id": "botanist/white_apricorn_seed"
-		},
-		{
-			"offer": {"id": "cobblemon:black_apricorn_seed", "count": 2},
-			"request": {"id": "numismatics:cog", "count": 1},
-			"numismatics_cost": 64,
-			"trade_id": "botanist/black_apricorn_seed"
-		},
-		{
 			"offer": {"id": "arts_and_crafts:cork_sapling", "count": 2},
 			"request": {"id": "numismatics:cog", "count": 2},
 			"numismatics_cost": 64,
 			"trade_id": "botanist/cork_sapling"
+		},
+		{
+			"offer": {"id": "cobblemon:grassy_seed", "count": 1},
+			"request": {"id": "numismatics:cog", "count": 4},
+			"numismatics_cost": 64,
+			"trade_id": "botanist/grassy_seed"
 		}
 	]
 }

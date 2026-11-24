@@ -1,6 +1,6 @@
 {
     "name": "Bubble Cobble Redux",
-    "version": "2.0.0-alpha8",
+    "version": "2.0.0-alpha9",
     "description": "A pinch of Cobblemon, Create, Farmer's Delight, and a Bubble Pub aftertaste.",
     "author": "Mickeon",
     "overrides": [
@@ -160,6 +160,9 @@
         "emi": {
             "side": "BOTH"
         },
+        "watermedia": {
+            "side": "BOTH"
+        },
         "cobble-caf-forms": {
             "side": "BOTH"
         },
@@ -177,6 +180,9 @@
             "side": "CLIENT"
         },
         "mod-sets": {
+            "side": "CLIENT"
+        },
+        "watermedia-binaries": {
             "side": "CLIENT"
         },
 

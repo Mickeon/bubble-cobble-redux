@@ -607,7 +607,21 @@ const ResearchManager = global.ResearchManager = exports.ResearchManager = {
 				"0,0,-1|cobblemon:tatami_mat|facing=east",
 				"1,0,-1|cobblemon:tatami_mat|facing=west",
 			]
-		}
+		},
+		"apricorn_seed": {
+			unlocks: [
+				{item: "cobblemon:red_apricorn_seed"},
+				{item: "cobblemon:yellow_apricorn_seed"},
+				{item: "cobblemon:green_apricorn_seed"},
+				{item: "cobblemon:blue_apricorn_seed"},
+				{item: "cobblemon:pink_apricorn_seed"},
+				{item: "cobblemon:white_apricorn_seed"},
+				{item: "cobblemon:black_apricorn_seed"},
+			],
+			required: 32,
+			default_count: 2,
+			default_price: 64
+		},
 	},
 
 	get_research_ids: function() {

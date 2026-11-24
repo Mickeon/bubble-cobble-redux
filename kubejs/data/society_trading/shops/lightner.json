@@ -36,76 +36,76 @@
 			"trade_id": "lightner/sconce_soul"
 		},
 		{
-			"offer": {"id": "minecraft:birch_sapling", "count": 8},
-			"request": {"id": "numismatics:spur", "count": 4},
+			"offer": {"id": "supplementaries:copper_sconce", "count": 8},
+			"request": {"id": "numismatics:spur", "count": 48},
 			"numismatics_cost": 4,
-			"trade_id": "lightner/birch_sapling"
+			"trade_id": "lightner/copper_sconce"
 		},
 		{
-			"offer": {"id": "minecraft:spruce_sapling", "count": 8},
-			"request": {"id": "numismatics:spur", "count": 4},
+			"offer": {"id": "minecraft:copper_torch", "count": 8},
+			"request": {"id": "numismatics:spur", "count": 32},
 			"numismatics_cost": 4,
-			"trade_id": "lightner/spruce_sapling"
+			"trade_id": "lightner/copper_torch"
 		},
 		{
-			"offer": {"id": "minecraft:melon_seeds", "count": 2},
-			"request": {"id": "numismatics:cog", "count": 1},
+			"offer": {"id": "minecraft:soul_torch", "count": 8},
+			"request": {"id": "numismatics:spur", "count": 32},
 			"numismatics_cost": 64,
-			"trade_id": "lightner/melon_seeds"
+			"trade_id": "lightner/soul_torch"
 		},
 		{
-			"offer": {"id": "minecraft:pumpkin_seeds", "count": 2},
-			"request": {"id": "numismatics:cog", "count": 1},
+			"offer": {"id": "mynethersdelight:powdery_torch", "count": 8},
+			"request": {"id": "numismatics:spur", "count": 48},
 			"numismatics_cost": 64,
-			"trade_id": "lightner/pumpkin_seeds"
+			"trade_id": "lightner/powdery_torch"
 		},
 		{
-			"offer": {"id": "cobblemon:red_apricorn_seed", "count": 2},
-			"request": {"id": "numismatics:cog", "count": 1},
-			"numismatics_cost": 64,
-			"trade_id": "lightner/red_apricorn_seed"
+			"offer": {"id": "supplementaries:redstone_illuminator", "count": 8},
+			"request": {"id": "numismatics:cog", "count": 8},
+			"numismatics_cost": 512,
+			"trade_id": "lightner/redstone_illuminator"
 		},
 		{
-			"offer": {"id": "cobblemon:blue_apricorn_seed", "count": 2},
-			"request": {"id": "numismatics:cog", "count": 1},
-			"numismatics_cost": 64,
-			"trade_id": "lightner/blue_apricorn_seed"
-		},
-		{
-			"offer": {"id": "cobblemon:green_apricorn_seed", "count": 2},
-			"request": {"id": "numismatics:cog", "count": 1},
-			"numismatics_cost": 64,
-			"trade_id": "lightner/green_apricorn_seed"
-		},
-		{
-			"offer": {"id": "cobblemon:yellow_apricorn_seed", "count": 2},
-			"request": {"id": "numismatics:cog", "count": 1},
-			"numismatics_cost": 64,
-			"trade_id": "lightner/yellow_apricorn_seed"
-		},
-		{
-			"offer": {"id": "cobblemon:pink_apricorn_seed", "count": 2},
-			"request": {"id": "numismatics:cog", "count": 1},
-			"numismatics_cost": 64,
-			"trade_id": "lightner/pink_apricorn_seed"
-		},
-		{
-			"offer": {"id": "cobblemon:white_apricorn_seed", "count": 2},
-			"request": {"id": "numismatics:cog", "count": 1},
-			"numismatics_cost": 64,
-			"trade_id": "lightner/white_apricorn_seed"
-		},
-		{
-			"offer": {"id": "cobblemon:black_apricorn_seed", "count": 2},
-			"request": {"id": "numismatics:cog", "count": 1},
-			"numismatics_cost": 64,
-			"trade_id": "lightner/black_apricorn_seed"
-		},
-		{
-			"offer": {"id": "arts_and_crafts:cork_sapling", "count": 2},
+			"offer": {"id": "minecraft:soul_lantern", "count": 4},
 			"request": {"id": "numismatics:cog", "count": 2},
-			"numismatics_cost": 64,
-			"trade_id": "lightner/cork_sapling"
+			"numismatics_cost": 128,
+			"trade_id": "lightner/soul_lantern"
+		},
+		{
+			"offer": {"id": "minecraft:copper_lantern", "count": 4},
+			"request": {"id": "numismatics:cog", "count": 2},
+			"numismatics_cost": 128,
+			"trade_id": "lightner/copper_lantern"
+		},
+		{
+			"offer": {"id": "ribbits:swamp_lantern", "count": 4},
+			"request": {"id": "numismatics:cog", "count": 2},
+			"numismatics_cost": 128,
+			"trade_id": "lightner/swamp_lantern"
+		},
+		{
+			"offer": {"id": "urban_decor:stainless_steel_lantern", "count": 4},
+			"request": {"id": "numismatics:cog", "count": 3},
+			"numismatics_cost": 192,
+			"trade_id": "lightner/stainless_steel_lantern"
+		},
+		{
+			"offer": {"id": "snowyspirit:glow_lights_red", "count": 4},
+			"request": {"id": "numismatics:cog", "count": 2},
+			"numismatics_cost": 128,
+			"trade_id": "lightner/glow_lights_red"
+		},
+		{
+			"offer": {"id": "bits_n_bobs:headlamp", "count": 8},
+			"request": {"id": "numismatics:cog", "count": 4},
+			"numismatics_cost": 256,
+			"trade_id": "lightner/headlamp"
+		},
+		{
+			"offer": {"id": "bits_n_bobs:lightbulb", "count": 4},
+			"request": {"id": "numismatics:cog", "count": 4},
+			"numismatics_cost": 256,
+			"trade_id": "lightner/lightbulb"
 		}
 	]
 }

@@ -1,5 +1,6 @@
 
 /**
+ * @import {$AbstractClientPlayer} from "@package/net/minecraft/client/player"
  * @import {$SoundEvent} from "@package/net/minecraft/sounds"
  * @import {$ScheduledEvents$ScheduledEvent} from "@package/dev/latvian/mods/kubejs/util"
  */
@@ -24,7 +25,7 @@ ItemEvents.dynamicTooltips("wowozela_sound", event => {
 /** @typedef {ReturnType<typeof WowozelaBuilder>} Wowozela  */
 const WowozelaBuilder = function(player, sound_event) {
 	return {
-		player: /** @type {$ClientPlayer} */ (player),
+		player: /** @type {$AbstractClientPlayer} */ (player),
 		sound_event: /** @type {$SoundEvent} */ (sound_event),
 		loop: /** @type {$ScheduledEvents$ScheduledEvent} */ (null)
 	}

@@ -13,7 +13,7 @@
 			"id": "minecraft:orange_wool",
 			"unlock": {
 				"prerequisites": ["entity:minecraft/warden"],
-				"trigger": ["kill"]
+				"triggers": ["kill"]
 			}
 		},
 		{
@@ -22,7 +22,7 @@
 			"virtual_type": "tutorial",
 			"unlock": {
 				"prerequisites": ["entity:minecraft/warden"],
-				"trigger": ["eat"]
+				"triggers": ["eat"]
 			}
 		},
 		{
@@ -36,6 +36,34 @@
 			"id": "bubble_cobble:create/encased_fan",
 			"virtual_type": "tutorial",
 			"icon": "fieldguide:textures/gui/scanning.png"
+		},
+		{
+			"type": "entry",
+			"id": "waterframes:tv",
+			"unlock": {
+				"triggers": ["scan"]
+			}
+		},
+		{
+			"type": "entry",
+			"id": "waterframes:tv_box",
+			"unlock": {
+				"triggers": ["scan"]
+			}
+		},
+		{
+			"type": "entry",
+			"id": "waterframes:big_tv",
+			"unlock": {
+				"triggers": ["scan"]
+			}
+		},
+		{
+			"type": "entry",
+			"id": "waterframes:frame",
+			"unlock": {
+				"triggers": ["scan"]
+			}
 		}
 	]
 }
