@@ -473,9 +473,18 @@ ServerEvents.tags("entity_type", event => {
 	event.add("artifacts:creepers", "undergroundworlds:icy_creeper")
 	event.add("create:ignore_seat", "minecraft:bee")
 	event.add("farmersdelight:dog_food_users", "cobblemon:pokemon", "crittersandcompanions:ferret")
+	event.add("passablefoliage:no_slowness", "biomeswevegone:oddion", "cobblemon:pokemon", "minecraft:allay", "minecraft:bee", "minecraft:cat", "minecraft:fox", "minecraft:creeper", "minecraft:ocelot", "minecraft:parrot", "minecraft:rabbit", "minecraft:silverfish", "minecraft:warden", "mowziesmobs:lantern", "sleep_tight:bedbug",  "undergroundworlds:icy_creeper", "undergroundworlds:jungle_bee")
 
 	if (Platform.isLoaded("offgrid")) {
 		event.add("offgrid:surface_attaching", "immersive_paintings:glow_graffiti", "immersive_paintings:glow_painting", "immersive_paintings:graffiti", "immersive_paintings:painting", "biomeswevegone:wreath")
+	}
+
+	if (Platform.isLoaded("crittersandcompanions")) {
+		event.add("passablefoliage:no_slowness", "crittersandcompanions:dragonfly", "crittersandcompanions:jumping_spider", "crittersandcompanions:ladybug", "crittersandcompanions:leaf_insect", "crittersandcompanions:red_panda", "crittersandcompanions:roly_poly", "crittersandcompanions:shima_enaga", "crittersandcompanions:snail", "crittersandcompanions:stag_beetle", "crittersandcompanions:stick_bug", "crittersandcompanions:weevil")
+	}
+
+	if (Platform.isLoaded("cozycafe")) {
+		event.add("passablefoliage:no_slowness", "cozycafe:customer")
 	}
 
 	if (Platform.isLoaded("fieldguide")) {

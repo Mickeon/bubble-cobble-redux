@@ -38,18 +38,22 @@ const WowozelaManager = {
 		if (this.players[uuid]) {
 			this.remove(player)
 		}
+		player.startUsingItem("main_hand") // Due to delays, players are not considered using "anything" yet at this time.
 		let sound_event = Utils.getSound(sound) || this.DEFAULT_SOUND_EVENT
 		this.players[uuid] = WowozelaBuilder(player, sound_event)
 		this.players[uuid].loop = Client.scheduleRepeatingInTicks(1, () => this.play_loop(this.players[uuid]))
 		this.play_loop(this.players[uuid])
+		console.debug(`${player.username} WOWOZELA PUT`)
 	},
 	remove: /** @param {$Player} player */ function(player) {
 		let uuid = player.getStringUuid()
 		if (!this.players[uuid]) {
+			console.debug(`${player.username} WOWOZELA there was nothing to REMOVE!`)
 			return
 		}
 		this.players[uuid].loop.clear()
 		delete this.players[uuid]
+		console.debug(`${player.username} WOWOZELA REMOVE`)
 	},
 	play_loop: /** @param {Wowozela} wowozela */ function(wowozela) {
 		let $FastColor$ABGR32 = Java.loadClass("net.minecraft.util.FastColor$ABGR32");
@@ -58,6 +62,7 @@ const WowozelaManager = {
 		let player = wowozela.player
 		if (!player.isUsingItem()) {
 			// Compromise. `releaseUsing` does not get called when switching item while holding use.
+			console.debug(`${player.username} WOWOZELA no longer using it!`)
 			this.remove(player)
 			return
 		}
@@ -104,17 +109,21 @@ const WowozelaManager = {
 
 
 NetworkEvents.dataReceived("bubble_cobble:start_wowozela", event => {
+	console.debug(`${event.channel}  ${event.data}`)
 	let player = event.level.getPlayerByUUID(event.data.getString("uuid"))
 	if (!player) {
 		return
 	}
 	WowozelaManager.put(player, event.data.getString("sound"))
+	console.debug(`${Object.keys(WowozelaManager.players)}`)
 })
 
 NetworkEvents.dataReceived("bubble_cobble:stop_wowozela", event => {
+	console.debug(`${event.channel}    ${event.data}`)
 	let player = event.level.getPlayerByUUID(event.data.getString("uuid"))
 	if (!player) {
 		return
 	}
 	WowozelaManager.remove(player)
+	console.debug(`${Object.keys(WowozelaManager.players)}`)
 })

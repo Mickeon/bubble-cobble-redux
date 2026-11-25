@@ -5,6 +5,9 @@
 	"minecraft:magma_cube": {
 		"scale": 0.333
 	},
+	"minecraft:nautilus": {
+		"offset": -4
+	},
 	"minecraft:parrot": {
 		"offset": -12,
 		"scale": 1.5
@@ -22,10 +25,13 @@
 	},
 	"crittersandcompanions:shima_enaga": {
 		"offset": -16,
-		"z": -5.0
+		"scale": 1.5
 	},
 	"crittersandcompanions:jumping_spider": {
 		"offset": -12
+	},
+	"crittersandcompanions:dragonfly": {
+		"offset": -8
 	},
 	"biomeswevegone:man_o_war": {
 		"offset": -16,
@@ -58,6 +64,9 @@
 	},
 	"snowyspirit:gingerbread_golem": {
 		"offset": -4
+	},
+	"snowyspirit:gingerbread_giant": {
+		"offset": 8
 	},
 	"undergroundworlds:jungle_bee": {
 		"offset": -8,

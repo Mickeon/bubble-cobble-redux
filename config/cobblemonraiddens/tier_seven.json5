@@ -48,5 +48,7 @@
 	// The base catch rate of the raid boss. Default: 1.0
 	"catch_rate": 1.0,
 	// The battle format for the raid. (Options: SINGLES, DOUBLES, TRIPLES, QUADRUPLES, PENTUPLES, SEXTUPLES, RAID). Default: SINGLES
-	"battle_format": "SINGLES"
+	"battle_format": "SINGLES",
+	// The number of attacks a raid boss can make per turn. Set to -1 to dynamically calculate based on the number of active Pokemon per-battle. Default: -1
+	"attacks_per_turn": -1
 }
