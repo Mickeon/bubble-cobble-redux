@@ -1504,6 +1504,50 @@
             ]
         },
         {
+            "pakku_id": "me3QLANkexdC8BXW",
+            "pakku_links": [
+                "W02TsXmCdzSWJRAw",
+                "WWiX8dynol1cESFV"
+            ],
+            "type": "MOD",
+            "side": "CLIENT",
+            "slug": {
+                "modrinth": "cirrus"
+            },
+            "name": {
+                "modrinth": "Cirrus"
+            },
+            "id": {
+                "modrinth": "SJDzFJH7"
+            },
+            "files": [
+                {
+                    "type": "modrinth",
+                    "file_name": "cirrus-neoforge-1.21.1-1.4.2.jar",
+                    "mc_versions": [
+                        "1.21.1"
+                    ],
+                    "loaders": [
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/SJDzFJH7/versions/VHN0gvNp/cirrus-neoforge-1.21.1-1.4.2.jar",
+                    "id": "VHN0gvNp",
+                    "parent_id": "SJDzFJH7",
+                    "hashes": {
+                        "sha512": "36915180cd74e94f2279959dc711d5ef61d89286539adac06c8b5fabf83bc0e468f3ef4a51bbdd8393366763fb9ad69faed5a217e656b4ce035bc07b087c72bd",
+                        "sha1": "508e123146c7d953739334def6e8200d2c10a2e8"
+                    },
+                    "required_dependencies": [
+                        "lhGA9TYQ",
+                        "1eAoo2KR"
+                    ],
+                    "size": 6486468,
+                    "date_published": "2026-11-01T17:14:21.380407Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "vDhVcGUqh22KROV6",
             "type": "MOD",
             "side": "CLIENT",
