@@ -471,6 +471,14 @@
 		},
 		{
 			"stacks": [
+				{"type": "item", "id": "bubble_cobble:selling_bin"}
+			],
+			"text": [
+				"Shipping Bin"
+			]
+		},
+		{
+			"stacks": [
 				"#item:minecraft:harnesses"
 			],
 			"text": [

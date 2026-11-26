@@ -60,12 +60,12 @@ const WowozelaManager = {
 		let $Mth = Java.loadClass("net.minecraft.util.Mth")
 
 		let player = wowozela.player
-		if (!player.isUsingItem()) {
-			// Compromise. `releaseUsing` does not get called when switching item while holding use.
-			console.debug(`${player.username} WOWOZELA no longer using it!`)
-			this.remove(player)
-			return
-		}
+		// if (!player.isUsingItem()) {
+		// 	// Compromise. `releaseUsing` does not get called when switching item while holding use.
+		// 	console.debug(`${player.username} WOWOZELA no longer using it!`)
+		// 	this.remove(player)
+		// 	return
+		// }
 
 		let eye_pitch = player.getPitch()
 		let percent = (-eye_pitch + 90) / 180;
@@ -103,7 +103,9 @@ const WowozelaManager = {
 
 		let sound_event = wowozela.sound_event
 		let sound_pitch = Math.pow(2.0, percent * 2 - 1)
-		player.playSound(sound_event, 0.25, sound_pitch)
+		// player.playSound(sound_event, 0.25, sound_pitch)
+		// player.level.playLocalSound(player, sound_event, "players", 0.25, sound_pitch)
+		player.level.playLocalSound(position, sound_event, "players", 0.25, sound_pitch, false)
 	},
 }
 

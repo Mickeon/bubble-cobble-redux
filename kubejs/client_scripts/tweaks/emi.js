@@ -217,6 +217,9 @@ let $EmiApi = Java.loadClass("dev.emi.emi.api.EmiApi")
 let $EmiGroupStack = Java.loadClass("com.evandev.remi.feature.stackgroup.EmiGroupStack")
 let $RenderTooltipEvent$Pre = Java.loadClass("net.neoforged.neoforge.client.event.RenderTooltipEvent$Pre")
 NativeEvents.onEvent($RenderTooltipEvent$Pre, event => {
+	if (!Client.player) {
+		return // Not in-game. Or no longer in game. Otherwise crashes when hovering over some buttons in main menu.s
+	}
 	let emi_stack = $EmiApi.getHoveredStack(true).getStack()
 	// emi_stack.render(event.getGraphics(), event.getX(), event.getY() + 20, 0)
 	if (!(emi_stack instanceof $EmiGroupStack)) {

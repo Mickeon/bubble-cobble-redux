@@ -1,3 +1,5 @@
+// priority: -1
+// Loads last, keeps the price tooltip right below item name, above other tooltip additions.
 /** @import {SellingManager} from "../../startup_scripts/custom/capitalism" */
 this.SellingManager = global.SellingManager
 
@@ -16,7 +18,7 @@ ItemEvents.modifyTooltips(event => {
 })
 
 ItemEvents.dynamicTooltips("price", event => {
-	if (!(Client.screen instanceof $KubeJSScreen) || Client.screen.getTitle().getString() != "Selling Bin") {
+	if ((!(Client.screen instanceof $KubeJSScreen) || Client.screen.getTitle().getString() != "Selling Bin") && !event.advanced) {
 		return
 	}
 
@@ -24,5 +26,5 @@ ItemEvents.dynamicTooltips("price", event => {
 	let label = event.shift ? "Worth %s\u00a4 each" : "Worth %s\u00a4"
 	let price_as_string = Math.floor(price) == price ? price.toFixed(0) : price.toFixed(1)
 
-	event.add(Text.translateWithFallback("", label, Text.of(price_as_string).color(MASCOT_COLOR)).color(MASCOT_COLOR_DARK))
+	event.lines.add(1, Text.translateWithFallback("", label, Text.of(price_as_string).color(MASCOT_COLOR)).color(MASCOT_COLOR_DARK))
 })

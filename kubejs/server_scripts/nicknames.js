@@ -58,7 +58,9 @@ ServerEvents.commandRegistry(event => {
 						builder.suggest(Text.of(player_nickname).toJson().toString(), () => "Your current nickname")
 					}
 				}
-				builder.suggest(Text.of(player_nickname).toJson().toString(), () => "Your current nickname")
+				if (player_nickname) {
+					builder.suggest(Text.of(player_nickname).toJson().toString(), () => "Your current nickname")
+				}
 				return builder.buildFuture()
 			})
 			.executes(context => {
@@ -155,7 +157,7 @@ function has_nickname(player) {
 
 /** @param {$Player} player */
 function get_nickname(player) {
-	return nicknames[player.uuid] ?? null
+	return nicknames[player.uuid] || ""
 }
 
 function try_read_and_parse_json(path) {
