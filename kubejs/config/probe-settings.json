@@ -15,7 +15,8 @@
         "create",
         "emi",
         "item_interactions_mod",
-        "resource_world"
+        "resource_world",
+        "numismatics"
     ],
     "probejs.hintsForLLM": false,
     "probejs.reset": false

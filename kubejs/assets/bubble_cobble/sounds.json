@@ -350,6 +350,11 @@
 			"volume": 0.25
 		}]
 	},
+	"voice.cut_that_out" : {
+		"sounds": [
+			"bubble_cobble:voice/cut_that_out"
+		]
+	},
 	"voice.keel_over_and_die" : {
 		"sounds": [
 			"bubble_cobble:voice/keel_over_and_die"

@@ -6,6 +6,42 @@
 	"block_tag": "bubble_cobble:shops/gadgeter",
 	"trades": [
 		{
+			"offer": {"id": "create:fluid_pipe", "count": 32},
+			"request": {"id": "numismatics:cog", "count": 4},
+			"numismatics_cost": 256,
+			"trade_id": "gadgeter/fluid_pipe"
+		},
+		{
+			"offer": {"id": "create:shaft", "count": 32},
+			"request": {"id": "numismatics:cog", "count": 2},
+			"numismatics_cost": 128,
+			"trade_id": "gadgeter/shaft"
+		},
+		{
+			"offer": {"id": "create:gearbox", "count": 8},
+			"request": {"id": "numismatics:cog", "count": 2},
+			"numismatics_cost": 128,
+			"trade_id": "gadgeter/gearbox"
+		},
+		{
+			"offer": {"id": "create:super_glue", "count": 1},
+			"request": {"id": "numismatics:cog", "count": 1},
+			"numismatics_cost": 64,
+			"trade_id": "gadgeter/super_glue"
+		},
+		{
+			"offer": {"id": "create:andesite_casing", "count": 8},
+			"request": {"id": "numismatics:cog", "count": 4},
+			"numismatics_cost": 256,
+			"trade_id": "gadgeter/andesite_casing"
+		},
+		{
+			"offer": {"id": "create:copper_casing", "count": 8},
+			"request": {"id": "numismatics:cog", "count": 6},
+			"numismatics_cost": 384,
+			"trade_id": "gadgeter/copper_casing"
+		},
+		{
 			"offer": {"id": "create:track", "count": 32},
 			"request": {"id": "numismatics:cog", "count": 8},
 			"numismatics_cost": 512,
@@ -18,22 +54,10 @@
 			"trade_id": "gadgeter/track_station"
 		},
 		{
-			"offer": {"id": "create:packager", "count": 1},
-			"request": {"id": "numismatics:cog", "count": 4},
-			"numismatics_cost": 256,
-			"trade_id": "gadgeter/packager"
-		},
-		{
-			"offer": {"id": "create:repackager", "count": 1},
-			"request": {"id": "numismatics:cog", "count": 4},
-			"numismatics_cost": 256,
-			"trade_id": "gadgeter/repackager"
-		},
-		{
-			"offer": {"id": "create:precision_mechanism", "count": 1},
-			"request": {"id": "numismatics:cog", "count": 8},
-			"numismatics_cost": 512,
-			"trade_id": "gadgeter/precision_mechanism"
+			"offer": {"id": "create:chute", "count": 8},
+			"request": {"id": "numismatics:cog", "count": 2},
+			"numismatics_cost": 128,
+			"trade_id": "gadgeter/chute"
 		},
 		{
 			"offer": {"id": "create:desk_bell", "count": 1},
@@ -42,10 +66,16 @@
 			"trade_id": "gadgeter/desk_bell"
 		},
 		{
-			"offer": {"id": "create:blaze_cake", "count": 1},
-			"request": {"id": "numismatics:cog", "count": 16},
-			"numismatics_cost": 1024,
-			"trade_id": "gadgeter/blaze_cake"
+			"offer": {"id": "create:wrench", "count": 1},
+			"request": {"id": "numismatics:cog", "count": 2},
+			"numismatics_cost": 128,
+			"trade_id": "gadgeter/wrench"
+		},
+		{
+			"offer": {"id": "create:goggles", "count": 1},
+			"request": {"id": "numismatics:cog", "count": 8},
+			"numismatics_cost": 512,
+			"trade_id": "gadgeter/goggles"
 		}
 	]
 }

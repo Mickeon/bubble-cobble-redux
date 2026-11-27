@@ -25,7 +25,7 @@
 	# Range: > 1
 	turn_with_player_delay = 40
 	#The list of blocks that do not collide with the camera. Must be transparent blocks or blocks that do not take up a full block. This config option supports regular expressions. Example: 'minecraft:.*leaves' matches 'minecraft:oak_leaves' and 'minecraft:spruce_leaves'.
-	non_collidable_blocks = []
+	non_collidable_blocks = [".*(fence|pane|glass|candle|nixie|blaze).*", ".*(ladder|chain|bars|gate|rod)", "bits_n_bobs:(headlamp|lightbulb)", "cobblemon:display_case", "create:(sail_frame|.*shaft|piston_extension_pole)", "minecraft:bamboo", "supplementaries:(stick|wind_vane|jar|statue|goblet|urn)", "urban_decor:(steel_pipe|plastic_chair|stainless_steel_chair|towel_bar.*|.*cash_register|sewing_machine|desk_fan|toilet_paper|faucet|toaster|microwave|shower|trash_can|foldable_sign)"]
 
 	[camera.offset]
 		#Third person camera x-offset.

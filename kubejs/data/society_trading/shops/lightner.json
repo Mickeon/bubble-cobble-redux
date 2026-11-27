@@ -1,6 +1,6 @@
 {
 	"shop_id": "lightner",
-	"name": "lightner",
+	"name": "Lightner",
 	"display_type": "default",
 	"texture": "bubble_cobble:textures/item/blue_mascot_cat",
 	"block_tag": "bubble_cobble:shops/lightner",
@@ -105,6 +105,12 @@
 			"offer": {"id": "bits_n_bobs:lightbulb", "count": 4},
 			"request": {"id": "numismatics:cog", "count": 4},
 			"numismatics_cost": 256,
+			"trade_id": "lightner/lightbulb"
+		},
+		{
+			"offer": {"id": "bits_n_bobs:brass_lamp", "count": 1},
+			"request": {"id": "numismatics:cog", "count": 8},
+			"numismatics_cost": 512,
 			"trade_id": "lightner/lightbulb"
 		}
 	]

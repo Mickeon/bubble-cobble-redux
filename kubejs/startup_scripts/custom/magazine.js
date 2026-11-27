@@ -109,60 +109,6 @@ global.magazine_station_on_right_click = function(event) {
 		player.addItemCooldown("fieldguide:page", SEC * 0.5)
 	}
 
-	function single_worth(item) {
-		switch (item.id) {
-			case "numismatics:spur": {
-				return 1
-			} break;
-			case "numismatics:bevel": {
-				return 8
-			} break;
-		}
-	}
-
-	function try_deducting_coins(price) {
-		if (player.isCreative()) {
-			return true
-		}
-
-		// What a mess.
-		// Check if it's even possible to pay.
-		let coins = []
-		let inventory_worth = 0
-		for (let item of player.inventory.getAllItems()) {
-			if (item.id == "numismatics:spur") {
-				coins.push(item)
-				inventory_worth += item.getCount()
-			}
-			if (item.id == "numismatics:bevel") {
-				coins.push(item)
-				inventory_worth += item.getCount() * 8
-			}
-		}
-		if (inventory_worth < price) {
-			return false
-		}
-		coins.sort((a, b) => single_worth(b) - single_worth(a))
-		for (let coin of coins) {
-			// I do not feel like being smart about it today.
-			if (coin.id == "numismatics:spur") {
-				let deduction = Math.min(price, coin.getCount())
-				coin.shrink(deduction)
-				price -= deduction
-			}
-			if (coin.id == "numismatics:bevel") {
-				let deduction = Math.min(price / 8, coin.getCount())
-				coin.shrink(deduction)
-				price -= deduction * 8
-			}
-			if (price <= 0) {
-				break
-			}
-		}
-
-		return true
-	}
-
 	if (item.id == "fieldguide:page") {
 		if (pages.size() >= 256) {
 			player.statusMessage = "FULL"
@@ -182,8 +128,8 @@ global.magazine_station_on_right_click = function(event) {
 		player.swing(event.hand, true)
 		play_sound_globally(level, event.block.pos.center, "create:package_pop", "players")
 		player.addItemCooldown("fieldguide:page", SEC * 0.5)
-	} else if (item.isEmpty()) {
-		if (is_dev()) {
+	} else {
+		if (is_dev() && item.isEmpty()) {
 			if (player.isShiftKeyDown()) {
 				pages.getAllKeys().forEach(key => pages.remove(key))
 				player.statusMessage = "Cleared everything"
@@ -195,7 +141,7 @@ global.magazine_station_on_right_click = function(event) {
 				return
 			}
 		}
-		if (try_deducting_coins(8)) {
+		if (Currency.try_deducting_coins(player, 8)) {
 			give_magazine()
 		}
 	}

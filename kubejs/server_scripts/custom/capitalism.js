@@ -1,3 +1,4 @@
+// requires: numismatics
 let $GameRules = Java.loadClass("net.minecraft.world.level.GameRules")
 
 /**
@@ -80,8 +81,7 @@ BlockEvents.blockEntityTick("bubble_cobble:selling_bin", event => {
 		return // Optimization.
 	}
 
-	let coins = []
-	create_coins_from_value(total_price, coins) // Currently relying on a method from research.js. I'd want these two to share in the future.
+	let coins = Currency.create_coins_from_value(total_price, [])
 	for (let coin of coins) {
 		inventory.insertItem(Item.of(coin), false)
 	}

@@ -433,6 +433,65 @@ const ResearchManager = global.ResearchManager = exports.ResearchManager = {
 			required: 16,
 			description: "So many white bricks it's enough to withstand at least 2 spicy peppers.",
 		},
+		"prismarine": {
+			unlocks: [
+				{item: "minecraft:prismarine"},
+				{item: "minecraft:prismarine_bricks"},
+				{item: "minecraft:dark_prismarine"},
+			],
+			default_count: 32,
+			default_price: 64,
+			required: 32,
+		},
+		"sea_lantern": {
+			unlocks: [{item: {id: "minecraft:sea_lantern", count: 8}, price: 24}],
+			required: 8,
+		},
+		"blackstone": {
+			unlocks: [
+				{item: "minecraft:blackstone"},
+				{item: "minecraft:chiseled_polished_blackstone"},
+				{item: "minecraft:polished_blackstone"},
+				{item: "minecraft:polished_blackstone_bricks"},
+				{item: "minecraft:cracked_polished_blackstone_bricks"},
+				{item: "supplementaries:blackstone_tile"},
+			],
+			default_count: 32,
+			default_price: 64,
+			required: 32,
+		},
+		"quartz": {
+			unlocks: [
+				{item: "minecraft:quartz_block"},
+				{item: "minecraft:quartz_bricks"},
+				{item: "minecraft:quartz_pillar"},
+				{item: "minecraft:smooth_quartz"},
+				{item: "minecraft:chiseled_quartz_block"},
+			],
+			default_count: 32,
+			default_price: 64,
+			required: 32,
+		},
+		"copper": {
+			unlocks: [
+				{item: "minecraft:cut_copper"},
+				{item: "minecraft:copper_grate"},
+			],
+			default_count: 32,
+			default_price: 64,
+			required: 32,
+		},
+		"copper_bulb": {
+			unlocks: [
+				{item: "minecraft:copper_bulb"},
+				{item: "minecraft:exposed_copper_bulb"},
+				{item: "minecraft:weathered_copper_bulb"},
+				{item: "minecraft:oxidized_copper_bulb"},
+			],
+			default_count: 8,
+			default_price: 24,
+			required: 16,
+		},
 		// "netherrack": {
 		// 	unlocks: [
 		// 		{item: "minecraft:netherrack", price: 8},
@@ -447,78 +506,26 @@ const ResearchManager = global.ResearchManager = exports.ResearchManager = {
 		// 	required: 128,
 		// 	description: "I spent 5 minutes researching red bean rock from Hell and all I got is this lousy shirt.",
 		// },
-		"white_dye": {
-			unlocks: [{item: {id: "minecraft:white_dye", count: 32}, price: 32}],
-			required: 32,
-			description: "I cannot make up what it's saying here? Oh no, wait, it's on black ink. We're good.",
-		},
-		"gray_dye": {
-			unlocks: [{item: {id: "minecraft:gray_dye", count: 32}, price: 32}],
-			required: 32,
-			description: "Ten times the dye wasn't strong enough.",
-		},
-		"red_dye": {
-			unlocks: [{item: {id: "minecraft:red_dye", count: 32}, price: 32}],
-			required: 32,
-			description: "They should make a new color that's, like, not bad.",
-		},
-		"orange_dye": {
-			unlocks: [{item: {id: "minecraft:orange_dye", count: 32}, price: 32}],
-			required: 32,
-			description: "The fruit came before.",
-		},
-		"green_dye": {
-			unlocks: [{item: {id: "minecraft:green_dye", count: 32}, price: 32}],
-			required: 32,
-			description: "Sniffer? The Rift? What are you talking about? Come back to your senses, give me all of your Cactus Green and go punch some Sheep.",
-		},
-		"bleachdew": {
-			unlocks: [{item: {id: "arts_and_crafts:bleachdew", count: 32}, price: 40}],
-			required: 64,
-			description: "Highly sought-after dye, popped from plants the ancients kept cramming in their mouths. Pppprobably why they all went exinct!",
-		},
-		"encased_fan": {
-			unlocks: [{item: {id: "create:encased_fan", count: 4}, price: 64}],
-			required: 4,
-		},
-		"mechanical_press": {
-			unlocks: [{item: {id: "create:mechanical_press", count: 4}, price: 64}],
-			required: 4,
-		},
-		"mechanical_mixer": {
-			unlocks: [{item: {id: "create:mechanical_mixer", count: 4}, price: 64}],
-			required: 4,
-		},
-		"windmill_bearing": {
-			unlocks: [{item: {id: "create:windmill_bearing", count: 4}, price: 32}],
-			required: 4,
-			description: "Our project was: Holland! There we were reading: \"My Friend Hands, from Holland.\". And we made... windmills! And stuck blue strips of paper onto white strips of paper. They were... \"canals\". And we kept talking about \"tulips\" and \"cheese\". In the end I thought they... grew cheese, and ate tulips."
-		},
-		"blaze_cake": {
-			unlocks: [{item: "create:blaze_cake", price: 64}],
-			required: 16,
-		},
-		"table_cloth": {
+		"copycat": {
 			unlocks: [
-				{item: "create:red_table_cloth"}, // TODO: Absolutely a way to parse a whole tag. create:dyed_table_cloths.
-				{item: "create:andesite_table_cloth", price: 128},
-				{item: "create:copper_table_cloth", price: 128},
-				{item: "create:brass_table_cloth", price: 256},
+				{item: "create:copycat_panel"},
+				{item: "create:copycat_step"},
+				{item: "copycats:copycat_block"},
+				{item: {id: "copycats:copycat_door", count: 4}, price: 16},
+				{item: {id: "copycats:copycat_iron_door", count: 4}, price: 16},
+				{item: {id: "copycats:copycat_sliding_door", count: 4}, price: 16},
+				{item: {id: "copycats:copycat_folding_door", count: 4}, price: 16},
+				{item: {id: "copycats:copycat_trapdoor", count: 4}, price: 16},
+				{item: {id: "copycats:copycat_iron_trapdoor", count: 4}, price: 16},
 			],
 			default_count: 32,
-			default_price: 64,
-			required: 8,
-			description: "Where does the Andesite go? Does it hold the whole thing in place?",
-		},
-		"flywheel": {
-			unlocks: [{item: {id: "create:flywheel", count: 1}, price: 1024}],
-			required: 1,
-			description: "It's a giant, spinning wheel. Why did you research this? What else do you want to know?",
+			default_price: 128,
+			required: 64,
 		},
 		"industrial_iron": {
 			unlocks: [
 				{item: "create:industrial_iron_block"},
-				{item: "createdeco:industrial_iron_sheet_metal", default_price: 96}
+				{item: "createdeco:industrial_iron_sheet_metal", price: 96}
 			],
 			default_count: 32,
 			default_price: 64,
@@ -582,8 +589,8 @@ const ResearchManager = global.ResearchManager = exports.ResearchManager = {
 		"tatami": {
 			unlocks: [
 				{item: {id: "farmersdelight:tatami", count: 32}, price: 64},
-				{item: {id: "farmersdelight:half_tatami_mat", count: 32}, price: 32},
-				{item: {id: "farmersdelight:full_tatami_mat", count: 32}, price: 16},
+				{item: {id: "farmersdelight:full_tatami_mat", count: 32}, price: 32},
+				{item: {id: "farmersdelight:half_tatami_mat", count: 32}, price: 16},
 			],
 			required: 32,
 			description: "Ah, they connect if you place them on the sides. That's neat.\nCan I get my straw back?",
@@ -607,6 +614,209 @@ const ResearchManager = global.ResearchManager = exports.ResearchManager = {
 				"0,0,-1|cobblemon:tatami_mat|facing=east",
 				"1,0,-1|cobblemon:tatami_mat|facing=west",
 			]
+		},
+
+		// Create.
+		"blaze_burner": {
+			unlocks: [{item: {id: "create:blaze_burner", count: 1}, price: 24}],
+			required: 4,
+		},
+		"mechanical_belt": {
+			unlocks: [{item: {id: "create:belt_connector", count: 4}, price: 16}],
+			required: 8,
+		},
+		"chain_conveyor": {
+			unlocks: [{item: {id: "create:chain_conveyor", count: 8}, price: 32}],
+			required: 16,
+		},
+		"clutch": {
+			unlocks: [{item: {id: "create:clutch", count: 4}, price: 12}],
+			required: 4,
+		},
+		"gearshift": {
+			unlocks: [{item: {id: "create:gearshift", count: 4}, price: 12}],
+			unlocks: [{item: {id: "create:adjustable_chain_gearshift", count: 4}, price: 24}],
+			required: 4,
+		},
+		"gearshift": {
+			unlocks: [{item: {id: "create:encased_chain_drive", count: 8}, price: 32}],
+			required: 16,
+		},
+		"water_wheel": {
+			unlocks: [
+				{item: {id: "create:water_wheel", count: 8}, price: 16},
+				{item: {id: "create:large_water_wheel", count: 8}, price: 32},
+			],
+			required: 32,
+		},
+		"encased_fan": {
+			unlocks: [{item: {id: "create:encased_fan", count: 1}, price: 12}],
+			required: 4,
+		},
+		"millstone": {
+			unlocks: [{item: {id: "create:encased_fan", count: 1}, price: 12}],
+			required: 2,
+		},
+		"crushing_wheel": {
+			unlocks: [{item: {id: "create:crushing_wheel", count: 2}, price: 64}],
+			required: 2,
+		},
+		"weighted_ejector": {
+			unlocks: [{item: {id: "create:weighted_ejector", count: 2}, price: 16}],
+			required: 4,
+		},
+		"precision_mechanism": {
+			unlocks: [{item: {id: "create:precision_mechanism", count: 1}, price: 64}],
+			required: 4,
+		},
+		"stressometer": {
+			unlocks: [
+				{item: {id: "create:stressometer", count: 1}, price: 16},
+				{item: {id: "create:speedometer", count: 1}, price: 16},
+			],
+			required: 2,
+		},
+		"spout": {
+			unlocks: [{item: {id: "create:spout", count: 1}, price: 12}],
+			required: 2,
+		},
+		"mechanical_press": {
+			unlocks: [{item: {id: "create:mechanical_press", count: 4}, price: 24}],
+			required: 2,
+		},
+		"mechanical_mixer": {
+			unlocks: [{item: {id: "create:mechanical_mixer", count: 4}, price: 12}],
+			required: 2,
+		},
+		"mechanical_drill": {
+			unlocks: [{item: {id: "create:mechanical_drill", count: 2}, price: 12}],
+			required: 4,
+		},
+		"windmill_bearing": {
+			unlocks: [{item: {id: "create:windmill_bearing", count: 4}, price: 12}],
+			required: 4,
+			description: "Our project was: Holland! There we were reading: \"My Friend Hands, from Holland.\". And we made... windmills! And stuck blue strips of paper onto white strips of paper. They were... \"canals\". And we kept talking about \"tulips\" and \"cheese\". In the end I thought they... grew cheese, and ate tulips."
+		},
+		"windmill_sail": {
+			unlocks: [{item: {id: "create:white_sail", count: 4}, price: 12}],
+			required: 8,
+		},
+		"andesite_funnel": {
+			unlocks: [{item: {id: "create:andesite_funnel", count: 8}, price: 32}],
+			required: 16,
+		},
+		"brass_funnel": {
+			unlocks: [{item: {id: "create:brass_funnel", count: 8}, price: 128}],
+			required: 16,
+		},
+		"andesite_tunnel": {
+			unlocks: [{item: {id: "create:andesite_tunnel", count: 8}, price: 36}],
+			required: 16,
+		},
+		"brass_tunnel": {
+			unlocks: [{item: {id: "create:brass_tunnel", count: 8}, price: 144}],
+			required: 16,
+		},
+		"mechanical_crafter": {
+			unlocks: [{item: {id: "create:mechanical_crafter", count: 3}, price: 72}],
+			required: 24,
+		},
+		"mechanical_saw": {
+			unlocks: [{item: {id: "create:mechanical_saw", count: 2}, price: 12}],
+			required: 4,
+		},
+		"deployer": {
+			unlocks: [{item: {id: "create:deployer", count: 2}, price: 80}],
+			required: 4,
+		},
+		"rotation_speed_controller": {
+			unlocks: [{item: {id: "create:rotation_speed_controller", count: 1}, price: 160}],
+			required: 4,
+		},
+		"mechanical_arm": {
+			unlocks: [{item: {id: "create:mechanical_arm", count: 1}, price: 160}],
+			required: 4,
+		},
+		"mechanical_harvester": {
+			unlocks: [{item: {id: "create:mechanical_harvester", count: 2}, price: 16}],
+			required: 8,
+		},
+		"packager": {
+			unlocks: [{item: {id: "create:packager", count: 2}, price: 48}],
+			required: 4,
+		},
+		"package_frogport": {
+			unlocks: [{item: {id: "create:package_frogport", count: 2}, price: 48}],
+			required: 4,
+		},
+		"item_vault": {
+			unlocks: [{item: {id: "create:item_vault", count: 4}, price: 24}],
+			required: 16,
+		},
+		"stock_link": {
+			unlocks: [{item: {id: "create:stock_link", count: 2}, price: 36}],
+			required: 4,
+		},
+		"slicer": {
+			unlocks: [{item: {id: "sliceanddice:slicer", count: 1}, price: 12}],
+			required: 8,
+		},
+		"mechanical_fryer": {
+			unlocks: [{item: {id: "create_bic_bit:mechanical_fryer", count: 1}, price: 12}],
+			required: 8,
+		},
+		"blaze_cake": {
+			unlocks: [{item: "create:blaze_cake", price: 64}],
+			required: 16,
+		},
+		"table_cloth": {
+			unlocks: [
+				{item: "create:red_table_cloth"}, // TODO: Absolutely a way to parse a whole tag. create:dyed_table_cloths.
+				{item: "create:andesite_table_cloth", price: 128},
+				{item: "create:copper_table_cloth", price: 128},
+				{item: "create:brass_table_cloth", price: 256},
+			],
+			default_count: 32,
+			default_price: 64,
+			required: 8,
+			description: "Where does the Andesite go? Does it hold the whole thing in place?",
+		},
+		"flywheel": {
+			unlocks: [{item: {id: "create:flywheel", count: 1}, price: 1024}],
+			required: 1,
+			description: "It's a giant, spinning wheel. Why did you research this? What else do you want to know?",
+		},
+
+		// Miscellaneous items.
+		"white_dye": {
+			unlocks: [{item: {id: "minecraft:white_dye", count: 32}, price: 32}],
+			required: 32,
+			description: "I cannot make up what it's saying here? Oh no, wait, it's on black ink. We're good.",
+		},
+		"gray_dye": {
+			unlocks: [{item: {id: "minecraft:gray_dye", count: 32}, price: 32}],
+			required: 32,
+			description: "Ten times the dye wasn't strong enough.",
+		},
+		"red_dye": {
+			unlocks: [{item: {id: "minecraft:red_dye", count: 32}, price: 32}],
+			required: 32,
+			description: "They should make a new color that's, like, not bad.",
+		},
+		"orange_dye": {
+			unlocks: [{item: {id: "minecraft:orange_dye", count: 32}, price: 32}],
+			required: 32,
+			description: "The fruit came before.",
+		},
+		"green_dye": {
+			unlocks: [{item: {id: "minecraft:green_dye", count: 32}, price: 32}],
+			required: 32,
+			description: "Sniffer? The Rift? What are you talking about? Come back to your senses, give me all of your Cactus Green and go punch some Sheep.",
+		},
+		"bleachdew": {
+			unlocks: [{item: {id: "arts_and_crafts:bleachdew", count: 32}, price: 40}],
+			required: 64,
+			description: "Highly sought-after dye, popped from plants the ancients kept cramming in their mouths. Pppprobably why they all went exinct!",
 		},
 		"apricorn_seed": {
 			unlocks: [

@@ -1,15 +1,81 @@
 {
 	"shop_id": "gourmet",
-	"name": "Gourmet",
+	"name": "Gourmand",
 	"display_type": "default",
 	"texture": "bubble_cobble:textures/item/blue_mascot_cat",
 	"block_tag": "bubble_cobble:shops/gourmet",
 	"trades": [
 		{
+			"offer": {"id": "minecraft:glass_bottle", "count": 16},
+			"request": {"id": "numismatics:cog", "count": 4},
+			"numismatics_cost": 256,
+			"trade_id": "gourmet/glass_bottle"
+		},
+		{
+			"offer": {"id": "brewinandchewin:tankard", "count": 16},
+			"request": {"id": "numismatics:cog", "count": 4},
+			"numismatics_cost": 256,
+			"trade_id": "gourmet/glass_bottle"
+		},
+		{
+			"offer": {"id": "minersdelight:copper_cup", "count": 8},
+			"request": {"id": "numismatics:cog", "count": 4},
+			"numismatics_cost": 256,
+			"trade_id": "gourmet/copper_cup"
+		},
+		{
+			"offer": {"id": "brewinandchewin:keg", "count": 1},
+			"request": {"id": "numismatics:cog", "count": 8},
+			"numismatics_cost": 512,
+			"trade_id": "gourmet/keg"
+		},
+		{
+			"offer": {"id": "brewinandchewin:heating_cask", "count": 1},
+			"request": {"id": "numismatics:cog", "count": 8},
+			"numismatics_cost": 512,
+			"trade_id": "gourmet/heating_cask"
+		},
+		{
+			"offer": {"id": "brewinandchewin:ice_crate", "count": 1},
+			"request": {"id": "numismatics:cog", "count": 8},
+			"numismatics_cost": 512,
+			"trade_id": "gourmet/ice_crate"
+		},
+		{
 			"offer": {"id": "farmersdelight:skillet", "count": 1},
 			"request": {"id": "numismatics:cog", "count": 2},
 			"numismatics_cost": 128,
 			"trade_id": "gourmet/skillet"
+		},
+		{
+			"offer": {"id": "farmersdelight:cooking_pot", "count": 1},
+			"request": {"id": "numismatics:cog", "count": 2},
+			"numismatics_cost": 128,
+			"trade_id": "gourmet/cooking_pot"
+		},
+		{
+			"offer": {"id": "farmersdelight:stove", "count": 1},
+			"request": {"id": "numismatics:cog", "count": 2},
+			"numismatics_cost": 128,
+			"trade_id": "gourmet/stove"
+		},
+		{
+			"offer": {"id": "herbalbrews:stove", "count": 1},
+			"request": {"id": "numismatics:cog", "count": 2},
+			"numismatics_cost": 128,
+			"trade_id": "gourmet/herbal_brews_stove"
+		},
+		{
+			"offer": {"id": "herbalbrews:tea_kettle", "count": 1},
+			"request": {"id": "numismatics:cog", "count": 4},
+			"numismatics_cost": 256,
+			"trade_id": "gourmet/tea_kettle"
+		},
+		{
+			"offer": {"id": "herbalbrews:copper_tea_kettle", "count": 1},
+			"request": {"id": "numismatics:cog", "count": 4},
+			"numismatics_cost": 256,
+			"trade_id": "gourmet/copper_tea_kettle"
 		}
 	]
 }

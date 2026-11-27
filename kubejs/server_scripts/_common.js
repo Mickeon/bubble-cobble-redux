@@ -18,6 +18,7 @@ this.play_sound_globally = global.play_sound_globally
 this.remap = global.remap
 this.is_eligible_for_easter_egg = global.is_eligible_for_easter_egg
 this.is_dev = global.is_dev
+this.Currency = global.Currency
 // Object.assign(globalThis, global)
 
 /** @param {number} value @param {number} min @param {number} max */

@@ -209,7 +209,7 @@ ServerEvents.tags("block", event => {
 	event.add("amendments:stairs_carpets", "#bubble_cobble:coinstacks", "cobblemon:tatami_mat", "minecraft:snow", "supplementaries:ash")
 	event.add("amendments:bubble_column_passable", "#create:fan_transparent")
 
-	event.add("c:relocation_not_supported",	"immersive_furniture:furniture_proxy")
+	event.add("c:relocation_not_supported",	"immersive_furniture:furniture_proxy", "immersive_furniture:furniture_entity")
 
 	// Weird, and bugged.
 	event.add("supplementaries:un_rotatable", "#c:relocation_not_supported", "#lootr:containers")

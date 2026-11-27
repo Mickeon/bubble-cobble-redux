@@ -270,7 +270,7 @@ ServerEvents.generateData("after_mods", event => {
 			}
 
 			let price = unlock.price || entry.default_price
-			let coins = create_coins_from_value(price, [])
+			let coins = Currency.create_coins_from_value(price, [])
 			let trade = {
 				offer: item,
 				request: coins[0],
@@ -301,33 +301,6 @@ ServerEvents.generateData("after_mods", event => {
 
 	console.log(`Generated auxiliary research data for ${i} entries in ${((Utils.getSystemTime() - time_start) / 1000).toFixed(3)} s`)
 })
-
-const COIN_MAP = [
-	{coin: "numismatics:sun", value: 4096},
-	{coin: "numismatics:crown", value: 512},
-	{coin: "numismatics:cog", value: 64},
-	{coin: "numismatics:sprocket", value: 16},
-	{coin: "numismatics:bevel", value: 8},
-	{coin: "numismatics:spur", value: 1},
-]
-
-/** @param {number} price @param {Array<{id: string, count: number}} result */
-function create_coins_from_value(price, result) {
-	// Recursive function that goes through every coin in smaller decrements.
-	for (let i in COIN_MAP) {
-		let {coin, value} = COIN_MAP[i]
-		if (value <= price) {
-			if (price % value == 0) {
-				result.push({id: coin, count: price / value})
-				return result
-			} else {
-				result.push({id: coin, count: Math.floor(price / value)})
-				create_coins_from_value(price % value, result)
-			}
-			return result
-		}
-	}
-}
 //#endregion
 
 // PlayerEvents.inventoryOpened("kubejs:menu", event => {

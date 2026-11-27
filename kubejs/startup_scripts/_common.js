@@ -79,6 +79,7 @@ StartupEvents.registry("sound_event", event => {
 	event.create("bubble_cobble:crash.crate_jump")
 	event.create("bubble_cobble:crash.fruit_got")
 	event.create("bubble_cobble:crash.life_got")
+	event.create("bubble_cobble:voice.cut_that_out")
 	event.create("bubble_cobble:voice.sniper_apple")
 	event.create("bubble_cobble:item.bearded_dragon_chirp")
 	event.create("bubble_cobble:entity.enderman.bones_cracking")
@@ -108,6 +109,92 @@ global.remap = remap
 global.play_sound_globally = play_sound_globally
 global.is_eligible_for_easter_egg = is_eligible_for_easter_egg
 global.is_dev = is_dev
+
+const Currency = global.Currency = {
+	COIN_LIST: [
+		{coin: "numismatics:sun", value: 4096},
+		{coin: "numismatics:crown", value: 512},
+		{coin: "numismatics:cog", value: 64},
+		{coin: "numismatics:sprocket", value: 16},
+		{coin: "numismatics:bevel", value: 8},
+		{coin: "numismatics:spur", value: 1},
+	],
+
+	/** @param {number} price @param {Array<{id: string, count: number}} result */
+	create_coins_from_value: function(price, result) {
+		// Recursive function that goes through every coin in smaller decrements.
+		for (let i in this.COIN_LIST) {
+			let {coin, value} = this.COIN_LIST[i]
+			if (value <= price) {
+				if (price % value == 0) {
+					result.push({id: coin, count: price / value})
+					return result
+				} else {
+					result.push({id: coin, count: Math.floor(price / value)})
+					this.create_coins_from_value(price % value, result)
+				}
+				return result
+			}
+		}
+	},
+	// /** @param {$ItemStack} item_stack */
+	// is_coin: function(item_stack) {
+	// 	return item_stack.hasTag("numismatics:coins")
+	// }
+
+	/** @param {$ItemStack} item_stack */
+	single_worth: function(item) {
+		for (let entry of this.COIN_LIST) {
+			if (entry.coin == item.id) {
+				return entry.value
+			}
+		}
+		return 0
+	},
+	/** @param {$Player} player @param {$ItemStack} item_stack */
+	try_deducting_coins: function(player, price) {
+		if (player.isCreative()) {
+			return true
+		}
+
+		// What a mess.
+		// Check if it's even possible to pay.
+		let coins = []
+		let inventory_worth = 0
+		for (let item of player.inventory.getAllItems()) {
+			if (item.id == "numismatics:spur") {
+				coins.push(item)
+				inventory_worth += item.getCount()
+			}
+			if (item.id == "numismatics:bevel") {
+				coins.push(item)
+				inventory_worth += item.getCount() * 8
+			}
+		}
+		if (inventory_worth < price) {
+			return false
+		}
+		coins.sort((a, b) => Currency.single_worth(b) - Currency.single_worth(a))
+		for (let coin of coins) {
+			// I do not feel like being smart about it today.
+			if (coin.id == "numismatics:spur") {
+				let deduction = Math.min(price, coin.getCount())
+				coin.shrink(deduction)
+				price -= deduction
+			}
+			if (coin.id == "numismatics:bevel") {
+				let deduction = Math.min(price / 8, coin.getCount())
+				coin.shrink(deduction)
+				price -= deduction * 8
+			}
+			if (price <= 0) {
+				break
+			}
+		}
+
+		return true
+	}
+}
 
 if (Platform.isLoaded("probejs") && !global.datagen) {
 	global.datagen = {}

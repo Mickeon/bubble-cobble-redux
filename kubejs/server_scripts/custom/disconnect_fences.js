@@ -59,6 +59,8 @@ const FENCES = [
 	"minecraft:mangrove_fence",
 	"minecraft:nether_brick_fence",
 	"minecraft:oak_fence",
+	"minecraft:pale_oak_fence",
+	"minecraft:poplar_fence",
 	"minecraft:spruce_fence",
 	"minecraft:warped_fence",
 	"mynethersdelight:powdery_fence",

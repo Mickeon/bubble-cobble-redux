@@ -570,3 +570,60 @@ ItemEvents.entityInteracted("minecraft:air", event => {
 		event.player.addItemCooldown("minecraft:skeleton_skull", 1 * MIN)
 	}
 })
+
+// Teehee. Fatass.
+if (Platform.isLoaded("urban_decor")){
+BlockEvents.rightClicked("urban_decor:plastic_chair", event => {
+	const { player, block, item, level, server } = event
+	if (!is_eligible_for_easter_egg(player, ["AceNil_", "BlueBerryNice", "ButteryInkling", "CantieLabs", "Chailotl", "Fableworks", "Polyfluff", "SueTheMimiga"])
+	|| player.isShiftKeyDown()
+	|| !item.isEmpty()) {
+		return
+	}
+
+	let $PlasticChairBlock = Java.loadClass("net.yirmiri.urban_decor.common.block.appliances.PlasticChairBlock")
+	if (block.getBlockState().getValue($PlasticChairBlock.BROKEN)
+	|| block.getBlockState().getValue($PlasticChairBlock.OCCUPIED)
+	|| block.getBlockState().getValue(BlockProperties.ATTACH_FACE) != "floor") {
+		return
+	}
+
+	server.scheduleInTicks(1, () => {
+		let vehicle = player.getVehicle()
+		// I don't know why block position equality doesn't work so look at what I have to do here.
+		if (vehicle && vehicle.blockPosition().distToCenterSqr(block.pos.center) <= 1) {
+			// Assume player has successfully sat down.
+			block.setBlockState(Block.withProperties(block.getBlockState(), {broken: true}))
+			play_sound_globally(level, block.pos.center, "minecraft:entity.zombie.break_wooden_door", "blocks", 0.8, 2.0)
+			level.spawnParticles(`minecraft:block{block_state:"${block.id}"}`, false,
+				block.centerX, block.centerY, block.centerZ,
+				0.3, 0.2, 0.1,
+				20, 0.1
+			)
+			vehicle.move("self", new Vec3d(0, -0.3, 0))
+		}
+	})
+})
+}
+
+BlockEvents.rightClicked("create:desk_bell", event => {
+	const { player, block, item, level, server } = event
+
+	// This localized data appears to be Fabric stuff. Not guaranteed it'll be available in the future.
+	let data = block.entity.getCustomData()
+	if (server.getTickCount() - data.getLong("bell_rang_tick") <= 10) {
+		data.putByte("times_rang", data.getByte("times_rang") + 1)
+	}
+	if (data.getByte("times_rang") > 16 && level.random.nextBoolean()) {
+		data.putByte("times_rang", 0)
+		level.spawnEntity("minecraft:wind_charge", entity => {
+			entity.setOwner(player)
+			entity.setMotionY(-0.5)
+			entity.setPos(block.pos.center)
+		})
+		player.push(player.eyePosition.vectorTo(block.pos.center).normalize().scale(-0.5))
+		player.hurtMarked = true
+		play_sound_globally(level, block.pos.center, "bubble_cobble:voice.cut_that_out", "blocks", 0.5)
+	}
+	data.putLong("bell_rang_tick", server.tickCount)
+})
