@@ -1,8 +1,30 @@
 {
+  "_help": "Edit while Minecraft is closed; restart to apply.",
+  "_simpleMode": "Keep Keyboard View; disable other features by default.",
+  "simpleMode": false,
+  "_compactTooltips": "true: comma lists; false: separate binding lines.",
+  "compactTooltips": false,
+  "_showControlsRowButtons": "Show Group/Ignore buttons beside bindings and section titles.",
+  "showControlsRowButtons": true,
+  "_selectedLayout": "QWERTY, AZERTY, or QWERTZ.",
   "selectedLayout": "QWERTY",
+  "_controlsListWidthMode": "DEFAULT, LARGE, or VERY_LARGE.",
   "controlsListWidthMode": "DEFAULT",
   "ignoredBindings": [
     "key.ponder.ponder"
   ],
-  "groups": []
+  "ignoredCategories": [
+    "minecraft:debug"
+  ],
+  "activeBindings": [],
+  "groups": [],
+  "features": {
+    "_help": "default: follow Simple Mode; enabled/disabled: force on/off.",
+    "_ignoreFeature": "Enable conflict ignoring and its controls.",
+    "ignoreFeature": "default",
+    "_keybindGroupsFeature": "Enable groups that share a trigger.",
+    "keybindGroupsFeature": "default",
+    "_controlsListWidthFeature": "Enable the keybind-list width selector.",
+    "controlsListWidthFeature": "default"
+  }
 }

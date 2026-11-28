@@ -56,8 +56,8 @@ key_key.libtooltips.expand:key.keyboard.left.shift:
 key_key.dynamic_fps.toggle_forced:key.keyboard.unknown:
 key_key.dynamic_fps.toggle_disabled:key.keyboard.unknown:
 key_chunksfadein.keybinds.toggleMod:key.keyboard.unknown:
-key_cadeditor.key.editor:key.keyboard.end:
-key_cadeditor.key.nbt_editor:key.keyboard.end:SHIFT
+key_cadeditor.key.editor:key.keyboard.end:SHIFT
+key_cadeditor.key.nbt_editor:key.keyboard.end:
 key_cadeditor.key.snbt_editor:key.keyboard.unknown:
 key_cadeditor.key.vault:key.keyboard.unknown:
 key_key.sophisticateditemactions.item_highlight:key.keyboard.semicolon:
@@ -179,7 +179,7 @@ key_key.sophisticatedcore.sort:key.keyboard.unknown:
 key_key.sophisticatedcore.transfer_to_storage:key.keyboard.unknown:
 key_key.sophisticatedcore.transfer_to_inventory:key.keyboard.unknown:
 key_key.spice_of_life_berry.open_editor:key.keyboard.unknown:
-key_key.spice_of_life_berry.candy_ability:key.keyboard.x:
+key_key.spice_of_life_berry.candy_ability:key.keyboard.z:
 key_key.spice_of_life_berry.slingshot:key.keyboard.unknown:
 key_key.spice_of_life_berry.parry:key.keyboard.unknown:
 key_key.spice_of_life_berry.ender:key.keyboard.unknown:
@@ -268,4 +268,5 @@ key_key.jade.show_uses:key.keyboard.u:
 key_key.jade.narrate:key.keyboard.unknown:
 key_key.jade.show_details:key.keyboard.left.shift:
 key_key.entityculling.toggle:key.keyboard.unknown:
+key_key.craftpresence.config_keycode.name:key.keyboard.unknown:
 key_keybind.invmove.toggleMove:key.keyboard.unknown:

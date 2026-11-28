@@ -129,14 +129,6 @@
 	#Following pets teleport with you instantly when you teleport or go through a portal. Enderpearls will also keep you on your mount
 	pets_follow_teleports = true
 
-	[misc.threading_water_swim]
-		#Holding jump in water keeps players at the surface with their head out instead of bobbing up and down
-		surface_swimming = false
-		#Float at the surface automatically, without holding jump. Sneak to dive
-		surface_auto_float = false
-		#Makes players able to only push themselves up in water when they deep enough in water up to their chest or next to a ledge
-		water_jump_needs_depth = true
-
 	[misc.container_pickup]
 		#Makes oicked up items go straight into a container held in your offhand (like bundle or shulker). Tag amendments:held_pickup_blacklist
 		#Allowed Values: OFF, OFFHAND, BOTH, MAIN_HAND
@@ -160,6 +152,14 @@
 	[misc.bubble_column]
 		#Makes bubble columns to extend up through grate like blocks (amendments:bubble_column_passable tag)
 		bubble_column_grates = true
+
+	[misc.treading_water_swim]
+		#Holding jump in water keeps players at the surface with their head out instead of bobbing up and down
+		surface_swimming = false
+		#Float at the surface automatically, without holding jump. Sneak to dive
+		surface_auto_float = false
+		#Makes players able to only push themselves up in water when they deep enough in water up to their chest or next to a ledge
+		water_jump_needs_depth = true
 
 [connections]
 	#Makes fences connect to walls, panes and iron bars
