@@ -8,7 +8,7 @@ let $KubeJSScreen = Java.loadClass("dev.latvian.mods.kubejs.gui.KubeJSScreen");
 
 
 // NativeEvents.onEvent($ScreenEvent$Init$Post, event => {
-// 	if (!(event.screen instanceof $KubeJSScreen) || event.screen.getTitle().getString() != "Selling Bin") {
+// 	if (!(event.screen instanceof $KubeJSScreen) || event.screen.getTitle().getString() != "Shipping Bin") {
 // 		return
 // 	}
 // })
@@ -18,7 +18,7 @@ ItemEvents.modifyTooltips(event => {
 })
 
 ItemEvents.dynamicTooltips("price", event => {
-	if ((!(Client.screen instanceof $KubeJSScreen) || Client.screen.getTitle().getString() != "Selling Bin") && !event.advanced) {
+	if ((!(Client.screen instanceof $KubeJSScreen) || Client.screen.getTitle().getString() != "Shipping Bin") && !event.advanced) {
 		return
 	}
 

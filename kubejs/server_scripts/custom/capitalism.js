@@ -44,7 +44,7 @@ ServerEvents.tags("item", event => {
 })
 
 ServerEvents.recipes(event => {
-	event.shaped("bubble_cobble:selling_bin", ["T", "C"], {T: "#minecraft:trapdoors", C: "#c:chests/wooden"})
+	event.shaped("bubble_cobble:shipping_bin", ["T", "C"], {T: "#minecraft:trapdoors", C: "#c:chests/wooden"})
 })
 
 PlayerEvents.inventoryOpened("kubejs:menu", event => {
@@ -55,18 +55,18 @@ PlayerEvents.inventoryOpened("kubejs:menu", event => {
 	// For some reason the container for non-player slots is empty. It should be the block's. KubeJS be damned.
 	let any_money = event.inventoryContainer.slots.stream().anyMatch(s => s.container.isEmpty() && s.item.hasTag("numismatics:coins"))
 	if (any_money) {
-		event.player.playNotifySound("bubble_cobble:block.selling_bin.open_money", "blocks", 1.0, 1.0)
+		event.player.playNotifySound("bubble_cobble:block.shipping_bin.open_money", "blocks", 1.0, 1.0)
 	} else {
-		event.player.playNotifySound("bubble_cobble:block.selling_bin.open_nothing", "blocks", 1.0, 1.0)
+		event.player.playNotifySound("bubble_cobble:block.shipping_bin.open_nothing", "blocks", 1.0, 1.0)
 	}
 })
 
-BlockEvents.blockEntityTick("bubble_cobble:selling_bin", event => {
-	const selling_bin = /** @type {$KubeBlockEntity} */ (event.block.entity)
+BlockEvents.blockEntityTick("bubble_cobble:shipping_bin", event => {
+	const shipping_bin = /** @type {$KubeBlockEntity} */ (event.block.entity)
 	if (!event.level.gameRules.getBoolean($GameRules.RULE_DAYLIGHT)) {
-		selling_bin.info.tickFrequency(SEC * 5) // Mostly for debugging purposes.
+		shipping_bin.info.tickFrequency(SEC * 5) // Mostly for debugging purposes.
 	}
-	const inventory = /** @type {$InventoryAttachment$Wrapped} */ (selling_bin.attachments.get("inventory"))
+	const inventory = /** @type {$InventoryAttachment$Wrapped} */ (shipping_bin.attachments.get("inventory"))
 	let total_price = 0
 	for (let item_stack of inventory.getAllItems()) {
 		let price = SellingManager.get_price(item_stack)
@@ -86,12 +86,12 @@ BlockEvents.blockEntityTick("bubble_cobble:selling_bin", event => {
 		inventory.insertItem(Item.of(coin), false)
 	}
 	if (coins.length == 0) {
-		console.error(`No coins came out from ${selling_bin}. This should never happen.`)
+		console.error(`No coins came out from ${shipping_bin}. This should never happen.`)
 		play_sound_globally(event.level, event.block.pos.center, "minecraft:block.lava.pop", "blocks", 0.5)
 		return
 	}
 
-	play_sound_globally(event.level, event.block.pos.center, "bubble_cobble:block.selling_bin.sell", "blocks")
+	play_sound_globally(event.level, event.block.pos.center, "bubble_cobble:block.shipping_bin.sell", "blocks")
 })
 
 //#region Anhilate Bone Meal's functionality for the most part.

@@ -1,7 +1,7 @@
 // requires: numismatics
 
 StartupEvents.registry("block", event => {
-	event.create("bubble_cobble:selling_bin")
+	event.create("bubble_cobble:shipping_bin")
 			.property(BlockProperties.HORIZONTAL_FACING)
 			.soundType(SoundType.BAMBOO_WOOD)
 			.hardness(3)

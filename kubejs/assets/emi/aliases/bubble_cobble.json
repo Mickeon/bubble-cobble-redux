@@ -471,10 +471,10 @@
 		},
 		{
 			"stacks": [
-				{"type": "item", "id": "bubble_cobble:selling_bin"}
+				{"type": "item", "id": "bubble_cobble:shipping_bin"}
 			],
 			"text": [
-				"Shipping Bin"
+				"Selling Bin"
 			]
 		},
 		{

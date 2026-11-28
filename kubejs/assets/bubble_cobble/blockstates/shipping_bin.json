@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "bubble_cobble:block/shipping_bin",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "bubble_cobble:block/shipping_bin"
+    },
+    "facing=south": {
+      "model": "bubble_cobble:block/shipping_bin",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "bubble_cobble:block/shipping_bin",
+      "y": 270
+    }
+  }
+}
