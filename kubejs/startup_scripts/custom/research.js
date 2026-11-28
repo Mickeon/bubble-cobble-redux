@@ -654,7 +654,7 @@ const ResearchManager = global.ResearchManager = exports.ResearchManager = {
 			required: 4,
 		},
 		"millstone": {
-			unlocks: [{item: {id: "create:encased_fan", count: 1}, price: 12}],
+			unlocks: [{item: {id: "create:millstone", count: 1}, price: 12}],
 			required: 2,
 		},
 		"crushing_wheel": {

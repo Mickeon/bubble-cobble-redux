@@ -111,7 +111,7 @@
 			"offer": {"id": "bits_n_bobs:brass_lamp", "count": 1},
 			"request": {"id": "numismatics:cog", "count": 8},
 			"numismatics_cost": 512,
-			"trade_id": "lightner/lightbulb"
+			"trade_id": "lightner/brass_lamp"
 		}
 	]
 }

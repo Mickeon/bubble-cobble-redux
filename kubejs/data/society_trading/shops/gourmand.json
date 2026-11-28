@@ -15,7 +15,7 @@
 			"offer": {"id": "brewinandchewin:tankard", "count": 16},
 			"request": {"id": "numismatics:cog", "count": 4},
 			"numismatics_cost": 256,
-			"trade_id": "gourmand/glass_bottle"
+			"trade_id": "gourmand/tankard"
 		},
 		{
 			"offer": {"id": "minersdelight:copper_cup", "count": 8},
